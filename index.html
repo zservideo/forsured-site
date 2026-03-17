@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forsured — Always-On Insurance Compliance</title>
+  <meta name="description" content="Forsured automates COI verification, tracks coverage gaps in real time, and triggers instant coverage resolution. Built for construction."/>
+  <meta property="og:title" content="Forsured — Always-On Insurance Compliance"/>
+  <meta property="og:description" content="Accelerating construction through always-on insurance compliance."/>
+  <meta property="og:url" content="https://forsured.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --o: #E5612A; --ol: #F07040;
+      --od: rgba(229,97,42,0.12); --ob: rgba(229,97,42,0.28);
+      --bg: #0A0A0B; --s1: #111113; --s2: #18181B;
+      --br: rgba(255,255,255,0.08); --br2: rgba(255,255,255,0.13);
+      --tx: #FAFAFA; --tm: rgba(250,250,250,0.55); --td: rgba(250,250,250,0.32);
+      --f: 'Inter', sans-serif; --r: 12px; --rl: 20px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--f); background: var(--bg); color: var(--tx); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; border-bottom: 1px solid transparent; transition: all 0.3s; }
+    nav.scrolled { background: rgba(10,10,11,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: var(--br); }
+    .nav-logo img { height: 26px; display: block; }
+    .nav-logo span { font-size: 20px; font-weight: 900; letter-spacing: -0.04em; color: var(--tx); }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: var(--tm); font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--tx); }
+    .btn-orange { background: var(--o); color: #fff; border: none; cursor: pointer; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: var(--f); transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+    .btn-orange:hover { background: var(--ol); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(229,97,42,0.35); }
+    .btn-ghost { background: transparent; color: var(--tm); border: 1px solid var(--br2); cursor: pointer; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; font-family: var(--f); transition: all 0.2s; }
+    .btn-ghost:hover { color: var(--tx); border-color: rgba(255,255,255,0.25); }
+
+    .w { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    section { padding: 100px 0; }
+    .label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--o); margin-bottom: 14px; }
+    .ttl { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 16px; }
+    .ttl .a { color: var(--o); }
+    .sub { font-size: 17px; color: var(--tm); line-height: 1.65; max-width: 560px; }
+    .alt { background: #0d0d0f; }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
+    .glow1 { position: absolute; top: -250px; left: -250px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(229,97,42,0.1) 0%, transparent 70%); pointer-events: none; }
+    .glow2 { position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(229,97,42,0.06) 0%, transparent 70%); pointer-events: none; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--od); border: 1px solid var(--ob); border-radius: 100px; padding: 6px 14px; margin-bottom: 28px; font-size: 12px; font-weight: 700; color: var(--o); letter-spacing: 0.06em; text-transform: uppercase; }
+    .bdot { width: 6px; height: 6px; border-radius: 50%; background: var(--o); animation: pulse 2s infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+    .hero h1 { font-size: 66px; line-height: 1.06; font-weight: 800; letter-spacing: -0.035em; margin-bottom: 24px; }
+    .hero h1 .a { color: var(--o); }
+    .hero-sub { font-size: 18px; line-height: 1.65; color: var(--tm); margin-bottom: 40px; max-width: 460px; }
+    .hero-btns { display: flex; gap: 12px; margin-bottom: 56px; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid var(--br); border-radius: var(--r); overflow: hidden; }
+    .stat { padding: 22px 18px; border-right: 1px solid var(--br); background: rgba(255,255,255,0.015); }
+    .stat:last-child { border-right: none; }
+    .stat-n { font-size: 34px; font-weight: 800; letter-spacing: -0.04em; color: var(--o); line-height: 1; margin-bottom: 5px; }
+    .stat-l { font-size: 12px; color: var(--td); line-height: 1.4; font-weight: 500; }
+
+    /* AUTH MOCKUP */
+    .hero-right { position: relative; }
+    .auth-wrap { width: 100%; border-radius: var(--rl); overflow: hidden; border: 1px solid var(--br2); box-shadow: 0 40px 100px rgba(0,0,0,0.6); display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; }
+    .auth-left { background: #eef1f3; padding: 32px 26px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .auth-form { width: 100%; max-width: 210px; }
+    .auth-title { font-size: 15px; font-weight: 700; color: #1e2130; text-align: center; margin-bottom: 3px; letter-spacing: -0.02em; }
+    .auth-desc { font-size: 10px; color: #8a90a8; text-align: center; margin-bottom: 18px; line-height: 1.5; }
+    .auth-lbl { display: block; font-size: 10px; font-weight: 600; color: #4a4f66; margin-bottom: 4px; }
+    .auth-field { background: #fff; border: 1px solid #d5dae7; border-radius: 7px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .auth-field span { font-size: 11px; color: #b2b7cc; }
+    .auth-forgot { text-align: right; font-size: 10px; font-weight: 700; color: #4a4f66; margin-bottom: 14px; }
+    .auth-btn-login { background: var(--o); border-radius: 8px; padding: 10px; text-align: center; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .auth-or { text-align: center; font-size: 10px; color: #9ea3b8; margin-bottom: 9px; }
+    .auth-sso { background: #fff; border: 1px solid #d5dae7; border-radius: 7px; padding: 8px 10px; font-size: 11px; color: #3c3f52; margin-bottom: 7px; display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .auth-register { text-align: center; margin-top: 14px; font-size: 10px; color: #9ea3b8; }
+    .auth-register b { color: #4a4f66; font-weight: 700; }
+    .auth-right { background: linear-gradient(140deg,#9a3010 0%,#cc4e1c 50%,#a83818 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .auth-right::before { content:''; position:absolute; inset:0; opacity:0.07; background-image: repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 50%); background-size: 12px 12px; }
+    .auth-logo-block { position: relative; z-index: 2; padding: 14px 22px; background: rgba(0,0,0,0.2); border-radius: 6px; }
+    .auth-logo-block img { height: 28px; display: block; }
+    .auth-logo-block span { font-size: 20px; font-weight: 900; letter-spacing: -0.04em; color: #fff; }
+    .float-badge { position: absolute; bottom: -14px; left: -20px; background: var(--s2); border: 1px solid var(--br2); border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; gap: 10px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+    .float-dot { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; flex-shrink: 0; }
+    .float-t1 { font-size: 12px; font-weight: 600; }
+    .float-t2 { font-size: 11px; color: var(--td); }
+
+    /* MARQUEE */
+    .marquee-wrap { border-top: 1px solid var(--br); border-bottom: 1px solid var(--br); background: rgba(255,255,255,0.01); padding: 14px 0; overflow: hidden; }
+    .marquee-track { display: flex; white-space: nowrap; animation: marquee 36s linear infinite; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .marquee-item { display: inline-flex; align-items: center; gap: 9px; padding: 0 30px; font-size: 13px; font-weight: 500; color: var(--td); flex-shrink: 0; }
+    .marquee-item svg { flex-shrink: 0; }
+
+    /* PRODUCT */
+    .tabs { display: flex; gap: 4px; background: var(--s1); border-radius: 10px; padding: 4px; width: fit-content; margin-bottom: 28px; }
+    .tab { padding: 8px 20px; border-radius: 7px; font-size: 14px; font-weight: 500; color: var(--tm); background: transparent; border: none; cursor: pointer; font-family: var(--f); transition: all 0.2s; }
+    .tab.active { background: var(--o); color: #fff; font-weight: 600; }
+    .tab:not(.active):hover { color: var(--tx); background: rgba(255,255,255,0.05); }
+    .product-screen { width: 100%; border-radius: var(--rl); overflow: hidden; border: 1px solid var(--br2); box-shadow: 0 32px 80px rgba(0,0,0,0.5); }
+    .product-screen img { width: 100%; display: block; }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--br); border-radius: var(--rl); overflow: hidden; margin-top: 56px; }
+    .pillar { background: var(--s1); padding: 40px; }
+    .pillar-icon { width: 46px; height: 46px; border-radius: 11px; background: var(--od); border: 1px solid var(--ob); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .pillar h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .pillar p { font-size: 14px; color: var(--tm); line-height: 1.65; }
+
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 60px; }
+    .check-item { display: flex; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--br); }
+    .check-item:last-child { border-bottom: none; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--od); border: 1px solid var(--ob); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .check-item p { font-size: 13px; color: var(--tm); line-height: 1.55; }
+    .compare-table { background: var(--s1); border: 1px solid var(--br); border-radius: var(--rl); overflow: hidden; }
+    .compare-header { padding: 16px 20px; border-bottom: 1px solid var(--br); display: flex; align-items: center; gap: 10px; }
+    .compare-header img { height: 16px; }
+    .compare-header span { font-size: 12px; color: var(--td); }
+    .compare-header .logo-text { font-size: 15px; font-weight: 900; letter-spacing: -0.04em; color: var(--o); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { padding: 10px 14px; text-align: left; font-weight: 600; border-bottom: 1px solid var(--br); color: var(--tm); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+    td { padding: 11px 14px; border-bottom: 1px solid var(--br); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,0.015); }
+    .yes { color: var(--o); font-weight: 700; }
+    .no { color: var(--td); }
+
+    /* MARKET */
+    .market-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 60px; }
+    .market-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .stat-card { background: var(--s1); border: 1px solid var(--br); border-radius: var(--rl); padding: 32px; position: relative; overflow: hidden; }
+    .stat-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--o),transparent); }
+    .stat-card .big-num { font-size: 52px; font-weight: 800; letter-spacing: -0.04em; color: var(--o); line-height: 1; margin-bottom: 12px; }
+    .stat-card.wide .big-num { font-size: 60px; }
+    .stat-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .stat-card p { font-size: 13px; color: var(--tm); line-height: 1.55; }
+    .stat-card .source { font-size: 11px; color: var(--td); margin-top: 12px; }
+
+    /* WHO */
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 60px; }
+    .who-card { background: var(--s1); border: 1px solid var(--br); border-radius: var(--rl); padding: 36px; position: relative; }
+    .who-card.featured { border-color: var(--ob); background: linear-gradient(135deg,rgba(229,97,42,0.07),var(--s1)); }
+    .featured-badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--o); color: #fff; font-size: 10px; font-weight: 800; padding: 4px 14px; border-radius: 0 0 8px 8px; letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap; }
+    .who-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--od); border: 1px solid var(--ob); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .who-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 5px; letter-spacing: -0.02em; }
+    .who-card .tag { font-size: 13px; color: var(--o); font-weight: 500; margin-bottom: 18px; }
+    .who-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .who-card ul li { font-size: 13px; color: var(--tm); display: flex; align-items: center; gap: 8px; }
+
+    /* ROADMAP */
+    .roadmap { display: flex; margin-top: 60px; position: relative; }
+    .roadmap::after { content: ''; position: absolute; top: 27px; left: calc(10% + 1px); right: calc(10% + 1px); height: 1px; background: rgba(255,255,255,0.1); z-index: 0; }
+    .road-step { flex: 1; padding: 0 8px; }
+    .road-dot { width: 54px; height: 54px; border-radius: 50%; background: var(--bg); border: 2px solid var(--br2); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; position: relative; z-index: 1; }
+    .road-step:first-child .road-dot { border-color: var(--o); background: var(--od); }
+    .road-q { font-size: 11px; color: var(--td); font-weight: 700; margin-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .road-step:first-child .road-q { color: var(--o); }
+    .road-step h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .road-step p { font-size: 12px; color: var(--td); line-height: 1.5; }
+
+    /* WAITLIST */
+    .waitlist-wrap { background: linear-gradient(to bottom,transparent,rgba(229,97,42,0.04),transparent); border-top: 1px solid var(--br); border-bottom: 1px solid var(--br); }
+    .waitlist-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 48px; max-width: 1280px; margin: 0 auto; }
+    .waitlist-left h2 { font-size: 46px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px; }
+    .waitlist-left h2 .a { color: var(--o); }
+    .waitlist-left > p { font-size: 16px; color: var(--tm); line-height: 1.65; margin-bottom: 28px; }
+    .benefits { display: flex; flex-direction: column; gap: 11px; }
+    .benefit { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--tm); }
+    .form-card { background: var(--s1); border: 1px solid var(--br2); border-radius: var(--rl); padding: 38px; }
+    .form-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .form-card > p { font-size: 14px; color: var(--tm); margin-bottom: 26px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 12px; font-weight: 600; color: var(--tm); margin-bottom: 6px; letter-spacing: 0.02em; }
+    .field input, .field select { width: 100%; background: var(--bg); border: 1px solid var(--br2); border-radius: 8px; padding: 11px 13px; font-size: 14px; color: var(--tx); font-family: var(--f); outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+    .field input::placeholder { color: var(--td); }
+    .field input:focus, .field select:focus { border-color: var(--o); }
+    .field select option { background: var(--s2); color: var(--tx); }
+    .submit-btn { width: 100%; background: var(--o); color: #fff; border: none; cursor: pointer; padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 600; font-family: var(--f); margin-top: 8px; transition: all 0.2s; }
+    .submit-btn:hover { background: var(--ol); transform: translateY(-1px); }
+    .form-note { font-size: 11px; color: var(--td); text-align: center; margin-top: 10px; }
+    .success-state { text-align: center; padding: 20px 0; display: none; }
+    .success-icon { width: 52px; height: 52px; border-radius: 50%; background: var(--od); border: 2px solid var(--ob); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .success-state h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .success-state p { font-size: 14px; color: var(--tm); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--br); padding: 60px 48px 40px; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand img { height: 22px; margin-bottom: 14px; display: block; }
+    .footer-brand .logo-text { font-size: 18px; font-weight: 900; letter-spacing: -0.04em; color: var(--tx); margin-bottom: 14px; display: block; }
+    .footer-brand p { font-size: 13px; color: var(--td); line-height: 1.6; }
+    .footer-col h4 { font-size: 12px; font-weight: 700; color: var(--tm); margin-bottom: 14px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .footer-col a { display: block; font-size: 13px; color: var(--td); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--tx); }
+    .footer-bottom { border-top: 1px solid var(--br); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 12px; color: var(--td); }
+    .footer-bottom a { color: var(--td); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--o); }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 80px 20px 60px; gap: 36px; }
+      .hero h1 { font-size: 38px; }
+      .w { padding: 0 20px; }
+      section { padding: 60px 0; }
+      .ttl { font-size: 32px; }
+      .pillars, .why-grid, .who-grid, .market-3, .market-2 { grid-template-columns: 1fr; }
+      .roadmap { flex-direction: column; gap: 20px; }
+      .roadmap::after { display: none; }
+      .waitlist-inner { grid-template-columns: 1fr; padding: 60px 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      footer { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="logo-white.png" alt="Forsured" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+    <span style="display:none">Forsured</span>
+  </div>
+  <div class="nav-links">
+    <a href="#product">Product</a>
+    <a href="#why">Why Forsured</a>
+    <a href="#market">Market</a>
+    <a href="#waitlist">Get Access</a>
+  </div>
+  <a href="#waitlist" class="btn-orange">Join Waitlist →</a>
+</nav>
+
+<!-- HERO -->
+<div class="w">
+  <div class="hero">
+    <div class="glow1"></div>
+    <div class="glow2"></div>
+    <div>
+      <div class="badge"><span class="bdot"></span><span>Now in Early Access</span></div>
+      <h1>Insurance compliance<br>that runs <span class="a">while you build.</span></h1>
+      <p class="hero-sub">Forsured automates COI verification, tracks coverage gaps in real time, and triggers instant coverage resolution — so your projects never stop.</p>
+      <div class="hero-btns">
+        <a href="#waitlist" class="btn-orange" style="padding:13px 26px;font-size:15px">Join the Waitlist →</a>
+        <a href="#product" class="btn-ghost" style="padding:13px 22px;font-size:15px">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-n">$4B+</div><div class="stat-l">Annual losses from COI errors in construction</div></div>
+        <div class="stat"><div class="stat-n">45–55%</div><div class="stat-l">Of initial COI submissions require corrections</div></div>
+        <div class="stat"><div class="stat-n">75%</div><div class="stat-l">First-timer contractor rejection rate</div></div>
+      </div>
+    </div>
+
+    <!-- AUTH MOCKUP -->
+    <div class="hero-right">
+      <div class="auth-wrap">
+        <div class="auth-left">
+          <div class="auth-form">
+            <div class="auth-title">Welcome back</div>
+            <div class="auth-desc">Sign in to continue to your Forsured account</div>
+            <label class="auth-lbl">Email</label>
+            <div class="auth-field">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9ea3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M1.5 6l6.5 4 6.5-4"/></svg>
+              <span>Email</span>
+            </div>
+            <label class="auth-lbl">Password</label>
+            <div class="auth-field" style="justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:8px">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9ea3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5.5a2.5 2.5 0 015 0V7"/></svg>
+                <span>Password</span>
+              </div>
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9ea3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 8C3 4.5 5.3 3 8 3s5 1.5 6.5 5c-1.5 3.5-3.8 5-6.5 5S3 11.5 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>
+            </div>
+            <div class="auth-forgot">Forgot password?</div>
+            <div class="auth-btn-login">Log in</div>
+            <div class="auth-or">— or —</div>
+            <div class="auth-sso">
+              <svg width="12" height="12" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 01-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"/><path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg>
+              Continue with Google
+            </div>
+            <div class="auth-sso">
+              <svg width="12" height="14" viewBox="0 0 16 20" fill="#3c3f52"><path d="M13.545 10.239c-.023-2.569 2.098-3.808 2.193-3.867-1.197-1.749-3.059-1.989-3.722-2.014-1.582-.161-3.094.935-3.896.935-.802 0-2.036-.914-3.347-.889-1.72.026-3.31 1.003-4.193 2.535-1.793 3.105-.458 7.692 1.286 10.21.854 1.232 1.87 2.612 3.204 2.562 1.29-.052 1.775-.827 3.334-.827 1.559 0 2.002.827 3.354.8 1.384-.024 2.258-1.25 3.102-2.488.984-1.427 1.386-2.82 1.408-2.893-.031-.013-2.7-1.034-2.723-4.064z"/><path d="M11.03 2.918c.712-.858 1.191-2.052 1.058-3.241-1.024.042-2.259.683-2.993 1.54-.657.761-1.232 1.984-1.078 3.148 1.14.088 2.301-.576 3.013-1.447z"/></svg>
+              Continue with Apple
+            </div>
+            <div class="auth-register">Don't have an account? <b>Register now!</b></div>
+          </div>
+        </div>
+        <div class="auth-right">
+          <div class="auth-logo-block">
+            <img src="logo-white.png" alt="Forsured" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+            <span style="display:none">Forsured</span>
+          </div>
+        </div>
+      </div>
+      <div class="float-badge">
+        <div class="float-dot"></div>
+        <div>
+          <div class="float-t1">AI compliance check complete</div>
+          <div class="float-t2">3 coverage gaps resolved automatically</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- PRODUCT -->
+<section id="product">
+  <div class="w">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:44px;align-items:end">
+      <div>
+        <div class="label">The Platform</div>
+        <h2 class="ttl">Built for the <span class="a">entire chain</span></h2>
+      </div>
+      <p class="sub" style="padding-bottom:4px">From general contractors to subcontractors to brokers — every stakeholder gets a purpose-built compliance view.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(0,this)">Project Oversight</button>
+      <button class="tab" onclick="switchTab(1,this)">Risk Intelligence</button>
+      <button class="tab" onclick="switchTab(2,this)">Team Workflows</button>
+    </div>
+    <div class="product-screen">
+      <img id="product-img" src="dashboard-gc.png" alt="Project Oversight"
+        onerror="this.src='';this.alt='';this.parentElement.innerHTML=tabFallback(currentTab)"/>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.5C16.5 22.15 20 17.25 20 12V6L12 2z"/></svg>
+        </div>
+        <h3>Proactive AI Monitoring</h3>
+        <p>Embedded agent tracks COIs and endorsements in real time — not just at onboarding. Predicts lapses before they happen.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+        </div>
+        <h3>Centralized Compliance Engine</h3>
+        <p>Certificates, bonds, and coverage flow into one real-time dashboard. Single source of truth for every project.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg>
+        </div>
+        <h3>Instant Coverage Purchase</h3>
+        <p>When a gap appears, Forsured triggers coverage renewal instantly. No calls. No delays. No stopped projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FORSURED -->
+<section id="why" class="alt">
+  <div class="w">
+    <div class="label">Why Forsured</div>
+    <h2 class="ttl">The only platform that <span class="a">does it all</span></h2>
+    <p class="sub">Tools like TrustLayer, myCOI, and Avetta digitize document collection — but they don't eliminate the underlying friction.</p>
+    <div class="why-grid">
+      <div>
+        <div class="check-item">
+          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Real-Time Predictive Compliance</h4><p>Score contractors against industry benchmarks and forecast compliance lapses before they reach the jobsite.</p></div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Embedded Insurance Network</h4><p>Brokers, carriers, and bonding partners connected directly inside the workflow. No off-platform quoting.</p></div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Instant Coverage Resolution</h4><p>When a lapse appears, Forsured auto-triggers renewal reconciliation. Self-healing compliance.</p></div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Minutes, Not Weeks</h4><p>Pre-vetted contractor profiles enable near-instant verification. 60% reduction in admin overhead.</p></div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Network Learning Effect</h4><p>Aggregated coverage data improves accuracy and underwriting for the entire ecosystem.</p></div>
+        </div>
+      </div>
+      <div class="compare-table">
+        <div class="compare-header">
+          <img src="logo-orange.png" alt="Forsured" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+          <span class="logo-text" style="display:none">Forsured</span>
+          <span>vs. the market</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th style="color:var(--o)">Forsured</th>
+              <th>ISNet</th>
+              <th>myCOI</th>
+              <th>TrustLayer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="color:var(--tm)">Real-time monitoring</td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td></tr>
+            <tr><td style="color:var(--tm)">Predictive compliance</td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td></tr>
+            <tr><td style="color:var(--tm)">Embedded insurance</td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td></tr>
+            <tr><td style="color:var(--tm)">Construction-native</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td></tr>
+            <tr><td style="color:var(--tm)">Mid-market pricing</td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td style="color:var(--tm)">Broker network</td><td><span class="yes">✓</span></td><td><span class="no">–</span></td><td><span class="no">–</span></td><td><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="w">
+    <div class="label">Market Opportunity</div>
+    <h2 class="ttl">A <span class="a">$92B market</span> by 2034</h2>
+    <p class="sub">Construction insurance is digitizing fast — and the window to own the compliance layer is right now.</p>
+    <div class="market-3">
+      <div class="stat-card"><div class="big-num">$13.9B</div><h3>U.S. construction insurance market (2024)</h3><p>Growing at ~8.9% CAGR, projected to reach $92B by 2034.</p><div class="source">Source: Market.us</div></div>
+      <div class="stat-card"><div class="big-num">81%</div><h3>Of construction firms adopting digital platforms</h3><p>Engineering and construction is rapidly digitizing workflows and compliance.</p><div class="source">Source: AutoDesk</div></div>
+      <div class="stat-card"><div class="big-num">16%</div><h3>Have fully integrated systems and tools</h3><p>84% of construction executives say their organizations lack integrated tooling.</p><div class="source">Source: AutoDesk</div></div>
+    </div>
+    <div class="market-2">
+      <div class="stat-card wide"><div class="big-num">$4B+</div><h3>Annual losses from COI errors</h3><p>45–55% of initial COI submissions require corrections. First-time contractors face a 75% rejection rate. Forsured eliminates this friction entirely.</p><div class="source">Source: The Contractors Choice Agency</div></div>
+      <div class="stat-card wide"><div class="big-num">20+</div><h3>Early adopting broker customers</h3><p>Our first customers represent ~$2B in Forsured ARR, led by a California brokerage owner-investor. They validate the product and resell into GCs and subcontractors.</p><div class="source">Forsured early access program</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="alt">
+  <div class="w">
+    <div class="label">Who It's For</div>
+    <h2 class="ttl">Built for the <span class="a">entire chain</span></h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V7l6-4 6 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>
+        </div>
+        <h3>General Contractors</h3>
+        <div class="tag">Centralize &amp; control compliance</div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Complete visibility over all subcontractor COIs</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Reduce compliance admin costs by 60%</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Real-time risk scoring per project</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated compliance issue alerts</li>
+        </ul>
+        <a href="#waitlist" class="btn-orange" style="width:100%;justify-content:center;padding:12px">Get Early Access</a>
+      </div>
+      <div class="who-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="who-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Subcontractors</h3>
+        <div class="tag">Win more bids, work faster</div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Coverage gap analysis before bid submission</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Instant certificate of insurance generation</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Faster project approvals</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Build a verified compliance profile</li>
+        </ul>
+        <a href="#waitlist" class="btn-orange" style="width:100%;justify-content:center;padding:12px">Get Early Access</a>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Insurance Brokers</h3>
+        <div class="tag">Access verified leads automatically</div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Access pre-qualified contractor leads</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated policy renewal workflows</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Reduced manual document review</li>
+          <li><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#E5612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Expand client base via the Forsured network</li>
+        </ul>
+        <a href="#waitlist" class="btn-orange" style="width:100%;justify-content:center;padding:12px">Get Early Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section>
+  <div class="w">
+    <div class="label">Roadmap 2026</div>
+    <h2 class="ttl">Where we're <span class="a">headed</span></h2>
+    <div class="roadmap">
+      <div class="road-step">
+        <div class="road-dot">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l9-9A5 5 0 004.5 16.5z"/><path d="M12 8l4 4M15 5l4 4"/></svg>
+        </div>
+        <div class="road-q">Q1 2026</div>
+        <h4>Build</h4>
+        <p>v1 product launch + early access users</p>
+      </div>
+      <div class="road-step">
+        <div class="road-dot">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(250,250,250,0.3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="road-q">Q2 2026</div>
+        <h4>Launch</h4>
+        <p>First brokers &amp; channel partners onboarded</p>
+      </div>
+      <div class="road-step">
+        <div class="road-dot">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(250,250,250,0.3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="road-q">Q3 2026</div>
+        <h4>Scale</h4>
+        <p>Carrier integrations &amp; co-marketing campaigns</p>
+      </div>
+      <div class="road-step">
+        <div class="road-dot">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(250,250,250,0.3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9h.01M15 9h.01M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+        </div>
+        <div class="road-q">Q4 2026</div>
+        <h4>Iterate</h4>
+        <p>Predictive risk models &amp; advanced analytics</p>
+      </div>
+      <div class="road-step">
+        <div class="road-dot">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(250,250,250,0.3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <div class="road-q">Q1 2027</div>
+        <h4>Partner</h4>
+        <p>Strategic insurer alignments &amp; expansion</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<div class="waitlist-wrap" id="waitlist">
+  <div class="waitlist-inner">
+    <div class="waitlist-left">
+      <h2>Join the future of <span class="a">proactive compliance</span></h2>
+      <p>Be among the first to access Forsured. We're onboarding brokers, general contractors, and subcontractors in early 2026.</p>
+      <div class="benefits">
+        <div class="benefit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority access to the platform</div>
+        <div class="benefit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Founding member pricing</div>
+        <div class="benefit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct line to the product team</div>
+        <div class="benefit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Early integration with your existing tools</div>
+        <div class="benefit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>Shape the product roadmap</div>
+      </div>
+    </div>
+    <div class="form-card">
+      <div id="form-content">
+        <h3>Get Early Access</h3>
+        <p>Join 200+ construction professionals already waiting.</p>
+        <div class="field"><label>Work Email</label><input type="email" id="wl-email" placeholder="you@company.com"/></div>
+        <div class="field"><label>I am a…</label>
+          <select>
+            <option value="" disabled selected>Select your role</option>
+            <option>General Contractor</option>
+            <option>Subcontractor</option>
+            <option>Insurance Broker</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+        <button class="submit-btn" onclick="submitWaitlist()">Join the Waitlist →</button>
+        <p class="form-note">No spam. Unsubscribe anytime. forsured.com · forsured.ai</p>
+      </div>
+      <div class="success-state" id="success-state">
+        <div class="success-icon">
+          <svg width="24" height="24" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#E5612A" stroke-width="1.5"/><path d="M5.5 8l2 2 3-3" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>You're on the list!</h3>
+        <p>We'll reach out as early access opens. Thanks for joining.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo-white.png" alt="Forsured" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+        <span class="logo-text" style="display:none">Forsured</span>
+        <p>Accelerating construction through always-on insurance compliance.</p>
+        <p style="margin-top:12px;font-size:12px">forsured.com · forsured.ai</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#">For General Contractors</a>
+        <a href="#">For Subcontractors</a>
+        <a href="#">For Brokers</a>
+        <a href="#">Compliance Engine</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Investors</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Forsured. All rights reserved. A <a href="https://unicorn.love" target="_blank" rel="noreferrer">unicorn.love studios</a> venture.</p>
+      <p>forsured.com · forsured.ai</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  window.addEventListener('scroll', function() {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Marquee
+  const MQ_ITEMS = [
+    {label:'AI Compliance Monitoring', icon:'<circle cx="8" cy="8" r="6.5"/><path d="M5.5 8l2 2 3-3"/>'},
+    {label:'COI Verification', icon:'<path d="M8 1L14 4v5c0 3-2.5 5.5-6 6.5C2.5 14.5 2 12 2 9V4l6-3z"/><path d="M5.5 8l2 2 3-3"/>'},
+    {label:'Predictive Risk Engine', icon:'<polyline points="1.5 11 5 7 8 9.5 13 4"/><polyline points="10.5 4 13 4 13 6.5"/>'},
+    {label:'Embedded Insurance', icon:'<rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M1.5 7h13M5.5 7v5.5"/>'},
+    {label:'Real-Time Alerts', icon:'<circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M2 8H.5M15.5 8H14"/>'},
+    {label:'Broker Network', icon:'<circle cx="3.5" cy="8" r="2"/><circle cx="12.5" cy="4" r="2"/><circle cx="12.5" cy="12" r="2"/><path d="M5.5 8h4.5"/>'},
+    {label:'Coverage Gap Analysis', icon:'<circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 2.5"/>'},
+    {label:'Self-Healing Compliance', icon:'<path d="M13.5 8A5.5 5.5 0 112.7 5M2 2v3.5h3.5"/>'},
+    {label:'Instant COI Certificates', icon:'<path d="M9 1.5H4a1.5 1.5 0 00-1.5 1.5v10A1.5 1.5 0 004 14.5h8a1.5 1.5 0 001.5-1.5V6L9 1.5z"/><polyline points="9 1.5 9 6 13.5 6"/><path d="M5.5 9l2 2 3-3"/>'},
+    {label:'Network Learning Effect', icon:'<circle cx="8" cy="3" r="1.5"/><circle cx="3" cy="12" r="1.5"/><circle cx="13" cy="12" r="1.5"/><path d="M8 4.5v3L4.5 11M8 7.5L11.5 11M5 12h6"/>'},
+    {label:'Subcontractor Onboarding', icon:'<circle cx="7" cy="5" r="2.5"/><path d="M1.5 14c0-2.8 2.5-5 5.5-5"/><path d="M11 10v5M13.5 12.5h-5"/>'},
+    {label:'Continuous Scoring', icon:'<path d="M2 12l3-4 2.5 2.5L11 6l3 3.5"/>'},
+  ];
+  const mq = document.getElementById('marquee');
+  const items = [...MQ_ITEMS, ...MQ_ITEMS];
+  mq.innerHTML = items.map(i =>
+    `<span class="marquee-item"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#E5612A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${i.icon}</svg>${i.label}</span>`
+  ).join('');
+
+  // Product tabs
+  const SHOTS = ['dashboard-gc.png', 'dashboard-broker.png', 'dashboard-board.png'];
+  const LABELS = ['Project Oversight', 'Risk Intelligence', 'Team Workflows'];
+  let currentTab = 0;
+
+  function switchTab(idx, btn) {
+    currentTab = idx;
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const img = document.getElementById('product-img');
+    img.src = SHOTS[idx];
+    img.alt = LABELS[idx];
+  }
+
+  // Waitlist
+  function submitWaitlist() {
+    const email = document.getElementById('wl-email').value;
+    if (!email) { document.getElementById('wl-email').focus(); return; }
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('success-state').style.display = 'block';
+  }
+</script>
+</body>
+</html>
