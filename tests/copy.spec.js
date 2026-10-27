@@ -4,7 +4,7 @@
 const { test, expect } = require('@playwright/test');
 const { PAGES, open, pageCopy, read } = require('./helpers');
 
-// Wording rules. Each entry: the pattern that must not appear, and why.
+// Wording rules. Each entry: the pattern that must not appear, why, and optional settings.
 const BANNED = [
   // Neutral wording lands with GCs and trade contractors alike (Oct 26 IRMI learnings).
   [/\bsub-?contractors?\b/i, 'say "contractor" or "trade contractor", not "subcontractor"'],
@@ -23,6 +23,10 @@ const BANNED = [
   [/\[(insert|placeholder|name|company|link)\b[^\]]*\]/i, 'unfilled placeholder'],
   [/\{\{[^}]*\}\}/, 'unrendered template tag'],
   [/\bundefined\b|\bNaN\b|\[object Object\]/, 'a script printed a broken value'],
+  // Reads as machine-written. Keep the copy plain and specific, the way we talk to customers.
+  [/\b(seamless(ly)?|leverag(e|es|ed|ing)|unlock(s|ing)?|elevat(e|es|ing)|game[- ]chang(er|ing)|revolutioni[sz]\w*|cutting[- ]edge|delve|supercharg\w*|empower\w*|next[- ]level|effortless(ly)?|robust|streamlin\w*|transformative|unparalleled|best[- ]in[- ]class|world[- ]class|state[- ]of[- ]the[- ]art|ever[- ]evolving|synerg\w*|holistic)\b/i, 'generic marketing cliché, say it plainly'],
+  [/\bin today's\b|\bharness(ing)? the power\b|\bnavigat(e|ing) the complexit/i, 'boilerplate phrasing'],
+  [/\w ?— ?\w/, 'em-dash aside, use a comma, period or colon', { perSegment: true }],
   // IRMI: we can be there, but never imply we are part of, sponsored or approved by IRMI.
   [/official (IRMI|CRC)|IRMI[- ]?(approved|endorsed|partner|sponsor)|(?<!(not|or|never) )(sponsored|endorsed|approved) by IRMI|in partnership with IRMI/i, 'implies an IRMI affiliation'],
 ];
@@ -34,11 +38,15 @@ for (const p of PAGES) {
   test.describe(`${p.name} copy`, () => {
     test('follows the wording rules', async ({ page }) => {
       await open(page, p.url, { fonts: false });
-      const { text } = await pageCopy(page);
-      const hits = BANNED.flatMap(([re, why]) => {
-        const m = text.match(re);
-        return m ? [`"${m[0]}" (${why}) in: …${text.slice(Math.max(0, m.index - 50), m.index + 50).trim()}…`] : [];
-      });
+      const { text, segments } = await pageCopy(page);
+      // Most rules read the page as one string so phrases split across tags still match;
+      // per-segment rules look at each text node alone (a lone "—" in a table cell is fine).
+      const hits = BANNED.flatMap(([re, why, opts = {}]) =>
+        (opts.perSegment ? segments : [text]).flatMap((t) => {
+          const m = t.match(re);
+          return m ? [`"${m[0]}" (${why}) in: …${t.slice(Math.max(0, m.index - 50), m.index + 50).trim()}…`] : [];
+        })
+      );
       expect(hits).toEqual([]);
     });
 

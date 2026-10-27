@@ -1,5 +1,11 @@
 {
   "_about": "Brand guardrails for tests/brand.spec.js. Every color the site uses must be a near-neutral gray or within `tolerance` (RGB distance) of a color listed here. Adding a color is fine; do it here on purpose so the change shows up in review.",
+  "designSystem": {
+    "_note": "Source of truth is the Figma file below, which keeps changing. Before any design work, re-pull its variables (Figma MCP get_variable_defs on a frame in the page) and update this file to match.",
+    "figma": "https://www.figma.com/design/xE0hktIvp6MZHMukhFP1RD/Forsured-Flows?node-id=1000-6184",
+    "page": "Broker Dashboard (Design System Compliant)",
+    "lastSynced": "2026-10-27"
+  },
   "tolerance": 10,
   "neutralChroma": 6,
   "tokens": {
@@ -27,7 +33,10 @@
       "deep": "#B03B15",
       "figmaPrimary500": "#FB612A",
       "figmaPrimary600": "#D54E21",
-      "figmaPrimary100": "#FFE3D4"
+      "figmaPrimary100": "#FFE3D4",
+      "figmaPrimary50": "#FFF3EC",
+      "figmaPrimary800": "#6A260F",
+      "figmaPrimary900": "#45170A"
     },
     "orangeTints": {
       "warm": "#FFF8F4",
@@ -59,7 +68,12 @@
       "figmaText500": "#637083",
       "figmaBorder": "#E4E7EC",
       "slate900": "#111827",
-      "slate800": "#1F2937"
+      "slate800": "#1F2937",
+      "figmaIcon600": "#414E62",
+      "figmaIcon800": "#1A232D",
+      "figmaBg50": "#F9FAFB",
+      "figmaBg100": "#F2F4F7",
+      "figmaNavy": "#001E60"
     },
     "status": {
       "green": "#16864E",
@@ -82,9 +96,21 @@
   },
   "contrastExceptions": {
     "_note": "Small brand-orange text (section labels, tags, the banner button) sits at 3.1-3.5:1 against light backgrounds, under the WCAG AA 4.5:1 for small text. Kept on purpose for now; tests/a11y.spec.js skips contrast findings that involve these colors. A deeper orange such as #C44D1E (already in the palette) would pass.",
-    "colors": ["#E5612A"]
+    "colors": [
+      "#E5612A"
+    ]
   },
-  "fonts": ["Inter", "Chakra Petch", "JetBrains Mono"],
-  "logo": { "text": "Forsured", "family": "Chakra Petch", "weight": "800" },
-  "primaryCta": { "text": "Free COI Risk Check" }
+  "fonts": [
+    "Inter",
+    "Chakra Petch",
+    "JetBrains Mono"
+  ],
+  "logo": {
+    "text": "Forsured",
+    "family": "Chakra Petch",
+    "weight": "800"
+  },
+  "primaryCta": {
+    "text": "Free COI Risk Check"
+  }
 }

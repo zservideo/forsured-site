@@ -693,30 +693,23 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 
 /* PRODUCT SHOWCASE */
 .show-sec{background:linear-gradient(180deg,var(--bg),#FBF8F3 40%,var(--bg))}
-.show-head{max-width:780px}
+.show-head{max-width:760px}
 .show-fig{margin-top:36px}
-.show-stage{position:relative}
-.show-comp{display:block;width:100%;height:auto;border-radius:18px;border:1px solid #E8DCCB;box-shadow:0 30px 80px rgba(42,38,35,.10)}
-.show-steps{list-style:none;margin:0;padding:0}
-.show-cap{margin-top:14px;font-size:12px;color:var(--dm);text-align:right}
-.show-steps li{position:absolute;display:flex;align-items:center;gap:10px;background:#2A2623;color:#fff;border-radius:999px;padding:7px 16px 7px 7px;font-size:clamp(11px,1.05vw,14px);font-weight:600;line-height:1.2;box-shadow:0 12px 30px rgba(42,38,35,.25);white-space:nowrap}
-.show-steps .ss-n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--f);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px}
-.show-steps .ss-t{display:flex;align-items:center;gap:10px}
-.show-steps .ss-d,.show-steps .ss-img{display:none}
-.show-steps .ss1{left:63.1%;top:17.8%}
-.show-steps .ss2{left:6%;top:61%}
-.show-steps .ss3{left:6%;top:83.8%}
-.show-steps .ss4{left:69.4%;top:auto;bottom:.8%}
+.show-comp{display:block;width:100%;height:auto;border-radius:16px;border:1px solid #E8DCCB}
+.show-steps{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.show-steps li{border-top:1px solid #D9C9B6;padding-top:16px}
+.show-steps .ss-n{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.04em;color:#6B6055;margin-bottom:10px}
+.show-steps .ss-t{font-size:16px;font-weight:700;line-height:1.3;letter-spacing:-.01em;color:var(--tx)}
+.show-steps .ss-d{margin-top:6px;font-size:14px;line-height:1.55;color:var(--mt)}
+.show-steps .ss-img{display:none}
+.show-cap{margin-top:24px;font-size:12px;color:var(--dm)}
 @media(max-width:900px){
-  .show-cap{text-align:left}
   .show-comp{display:none}
   .show-fig{margin-top:24px}
-  .show-steps{display:flex;flex-direction:column;gap:16px}
-  .show-steps li{position:static;display:block;background:var(--wh);color:var(--tx);border:1px solid #E8DCCB;border-radius:16px;padding:18px;white-space:normal;box-shadow:0 10px 30px rgba(42,38,35,.06);font-size:16px}
-  .show-steps .ss-t{font-weight:700}
-  .show-steps .ss-n{color:#fff}
-  .show-steps .ss-d{display:block;font-size:14px;font-weight:400;color:var(--mt);line-height:1.55;margin-top:8px}
+  .show-steps{grid-template-columns:1fr;gap:16px;margin-top:0}
+  .show-steps li{background:var(--wh);border:1px solid #E8DCCB;border-radius:16px;padding:18px}
   .show-steps .ss-img{display:block;width:100%;height:auto;margin-top:14px;border-radius:12px;border:1px solid #E8DCCB}
+  .show-cap{margin-top:16px}
 }
 /* IRMI BANNER (temporary): delete this block, the irmi-bar markup and its script to remove */
 :root{--bh:36px}
@@ -834,20 +827,18 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
 <!-- PRODUCT SHOWCASE -->
 <section class="show-sec" id="product" aria-labelledby="show-h"><div class="edge">
   <div class="show-head reveal">
-    <div class="label">See It Work</div>
-    <h2 class="h2" id="show-h">From project requirements to <span class="accent">gaps caught and closed.</span></h2>
-    <p class="sub" style="margin-top:8px">Forsured checks every contractor COI against your project requirements, flags what's missing, brings brokers into the fix, and keeps watching after approval.</p>
+    <div class="label">Inside Forsured</div>
+    <h2 class="h2" id="show-h">Every contractor COI, checked against <span class="accent">the project it's for.</span></h2>
+    <p class="sub" style="margin-top:8px">A sample project, start to finish. Forsured reads each certificate and endorsement, flags what's missing, brings the broker in to fix it, and keeps watching after approval.</p>
   </div>
   <figure class="show-fig reveal">
-    <div class="show-stage">
     <img class="show-comp" src="assets/showcase/composite-1400.jpg" srcset="assets/showcase/composite-1400.jpg 1400w, assets/showcase/composite-2400.jpg 2400w" sizes="(max-width: 1200px) 100vw, 1120px" width="2400" height="1500" alt="Forsured app screens: a contractor dashboard at 88% compliant, a project coverage view flagging an umbrella aggregate gap, inbox items asking the broker to fix missing coverage, and an activity feed" loading="lazy" decoding="async"/>
     <ol class="show-steps" aria-label="How Forsured works">
-      <li class="ss1"><span class="ss-t"><span class="ss-n" aria-hidden="true">1</span><span>Every COI checked against project requirements</span></span><span class="ss-d">Forsured reads each certificate and endorsement and compares it to the limits and terms the project actually requires.</span><img class="ss-img" src="assets/showcase/step-1.jpg" width="1120" height="784" alt="Project coverage status at 88%, with general liability met and an umbrella aggregate gap flagged" loading="lazy" decoding="async"/></li>
-      <li class="ss2"><span class="ss-t"><span class="ss-n" aria-hidden="true">2</span><span>Gaps flagged before they're jobsite problems</span></span><span class="ss-d">Missing endorsements and low limits land in your inbox with the exact reason, so the next step is obvious.</span><img class="ss-img" src="assets/showcase/step-2.jpg" width="1120" height="568" alt="Inbox items flagging a missing additional insured endorsement and an umbrella aggregate below the requirement" loading="lazy" decoding="async"/></li>
-      <li class="ss3"><span class="ss-t"><span class="ss-n" aria-hidden="true">3</span><span>Brokers fix it in the same workflow</span></span><span class="ss-d">Send the gap to the broker in one click. They see the requirement, the document and the project context.</span><img class="ss-img" src="assets/showcase/step-3.jpg" width="1120" height="738" alt="Ask broker to fix panel and activity showing the broker uploading a renewed certificate and the gap resolved" loading="lazy" decoding="async"/></li>
-      <li class="ss4"><span class="ss-t"><span class="ss-n" aria-hidden="true">4</span><span>Monitored every day after</span></span><span class="ss-d">Renewals and coverage changes are tracked across active projects, so compliance is never a one-time checkpoint.</span><img class="ss-img" src="assets/showcase/step-4.jpg" width="1120" height="828" alt="Compliance at 88% across projects, a fully compliant project monitored daily and an upcoming workers comp renewal" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">01</span><h3 class="ss-t">Checked against the project</h3><p class="ss-d">Each certificate and endorsement is compared to the limits and terms this project actually requires.</p><img class="ss-img" src="assets/showcase/step-1.jpg" width="1120" height="784" alt="Project coverage status at 88%, with general liability met and an umbrella aggregate gap flagged" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">02</span><h3 class="ss-t">Gaps flagged with the reason</h3><p class="ss-d">Missing endorsements and low limits show up in your inbox with exactly what's wrong and what's needed.</p><img class="ss-img" src="assets/showcase/step-2.jpg" width="1120" height="568" alt="Inbox items flagging a missing additional insured endorsement and an umbrella aggregate below the requirement" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">03</span><h3 class="ss-t">Fixed with the broker</h3><p class="ss-d">Send the gap to the broker. They see the requirement, the document and the project, so the fix comes back right.</p><img class="ss-img" src="assets/showcase/step-3.jpg" width="1120" height="738" alt="Ask broker to fix panel and activity showing the broker uploading a renewed certificate and the gap resolved" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">04</span><h3 class="ss-t">Watched after approval</h3><p class="ss-d">Renewals and coverage changes are tracked across active projects, so nothing lapses quietly.</p><img class="ss-img" src="assets/showcase/step-4.jpg" width="1120" height="828" alt="Compliance at 88% across projects, a fully compliant project monitored daily and an upcoming workers comp renewal" loading="lazy" decoding="async"/></li>
     </ol>
-    </div>
     <figcaption class="show-cap">Sample data. Companies, people and projects shown are fictional.</figcaption>
   </figure>
 </div></section>

@@ -150,22 +150,18 @@ for (const vp of VIEWPORTS) {
       const steps = page.locator('#product .show-steps li');
       await expect(steps).toHaveCount(4);
       if (vp.width > 900) {
-        // Desktop: the composite with four numbered callouts on top of it.
+        // Desktop: the composite, then the four steps in one row beneath it.
         await expect(comp).toBeVisible();
         await comp.scrollIntoViewIfNeeded();
         await expect.poll(() => comp.evaluate((img) => img.complete && img.naturalWidth)).toBeGreaterThan(0);
-        const stage = await page.locator('#product .show-stage').boundingBox();
-        const pills = await steps.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().toJSON()));
-        for (const [i, b] of pills.entries()) {
-          expect(b.left, `callout ${i + 1} inside the image`).toBeGreaterThanOrEqual(stage.x - 1);
-          expect(b.right, `callout ${i + 1} inside the image`).toBeLessThanOrEqual(stage.x + stage.width + 1);
-          expect(b.top, `callout ${i + 1} inside the image`).toBeGreaterThanOrEqual(stage.y - 1);
-          expect(b.bottom, `callout ${i + 1} inside the image`).toBeLessThanOrEqual(stage.y + stage.height + 1);
-          for (const [j, o] of pills.entries()) {
-            if (j <= i) continue;
-            const overlap = b.left < o.right && o.left < b.right && b.top < o.bottom && o.top < b.bottom;
-            expect(overlap, `callouts ${i + 1} and ${j + 1} overlap`).toBe(false);
-          }
+        const image = await comp.boundingBox();
+        const boxes = await steps.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().toJSON()));
+        for (const [i, b] of boxes.entries()) {
+          expect(b.top, `step ${i + 1} sits below the image`).toBeGreaterThanOrEqual(image.y + image.height);
+          expect(Math.abs(b.top - boxes[0].top), `step ${i + 1} lines up with the row`).toBeLessThanOrEqual(1);
+          expect(b.left, `step ${i + 1} inside the column`).toBeGreaterThanOrEqual(image.x - 1);
+          expect(b.right, `step ${i + 1} inside the column`).toBeLessThanOrEqual(image.x + image.width + 1);
+          if (i) expect(b.left, `steps ${i} and ${i + 1} overlap`).toBeGreaterThanOrEqual(boxes[i - 1].right);
         }
         await expect(page.locator('#product .ss-img').first()).toBeHidden();
       } else {
