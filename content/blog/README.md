@@ -27,7 +27,7 @@ The file starts with a JSON block between `---` lines:
 | `dek` | yes | One or two sentences under the headline. |
 | `date` | yes | ISO time with offset, e.g. `2026-10-27T09:00:00-04:00`. Never in the future. |
 | `updated` | no | Set when a post changes in substance. |
-| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways. |
+| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news. |
 | `tags` | no | Search phrases the post answers. |
 | `takeaways` | yes | 2 to 4 bullets that answer the question on their own. AI answer engines quote these. |
 | `faq` | no | `{ "q", "a" }` pairs. Real questions, answers that stand alone. Becomes FAQPage markup. |
