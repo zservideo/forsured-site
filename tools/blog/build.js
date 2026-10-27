@@ -151,7 +151,7 @@ const ORG = {
   logo: { '@type': 'ImageObject', url: `${SITE}/logo-orange.png` },
   description: 'Construction insurance compliance software that checks contractor COIs against project requirements, flags coverage and endorsement gaps, and keeps checking for the life of the project.',
   email: 'hello@forsured.ai',
-  sameAs: ['https://forsured.com', 'https://www.instagram.com/getforsured/'],
+  sameAs: ['https://forsured.com', 'https://www.linkedin.com/company/forsured/', 'https://www.instagram.com/getforsured/'],
   knowsAbout: ['Construction insurance compliance', 'Certificates of insurance', 'Additional insured endorsements', 'Contractor risk management'],
 };
 const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Forsured', url: SITE, publisher: { '@id': ORG['@id'] }, inLanguage: 'en-US' };
