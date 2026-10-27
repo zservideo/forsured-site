@@ -1,20 +1,33 @@
 name: Update visual baselines
 
-# Run this from the Actions tab on a branch after an intended design change.
+# Run this after an intended design change, in either of two ways:
+#   - add the "update-baselines" label to the pull request, or
+#   - run it from the Actions tab on the branch.
 # It re-takes every screenshot in tests/visual.spec.js on the same Linux runner CI uses,
-# commits the new images to that branch, and the pull request diff shows them for review.
+# commits the new images to that branch (the pull request diff shows them for review),
+# then starts the "Site tests" workflow again on the branch.
 on:
   workflow_dispatch:
+  pull_request:
+    types: [labeled]
 
 permissions:
   contents: write
+  actions: write
+  pull-requests: write
 
 jobs:
   update:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'update-baselines'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -29,7 +42,13 @@ jobs:
           git add tests/__screenshots__
           if git diff --cached --quiet; then
             echo "Baselines already match."
-            exit 0
+          else
+            git commit -m "Update visual baselines"
+            git push origin "HEAD:$BRANCH"
           fi
-          git commit -m "Update visual baselines"
-          git push
+      # A push made by this workflow does not start CI by itself, so start it here.
+      - name: Run the site tests on the branch
+        run: gh workflow run test.yml --ref "$BRANCH" --repo "$GITHUB_REPOSITORY"
+      - name: Take the label off so it can be added again next time
+        if: always() && github.event_name == 'pull_request'
+        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label update-baselines --repo "$GITHUB_REPOSITORY"

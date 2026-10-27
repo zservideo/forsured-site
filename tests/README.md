@@ -46,10 +46,13 @@ npm run serve                     # browse the site at http://localhost:4173
 Most failures are real problems to fix in the page. A few are guardrails you update deliberately:
 
 - **A design change made the screenshots differ.** Look at the diff in the report (or the
-  `playwright-report` artifact on the failed CI run). If the change is intended, refresh the
-  baselines with the **Update visual baselines** workflow in the Actions tab (pick your branch),
-  then run **Site tests** on the branch again from the Actions tab. Review the new images in the
-  pull request diff. Locally, `npm run test:update-visual` does the same on your machine.
+  `playwright-report` artifact on the failed CI run). If the change is intended, add the
+  `update-baselines` label to the pull request (or run **Update visual baselines** from the
+  Actions tab on your branch). It re-takes the screenshots on GitHub's Linux runner, commits them
+  to the branch and runs **Site tests** again. Review the new images in the pull request diff.
+  The baselines are always taken on that runner: font rendering differs slightly between
+  machines, so screenshots taken on a laptop (`npm run test:update-visual`) are for local checks
+  only and should not be committed.
 - **A new color.** Add it to `tests/brand.json` under the right group, so the change is visible in review.
 - **A new page.** Add it to `PAGES` in `tests/helpers.js`; copy, brand, SEO, accessibility and
   layout checks then cover it automatically.
