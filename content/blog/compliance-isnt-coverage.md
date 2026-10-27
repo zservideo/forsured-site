@@ -6,7 +6,45 @@
   "dek": "A certificate of insurance is a snapshot. Coverage changes mid-job, endorsements decide who's actually protected, and the gap usually shows up after a loss.",
   "date": "2026-10-27T15:00:00-04:00",
   "category": "COI basics",
-  "tags": ["certificate of insurance", "contractor COIs", "additional insured", "project requirements", "construction risk management"],
+  "hero": {
+    "type": "coi",
+    "title": "A COI on file isn't proof of coverage",
+    "rows": [
+      [
+        "General liability",
+        "$1M / $2M",
+        "ok"
+      ],
+      [
+        "Auto liability",
+        "$1M",
+        "ok"
+      ],
+      [
+        "Umbrella",
+        "$5M",
+        "Below $10M required"
+      ],
+      [
+        "Additional insured",
+        "Box checked",
+        "No endorsement"
+      ],
+      [
+        "Workers' comp",
+        "Statutory",
+        "ok"
+      ]
+    ],
+    "note": "The certificate says additional insured. The policy has no endorsement that makes it true."
+  },
+  "tags": [
+    "certificate of insurance",
+    "contractor COIs",
+    "additional insured",
+    "project requirements",
+    "construction risk management"
+  ],
   "takeaways": [
     "A certificate of insurance is evidence that a policy existed when it was issued. The standard ACORD 25 form says it confers no rights on the certificate holder.",
     "Additional insured status, waivers and primary and noncontributory wording live in the policy endorsements, not on the certificate.",
@@ -14,14 +52,36 @@
     "The fix is to check each contractor COI against the project's actual requirements, ask for the endorsements, and keep checking for the life of the job."
   ],
   "faq": [
-    {"q": "Is a certificate of insurance proof of coverage?", "a": "No. A certificate of insurance is evidence that certain types of insurance were in force when it was issued. The standard ACORD 25 certificate says it is issued as a matter of information only and confers no rights on the certificate holder. Coverage is decided by the policy and its endorsements."},
-    {"q": "Does being listed on a COI make me an additional insured?", "a": "Not by itself. Additional insured status comes from an endorsement on the contractor's policy. Ask for the endorsement form and check that its wording matches what your contract requires, including ongoing and completed operations."},
-    {"q": "How often should contractor COIs be checked?", "a": "At onboarding and again whenever a policy renews, changes or is close to expiring. On a long project that means checking continuously, not once at prequalification."}
+    {
+      "q": "Is a certificate of insurance proof of coverage?",
+      "a": "No. A certificate of insurance is evidence that certain types of insurance were in force when it was issued. The standard ACORD 25 certificate says it is issued as a matter of information only and confers no rights on the certificate holder. Coverage is decided by the policy and its endorsements."
+    },
+    {
+      "q": "Does being listed on a COI make me an additional insured?",
+      "a": "Not by itself. Additional insured status comes from an endorsement on the contractor's policy. Ask for the endorsement form and check that its wording matches what your contract requires, including ongoing and completed operations."
+    },
+    {
+      "q": "How often should contractor COIs be checked?",
+      "a": "At onboarding and again whenever a policy renews, changes or is close to expiring. On a long project that means checking continuously, not once at prequalification."
+    }
   ],
   "sources": [
-    {"title": "Certificate of insurance (definition)", "publisher": "IRMI", "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"},
-    {"title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference", "publisher": "Cullen and Dykman", "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"},
-    {"title": "Insurance Marketplace Realities 2027: Construction", "publisher": "WTW", "date": "Oct 1, 2026", "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"}
+    {
+      "title": "Certificate of insurance (definition)",
+      "publisher": "IRMI",
+      "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"
+    },
+    {
+      "title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference",
+      "publisher": "Cullen and Dykman",
+      "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"
+    },
+    {
+      "title": "Insurance Marketplace Realities 2027: Construction",
+      "publisher": "WTW",
+      "date": "Oct 1, 2026",
+      "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"
+    }
   ]
 }
 ---

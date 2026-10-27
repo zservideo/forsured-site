@@ -6,19 +6,48 @@
   "dek": "The endorsement decides who's protected, prequalification is a snapshot, and insurance data sitting in PDFs is its own kind of risk.",
   "date": "2026-10-27T14:00:00-04:00",
   "category": "Event takeaways",
-  "tags": ["IRMI CRC 2026", "additional insured endorsements", "prequalification", "insurance data", "contractual risk transfer"],
+  "hero": {
+    "type": "list",
+    "title": "Day 2 at IRMI's Construction Risk Conference",
+    "items": [
+      "The endorsement decides who's protected",
+      "Prequalification is a snapshot",
+      "PDFs can't be searched"
+    ]
+  },
+  "tags": [
+    "IRMI CRC 2026",
+    "additional insured endorsements",
+    "prequalification",
+    "insurance data",
+    "contractual risk transfer"
+  ],
   "takeaways": [
     "Additional insured coverage only holds if the endorsement on the contractor's policy matches the project requirements, and endorsement forms keep changing.",
     "Prequalification checks insurance once. Policies renew, lapse and get re-endorsed mid-project, so compliance has to be checked continuously.",
     "Contractor COIs stored as PDFs can't be trended, audited or shared with a broker or carrier at renewal."
   ],
   "faq": [
-    {"q": "Why do additional insured endorsements matter more than the certificate?", "a": "Additional insured status is created by an endorsement on the contractor's policy. The certificate only reports it. If the endorsement form is narrower than the contract requires, for example covering ongoing but not completed operations, the gap stays even though the certificate looks fine."},
-    {"q": "Is prequalification enough to manage contractor insurance risk?", "a": "No. Prequalification is a point-in-time review. Contractor policies renew, lapse and change during a project, so insurance compliance needs to be rechecked whenever a policy changes and before it expires."}
+    {
+      "q": "Why do additional insured endorsements matter more than the certificate?",
+      "a": "Additional insured status is created by an endorsement on the contractor's policy. The certificate only reports it. If the endorsement form is narrower than the contract requires, for example covering ongoing but not completed operations, the gap stays even though the certificate looks fine."
+    },
+    {
+      "q": "Is prequalification enough to manage contractor insurance risk?",
+      "a": "No. Prequalification is a point-in-time review. Contractor policies renew, lapse and change during a project, so insurance compliance needs to be rechecked whenever a policy changes and before it expires."
+    }
   ],
   "sources": [
-    {"title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference", "publisher": "Cullen and Dykman", "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"},
-    {"title": "Certificate of insurance (definition)", "publisher": "IRMI", "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"}
+    {
+      "title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference",
+      "publisher": "Cullen and Dykman",
+      "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"
+    },
+    {
+      "title": "Certificate of insurance (definition)",
+      "publisher": "IRMI",
+      "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"
+    }
   ]
 }
 ---

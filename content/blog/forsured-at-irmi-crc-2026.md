@@ -6,7 +6,24 @@
   "dek": "We came to National Harbor in orange polos with a field guide and one question. Here's what the construction risk community told us about contractor COIs.",
   "date": "2026-10-27T16:45:00-04:00",
   "category": "Forsured news",
-  "tags": ["IRMI CRC 2026", "Forsured", "contractor COIs", "construction insurance compliance", "brokers"],
+  "hero": {
+    "type": "list",
+    "title": "What we heard at IRMI CRC 2026",
+    "items": [
+      "Too many alerts, not enough answers",
+      "Brokers want renewal data",
+      "Carriers watch contractor management",
+      "Big projects still run on spreadsheets",
+      "The words matter"
+    ]
+  },
+  "tags": [
+    "IRMI CRC 2026",
+    "Forsured",
+    "contractor COIs",
+    "construction insurance compliance",
+    "brokers"
+  ],
   "takeaways": [
     "Forsured spent IRMI's 2026 Construction Risk Conference in National Harbor meeting brokers, carriers and contractors about contractor COIs.",
     "The loudest complaint: today's COI tools throw too many red alerts and reject certificates over small issues without explaining what actually matters.",
@@ -14,12 +31,27 @@
     "Neutral wording, \"project requirements\" and \"contractor COIs\", landed with general contractors and trade contractors alike, so that's how we talk now."
   ],
   "faq": [
-    {"q": "Was Forsured a sponsor or exhibitor at IRMI CRC 2026?", "a": "No. Forsured attended IRMI's Construction Risk Conference independently. We are not affiliated with or endorsed by IRMI. Our field guide to the event was an independent guide we made for attendees."},
-    {"q": "What is Forsured?", "a": "Forsured is construction insurance compliance software. It checks every contractor COI against a project's insurance requirements, flags coverage and endorsement gaps, brings the contractor's broker into the fix, and keeps checking for the life of the project."}
+    {
+      "q": "Was Forsured a sponsor or exhibitor at IRMI CRC 2026?",
+      "a": "No. Forsured attended IRMI's Construction Risk Conference independently. We are not affiliated with or endorsed by IRMI. Our field guide to the event was an independent guide we made for attendees."
+    },
+    {
+      "q": "What is Forsured?",
+      "a": "Forsured is construction insurance compliance software. It checks every contractor COI against a project's insurance requirements, flags coverage and endorsement gaps, brings the contractor's broker into the fix, and keeps checking for the life of the project."
+    }
   ],
   "sources": [
-    {"title": "IRMI Construction Risk Conference (CRC)", "publisher": "IRMI", "url": "https://www.irmi.com/conferences/construction-risk-conference"},
-    {"title": "Insurance Marketplace Realities 2027: Construction", "publisher": "WTW", "date": "Oct 1, 2026", "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"}
+    {
+      "title": "IRMI Construction Risk Conference (CRC)",
+      "publisher": "IRMI",
+      "url": "https://www.irmi.com/conferences/construction-risk-conference"
+    },
+    {
+      "title": "Insurance Marketplace Realities 2027: Construction",
+      "publisher": "WTW",
+      "date": "Oct 1, 2026",
+      "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"
+    }
   ]
 }
 ---

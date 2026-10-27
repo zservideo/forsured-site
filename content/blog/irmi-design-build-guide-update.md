@@ -6,18 +6,46 @@
   "dek": "Design-build moves design responsibility onto the builder's side of the table. Project requirements, and the contractor COIs checked against them, have to keep up.",
   "date": "2026-10-27T12:00:00-04:00",
   "category": "Industry news",
-  "tags": ["design-build", "IRMI", "professional liability", "contractual risk transfer", "project requirements"],
+  "hero": {
+    "type": "list",
+    "title": "What design-build changes in COI review",
+    "items": [
+      "Professional liability",
+      "Delegated design scopes",
+      "Project-specific programs"
+    ]
+  },
+  "tags": [
+    "design-build",
+    "IRMI",
+    "professional liability",
+    "contractual risk transfer",
+    "project requirements"
+  ],
   "takeaways": [
     "IRMI selected brokerage American Global to rewrite its Design-Build Risk and Insurance guide, edited by IRMI's Megan Jolly.",
     "The update covers progressive design-build, risk allocation, indemnification, limits of liability, professional liability, project-specific coverage and bonding.",
     "On design-build work, check contractor COIs for professional liability wherever a contractor carries design responsibility, not just general liability."
   ],
   "faq": [
-    {"q": "Why does design-build change insurance requirements?", "a": "In design-build, the builder's team takes on design responsibility. That brings professional liability into the picture for the design-builder and for any trade contractor doing delegated design, so project requirements and COI reviews need to account for it."}
+    {
+      "q": "Why does design-build change insurance requirements?",
+      "a": "In design-build, the builder's team takes on design responsibility. That brings professional liability into the picture for the design-builder and for any trade contractor doing delegated design, so project requirements and COI reviews need to account for it."
+    }
   ],
   "sources": [
-    {"title": "American Global tapped to update IRMI's Design-Build Risk and Insurance guide", "publisher": "Construction Dive", "date": "Oct 23, 2026", "url": "https://www.constructiondive.com/press-release/20261023-american-global-tapped-to-update-irmis-design-build-risk-and-insurance-gui/"},
-    {"title": "Insurance Marketplace Realities 2027: Construction", "publisher": "WTW", "date": "Oct 1, 2026", "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"}
+    {
+      "title": "American Global tapped to update IRMI's Design-Build Risk and Insurance guide",
+      "publisher": "Construction Dive",
+      "date": "Oct 23, 2026",
+      "url": "https://www.constructiondive.com/press-release/20261023-american-global-tapped-to-update-irmis-design-build-risk-and-insurance-gui/"
+    },
+    {
+      "title": "Insurance Marketplace Realities 2027: Construction",
+      "publisher": "WTW",
+      "date": "Oct 1, 2026",
+      "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"
+    }
   ]
 }
 ---

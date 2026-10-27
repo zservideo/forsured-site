@@ -6,7 +6,19 @@
   "dek": "Umbrella and excess keep climbing while most other lines hold steady. That's exactly the line where contractors are most likely to fall short of project requirements.",
   "date": "2026-10-26T09:00:00-04:00",
   "category": "Market outlook",
-  "tags": ["2027 insurance rates", "umbrella and excess", "construction insurance market", "renewals", "contractor COIs"],
+  "hero": {
+    "type": "stat",
+    "value": "+5% to 15%",
+    "label": "Forecast 2027 rate change for construction umbrella and excess liability",
+    "source": "Source: WTW, Insurance Marketplace Realities 2027"
+  },
+  "tags": [
+    "2027 insurance rates",
+    "umbrella and excess",
+    "construction insurance market",
+    "renewals",
+    "contractor COIs"
+  ],
   "takeaways": [
     "WTW's 2027 outlook for construction: umbrella and excess up 5% to 15%, auto up 5% to 15%, general liability flat to up 10%, workers' compensation flat to up 5%.",
     "Lead umbrella and excess on wrap-up programs (OCIPs and CCIPs) is also expected up 5% to 15%.",
@@ -14,13 +26,34 @@
     "Carriers favor firms with strong management of the contractors they hire, which makes a clean contractor COI record useful at renewal."
   ],
   "faq": [
-    {"q": "How much will construction umbrella and excess insurance rates rise in 2027?", "a": "WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%."},
-    {"q": "Which construction insurance lines are stable in 2027?", "a": "WTW expects builders risk to be roughly flat (minus 2.5% to plus 2.5% for non-high hazard project-specific builders risk), workers' compensation flat to up 5%, and contractor's professional liability flat to up 5% on annual programs."}
+    {
+      "q": "How much will construction umbrella and excess insurance rates rise in 2027?",
+      "a": "WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%."
+    },
+    {
+      "q": "Which construction insurance lines are stable in 2027?",
+      "a": "WTW expects builders risk to be roughly flat (minus 2.5% to plus 2.5% for non-high hazard project-specific builders risk), workers' compensation flat to up 5%, and contractor's professional liability flat to up 5% on annual programs."
+    }
   ],
   "sources": [
-    {"title": "Insurance Marketplace Realities 2027: Construction", "publisher": "WTW", "date": "Oct 1, 2026", "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"},
-    {"title": "Prices Rise Sharply as Clouds Darken Construction Insurance Market for Buyers", "publisher": "ENR", "date": "May 12, 2021", "url": "https://www.enr.com/articles/51726-prices-rise-sharply-as-clouds-darken-construction-insurance-market-for-buyers"},
-    {"title": "3 economic factors determining construction's winners and losers: ABC", "publisher": "Construction Dive", "date": "Oct 13, 2026", "url": "https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/"}
+    {
+      "title": "Insurance Marketplace Realities 2027: Construction",
+      "publisher": "WTW",
+      "date": "Oct 1, 2026",
+      "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"
+    },
+    {
+      "title": "Prices Rise Sharply as Clouds Darken Construction Insurance Market for Buyers",
+      "publisher": "ENR",
+      "date": "May 12, 2021",
+      "url": "https://www.enr.com/articles/51726-prices-rise-sharply-as-clouds-darken-construction-insurance-market-for-buyers"
+    },
+    {
+      "title": "3 economic factors determining construction's winners and losers: ABC",
+      "publisher": "Construction Dive",
+      "date": "Oct 13, 2026",
+      "url": "https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/"
+    }
   ]
 }
 ---

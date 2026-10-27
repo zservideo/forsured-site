@@ -3,7 +3,8 @@
 //   blog/index.html             the blog index (knowledge center)
 //   blog/<slug>/index.html      one page per post, with BlogPosting, FAQPage and breadcrumb JSON-LD
 //   blog/feed.xml               RSS 2.0 feed with the full text of every post
-//   sitemap.xml, robots.txt, llms.txt   search and answer-engine discovery files
+//   blog/<slug>/index.md        the post as plain Markdown, linked as an alternate for AI answer engines
+//   sitemap.xml, robots.txt, llms.txt, llms-full.txt   search and answer-engine discovery files
 //
 //   node tools/blog/build.js           write everything
 //   node tools/blog/build.js --check   exit 1 if any generated file is out of date (tests run this)
@@ -20,7 +21,8 @@ const CHECK = process.argv.includes('--check');
 
 // ---------- reading posts ----------
 
-function readPosts() {
+// Drafts are left out unless includeDrafts is set (og.js renders their images ahead of publishing).
+function readPosts(includeDrafts = false) {
   return fs
     .readdirSync(SRC)
     .filter((f) => f.endsWith('.md') && f !== 'README.md')
@@ -42,7 +44,7 @@ function readPosts() {
       const seoTitle = meta.seoTitle || `${meta.title} | Forsured`;
       if (seoTitle.length < 30 || seoTitle.length > 70) throw new Error(`${f}: page title is ${seoTitle.length} characters, keep it 30 to 70 (set "seoTitle")`);
       if (meta.description.length < 70 || meta.description.length > 170) throw new Error(`${f}: description is ${meta.description.length} characters, keep it 70 to 170`);
-      if (meta.draft) return null;
+      if (meta.draft && !includeDrafts) return null;
       const body = m[2].trim();
       const words = (body + ' ' + meta.takeaways.join(' ')).split(/\s+/).length;
       return { ...meta, slug, body, url: `/blog/${slug}/`, minutes: Math.max(2, Math.round(words / 230)), updated: meta.updated || meta.date };
@@ -52,7 +54,7 @@ function readPosts() {
 }
 
 // ---------- a small Markdown subset ----------
-// Blocks: ## and ### headings, paragraphs, - and 1. lists, > quotes, | tables |.
+// Blocks: ## and ### headings, paragraphs, - and 1. lists, > quotes, | tables |, ![alt](file.png "caption").
 // Inline: **bold**, *italic*, [text](url), `code`.
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -67,13 +69,28 @@ function inline(s) {
 
 const slugify = (s) => s.toLowerCase().replace(/<[^>]+>/g, '').replace(/&[a-z]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-function markdown(md) {
+// Width and height from a PNG's header, so in-post images reserve their space before they load.
+function pngSize(file) {
+  const b = fs.readFileSync(file);
+  if (b.toString('ascii', 1, 4) !== 'PNG') throw new Error(`${file} is not a PNG`);
+  return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
+}
+
+// dir: the post's output folder, where its images live (blog/<slug>/).
+// base: prefix for image URLs (the feed and Markdown copies need absolute ones).
+function markdown(md, dir, base = '') {
   const out = [];
   for (const block of md.split(/\n\s*\n/)) {
     const lines = block.split('\n').map((l) => l.trimEnd());
     const first = lines[0];
     let h;
-    if ((h = first.match(/^(#{2,3}) (.+)$/))) {
+    if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.png)(?: "([^"]+)")?\)$/))) {
+      const [, alt, src, caption] = h;
+      const file = path.join(dir || '', src);
+      if (!dir || !fs.existsSync(file)) throw new Error(`image ${src} not found${dir ? ` in ${path.relative(ROOT, dir)}` : ''}`);
+      const { width, height } = pngSize(file);
+      out.push(`<figure><img src="${esc(base + src)}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async"/>${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}</figure>`);
+    } else if ((h = first.match(/^(#{2,3}) (.+)$/))) {
       const level = h[1].length;
       out.push(`<h${level} id="${slugify(h[2])}">${inline(h[2])}</h${level}>`);
     } else if (lines.every((l) => /^- /.test(l) || /^ {2,}\S/.test(l))) {
@@ -124,13 +141,20 @@ const year = () => new Date().getFullYear();
 const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FB612A'/%3E%3Ctext x='4' y='24' font-family='Arial' font-weight='900' font-size='22' fill='white'%3EF%3C/text%3E%3C/svg%3E";
 const FONTS = 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Serif:opsz,wght@36,400&family=Inter:wght@400;500;600&display=swap';
 
+// The publisher entity every post points to. sameAs ties forsured.ai to Forsured's other official
+// profiles, which is how search and answer engines decide which "Forsured" a page is about.
 const ORG = {
   '@type': 'Organization',
   '@id': `${SITE}/#organization`,
   name: 'Forsured',
   url: SITE,
   logo: { '@type': 'ImageObject', url: `${SITE}/logo-orange.png` },
+  description: 'Construction insurance compliance software that checks contractor COIs against project requirements, flags coverage and endorsement gaps, and keeps checking for the life of the project.',
+  email: 'hello@forsured.ai',
+  sameAs: ['https://forsured.com', 'https://www.instagram.com/getforsured/'],
+  knowsAbout: ['Construction insurance compliance', 'Certificates of insurance', 'Additional insured endorsements', 'Contractor risk management'],
 };
+const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Forsured', url: SITE, publisher: { '@id': ORG['@id'] }, inLanguage: 'en-US' };
 
 const CSS = `
 /* Fallback faces sized to match the web fonts, so text doesn't reflow (a layout shift) when Inter and
@@ -171,6 +195,21 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .crumbs a{text-decoration:none;display:inline-block;line-height:24px}
 .crumbs a:hover{color:var(--tx)}
 .post-head{padding:48px 0 8px}
+.hero{margin:32px 0 0}
+.hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
+.prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
+.share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
+.sh{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #E4E7EC;border-radius:8px;background:#fff;color:#344051;cursor:pointer;font:inherit;text-decoration:none;transition:border-color .15s,color .15s}
+.sh:hover{border-color:#FB612A;color:#FB612A}
+.sh[hidden]{display:none}
+.sh svg{width:18px;height:18px}
+.share-s{font-size:13px;color:#16864E;min-width:1px}
+.share-end{margin-top:40px;padding:20px 24px;background:#fff;border:1px solid #E4E7EC;border-radius:12px}
+.share-end h2{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:-.01em;line-height:1.3}
+.share-end .share{margin-top:12px}
 .tldr{margin:32px 0 8px;padding:20px 24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
 .tldr h2{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#344051;margin-bottom:8px}
 .tldr ul{padding-left:18px}
@@ -212,7 +251,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none}
 .lead{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;margin-top:40px;padding:28px;background:#fff;border:1px solid #E4E7EC;border-radius:16px;text-decoration:none;transition:border-color .15s}
 .lead:hover{border-color:#FB612A}
-.lead img{width:100%;height:auto;border-radius:10px;border:1px solid var(--bdr)}
+.lead img{width:100%;height:auto;border-radius:10px;border:1px solid #E4E7EC;background:#FDFAF7}
 .lead h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.015em;margin-top:14px}
 .lead p{color:var(--mt);margin-top:10px;font-size:16px}
 .lead time{display:block;font-size:13px;color:var(--mt);margin-top:14px}
@@ -240,14 +279,17 @@ footer a{display:inline-block;line-height:24px}
   .prose{font-size:16px}
   .prose h2,.extra h2{font-size:24px}
   .tldr{padding:16px 18px}
+  .hero{margin-top:24px}
+  .sh{width:44px;height:44px}
+  .share-end{padding:16px 18px}
   .band .edge{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px}
   .band .btns{justify-content:stretch}
   .band .btns a{flex:1 1 100%}
 }
-@media print{nav,.band,.more{display:none}}
+@media print{nav,.band,.more,.share,.share-end{display:none}}
 `.trim();
 
-function head({ title, description, url, image, imageAlt, type, jsonld, published, modified }) {
+function head({ title, description, url, image, imageAlt, type, jsonld, published, modified, section, tags = [], md }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -258,6 +300,7 @@ function head({ title, description, url, image, imageAlt, type, jsonld, publishe
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>
 <link rel="canonical" href="${SITE}${url}"/>
 <link rel="alternate" type="application/rss+xml" title="Forsured Blog" href="${SITE}/blog/feed.xml"/>
+${md ? `<link rel="alternate" type="text/markdown" title="${esc(title)} (Markdown)" href="${SITE}${url}index.md"/>\n` : ''}<meta name="author" content="Forsured"/>
 <meta name="theme-color" content="#FB612A"/>
 <link rel="icon" type="image/svg+xml" href="${FAVICON}"/>
 <meta property="og:type" content="${type}"/>
@@ -266,14 +309,18 @@ function head({ title, description, url, image, imageAlt, type, jsonld, publishe
 <meta property="og:title" content="${esc(title)}"/>
 <meta property="og:description" content="${esc(description)}"/>
 <meta property="og:image" content="${SITE}${image}"/>
+<meta property="og:image:secure_url" content="${SITE}${image}"/>
+<meta property="og:image:type" content="image/png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="${esc(imageAlt)}"/>
-${published ? `<meta property="article:published_time" content="${published}"/>\n<meta property="article:modified_time" content="${modified}"/>\n` : ''}<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:locale" content="en_US"/>
+${published ? `<meta property="article:published_time" content="${published}"/>\n<meta property="article:modified_time" content="${modified}"/>\n<meta property="article:publisher" content="${SITE}"/>\n` : ''}${section ? `<meta property="article:section" content="${esc(section)}"/>\n` : ''}${tags.map((t) => `<meta property="article:tag" content="${esc(t)}"/>\n`).join('')}<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@forsured"/>
 <meta name="twitter:title" content="${esc(title)}"/>
 <meta name="twitter:description" content="${esc(description)}"/>
 <meta name="twitter:image" content="${SITE}${image}"/>
+<meta name="twitter:image:alt" content="${esc(imageAlt)}"/>
 <script type="application/ld+json">
 ${JSON.stringify(jsonld, null, 2)}
 </script>
@@ -323,10 +370,76 @@ function card(p, level = 'h3') {
   return `<li><a class="card" href="${p.url}"><span class="label">${esc(p.category)}</span><${level}>${esc(p.title)}</${level}><p>${esc(p.description)}</p><time datetime="${day(p.date)}">${human(p.date)} · ${p.minutes} min read</time></a></li>`;
 }
 
+// The hero image's alt text says what the picture says, from the same front matter it was drawn from.
+function heroAlt(p) {
+  const h = p.hero;
+  if (p.heroAlt) return p.heroAlt;
+  if (h.type === 'stat') return `${h.value}: ${h.label}`;
+  if (h.type === 'list') return `${h.title}: ${h.items.join('; ')}`;
+  return `${h.title}. A sample contractor certificate of insurance: ${h.rows.map(([c, l, st]) => `${c} ${l}, ${st === 'ok' ? 'meets the requirement' : st}`).join('; ')}.${h.note ? ` ${h.note}` : ''}`;
+}
+
+// ---------- share buttons ----------
+// Plain links to each network's share page (no third-party scripts or trackers), plus copy link and the
+// phone's native share sheet. UTM tags show which network a visit came from; the canonical tag keeps
+// search engines on the clean URL.
+
+const ICON = {
+  linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg>',
+  email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>',
+  share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>',
+};
+
+function shareLinks(p) {
+  const tagged = (source) => encodeURIComponent(`${SITE}${p.url}?utm_source=${source}&utm_medium=social&utm_campaign=blog_share`);
+  const title = encodeURIComponent(p.title);
+  return [
+    ['linkedin', 'Share on LinkedIn', `https://www.linkedin.com/sharing/share-offsite/?url=${tagged('linkedin')}`],
+    ['x', 'Share on X', `https://x.com/intent/post?text=${title}&url=${tagged('x')}`],
+    ['facebook', 'Share on Facebook', `https://www.facebook.com/sharer/sharer.php?u=${tagged('facebook')}`],
+    ['email', 'Share by email', `mailto:?subject=${title}&body=${encodeURIComponent(`${p.description}\n\n`)}${tagged('email')}`],
+  ];
+}
+
+function shareBar(p, label) {
+  return `<div class="share" role="group" aria-label="${label}">
+        <span class="share-l" aria-hidden="true">Share</span>
+${shareLinks(p).map(([k, name, href]) => `        <a class="sh" href="${esc(href)}"${k === 'email' ? '' : ' target="_blank" rel="noopener"'} aria-label="${name}" title="${name}" data-net="${k}">${ICON[k]}</a>`).join('\n')}
+        <button class="sh" type="button" data-copy aria-label="Copy link" title="Copy link">${ICON.copy}</button>
+        <button class="sh" type="button" data-share hidden aria-label="More ways to share" title="More ways to share">${ICON.share}</button>
+        <span class="share-s" role="status"></span>
+      </div>`;
+}
+
+// Copy link and the native share sheet need a little script; the network links work without it.
+const SHARE_JS = `<script>
+(() => {
+  const url = document.querySelector('link[rel=canonical]').href;
+  const title = document.querySelector('h1').textContent;
+  for (const b of document.querySelectorAll('[data-share]')) {
+    if (!navigator.share) continue;
+    b.hidden = false;
+    b.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+  }
+  for (const b of document.querySelectorAll('[data-copy]')) {
+    b.addEventListener('click', async () => {
+      const status = b.parentNode.querySelector('.share-s');
+      try { await navigator.clipboard.writeText(url); status.textContent = 'Link copied'; }
+      catch (e) { window.prompt('Copy this link', url); }
+      setTimeout(() => { status.textContent = ''; }, 2500);
+    });
+  }
+})();
+</script>`;
+
 // ---------- pages ----------
 
 function postPage(p, posts) {
   const image = `/blog/${p.slug}/og.png`;
+  const publishers = [...new Set(p.sources.map((s) => s.publisher).filter(Boolean))];
   const others = posts.filter((o) => o !== p);
   const related = [...others.filter((o) => o.category === p.category), ...others.filter((o) => o.category !== p.category)].slice(0, 3);
   const graph = [
@@ -335,7 +448,11 @@ function postPage(p, posts) {
       '@id': `${SITE}${p.url}#article`,
       headline: p.title,
       description: p.description,
-      image: `${SITE}${image}`,
+      image: [
+        { '@type': 'ImageObject', url: `${SITE}/blog/${p.slug}/hero.png`, width: 1600, height: 800, caption: heroAlt(p) },
+        { '@type': 'ImageObject', url: `${SITE}${image}`, width: 1200, height: 630 },
+      ],
+      thumbnailUrl: `${SITE}${image}`,
       datePublished: p.date,
       dateModified: p.updated,
       author: { '@id': ORG['@id'] },
@@ -345,7 +462,9 @@ function postPage(p, posts) {
       keywords: (p.tags || []).join(', '),
       wordCount: p.body.split(/\s+/).length,
       inLanguage: 'en-US',
-      isPartOf: { '@type': 'Blog', '@id': `${SITE}/blog/#blog`, name: 'Forsured Blog' },
+      isPartOf: { '@type': 'Blog', '@id': `${SITE}/blog/#blog`, name: 'Forsured Blog', isPartOf: { '@id': WEBSITE['@id'] } },
+      encoding: { '@type': 'MediaObject', encodingFormat: 'text/markdown', contentUrl: `${SITE}${p.url}index.md` },
+      mentions: publishers.map((name) => ({ '@type': 'Organization', name })),
       about: (p.tags || []).slice(0, 4).map((t) => ({ '@type': 'Thing', name: t })),
       citation: p.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url, publisher: s.publisher ? { '@type': 'Organization', name: s.publisher } : undefined })),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.dek', '.tldr'] },
@@ -358,6 +477,7 @@ function postPage(p, posts) {
         { '@type': 'ListItem', position: 3, name: p.title, item: `${SITE}${p.url}` },
       ],
     },
+    WEBSITE,
   ];
   if (p.faq && p.faq.length) {
     graph.push({
@@ -374,6 +494,9 @@ function postPage(p, posts) {
     type: 'article',
     published: p.date,
     modified: p.updated,
+    section: p.category,
+    tags: p.tags,
+    md: true,
     jsonld: { '@context': 'https://schema.org', '@graph': graph },
   })}
 ${nav('blog')}
@@ -387,14 +510,20 @@ ${nav('blog')}
       <h1 style="margin-top:16px">${esc(p.title)}</h1>
       <p class="dek">${inline(p.dek)}</p>
       <p class="meta"><span>By the Forsured team</span><time datetime="${day(p.date)}">${human(p.date)}</time><span>${p.minutes} min read</span></p>
+      ${shareBar(p, 'Share this post')}
     </header>
+    <figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" fetchpriority="high" decoding="async"/></figure>
     <aside class="tldr" aria-labelledby="tldr">
       <h2 id="tldr">The short version</h2>
       <ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul>
     </aside>
     <div class="prose">
-${markdown(p.body)}
+${markdown(p.body, path.join(ROOT, 'blog', p.slug))}
     </div>
+    <section class="share-end" aria-labelledby="share-end">
+      <h2 id="share-end">Know someone who reviews contractor COIs? Pass this along.</h2>
+      ${shareBar(p, 'Share this post again')}
+    </section>
 ${p.faq && p.faq.length ? `    <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>
 ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`).join('\n')}
@@ -411,6 +540,7 @@ ${related.length ? `<section class="more edge" aria-labelledby="more"><h2 id="mo
 
 ${BAND}
 
+${SHARE_JS}
 ${FOOTER()}`;
 }
 
@@ -427,6 +557,7 @@ function indexPage(posts) {
         url: `${SITE}/blog/`,
         description: INDEX.description,
         publisher: ORG,
+        isPartOf: { '@id': WEBSITE['@id'] },
         inLanguage: 'en-US',
         blogPost: posts.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${SITE}${p.url}`, datePublished: p.date })),
       },
@@ -437,6 +568,7 @@ function indexPage(posts) {
           { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
         ],
       },
+      WEBSITE,
     ],
   };
   return `${head({ ...INDEX, url: '/blog/', image: '/blog/og.png', imageAlt: 'The Forsured Blog', type: 'website', jsonld })}
@@ -456,7 +588,7 @@ ${nav('blog')}
       <p>${esc(lead.description)}</p>
       <time datetime="${day(lead.date)}">${human(lead.date)} · ${lead.minutes} min read</time>
     </div>
-    <img src="${lead.slug}/og.png" width="1200" height="630" alt=""/>
+    <img src="${lead.slug}/hero.png" width="1600" height="800" alt="" fetchpriority="high" decoding="async"/>
   </a>
   ${rest.length ? `<section class="all" aria-labelledby="all"><h2 id="all">All posts</h2><ul class="cards">${rest.map((p) => card(p)).join('')}</ul></section>` : ''}
 </main>
@@ -481,7 +613,8 @@ function feed(posts) {
     <pubDate>${rfc822(p.date)}</pubDate>
     <category>${esc(p.category)}</category>
     <description>${esc(p.description)}</description>
-    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul>${markdown(p.body)}]]></content:encoded>
+    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul><p><img src="${SITE}${p.url}hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}"/></p>${markdown(p.body, path.join(ROOT, 'blog', p.slug), `${SITE}${p.url}`)}]]></content:encoded>
+    <enclosure url="${SITE}${p.url}og.png" type="image/png" length="${fs.statSync(path.join(ROOT, 'blog', p.slug, 'og.png')).size}"/>
   </item>`
     )
     .join('\n');
@@ -556,13 +689,49 @@ Key facts:
 
 ## Blog
 
-${posts.map((p) => `- [${p.title}](${SITE}${p.url}): ${p.description}`).join('\n')}
+${posts.map((p) => `- [${p.title}](${SITE}${p.url}): ${p.description} Markdown: ${SITE}${p.url}index.md`).join('\n')}
 
 ## Optional
 
+- [Every post in full](${SITE}/llms-full.txt)
 - [Blog RSS feed](${SITE}/blog/feed.xml)
 - [IRMI CRC 2026 field guide](${SITE}/irmi-field-guide/): an independent guide to the 2026 Construction Risk Conference
 `;
+}
+
+// The post as plain Markdown: what an AI answer engine reads when it follows the text/markdown alternate.
+// Image paths become absolute URLs.
+function postMarkdown(p) {
+  const abs = (md) => md.replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`);
+  return `# ${p.title}
+
+> ${plain(p.dek)}
+
+Published ${human(p.date)}${p.updated !== p.date ? `, updated ${human(p.updated)}` : ''} by Forsured. ${p.category}. Source: ${SITE}${p.url}
+
+![${heroAlt(p)}](${SITE}${p.url}hero.png)
+
+## The short version
+
+${p.takeaways.map((t) => `- ${t}`).join('\n')}
+
+${abs(p.body)}
+${p.faq && p.faq.length ? `\n## Common questions\n\n${p.faq.map((f) => `### ${f.q}\n\n${f.a}`).join('\n\n')}\n` : ''}
+## Sources
+
+${p.sources.map((s, i) => `${i + 1}. [${s.title}](${s.url})${s.publisher ? `, ${s.publisher}` : ''}${s.date ? `, ${s.date}` : ''}`).join('\n')}
+
+---
+Forsured: construction insurance compliance software. ${SITE} · hello@forsured.ai
+`;
+}
+
+// Every post in full, for answer engines that read one file instead of crawling (llmstxt.org).
+function llmsFull(posts) {
+  return `${llms(posts)}
+# Full text of every post
+
+${posts.map((p) => postMarkdown(p).replace(/^# /, '## ').replace(/\n(#{2,3}) /g, '\n#$1 ')).join('\n\n')}`;
 }
 
 // ---------- write or check ----------
@@ -570,17 +739,23 @@ ${posts.map((p) => `- [${p.title}](${SITE}${p.url}): ${p.description}`).join('\n
 function build() {
   const posts = readPosts();
   if (!posts.length) throw new Error('no posts in content/blog');
+  for (const p of posts) if (!p.hero) throw new Error(`${p.slug}: front matter needs "hero" (see content/blog/README.md)`);
+
+  // Every post needs its share card and hero image (tools/blog/og.js makes them).
+  const missing = ['blog/og.png', ...posts.flatMap((p) => [`blog/${p.slug}/og.png`, `blog/${p.slug}/hero.png`])].filter((f) => !fs.existsSync(path.join(ROOT, f)));
+  if (missing.length) throw new Error(`missing images (run node tools/blog/og.js): ${missing.join(', ')}`);
+
   const files = new Map();
   files.set('blog/index.html', indexPage(posts));
-  for (const p of posts) files.set(`blog/${p.slug}/index.html`, postPage(p, posts));
+  for (const p of posts) {
+    files.set(`blog/${p.slug}/index.html`, postPage(p, posts));
+    files.set(`blog/${p.slug}/index.md`, postMarkdown(p));
+  }
   files.set('blog/feed.xml', feed(posts));
   files.set('sitemap.xml', sitemap(posts));
   files.set('robots.txt', ROBOTS);
   files.set('llms.txt', llms(posts));
-
-  // Posts without a share image fail the build, so every link preview has one (tools/blog/og.js makes them).
-  const missing = ['blog/og.png', ...posts.map((p) => `blog/${p.slug}/og.png`)].filter((f) => !fs.existsSync(path.join(ROOT, f)));
-  if (missing.length) throw new Error(`missing share images (run node tools/blog/og.js): ${missing.join(', ')}`);
+  files.set('llms-full.txt', llmsFull(posts));
 
   const stale = [];
   for (const [rel, content] of files) {

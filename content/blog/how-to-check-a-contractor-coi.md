@@ -6,7 +6,24 @@
   "dek": "A line-by-line checklist you can use on your next contractor COI, and the five places gaps hide most often.",
   "date": "2026-10-27T10:00:00-04:00",
   "category": "How-to",
-  "tags": ["COI review", "contractor COIs", "project requirements", "additional insured", "insurance compliance checklist"],
+  "hero": {
+    "type": "list",
+    "title": "Five checks for every contractor COI",
+    "items": [
+      "Named insured",
+      "Coverages and limits",
+      "Policy dates",
+      "Endorsements",
+      "Certificate holder"
+    ]
+  },
+  "tags": [
+    "COI review",
+    "contractor COIs",
+    "project requirements",
+    "additional insured",
+    "insurance compliance checklist"
+  ],
   "takeaways": [
     "Start from the project's insurance requirements, not a generic template. Limits and endorsements differ by owner, lender and contract.",
     "Check five things on every COI: named insured, coverage types and limits, policy dates, endorsements, and the certificate holder.",
@@ -14,13 +31,30 @@
     "Recheck at every renewal and before every expiration. A one-time review misses most of the gaps that matter."
   ],
   "faq": [
-    {"q": "What should I look for on a contractor's certificate of insurance?", "a": "Check that the named insured matches the contracting entity, that every required coverage is listed with limits at or above the project requirements, that the policy dates cover the work, that required endorsements are referenced and provided, and that the certificate holder is correct."},
-    {"q": "What are the most common contractor COI gaps?", "a": "The most common gaps are umbrella or excess limits below the project requirement, additional insured endorsements that leave out completed operations, policies that expire mid-project, a named insured that doesn't match the contract, and missing waiver of subrogation or primary and noncontributory wording."},
-    {"q": "Who fixes a gap on a contractor COI?", "a": "The contractor's insurance broker or agent. The fastest path is to send the broker the specific requirement that isn't met, so they can endorse the policy or issue a corrected certificate."}
+    {
+      "q": "What should I look for on a contractor's certificate of insurance?",
+      "a": "Check that the named insured matches the contracting entity, that every required coverage is listed with limits at or above the project requirements, that the policy dates cover the work, that required endorsements are referenced and provided, and that the certificate holder is correct."
+    },
+    {
+      "q": "What are the most common contractor COI gaps?",
+      "a": "The most common gaps are umbrella or excess limits below the project requirement, additional insured endorsements that leave out completed operations, policies that expire mid-project, a named insured that doesn't match the contract, and missing waiver of subrogation or primary and noncontributory wording."
+    },
+    {
+      "q": "Who fixes a gap on a contractor COI?",
+      "a": "The contractor's insurance broker or agent. The fastest path is to send the broker the specific requirement that isn't met, so they can endorse the policy or issue a corrected certificate."
+    }
   ],
   "sources": [
-    {"title": "Certificate of insurance (definition)", "publisher": "IRMI", "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"},
-    {"title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference", "publisher": "Cullen and Dykman", "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"}
+    {
+      "title": "Certificate of insurance (definition)",
+      "publisher": "IRMI",
+      "url": "https://www.irmi.com/term/insurance-definitions/certificate-of-insurance"
+    },
+    {
+      "title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference",
+      "publisher": "Cullen and Dykman",
+      "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"
+    }
   ]
 }
 ---

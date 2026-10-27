@@ -6,19 +6,47 @@
   "dek": "Margins are thin, umbrella is where the pain is, and underwriters are starting to ask how contractors manage the trades they hire.",
   "date": "2026-10-27T07:00:00-04:00",
   "category": "Event takeaways",
-  "tags": ["IRMI CRC 2026", "construction risk", "umbrella and excess", "construction economy", "underwriting"],
+  "hero": {
+    "type": "stat",
+    "value": "12 to 16",
+    "label": "Bids on jobs that once drew 2 to 4, per ABC chief economist Anirban Basu",
+    "source": "Source: Construction Dive, Oct 13, 2026"
+  },
+  "tags": [
+    "IRMI CRC 2026",
+    "construction risk",
+    "umbrella and excess",
+    "construction economy",
+    "underwriting"
+  ],
   "takeaways": [
     "Bids are crowded: ABC chief economist Anirban Basu says jobs that once drew 2 to 4 bids now draw as many as 12 to 16, and about a third of contractors expect margins to shrink.",
     "WTW expects umbrella and excess rates to rise another 5% to 15% in 2027, and brokers want renewal data on how often contracts demand high umbrella limits.",
     "Carriers give favorable consideration to strong management of the contractors a firm hires, so contractor COI compliance is becoming an underwriting story."
   ],
   "faq": [
-    {"q": "What is IRMI's Construction Risk Conference?", "a": "The Construction Risk Conference (CRC) is an annual event run by the International Risk Management Institute (IRMI) for construction risk managers, brokers, carriers and attorneys. The 2026 conference ran October 25 to 28 at the Gaylord National Resort in National Harbor, Maryland."},
-    {"q": "Are umbrella and excess rates for contractors still going up in 2027?", "a": "WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%, with general liability flat to up 10%."}
+    {
+      "q": "What is IRMI's Construction Risk Conference?",
+      "a": "The Construction Risk Conference (CRC) is an annual event run by the International Risk Management Institute (IRMI) for construction risk managers, brokers, carriers and attorneys. The 2026 conference ran October 25 to 28 at the Gaylord National Resort in National Harbor, Maryland."
+    },
+    {
+      "q": "Are umbrella and excess rates for contractors still going up in 2027?",
+      "a": "WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%, with general liability flat to up 10%."
+    }
   ],
   "sources": [
-    {"title": "3 economic factors determining construction's winners and losers: ABC", "publisher": "Construction Dive", "date": "Oct 13, 2026", "url": "https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/"},
-    {"title": "Insurance Marketplace Realities 2027: Construction", "publisher": "WTW", "date": "Oct 1, 2026", "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"}
+    {
+      "title": "3 economic factors determining construction's winners and losers: ABC",
+      "publisher": "Construction Dive",
+      "date": "Oct 13, 2026",
+      "url": "https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/"
+    },
+    {
+      "title": "Insurance Marketplace Realities 2027: Construction",
+      "publisher": "WTW",
+      "date": "Oct 1, 2026",
+      "url": "https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction"
+    }
   ]
 }
 ---

@@ -1,0 +1,52 @@
+name: IndexNow
+
+# After a push to main publishes new or changed blog pages, tells Bing, Yandex, Seznam, Naver and the
+# other IndexNow search engines to crawl them now instead of on their next visit. Bing's index also
+# feeds ChatGPT search and Copilot. Google does not use IndexNow; it reads sitemap.xml.
+# The key file at the site root (11b78a011ff74f3d7ecaffc0885a4508.txt) proves forsured.ai owns these submissions.
+on:
+  push:
+    branches: [main]
+    paths: ['blog/**', 'sitemap.xml', 'index.html', 'irmi-field-guide/**']
+  workflow_dispatch:
+
+env:
+  KEY: 11b78a011ff74f3d7ecaffc0885a4508
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      # Pages changed by this push; on a manual run, every page in the sitemap.
+      - name: List pages
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            git diff --name-only HEAD~1 HEAD | grep -E '(^|/)index\.html$' > files.txt || true
+          else
+            grep -o '<loc>[^<]*' sitemap.xml | sed 's#<loc>https://forsured.ai/##; s#$#index.html#' > files.txt
+          fi
+          sed -E 's#index\.html$##; s#^#https://forsured.ai/#' files.txt | sort -u > urls.txt
+          cat urls.txt
+      # Pages deploys a minute or two after the push. Wait until the first changed page is live as
+      # committed, so crawlers don't arrive before the new version is up.
+      - name: Wait for the deploy
+        run: |
+          [ -s files.txt ] || exit 0
+          f=$(head -1 files.txt); u="https://forsured.ai/${f%index.html}"
+          for i in $(seq 1 40); do
+            if curl -fsS "$u?v=$GITHUB_SHA" | cmp -s - "$f"; then echo "live"; exit 0; fi
+            sleep 15
+          done
+          echo "not live after 10 minutes, submitting anyway"
+      - name: Submit to IndexNow
+        run: |
+          [ -s urls.txt ] || { echo "no page changes"; exit 0; }
+          jq -Rn --arg key "$KEY" '{host:"forsured.ai", key:$key, keyLocation:"https://forsured.ai/\($key).txt", urlList:[inputs]}' < urls.txt > body.json
+          cat body.json
+          code=$(curl -sS -o resp.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' --data @body.json)
+          cat resp.txt; echo "IndexNow answered $code"
+          [ "$code" = 200 ] || [ "$code" = 202 ]
