@@ -55,6 +55,8 @@
       "figmaNeutral300": "#E8DCCB",
       "figmaNeutral100": "#F7F2EB",
       "figmaNeutral50": "#FBF8F3",
+      "appCanvas": "#FDFCFA",
+      "appDivider": "#EFE6DA",
       "sand": "#EDE0D4",
       "sandLight": "#F4EDE5",
       "stone": "#E8E3DF",
@@ -81,12 +83,21 @@
       "greenTint": "#E8F5EE",
       "greenTint2": "#D0EDD9",
       "figmaSuccess": "#10B978",
+      "appSuccessText": "#0A7D52",
+      "appSuccessTint": "#E7F8F1",
       "amber": "#B27D00",
       "figmaWarning": "#F59E0B",
       "red": "#C4291C",
       "figmaError": "#FF4D4D",
+      "appErrorText": "#C42D2D",
+      "appErrorTint": "#FFECEB",
       "blue": "#3B82F6",
       "blueTint": "#EBF2FF"
+    },
+    "appAvatars": {
+      "_note": "Initial avatars in the app's people and company chips.",
+      "teal": "#2F7D6A",
+      "clay": "#B5633B"
     },
     "thirdPartyUI": {
       "_note": "Used only to depict other tools (spreadsheet, messages) in the 'before' visual.",
@@ -102,6 +113,7 @@
   },
   "fonts": [
     "Inter",
+    "Roboto Serif",
     "Chakra Petch",
     "JetBrains Mono"
   ],
