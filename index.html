@@ -685,10 +685,36 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .rb-stat{border-right:none!important;border-bottom:1px solid rgba(229,97,42,.15)}
   .rb-stat:last-child{grid-column:auto;border-top:none}
 }
+
+/* IRMI BANNER (temporary): delete this block, the irmi-bar markup and its script to remove */
+:root{--bh:36px}
+html.no-irmi{--bh:0px}
+html{scroll-padding-top:var(--bh)}
+body{padding-top:var(--bh)}
+nav{top:var(--bh)}
+.mmenu{top:calc(60px + var(--bh))}
+.irmi-bar{position:fixed;top:0;left:0;right:0;height:var(--bh);z-index:1001;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;background:#2C2D29;border-bottom:2px solid var(--f);color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.irmi-bar .ib-dot{width:7px;height:7px;border-radius:50%;background:var(--f);flex:none;box-shadow:0 0 0 3px rgba(229,97,42,.25)}
+.irmi-bar .ib-acc{color:var(--fl)}
+.irmi-bar .ib-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.7);font-size:18px;line-height:1;cursor:pointer}
+.irmi-bar .ib-x:hover,.irmi-bar .ib-x:focus-visible{color:#fff;background:rgba(255,255,255,.1)}
+html.no-irmi .irmi-bar{display:none}
+@media(max-width:768px){.mmenu{top:calc(56px + var(--bh))}}
+@media(max-width:420px){.irmi-bar{font-size:10.5px;letter-spacing:.03em;gap:8px;padding:0 36px}.irmi-bar .ib-x{right:4px}}
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<div class="irmi-bar" id="irmi-bar" role="region" aria-label="Event announcement">
+  <span class="ib-dot" aria-hidden="true"></span>
+  <span>Catch us at IRMI, <span class="ib-acc">find the Forsured polos</span></span>
+  <button type="button" class="ib-x" aria-label="Dismiss announcement" onclick="dismissIrmi()">&times;</button>
+</div>
+<script>
+function dismissIrmi(){document.documentElement.classList.add('no-irmi');try{sessionStorage.setItem('irmi-dismissed','1')}catch(e){}}
+try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classList.add('no-irmi')}catch(e){}
+</script>
 
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nlogo" aria-label="Forsured, go to homepage">Forsured</a>

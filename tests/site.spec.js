@@ -131,3 +131,37 @@ test('risk check form recovers when the backend fails', async ({ page }) => {
   await expect(page.locator('#wl-btn')).toBeEnabled();
   await expect(page.locator('#wl-btn')).toHaveText(/Free Risk Check/);
 });
+
+test.describe('IRMI banner', () => {
+  test('shows the announcement above the nav without covering it', async ({ page }) => {
+    await open(page);
+    const bar = page.locator('#irmi-bar');
+    await expect(bar).toBeVisible();
+    await expect(bar).toHaveText(/Catch us at IRMI, find the Forsured polos/);
+    const barBox = await bar.boundingBox();
+    const navBox = await page.locator('#nav').boundingBox();
+    expect(barBox.y).toBe(0);
+    expect(navBox.y).toBeGreaterThanOrEqual(barBox.y + barBox.height - 1);
+    // Text fits on one line at every viewport.
+    expect(await bar.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(true);
+  });
+
+  test('keeps the nav and hero clear after scrolling', async ({ page }) => {
+    await open(page);
+    const h1 = await page.locator('h1').boundingBox();
+    const navBox = await page.locator('#nav').boundingBox();
+    expect(h1.y).toBeGreaterThanOrEqual(navBox.y + navBox.height);
+    await page.mouse.wheel(0, 1500);
+    await expect(page.locator('#irmi-bar')).toBeInViewport();
+    expect((await page.locator('#nav').boundingBox()).y).toBeGreaterThan(0);
+  });
+
+  test('can be dismissed and stays dismissed on reload', async ({ page }) => {
+    await open(page);
+    await page.getByRole('button', { name: 'Dismiss announcement' }).click();
+    await expect(page.locator('#irmi-bar')).toBeHidden();
+    expect((await page.locator('#nav').boundingBox()).y).toBe(0);
+    await page.reload();
+    await expect(page.locator('#irmi-bar')).toBeHidden();
+  });
+});
