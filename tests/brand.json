@@ -9,7 +9,7 @@
   "tolerance": 10,
   "neutralChroma": 6,
   "tokens": {
-    "--f": "#E5612A",
+    "--f": "#FB612A",
     "--fl": "#F07040",
     "--bg": "#FAFBFA",
     "--wh": "#FFFFFF",
@@ -25,7 +25,7 @@
   },
   "palette": {
     "orange": {
-      "core": "#E5612A",
+      "core": "#FB612A",
       "light": "#F07040",
       "gradientDark": "#C94B1A",
       "gradientLight": "#EF6E36",
@@ -106,16 +106,15 @@
     }
   },
   "contrastExceptions": {
-    "_note": "Small brand-orange text (section labels, tags, the banner button) sits at 3.1-3.5:1 against light backgrounds, under the WCAG AA 4.5:1 for small text. Kept on purpose for now; tests/a11y.spec.js skips contrast findings that involve these colors. A deeper orange such as #C44D1E (already in the palette) would pass.",
+    "_note": "The Figma primary orange #FB612A is about 3.1:1 against white: white text on the orange buttons and orange text on the outline buttons, small orange icons and accents. That is under the WCAG AA 4.5:1 for small text. Zach asked for the buttons and labels to match the Forsured Flows components exactly (2026-10-27), so tests/a11y.spec.js skips contrast findings that involve this color. The primary 600 #D54E21 (button hover) is the nearest deeper orange in the system.",
     "colors": [
-      "#E5612A"
+      "#FB612A"
     ]
   },
   "fonts": [
     "Inter",
     "Roboto Serif",
-    "Chakra Petch",
-    "JetBrains Mono"
+    "Chakra Petch"
   ],
   "logo": {
     "text": "Forsured",
