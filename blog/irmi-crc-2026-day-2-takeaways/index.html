@@ -159,10 +159,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Serif:opsz,wght@36,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
+/* Fallback faces sized to match the web fonts, so text doesn't reflow (a layout shift) when Inter and
+   Roboto Serif arrive. Each local font is tried in turn: Arial/Times on Mac and Windows, Liberation and
+   DejaVu on Linux. size-adjust is the width ratio measured on body copy. */
+@font-face{font-family:'Inter Fallback';src:local('Arial'),local('Liberation Sans');size-adjust:106.7%}
+@font-face{font-family:'Inter Fallback 2';src:local('DejaVu Sans');size-adjust:94.4%}
+@font-face{font-family:'Roboto Serif Fallback';src:local('Times New Roman'),local('Liberation Serif');size-adjust:119.3%}
+@font-face{font-family:'Roboto Serif Fallback 2';src:local('DejaVu Serif');size-adjust:93.6%}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--f:#FB612A;--fl:#F07040;--bg:#FAFBFA;--wh:#fff;--bdr:rgba(0,0,0,.07);--bdr2:rgba(0,0,0,.12);--tx:#0A0A0E;--mt:#555;--ch:#2C2D29}
+:root{--sans:'Inter','Inter Fallback','Inter Fallback 2',sans-serif;--serif:'Roboto Serif','Roboto Serif Fallback','Roboto Serif Fallback 2',serif;--f:#FB612A;--fl:#F07040;--bg:#FAFBFA;--wh:#fff;--bdr:rgba(0,0,0,.07);--bdr2:rgba(0,0,0,.12);--tx:#0A0A0E;--mt:#555;--ch:#2C2D29}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:10;background:#fff;padding:8px 12px}
@@ -183,7 +190,7 @@ nav .cta-p{height:36px;padding:0 14px}
 .label::before{content:'';width:6px;height:6px;border-radius:50%;background:#FB612A;flex:none}
 .edge{max-width:1080px;margin:0 auto;padding:0 40px}
 .col{max-width:700px;margin:0 auto}
-h1{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4.4vw,52px);letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
 .dek{font-size:18px;line-height:1.6;color:var(--mt);margin-top:16px;max-width:640px}
 .meta{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:20px;font-size:13px;color:var(--mt)}
 .crumbs{font-size:13px;color:var(--mt);margin-bottom:20px}
@@ -196,7 +203,7 @@ h1{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px
 .tldr li{font-size:15px;line-height:1.55;margin:6px 0}
 .prose{font-size:17px;line-height:1.75;padding-bottom:16px}
 .prose>*+*{margin-top:20px}
-.prose h2,.extra h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:28px;letter-spacing:-.015em;line-height:1.25;margin-top:44px}
+.prose h2,.extra h2{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:-.015em;line-height:1.25;margin-top:44px}
 .prose h3,.extra h3{font-size:18px;font-weight:600;line-height:1.4;margin-top:32px}
 .prose a,.extra p a,.sources a{text-decoration:underline;text-decoration-color:#FB612A;text-decoration-thickness:1px;text-underline-offset:3px}
 .prose a:hover,.extra p a:hover,.sources a:hover{text-decoration-thickness:2px}
@@ -218,12 +225,12 @@ h1{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px
 .sources a{color:var(--tx)}
 .note{font-size:13px;color:var(--mt);margin-top:16px}
 .more{padding:56px 0 72px}
-.more h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-.015em}
+.more h2{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.015em}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px;list-style:none}
 .card{display:flex;flex-direction:column;height:100%;padding:20px 22px;background:#fff;border:1px solid #E4E7EC;border-radius:12px;text-decoration:none;transition:border-color .15s}
 .card:hover{border-color:#FB612A}
 .card .label{align-self:flex-start}
-.card h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:20px;line-height:1.3;letter-spacing:-.01em;margin-top:14px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.3;letter-spacing:-.01em;margin-top:14px}
 .card p{font-size:14px;line-height:1.6;color:var(--mt);margin-top:8px;flex:1}
 .card time{font-size:12px;color:var(--mt);margin-top:14px}
 .index-head{padding:56px 0 8px}
@@ -232,14 +239,14 @@ h1{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px
 .lead{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;margin-top:40px;padding:28px;background:#fff;border:1px solid #E4E7EC;border-radius:16px;text-decoration:none;transition:border-color .15s}
 .lead:hover{border-color:#FB612A}
 .lead img{width:100%;height:auto;border-radius:10px;border:1px solid var(--bdr)}
-.lead h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.015em;margin-top:14px}
+.lead h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.015em;margin-top:14px}
 .lead p{color:var(--mt);margin-top:10px;font-size:16px}
 .lead time{display:block;font-size:13px;color:var(--mt);margin-top:14px}
 .all{padding:48px 0 72px}
-.all>h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-.015em}
+.all>h2{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.015em}
 .band{background:var(--ch);color:#fff;border-top:3px solid var(--f)}
 .band .edge{padding-top:56px;padding-bottom:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
-.band h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em;line-height:1.15}
+.band h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em;line-height:1.15}
 .band p{color:rgba(255,255,255,.75);margin-top:12px;font-size:15px;max-width:520px}
 .band p a{color:#fff}
 .band .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
@@ -319,7 +326,7 @@ footer a{display:inline-block;line-height:24px}
     </section>
   </div>
 </article>
-<section class="more edge" aria-labelledby="more"><h2 id="more">Keep reading</h2><ul class="cards"><li><a class="card" href="/blog/irmi-crc-2026-day-1-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 1 of IRMI's Construction Risk Conference</h3><p>Crowded bids and thin margins, umbrella rates still rising, and contractor management turning into an underwriting factor. What stuck with us from day 1 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/compliance-isnt-coverage/"><span class="label">COI basics</span><h3>A COI on file isn't proof of coverage</h3><p>A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead.</p><time datetime="2026-10-27">Oct 27, 2026 · 3 min read</time></a></li><li><a class="card" href="/blog/irmi-design-build-guide-update/"><span class="label">Industry news</span><h3>IRMI is rewriting its design-build risk and insurance guide</h3><p>IRMI picked American Global to rewrite its Design-Build Risk and Insurance guide. What the update covers, and what design-build means for contractor COI review.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li></ul></section>
+<section class="more edge" aria-labelledby="more"><h2 id="more">Keep reading</h2><ul class="cards"><li><a class="card" href="/blog/irmi-crc-2026-day-1-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 1 of IRMI's Construction Risk Conference</h3><p>Crowded bids and thin margins, umbrella rates still rising, and contractor management turning into an underwriting factor. What stuck with us from day 1 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/forsured-at-irmi-crc-2026/"><span class="label">Forsured news</span><h3>What we heard at our first IRMI Construction Risk Conference</h3><p>Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/compliance-isnt-coverage/"><span class="label">COI basics</span><h3>A COI on file isn't proof of coverage</h3><p>A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead.</p><time datetime="2026-10-27">Oct 27, 2026 · 3 min read</time></a></li></ul></section>
 </main>
 
 <section class="band" aria-label="Free COI risk check"><div class="edge">
