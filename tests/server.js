@@ -22,6 +22,7 @@ const TYPES = {
   '.pdf': 'application/pdf',
   '.ico': 'image/x-icon',
   '.txt': 'text/plain',
+  '.md': 'text/markdown; charset=utf-8',
   '.xml': 'application/xml',
 };
 

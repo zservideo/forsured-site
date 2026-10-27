@@ -7,7 +7,40 @@
   "date": "2026-10-28T07:00:00-04:00",
   "draft": true,
   "category": "COI basics",
-  "tags": ["primary and noncontributory", "additional insured", "CG 20 01", "contractor COIs", "project requirements"],
+  "hero": {
+    "type": "coi",
+    "title": "Primary and noncontributory, checked",
+    "rows": [
+      [
+        "General liability",
+        "$1M / $2M",
+        "ok"
+      ],
+      [
+        "Additional insured",
+        "CG 20 10 / CG 20 37",
+        "ok"
+      ],
+      [
+        "Primary and noncontributory",
+        "CG 20 01",
+        "ok"
+      ],
+      [
+        "Umbrella",
+        "$10M",
+        "Not primary wording"
+      ]
+    ],
+    "note": "CG 20 01 covers the general liability policy only. The umbrella needs its own primary and noncontributory wording."
+  },
+  "tags": [
+    "primary and noncontributory",
+    "additional insured",
+    "CG 20 01",
+    "contractor COIs",
+    "project requirements"
+  ],
   "takeaways": [
     "Primary and noncontributory sets the order in which overlapping policies respond: the contractor's policy pays first, and it doesn't ask the additional insured's own policy to share the loss.",
     "It's created by an endorsement on the contractor's general liability policy, such as ISO's CG 20 01, not by a line on the certificate.",
@@ -15,14 +48,36 @@
     "On every contractor COI, ask for the endorsement form, check it covers the parties your project requirements name, and check the umbrella too."
   ],
   "faq": [
-    {"q": "What does primary and noncontributory mean?", "a": "It means the contractor's insurance responds first to a covered claim against an additional insured (primary), and does not seek to share the loss with the additional insured's own insurance (noncontributory). It protects the GC's or owner's own policy and loss history."},
-    {"q": "Is primary and noncontributory the same as additional insured?", "a": "No. Additional insured status puts you on the contractor's policy. Primary and noncontributory decides the order in which that policy and your own policy pay. Construction contracts usually require both, and each comes from its own endorsement wording."},
-    {"q": "Does CG 20 01 apply to the umbrella policy?", "a": "No. ISO's CG 20 01 amends the commercial general liability policy only. If your project requirements call for primary and noncontributory umbrella or excess coverage, check the umbrella policy's own wording."}
+    {
+      "q": "What does primary and noncontributory mean?",
+      "a": "It means the contractor's insurance responds first to a covered claim against an additional insured (primary), and does not seek to share the loss with the additional insured's own insurance (noncontributory). It protects the GC's or owner's own policy and loss history."
+    },
+    {
+      "q": "Is primary and noncontributory the same as additional insured?",
+      "a": "No. Additional insured status puts you on the contractor's policy. Primary and noncontributory decides the order in which that policy and your own policy pay. Construction contracts usually require both, and each comes from its own endorsement wording."
+    },
+    {
+      "q": "Does CG 20 01 apply to the umbrella policy?",
+      "a": "No. ISO's CG 20 01 amends the commercial general liability policy only. If your project requirements call for primary and noncontributory umbrella or excess coverage, check the umbrella policy's own wording."
+    }
   ],
   "sources": [
-    {"title": "Primary and noncontributory (definition)", "publisher": "IRMI", "url": "https://www.irmi.com/term/insurance-definitions/primary-and-noncontributory"},
-    {"title": "ISO's CGL Changes for 2013, Part III", "publisher": "Claims Journal", "date": "Apr 9, 2013", "url": "https://www.claimsjournal.com/news/national/2013/04/09/226615.htm"},
-    {"title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference", "publisher": "Cullen and Dykman", "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"}
+    {
+      "title": "Primary and noncontributory (definition)",
+      "publisher": "IRMI",
+      "url": "https://www.irmi.com/term/insurance-definitions/primary-and-noncontributory"
+    },
+    {
+      "title": "ISO's CGL Changes for 2013, Part III",
+      "publisher": "Claims Journal",
+      "date": "Apr 9, 2013",
+      "url": "https://www.claimsjournal.com/news/national/2013/04/09/226615.htm"
+    },
+    {
+      "title": "Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference",
+      "publisher": "Cullen and Dykman",
+      "url": "https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/"
+    }
   ]
 }
 ---

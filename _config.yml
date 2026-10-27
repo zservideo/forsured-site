@@ -11,3 +11,7 @@ exclude:
   - playwright-report
   - content
   - tools
+
+# GitHub Pages turns .md files into HTML pages by default. The blog ships each post as plain Markdown
+# (blog/<slug>/index.md) for AI answer engines, so only .markdown files count as Markdown to Jekyll.
+markdown_ext: markdown

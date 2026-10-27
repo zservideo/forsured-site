@@ -8,6 +8,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>
 <link rel="canonical" href="https://forsured.ai/blog/"/>
 <link rel="alternate" type="application/rss+xml" title="Forsured Blog" href="https://forsured.ai/blog/feed.xml"/>
+<meta name="author" content="Forsured"/>
 <meta name="theme-color" content="#FB612A"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FB612A'/%3E%3Ctext x='4' y='24' font-family='Arial' font-weight='900' font-size='22' fill='white'%3EF%3C/text%3E%3C/svg%3E"/>
 <meta property="og:type" content="website"/>
@@ -16,14 +17,18 @@
 <meta property="og:title" content="Forsured Blog | Construction Insurance Compliance Insights"/>
 <meta property="og:description" content="Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked."/>
 <meta property="og:image" content="https://forsured.ai/blog/og.png"/>
+<meta property="og:image:secure_url" content="https://forsured.ai/blog/og.png"/>
+<meta property="og:image:type" content="image/png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="The Forsured Blog"/>
+<meta property="og:locale" content="en_US"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@forsured"/>
 <meta name="twitter:title" content="Forsured Blog | Construction Insurance Compliance Insights"/>
 <meta name="twitter:description" content="Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked."/>
 <meta name="twitter:image" content="https://forsured.ai/blog/og.png"/>
+<meta name="twitter:image:alt" content="The Forsured Blog"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,7 +47,22 @@
         "logo": {
           "@type": "ImageObject",
           "url": "https://forsured.ai/logo-orange.png"
-        }
+        },
+        "description": "Construction insurance compliance software that checks contractor COIs against project requirements, flags coverage and endorsement gaps, and keeps checking for the life of the project.",
+        "email": "hello@forsured.ai",
+        "sameAs": [
+          "https://forsured.com",
+          "https://www.instagram.com/getforsured/"
+        ],
+        "knowsAbout": [
+          "Construction insurance compliance",
+          "Certificates of insurance",
+          "Additional insured endorsements",
+          "Contractor risk management"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://forsured.ai/#website"
       },
       "inLanguage": "en-US",
       "blogPost": [
@@ -106,6 +126,16 @@
           "item": "https://forsured.ai/blog/"
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://forsured.ai/#website",
+      "name": "Forsured",
+      "url": "https://forsured.ai",
+      "publisher": {
+        "@id": "https://forsured.ai/#organization"
+      },
+      "inLanguage": "en-US"
     }
   ]
 }
@@ -152,6 +182,21 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .crumbs a{text-decoration:none;display:inline-block;line-height:24px}
 .crumbs a:hover{color:var(--tx)}
 .post-head{padding:48px 0 8px}
+.hero{margin:32px 0 0}
+.hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
+.prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
+.share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
+.sh{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #E4E7EC;border-radius:8px;background:#fff;color:#344051;cursor:pointer;font:inherit;text-decoration:none;transition:border-color .15s,color .15s}
+.sh:hover{border-color:#FB612A;color:#FB612A}
+.sh[hidden]{display:none}
+.sh svg{width:18px;height:18px}
+.share-s{font-size:13px;color:#16864E;min-width:1px}
+.share-end{margin-top:40px;padding:20px 24px;background:#fff;border:1px solid #E4E7EC;border-radius:12px}
+.share-end h2{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:-.01em;line-height:1.3}
+.share-end .share{margin-top:12px}
 .tldr{margin:32px 0 8px;padding:20px 24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
 .tldr h2{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#344051;margin-bottom:8px}
 .tldr ul{padding-left:18px}
@@ -193,7 +238,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none}
 .lead{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;margin-top:40px;padding:28px;background:#fff;border:1px solid #E4E7EC;border-radius:16px;text-decoration:none;transition:border-color .15s}
 .lead:hover{border-color:#FB612A}
-.lead img{width:100%;height:auto;border-radius:10px;border:1px solid var(--bdr)}
+.lead img{width:100%;height:auto;border-radius:10px;border:1px solid #E4E7EC;background:#FDFAF7}
 .lead h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.015em;margin-top:14px}
 .lead p{color:var(--mt);margin-top:10px;font-size:16px}
 .lead time{display:block;font-size:13px;color:var(--mt);margin-top:14px}
@@ -221,11 +266,14 @@ footer a{display:inline-block;line-height:24px}
   .prose{font-size:16px}
   .prose h2,.extra h2{font-size:24px}
   .tldr{padding:16px 18px}
+  .hero{margin-top:24px}
+  .sh{width:44px;height:44px}
+  .share-end{padding:16px 18px}
   .band .edge{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px}
   .band .btns{justify-content:stretch}
   .band .btns a{flex:1 1 100%}
 }
-@media print{nav,.band,.more{display:none}}
+@media print{nav,.band,.more,.share,.share-end{display:none}}
 </style>
 </head>
 <body>
@@ -254,7 +302,7 @@ footer a{display:inline-block;line-height:24px}
       <p>Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them.</p>
       <time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time>
     </div>
-    <img src="forsured-at-irmi-crc-2026/og.png" width="1200" height="630" alt=""/>
+    <img src="forsured-at-irmi-crc-2026/hero.png" width="1600" height="800" alt="" fetchpriority="high" decoding="async"/>
   </a>
   <section class="all" aria-labelledby="all"><h2 id="all">All posts</h2><ul class="cards"><li><a class="card" href="/blog/compliance-isnt-coverage/"><span class="label">COI basics</span><h3>A COI on file isn't proof of coverage</h3><p>A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead.</p><time datetime="2026-10-27">Oct 27, 2026 · 3 min read</time></a></li><li><a class="card" href="/blog/irmi-crc-2026-day-2-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 2 of IRMI's Construction Risk Conference</h3><p>Additional insured endorsements, prequalification as a snapshot, and insurance data you can't search. What we were digging into on day 2 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/irmi-design-build-guide-update/"><span class="label">Industry news</span><h3>IRMI is rewriting its design-build risk and insurance guide</h3><p>IRMI picked American Global to rewrite its Design-Build Risk and Insurance guide. What the update covers, and what design-build means for contractor COI review.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/how-to-check-a-contractor-coi/"><span class="label">How-to</span><h3>How to check a contractor COI against your project requirements</h3><p>A practical checklist for checking a contractor certificate of insurance against one project's requirements: coverages, limits, dates and endorsements.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/irmi-crc-2026-day-1-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 1 of IRMI's Construction Risk Conference</h3><p>Crowded bids and thin margins, umbrella rates still rising, and contractor management turning into an underwriting factor. What stuck with us from day 1 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/construction-insurance-2027-renewal-outlook/"><span class="label">Market outlook</span><h3>What the 2027 construction insurance outlook means for contractor COIs</h3><p>WTW forecasts construction umbrella and excess rates up 5% to 15% in 2027. Here's the full outlook by line, and why it raises the stakes on contractor COI review.</p><time datetime="2026-10-26">Oct 26, 2026 · 2 min read</time></a></li></ul></section>
 </main>

@@ -1,0 +1,473 @@
+# Forsured
+
+> Forsured is construction insurance compliance software. It checks every contractor certificate of insurance (COI) against a project's insurance requirements, flags coverage and endorsement gaps, brings the contractor's broker into the fix, and keeps checking for the life of the project. Built for general contractors, trade contractors and insurance brokers in the United States.
+
+Key facts:
+- Website: https://forsured.ai
+- Contact: hello@forsured.ai
+- Offer: a free COI risk check. Send one project's requirements and a contractor COI or two, and Forsured shows every gap it finds.
+- Integrations: Procore (available for early access customers).
+
+## Product
+
+- [Forsured home](https://forsured.ai/): what Forsured does, how the review works, and who it's for (general contractors, brokers, trade contractors)
+- [Free COI risk check](https://forsured.ai/#demo): send one project's requirements and a contractor COI
+
+## Blog
+
+- [What we heard at our first IRMI Construction Risk Conference](https://forsured.ai/blog/forsured-at-irmi-crc-2026/): Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them. Markdown: https://forsured.ai/blog/forsured-at-irmi-crc-2026/index.md
+- [A COI on file isn't proof of coverage](https://forsured.ai/blog/compliance-isnt-coverage/): A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead. Markdown: https://forsured.ai/blog/compliance-isnt-coverage/index.md
+- [3 takeaways from day 2 of IRMI's Construction Risk Conference](https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/): Additional insured endorsements, prequalification as a snapshot, and insurance data you can't search. What we were digging into on day 2 at IRMI CRC 2026. Markdown: https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/index.md
+- [IRMI is rewriting its design-build risk and insurance guide](https://forsured.ai/blog/irmi-design-build-guide-update/): IRMI picked American Global to rewrite its Design-Build Risk and Insurance guide. What the update covers, and what design-build means for contractor COI review. Markdown: https://forsured.ai/blog/irmi-design-build-guide-update/index.md
+- [How to check a contractor COI against your project requirements](https://forsured.ai/blog/how-to-check-a-contractor-coi/): A practical checklist for checking a contractor certificate of insurance against one project's requirements: coverages, limits, dates and endorsements. Markdown: https://forsured.ai/blog/how-to-check-a-contractor-coi/index.md
+- [3 takeaways from day 1 of IRMI's Construction Risk Conference](https://forsured.ai/blog/irmi-crc-2026-day-1-takeaways/): Crowded bids and thin margins, umbrella rates still rising, and contractor management turning into an underwriting factor. What stuck with us from day 1 at IRMI CRC 2026. Markdown: https://forsured.ai/blog/irmi-crc-2026-day-1-takeaways/index.md
+- [What the 2027 construction insurance outlook means for contractor COIs](https://forsured.ai/blog/construction-insurance-2027-renewal-outlook/): WTW forecasts construction umbrella and excess rates up 5% to 15% in 2027. Here's the full outlook by line, and why it raises the stakes on contractor COI review. Markdown: https://forsured.ai/blog/construction-insurance-2027-renewal-outlook/index.md
+
+## Optional
+
+- [Every post in full](https://forsured.ai/llms-full.txt)
+- [Blog RSS feed](https://forsured.ai/blog/feed.xml)
+- [IRMI CRC 2026 field guide](https://forsured.ai/irmi-field-guide/): an independent guide to the 2026 Construction Risk Conference
+
+# Full text of every post
+
+## What we heard at our first IRMI Construction Risk Conference
+
+> We came to National Harbor in orange polos with a field guide and one question. Here's what the construction risk community told us about contractor COIs.
+
+Published Oct 27, 2026 by Forsured. Forsured news. Source: https://forsured.ai/blog/forsured-at-irmi-crc-2026/
+
+![What we heard at IRMI CRC 2026: Too many alerts, not enough answers; Brokers want renewal data; Carriers watch contractor management; Big projects still run on spreadsheets; The words matter](https://forsured.ai/blog/forsured-at-irmi-crc-2026/hero.png)
+
+### The short version
+
+- Forsured spent IRMI's 2026 Construction Risk Conference in National Harbor meeting brokers, carriers and contractors about contractor COIs.
+- The loudest complaint: today's COI tools throw too many red alerts and reject certificates over small issues without explaining what actually matters.
+- Brokers and carriers want contractor COI data they can bring to renewals and share with clients, not more paperwork.
+- Neutral wording, "project requirements" and "contractor COIs", landed with general contractors and trade contractors alike, so that's how we talk now.
+
+This week Forsured showed up at IRMI's Construction Risk Conference at the Gaylord National in National Harbor. It was our first CRC. We weren't on the sponsor list and we didn't have a booth. We had orange polos, an [independent field guide to the conference](/irmi-field-guide/), a short video about catching the COI gap, and one question for everyone we met: what happens to a contractor COI after it's filed?
+
+The answers were consistent enough that we want to share them. Nobody below is named, because these were hallway conversations, not interviews.
+
+### 1. Too many red alerts, not enough answers
+
+The complaint we heard most came from people already paying for COI tracking. Their tools flag everything. Certificates get rejected over small formatting issues, contractors get frustrated, and the alerts that matter (a lapsed policy, an umbrella below the project requirement, an additional insured endorsement without completed operations) get lost in the noise.
+
+What they want is a review that reads the certificate and the endorsements the way a risk manager would, ranks what actually exposes the project, and says why.
+
+### 2. Brokers want data for renewals
+
+Brokers told us the same thing in different words: show me what my client's contracts actually required last year, and how often their contractors fell short. With umbrella and excess rates still rising (WTW expects another 5% to 15% in 2027), walking into a renewal with that data is worth more than another stack of certificates.
+
+### 3. Carriers care how contractors manage the trades they hire
+
+Underwriters are paying attention to contractor management. Carrier teams we spoke with were interested in tools they could point their construction insureds to, because a contractor that checks every COI against project requirements is a better risk.
+
+### 4. Big projects are still run on spreadsheets
+
+Some of the largest projects represented at CRC still track contractor insurance in spreadsheets and inboxes. Certificates arrive in different formats from different countries, and the people responsible know they can't see the whole picture.
+
+### 5. The words matter
+
+We came in using the general contractor's shorthand for the paperwork. By the end of day 1 we'd switched to "project requirements" and "contractor COIs." The neutral wording works for general contractors, trade contractors and owners alike, and it describes the real job: every contractor, checked against what the project requires.
+
+### What's next
+
+We're following up with everyone who asked to see Forsured on their own paperwork. If we didn't get to meet you at the Gaylord, the offer is the same: a free COI risk check, no strings attached. Send one project's requirements and a contractor COI or two to hello@forsured.ai, and we'll walk you through every gap we find.
+
+We'll also keep writing here every weekday about what's moving in construction insurance and contractor COI compliance. Thank you to IRMI and everyone in National Harbor who stopped to talk.
+
+### Common questions
+
+#### Was Forsured a sponsor or exhibitor at IRMI CRC 2026?
+
+No. Forsured attended IRMI's Construction Risk Conference independently. We are not affiliated with or endorsed by IRMI. Our field guide to the event was an independent guide we made for attendees.
+
+#### What is Forsured?
+
+Forsured is construction insurance compliance software. It checks every contractor COI against a project's insurance requirements, flags coverage and endorsement gaps, brings the contractor's broker into the fix, and keeps checking for the life of the project.
+
+### Sources
+
+1. [IRMI Construction Risk Conference (CRC)](https://www.irmi.com/conferences/construction-risk-conference), IRMI
+2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## A COI on file isn't proof of coverage
+
+> A certificate of insurance is a snapshot. Coverage changes mid-job, endorsements decide who's actually protected, and the gap usually shows up after a loss.
+
+Published Oct 27, 2026 by Forsured. COI basics. Source: https://forsured.ai/blog/compliance-isnt-coverage/
+
+![A COI on file isn't proof of coverage. A sample contractor certificate of insurance: General liability $1M / $2M, meets the requirement; Auto liability $1M, meets the requirement; Umbrella $5M, Below $10M required; Additional insured Box checked, No endorsement; Workers' comp Statutory, meets the requirement. The certificate says additional insured. The policy has no endorsement that makes it true.](https://forsured.ai/blog/compliance-isnt-coverage/hero.png)
+
+### The short version
+
+- A certificate of insurance is evidence that a policy existed when it was issued. The standard ACORD 25 form says it confers no rights on the certificate holder.
+- Additional insured status, waivers and primary and noncontributory wording live in the policy endorsements, not on the certificate.
+- Policies lapse, renew with new terms and get re-endorsed mid-project, so a COI that passed review in March can be out of compliance by July.
+- The fix is to check each contractor COI against the project's actual requirements, ask for the endorsements, and keep checking for the life of the job.
+
+Every general contractor has a folder of contractor COIs. Most of them have been looked at once, by someone in a hurry, at the moment the contractor was onboarded. The certificate was there, the boxes were checked, and the work started.
+
+That folder feels like protection. It usually isn't, at least not the way people assume.
+
+### What a certificate of insurance actually is
+
+IRMI defines a certificate of insurance as a document providing evidence that certain general types of insurance have been bought, along with the types of coverage and limits. That is the whole job of the document: evidence, on the day it was issued.
+
+The standard ACORD 25 certificate says so on its face. It is "issued as a matter of information only and confers no rights upon the certificate holder," and it does not amend, extend or alter the coverage of the policies listed. If the certificate and the policy disagree, the policy wins.
+
+### Where the gap hides
+
+**The endorsements.** Additional insured status, waivers of subrogation and primary and noncontributory wording are created by endorsements on the contractor's policy. A checked "ADDL INSD" box on a certificate is not the endorsement. And endorsement forms keep changing, a point Cullen and Dykman's Christopher Ruggiero made in his session on decoding additional insured endorsements at IRMI's 2026 Construction Risk Conference: the coverage you negotiate in the contract only holds if the endorsement on the policy matches it.
+
+**The dates.** Policies lapse, get cancelled for nonpayment and renew with new terms. A contractor COI that cleared prequalification in March can be out of compliance by July, and nobody finds out until there's a claim.
+
+**The limits.** Project requirements often call for higher umbrella limits than a contractor carries on its standard program. With umbrella and excess rates still climbing (WTW expects another 5% to 15% in 2027), that is exactly the line where contractors trim.
+
+**The fine print in the requirements themselves.** Owners and lenders write requirements that differ project to project. A certificate that satisfies one job can fail the next one across the street.
+
+### What to check instead
+
+1. Start from the project's requirements, not a generic checklist. Each project has its own limits, endorsements and wording.
+2. Compare every contractor COI against those requirements line by line: coverage types, limits, policy dates, and the named insured matching the contracting entity.
+3. Ask for the endorsements that the requirements depend on, and read the form numbers and wording, not just the box on the certificate.
+4. Track expirations and renewals so a policy that changes mid-project gets reviewed again.
+5. When something's missing, bring the contractor's broker into the fix early, while it's a paperwork problem and not a claim.
+
+### Why it matters more now
+
+Carriers notice. WTW's 2027 construction outlook says underwriters give favorable consideration to contractors with strong management of the trade partners they hire. A file full of unchecked certificates says the opposite.
+
+That's the work Forsured does: check each contractor COI against your project requirements, flag the gaps, and keep checking for the life of the job.
+
+### Common questions
+
+#### Is a certificate of insurance proof of coverage?
+
+No. A certificate of insurance is evidence that certain types of insurance were in force when it was issued. The standard ACORD 25 certificate says it is issued as a matter of information only and confers no rights on the certificate holder. Coverage is decided by the policy and its endorsements.
+
+#### Does being listed on a COI make me an additional insured?
+
+Not by itself. Additional insured status comes from an endorsement on the contractor's policy. Ask for the endorsement form and check that its wording matches what your contract requires, including ongoing and completed operations.
+
+#### How often should contractor COIs be checked?
+
+At onboarding and again whenever a policy renews, changes or is close to expiring. On a long project that means checking continuously, not once at prequalification.
+
+### Sources
+
+1. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
+2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
+3. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## 3 takeaways from day 2 of IRMI's Construction Risk Conference
+
+> The endorsement decides who's protected, prequalification is a snapshot, and insurance data sitting in PDFs is its own kind of risk.
+
+Published Oct 27, 2026 by Forsured. Event takeaways. Source: https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/
+
+![Day 2 at IRMI's Construction Risk Conference: The endorsement decides who's protected; Prequalification is a snapshot; PDFs can't be searched](https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/hero.png)
+
+### The short version
+
+- Additional insured coverage only holds if the endorsement on the contractor's policy matches the project requirements, and endorsement forms keep changing.
+- Prequalification checks insurance once. Policies renew, lapse and get re-endorsed mid-project, so compliance has to be checked continuously.
+- Contractor COIs stored as PDFs can't be trended, audited or shared with a broker or carrier at renewal.
+
+Day 2 at IRMI's Construction Risk Conference is a wrap. Three things we were digging into on Tuesday.
+
+### 1. The endorsement is the contract's last line of defense
+
+Tuesday opened with "Decoding Additional Insured Endorsements for Successful Contractual Risk Transfer," led by Christopher Ruggiero, partner and construction litigation chair at Cullen and Dykman. His preview made a point every GC should hear: as claim costs rise, the indemnity and additional insured coverage you negotiate is harder to secure, because the endorsement forms keep changing.
+
+The coverage you negotiated only holds if the endorsement on the contractor's policy actually matches your project requirements. A checked box on a COI doesn't tell you that. The form number and its wording do.
+
+### 2. Prequalification is a snapshot. Insurance is a moving target.
+
+"The Prequalification Puzzle" was on Tuesday's agenda, and it's a good reminder of how much happens after a contractor clears prequal. A contractor COI that passed in March can be out of compliance by July. Policies renew with new terms, lapse for nonpayment and get re-endorsed mid-project.
+
+Prequalification answers "can this firm do the work?" It was never built to answer "is this firm covered today, for this project?"
+
+### 3. Insurance data you can't search is its own risk
+
+Contractor COIs sitting as PDFs in an inbox can't be trended, audited or shared with your broker or carrier when renewal comes around. "When Data Becomes Risk" was on the afternoon agenda, and that's the version of it we see most: the information exists, but nobody can answer a simple question like "which of our active contractors carry less umbrella than the job requires?"
+
+Structured COI data turns that into a two-minute answer, and it's the same data a carrier wants to see when it asks how you manage the trades you hire.
+
+If you want that answer for one of your own projects, start with one project's requirements and a contractor COI or two.
+
+### Common questions
+
+#### Why do additional insured endorsements matter more than the certificate?
+
+Additional insured status is created by an endorsement on the contractor's policy. The certificate only reports it. If the endorsement form is narrower than the contract requires, for example covering ongoing but not completed operations, the gap stays even though the certificate looks fine.
+
+#### Is prequalification enough to manage contractor insurance risk?
+
+No. Prequalification is a point-in-time review. Contractor policies renew, lapse and change during a project, so insurance compliance needs to be rechecked whenever a policy changes and before it expires.
+
+### Sources
+
+1. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
+2. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## IRMI is rewriting its design-build risk and insurance guide
+
+> Design-build moves design responsibility onto the builder's side of the table. Project requirements, and the contractor COIs checked against them, have to keep up.
+
+Published Oct 27, 2026 by Forsured. Industry news. Source: https://forsured.ai/blog/irmi-design-build-guide-update/
+
+![What design-build changes in COI review: Professional liability; Delegated design scopes; Project-specific programs](https://forsured.ai/blog/irmi-design-build-guide-update/hero.png)
+
+### The short version
+
+- IRMI selected brokerage American Global to rewrite its Design-Build Risk and Insurance guide, edited by IRMI's Megan Jolly.
+- The update covers progressive design-build, risk allocation, indemnification, limits of liability, professional liability, project-specific coverage and bonding.
+- On design-build work, check contractor COIs for professional liability wherever a contractor carries design responsibility, not just general liability.
+
+The International Risk Management Institute (IRMI) has picked American Global, a construction and infrastructure risk and insurance brokerage, to rewrite its long-running Design-Build Risk and Insurance guide. The team includes Caryn Maxfield, Ante Petricevic, François Wasselin and Giovanni Bach, with IRMI's Megan Jolly editing, according to the October 23 announcement.
+
+### What the update covers
+
+The rewrite is meant to catch up with how design-build is delivered today, including progressive design-build. It covers contractual risk allocation, indemnification, limits of liability, professional liability insurance, project-specific coverage and bonding.
+
+### Why it matters for contractor COIs
+
+Design-build shifts design responsibility to the builder's side of the contract. That has a direct effect on what a compliant contractor COI looks like:
+
+- **Professional liability enters the picture.** A design-builder, and any trade contractor doing delegated design on mechanical, electrical, structural steel or curtain wall scopes, may need professional liability that a general liability policy won't provide.
+- **Requirements differ by role.** The same project can need different coverage from a designer, a design-builder and a build-only trade contractor. One template for every firm misses that.
+- **Project-specific programs change the checklist.** When an owner or contractor buys project-specific coverage, contractor COIs have to be checked against what the program does and doesn't cover.
+
+WTW's 2027 outlook expects contractor's professional liability to run flat to up 5% on annual programs and flat to up 10% on project-specific policies, so the coverage is available. The job is making sure the contractors who need it actually carry it, at the limits the project requires.
+
+IRMI's guides are a standard reference for construction risk teams, and this one is worth reading when it lands.
+
+### Common questions
+
+#### Why does design-build change insurance requirements?
+
+In design-build, the builder's team takes on design responsibility. That brings professional liability into the picture for the design-builder and for any trade contractor doing delegated design, so project requirements and COI reviews need to account for it.
+
+### Sources
+
+1. [American Global tapped to update IRMI's Design-Build Risk and Insurance guide](https://www.constructiondive.com/press-release/20261023-american-global-tapped-to-update-irmis-design-build-risk-and-insurance-gui/), Construction Dive, Oct 23, 2026
+2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## How to check a contractor COI against your project requirements
+
+> A line-by-line checklist you can use on your next contractor COI, and the five places gaps hide most often.
+
+Published Oct 27, 2026 by Forsured. How-to. Source: https://forsured.ai/blog/how-to-check-a-contractor-coi/
+
+![Five checks for every contractor COI: Named insured; Coverages and limits; Policy dates; Endorsements; Certificate holder](https://forsured.ai/blog/how-to-check-a-contractor-coi/hero.png)
+
+### The short version
+
+- Start from the project's insurance requirements, not a generic template. Limits and endorsements differ by owner, lender and contract.
+- Check five things on every COI: named insured, coverage types and limits, policy dates, endorsements, and the certificate holder.
+- Ask for the actual endorsement forms when the contract requires additional insured status, waiver of subrogation or primary and noncontributory wording.
+- Recheck at every renewal and before every expiration. A one-time review misses most of the gaps that matter.
+
+Most COI reviews fail for one reason: the certificate gets checked against a generic template instead of the requirements of the project the contractor is actually working on. Here is the checklist we use, in order.
+
+### Before you open the certificate
+
+Pull the insurance section of the contract or the project's insurance requirements exhibit. Write down, for this project:
+
+- Each required coverage (general liability, auto, workers' compensation and employer's liability, umbrella or excess, and anything trade-specific like professional or pollution liability)
+- The minimum limit for each, including whether umbrella must follow form
+- Required endorsements: additional insured (ongoing and completed operations), waiver of subrogation, primary and noncontributory
+- Who must be named as additional insured: owner, lender, GC, others
+- How long completed operations coverage must be maintained after the job
+
+### The five checks
+
+#### 1. Named insured
+
+The named insured on the certificate should match the legal entity on the contract. A parent company, a DBA or a sister company is a gap until someone confirms the right entity is covered.
+
+#### 2. Coverages and limits
+
+Compare every line against the requirements. Umbrella and excess is where shortfalls show up most, because project requirements often call for more than a trade contractor carries on its standard program.
+
+#### 3. Policy dates
+
+Every policy should be in force for the work. Note each expiration date, and plan to recheck before it, not after.
+
+#### 4. Endorsements
+
+A box on the certificate is not an endorsement. When the contract requires additional insured status, a waiver of subrogation or primary and noncontributory wording, ask for the endorsement forms and read them. Check that additional insured coverage includes completed operations when the contract requires it. Endorsement forms change often, so the form number matters.
+
+#### 5. Certificate holder and description
+
+The certificate holder should be correct, and the description of operations should reference the project or the contract where your requirements ask for it.
+
+### When you find a gap
+
+Send the contractor's broker the specific requirement that isn't met, quoted from the project requirements, and the line on the certificate or endorsement that falls short. Specific asks get fixed in days. Vague ones ("please send an updated COI") come back with the same certificate.
+
+### Keep it current
+
+A COI review is only as good as its date. Recheck when a policy renews, when a certificate is reissued, and ahead of every expiration. On a long project that means continuous monitoring, which is what Forsured does for every contractor on every active project.
+
+### Common questions
+
+#### What should I look for on a contractor's certificate of insurance?
+
+Check that the named insured matches the contracting entity, that every required coverage is listed with limits at or above the project requirements, that the policy dates cover the work, that required endorsements are referenced and provided, and that the certificate holder is correct.
+
+#### What are the most common contractor COI gaps?
+
+The most common gaps are umbrella or excess limits below the project requirement, additional insured endorsements that leave out completed operations, policies that expire mid-project, a named insured that doesn't match the contract, and missing waiver of subrogation or primary and noncontributory wording.
+
+#### Who fixes a gap on a contractor COI?
+
+The contractor's insurance broker or agent. The fastest path is to send the broker the specific requirement that isn't met, so they can endorse the policy or issue a corrected certificate.
+
+### Sources
+
+1. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
+2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## 3 takeaways from day 1 of IRMI's Construction Risk Conference
+
+> Margins are thin, umbrella is where the pain is, and underwriters are starting to ask how contractors manage the trades they hire.
+
+Published Oct 27, 2026 by Forsured. Event takeaways. Source: https://forsured.ai/blog/irmi-crc-2026-day-1-takeaways/
+
+![12 to 16: Bids on jobs that once drew 2 to 4, per ABC chief economist Anirban Basu](https://forsured.ai/blog/irmi-crc-2026-day-1-takeaways/hero.png)
+
+### The short version
+
+- Bids are crowded: ABC chief economist Anirban Basu says jobs that once drew 2 to 4 bids now draw as many as 12 to 16, and about a third of contractors expect margins to shrink.
+- WTW expects umbrella and excess rates to rise another 5% to 15% in 2027, and brokers want renewal data on how often contracts demand high umbrella limits.
+- Carriers give favorable consideration to strong management of the contractors a firm hires, so contractor COI compliance is becoming an underwriting story.
+
+Day 1 at IRMI's Construction Risk Conference in National Harbor is in the books. Here are the three things that stuck with us from Monday, and what each one means for anyone collecting contractor COIs.
+
+### 1. Margins are thin, and bids are crowded
+
+Anirban Basu, chief economist at Associated Builders and Contractors, opened CRC's Monday general session. His recent numbers, reported by Construction Dive, set the tone: projects that once drew two to four bids are now drawing as many as 12 to 16, and about 32% of contractors surveyed expect profit margins to decline over the next year, up from 26% in July.
+
+When the low bid wins, a contractor's insurance gap isn't a paperwork problem. It's a margin problem. A trade contractor that trimmed its umbrella to sharpen a number is the one whose gap lands back on the GC's program after a loss.
+
+### 2. Umbrella is where the pain is
+
+WTW expects umbrella and excess rates for construction to rise another 5% to 15% in 2027, the same range it gives auto liability, while general liability runs flat to up 10%.
+
+A broker we sat down with asked for something simple: show me how many of last year's contracts required a high umbrella limit, so I can walk into renewal with data instead of guesses. That data exists in every GC's contractor COI file. It just isn't searchable when the certificates are PDFs in an inbox.
+
+### 3. Contractor management is becoming an underwriting factor
+
+WTW's outlook says carriers give favorable underwriting consideration to firms with strong management of the trades they hire, alongside loss experience and fleet controls. "When Compliance Isn't Coverage" was on Monday's agenda for a reason: a contractor COI in a file isn't proof of coverage, and underwriters know it.
+
+For a GC, that turns COI review from back-office cleanup into something you can show a carrier at renewal: every contractor checked against project requirements, every gap tracked to a fix.
+
+Want to see what your own contractor COI file would tell a carrier? That's what our free COI risk check is for.
+
+### Common questions
+
+#### What is IRMI's Construction Risk Conference?
+
+The Construction Risk Conference (CRC) is an annual event run by the International Risk Management Institute (IRMI) for construction risk managers, brokers, carriers and attorneys. The 2026 conference ran October 25 to 28 at the Gaylord National Resort in National Harbor, Maryland.
+
+#### Are umbrella and excess rates for contractors still going up in 2027?
+
+WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%, with general liability flat to up 10%.
+
+### Sources
+
+1. [3 economic factors determining construction's winners and losers: ABC](https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/), Construction Dive, Oct 13, 2026
+2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## What the 2027 construction insurance outlook means for contractor COIs
+
+> Umbrella and excess keep climbing while most other lines hold steady. That's exactly the line where contractors are most likely to fall short of project requirements.
+
+Published Oct 26, 2026 by Forsured. Market outlook. Source: https://forsured.ai/blog/construction-insurance-2027-renewal-outlook/
+
+![+5% to 15%: Forecast 2027 rate change for construction umbrella and excess liability](https://forsured.ai/blog/construction-insurance-2027-renewal-outlook/hero.png)
+
+### The short version
+
+- WTW's 2027 outlook for construction: umbrella and excess up 5% to 15%, auto up 5% to 15%, general liability flat to up 10%, workers' compensation flat to up 5%.
+- Lead umbrella and excess on wrap-up programs (OCIPs and CCIPs) is also expected up 5% to 15%.
+- When umbrella costs rise, trade contractors are tempted to carry less than project requirements demand, so umbrella is the line to check first on every contractor COI.
+- Carriers favor firms with strong management of the contractors they hire, which makes a clean contractor COI record useful at renewal.
+
+WTW published its Insurance Marketplace Realities 2027 report for construction on October 1. The headline for anyone managing contractor COIs: most lines are steady, and the expensive one keeps getting more expensive.
+
+### The outlook by line
+
+| Coverage | WTW 2027 forecast |
+| --- | --- |
+| Umbrella and excess liability | Up 5% to 15% |
+| Auto liability | Up 5% to 15% |
+| General liability | Flat to up 10% |
+| Workers' compensation | Flat to up 5% |
+| Project-specific builders risk (non-high hazard) | Down 2.5% to up 2.5% |
+| Master builders risk | Down 5% to up 5% |
+| Contractor's professional liability (annual) | Flat to up 5% |
+| Wrap-ups (OCIP and CCIP), lead umbrella and excess | Up 5% to 15% |
+
+### Umbrella has been the pressure point for years
+
+This isn't new. Back in 2021, ENR reported that umbrella and excess renewals were costing contractors 50% to 100% more, as carriers raised prices, cut limits and raised attachment points. Rates have cooled since then, but umbrella keeps rising faster than the rest of the program.
+
+### Why that shows up in your contractor COIs
+
+Project requirements rarely bend to the market. If the contract calls for a $10 million umbrella, it calls for $10 million whether the trade contractor's renewal went up 5% or 15%.
+
+Put that next to a bidding market where, as Construction Dive reported from ABC's Anirban Basu, jobs that once drew 2 to 4 bids are drawing 12 to 16. Thin margins and rising umbrella costs push in the same direction: carry less, and hope nobody checks.
+
+So check umbrella first. On every contractor COI, confirm the umbrella or excess limit meets the project requirement, that it follows form over the underlying policies the contract requires, and that it won't expire before the work is done.
+
+### The upside at your own renewal
+
+WTW notes that carriers give favorable underwriting consideration to strong management of the trades a firm hires. A record showing every contractor checked against project requirements, with each gap tracked to a fix, is the kind of evidence an underwriter can use. A folder of unread certificates isn't.
+
+### Common questions
+
+#### How much will construction umbrella and excess insurance rates rise in 2027?
+
+WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess liability rates for construction up 5% to 15%.
+
+#### Which construction insurance lines are stable in 2027?
+
+WTW expects builders risk to be roughly flat (minus 2.5% to plus 2.5% for non-high hazard project-specific builders risk), workers' compensation flat to up 5%, and contractor's professional liability flat to up 5% on annual programs.
+
+### Sources
+
+1. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+2. [Prices Rise Sharply as Clouds Darken Construction Insurance Market for Buyers](https://www.enr.com/articles/51726-prices-rise-sharply-as-clouds-darken-construction-insurance-market-for-buyers), ENR, May 12, 2021
+3. [3 economic factors determining construction's winners and losers: ABC](https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/), Construction Dive, Oct 13, 2026
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
