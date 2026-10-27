@@ -138,11 +138,14 @@ test.describe('IRMI banner', () => {
     const bar = page.locator('#irmi-bar');
     await expect(bar).toBeVisible();
     await expect(bar).toHaveText(/Catch us at IRMI, find the Forsured polos/);
+    const cta = bar.getByRole('link', { name: /Snag the IRMI field guide/ });
+    await expect(cta).toBeVisible();
+    await expect(cta).toHaveAttribute('href', 'irmi-field-guide/');
     const barBox = await bar.boundingBox();
     const navBox = await page.locator('#nav').boundingBox();
     expect(barBox.y).toBe(0);
     expect(navBox.y).toBeGreaterThanOrEqual(barBox.y + barBox.height - 1);
-    // Text fits on one line at every viewport.
+    // Content fits inside the bar at every viewport.
     expect(await bar.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(true);
   });
 
