@@ -1,0 +1,11 @@
+# GitHub Pages builds the site with Jekyll. Everything in the repo is published unless it is
+# listed here, so the test suite and tooling stay off forsured.ai. tests/server.js reads this
+# list too, and seo.spec.js checks that these files are not served.
+exclude:
+  - tests
+  - package.json
+  - package-lock.json
+  - playwright.config.js
+  - node_modules
+  - test-results
+  - playwright-report

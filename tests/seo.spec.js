@@ -123,3 +123,11 @@ test('the old short link stays out of search results', async () => {
 test('custom domain is set for GitHub Pages', async () => {
   expect(read('CNAME').trim()).toBe('forsured.ai');
 });
+
+// The test suite names things that must never appear on the site, so it must not be published.
+test('the test suite and tooling are not published on the site', async ({ request }) => {
+  for (const url of ['/tests/copy.spec.js', '/tests/brand.json', '/tests/README.md', '/package.json', '/package-lock.json', '/playwright.config.js', '/_config.yml']) {
+    expect((await request.get(url)).status(), `${url} should not be served`).toBe(404);
+  }
+  expect((await request.get('/')).status()).toBe(200);
+});
