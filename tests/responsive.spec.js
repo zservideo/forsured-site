@@ -191,6 +191,12 @@ for (const vp of VIEWPORTS) {
         expect(box.x + box.width, `${id} on screen`).toBeLessThanOrEqual(vp.width);
         expect(box.height, `${id} tall enough to tap`).toBeGreaterThanOrEqual(40);
       }
+      // Text fields and dropdowns line up at one height. Left to the font, a dropdown can end up
+      // a pixel off its neighbours depending on when the web font arrives.
+      const heights = await page.$$eval('.fld input, .fld select', (els) =>
+        [...new Set(els.map((e) => e.getBoundingClientRect().height).filter((h) => h > 0))]
+      );
+      expect(heights, 'form fields share one height').toHaveLength(1);
     });
 
     if (vp.phone) {

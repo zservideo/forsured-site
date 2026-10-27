@@ -8,10 +8,20 @@ on:
   # the "Update visual baselines" workflow pushes new screenshots, which does not trigger CI by itself).
   workflow_dispatch:
 
+# A new push to a pull request cancels the run for the push before it.
+concurrency:
+  group: site-tests-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # Playwright's own image has Chromium and its system libraries already installed, so runs
+    # skip the browser install (which took 2 to 11 minutes per run) and every run renders
+    # screenshots on the same fixed setup. Keep the tag equal to @playwright/test in package.json.
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,13 +29,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
       - run: npx playwright test
+      # Kept on every finished run, not only failures: a test that fails and then passes on retry
+      # ("flaky") still passes the run, and the report holds its screenshots and diff to fix it.
       - uses: actions/upload-artifact@v4
-        if: failure()
+        if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: |
-            playwright-report/
-            test-results/
+          path: playwright-report/
           retention-days: 7

@@ -2,8 +2,14 @@
 
 Every pull request runs these checks in GitHub Actions (`.github/workflows/test.yml`), and a pull
 request should merge only once they pass. They run in Chromium against a local copy of the site served
-like GitHub Pages (`tests/server.js`). Google Fonts load for real; the form backends (Web3Forms and
-the Make webhook) are stubbed, so no test ever sends a real submission.
+like GitHub Pages (`tests/server.js`). Google Fonts load for real, downloaded once per test worker
+with retries, and the screenshot tests fail with a clear message if any brand font is missing. The
+form backends (Web3Forms and the Make webhook) are stubbed, so no test ever sends a real submission.
+
+CI runs inside Playwright's own Docker image (`mcr.microsoft.com/playwright`), which already has
+Chromium and its system libraries. That skips a browser install that took 2 to 11 minutes per run,
+so a full run takes about 2 to 3 minutes, and every run renders screenshots on the same fixed setup.
+A new push to a pull request cancels the run for the push before it.
 
 ## What gets checked
 
@@ -17,6 +23,7 @@ the Make webhook) are stubbed, so no test ever sends a real submission.
 | `visual.spec.js` | Visual regression: screenshots of every home page section, the field guide and the phone menu, compared with the approved images in `__screenshots__/`. |
 | `a11y.spec.js` | Accessibility: axe-core WCAG 2.1/2.2 AA rules, visible keyboard focus, alt text, landmarks. |
 | `seo.spec.js` | Title and description length, canonical URLs, link-preview tags and image, one h1 and no skipped heading levels, image sizes and lazy loading, every local link resolves, structured data, the CNAME. |
+| `setup.spec.js` | The CI image matches the installed Playwright version, so browser behavior and screenshots don't drift. |
 | `performance.spec.js` | Page-weight budgets on first load, file-size limits for HTML, images and the PDF, and no layout jumps while the page loads. |
 
 ## Design system
@@ -41,18 +48,23 @@ npm run report                    # open the HTML report after a failure
 npm run serve                     # browse the site at http://localhost:4173
 ```
 
+While working on a change, run the spec files it touches; run everything once before pushing.
+
 ## When a test fails on purpose
 
 Most failures are real problems to fix in the page. A few are guardrails you update deliberately:
 
 - **A design change made the screenshots differ.** Look at the diff in the report (or the
-  `playwright-report` artifact on the failed CI run). If the change is intended, add the
+  `playwright-report` artifact on the CI run, which is kept for every run so a test that only
+  passed on retry can be looked into too). If the change is intended, add the
   `update-baselines` label to the pull request (or run **Update visual baselines** from the
-  Actions tab on your branch). It re-takes the screenshots on GitHub's Linux runner, commits them
-  to the branch and runs **Site tests** again. Review the new images in the pull request diff.
-  The baselines are always taken on that runner: font rendering differs slightly between
-  machines, so screenshots taken on a laptop (`npm run test:update-visual`) are for local checks
-  only and should not be committed.
+  Actions tab on your branch). It re-takes the screenshots in the same Playwright image CI uses,
+  commits them to the branch and runs **Site tests** again. Review the new images in the pull
+  request diff. The baselines always come from that image: font rendering differs slightly
+  between machines, so screenshots taken on a laptop (`npm run test:update-visual`) are for local
+  checks only and should not be committed.
+- **Upgrading Playwright.** Change the image tag in both workflows to the new version
+  (`setup.spec.js` fails until they match), then re-take the baselines as above.
 - **A new color.** Add it to `tests/brand.json` under the right group, so the change is visible in review.
 - **A new page.** Add it to `PAGES` in `tests/helpers.js`; copy, brand, SEO, accessibility and
   layout checks then cover it automatically.
