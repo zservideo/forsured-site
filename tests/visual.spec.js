@@ -12,7 +12,8 @@ const { open, loadImages } = require('./helpers');
 // Hide the fixed banner and nav in section shots so they do not float over the section.
 const HIDE_FIXED = '#irmi-bar, #nav { visibility: hidden !important; }';
 
-const FONTS = ['Inter', 'Chakra Petch', 'JetBrains Mono'];
+// Headlines in Roboto Serif and everything else in Inter, as in the app; Chakra Petch is the wordmark.
+const FONTS = ['Inter', 'Roboto Serif', 'Chakra Petch'];
 
 async function ready(page, url, fonts = FONTS) {
   await open(page, url, { reveal: true, freeze: true });
@@ -37,12 +38,9 @@ async function ready(page, url, fonts = FONTS) {
   });
 }
 
-// The home page also sets its headlines in Roboto Serif, as the app does.
-const HOME_FONTS = [...FONTS, 'Roboto Serif'];
-
 test.describe('home', () => {
   test('first screen', async ({ page }) => {
-    await ready(page, '/', HOME_FONTS);
+    await ready(page, '/');
     await page.evaluate(() => window.scrollTo(0, 0));
     await expect(page).toHaveScreenshot('home-first-screen.png');
   });
@@ -60,7 +58,7 @@ test.describe('home', () => {
   ];
   for (const [name, selector] of SECTIONS) {
     test(name, async ({ page }) => {
-      await ready(page, '/', HOME_FONTS);
+      await ready(page, '/');
       await page.addStyleTag({ content: HIDE_FIXED });
       await expect(page.locator(selector)).toHaveScreenshot(`home-${name}.png`);
     });
@@ -68,13 +66,13 @@ test.describe('home', () => {
 
   test('mobile menu open', async ({ page, isMobile }) => {
     test.skip(!isMobile, 'hamburger menu only on phones');
-    await ready(page, '/', HOME_FONTS);
+    await ready(page, '/');
     await page.locator('#menu-btn').click();
     await expect(page).toHaveScreenshot('home-mobile-menu.png');
   });
 
   test('risk check form after a successful submit', async ({ page }) => {
-    await ready(page, '/', HOME_FONTS);
+    await ready(page, '/');
     await page.fill('#wl-name', 'Test Person');
     await page.fill('#wl-email', 'test@example.com');
     await page.selectOption('#wl-role', 'Insurance Broker');
