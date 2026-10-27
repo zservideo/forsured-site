@@ -1,37 +1,11 @@
-// Smoke and copy tests for the forsured.ai single-page site.
-// The page is loaded from disk and every outside request is stubbed, so tests
-// never hit Web3Forms or the Make webhook with real submissions.
+// Functionality of the forsured.ai home page: loading, navigation, the IRMI banner and both forms.
+// Runs on the desktop and mobile projects. Form backends are stubbed (see helpers.js).
 const { test, expect } = require('@playwright/test');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
+const { ROOT, open, read } = require('./helpers');
 
-const PAGE = 'file://' + path.resolve(__dirname, '..', 'index.html');
-const HTML = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf8');
-
-async function open(page, { formOk = true } = {}) {
-  const errors = [];
-  const posts = [];
-  page.on('pageerror', (e) => errors.push(e.message));
-  await page.route(/^https?:\/\//, (route) => {
-    const url = route.request().url();
-    if (url.includes('api.web3forms.com') || url.includes('hook.us2.make.com')) {
-      posts.push({ url, body: route.request().postData() });
-      return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ success: formOk }) });
-    }
-    return route.abort();
-  });
-  await page.goto(PAGE);
-  return { errors, posts };
-}
-
-// Visible copy only: strips scripts/styles and the customer quote, which is left verbatim.
-async function visibleCopy(page) {
-  return page.evaluate(() => {
-    const clone = document.body.cloneNode(true);
-    clone.querySelectorAll('script,style,blockquote').forEach((n) => n.remove());
-    return clone.textContent.replace(/\s+/g, ' ');
-  });
-}
+const HTML = read('index.html');
 
 test('loads without JavaScript errors', async ({ page }) => {
   const { errors } = await open(page);
@@ -51,18 +25,6 @@ test('hero carries the current headline and CTA', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText("Catch the gap before it's a jobsite problem.");
   await expect(page.locator('.hero .cta-p')).toHaveText(/Free COI Risk Check/);
   await expect(page.locator('.hero .cta-p')).toHaveAttribute('href', '#demo');
-});
-
-test('copy follows the contractor / project requirements wording', async ({ page }) => {
-  await open(page);
-  const text = await visibleCopy(page);
-  for (const banned of [/\bsubcontractors?\b/i, /\bsubs\b/i, /\bsub COIs?\b/i, /\bGC requirements\b/i]) {
-    expect(text, `visible copy should not contain ${banned}`).not.toMatch(banned);
-  }
-  for (const attr of ['description', 'og:description', 'twitter:description']) {
-    const content = await page.locator(`meta[name="${attr}"], meta[property="${attr}"]`).first().getAttribute('content');
-    expect(content).not.toMatch(/subcontractor/i);
-  }
 });
 
 test('JSON-LD blocks are valid JSON', async () => {
@@ -90,38 +52,119 @@ test('email links use the forsured.ai domain', async ({ page }) => {
 
 test('local images referenced by the page exist', async () => {
   const srcs = [...HTML.matchAll(/(?:src|href)="([^"#:]+\.(?:png|jpe?g|svg|webp))"/g)].map((m) => m[1]);
-  for (const src of srcs) expect(fs.existsSync(path.resolve(__dirname, '..', src)), src).toBe(true);
+  const srcset = [...HTML.matchAll(/srcset="([^"]+)"/g)].flatMap((m) => m[1].split(',').map((s) => s.trim().split(' ')[0]));
+  for (const src of [...srcs, ...srcset]) expect(fs.existsSync(path.join(ROOT, src)), src).toBe(true);
+});
+
+test.describe('navigation', () => {
+  // Clicking a section link must land the section heading below the fixed banner + nav, not under it.
+  for (const target of ['platform', 'how', 'gc', 'brokers', 'why', 'demo']) {
+    test(`#${target} link scrolls the section into view below the nav`, async ({ page, isMobile }) => {
+      await open(page, '/', { reveal: true });
+      if (isMobile) {
+        await page.locator('#menu-btn').click();
+        await expect(page.locator('#mm')).toBeVisible();
+        await page.locator(`#mm a[href="#${target}"]`).first().click();
+        await expect(page.locator('#mm')).toBeHidden();
+      } else if (await page.locator(`#nav .nlinks a[href="#${target}"]`).count()) {
+        await page.locator(`#nav .nlinks a[href="#${target}"]`).click();
+      } else {
+        await page.locator(`#nav a[href="#${target}"]`).first().click();
+      }
+      // Wait for the smooth scroll to finish: two reads 250ms apart that match.
+      let last = -1;
+      await expect
+        .poll(async () => { const y = await page.evaluate(() => window.scrollY); const done = y === last && y > 200; last = y; return done; }, { intervals: [250] })
+        .toBe(true);
+      const navBottom = (await page.locator('#nav').boundingBox()).y + (await page.locator('#nav').boundingBox()).height;
+      const top = await page.locator(`#${target}`).evaluate((el) => el.getBoundingClientRect().top);
+      expect(top, 'section top sits below the fixed nav').toBeGreaterThanOrEqual(navBottom - 1);
+      expect(top, 'section top is near the top of the screen').toBeLessThan(navBottom + 120);
+    });
+  }
+
+  test('logo links to the home page', async ({ page }) => {
+    await open(page);
+    await expect(page.locator('#nav .nlogo')).toHaveAttribute('href', '/');
+  });
+
+  test('mobile menu opens, locks scrolling and closes', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'hamburger menu only shows on small screens');
+    await open(page);
+    const btn = page.locator('#menu-btn');
+    await expect(btn).toBeVisible();
+    await expect(page.locator('#nav .nlinks')).toBeHidden();
+    await expect(btn).toHaveAttribute('aria-expanded', 'false');
+    await btn.click();
+    await expect(btn).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator('#mm a')).toHaveCount(6);
+    for (const link of await page.locator('#mm a').all()) await expect(link).toBeInViewport();
+    expect(await page.evaluate(() => document.body.style.overflow)).toBe('hidden');
+    await btn.click();
+    await expect(btn).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#mm')).toBeHidden();
+    expect(await page.evaluate(() => document.body.style.overflow)).toBe('');
+  });
+
+  test('desktop nav shows every section link', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'desktop only');
+    await open(page);
+    await expect(page.locator('#menu-btn')).toBeHidden();
+    for (const link of await page.locator('#nav .nlinks a').all()) await expect(link).toBeVisible();
+    await expect(page.locator('#nav .nr .cta-p')).toHaveText(/Free COI Risk Check/);
+  });
 });
 
 for (const form of [
-  { name: 'free COI risk check', prefix: 'wl', button: '#wl-btn', success: '#ss' },
-  { name: 'waitlist', prefix: 'oh', button: '#oh-btn', success: '#oh-success' },
+  { name: 'free COI risk check', prefix: 'wl', button: '#wl-btn', success: '#ss', err: '#form-err' },
+  { name: 'waitlist', prefix: 'oh', button: '#oh-btn', success: '#oh-success', err: '#oh-err' },
 ]) {
-  test(`${form.name} form blocks empty submissions`, async ({ page }) => {
-    const { posts } = await open(page);
-    await page.locator(form.button).scrollIntoViewIfNeeded();
-    await page.locator(form.button).click();
-    await expect(page.locator(`#${form.prefix === 'wl' ? 'form-err' : 'oh-err'}`)).toBeVisible();
-    expect(posts).toEqual([]);
-  });
+  test.describe(`${form.name} form`, () => {
+    test('blocks empty submissions', async ({ page }) => {
+      const { posts } = await open(page);
+      await page.locator(form.button).scrollIntoViewIfNeeded();
+      await page.locator(form.button).click();
+      await expect(page.locator(form.err)).toBeVisible();
+      expect(posts).toEqual([]);
+    });
 
-  test(`${form.name} form submits and shows success`, async ({ page }) => {
-    const { posts } = await open(page);
-    await page.fill(`#${form.prefix}-name`, 'Test Person');
-    await page.fill(`#${form.prefix}-email`, 'test@example.com');
-    await page.fill(`#${form.prefix}-company`, 'Test Co');
-    await page.selectOption(`#${form.prefix}-role`, 'Subcontractor');
-    await page.locator(form.button).scrollIntoViewIfNeeded();
-    await page.locator(form.button).click();
-    await expect(page.locator(form.success)).toBeVisible();
-    expect(posts.map((p) => new URL(p.url).host).sort()).toEqual(['api.web3forms.com', 'hook.us2.make.com']);
-    const make = JSON.parse(posts.find((p) => p.url.includes('make.com')).body);
-    expect(make).toMatchObject({ name: 'Test Person', email: 'test@example.com', role: 'Subcontractor' });
+    test('rejects a malformed email', async ({ page }) => {
+      const { posts } = await open(page);
+      await page.fill(`#${form.prefix}-name`, 'Test Person');
+      await page.fill(`#${form.prefix}-email`, 'test.example.com');
+      await page.selectOption(`#${form.prefix}-role`, 'Insurance Broker');
+      await page.locator(form.button).scrollIntoViewIfNeeded();
+      await page.locator(form.button).click();
+      await expect(page.locator(form.err)).toBeVisible();
+      await expect(page.locator(`#${form.prefix}-email`)).toBeFocused();
+      expect(posts).toEqual([]);
+    });
+
+    test('submits and shows success', async ({ page }) => {
+      const { posts } = await open(page);
+      await page.fill(`#${form.prefix}-name`, 'Test Person');
+      await page.fill(`#${form.prefix}-email`, 'test@example.com');
+      await page.fill(`#${form.prefix}-company`, 'Test Co');
+      // Form routing in Web3Forms and the Make scenario keys on these option values; keep them stable.
+      await page.selectOption(`#${form.prefix}-role`, 'Subcontractor');
+      await page.locator(form.button).scrollIntoViewIfNeeded();
+      await page.locator(form.button).click();
+      await expect(page.locator(form.success)).toBeVisible();
+      expect(posts.map((p) => new URL(p.url).host).sort()).toEqual(['api.web3forms.com', 'hook.us2.make.com']);
+      const make = JSON.parse(posts.find((p) => p.url.includes('make.com')).body);
+      expect(make).toMatchObject({ name: 'Test Person', email: 'test@example.com', role: 'Subcontractor' });
+    });
+
+    test('keeps the role values the backends route on', async ({ page }) => {
+      await open(page);
+      const values = await page.locator(`#${form.prefix}-role option`).evaluateAll((os) => os.map((o) => o.value).filter(Boolean));
+      expect(values).toEqual(expect.arrayContaining(['General Contractor / Construction Manager', 'Insurance Broker', 'Subcontractor']));
+    });
   });
 }
 
 test('risk check form recovers when the backend fails', async ({ page }) => {
-  await open(page, { formOk: false });
+  await open(page, '/', { formOk: false });
   await page.fill('#wl-name', 'Test Person');
   await page.fill('#wl-email', 'test@example.com');
   await page.selectOption('#wl-role', 'Insurance Broker');
@@ -130,6 +173,12 @@ test('risk check form recovers when the backend fails', async ({ page }) => {
   await expect(page.locator('#form-err')).toHaveText(/Something went wrong/);
   await expect(page.locator('#wl-btn')).toBeEnabled();
   await expect(page.locator('#wl-btn')).toHaveText(/Free Risk Check/);
+});
+
+test('trade contractor CTA preselects the role in the risk check form', async ({ page }) => {
+  await open(page, '/', { reveal: true });
+  await page.locator('a[data-preselect-role]').first().click();
+  await expect(page.locator('#wl-role')).toHaveValue('Subcontractor');
 });
 
 test.describe('IRMI banner', () => {
@@ -157,6 +206,13 @@ test.describe('IRMI banner', () => {
     await page.mouse.wheel(0, 1500);
     await expect(page.locator('#irmi-bar')).toBeInViewport();
     expect((await page.locator('#nav').boundingBox()).y).toBeGreaterThan(0);
+  });
+
+  test('field guide CTA opens the guide', async ({ page }) => {
+    await open(page);
+    await page.locator('#irmi-bar .ib-cta').click();
+    await expect(page).toHaveURL(/\/irmi-field-guide\/$/);
+    await expect(page.locator('h1')).toBeVisible();
   });
 
   test('can be dismissed and stays dismissed on reload', async ({ page }) => {

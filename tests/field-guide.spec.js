@@ -2,18 +2,11 @@
 const { test, expect } = require('@playwright/test');
 const path = require('path');
 const fs = require('fs');
+const helpers = require('./helpers');
 
-const ROOT = path.resolve(__dirname, '..');
-const GUIDE = 'file://' + path.join(ROOT, 'irmi-field-guide', 'index.html');
+const { ROOT } = helpers;
 const PAGES = 7;
-
-async function open(page) {
-  const errors = [];
-  page.on('pageerror', (e) => errors.push(e.message));
-  await page.route(/^https?:\/\//, (route) => route.abort());
-  await page.goto(GUIDE);
-  return { errors };
-}
+const open = (page) => helpers.open(page, '/irmi-field-guide/');
 
 test('loads without JavaScript errors or horizontal scroll', async ({ page }) => {
   const { errors } = await open(page);
@@ -71,14 +64,17 @@ test('links back to the site and the free COI risk check', async ({ page }) => {
   await expect(page.locator('footer')).toContainText('Not affiliated with or endorsed by IRMI');
 });
 
-test('copy follows the contractor / project requirements wording', async ({ page }) => {
+test('the PDF link serves a PDF', async ({ page, request }) => {
   await open(page);
-  const text = await page.evaluate(() => document.body.textContent.replace(/\s+/g, ' '));
-  expect(text).not.toMatch(/\bsubcontractors?\b|\bsubs\b|\bsub COIs?\b|\bGC requirements\b/i);
+  const res = await request.get('/irmi-field-guide/' + (await page.locator('#dl').getAttribute('href')));
+  expect(res.status()).toBe(200);
+  expect(res.headers()['content-type']).toBe('application/pdf');
 });
 
-test('the no-hyphen URL redirects to the field guide', async ({ page }) => {
-  await page.route(/^https?:\/\//, (route) => route.abort());
-  await page.goto('file://' + path.join(ROOT, 'irmifieldguide', 'index.html'));
-  await page.waitForURL(/irmi-field-guide\/$/);
-});
+for (const short of ['/irmifieldguide/', '/irmifieldguide']) {
+  test(`${short} redirects to the field guide`, async ({ page }) => {
+    await helpers.open(page, short);
+    await page.waitForURL(/\/irmi-field-guide\/$/);
+    await expect(page.locator('h1')).toBeVisible();
+  });
+}

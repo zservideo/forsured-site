@@ -4,11 +4,14 @@ on:
   pull_request:
   push:
     branches: [main]
+  # Lets anyone re-run the suite on a branch from the Actions tab (for example after
+  # the "Update visual baselines" workflow pushes new screenshots, which does not trigger CI by itself).
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,5 +25,7 @@ jobs:
         if: failure()
         with:
           name: playwright-report
-          path: playwright-report/
+          path: |
+            playwright-report/
+            test-results/
           retention-days: 7

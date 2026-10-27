@@ -1,0 +1,35 @@
+name: Update visual baselines
+
+# Run this from the Actions tab on a branch after an intended design change.
+# It re-takes every screenshot in tests/visual.spec.js on the same Linux runner CI uses,
+# commits the new images to that branch, and the pull request diff shows them for review.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/visual.spec.js --update-snapshots
+      - name: Commit new baselines
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/__screenshots__
+          if git diff --cached --quiet; then
+            echo "Baselines already match."
+            exit 0
+          fi
+          git commit -m "Update visual baselines"
+          git push

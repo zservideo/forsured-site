@@ -2,9 +2,14 @@
   "name": "forsured-site",
   "private": true,
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:visual": "playwright test tests/visual.spec.js",
+    "test:update-visual": "playwright test tests/visual.spec.js --update-snapshots",
+    "report": "playwright show-report",
+    "serve": "node tests/server.js"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.63.0"
   }
 }
