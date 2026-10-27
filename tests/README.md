@@ -2,8 +2,9 @@
 
 Every pull request runs these checks in GitHub Actions (`.github/workflows/test.yml`), and a pull
 request should merge only once they pass. They run in Chromium against a local copy of the site served
-like GitHub Pages (`tests/server.js`). Google Fonts load for real; the form backends (Web3Forms and
-the Make webhook) are stubbed, so no test ever sends a real submission.
+like GitHub Pages (`tests/server.js`). Google Fonts load for real, downloaded once per test worker
+with retries, and the screenshot tests fail with a clear message if any brand font is missing. The
+form backends (Web3Forms and the Make webhook) are stubbed, so no test ever sends a real submission.
 
 CI runs inside Playwright's own Docker image (`mcr.microsoft.com/playwright`), which already has
 Chromium and its system libraries. That skips a browser install that took 2 to 11 minutes per run,
@@ -54,7 +55,8 @@ While working on a change, run the spec files it touches; run everything once be
 Most failures are real problems to fix in the page. A few are guardrails you update deliberately:
 
 - **A design change made the screenshots differ.** Look at the diff in the report (or the
-  `playwright-report` artifact on the failed CI run). If the change is intended, add the
+  `playwright-report` artifact on the CI run, which is kept for every run so a test that only
+  passed on retry can be looked into too). If the change is intended, add the
   `update-baselines` label to the pull request (or run **Update visual baselines** from the
   Actions tab on your branch). It re-takes the screenshots in the same Playwright image CI uses,
   commits them to the branch and runs **Site tests** again. Review the new images in the pull

@@ -1,8 +1,8 @@
 // Shared helpers for the forsured.ai test suite.
 // Pages are served by tests/server.js (see playwright.config.js), so links and
-// redirects behave like GitHub Pages. Google Fonts load for real; every other
-// outside request is blocked, and the form backends are stubbed so tests never
-// send real submissions to Web3Forms or the Make webhook.
+// redirects behave like GitHub Pages. Google Fonts load for real (each file once per
+// test worker, see fontResponse); every other outside request is blocked, and the form
+// backends are stubbed so tests never send real submissions to Web3Forms or the Make webhook.
 const fs = require('fs');
 const path = require('path');
 
@@ -23,6 +23,38 @@ const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)[:/]/;
 
 function read(file) {
   return fs.readFileSync(path.join(ROOT, file), 'utf8');
+}
+
+// Google Fonts responses, kept for the life of a test worker. Every test still renders with
+// the real brand fonts, but each file is downloaded once per worker instead of once per test,
+// and a failed download is retried instead of leaving a page drawn in fallback fonts.
+const fontCache = new Map();
+function fontResponse(route) {
+  const req = route.request();
+  const key = `${req.url()} ${req.headers()['user-agent'] || ''}`;
+  if (!fontCache.has(key)) {
+    const download = (async () => {
+      let lastError;
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const res = await route.fetch({ timeout: 15000 });
+          if (res.ok()) {
+            const headers = { ...res.headers() };
+            delete headers['content-encoding']; // the body below is already decoded
+            delete headers['content-length'];
+            return { status: res.status(), headers, body: await res.body() };
+          }
+          lastError = new Error(`HTTP ${res.status()}`);
+        } catch (e) {
+          lastError = e;
+        }
+      }
+      throw new Error(`Google Fonts download failed 3 times: ${req.url()} (${lastError.message})`);
+    })();
+    download.catch(() => fontCache.delete(key)); // let a later test try again
+    fontCache.set(key, download);
+  }
+  return fontCache.get(key);
 }
 
 /**
@@ -49,7 +81,8 @@ async function open(page, url = '/', { formOk = true, fonts = true, reveal = fal
         posts.push({ url: u, body: req.postData() });
         return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ success: formOk }) });
       }
-      if (fonts && FONT_HOST.test(u)) return route.continue();
+      // A font that can't be downloaded is aborted, so checks see it as failed rather than waiting.
+      if (fonts && FONT_HOST.test(u)) return fontResponse(route).then((r) => route.fulfill(r), () => route.abort());
       if (!FONT_HOST.test(u)) blocked.push(u);
       return route.abort();
     }

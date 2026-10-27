@@ -15,9 +15,17 @@ const HIDE_FIXED = '#irmi-bar, #nav { visibility: hidden !important; }';
 async function ready(page, url) {
   await open(page, url, { reveal: true, freeze: true });
   await loadImages(page);
-  // A missing web font would make every shot differ; fail with a clear message instead.
-  const fonts = await page.evaluate(() => [...new Set([...document.fonts].filter((f) => f.status === 'loaded').map((f) => f.family.replace(/["']/g, '')))]);
-  expect(fonts, 'brand web fonts loaded from Google Fonts').toEqual(expect.arrayContaining(['Inter', 'Chakra Petch']));
+  // A missing web font would make the shots differ; fail with a clear message instead.
+  const fonts = await page.evaluate(async () => {
+    await document.fonts.ready;
+    const faces = [...document.fonts];
+    return {
+      loaded: [...new Set(faces.filter((f) => f.status === 'loaded').map((f) => f.family.replace(/["']/g, '')))],
+      failed: faces.filter((f) => f.status === 'error').map((f) => `${f.family} ${f.weight}`),
+    };
+  });
+  expect(fonts.failed, 'no brand font failed to download').toEqual([]);
+  expect(fonts.loaded, 'brand web fonts loaded from Google Fonts').toEqual(expect.arrayContaining(['Inter', 'Chakra Petch', 'JetBrains Mono']));
   // The "how it works" steps animate on a timer; pin them to their first state.
   await page.evaluate(() => {
     document.querySelectorAll('.sg-item').forEach((s, i) => {

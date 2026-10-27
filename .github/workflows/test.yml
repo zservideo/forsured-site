@@ -30,11 +30,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright test
+      # Kept on every finished run, not only failures: a test that fails and then passes on retry
+      # ("flaky") still passes the run, and the report holds its screenshots and diff to fix it.
       - uses: actions/upload-artifact@v4
-        if: failure()
+        if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: |
-            playwright-report/
-            test-results/
+          path: playwright-report/
           retention-days: 7
