@@ -10,9 +10,17 @@ const ROOT = path.resolve(__dirname, '..');
 
 // Every public HTML page. Add new pages here so copy, brand, SEO, a11y and
 // layout checks cover them automatically.
+// Blog posts are added automatically from content/blog (see tools/blog/build.js).
+const POSTS = fs
+  .readdirSync(path.join(ROOT, 'content', 'blog'))
+  .filter((f) => f.endsWith('.md') && f !== 'README.md')
+  .map((f) => f.replace(/\.md$/, ''))
+  .filter((slug) => fs.existsSync(path.join(ROOT, 'blog', slug, 'index.html')));
 const PAGES = [
   { name: 'home', url: '/', file: 'index.html' },
   { name: 'field guide', url: '/irmi-field-guide/', file: 'irmi-field-guide/index.html' },
+  { name: 'blog', url: '/blog/', file: 'blog/index.html' },
+  ...POSTS.map((slug) => ({ name: `post ${slug}`, url: `/blog/${slug}/`, file: `blog/${slug}/index.html`, post: true })),
 ];
 
 const BRAND = require('./brand.json');
@@ -170,4 +178,4 @@ function onBrand(rgb) {
   );
 }
 
-module.exports = { ROOT, PAGES, BRAND, open, settle, loadImages, pageCopy, parseColor, onBrand, hex, read };
+module.exports = { ROOT, PAGES, POSTS, BRAND, open, settle, loadImages, pageCopy, parseColor, onBrand, hex, read };
