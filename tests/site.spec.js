@@ -97,7 +97,7 @@ test.describe('navigation', () => {
     await expect(btn).toHaveAttribute('aria-expanded', 'false');
     await btn.click();
     await expect(btn).toHaveAttribute('aria-expanded', 'true');
-    await expect(page.locator('#mm a')).toHaveCount(6);
+    await expect(page.locator('#mm a')).toHaveCount(7);
     for (const link of await page.locator('#mm a').all()) await expect(link).toBeInViewport();
     expect(await page.evaluate(() => document.body.style.overflow)).toBe('hidden');
     await btn.click();

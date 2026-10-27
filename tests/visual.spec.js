@@ -95,3 +95,18 @@ test.describe('field guide', () => {
     await expect(page.locator('.band')).toHaveScreenshot('field-guide-cta.png');
   });
 });
+
+// One fixed post stands in for the shared post template. The blog index is left out on purpose:
+// it changes with every new post, which would mean new baselines every day.
+test.describe('blog post', () => {
+  test('first screen', async ({ page }) => {
+    await ready(page, '/blog/compliance-isnt-coverage/');
+    await expect(page).toHaveScreenshot('blog-post-first-screen.png');
+  });
+
+  test('sources, call to action and footer', async ({ page }) => {
+    await ready(page, '/blog/compliance-isnt-coverage/');
+    await page.addStyleTag({ content: 'nav, .more { visibility: hidden !important; }' });
+    await expect(page.locator('.band')).toHaveScreenshot('blog-post-cta.png');
+  });
+});

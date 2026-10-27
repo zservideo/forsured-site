@@ -6,7 +6,8 @@ const path = require('path');
 const { ROOT, PAGES, open, read } = require('./helpers');
 
 // Bytes served from forsured.ai on first load, before any scrolling (fonts not counted).
-const LOAD_BUDGET = { home: 650 * 1024, 'field guide': 2.6 * 1024 * 1024 };
+// Blog posts share one budget: text, one share image on the index, no other images.
+const LOAD_BUDGET = { home: 650 * 1024, 'field guide': 2.6 * 1024 * 1024, blog: 250 * 1024, post: 150 * 1024 };
 const HTML_BUDGET = 200 * 1024;
 const IMAGE_BUDGET = 450 * 1024;
 const PDF_BUDGET = 3 * 1024 * 1024;
@@ -24,7 +25,7 @@ for (const p of PAGES) {
       await page.waitForTimeout(1000);
       const total = bytes.reduce((sum, [, b]) => sum + b, 0);
       const detail = bytes.sort((a, b) => b[1] - a[1]).map(([u, b]) => `${Math.round(b / 1024)}KB ${new URL(u).pathname}`).join(', ');
-      expect(total, `loaded ${Math.round(total / 1024)}KB: ${detail}`).toBeLessThanOrEqual(LOAD_BUDGET[p.name]);
+      expect(total, `loaded ${Math.round(total / 1024)}KB: ${detail}`).toBeLessThanOrEqual(LOAD_BUDGET[p.post ? 'post' : p.name]);
     });
 
     test('layout does not jump while the page loads', async ({ page }) => {
