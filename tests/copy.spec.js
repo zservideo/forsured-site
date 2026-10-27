@@ -101,7 +101,9 @@ test('primary calls to action use the free COI risk check offer', async ({ page 
   await expect(page.locator('#demo')).toContainText(/project's requirements/);
 });
 
-test('showcase is labeled as sample data', async ({ page }) => {
+test('product screens are labeled as sample data', async ({ page }) => {
   await open(page, '/', { fonts: false });
-  await expect(page.locator('#product figcaption')).toHaveText(/Sample data\. Companies, people and projects shown are fictional\./);
+  for (const fig of ['.hero figcaption', '#product figcaption']) {
+    await expect(page.locator(fig), fig).toHaveText(/Sample data\. Companies, people and projects shown are fictional\./);
+  }
 });

@@ -22,7 +22,7 @@ test('has no horizontal scroll', async ({ page }) => {
 
 test('hero carries the current headline and CTA', async ({ page }) => {
   await open(page);
-  await expect(page.locator('h1')).toHaveText("Catch the gap before it's a jobsite problem.");
+  await expect(page.locator('h1')).toHaveText('Catch the gap before it’s a jobsite problem.');
   await expect(page.locator('.hero .cta-p')).toHaveText(/Free COI Risk Check/);
   await expect(page.locator('.hero .cta-p')).toHaveAttribute('href', '#demo');
 });

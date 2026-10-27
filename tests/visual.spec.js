@@ -12,11 +12,13 @@ const { open, loadImages } = require('./helpers');
 // Hide the fixed banner and nav in section shots so they do not float over the section.
 const HIDE_FIXED = '#irmi-bar, #nav { visibility: hidden !important; }';
 
-async function ready(page, url) {
+const FONTS = ['Inter', 'Chakra Petch', 'JetBrains Mono'];
+
+async function ready(page, url, fonts = FONTS) {
   await open(page, url, { reveal: true, freeze: true });
   await loadImages(page);
   // A missing web font would make the shots differ; fail with a clear message instead.
-  const fonts = await page.evaluate(async () => {
+  const faces = await page.evaluate(async () => {
     await document.fonts.ready;
     const faces = [...document.fonts];
     return {
@@ -24,8 +26,8 @@ async function ready(page, url) {
       failed: faces.filter((f) => f.status === 'error').map((f) => `${f.family} ${f.weight}`),
     };
   });
-  expect(fonts.failed, 'no brand font failed to download').toEqual([]);
-  expect(fonts.loaded, 'brand web fonts loaded from Google Fonts').toEqual(expect.arrayContaining(['Inter', 'Chakra Petch', 'JetBrains Mono']));
+  expect(faces.failed, 'no brand font failed to download').toEqual([]);
+  expect(faces.loaded, 'brand web fonts loaded from Google Fonts').toEqual(expect.arrayContaining(fonts));
   // The "how it works" steps animate on a timer; pin them to their first state.
   await page.evaluate(() => {
     document.querySelectorAll('.sg-item').forEach((s, i) => {
@@ -35,14 +37,18 @@ async function ready(page, url) {
   });
 }
 
+// The home page also sets its headlines in Roboto Serif, as the app does.
+const HOME_FONTS = [...FONTS, 'Roboto Serif'];
+
 test.describe('home', () => {
   test('first screen', async ({ page }) => {
-    await ready(page, '/');
+    await ready(page, '/', HOME_FONTS);
     await page.evaluate(() => window.scrollTo(0, 0));
     await expect(page).toHaveScreenshot('home-first-screen.png');
   });
 
   const SECTIONS = [
+    ['hero', '.hero'],
     ['product-showcase', '#product'],
     ['problem', '.prob-sec'],
     ['platform', '#platform'],
@@ -54,7 +60,7 @@ test.describe('home', () => {
   ];
   for (const [name, selector] of SECTIONS) {
     test(name, async ({ page }) => {
-      await ready(page, '/');
+      await ready(page, '/', HOME_FONTS);
       await page.addStyleTag({ content: HIDE_FIXED });
       await expect(page.locator(selector)).toHaveScreenshot(`home-${name}.png`);
     });
@@ -62,13 +68,13 @@ test.describe('home', () => {
 
   test('mobile menu open', async ({ page, isMobile }) => {
     test.skip(!isMobile, 'hamburger menu only on phones');
-    await ready(page, '/');
+    await ready(page, '/', HOME_FONTS);
     await page.locator('#menu-btn').click();
     await expect(page).toHaveScreenshot('home-mobile-menu.png');
   });
 
   test('risk check form after a successful submit', async ({ page }) => {
-    await ready(page, '/');
+    await ready(page, '/', HOME_FONTS);
     await page.fill('#wl-name', 'Test Person');
     await page.fill('#wl-email', 'test@example.com');
     await page.selectOption('#wl-role', 'Insurance Broker');

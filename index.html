@@ -214,7 +214,7 @@
 <!-- NOTE: Add /og-image.png (1200x630px) to repo root for link previews to work on Slack, iMessage, LinkedIn etc. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700;800&family=Roboto+Serif:opsz,wght@36,500&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -231,7 +231,7 @@ img{max-width:100%;display:block;height:auto}
 button{font-family:inherit}
 .edge{max-width:1200px;margin:0 auto;padding:0 40px}
 section{padding:80px 0;scroll-margin-top:60px}
-.h1{font-size:clamp(34px,4vw,54px);font-weight:800;letter-spacing:-.035em;line-height:1.08}
+.h1{font-family:'Roboto Serif',Georgia,serif;font-size:clamp(38px,4.3vw,58px);font-weight:500;letter-spacing:-.022em;line-height:1.08;text-wrap:balance}
 .h2{font-size:clamp(28px,3.2vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
 .accent{color:var(--f)}
 .sub{font-size:17px;line-height:1.65;color:var(--mt);max-width:500px}
@@ -261,74 +261,48 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .mmenu .mm-cta{margin-top:20px}
 .mmenu .cta-p{color:#fff!important}
 
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:.85fr 1.15fr;grid-template-rows:1fr auto auto;gap:48px;align-items:center;align-content:space-between;padding-top:60px;position:relative}
-.hero-bg{position:absolute;inset:0;pointer-events:none;background:linear-gradient(160deg,#fff 20%,#FFF5F0 42%,#FFEEE5 58%,#fff 78%)}
-.hero-left{position:relative;z-index:1;padding-left:max(40px,calc((100vw - 1200px)/2 + 40px));padding-right:20px}
-.hero-pill{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 9px;border-radius:50px;background:var(--fg);border:1px solid var(--fb);margin-bottom:20px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--f);letter-spacing:.04em;text-transform:uppercase}
-.hp-dot{width:7px;height:7px;border-radius:50%;background:var(--f);animation:blink 2s ease-in-out infinite;flex-shrink:0}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{margin-bottom:14px}
-.hero .sub{margin-bottom:24px;font-size:16px}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.7)}
-.hs{padding:14px 14px;border-right:1px solid var(--bdr);background:rgba(255,255,255,.5);display:flex;flex-direction:column;gap:4px}
-.hs:last-child{border-right:none}
-.hs-v{font-size:20px;font-weight:900;letter-spacing:-.04em;background:linear-gradient(135deg,var(--f),var(--fl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
-.hs-l{font-size:9px;color:var(--dm);line-height:1.35;font-weight:500}
-.hero-stats.truths{grid-template-columns:repeat(4,minmax(0,1fr));grid-column:1/-1;grid-row:2;margin:0 max(40px,calc((100vw - 1200px)/2 + 40px));max-width:1200px;position:relative;z-index:1}
-.hero-stats.truths .hs{min-width:0;padding:18px 20px;justify-content:flex-start;gap:5px}
-.hero-stats.truths .hs-v{font-size:14px;letter-spacing:-.015em;line-height:1.3}
-.hero-stats.truths .hs-l{font-size:11px;line-height:1.5;color:var(--mt)}
-.hero-right{position:relative;z-index:1;padding-right:max(20px,calc((100vw - 1200px)/2 + 20px))}
-.hmock{width:100%;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.08);background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.06),0 40px 80px rgba(0,0,0,.07)}
-.hml{display:grid;grid-template-columns:140px 1fr;min-height:420px}
-.hm-s{background:#FAFBFA;border-right:1px solid var(--bdr);padding:16px 12px;display:flex;flex-direction:column}
-.hm-s-logo{font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:800;margin-bottom:18px;color:var(--tx)}
-.hm-ni{display:flex;align-items:center;gap:7px;padding:7px 9px;border-radius:6px;font-size:11px;font-weight:500;color:var(--dm);margin-bottom:2px}
-.hm-ni.on{background:var(--fg);color:var(--f);font-weight:600}
-.hm-ni svg{width:14px;height:14px;flex-shrink:0}
-.hm-s-u{margin-top:auto;display:flex;align-items:center;gap:6px;padding:6px}
-.hm-s-av{width:22px;height:22px;border-radius:50%;background:#FFF0EA;border:1.5px solid var(--fb);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:var(--f);flex-shrink:0}
-.hm-m{background:var(--s1);padding:16px;overflow:hidden}
-.hm-hdr{background:linear-gradient(135deg,#B03B15,#E5612A 55%,#C44D1E);border-radius:9px;padding:14px 16px;margin-bottom:14px;color:#fff;position:relative;overflow:hidden}
-.hm-hdr::before{content:'';position:absolute;inset:0;opacity:.05;background-image:repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 50%);background-size:9px 9px}
-.hm-hdr h3{font-size:13px;font-weight:700;position:relative}
-.hm-hdr p{font-size:9px;opacity:.7;position:relative;margin-top:2px}
-.hm-ov{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:12px}
-.hm-oc{background:#fff;border:1px solid var(--bdr);border-radius:8px;padding:10px 12px}
-.hm-oc-i{width:24px;height:24px;border-radius:6px;margin-bottom:5px;display:flex;align-items:center;justify-content:center}
-.hm-oc-i.g{background:#E8F5EE}.hm-oc-i.o{background:#FFF0EA}.hm-oc-i.b{background:#EBF2FF}
-.hm-oc-lb{font-size:9px;color:var(--dm);margin-bottom:2px}
-.hm-oc-v{font-size:20px;font-weight:800;letter-spacing:-.02em}
-.hm-risk{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}
-.hm-rc{background:#fff;border:1px solid var(--bdr);border-radius:8px;padding:10px 12px}
-.hm-rc-lb{font-size:9px;color:var(--dm);margin-bottom:2px}
-.hm-rc-v{font-size:18px;font-weight:800}
-.hm-rc-bar{height:3px;border-radius:2px;margin-top:5px;background:var(--s2)}
-.hm-rc-fill{height:100%;border-radius:2px}
-.hm-tl{font-size:9px;font-weight:700;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center}
-.hm-tl span{font-size:8px;color:var(--f);background:var(--fg);padding:2px 6px;border-radius:3px}
-.hm-r{display:grid;grid-template-columns:1.4fr .8fr 1fr;gap:4px;padding:7px 0;border-bottom:1px solid var(--bdr);font-size:10px;align-items:center}
-.hm-r:last-child{border-bottom:none}
-.hm-r-n{font-weight:600}
-.sd{width:5px;height:5px;border-radius:50%;display:inline-block;margin-right:3px}
+/* HERO: the headline beside a project screen from the app (sample data), on the app's warm neutral */
+.hero{position:relative;padding:132px 0 96px;background:linear-gradient(180deg,#FBF8F3 0%,#FBF8F3 70%,var(--bg) 100%)}
+.hero-in{max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:72px;align-items:center}
+.hero-kicker{font-size:14px;font-weight:500;color:#6B6055;margin-bottom:18px}
+.hero h1{margin-bottom:20px}
+.hero .sub{font-size:18px;line-height:1.6;max-width:470px;margin-bottom:32px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.hero-fig{margin:0;min-width:0}
+.hero-cap{margin-top:12px;font-size:12px;color:var(--dm)}
 
-/* SPARKLE */
-.sparkle-wrap{position:relative;display:inline-block}
-.sparkle{position:absolute;pointer-events:none}
-.sparkle::before{content:'✦';position:absolute;font-size:7px;color:#16864E;animation:spark 1.8s ease-in-out infinite;opacity:0}
-.sparkle:nth-child(1){top:-7px;right:-9px}.sparkle:nth-child(1)::before{animation-delay:0s}
-.sparkle:nth-child(2){top:1px;right:-13px}.sparkle:nth-child(2)::before{animation-delay:.45s;font-size:5px;color:#22C55E}
-.sparkle:nth-child(3){top:-10px;right:1px}.sparkle:nth-child(3)::before{animation-delay:.9s;font-size:4px}
-.sparkle:nth-child(4){top:7px;right:-7px}.sparkle:nth-child(4)::before{animation-delay:1.35s;font-size:6px}
-@keyframes spark{0%,100%{opacity:0;transform:scale(.4) translateY(0)}40%{opacity:1;transform:scale(1.2) translateY(-4px)}70%{opacity:.5;transform:scale(.9) translateY(-6px)}}
+/* Project screen, drawn from Forsured Flows tokens */
+.hero-app{background:#FDFCFA;border:1px solid #E8DCCB;border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(20,28,37,.04),0 28px 56px -28px rgba(42,38,35,.22)}
+.ha-band{height:60px;display:flex;align-items:center;padding:0 16px;background:#D54E21 url(assets/hero/band.jpg) center/cover}
+.ha-org{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:5px 14px 5px 5px;font-size:13px;font-weight:600;color:#141C25;box-shadow:0 1px 2px rgba(20,28,37,.08)}
+.ha-av{width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;flex:none;font-size:10px;font-weight:600;color:#fff;background:#2F7D6A}
+.ha-av.c2{background:#B5633B}
+.ha-live{width:6px;height:6px;border-radius:50%;background:#10B978;margin-left:4px}
+.ha-body{padding:22px 22px 20px}
+.ha-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px}
+.ha-title{font-family:'Roboto Serif',Georgia,serif;font-size:24px;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#141C25}
+.ha-owner{margin-top:4px;font-size:13px;color:#637083}
+.ha-score{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #E8DCCB;border-radius:12px;padding:9px 16px 9px 9px}
+.ha-ring{width:50px;height:50px;border-radius:50%;flex:none;display:grid;place-items:center;background:conic-gradient(#10B978 88%,#F2F4F7 0)}
+.ha-ring span{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;color:#141C25}
+.ha-st b{display:block;font-size:13px;font-weight:600;color:#D54E21;line-height:1.35}
+.ha-st span{display:block;font-size:12.5px;color:#344051;line-height:1.4}
+.ha-list{margin-top:18px;background:#fff;border:1px solid #E8DCCB;border-radius:12px}
+.ha-row{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 14px}
+.ha-row+.ha-row{border-top:1px solid #EFE6DA}
+.ha-ic{width:32px;height:32px;border-radius:8px;background:#F7F2EB;border:1px solid #D9C9B6;display:grid;place-items:center}
+.ha-ic svg{width:16px;height:16px;fill:none;stroke:#2A2623;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ha-name{display:block;font-size:14px;font-weight:600;color:#141C25;line-height:1.35}
+.ha-note{display:block;font-size:12.5px;color:#637083;line-height:1.4}
+.ha-note.x{color:#C42D2D}
+.ha-chip{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:3px 8px;white-space:nowrap}
+.ha-chip.ok{background:#E7F8F1;color:#0A7D52}
+.ha-chip.gap{background:#FFECEB;color:#C42D2D}
+.ha-chip.p{background:#FFE3D4;color:#C44D1E;text-transform:none;letter-spacing:0}
+.ha-foot{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:#344051}
+.ha-foot .ha-chip{margin-left:auto}
+.ha-who b{font-weight:600;color:#141C25}
 
-.hero-mq{grid-column:1/-1;grid-row:3;border-top:1px solid var(--bdr);padding:11px 0;overflow:hidden;background:rgba(250,251,250,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin:0;min-width:0}
-.mqt{display:flex;white-space:nowrap;width:max-content;animation:mqs 42s linear infinite}
-@keyframes mqs{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.mqi{display:inline-flex;align-items:center;gap:9px;padding:0 32px;font-size:13px;font-weight:500;color:var(--mt);flex-shrink:0;user-select:none}
-.mq-spacer{display:none}
 
 /* CHAOS VISUAL — tilted collage */
 .chaos-visual{position:relative;height:210px;background:#E8E3DF;border:1px solid rgba(196,41,28,.1);border-radius:10px;overflow:hidden;}
@@ -565,7 +539,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 .wl-sub:disabled{opacity:.7;cursor:not-allowed;transform:none}
 
 /* PRINT */
-@media print{nav,.hero-mq,.mmenu,footer{display:none}section{padding:20px 0}body{color:#000}}
+@media print{nav,.mmenu,footer{display:none}section{padding:20px 0}body{color:#000}}
 
 /* NAV: collapse links before they collide with logo and CTA */
 @media(max-width:980px){
@@ -577,14 +551,8 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 /* TABLET */
 @media(max-width:1100px){
   .edge{padding:0 32px}
-  .hero{grid-template-columns:1fr;grid-template-rows:auto;min-height:auto;padding:80px 0 0;gap:32px}
-  .hero-left{padding:0 32px!important;order:1}
-  .hero-right{padding:0 32px!important;order:2}
-  .hero-stats.truths{order:3;grid-row:auto;grid-column:1;margin:0 32px;grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-stats.truths .hs:nth-child(n){border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
-  .hero-stats.truths .hs:nth-child(2n){border-right:none}
-  .hero-stats.truths .hs:nth-child(n+3){border-bottom:none}
-  .hero-mq{margin:0;order:4;grid-row:auto}
+  .hero{padding:116px 0 72px}
+  .hero-in{gap:40px;padding:0 32px}
   .plat-grid,.plat-grid.five{grid-template-columns:repeat(2,minmax(0,1fr))}
   .plat-item:nth-child(n){border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
   .plat-item:nth-child(2n){border-right:none}
@@ -604,6 +572,12 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .cmp-table td{padding:10px 12px;font-size:12px}
 }
 
+/* HERO: stack the copy above the project screen */
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr;gap:48px}
+  .hero-copy,.hero-fig{max-width:640px}
+}
+
 /* SOLUTIONS: stack to one column before three columns get cramped */
 @media(max-width:1024px){
   .sol-grid{grid-template-columns:1fr}
@@ -621,27 +595,22 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .nr .cta-p{display:none}
   .mtog{display:block}
   .mmenu{top:56px}
-  .hero{padding:68px 0 0;display:flex;flex-direction:column;min-height:auto;gap:0}
-  .hero-left{padding:0 20px!important;order:1}
-  .hero-right{padding:0 20px!important;order:2;margin-top:24px}
-  .hero-stats.truths{order:3;margin:24px 20px 0}
-  .hero-mq{order:4;margin:24px 0 0;align-self:stretch;width:100%}
-  .hmock{max-width:none;width:calc(100% + 40px);margin-left:-20px;margin-right:-20px;border-radius:0;border-left:none;border-right:none}
-  .hml{grid-template-columns:90px 1fr;min-height:320px}
-  .hm-s{display:flex;padding:12px 8px}
-  .hm-s-logo{font-size:10px;margin-bottom:10px}
-  .hm-ni{padding:5px 6px;font-size:9px;gap:5px}
-  .hm-ni svg{width:10px;height:10px}
-  .hm-s-u{padding:3px}
-  .hm-ov{grid-template-columns:repeat(2,1fr);gap:5px}
+  .hero{padding:84px 0 56px}
+  .hero-in{padding:0 20px;gap:36px}
+  .hero-kicker{font-size:13px;margin-bottom:12px}
+  .h1{font-size:clamp(32px,8.8vw,40px)}
+  .hero h1{margin-bottom:16px}
+  .hero .sub{font-size:16px;margin-bottom:24px}
   .hero-btns{flex-direction:column}
   .hero-btns .cta-p,.hero-btns .cta-g{width:100%;justify-content:center}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;border-radius:10px;margin-top:20px}
-  .hs{border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:12px 10px}
-  .hs:nth-child(2n){border-right:none}
-  .hs:nth-child(n+3){border-bottom:none}
-  .hs-v{font-size:17px}
-  .hs-l{font-size:9px}
+  .ha-band{height:48px;padding:0 12px}
+  .ha-body{padding:16px 14px 14px}
+  .ha-title{font-size:21px}
+  .ha-score{flex:1 1 100%}
+  .ha-list{margin-top:14px}
+  .ha-row{grid-template-columns:30px minmax(0,1fr) auto;gap:10px;padding:11px 12px}
+  .ha-ic{width:30px;height:30px}
+  .ha-foot{margin-top:14px;font-size:12.5px}
   .reactive-banner{grid-template-columns:1fr 1fr}
   .rb-stat{border-right:1px solid rgba(229,97,42,.15);border-bottom:none;padding:14px 14px}
   .rb-stat:nth-child(2n){border-right:none}
@@ -679,8 +648,6 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 @media(max-width:480px){
   .fgrid{grid-template-columns:1fr}
   .cf-sms-bubble{white-space:normal;max-width:190px}
-  .hm-ov{grid-template-columns:1fr 1fr}
-  .hero-stats{grid-template-columns:1fr 1fr}
   .reactive-banner{grid-template-columns:1fr}
   .rb-stat{border-right:none!important;border-bottom:1px solid rgba(229,97,42,.15)}
   .rb-stat:last-child{grid-column:auto;border-top:none}
@@ -689,7 +656,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 
 /* SMALL SCREENS: comfortable tap targets, stat labels that wrap instead of overflowing */
 @media(max-width:768px){.cta-p,.cta-g,.wl-sub{min-height:44px}.mtog{padding:11px 12px}}
-@media(max-width:420px){.hero-stats.truths .hs{padding:14px 12px}}
+@media(max-width:380px){.ha-row{grid-template-columns:minmax(0,1fr) auto}.ha-ic{display:none}}
 
 /* PRODUCT SHOWCASE */
 .show-sec{background:linear-gradient(180deg,var(--bg),#FBF8F3 40%,var(--bg))}
@@ -770,58 +737,37 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
 <main id="main-content">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-left">
-    <div class="hero-pill"><span class="hp-dot" aria-hidden="true"></span>Continuous contractor insurance compliance</div>
-    <h1 class="h1">Catch the gap <span class="accent">before it's a jobsite problem.</span></h1>
-    <p class="sub">Forsured checks every contractor COI against your project requirements, flags coverage gaps, brings brokers into the fix, and keeps every project continuously compliant, without chasing PDFs across email and spreadsheets.</p>
-    <div class="hero-btns">
-      <a href="#demo" class="cta-p">Free COI Risk Check →</a>
-      <a href="#platform" class="cta-g">See How Forsured Works</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hmock" role="img" aria-label="Forsured broker dashboard">
-      <div class="hml">
-        <div class="hm-s">
-          <div class="hm-s-logo">Forsured</div>
-          <div class="hm-ni on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</div>
-          <div class="hm-ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clients</div>
-          <div class="hm-ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>Projects</div>
-          <div class="hm-ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg>Team</div>
-          <div class="hm-ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documents</div>
-          <div class="hm-s-u"><div class="hm-s-av">JW</div><div><div style="font-size:9px;font-weight:600">Jennifer Walsh</div><div style="font-size:8px;color:var(--dm)">Beacon Risk · Broker</div></div></div>
-        </div>
-        <div class="hm-m">
-          <div class="hm-hdr"><h3>Broker Dashboard</h3><p>Compliance and task management</p></div>
-          <div class="hm-ov">
-            <div class="hm-oc"><div class="hm-oc-i g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gr)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="hm-oc-lb">Compliant</div><div class="hm-oc-v" style="color:var(--gr)">50%</div></div>
-            <div class="hm-oc"><div class="hm-oc-i o"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--f)" stroke-width="2.5" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></div><div class="hm-oc-lb">Expiring</div><div class="hm-oc-v">0</div></div>
-            <div class="hm-oc"><div class="hm-oc-i b"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg></div><div class="hm-oc-lb">Projects</div><div class="hm-oc-v">0</div></div>
-            <div class="hm-oc"><div class="hm-oc-i g"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16864E" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="hm-oc-lb">Score</div><div class="sparkle-wrap"><div class="hm-oc-v" style="color:#16864E">88</div><span class="sparkle"></span><span class="sparkle"></span><span class="sparkle"></span><span class="sparkle"></span></div></div>
-          </div>
-          <div class="hm-risk">
-            <div class="hm-rc"><div class="hm-rc-lb">Compliant</div><div class="hm-rc-v" style="color:var(--gr)">2</div><div class="hm-rc-bar"><div class="hm-rc-fill" style="width:90%;background:var(--gr)"></div></div></div>
-            <div class="hm-rc"><div class="hm-rc-lb">Warning</div><div class="hm-rc-v" style="color:var(--yl)">2</div><div class="hm-rc-bar"><div class="hm-rc-fill" style="width:50%;background:var(--yl)"></div></div></div>
-            <div class="hm-rc"><div class="hm-rc-lb">Critical</div><div class="hm-rc-v" style="color:var(--rd)">0</div><div class="hm-rc-bar"></div></div>
-          </div>
-          <div class="hm-tl"><span style="color:var(--tx);font-weight:700">Key Clients</span><span>View all</span></div>
-          <div class="hm-r"><div class="hm-r-n">Harbor Electrical</div><div><span class="sd" style="background:var(--yl)"></span>Medium</div><div style="color:var(--dm)">4 Sep 2026</div></div>
-          <div class="hm-r"><div class="hm-r-n">Northstar Mechanical</div><div><span class="sd" style="background:var(--gr)"></span>Low</div><div style="color:var(--dm)">11 Sep 2026</div></div>
-          <div class="hm-r"><div class="hm-r-n">Atlantic Plumbing</div><div><span class="sd" style="background:var(--gr)"></span>Low</div><div style="color:var(--dm)">18 Sep 2026</div></div>
-          <div class="hm-r" style="border:none"><div class="hm-r-n">Summit Concrete</div><div><span class="sd" style="background:var(--gr)"></span>Low</div><div style="color:var(--dm)">2 Oct 2026</div></div>
-        </div>
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <div class="hero-copy">
+      <p class="hero-kicker">Continuous contractor insurance compliance</p>
+      <h1 class="h1" id="hero-h">Catch the gap before it’s a jobsite problem.</h1>
+      <p class="sub">Forsured checks every contractor COI against your project requirements, flags coverage gaps, brings the broker into the fix, and keeps watching after approval.</p>
+      <div class="hero-btns">
+        <a href="#demo" class="cta-p">Free COI Risk Check →</a>
+        <a href="#platform" class="cta-g">See How Forsured Works</a>
       </div>
     </div>
+    <figure class="hero-fig">
+      <div class="hero-app" role="img" aria-label="A Forsured project screen with sample data. Riverside Medical Pavilion is at 88%, with 15 of 17 requirements met. Two gaps are flagged: the umbrella aggregate is $4M of the $5M required, and the additional insured endorsement for ongoing operations (CG 20 10) is missing. The broker is fixing both.">
+        <div class="ha-band"><span class="ha-org"><span class="ha-av">N</span>Northgate Electric Co.<span class="ha-live"></span></span></div>
+        <div class="ha-body">
+          <div class="ha-head">
+            <div><div class="ha-title">Riverside Medical Pavilion</div><div class="ha-owner">Project owner: Harborview Builders</div></div>
+            <div class="ha-score"><div class="ha-ring"><span>88%</span></div><div class="ha-st"><b>Under review</b><span>15 of 17 requirements met</span></div></div>
+          </div>
+          <div class="ha-list">
+            <div class="ha-row"><span class="ha-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span><span class="ha-name">General Liability</span><span class="ha-note">2/2 requirements met</span></span><span class="ha-chip ok">Met</span></div>
+            <div class="ha-row"><span class="ha-ic"><svg viewBox="0 0 24 24"><path d="M10 10V5a1 1 0 011-1h2a1 1 0 011 1v5"/><path d="M14 6a6 6 0 016 6v3"/><path d="M4 15v-3a6 6 0 016-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></svg></span><span><span class="ha-name">Workers’ Compensation</span><span class="ha-note">4/4 requirements met</span></span><span class="ha-chip ok">Met</span></div>
+            <div class="ha-row"><span class="ha-ic"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 00-20 0z"/><path d="M12 12v8a2 2 0 004 0"/><path d="M12 2v1"/></svg></span><span><span class="ha-name">Umbrella / Excess</span><span class="ha-note x">Aggregate $4M of $5M required</span></span><span class="ha-chip gap">Gap</span></div>
+            <div class="ha-row"><span class="ha-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span><span class="ha-name">Endorsements</span><span class="ha-note x">Additional insured, ongoing ops (CG&nbsp;20&nbsp;10) missing</span></span><span class="ha-chip gap">Gap</span></div>
+          </div>
+          <div class="ha-foot"><span class="ha-av c2">EC</span><span class="ha-who"><b>Erin Cole</b>, Summit Ridge Insurance</span><span class="ha-chip p">Fixing 2 items</span></div>
+        </div>
+      </div>
+      <figcaption class="hero-cap">Sample data. Companies, people and projects shown are fictional.</figcaption>
+    </figure>
   </div>
-  <div class="hero-stats truths" role="list">
-      <div class="hs" role="listitem"><div class="hs-v">Construction-first</div><div class="hs-l">Built around project, contractor, GC, and broker workflows.</div></div>
-      <div class="hs" role="listitem"><div class="hs-v">Project-specific</div><div class="hs-l">Coverage evaluated against the requirements of the actual job.</div></div>
-      <div class="hs" role="listitem"><div class="hs-v">GC + broker collaboration</div><div class="hs-l">One place to resolve deficiencies together.</div></div>
-      <div class="hs" role="listitem"><div class="hs-v">AI-assisted review</div><div class="hs-l">Surfaces what needs attention while keeping people in control.</div></div>
-    </div>
-  <div class="hero-mq" aria-hidden="true"><div class="mqt" id="marquee"></div></div>
 </section>
 
 <!-- PRODUCT SHOWCASE -->
@@ -1165,8 +1111,6 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
 
 </main>
 
-<div class="mq-spacer" aria-hidden="true"></div>
-
 <footer role="contentinfo">
   <div class="fi">
     <div class="fgrid">
@@ -1212,26 +1156,6 @@ function closeMenu(){
   document.getElementById('menu-btn').setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }
-
-/* MARQUEE, contextual icons, no emojis, seamless loop */
-var MQ=[
-  {l:'Project-Specific Requirements', i:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/>'},
-  {l:'AI-Assisted Review',            i:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>'},
-  {l:'Deficiency Detection',          i:'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>'},
-  {l:'Endorsement Review',            i:'<path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>'},
-  {l:'Compliance Triage',             i:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>'},
-  {l:'GC + Broker Collaboration',     i:'<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/>'},
-  {l:'Expiration Tracking',           i:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/>'},
-  {l:'Continuous Monitoring',         i:'<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>'},
-  {l:'Document Ingestion',            i:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>'},
-  {l:'Approval Workflows',            i:'<path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'},
-  {l:'Audit-Ready History',           i:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/>'},
-  {l:'Contractor Onboarding',      i:'<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>'}
-];
-var mqEl=document.getElementById('marquee');
-mqEl.innerHTML=MQ.concat(MQ).map(function(d){
-  return '<span class="mqi"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">'+d.i+'</svg>'+d.l+'</span>';
-}).join('');
 
 /* ACCESS REQUEST FORM, Web3Forms backend */
 var MAKE_WEBHOOK='https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt';

@@ -4,9 +4,9 @@ const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const { PAGES, BRAND, open } = require('./helpers');
 
-// Product illustrations drawn in HTML (the hero dashboard, the "before" collage, big watermark
+// Product illustrations drawn in HTML (the hero project screen, the "before" collage, big watermark
 // labels) are pictures of UI, marked role="img" or aria-hidden. WCAG treats text in them as incidental.
-const ILLUSTRATIONS = ['.hmock', '.chaos-visual', '.sol-num[aria-hidden="true"]'];
+const ILLUSTRATIONS = ['.hero-app', '.chaos-visual', '.sol-num[aria-hidden="true"]'];
 
 // Contrast findings that only involve colors listed in brand.json contrastExceptions are a known,
 // deliberate brand choice (see the note there). Everything else must pass.
