@@ -35,8 +35,8 @@
 <meta property="og:site_name" content="forsured.ai"/>
 <meta property="og:title" content="Forsured | Catch the gap before it's a jobsite problem"/>
 <meta property="og:description" content="Continuous contractor insurance compliance for construction. Check contractor COIs against project requirements, resolve gaps with brokers, and keep every project compliant."/>
-<meta property="og:image" content="https://raw.githubusercontent.com/zservideo/forsured-site/main/og-image.png"/>
-<meta property="og:image:secure_url" content="https://raw.githubusercontent.com/zservideo/forsured-site/main/og-image.png"/>
+<meta property="og:image" content="https://forsured.ai/og-image.png"/>
+<meta property="og:image:secure_url" content="https://forsured.ai/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="Forsured, construction insurance compliance software for general contractors, brokers, and trade contractors."/>
@@ -48,7 +48,7 @@
 <meta name="twitter:creator" content="@forsured"/>
 <meta name="twitter:title" content="Forsured | Catch the gap before it's a jobsite problem"/>
 <meta name="twitter:description" content="Continuous contractor insurance compliance for construction. Check contractor COIs against project requirements, resolve gaps with brokers, and keep every project compliant."/>
-<meta name="twitter:image" content="https://raw.githubusercontent.com/zservideo/forsured-site/main/og-image.png"/>
+<meta name="twitter:image" content="https://forsured.ai/og-image.png"/>
 <meta name="twitter:image:alt" content="Forsured compliance dashboard showing contractor COI review for construction projects"/>
 
 <!-- AEO: STRUCTURED DATA — SoftwareApplication -->
@@ -221,7 +221,7 @@
   --f:#E5612A;--fl:#F07040;--fg:rgba(229,97,42,.06);--fb:rgba(229,97,42,.16);
   --bg:#FAFBFA;--wh:#fff;--s1:#F0F2F0;--s2:#E5E8E5;--warm:#FFF8F4;
   --bdr:rgba(0,0,0,.07);--bdr2:rgba(0,0,0,.10);
-  --tx:#0A0A0E;--mt:#555;--dm:#999;
+  --tx:#0A0A0E;--mt:#555;--dm:#6E6E6E;
   --gr:#16864E;--yl:#B27D00;--rd:#C4291C;
 }
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -324,7 +324,7 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .sparkle:nth-child(4){top:7px;right:-7px}.sparkle:nth-child(4)::before{animation-delay:1.35s;font-size:6px}
 @keyframes spark{0%,100%{opacity:0;transform:scale(.4) translateY(0)}40%{opacity:1;transform:scale(1.2) translateY(-4px)}70%{opacity:.5;transform:scale(.9) translateY(-6px)}}
 
-.hero-mq{grid-column:1/-1;grid-row:3;border-top:1px solid var(--bdr);padding:11px 0;overflow:hidden;background:rgba(250,251,250,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin:0 calc(-1 * max(40px,calc((100vw - 1200px)/2 + 40px)));}
+.hero-mq{grid-column:1/-1;grid-row:3;border-top:1px solid var(--bdr);padding:11px 0;overflow:hidden;background:rgba(250,251,250,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin:0;min-width:0}
 .mqt{display:flex;white-space:nowrap;width:max-content;animation:mqs 42s linear infinite}
 @keyframes mqs{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .mqi{display:inline-flex;align-items:center;gap:9px;padding:0 32px;font-size:13px;font-weight:500;color:var(--mt);flex-shrink:0;user-select:none}
@@ -418,7 +418,7 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .plat-item-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;background:linear-gradient(135deg,#FFF0EA,#FFE2D0);border:1px solid rgba(229,97,42,.15)}
 .plat-item::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--f),transparent);opacity:0;transition:opacity .2s}
 .plat-item:hover::after{opacity:1}
-.plat-item h4{font-size:14px;font-weight:700;margin-bottom:5px}
+.plat-item h3{font-size:14px;font-weight:700;margin-bottom:5px}
 .plat-item p{font-size:12px;color:var(--mt);line-height:1.5}
 .plat-grid.five{grid-template-columns:repeat(6,minmax(0,1fr))}
 .plat-grid.five .plat-item{grid-column:span 2}
@@ -443,7 +443,7 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .sg-num{font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:rgba(229,97,42,.2);line-height:1;margin-bottom:8px;transition:color .3s,transform .3s}
 .sg-item.step-active .sg-num{color:rgba(229,97,42,.65);transform:scale(1.04)}
 .sg-item.step-done .sg-num{color:rgba(22,134,78,.5)}
-.sg-item h4{font-size:14px;font-weight:700;margin-bottom:3px;color:var(--tx)}
+.sg-item h3{font-size:14px;font-weight:700;margin-bottom:3px;color:var(--tx)}
 .sg-item p{font-size:11px;color:var(--mt);line-height:1.5}
 /* completion sparkle burst */
 .sg-done-burst{position:absolute;top:4px;right:6px;font-size:24px;opacity:0;transform:scale(0);transition:opacity .3s,transform .3s;pointer-events:none}
@@ -545,7 +545,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:28px}
 .fb .fl{font-family:'Chakra Petch',sans-serif;font-size:20px;font-weight:800;color:var(--tx)}
 .fb p{font-size:12px;color:var(--dm);line-height:1.6;margin-top:8px;max-width:320px}
-.fc h4{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;color:var(--mt);margin-bottom:10px;letter-spacing:.1em;text-transform:uppercase}
+.fc h4{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--mt);margin-bottom:10px;letter-spacing:.1em;text-transform:uppercase}
 .fc a{display:block;font-size:13px;color:var(--dm);margin-bottom:7px;transition:color .15s}
 .fc a:hover{color:var(--f)}
 .fbot{border-top:1px solid var(--bdr);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
@@ -584,7 +584,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .hero-stats.truths .hs:nth-child(n){border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
   .hero-stats.truths .hs:nth-child(2n){border-right:none}
   .hero-stats.truths .hs:nth-child(n+3){border-bottom:none}
-  .hero-mq{margin:0 -32px;order:4;grid-row:auto}
+  .hero-mq{margin:0;order:4;grid-row:auto}
   .plat-grid,.plat-grid.five{grid-template-columns:repeat(2,minmax(0,1fr))}
   .plat-item:nth-child(n){border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
   .plat-item:nth-child(2n){border-right:none}
@@ -625,7 +625,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .hero-left{padding:0 20px!important;order:1}
   .hero-right{padding:0 20px!important;order:2;margin-top:24px}
   .hero-stats.truths{order:3;margin:24px 20px 0}
-  .hero-mq{order:4;margin:24px -20px 0}
+  .hero-mq{order:4;margin:24px 0 0;align-self:stretch;width:100%}
   .hmock{max-width:none;width:calc(100% + 40px);margin-left:-20px;margin-right:-20px;border-radius:0;border-left:none;border-right:none}
   .hml{grid-template-columns:90px 1fr;min-height:320px}
   .hm-s{display:flex;padding:12px 8px}
@@ -686,6 +686,31 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .rb-stat:last-child{grid-column:auto;border-top:none}
 }
 
+
+/* SMALL SCREENS: comfortable tap targets, stat labels that wrap instead of overflowing */
+@media(max-width:768px){.cta-p,.cta-g,.wl-sub{min-height:44px}.mtog{padding:11px 12px}}
+@media(max-width:420px){.hero-stats.truths .hs{padding:14px 12px}}
+
+/* PRODUCT SHOWCASE */
+.show-sec{background:linear-gradient(180deg,var(--bg),#FBF8F3 40%,var(--bg))}
+.show-head{max-width:760px}
+.show-fig{margin-top:36px}
+.show-comp{display:block;width:100%;height:auto;border-radius:16px;border:1px solid #E8DCCB}
+.show-steps{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.show-steps li{border-top:1px solid #D9C9B6;padding-top:16px}
+.show-steps .ss-n{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.04em;color:#6B6055;margin-bottom:10px}
+.show-steps .ss-t{font-size:16px;font-weight:700;line-height:1.3;letter-spacing:-.01em;color:var(--tx)}
+.show-steps .ss-d{margin-top:6px;font-size:14px;line-height:1.55;color:var(--mt)}
+.show-steps .ss-img{display:none}
+.show-cap{margin-top:24px;font-size:12px;color:var(--dm)}
+@media(max-width:900px){
+  .show-comp{display:none}
+  .show-fig{margin-top:24px}
+  .show-steps{grid-template-columns:1fr;gap:16px;margin-top:0}
+  .show-steps li{background:var(--wh);border:1px solid #E8DCCB;border-radius:16px;padding:18px}
+  .show-steps .ss-img{display:block;width:100%;height:auto;margin-top:14px;border-radius:12px;border:1px solid #E8DCCB}
+  .show-cap{margin-top:16px}
+}
 /* IRMI BANNER (temporary): delete this block, the irmi-bar markup and its script to remove */
 :root{--bh:36px}
 html.no-irmi{--bh:0px}
@@ -696,7 +721,7 @@ nav{top:var(--bh)}
 .irmi-bar{position:fixed;top:0;left:0;right:0;height:var(--bh);z-index:1001;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;background:#2C2D29;border-bottom:2px solid var(--f);color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .irmi-bar .ib-msg{display:inline-flex;align-items:center;gap:10px}
 .irmi-bar .ib-dot{width:7px;height:7px;border-radius:50%;background:var(--f);flex:none;box-shadow:0 0 0 3px rgba(229,97,42,.25)}
-.irmi-bar .ib-cta{display:inline-flex;align-items:center;padding:3px 12px;border-radius:50px;background:var(--f);color:#fff;text-decoration:none;font-weight:600;transition:background .2s}
+.irmi-bar .ib-cta{display:inline-flex;align-items:center;padding:4px 12px;border-radius:50px;background:var(--f);color:#fff;text-decoration:none;font-weight:600;transition:background .2s}
 .irmi-bar .ib-cta:hover,.irmi-bar .ib-cta:focus-visible{background:var(--fl)}
 .irmi-bar .ib-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.7);font-size:18px;line-height:1;cursor:pointer}
 .irmi-bar .ib-x:hover,.irmi-bar .ib-x:focus-visible{color:#fff;background:rgba(255,255,255,.1)}
@@ -791,13 +816,32 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
     </div>
   </div>
   <div class="hero-stats truths" role="list">
-      <div class="hs" role="listitem"><div class="hs-v">Construction‑first</div><div class="hs-l">Built around project, contractor, GC, and broker workflows.</div></div>
-      <div class="hs" role="listitem"><div class="hs-v">Project‑specific</div><div class="hs-l">Coverage evaluated against the requirements of the actual job.</div></div>
+      <div class="hs" role="listitem"><div class="hs-v">Construction-first</div><div class="hs-l">Built around project, contractor, GC, and broker workflows.</div></div>
+      <div class="hs" role="listitem"><div class="hs-v">Project-specific</div><div class="hs-l">Coverage evaluated against the requirements of the actual job.</div></div>
       <div class="hs" role="listitem"><div class="hs-v">GC + broker collaboration</div><div class="hs-l">One place to resolve deficiencies together.</div></div>
-      <div class="hs" role="listitem"><div class="hs-v">AI‑assisted review</div><div class="hs-l">Surfaces what needs attention while keeping people in control.</div></div>
+      <div class="hs" role="listitem"><div class="hs-v">AI-assisted review</div><div class="hs-l">Surfaces what needs attention while keeping people in control.</div></div>
     </div>
   <div class="hero-mq" aria-hidden="true"><div class="mqt" id="marquee"></div></div>
 </section>
+
+<!-- PRODUCT SHOWCASE -->
+<section class="show-sec" id="product" aria-labelledby="show-h"><div class="edge">
+  <div class="show-head reveal">
+    <div class="label">Inside Forsured</div>
+    <h2 class="h2" id="show-h">Every contractor COI, checked against <span class="accent">the project it's for.</span></h2>
+    <p class="sub" style="margin-top:8px">A sample project, start to finish. Forsured reads each certificate and endorsement, flags what's missing, brings the broker in to fix it, and keeps watching after approval.</p>
+  </div>
+  <figure class="show-fig reveal">
+    <img class="show-comp" src="assets/showcase/composite-1400.jpg" srcset="assets/showcase/composite-1400.jpg 1400w, assets/showcase/composite-2400.jpg 2400w" sizes="(max-width: 1200px) 100vw, 1120px" width="2400" height="1500" alt="Forsured app screens: a contractor dashboard at 88% compliant, a project coverage view flagging an umbrella aggregate gap, inbox items asking the broker to fix missing coverage, and an activity feed" loading="lazy" decoding="async"/>
+    <ol class="show-steps" aria-label="How Forsured works">
+      <li><span class="ss-n" aria-hidden="true">01</span><h3 class="ss-t">Checked against the project</h3><p class="ss-d">Each certificate and endorsement is compared to the limits and terms this project actually requires.</p><img class="ss-img" src="assets/showcase/step-1.jpg" width="1120" height="784" alt="Project coverage status at 88%, with general liability met and an umbrella aggregate gap flagged" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">02</span><h3 class="ss-t">Gaps flagged with the reason</h3><p class="ss-d">Missing endorsements and low limits show up in your inbox with exactly what's wrong and what's needed.</p><img class="ss-img" src="assets/showcase/step-2.jpg" width="1120" height="568" alt="Inbox items flagging a missing additional insured endorsement and an umbrella aggregate below the requirement" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">03</span><h3 class="ss-t">Fixed with the broker</h3><p class="ss-d">Send the gap to the broker. They see the requirement, the document and the project, so the fix comes back right.</p><img class="ss-img" src="assets/showcase/step-3.jpg" width="1120" height="738" alt="Ask broker to fix panel and activity showing the broker uploading a renewed certificate and the gap resolved" loading="lazy" decoding="async"/></li>
+      <li><span class="ss-n" aria-hidden="true">04</span><h3 class="ss-t">Watched after approval</h3><p class="ss-d">Renewals and coverage changes are tracked across active projects, so nothing lapses quietly.</p><img class="ss-img" src="assets/showcase/step-4.jpg" width="1120" height="828" alt="Compliance at 88% across projects, a fully compliant project monitored daily and an upcoming workers comp renewal" loading="lazy" decoding="async"/></li>
+    </ol>
+    <figcaption class="show-cap">Sample data. Companies, people and projects shown are fictional.</figcaption>
+  </figure>
+</div></section>
 
 <!-- PROBLEM -->
 <section class="prob-sec"><div class="edge">
@@ -838,7 +882,7 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
                 <!-- folded corner white triangle -->
                 <path d="M21 1L31 11H22C21.45 11 21 10.55 21 10V1Z" fill="white" fill-opacity="0.3"/>
                 <!-- PDF text -->
-                <text x="6" y="26" font-size="8" font-weight="800" fill="white" font-family="Arial,sans-serif" letter-spacing="0.5">PDF</text>
+                <text x="6" y="26" font-size="8" font-weight="800" fill="white" font-family="Inter,sans-serif" letter-spacing="0.5">PDF</text>
                 <!-- document lines -->
                 <line x1="6" y1="30" x2="26" y2="30" stroke="white" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round"/>
                 <line x1="6" y1="33" x2="20" y2="33" stroke="white" stroke-opacity="0.4" stroke-width="1.2" stroke-linecap="round"/>
@@ -915,22 +959,22 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
     <p class="sub" style="margin-top:8px">Define what a project requires, review the COIs contractors submit, and keep compliance current, all in one place.</p>
   </div>
   <div class="plat-grid five reveal">
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><h4>Project-Specific Requirements</h4><p>Define your insurance standards once, then apply project-level requirements and exceptions where the work demands it.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>AI-Assisted Insurance Review</h4><p>Review submitted insurance documents against the requirements that matter and surface missing, inconsistent, or non-compliant items.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h4>Clear Compliance Triage</h4><p>See what is ready, what needs review, and what needs to be resolved across contractors and active projects.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h4>Shared GC + Broker Workflow</h4><p>Give the people resolving an issue the same context, documents, comments, and status instead of another disconnected email chain.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div><h4>Continuous Monitoring</h4><p>Track expirations and changing compliance status across active projects so issues are addressed before they become jobsite problems.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><h3>Project-Specific Requirements</h3><p>Define your insurance standards once, then apply project-level requirements and exceptions where the work demands it.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>AI-Assisted Insurance Review</h3><p>Review submitted insurance documents against the requirements that matter and surface missing, inconsistent, or non-compliant items.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>Clear Compliance Triage</h3><p>See what is ready, what needs review, and what needs to be resolved across contractors and active projects.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h3>Shared GC + Broker Workflow</h3><p>Give the people resolving an issue the same context, documents, comments, and status instead of another disconnected email chain.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div><h3>Continuous Monitoring</h3><p>Track expirations and changing compliance status across active projects so issues are addressed before they become jobsite problems.</p></div>
   </div>
   <div class="steps-band reveal" id="how" style="scroll-margin-top:80px">
     <div class="sb-head">
       <h2>From requirements to <span style="color:var(--f)">continuous compliance.</span></h2>
     </div>
     <div class="sg">
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">01</div><h4>Set</h4><p>Define the project's insurance requirements, starting from your standards and applying project-specific exceptions.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">02</div><h4>Submit</h4><p>Contractors or their brokers send the COIs and endorsements needed for review.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">03</div><h4>Review</h4><p>Forsured evaluates the submission against project requirements and organizes what passes, what needs review, and what is missing.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">04</div><h4>Resolve</h4><p>GCs, contractors, and brokers share context, correct issues, and move toward approval in one place.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">05</div><h4>Monitor</h4><p>Track expirations and status changes across active projects so compliance is not a one-time checkpoint.</p></div>
+      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">01</div><h3>Set</h3><p>Define the project's insurance requirements, starting from your standards and applying project-specific exceptions.</p></div>
+      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">02</div><h3>Submit</h3><p>Contractors or their brokers send the COIs and endorsements needed for review.</p></div>
+      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">03</div><h3>Review</h3><p>Forsured evaluates the submission against project requirements and organizes what passes, what needs review, and what is missing.</p></div>
+      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">04</div><h3>Resolve</h3><p>GCs, contractors, and brokers share context, correct issues, and move toward approval in one place.</p></div>
+      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">05</div><h3>Monitor</h3><p>Track expirations and status changes across active projects so compliance is not a one-time checkpoint.</p></div>
     </div>
     <div class="int-row"><strong>Integrations:</strong> Procore integration available for early access customers. Additional integrations are in development, designed to fit the construction stack you already use.</div>
   </div>
@@ -997,12 +1041,12 @@ try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classLi
     <p class="sub" style="margin-top:8px;max-width:720px">Insurance compliance is a decision workflow, not a document-storage problem. Forsured is built for the people who own that decision.</p>
   </div>
   <div class="plat-grid reveal">
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h4>Construction-specific workflow</h4><p>Built around projects, contractors, insurance requirements, endorsements, exceptions, and the people responsible for resolving them.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h4>Project-level decision context</h4><p>Review a submission against the requirements of the actual project, not merely a generic document checklist.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h4>GC + broker collaboration</h4><p>Bring the teams requesting, reviewing, and correcting insurance documentation into a shared workflow.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Transparent AI assistance</h4><p>AI surfaces and explains issues while accountable people stay in control of approvals and exceptions.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-4"/></svg></div><h4>Mid-market implementation mindset</h4><p>Meaningful compliance automation without forcing a construction company into an oversized enterprise transformation.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4>Built for adoption</h4><p>A better process for the GC without creating unnecessary friction for contractors and brokers.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Construction-specific workflow</h3><p>Built around projects, contractors, insurance requirements, endorsements, exceptions, and the people responsible for resolving them.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Project-level decision context</h3><p>Review a submission against the requirements of the actual project, not merely a generic document checklist.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h3>GC + broker collaboration</h3><p>Bring the teams requesting, reviewing, and correcting insurance documentation into a shared workflow.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Transparent AI assistance</h3><p>AI surfaces and explains issues while accountable people stay in control of approvals and exceptions.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-4"/></svg></div><h3>Mid-market implementation mindset</h3><p>Meaningful compliance automation without forcing a construction company into an oversized enterprise transformation.</p></div>
+    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E5612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Built for adoption</h3><p>A better process for the GC without creating unnecessary friction for contractors and brokers.</p></div>
   </div>
 </div></section>
 
@@ -1191,6 +1235,7 @@ mqEl.innerHTML=MQ.concat(MQ).map(function(d){
 
 /* ACCESS REQUEST FORM, Web3Forms backend */
 var MAKE_WEBHOOK='https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt';
+var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function submitAccessRequest(e){
   e.preventDefault();
@@ -1202,10 +1247,12 @@ function submitAccessRequest(e){
   var errEl=document.getElementById('form-err');
   var btn=document.getElementById('wl-btn');
 
-  if(!name||!email||!role){
+  var emailOk=EMAIL_RE.test(email);
+  if(!name||!emailOk||!role){
+    errEl.textContent=name&&email&&role?'Please enter a valid work email.':'Please fill in all required fields.';
     errEl.style.display='block';
     if(!name){document.getElementById('wl-name').focus();}
-    else if(!email){document.getElementById('wl-email').focus();}
+    else if(!emailOk){document.getElementById('wl-email').focus();}
     else{document.getElementById('wl-role').focus();}
     return false;
   }
@@ -1258,10 +1305,12 @@ function submitWaitlistSignup(e){
   var referral=document.getElementById('oh-ref').value.trim();
   var errEl=document.getElementById('oh-err');
   var btn=document.getElementById('oh-btn');
-  if(!name||!email||email.indexOf('@')===-1||!role){
+  var emailOk=EMAIL_RE.test(email);
+  if(!name||!emailOk||!role){
+    errEl.textContent=name&&email&&role?'Please enter a valid work email.':'Please fill in all required fields.';
     errEl.style.display='block';
     if(!name){document.getElementById('oh-name').focus();}
-    else if(!email||email.indexOf('@')===-1){document.getElementById('oh-email').focus();}
+    else if(!emailOk){document.getElementById('oh-email').focus();}
     else{document.getElementById('oh-role').focus();}
     return false;
   }
@@ -1324,7 +1373,8 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     var id=a.getAttribute('href');
     if(id==='#')return;
     var t=document.querySelector(id);
-    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-64,behavior:'smooth'});}
+    // Land the section just below the fixed nav (and the announcement bar when it shows).
+    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-nav.getBoundingClientRect().bottom-12,behavior:'smooth'});}
   });
 });
 
