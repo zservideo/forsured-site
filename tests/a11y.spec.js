@@ -2,7 +2,7 @@
 // and keyboard basics: every focusable element shows where focus is.
 const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
-const { PAGES, BRAND, open } = require('./helpers');
+const { BROWSER_PAGES, BRAND, open } = require('./helpers');
 
 // Product illustrations drawn in HTML (the hero project screen, the "before" collage, big watermark
 // labels) are pictures of UI, marked role="img" or aria-hidden. WCAG treats text in them as incidental.
@@ -16,7 +16,8 @@ const knownBrandContrast = (node) => {
   return [d.fgColor, d.bgColor].some((c) => c && EXCEPT.includes(String(c).toLowerCase()));
 };
 
-for (const p of PAGES) {
+// BROWSER_PAGES: every page, with the state pages represented by a sample (see tests/helpers.js).
+for (const p of BROWSER_PAGES) {
   test.describe(`${p.name} accessibility`, () => {
     test('has no axe violations', async ({ page }) => {
       await open(page, p.url, { reveal: true });
