@@ -5,7 +5,7 @@
   "description": "Primary and noncontributory decides whose policy pays first when a contractor's work causes a loss. What it means, which endorsement creates it, and what to check.",
   "dek": "It's one of the most common lines in construction insurance requirements, and one of the most commonly missing endorsements on a contractor's policy.",
   "date": "2026-10-28T07:00:00-04:00",
-  "draft": true,
+  "draft": false,
   "category": "COI basics",
   "hero": {
     "type": "coi",
@@ -18,7 +18,7 @@
       ],
       [
         "Additional insured",
-        "CG 20 10 / CG 20 37",
+        "CG\u00a020\u00a010 / CG\u00a020\u00a037",
         "ok"
       ],
       [
@@ -102,7 +102,7 @@ In 2013 ISO introduced an optional endorsement for it, CG 20 01, "Primary and No
 
 CG 20 01 comes with two conditions. It applies only when the additional insured is a named insured on another policy, and only when a written contract requires the contractor's coverage to be primary and noncontributory. Missing contract language means missing coverage.
 
-It also amends the general liability policy only. If your project requirements call for primary and noncontributory umbrella or excess coverage, the umbrella needs to say so in its own wording. With umbrella rates still rising, that's where we see the gap most often.
+It also amends the general liability policy only. If your project requirements call for primary and noncontributory umbrella or excess coverage, the umbrella needs to say so in its own wording. With umbrella rates still rising, it's an easy gap to miss.
 
 ## What to check on a contractor COI
 
@@ -110,6 +110,6 @@ It also amends the general liability policy only. If your project requirements c
 2. Ask for the endorsement, not just the certificate. Note the form number and edition.
 3. Check that it covers the parties your requirements name: owner, lender, GC, others.
 4. Check the umbrella or excess policy separately when the requirements extend to it.
-5. Recheck at renewal. Endorsements change when policies renew, and forms keep evolving, a point Cullen and Dykman's Christopher Ruggiero made in his session on additional insured endorsements at IRMI's 2026 Construction Risk Conference.
+5. Recheck at renewal. Endorsements change when policies renew, and forms keep evolving. "Evolving insurance endorsements" were the backdrop for Cullen and Dykman's session on additional insured endorsements at IRMI's 2026 Construction Risk Conference.
 
 It's one line in the contract and one endorsement on the policy. Forsured checks both on every contractor COI, against each project's requirements, for the life of the job.

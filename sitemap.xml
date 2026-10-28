@@ -2,7 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://forsured.ai/</loc><priority>1.0</priority></url>
   <url><loc>https://forsured.ai/irmi-field-guide/</loc><priority>0.5</priority></url>
-  <url><loc>https://forsured.ai/blog/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://forsured.ai/blog/</loc><lastmod>2026-10-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://forsured.ai/blog/primary-and-noncontributory/</loc><lastmod>2026-10-28</lastmod><priority>0.7</priority></url>
   <url><loc>https://forsured.ai/blog/forsured-at-irmi-crc-2026/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://forsured.ai/blog/compliance-isnt-coverage/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>

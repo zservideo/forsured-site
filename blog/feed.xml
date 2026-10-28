@@ -6,7 +6,30 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 27 Oct 2026 20:45:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 11:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What does primary and noncontributory mean on a COI?</title>
+    <link>https://forsured.ai/blog/primary-and-noncontributory/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/primary-and-noncontributory/</guid>
+    <pubDate>Wed, 28 Oct 2026 11:00:00 GMT</pubDate>
+    <category>COI basics</category>
+    <description>Primary and noncontributory decides whose policy pays first when a contractor's work causes a loss. What it means, which endorsement creates it, and what to check.</description>
+    <content:encoded><![CDATA[<ul><li>Primary and noncontributory sets the order in which overlapping policies respond: the contractor's policy pays first, and it doesn't ask the additional insured's own policy to share the loss.</li><li>It's created by an endorsement on the contractor's general liability policy, such as ISO's CG 20 01, not by a line on the certificate.</li><li>ISO's CG 20 01 applies only when a written contract requires it, and only to the general liability policy. Umbrella and excess need their own wording.</li><li>On every contractor COI, ask for the endorsement form, check it covers the parties your project requirements name, and check the umbrella too.</li></ul><p><img src="https://forsured.ai/blog/primary-and-noncontributory/hero.png" width="1600" height="800" alt="Primary and noncontributory, checked. A sample contractor certificate of insurance: General liability $1M / $2M, meets the requirement; Additional insured CG 20 10 / CG 20 37, meets the requirement; Primary and noncontributory CG 20 01, meets the requirement; Umbrella $10M, Not primary wording. CG 20 01 covers the general liability policy only. The umbrella needs its own primary and noncontributory wording."/></p><p>Read the insurance section of almost any construction contract and you'll find the same phrase: additional insured coverage &quot;on a primary and noncontributory basis.&quot; It's so common it reads like boilerplate. It isn't. It decides whose insurance pays first when a contractor's work causes a loss, and whose loss history takes the hit.</p>
+<h2 id="what-it-means">What it means</h2>
+<p>IRMI describes primary and noncontributory as a term used in contract insurance requirements to set the order in which multiple policies covering the same loss respond. Split it in two:</p>
+<ul><li><strong>Primary:</strong> the contractor's policy responds first to a covered claim against the additional insured, before the additional insured's own policy.</li><li><strong>Noncontributory:</strong> the contractor's policy doesn't ask the additional insured's own insurance to chip in.</li></ul>
+<p>Without it, a general liability policy's &quot;other insurance&quot; condition can treat the GC's or owner's own policy as sharing the loss. That's exactly what the contract was written to avoid.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>Like additional insured status, primary and noncontributory is created by policy wording, not by the certificate. A checked box or a note in the description of operations on an ACORD 25 doesn't change the policy.</p>
+<p>In 2013 ISO introduced an optional endorsement for it, CG 20 01, &quot;Primary and Noncontributory, Other Insurance Condition.&quot; As Claims Journal explained at the time, it was added because so many construction contracts require additional insured coverage on a primary and noncontributory basis. Many carriers use it or their own version, and some blanket additional insured endorsements build similar wording in.</p>
+<h2 id="the-fine-print-that-trips-people-up">The fine print that trips people up</h2>
+<p>CG 20 01 comes with two conditions. It applies only when the additional insured is a named insured on another policy, and only when a written contract requires the contractor's coverage to be primary and noncontributory. Missing contract language means missing coverage.</p>
+<p>It also amends the general liability policy only. If your project requirements call for primary and noncontributory umbrella or excess coverage, the umbrella needs to say so in its own wording. With umbrella rates still rising, it's an easy gap to miss.</p>
+<h2 id="what-to-check-on-a-contractor-coi">What to check on a contractor COI</h2>
+<ol><li>Confirm the project requirements actually call for primary and noncontributory, and on which policies (general liability, auto, umbrella).</li><li>Ask for the endorsement, not just the certificate. Note the form number and edition.</li><li>Check that it covers the parties your requirements name: owner, lender, GC, others.</li><li>Check the umbrella or excess policy separately when the requirements extend to it.</li><li>Recheck at renewal. Endorsements change when policies renew, and forms keep evolving. &quot;Evolving insurance endorsements&quot; were the backdrop for Cullen and Dykman's session on additional insured endorsements at IRMI's 2026 Construction Risk Conference.</li></ol>
+<p>It's one line in the contract and one endorsement on the policy. Forsured checks both on every contractor COI, against each project's requirements, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/primary-and-noncontributory/og.png" type="image/png" length="48572"/>
+  </item>
   <item>
     <title>What we heard at our first IRMI Construction Risk Conference</title>
     <link>https://forsured.ai/blog/forsured-at-irmi-crc-2026/</link>
