@@ -15,6 +15,7 @@ Key facts:
 
 ## Blog
 
+- [What does primary and noncontributory mean on a COI?](https://forsured.ai/blog/primary-and-noncontributory/): Primary and noncontributory decides whose policy pays first when a contractor's work causes a loss. What it means, which endorsement creates it, and what to check. Markdown: https://forsured.ai/blog/primary-and-noncontributory/index.md
 - [What we heard at our first IRMI Construction Risk Conference](https://forsured.ai/blog/forsured-at-irmi-crc-2026/): Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them. Markdown: https://forsured.ai/blog/forsured-at-irmi-crc-2026/index.md
 - [A COI on file isn't proof of coverage](https://forsured.ai/blog/compliance-isnt-coverage/): A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead. Markdown: https://forsured.ai/blog/compliance-isnt-coverage/index.md
 - [3 takeaways from day 2 of IRMI's Construction Risk Conference](https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/): Additional insured endorsements, prequalification as a snapshot, and insurance data you can't search. What we were digging into on day 2 at IRMI CRC 2026. Markdown: https://forsured.ai/blog/irmi-crc-2026-day-2-takeaways/index.md
