@@ -1,7 +1,7 @@
 // Layout sweep across phone, tablet, laptop and wide-monitor sizes for every page.
 // Runs in its own "responsive" project (see playwright.config.js).
 const { test, expect } = require('@playwright/test');
-const { PAGES, open, loadImages } = require('./helpers');
+const { BROWSER_PAGES: PAGES, open, loadImages } = require('./helpers');
 
 const VIEWPORTS = [
   { width: 320, height: 568, phone: true }, // iPhone SE (1st gen), the narrowest phone still around

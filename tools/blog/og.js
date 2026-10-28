@@ -22,7 +22,7 @@ const args = process.argv.slice(2);
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-function card({ kicker, title }) {
+function card({ kicker, title, foot = 'forsured.ai/blog' }) {
   const size = title.length > 70 ? 58 : title.length > 48 ? 64 : 72;
   return `<!DOCTYPE html><html><head>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Serif:opsz,wght@36,400&family=Inter:wght@500&display=swap" rel="stylesheet"/>
@@ -45,7 +45,7 @@ h1{position:absolute;left:80px;right:110px;top:200px;font-family:'Roboto Serif',
 <div class="kicker"><i></i>${esc(kicker)}</div>
 <h1>${esc(title)}</h1>
 <div class="gap"></div>
-<div class="foot"><span>forsured.ai/blog</span><span>Catch the gap before it's a jobsite problem.</span></div>
+<div class="foot"><span>${esc(foot)}</span><span>Catch the gap before it's a jobsite problem.</span></div>
 </body></html>`;
 }
 
@@ -103,18 +103,9 @@ ${h.note ? `<div class="note">${esc(h.note)}</div>` : ''}</div>
 
 const HERO = { stat: heroStat, list: heroList, coi: heroCoi };
 
-(async () => {
-  const posts = readPosts(true);
-  const jobs = [{ file: 'blog/og.png', kicker: 'Forsured Blog', title: 'Notes on construction insurance compliance.' }];
-  for (const p of posts) {
-    jobs.push({ file: `blog/${p.slug}/og.png`, kicker: p.category, title: p.title, slug: p.slug });
-    const h = p.hero || { type: 'list', title: p.title, items: [] };
-    if (!HERO[h.type]) throw new Error(`${p.slug}: hero type must be one of ${Object.keys(HERO).join(', ')}`);
-    jobs.push({ file: `blog/${p.slug}/hero.png`, slug: p.slug, html: HERO[h.type](h), size: { width: 1600, height: 800 } });
-  }
-  const todo = jobs.filter((j) =>
-    args.includes('--all') ? true : args.length ? args.includes(j.slug) : !fs.existsSync(path.join(ROOT, j.file))
-  );
+// Renders jobs ({ file, kicker, title, foot? } cards or { file, html, size } pages) with the brand
+// fonts checked. tools/states/og.js reuses it for the state requirement pages.
+async function render(todo) {
   if (!todo.length) return console.log('all share images exist');
   const proxy = process.env.HTTPS_PROXY ? { server: process.env.HTTPS_PROXY } : undefined;
   const browser = await chromium.launch({ proxy });
@@ -133,6 +124,23 @@ const HERO = { stat: heroStat, list: heroList, coi: heroCoi };
     console.log(`wrote ${j.file}`);
   }
   await browser.close();
+}
+
+module.exports = { card, render };
+
+if (require.main === module) (async () => {
+  const posts = readPosts(true);
+  const jobs = [{ file: 'blog/og.png', kicker: 'Forsured Blog', title: 'Notes on construction insurance compliance.' }];
+  for (const p of posts) {
+    jobs.push({ file: `blog/${p.slug}/og.png`, kicker: p.category, title: p.title, slug: p.slug });
+    const h = p.hero || { type: 'list', title: p.title, items: [] };
+    if (!HERO[h.type]) throw new Error(`${p.slug}: hero type must be one of ${Object.keys(HERO).join(', ')}`);
+    jobs.push({ file: `blog/${p.slug}/hero.png`, slug: p.slug, html: HERO[h.type](h), size: { width: 1600, height: 800 } });
+  }
+  const todo = jobs.filter((j) =>
+    args.includes('--all') ? true : args.length ? args.includes(j.slug) : !fs.existsSync(path.join(ROOT, j.file))
+  );
+  await render(todo);
 })().catch((e) => {
   console.error(e.message);
   process.exit(1);

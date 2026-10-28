@@ -315,7 +315,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
 @media print{nav,.mmenu,footer,.band,.more,.share,.share-end{display:none}}
 `.trim();
 
-function head({ title, description, url, image, imageAlt, type, jsonld, published, modified, section, tags = [], md }) {
+function head({ title, description, url, image, imageAlt, type, jsonld, published, modified, section, tags = [], md, css = '' }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -354,7 +354,7 @@ ${JSON.stringify(jsonld, null, 2)}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="${FONTS}" rel="stylesheet"/>
 <style>
-${CSS}
+${CSS}${css ? `\n${css}` : ''}
 </style>
 </head>
 <body>`;
@@ -432,6 +432,7 @@ const FOOTER = () => `<footer><div class="edge">
     <div class="fc">
       <h2>Company</h2>
       <a href="/blog/">Blog</a>
+      <a href="/coi-requirements/">COI Requirements by State</a>
       <a href="mailto:hello@forsured.ai">Contact</a>
       <a href="/#demo">Free COI Risk Check</a>
       <a href="/blog/feed.xml">RSS feed</a>
@@ -739,6 +740,7 @@ function sitemap(posts) {
     ...STATIC_PAGES.map((p) => ({ ...p, lastmod: null })),
     { url: '/blog/', priority: '0.8', lastmod: latest },
     ...posts.map((p) => ({ url: p.url, priority: '0.7', lastmod: day(p.updated) })),
+    ...statePages().urls.map((url) => ({ url, priority: url === '/coi-requirements/' ? '0.8' : '0.6', lastmod: statePages().reviewed })),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -785,6 +787,10 @@ Key facts:
 
 ${posts.map((p) => `- [${p.title}](${SITE}${p.url}): ${p.description} Markdown: ${SITE}${p.url}index.md`).join('\n')}
 
+## Contractor insurance requirements by state
+
+${statePages().llms}
+
 ## Optional
 
 - [Every post in full](${SITE}/llms-full.txt)
@@ -828,6 +834,15 @@ function llmsFull(posts) {
 ${posts.map((p) => postMarkdown(p).replace(/^# /, '## ').replace(/\n(#{2,3}) /g, '\n#$1 ')).join('\n\n')}`;
 }
 
+// ---------- state guides ----------
+// /coi-requirements/ and one page per state, from content/coi-requirements/states.js. They share this
+// file's page parts, so tools/states/pages.js is loaded once this module's exports are in place.
+let stateCache;
+function statePages() {
+  if (!stateCache) stateCache = require('../states/pages').build();
+  return stateCache;
+}
+
 // ---------- write or check ----------
 
 function build() {
@@ -845,6 +860,7 @@ function build() {
     files.set(`blog/${p.slug}/index.html`, postPage(p, posts));
     files.set(`blog/${p.slug}/index.md`, postMarkdown(p));
   }
+  for (const [rel, content] of statePages().files) files.set(rel, content);
   files.set('blog/feed.xml', feed(posts));
   files.set('sitemap.xml', sitemap(posts));
   files.set('robots.txt', ROBOTS);
@@ -870,5 +886,5 @@ function build() {
   return posts;
 }
 
-module.exports = { readPosts, markdown };
+module.exports = { readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
 if (require.main === module) build();

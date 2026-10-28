@@ -16,12 +16,39 @@ const POSTS = fs
   .filter((f) => f.endsWith('.md') && f !== 'README.md')
   .map((f) => f.replace(/\.md$/, ''))
   .filter((slug) => fs.existsSync(path.join(ROOT, 'blog', slug, 'index.html')));
+const STATE_SLUGS = fs
+  .readdirSync(path.join(ROOT, 'coi-requirements'), { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => d.name)
+  .sort();
 const PAGES = [
   { name: 'home', url: '/', file: 'index.html' },
   { name: 'field guide', url: '/irmi-field-guide/', file: 'irmi-field-guide/index.html' },
   { name: 'blog', url: '/blog/', file: 'blog/index.html' },
   ...POSTS.map((slug) => ({ name: `post ${slug}`, url: `/blog/${slug}/`, file: `blog/${slug}/index.html`, post: true })),
+  // State requirement pages, built from content/coi-requirements by tools/blog/build.js.
+  { name: 'coi requirements', url: '/coi-requirements/', file: 'coi-requirements/index.html' },
+  ...STATE_SLUGS.map((slug) => ({ name: `state ${slug}`, url: `/coi-requirements/${slug}/`, file: `coi-requirements/${slug}/index.html`, state: true })),
 ];
+
+// The 51 state pages share one template and differ only in their text. Copy, SEO, structured data
+// and file checks read every one of them. The checks that render pages in a browser (layout at every
+// screen size, accessibility, rendered colors, page weight) run on the hub and on the state pages
+// whose text pushes the template hardest: the longest and shortest page, the longest state name and
+// the longest answers in the fact cards. They are picked from the built files on every run, so an
+// edit that makes some other state the extreme moves the check to it.
+const stateFile = (slug) => path.join(ROOT, 'coi-requirements', slug, 'index.html');
+const factText = (slug) => [...fs.readFileSync(stateFile(slug), 'utf8').matchAll(/<li class="fact"><h2>[^<]*<\/h2><p>([^<]*)<\/p>/g)].map((m) => m[1]).join('');
+const pick = (score, dir = 1) => [...STATE_SLUGS].sort((a, b) => dir * (score(b) - score(a)) || a.localeCompare(b))[0];
+const STATE_SAMPLE = STATE_SLUGS.length
+  ? new Set([
+      pick((s) => fs.statSync(stateFile(s)).size),
+      pick((s) => fs.statSync(stateFile(s)).size, -1),
+      pick((s) => s.length),
+      pick((s) => factText(s).length),
+    ])
+  : new Set();
+const BROWSER_PAGES = PAGES.filter((p) => !p.state || STATE_SAMPLE.has(p.url.split('/')[2]));
 
 const BRAND = require('./brand.json');
 
@@ -178,4 +205,4 @@ function onBrand(rgb) {
   );
 }
 
-module.exports = { ROOT, PAGES, POSTS, BRAND, open, settle, loadImages, pageCopy, parseColor, onBrand, hex, read };
+module.exports = { ROOT, PAGES, BROWSER_PAGES, POSTS, STATE_SLUGS, BRAND, open, settle, loadImages, pageCopy, parseColor, onBrand, hex, read };
