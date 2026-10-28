@@ -88,7 +88,8 @@ for (const p of PAGES) {
         return /\bIRMI\b/.test(clone.textContent);
       });
       test.skip(!mentions, 'page does not mention IRMI');
-      await expect(page.locator('footer')).toContainText(/Not affiliated with or endorsed by IRMI/);
+      // The field guide names IRMI; the blog footer covers every organization it cites without naming one.
+      await expect(page.locator('footer')).toContainText(/Not affiliated with or endorsed by (IRMI|the organizations or publications we cite)/);
     });
   });
 }
