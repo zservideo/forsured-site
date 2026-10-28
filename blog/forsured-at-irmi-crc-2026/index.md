@@ -1,6 +1,6 @@
 # What we heard at our first IRMI Construction Risk Conference
 
-> We came to National Harbor in orange polos with a field guide and one question. Here's what the construction risk community told us about contractor COIs.
+> We came to National Harbor in a mix of black and white Forsured polos with a field guide and one question. Here's what the construction risk community told us about contractor COIs.
 
 Published Oct 27, 2026 by Forsured. Forsured news. Source: https://forsured.ai/blog/forsured-at-irmi-crc-2026/
 
@@ -13,7 +13,7 @@ Published Oct 27, 2026 by Forsured. Forsured news. Source: https://forsured.ai/b
 - Brokers and carriers want contractor COI data they can bring to renewals and share with clients, not more paperwork.
 - Neutral wording, "project requirements" and "contractor COIs", landed with general contractors and trade contractors alike, so that's how we talk now.
 
-This week Forsured showed up at IRMI's Construction Risk Conference at the Gaylord National in National Harbor. It was our first CRC. We weren't on the sponsor list and we didn't have a booth. We had orange polos, an [independent field guide to the conference](/irmi-field-guide/), a short video about catching the COI gap, and one question for everyone we met: what happens to a contractor COI after it's filed?
+This week Forsured showed up at IRMI's Construction Risk Conference at the Gaylord National in National Harbor. It was our first CRC. We weren't on the sponsor list and we didn't have a booth. We had a mix of black and white Forsured polos, an [independent field guide to the conference](/irmi-field-guide/), a short video about catching the COI gap, and one question for everyone we met: what happens to a contractor COI after it's filed?
 
 The answers were consistent enough that we want to share them. Nobody below is named, because these were hallway conversations, not interviews.
 
