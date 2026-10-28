@@ -109,4 +109,10 @@ test.describe('blog post', () => {
     await page.addStyleTag({ content: 'nav, .more { visibility: hidden !important; }' });
     await expect(page.locator('.band')).toHaveScreenshot('blog-post-cta.png');
   });
+
+  test('newsletter signup', async ({ page }) => {
+    await ready(page, '/blog/compliance-isnt-coverage/');
+    await page.addStyleTag({ content: 'nav { visibility: hidden !important; }' });
+    await expect(page.locator('[data-sub]')).toHaveScreenshot('blog-post-newsletter.png');
+  });
 });

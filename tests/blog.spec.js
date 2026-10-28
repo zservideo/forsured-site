@@ -1,7 +1,7 @@
 // The blog and the discovery files built from it (tools/blog/build.js): the generated pages are
 // current, every post carries the structured data, sources, hero image, share buttons and share card
 // that search engines, AI answer engines and social networks read, the home page nav, phone menu and
-// footer links, and the feed, sitemap, robots.txt,
+// footer links, the newsletter signup, and the feed, sitemap, robots.txt,
 // llms.txt, llms-full.txt and Markdown copies list everything. IndexNow's key file matches its workflow.
 // Copy, brand, SEO, accessibility, layout and performance checks cover each post through PAGES.
 const { test, expect } = require('@playwright/test');
@@ -102,6 +102,52 @@ for (const slug of POSTS) {
     });
   });
 }
+
+test('the blog index and every post have the newsletter signup', async ({ page }) => {
+  for (const p of PAGES.filter((x) => x.post || x.url === '/blog/')) {
+    await open(page, p.url, { fonts: false });
+    const box = page.locator('[data-sub]');
+    await expect(box, p.url).toHaveCount(1);
+    await expect(box.getByLabel('Work email')).toBeVisible();
+    await expect(box.getByRole('button', { name: 'Subscribe' })).toBeVisible();
+  }
+});
+
+test('newsletter signup sends the email to both form backends and confirms', async ({ page }) => {
+  const { posts } = await open(page, `/blog/${POSTS[0]}/`, { fonts: false });
+  const box = page.locator('[data-sub]');
+  await box.getByLabel('Work email').fill('reader@example.com');
+  await box.getByRole('button', { name: 'Subscribe' }).click();
+  await expect(box.locator('.ok')).toBeVisible();
+  await expect(box.locator('form')).toBeHidden();
+  expect(posts.map((p) => new URL(p.url).host).sort()).toEqual(['api.web3forms.com', 'hook.us2.make.com']);
+  const make = JSON.parse(posts.find((p) => p.url.includes('make.com')).body);
+  expect(make).toMatchObject({ email: 'reader@example.com', form_source: 'Newsletter', placement: 'post', page: `/blog/${POSTS[0]}/` });
+  const w3 = posts.find((p) => p.url.includes('web3forms')).body;
+  expect(w3).toContain('reader@example.com');
+  expect(w3).toContain('Forsured Blog Subscriber');
+});
+
+test('newsletter signup rejects a bad email and sends nothing', async ({ page }) => {
+  const { posts } = await open(page, '/blog/', { fonts: false });
+  const box = page.locator('[data-sub]');
+  await box.getByRole('button', { name: 'Subscribe' }).click();
+  await expect(box.locator('.err')).toHaveText('Please enter a valid email.');
+  await box.getByLabel('Work email').fill('reader.example.com');
+  await box.getByRole('button', { name: 'Subscribe' }).click();
+  await expect(box.getByLabel('Work email')).toBeFocused();
+  expect(posts).toEqual([]);
+});
+
+test('newsletter signup recovers when the backend fails', async ({ page }) => {
+  await open(page, '/blog/', { fonts: false, formOk: false });
+  const box = page.locator('[data-sub]');
+  await box.getByLabel('Work email').fill('reader@example.com');
+  await box.getByRole('button', { name: 'Subscribe' }).click();
+  await expect(box.locator('.err')).toHaveText(/Something went wrong/);
+  await expect(box.getByRole('button', { name: 'Subscribe' })).toBeEnabled();
+  await expect(box.locator('.ok')).toBeHidden();
+});
 
 test('copy link copies the clean URL and says so', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
