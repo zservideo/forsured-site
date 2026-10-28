@@ -334,3 +334,16 @@ test('subscriber email (tools/blog/email.js) is branded HTML with real links and
     expect(email(p, '', { hero: '' }).html, `${p.slug} --no-hero`).not.toContain('<img');
   }
 });
+
+test('welcome email (tools/blog/email.js --welcome) links three posts and the free COI risk check', () => {
+  const { welcome } = require('../tools/blog/email');
+  const e = welcome('Pat');
+  expect(e.html).toContain('Hi Pat,');
+  expect(e.subject).toContain('Welcome to the Forsured community');
+  const hrefs = [...e.html.matchAll(/href="([^"]+)"/g)].map(([, h]) => h.replace(/&amp;/g, '&'));
+  for (const h of hrefs) expect(h).toMatch(/^https:\/\/forsured\.ai\/[^#]*\?[^#]*utm_campaign=welcome(#[a-z-]+)?$/);
+  expect(hrefs.filter((h) => h.includes('/blog/') && !h.startsWith('https://forsured.ai/blog/?'))).toHaveLength(3);
+  expect(hrefs).toContain('https://forsured.ai/?utm_source=email&utm_medium=subscriber&utm_campaign=welcome#demo');
+  for (const line of ['Free COI risk check', 'Zach Servideo', 'Founder / CGO']) expect(e.html + e.text).toContain(line);
+  expect(e.text).not.toMatch(/<[a-z]|\*\*/);
+});
