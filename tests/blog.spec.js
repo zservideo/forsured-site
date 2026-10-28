@@ -103,6 +103,21 @@ for (const slug of POSTS) {
   });
 }
 
+// The signup box is paused until there's budget to send a newsletter (NEWSLETTER in tools/blog/build.js).
+// While it's off, no page may show it; once it's back on, every page must, and the form tests below run.
+const { NEWSLETTER } = require('../tools/blog/build.js');
+
+test('no blog page shows the newsletter signup while it is paused', async ({ page }) => {
+  test.skip(NEWSLETTER, 'the newsletter signup is on');
+  for (const p of PAGES.filter((x) => x.post || x.url === '/blog/')) {
+    await open(page, p.url, { fonts: false });
+    await expect(page.locator('[data-sub]'), p.url).toHaveCount(0);
+  }
+});
+
+test.describe('newsletter signup', () => {
+test.beforeEach(() => test.skip(!NEWSLETTER, 'paused: NEWSLETTER is false in tools/blog/build.js'));
+
 test('the blog index and every post have the newsletter signup', async ({ page }) => {
   for (const p of PAGES.filter((x) => x.post || x.url === '/blog/')) {
     await open(page, p.url, { fonts: false });
@@ -147,6 +162,7 @@ test('newsletter signup recovers when the backend fails', async ({ page }) => {
   await expect(box.locator('.err')).toHaveText(/Something went wrong/);
   await expect(box.getByRole('button', { name: 'Subscribe' })).toBeEnabled();
   await expect(box.locator('.ok')).toBeHidden();
+});
 });
 
 test('copy link copies the clean URL and says so', async ({ page, context }) => {

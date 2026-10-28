@@ -555,8 +555,12 @@ const SHARE_JS = `<script>
 // script or key is needed. The form posts with plain fetch; with scripts off it does nothing harmful.
 const WEB3FORMS_KEY = '9f256d7f-4b10-4b26-8502-bf23abe8455d';
 const MAKE_WEBHOOK = 'https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt';
+// Paused until there's budget to send a newsletter (planned for Q1 2027 on Kit). Set to true to put the
+// signup box back on the blog index and every post; tests/blog.spec.js and visual.spec.js follow this flag.
+const NEWSLETTER = false;
 
 function subscribe(id, where, cls = '') {
+  if (!NEWSLETTER) return '';
   return `<section class="sub${cls ? ` ${cls}` : ''}" aria-labelledby="${id}" data-sub="${where}">
       <div>
         <h2 id="${id}">Get new posts by email.</h2>
@@ -575,7 +579,7 @@ function subscribe(id, where, cls = '') {
     </section>`;
 }
 
-const SUB_JS = `<script>
+const SUB_JS = !NEWSLETTER ? '' : `<script>
 (() => {
   const RE = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
   for (const box of document.querySelectorAll('[data-sub]')) {
@@ -975,5 +979,5 @@ function build() {
   return posts;
 }
 
-module.exports = { readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
+module.exports = { readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT, NEWSLETTER };
 if (require.main === module) build();

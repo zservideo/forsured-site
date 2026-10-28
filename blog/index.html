@@ -361,22 +361,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
     </div>
     <img src="forsured-at-irmi-crc-2026/hero.png" width="1600" height="800" alt="" fetchpriority="high" decoding="async"/>
   </a>
-  <section class="sub index-sub" aria-labelledby="sub" data-sub="index">
-      <div>
-        <h2 id="sub">Get new posts by email.</h2>
-        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
-      </div>
-      <div>
-      <form novalidate>
-        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-        <input id="sub-email" type="email" name="email" autocomplete="email" placeholder="Work email" aria-label="Work email" required aria-describedby="sub-fine"/>
-        <button class="cta-p" type="submit">Subscribe</button>
-      </form>
-      <p class="err" role="alert" hidden></p>
-      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
-      <p class="fine" id="sub-fine">No spam. Unsubscribe from any email.</p>
-      </div>
-    </section>
+  
   <section class="all" aria-labelledby="all"><h2 id="all">All posts</h2><ul class="cards"><li><a class="card" href="/blog/compliance-isnt-coverage/"><span class="label">COI basics</span><h3>A COI on file isn't proof of coverage</h3><p>A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead.</p><time datetime="2026-10-27">Oct 27, 2026 · 3 min read</time></a></li><li><a class="card" href="/blog/irmi-crc-2026-day-2-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 2 of IRMI's Construction Risk Conference</h3><p>Additional insured endorsements, prequalification as a snapshot, and insurance data you can't search. What we were digging into on day 2 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/irmi-design-build-guide-update/"><span class="label">Industry news</span><h3>IRMI is rewriting its design-build risk and insurance guide</h3><p>IRMI picked American Global to rewrite its Design-Build Risk and Insurance guide. What the update covers, and what design-build means for contractor COI review.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/how-to-check-a-contractor-coi/"><span class="label">How-to</span><h3>How to check a contractor COI against your project requirements</h3><p>A practical checklist for checking a contractor certificate of insurance against one project's requirements: coverages, limits, dates and endorsements.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/irmi-crc-2026-day-1-takeaways/"><span class="label">Event takeaways</span><h3>3 takeaways from day 1 of IRMI's Construction Risk Conference</h3><p>Crowded bids and thin margins, umbrella rates still rising, and contractor management turning into an underwriting factor. What stuck with us from day 1 at IRMI CRC 2026.</p><time datetime="2026-10-27">Oct 27, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/construction-insurance-2027-renewal-outlook/"><span class="label">Market outlook</span><h3>What the 2027 construction insurance outlook means for contractor COIs</h3><p>WTW forecasts construction umbrella and excess rates up 5% to 15% in 2027. Here's the full outlook by line, and why it raises the stakes on contractor COI review.</p><time datetime="2026-10-26">Oct 26, 2026 · 2 min read</time></a></li></ul></section>
 </main>
 
@@ -391,47 +376,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
   </div>
 </div></section>
 
-<script>
-(() => {
-  const RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  for (const box of document.querySelectorAll('[data-sub]')) {
-    const form = box.querySelector('form');
-    const input = form.querySelector('input[type=email]');
-    const btn = form.querySelector('button');
-    const err = box.querySelector('.err');
-    const ok = box.querySelector('.ok');
-    const fail = (msg) => { err.textContent = msg; err.hidden = false; btn.disabled = false; btn.textContent = 'Subscribe'; };
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = input.value.trim();
-      if (!RE.test(email)) { fail('Please enter a valid email.'); input.focus(); return; }
-      if (form.botcheck.checked) return;
-      err.hidden = true;
-      btn.disabled = true;
-      btn.textContent = 'Subscribing…';
-      const w3 = new FormData();
-      w3.append('access_key', '9f256d7f-4b10-4b26-8502-bf23abe8455d');
-      w3.append('subject', 'Forsured Blog Subscriber');
-      w3.append('from_name', 'Forsured Blog');
-      w3.append('email', email);
-      w3.append('page', location.pathname);
-      const make = JSON.stringify({ email, subject: 'Forsured Blog Subscriber', form_source: 'Newsletter', placement: box.dataset.sub, page: location.pathname, submitted_at: new Date().toISOString() });
-      Promise.all([
-        fetch('https://api.web3forms.com/submit', { method: 'POST', body: w3 }),
-        fetch('https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: make }),
-      ])
-        .then((r) => r[0].json())
-        .then((j) => {
-          if (!j.success) throw new Error();
-          form.hidden = true;
-          box.querySelector('.fine').hidden = true;
-          ok.hidden = false;
-        })
-        .catch(() => fail('Something went wrong. Please try again.'));
-    });
-  }
-})();
-</script>
+
 <footer><div class="edge">
   <div class="fgrid">
     <div class="fb">

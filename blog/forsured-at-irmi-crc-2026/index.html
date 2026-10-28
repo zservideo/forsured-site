@@ -484,22 +484,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
         <span class="share-s" role="status"></span>
       </div>
     </section>
-    <section class="sub" aria-labelledby="sub" data-sub="post">
-      <div>
-        <h2 id="sub">Get new posts by email.</h2>
-        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
-      </div>
-      <div>
-      <form novalidate>
-        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-        <input id="sub-email" type="email" name="email" autocomplete="email" placeholder="Work email" aria-label="Work email" required aria-describedby="sub-fine"/>
-        <button class="cta-p" type="submit">Subscribe</button>
-      </form>
-      <p class="err" role="alert" hidden></p>
-      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
-      <p class="fine" id="sub-fine">No spam. Unsubscribe from any email.</p>
-      </div>
-    </section>
+    
     <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>
       <h3>Was Forsured a sponsor or exhibitor at IRMI CRC 2026?</h3>
@@ -557,47 +542,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
   }
 })();
 </script>
-<script>
-(() => {
-  const RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  for (const box of document.querySelectorAll('[data-sub]')) {
-    const form = box.querySelector('form');
-    const input = form.querySelector('input[type=email]');
-    const btn = form.querySelector('button');
-    const err = box.querySelector('.err');
-    const ok = box.querySelector('.ok');
-    const fail = (msg) => { err.textContent = msg; err.hidden = false; btn.disabled = false; btn.textContent = 'Subscribe'; };
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = input.value.trim();
-      if (!RE.test(email)) { fail('Please enter a valid email.'); input.focus(); return; }
-      if (form.botcheck.checked) return;
-      err.hidden = true;
-      btn.disabled = true;
-      btn.textContent = 'Subscribing…';
-      const w3 = new FormData();
-      w3.append('access_key', '9f256d7f-4b10-4b26-8502-bf23abe8455d');
-      w3.append('subject', 'Forsured Blog Subscriber');
-      w3.append('from_name', 'Forsured Blog');
-      w3.append('email', email);
-      w3.append('page', location.pathname);
-      const make = JSON.stringify({ email, subject: 'Forsured Blog Subscriber', form_source: 'Newsletter', placement: box.dataset.sub, page: location.pathname, submitted_at: new Date().toISOString() });
-      Promise.all([
-        fetch('https://api.web3forms.com/submit', { method: 'POST', body: w3 }),
-        fetch('https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: make }),
-      ])
-        .then((r) => r[0].json())
-        .then((j) => {
-          if (!j.success) throw new Error();
-          form.hidden = true;
-          box.querySelector('.fine').hidden = true;
-          ok.hidden = false;
-        })
-        .catch(() => fail('Something went wrong. Please try again.'));
-    });
-  }
-})();
-</script>
+
 <footer><div class="edge">
   <div class="fgrid">
     <div class="fb">

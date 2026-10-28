@@ -111,6 +111,7 @@ test.describe('blog post', () => {
   });
 
   test('newsletter signup', async ({ page }) => {
+    test.skip(!require('../tools/blog/build.js').NEWSLETTER, 'paused: NEWSLETTER is false in tools/blog/build.js');
     await ready(page, '/blog/compliance-isnt-coverage/');
     await page.addStyleTag({ content: 'nav { visibility: hidden !important; }' });
     await expect(page.locator('[data-sub]')).toHaveScreenshot('blog-post-newsletter.png');

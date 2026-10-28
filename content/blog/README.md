@@ -71,5 +71,5 @@ Body Markdown supports `##` and `###` headings, paragraphs, `-` and `1.` lists, 
 - Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors.
 - Never imply IRMI or any publication endorses Forsured (the footer says we're independent).
 - Lead with the answer. The first paragraph and the takeaways should answer the headline's question.
-- Every post gets share buttons, the newsletter signup, the hero, a Markdown copy and full structured data automatically. Don't add your own.
+- Every post gets share buttons, the newsletter signup (when `NEWSLETTER` is on in build.js; paused until Q1 2027), the hero, a Markdown copy and full structured data automatically. Don't add your own.
 - Tie each post back to contractor COI compliance lightly. At most one soft line about Forsured near the end.
