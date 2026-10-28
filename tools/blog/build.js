@@ -254,12 +254,12 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .sub h2{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:-.01em;line-height:1.3}
 .sub>div>p{font-size:15px;line-height:1.6;color:var(--mt);margin-top:8px;max-width:560px}
 .sub form{display:flex;gap:8px;margin-top:16px;max-width:520px}
-.sub input[type=email]{flex:1;min-width:0;height:40px;padding:0 12px;border:1px solid #D0D5DD;border-radius:8px;background:#fff;font:inherit;font-size:15px;color:var(--tx);box-shadow:0 1px 2px rgba(20,28,37,.04)}
+.sub input[type=email]{flex:1;min-width:0;height:40px;padding:0 12px;border:1px solid #E4E7EC;border-radius:8px;background:#fff;font:inherit;font-size:15px;color:var(--tx);box-shadow:0 1px 2px rgba(20,28,37,.04)}
 .sub input[type=email]:focus{outline:2px solid var(--f);outline-offset:1px;border-color:var(--f)}
-.sub .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.sub .hp{display:none}
 .sub .fine{font-size:12px;line-height:1.5;color:var(--mt);margin-top:10px}
-.sub .err{font-size:13px;color:#B42318;margin-top:10px}
-.sub .ok{font-size:15px;line-height:1.6;margin-top:12px;padding:12px 14px;background:#ECFDF3;border:1px solid #ABEFC6;border-radius:8px;color:#085D3A}
+.sub .err{font-size:13px;color:#C4291C;margin-top:10px}
+.sub .ok{font-size:15px;line-height:1.6;margin-top:12px;padding:12px 14px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #16864E;border-radius:8px;color:#16864E}
 .sub [hidden]{display:none}
 .index-sub{margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 48px;align-items:center;padding:28px}
 .index-sub form{margin-top:0}
@@ -563,9 +563,8 @@ function subscribe(id, where, cls = '') {
       </div>
       <div>
       <form novalidate>
-        <label class="hp" aria-hidden="true">Leave this empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"/></label>
-        <label for="${id}-email" class="hp">Work email</label>
-        <input id="${id}-email" type="email" name="email" autocomplete="email" placeholder="Work email" required aria-describedby="${id}-fine"/>
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+        <input id="${id}-email" type="email" name="email" autocomplete="email" placeholder="Work email" aria-label="Work email" required aria-describedby="${id}-fine"/>
         <button class="cta-p" type="submit">Subscribe</button>
       </form>
       <p class="err" role="alert" hidden></p>
