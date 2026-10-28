@@ -440,7 +440,7 @@ const FOOTER = () => `<footer><div class="edge">
     </div>
   </div>
   <div class="fbot">
-    <p>Independent commentary from Forsured. Not affiliated with or endorsed by IRMI or the publications we cite.</p>
+    <p>Independent commentary from Forsured. Not affiliated with or endorsed by the organizations or publications we cite.</p>
     <p>© ${year()} Forsured · <a href="/">forsured.ai</a></p>
   </div>
 </div></footer>
