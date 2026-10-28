@@ -482,10 +482,20 @@ footer a{display:inline-block;line-height:24px}
 (() => {
   const url = document.querySelector('link[rel=canonical]').href;
   const title = document.querySelector('h1').textContent;
+  const share = (u) => navigator.share({ title, url: u }).catch(() => {});
+  const phone = !!navigator.share && matchMedia('(pointer: coarse)').matches;
   for (const b of document.querySelectorAll('[data-share]')) {
     if (!navigator.share) continue;
     b.hidden = false;
-    b.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+    b.addEventListener('click', () => share(url));
+  }
+  if (phone) {
+    for (const a of document.querySelectorAll('a[data-net]:not([data-net=email])')) {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        share(url + '?utm_source=' + a.dataset.net + '&utm_medium=social&utm_campaign=blog_share');
+      });
+    }
   }
   for (const b of document.querySelectorAll('[data-copy]')) {
     b.addEventListener('click', async () => {
