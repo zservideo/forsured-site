@@ -1,6 +1,7 @@
 // The blog and the discovery files built from it (tools/blog/build.js): the generated pages are
 // current, every post carries the structured data, sources, hero image, share buttons and share card
-// that search engines, AI answer engines and social networks read, and the feed, sitemap, robots.txt,
+// that search engines, AI answer engines and social networks read, the home page nav, phone menu and
+// footer links, and the feed, sitemap, robots.txt,
 // llms.txt, llms-full.txt and Markdown copies list everything. IndexNow's key file matches its workflow.
 // Copy, brand, SEO, accessibility, layout and performance checks cover each post through PAGES.
 const { test, expect } = require('@playwright/test');
@@ -203,6 +204,48 @@ test('the home page links to the blog and its feed', async ({ page }) => {
   await expect(page.locator('#nav .nlinks a[href="blog/"]')).toHaveText('Blog');
   await expect(page.locator('footer a[href="blog/"]')).toHaveCount(1);
   await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute('href', 'https://forsured.ai/blog/feed.xml');
+});
+
+// Readers who land on a post from search or social need the whole site, not just the logo.
+const siteHref = (h) => (h.startsWith('#') ? `/${h}` : h === 'blog/' ? '/blog/' : h);
+
+test('blog pages carry the home page navigation and footer links', async ({ page }) => {
+  await open(page, '/', { fonts: false });
+  const homeNav = (await page.locator('#nav .nlinks a').evaluateAll((as) => as.map((a) => a.getAttribute('href')))).map(siteHref);
+  const homeMenu = (await page.locator('#mm a').evaluateAll((as) => as.map((a) => a.getAttribute('href')))).map(siteHref);
+  const homeFooter = (await page.locator('footer .fc a').evaluateAll((as) => as.map((a) => a.getAttribute('href')))).map(siteHref);
+  for (const url of ['/blog/', `/blog/${POSTS[0]}/`]) {
+    await open(page, url, { fonts: false });
+    expect(await page.locator('nav .nlinks a').evaluateAll((as) => as.map((a) => a.getAttribute('href'))), `${url} nav`).toEqual(homeNav);
+    expect(await page.locator('#mm a').evaluateAll((as) => as.map((a) => a.getAttribute('href'))), `${url} menu`).toEqual(homeMenu);
+    const footer = await page.locator('footer .fc a').evaluateAll((as) => as.map((a) => a.getAttribute('href')));
+    for (const href of homeFooter) expect(footer, `${url} footer`).toContain(href);
+    await expect(page.locator('footer .fl')).toHaveAttribute('href', '/');
+  }
+});
+
+test('on phones, the blog menu button opens the site menu and closes it again', async ({ browser }) => {
+  const context = await browser.newContext({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  await open(page, `/blog/${POSTS[0]}/`, { fonts: false });
+  const btn = page.locator('nav .mtog');
+  const menu = page.locator('#mm');
+  await expect(page.locator('nav .nlinks')).toBeHidden();
+  await expect(btn).toBeVisible();
+  await expect(menu).toBeHidden();
+  await btn.click();
+  await expect(menu).toBeVisible();
+  await expect(btn).toHaveAttribute('aria-expanded', 'true');
+  await expect(menu.getByRole('link', { name: 'How It Works' })).toBeVisible();
+  await expect(menu.getByRole('link', { name: 'Free COI Risk Check →' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(menu).toBeHidden();
+  await expect(btn).toHaveAttribute('aria-expanded', 'false');
+  await expect(btn).toBeFocused();
+  await btn.click();
+  await menu.getByRole('link', { name: 'Platform' }).click();
+  await page.waitForURL(/\/#platform$/);
+  await context.close();
 });
 
 test('the blog source and tooling are not published', async ({ request }) => {
