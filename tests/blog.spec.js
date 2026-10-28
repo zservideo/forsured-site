@@ -270,6 +270,20 @@ test('blog pages carry the home page navigation and footer links', async ({ page
   }
 });
 
+test('blog header links sit where the home page puts them', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const xs = async (url) => {
+    await open(page, url);
+    return page.locator('nav .nlinks a').evaluateAll((as) => as.map((a) => Math.round(a.getBoundingClientRect().left)));
+  };
+  const home = await xs('/');
+  for (const url of ['/blog/', `/blog/${POSTS[0]}/`]) {
+    const blog = await xs(url);
+    expect(blog.length, url).toBe(home.length);
+    blog.forEach((x, i) => expect(Math.abs(x - home[i]), `${url} link ${i + 1} is ${x}px, home is ${home[i]}px`).toBeLessThanOrEqual(4));
+  }
+});
+
 test('on phones, the blog menu button opens the site menu and closes it again', async ({ browser }) => {
   const context = await browser.newContext({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
   const page = await context.newPage();
