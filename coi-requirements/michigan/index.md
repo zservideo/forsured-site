@@ -50,8 +50,9 @@ Michigan's anti-indemnity statute (Mich. Comp. Laws § 691.991) voids constructi
 ## Sources
 
 1. [Workers' disability compensation insurance requirements](https://www.michigan.gov/leo/bureaus-agencies/wdca/Insurance-Requirements/Pages/workers-disability-compensation-insurance-requirements), Michigan Department of Labor and Economic Opportunity
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Mich. Comp. Laws § 691.991](https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-691-991), Michigan Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

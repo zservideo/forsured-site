@@ -55,8 +55,9 @@ New York's anti-indemnity statute (N.Y. Gen. Oblig. Law §§ 5-322.1, 5-324) voi
 
 1. [Workers' compensation coverage requirements](https://www.wcb.ny.gov/content/main/coverage-requirements-wc/wc-coverage-required.jsp), New York State Workers' Compensation Board
 2. [Requirements for businesses applying for government permits, licenses or contracts](https://WWW.WCB.NY.GOV/content/main/Employers/requirements-businesses-applying-government-permits-licenses-contracts.pdf), New York State Workers' Compensation Board
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [N.Y. Gen. Oblig. Law § 5-322.1](https://www.nysenate.gov/legislation/laws/GOB/5-322.1), New York State Senate
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

@@ -55,8 +55,9 @@ Florida Statutes § 725.06 voids construction clauses that make a contractor ind
 
 1. [Coverage requirements](https://www.myfloridacfo.com/division/WC/employer/coverage.htm), Florida Division of Workers' Compensation
 2. [Fla. Admin. Code R. 61G4-15.003, Public liability insurance](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-61G4-15-003), Legal Information Institute
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [Fla. Stat. § 725.06](https://www.flsenate.gov/Laws/Statutes/2025/725.06), The Florida Senate
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

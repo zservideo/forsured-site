@@ -66,5 +66,7 @@ No. ISO's CG 20 01 amends the commercial general liability policy only. If your 
 2. [ISO's CGL Changes for 2013, Part III](https://www.claimsjournal.com/news/national/2013/04/09/226615.htm), Claims Journal, Apr 9, 2013
 3. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

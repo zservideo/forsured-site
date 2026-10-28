@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Montana
 
-Montana employers with full-time, part-time, seasonal or occasional employees must carry workers' comp. Self-employed contractors can apply for an Independent Contractor Exemption Certificate.
+Montana's Workers' Compensation Act applies to all employers and employees, with listed exceptions such as casual employment. Independent contractors must hold an Independent Contractor Exemption Certificate or their own coverage, and working without either can bring a fine of up to $5,000 per violation.
 
 Agency: [Montana Department of Labor and Industry](https://erd.dli.mt.gov/)
 
@@ -37,7 +37,7 @@ Montana's anti-indemnity statute (Mont. Code Ann. § 28-2-2111) voids constructi
 
 ### Do contractors need workers' comp in Montana?
 
-Montana employers with full-time, part-time, seasonal or occasional employees must carry workers' comp. Self-employed contractors can apply for an Independent Contractor Exemption Certificate. As of Oct 28, 2026. General information, not legal advice.
+Montana's Workers' Compensation Act applies to all employers and employees, with listed exceptions such as casual employment. Independent contractors must hold an Independent Contractor Exemption Certificate or their own coverage, and working without either can bring a fine of up to $5,000 per violation. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Montana require contractors to carry general liability insurance?
 
@@ -49,10 +49,12 @@ Montana's anti-indemnity statute (Mont. Code Ann. § 28-2-2111) voids constructi
 
 ## Sources
 
-1. [Montana workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/montana/), OnPay, May 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Mont. Code Ann. § 39-71-401](https://mca.legmt.gov/bills/mca/title_0390/chapter_0710/part_0040/section_0010/0390-0710-0040-0010.html), Montana Legislature
+2. [Independent contractor exemption certificates](https://erd.dli.mt.gov/work-comp-regulations/montana-contractor/independent-contractor), Montana Department of Labor and Industry
+3. [Mont. Code Ann. § 28-2-2111](https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0210/section_0110/0280-0020-0210-0110.html), Montana Legislature
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
+6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

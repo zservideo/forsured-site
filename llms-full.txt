@@ -7,6 +7,7 @@ Key facts:
 - Contact: hello@forsured.ai
 - Offer: a free COI risk check. Send one project's requirements and a contractor COI or two, and Forsured shows every gap it finds.
 - Integrations: Procore (available for early access customers).
+- Content on this site is general information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency, and doesn't sell insurance.
 
 ## Product
 
@@ -73,13 +74,13 @@ General information, not legal or insurance advice. Forsured is a software compa
 - [South Dakota contractor insurance requirements](https://forsured.ai/coi-requirements/south-dakota/): workers' comp required at Not required by law; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/south-dakota/index.md
 - [Tennessee contractor insurance requirements](https://forsured.ai/coi-requirements/tennessee/): workers' comp required at 5 employees; construction 1; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/tennessee/index.md
 - [Texas contractor insurance requirements](https://forsured.ai/coi-requirements/texas/): workers' comp required at Optional (required on public projects); license insurance minimum: No statewide minimum; anti-indemnity statute voids: Own negligence, with exceptions; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/texas/index.md
-- [Utah contractor insurance requirements](https://forsured.ai/coi-requirements/utah/): workers' comp required at 1 employee; license insurance minimum: $100K/$300K (rising); anti-indemnity statute voids: The other party's fault; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/utah/index.md
+- [Utah contractor insurance requirements](https://forsured.ai/coi-requirements/utah/): workers' comp required at 1 employee; license insurance minimum: $100K/$300K (increase pending); anti-indemnity statute voids: The other party's fault; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/utah/index.md
 - [Vermont contractor insurance requirements](https://forsured.ai/coi-requirements/vermont/): workers' comp required at 1 employee; license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/vermont/index.md
 - [Virginia contractor insurance requirements](https://forsured.ai/coi-requirements/virginia/): workers' comp required at 3 employees (counting those working under you); license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/virginia/index.md
 - [Washington contractor insurance requirements](https://forsured.ai/coi-requirements/washington/): workers' comp required at 1 employee (state fund); license insurance minimum: $200K + $50K PD, or $250K CSL; anti-indemnity statute voids: Sole negligence; shared fault limited. Markdown: https://forsured.ai/coi-requirements/washington/index.md
 - [West Virginia contractor insurance requirements](https://forsured.ai/coi-requirements/west-virginia/): workers' comp required at All employers; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/west-virginia/index.md
 - [Wisconsin contractor insurance requirements](https://forsured.ai/coi-requirements/wisconsin/): workers' comp required at 3 employees, or $500 a quarter; license insurance minimum: $250K (dwelling contractors); anti-indemnity statute voids: Own negligence, even in part. Markdown: https://forsured.ai/coi-requirements/wisconsin/index.md
-- [Wyoming contractor insurance requirements](https://forsured.ai/coi-requirements/wyoming/): workers' comp required at Most employers (state fund); license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/wyoming/index.md
+- [Wyoming contractor insurance requirements](https://forsured.ai/coi-requirements/wyoming/): workers' comp required at Required work (state fund); license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/wyoming/index.md
 
 ## Optional
 
@@ -157,6 +158,8 @@ No. ISO's CG 20 01 amends the commercial general liability policy only. If your 
 2. [ISO's CGL Changes for 2013, Part III](https://www.claimsjournal.com/news/national/2013/04/09/226615.htm), Claims Journal, Apr 9, 2013
 3. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
 
@@ -222,6 +225,8 @@ Forsured is construction insurance compliance software. It checks every contract
 
 1. [IRMI Construction Risk Conference (CRC)](https://www.irmi.com/conferences/construction-risk-conference), IRMI
 2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
@@ -296,6 +301,8 @@ At onboarding and again whenever a policy renews, changes or is close to expirin
 2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 3. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
 
@@ -351,6 +358,8 @@ No. Prequalification is a point-in-time review. Contractor policies renew, lapse
 1. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 2. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
 
@@ -397,6 +406,8 @@ In design-build, the builder's team takes on design responsibility. That brings 
 
 1. [American Global tapped to update IRMI's Design-Build Risk and Insurance guide](https://www.constructiondive.com/press-release/20261023-american-global-tapped-to-update-irmis-design-build-risk-and-insurance-gui/), Construction Dive, Oct 23, 2026
 2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
@@ -478,6 +489,8 @@ The contractor's insurance broker or agent. The fastest path is to send the brok
 1. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
 2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
 
@@ -532,6 +545,8 @@ WTW's Insurance Marketplace Realities 2027 report forecasts umbrella and excess 
 
 1. [3 economic factors determining construction's winners and losers: ABC](https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/), Construction Dive, Oct 13, 2026
 2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
@@ -598,6 +613,8 @@ WTW expects builders risk to be roughly flat (minus 2.5% to plus 2.5% for non-hi
 1. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
 2. [Prices Rise Sharply as Clouds Darken Construction Insurance Market for Buyers](https://www.enr.com/articles/51726-prices-rise-sharply-as-clouds-darken-construction-insurance-market-for-buyers), ENR, May 12, 2021
 3. [3 economic factors determining construction's winners and losers: ABC](https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/), Construction Dive, Oct 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -50,8 +50,9 @@ West Virginia's anti-indemnity statute (W. Va. Code § 55-8-14) voids constructi
 ## Sources
 
 1. [Employer coverage](https://www.wvinsurance.gov/Employer-Coverage), West Virginia Offices of the Insurance Commissioner
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [W. Va. Code § 55-8-14](https://code.wvlegislature.gov/55-8-14/), West Virginia Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

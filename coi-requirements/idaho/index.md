@@ -49,10 +49,11 @@ Idaho's anti-indemnity statute (Idaho Code § 29-114) voids construction contrac
 
 ## Sources
 
-1. [Idaho workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/idaho/), OnPay, May 2026
+1. [Employers FAQs](https://iic.idaho.gov/employer-compliance-division/employer-information/employers-faqs/), Idaho Industrial Commission
 2. [Contractor registration FAQ](https://dopl.idaho.gov/con/con-faq/), Idaho Division of Occupational and Professional Licenses
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [Idaho Code § 29-114](https://legislature.idaho.gov/statutesrules/idstat/Title29/T29CH1/SECT29-114/), Idaho Legislature
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

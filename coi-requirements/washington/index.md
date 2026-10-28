@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Washington
 
-Any Washington business with at least one employee, even part-time, must have workers' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can't write it.
+Any Washington business with employees must have workers' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can't write it.
 
 Agency: [Washington Department of Labor & Industries](https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/)
 
@@ -37,7 +37,7 @@ Washington's statute (RCW 4.24.115) voids construction clauses that make a contr
 
 ### Do contractors need workers' comp in Washington?
 
-Any Washington business with at least one employee, even part-time, must have workers' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can't write it. As of Oct 28, 2026. General information, not legal advice.
+Any Washington business with employees must have workers' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can't write it. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Washington require contractors to carry general liability insurance?
 
@@ -49,11 +49,12 @@ Washington's statute (RCW 4.24.115) voids construction clauses that make a contr
 
 ## Sources
 
-1. [Washington workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/washington/), OnPay, Jun 2026
+1. [Do I need a workers' comp account?](https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/), Washington Department of Labor & Industries
 2. [Register as a contractor](https://lni.wa.gov/licensing-permits/contractors/register-as-a-contractor/index), Washington Department of Labor & Industries
 3. [What is stop gap coverage?](https://www.hubinternational.com/en-us/insurance-glossary/s/stop-gap-coverage/), HUB International
-4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+4. [Wash. Rev. Code § 4.24.115](https://app.leg.wa.gov/RCW/default.aspx?cite=4.24.115), Washington State Legislature
+5. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

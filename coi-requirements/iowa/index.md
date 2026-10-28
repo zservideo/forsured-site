@@ -49,9 +49,11 @@ Iowa's anti-indemnity statute (Iowa Code § 537A.5) voids construction contract 
 
 ## Sources
 
-1. [Iowa workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/iowa/), OnPay, May 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Workers' compensation questions and answers](https://dial.iowa.gov/media/8738/download?inline), Iowa Division of Workers' Compensation
+2. [Rejection of coverage](https://dial.iowa.gov/hearings/workers-comp/compliance/reporting/rejection-coverage), Iowa Division of Workers' Compensation
+3. [Iowa Code § 537A.5](https://www.legis.iowa.gov/docs/code/537A.5.pdf), Iowa Legislature
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

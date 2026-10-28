@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Delaware
 
-Delaware employers with one or more employees must carry workers' comp. Sole proprietors and partners don't have to cover themselves unless they choose to.
+Delaware employers with one or more employees must carry workers' comp. Some workers are exempt, such as certain farm workers and casual employees. The state points to 19 Del. C. §§ 2307 and 2308 for the full list.
 
 Agency: [Delaware Office of Workers' Compensation](https://industrialaffairs.delaware.gov/workers-compensation-v1?hsLang=en-us)
 
@@ -37,7 +37,7 @@ Delaware's anti-indemnity statute (Del. Code Ann. tit. 6, § 2704) voids constru
 
 ### Do contractors need workers' comp in Delaware?
 
-Delaware employers with one or more employees must carry workers' comp. Sole proprietors and partners don't have to cover themselves unless they choose to. As of Oct 28, 2026. General information, not legal advice.
+Delaware employers with one or more employees must carry workers' comp. Some workers are exempt, such as certain farm workers and casual employees. The state points to 19 Del. C. §§ 2307 and 2308 for the full list. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Delaware require contractors to carry general liability insurance?
 
@@ -49,7 +49,7 @@ Delaware's anti-indemnity statute (Del. Code Ann. tit. 6, § 2704) voids constru
 
 ## Sources
 
-1. [Delaware workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/delaware/), OnPay, May 2026
+1. [Workers' compensation FAQs](https://industrialaffairs.delaware.gov/-workers-comp-faqs?hsLang=en#employers), Delaware Department of Labor, Office of Workers' Compensation
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 

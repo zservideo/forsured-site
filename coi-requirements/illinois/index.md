@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Illinois
 
-Illinois requires most employers with full-time or part-time employees to carry workers' comp from the first day of employment.
+Illinois law requires most employers to carry workers' comp for their employees.
 
 Agency: [Illinois Workers' Compensation Commission](https://iwcc.illinois.gov/coverage.html)
 
@@ -37,7 +37,7 @@ Illinois's anti-indemnity statute (740 ILCS 35/1) voids construction contract cl
 
 ### Do contractors need workers' comp in Illinois?
 
-Illinois requires most employers with full-time or part-time employees to carry workers' comp from the first day of employment. As of Oct 28, 2026. General information, not legal advice.
+Illinois law requires most employers to carry workers' comp for their employees. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Illinois require contractors to carry general liability insurance?
 
@@ -50,9 +50,8 @@ Illinois's anti-indemnity statute (740 ILCS 35/1) voids construction contract cl
 ## Sources
 
 1. [Insurance coverage](https://iwcc.illinois.gov/coverage.html), Illinois Workers' Compensation Commission
-2. [Illinois workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/illinois/), OnPay, Apr 2026
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

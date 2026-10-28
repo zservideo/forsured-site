@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Massachusetts
 
-Every Massachusetts employer with one or more employees, including part-time workers, must carry workers' comp. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves.
+Every Massachusetts employer must carry workers' comp for its employees, whatever the number of employees or hours worked. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves.
 
 Agency: [Massachusetts Department of Industrial Accidents](https://www.mass.gov/orgs/department-of-industrial-accidents)
 
@@ -37,7 +37,7 @@ Massachusetts General Laws ch. 149, § 29C voids construction clauses that make 
 
 ### Do contractors need workers' comp in Massachusetts?
 
-Every Massachusetts employer with one or more employees, including part-time workers, must carry workers' comp. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves. As of Oct 28, 2026. General information, not legal advice.
+Every Massachusetts employer must carry workers' comp for its employees, whatever the number of employees or hours worked. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Massachusetts require contractors to carry general liability insurance?
 
@@ -49,9 +49,10 @@ Massachusetts General Laws ch. 149, § 29C voids construction clauses that make 
 
 ## Sources
 
-1. [Massachusetts workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/massachusetts/), OnPay, Jan 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Workers' compensation insurance requirements](https://www.mass.gov/info-details/workers-compensation-insurance-requirements), Massachusetts Department of Industrial Accidents
+2. [Mass. Gen. Laws ch. 149, § 29C](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section29C), Massachusetts Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

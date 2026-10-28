@@ -51,8 +51,9 @@ Rhode Island's anti-indemnity statute (R.I. Gen. Laws § 6-34-1) voids construct
 
 1. [Employers](https://dlt.ri.gov/wc/employers/), Rhode Island Department of Labor and Training
 2. [Contractor registration FAQs](https://crb.ri.gov/contractor-registration/faqs), Rhode Island Contractors' Registration and Licensing Board
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [R.I. Gen. Laws § 6-34-1](https://webserver.rilegislature.gov/Statutes/TITLE6/6-34/6-34-1.htm), Rhode Island General Assembly
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

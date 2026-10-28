@@ -49,9 +49,10 @@ Nebraska's anti-indemnity statute (Neb. Rev. Stat. § 25-21,187) voids construct
 
 ## Sources
 
-1. [Nebraska workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/nebraska/), OnPay, Jun 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Employer frequently asked questions](https://www.newcc.gov/employers/employer-frequently-asked-questions), Nebraska Workers' Compensation Court
+2. [Neb. Rev. Stat. § 25-21,187](https://nebraskalegislature.gov/laws/statutes.php?statute=25-21,187), Nebraska Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

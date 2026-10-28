@@ -49,10 +49,11 @@ Minnesota's anti-indemnity statute (Minn. Stat. §§ 337.01 to 337.05) voids con
 
 ## Sources
 
-1. [Minnesota workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/minnesota/), OnPay, Jun 2026
+1. [Who needs workers' compensation coverage?](https://www.dli.mn.gov/business/workers-compensation/work-comp-who-needs-workers-compensation-coverage), Minnesota Department of Labor and Industry
 2. [Residential building contractor license application instructions (Minn. Stat. § 326B.86)](https://dli.mn.gov/sites/default/files/pdf/ccld_lic-01Inst.pdf), Minnesota Department of Labor and Industry
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [Minn. Stat. § 337.02](https://www.revisor.mn.gov/statutes/cite/337.02), Minnesota Office of the Revisor of Statutes
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

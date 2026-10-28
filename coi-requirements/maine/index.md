@@ -49,7 +49,7 @@ Maine has no general construction anti-indemnity statute. Courts there generally
 
 ## Sources
 
-1. [Maine workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/maine/), OnPay, May 2026
+1. [Employer's guide to workers' compensation insurance in Maine](https://www.maine.gov/pfr/insurance/sites/maine.gov.pfr.insurance/files/inline-files/Workers-Comp-Employer-Guide.pdf), Maine Bureau of Insurance
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 

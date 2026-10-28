@@ -52,13 +52,13 @@ General information, not legal or insurance advice. Forsured is a software compa
 | [South Dakota](https://forsured.ai/coi-requirements/south-dakota/) | Not required by law | No statewide minimum | Sole negligence |
 | [Tennessee](https://forsured.ai/coi-requirements/tennessee/) | 5 employees; construction 1 | No statewide minimum | Sole negligence |
 | [Texas](https://forsured.ai/coi-requirements/texas/) | Optional (required on public projects) | No statewide minimum | Own negligence, with exceptions; reaches additional insured |
-| [Utah](https://forsured.ai/coi-requirements/utah/) | 1 employee | $100K/$300K (rising) | The other party's fault; reaches additional insured |
+| [Utah](https://forsured.ai/coi-requirements/utah/) | 1 employee | $100K/$300K (increase pending) | The other party's fault; reaches additional insured |
 | [Vermont](https://forsured.ai/coi-requirements/vermont/) | 1 employee | No statewide minimum | No general statute |
 | [Virginia](https://forsured.ai/coi-requirements/virginia/) | 3 employees (counting those working under you) | No statewide minimum | Sole negligence |
 | [Washington](https://forsured.ai/coi-requirements/washington/) | 1 employee (state fund) | $200K + $50K PD, or $250K CSL | Sole negligence; shared fault limited |
 | [West Virginia](https://forsured.ai/coi-requirements/west-virginia/) | All employers | No statewide minimum | Sole negligence |
 | [Wisconsin](https://forsured.ai/coi-requirements/wisconsin/) | 3 employees, or $500 a quarter | $250K (dwelling contractors) | Own negligence, even in part |
-| [Wyoming](https://forsured.ai/coi-requirements/wyoming/) | Most employers (state fund) | No statewide minimum | No general statute |
+| [Wyoming](https://forsured.ai/coi-requirements/wyoming/) | Required work (state fund) | No statewide minimum | No general statute |
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Each state guide lists its sources.
 

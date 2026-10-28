@@ -50,8 +50,9 @@ Missouri's anti-indemnity statute (Mo. Rev. Stat. § 434.100) voids construction
 ## Sources
 
 1. [Who is required to carry workers' compensation insurance coverage?](https://labor.mo.gov/faqs/knowledge-base/who-required-carry-workers-compensation-insurance-coverage), Missouri Department of Labor and Industrial Relations
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Mo. Rev. Stat. § 434.100](https://revisor.mo.gov/main/OneSection.aspx?section=434.100), Missouri Revisor of Statutes
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

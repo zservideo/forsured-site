@@ -50,8 +50,9 @@ Connecticut's anti-indemnity statute (Conn. Gen. Stat. § 52-572k) voids constru
 ## Sources
 
 1. [About workers' compensation insurance](https://portal.ct.gov/wcc/knowledge-base/articles/employers/workers-compensation-insurance), Connecticut Workers' Compensation Commission
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Conn. Gen. Stat. § 52-572k](https://www.cga.ct.gov/current/pub/chap_925.htm#sec_52-572k), Connecticut General Assembly
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

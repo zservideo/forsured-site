@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Nevada
 
-Any Nevada employer with at least one employee must carry workers' comp. On most construction projects, the contractor in charge has to provide coverage for independent contractors working on the job.
+Any Nevada employer with at least one employee must carry workers' comp. The state's employer guide singles out construction trades: they must carry workers' comp even where other businesses could claim an exemption.
 
 Agency: [Nevada Division of Industrial Relations](https://dir.nv.gov/WCS/home/)
 
@@ -37,7 +37,7 @@ Nevada's statute (Nev. Rev. Stat. § 40.693) limits indemnity and defense clause
 
 ### Do contractors need workers' comp in Nevada?
 
-Any Nevada employer with at least one employee must carry workers' comp. On most construction projects, the contractor in charge has to provide coverage for independent contractors working on the job. As of Oct 28, 2026. General information, not legal advice.
+Any Nevada employer with at least one employee must carry workers' comp. The state's employer guide singles out construction trades: they must carry workers' comp even where other businesses could claim an exemption. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Nevada require contractors to carry general liability insurance?
 
@@ -49,7 +49,7 @@ Nevada's statute (Nev. Rev. Stat. § 40.693) limits indemnity and defense clause
 
 ## Sources
 
-1. [Nevada workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/nevada/), OnPay, May 2026
+1. [Employer's guide to workers' compensation](https://dir.nv.gov/uploadedFiles/dirnvgov/content/WCS/EmployersDocs/EmployerBrochure.7.2026.pdf), Nevada Division of Industrial Relations, 2026
 2. [NRS 624.256, Proof of industrial insurance](https://nevada.public.law/statutes/nrs_624.256), Nevada Legislature (via Public.Law)
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor

@@ -50,8 +50,9 @@ South Carolina's anti-indemnity statute (S.C. Code Ann. § 32-2-10) voids constr
 ## Sources
 
 1. [Employer FAQs](https://wcc.sc.gov/employer-faqs), South Carolina Workers' Compensation Commission
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [S.C. Code Ann. tit. 32, ch. 2 (§ 32-2-10)](https://www.scstatehouse.gov/code/t32c002.php), South Carolina Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

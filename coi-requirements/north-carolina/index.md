@@ -50,8 +50,9 @@ North Carolina's anti-indemnity statute (N.C. Gen. Stat. § 22B-1) voids constru
 ## Sources
 
 1. [Employers' obligation to obtain and maintain workers' compensation coverage](https://ic.nc.gov/wcinsrqmt.html), North Carolina Industrial Commission
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [N.C. Gen. Stat. § 22B-1](https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_22B/GS_22B-1.html), North Carolina General Assembly
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

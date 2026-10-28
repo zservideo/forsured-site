@@ -49,10 +49,12 @@ Ohio's anti-indemnity statute (Ohio Rev. Code Ann. § 2305.31) voids constructio
 
 ## Sources
 
-1. [Ohio workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/ohio/), OnPay, Dec 2025
-2. [What is stop gap coverage?](https://www.hubinternational.com/en-us/insurance-glossary/s/stop-gap-coverage/), HUB International
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [For employers](https://info.bwc.ohio.gov/for-employers), Ohio Bureau of Workers' Compensation
+2. [Self-insurance program description](https://bwc.ohio.gov/employer/programs/siinfo/siprogramdescription.asp), Ohio Bureau of Workers' Compensation
+3. [What is stop gap coverage?](https://www.hubinternational.com/en-us/insurance-glossary/s/stop-gap-coverage/), HUB International
+4. [Ohio Rev. Code § 2305.31](https://codes.ohio.gov/ohio-revised-code/section-2305.31), Ohio Legislative Service Commission
+5. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

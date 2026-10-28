@@ -458,7 +458,7 @@ const FOOTER = () => `<footer><div class="edge">
     </div>
   </div>
   <div class="fbot">
-    <p>Independent commentary from Forsured. Not affiliated with or endorsed by the organizations or publications we cite.</p>
+    <p>Independent commentary from Forsured. Not affiliated with or endorsed by the organizations or publications we cite. General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency.</p>
     <p>© ${year()} Forsured · <a href="/">forsured.ai</a></p>
   </div>
 </div></footer>
@@ -715,7 +715,7 @@ ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`)
 ` : ''}    <section class="extra sources" aria-labelledby="sources">
       <h2 id="sources">Sources</h2>
       <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}">${esc(s.title)}</a>${s.publisher ? `, ${esc(s.publisher)}` : ''}${s.date ? `, ${esc(s.date)}` : ''}</li>`).join('')}</ol>
-      <p class="note">We link to the original reporting and research behind every post. Spotted something we got wrong? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
+      <p class="note">We link to the original reporting and research behind every post. This post is general information, not legal or insurance advice: Forsured is a software company, not a law firm or a licensed insurance agency, so confirm anything you'll rely on with your broker or attorney. Spotted something we got wrong? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
     </section>
   </div>
 </article>
@@ -869,6 +869,7 @@ Key facts:
 - Contact: hello@forsured.ai
 - Offer: a free COI risk check. Send one project's requirements and a contractor COI or two, and Forsured shows every gap it finds.
 - Integrations: Procore (available for early access customers).
+- Content on this site is general information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency, and doesn't sell insurance.
 
 ## Product
 
@@ -912,6 +913,8 @@ ${p.faq && p.faq.length ? `\n## Common questions\n\n${p.faq.map((f) => `### ${f.
 ## Sources
 
 ${p.sources.map((s, i) => `${i + 1}. [${s.title}](${s.url})${s.publisher ? `, ${s.publisher}` : ''}${s.date ? `, ${s.date}` : ''}`).join('\n')}
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
 
 ---
 Forsured: construction insurance compliance software. ${SITE} · hello@forsured.ai

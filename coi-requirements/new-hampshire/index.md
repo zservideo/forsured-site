@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in New Hampshire
 
-New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Corporations and LLCs with no employees and three or fewer officers or members can go without. A fourth officer or member makes coverage mandatory.
+New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Up to three owners, members or executive officers can be excluded, but only through paperwork the insurer files with the Department of Labor. A sole proprietor isn't required to cover themselves.
 
 Agency: [New Hampshire Department of Labor](https://www.dol.nh.gov/workers-compensation/employer-information)
 
@@ -37,7 +37,7 @@ New Hampshire's anti-indemnity statute (N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A
 
 ### Do contractors need workers' comp in New Hampshire?
 
-New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Corporations and LLCs with no employees and three or fewer officers or members can go without. A fourth officer or member makes coverage mandatory. As of Oct 28, 2026. General information, not legal advice.
+New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Up to three owners, members or executive officers can be excluded, but only through paperwork the insurer files with the Department of Labor. A sole proprietor isn't required to cover themselves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does New Hampshire require contractors to carry general liability insurance?
 
@@ -49,7 +49,7 @@ New Hampshire's anti-indemnity statute (N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A
 
 ## Sources
 
-1. [New Hampshire workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/new-hampshire/), OnPay, May 2026
+1. [Workers' compensation FAQs](https://insurance.nh.gov/consumers/business-insurance/workers-compensation/faqs), New Hampshire Insurance Department
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 

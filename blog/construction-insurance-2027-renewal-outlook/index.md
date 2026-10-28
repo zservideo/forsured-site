@@ -60,5 +60,7 @@ WTW expects builders risk to be roughly flat (minus 2.5% to plus 2.5% for non-hi
 2. [Prices Rise Sharply as Clouds Darken Construction Insurance Market for Buyers](https://www.enr.com/articles/51726-prices-rise-sharply-as-clouds-darken-construction-insurance-market-for-buyers), ENR, May 12, 2021
 3. [3 economic factors determining construction's winners and losers: ABC](https://www.constructiondive.com/news/constructions-winners-losers-drift-farther-apart/832780/), Construction Dive, Oct 13, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

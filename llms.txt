@@ -7,6 +7,7 @@ Key facts:
 - Contact: hello@forsured.ai
 - Offer: a free COI risk check. Send one project's requirements and a contractor COI or two, and Forsured shows every gap it finds.
 - Integrations: Procore (available for early access customers).
+- Content on this site is general information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency, and doesn't sell insurance.
 
 ## Product
 
@@ -73,13 +74,13 @@ General information, not legal or insurance advice. Forsured is a software compa
 - [South Dakota contractor insurance requirements](https://forsured.ai/coi-requirements/south-dakota/): workers' comp required at Not required by law; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/south-dakota/index.md
 - [Tennessee contractor insurance requirements](https://forsured.ai/coi-requirements/tennessee/): workers' comp required at 5 employees; construction 1; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/tennessee/index.md
 - [Texas contractor insurance requirements](https://forsured.ai/coi-requirements/texas/): workers' comp required at Optional (required on public projects); license insurance minimum: No statewide minimum; anti-indemnity statute voids: Own negligence, with exceptions; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/texas/index.md
-- [Utah contractor insurance requirements](https://forsured.ai/coi-requirements/utah/): workers' comp required at 1 employee; license insurance minimum: $100K/$300K (rising); anti-indemnity statute voids: The other party's fault; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/utah/index.md
+- [Utah contractor insurance requirements](https://forsured.ai/coi-requirements/utah/): workers' comp required at 1 employee; license insurance minimum: $100K/$300K (increase pending); anti-indemnity statute voids: The other party's fault; reaches additional insured. Markdown: https://forsured.ai/coi-requirements/utah/index.md
 - [Vermont contractor insurance requirements](https://forsured.ai/coi-requirements/vermont/): workers' comp required at 1 employee; license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/vermont/index.md
 - [Virginia contractor insurance requirements](https://forsured.ai/coi-requirements/virginia/): workers' comp required at 3 employees (counting those working under you); license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/virginia/index.md
 - [Washington contractor insurance requirements](https://forsured.ai/coi-requirements/washington/): workers' comp required at 1 employee (state fund); license insurance minimum: $200K + $50K PD, or $250K CSL; anti-indemnity statute voids: Sole negligence; shared fault limited. Markdown: https://forsured.ai/coi-requirements/washington/index.md
 - [West Virginia contractor insurance requirements](https://forsured.ai/coi-requirements/west-virginia/): workers' comp required at All employers; license insurance minimum: No statewide minimum; anti-indemnity statute voids: Sole negligence. Markdown: https://forsured.ai/coi-requirements/west-virginia/index.md
 - [Wisconsin contractor insurance requirements](https://forsured.ai/coi-requirements/wisconsin/): workers' comp required at 3 employees, or $500 a quarter; license insurance minimum: $250K (dwelling contractors); anti-indemnity statute voids: Own negligence, even in part. Markdown: https://forsured.ai/coi-requirements/wisconsin/index.md
-- [Wyoming contractor insurance requirements](https://forsured.ai/coi-requirements/wyoming/): workers' comp required at Most employers (state fund); license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/wyoming/index.md
+- [Wyoming contractor insurance requirements](https://forsured.ai/coi-requirements/wyoming/): workers' comp required at Required work (state fund); license insurance minimum: No statewide minimum; anti-indemnity statute voids: No general statute. Markdown: https://forsured.ai/coi-requirements/wyoming/index.md
 
 ## Optional
 

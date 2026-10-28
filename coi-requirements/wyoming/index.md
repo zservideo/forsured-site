@@ -8,13 +8,13 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## The short version
 
-- Workers' comp required at: Most employers (state fund)
+- Workers' comp required at: Required work (state fund)
 - License insurance minimum: No statewide minimum
 - Anti-indemnity statute voids: No general statute
 
 ## Workers' comp in Wyoming
 
-Wyoming employers covered by the Workers' Compensation Act must register and buy coverage from the state fund before starting work. Private carriers and self-insurance aren't options.
+Wyoming employers in the occupations its Workers' Compensation Act requires to be covered must buy coverage from the state fund and get a statement of coverage before starting work. They can't self-insure. Employers outside the required occupations can choose coverage, and some can buy it from a private carrier. Check that a contractor's work falls under the state fund before accepting anything else.
 
 Agency: [Wyoming Department of Workforce Services](https://dws.wyo.gov/dws-division/workers-compensation/new-employers/)
 
@@ -37,7 +37,7 @@ Wyoming has no general construction anti-indemnity statute. Courts there general
 
 ### Do contractors need workers' comp in Wyoming?
 
-Wyoming employers covered by the Workers' Compensation Act must register and buy coverage from the state fund before starting work. Private carriers and self-insurance aren't options. As of Oct 28, 2026. General information, not legal advice.
+Wyoming employers in the occupations its Workers' Compensation Act requires to be covered must buy coverage from the state fund and get a statement of coverage before starting work. They can't self-insure. Employers outside the required occupations can choose coverage, and some can buy it from a private carrier. Check that a contractor's work falls under the state fund before accepting anything else. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Wyoming require contractors to carry general liability insurance?
 
@@ -50,7 +50,7 @@ Wyoming has no general construction anti-indemnity statute. Courts there general
 ## Sources
 
 1. [New employers](https://dws.wyo.gov/dws-division/workers-compensation/new-employers/), Wyoming Department of Workforce Services
-2. [Wyoming workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/wyoming/), OnPay, May 2026
+2. [Workers' compensation presentation to the Joint Appropriations Committee](https://wyoleg.gov/InterimCommittee/2023/02-2023071010-04_WorkersCompensation_JAC_Final.pdf), Wyoming Department of Workforce Services, 2023
 3. [What is stop gap coverage?](https://www.hubinternational.com/en-us/insurance-glossary/s/stop-gap-coverage/), HUB International
 4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor

@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Oklahoma
 
-Any Oklahoma employer with at least one full-time or part-time employee must carry workers' comp. Family businesses with fewer than five employees, all related by blood or marriage, are exempt.
+Any Oklahoma employer with at least one full-time or part-time employee must carry workers' comp. A business with five or fewer employees, all related to the owner by blood or marriage, is exempt if the owner is an individual, a partnership or the incorporator of the corporation.
 
 Agency: [Oklahoma Workers' Compensation Commission](https://www.wcc.ok.gov/)
 
@@ -37,7 +37,7 @@ Oklahoma's anti-indemnity statute (Okla. Stat. tit. 15, § 221) voids constructi
 
 ### Do contractors need workers' comp in Oklahoma?
 
-Any Oklahoma employer with at least one full-time or part-time employee must carry workers' comp. Family businesses with fewer than five employees, all related by blood or marriage, are exempt. As of Oct 28, 2026. General information, not legal advice.
+Any Oklahoma employer with at least one full-time or part-time employee must carry workers' comp. A business with five or fewer employees, all related to the owner by blood or marriage, is exempt if the owner is an individual, a partnership or the incorporator of the corporation. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Oklahoma require contractors to carry general liability insurance?
 
@@ -49,10 +49,11 @@ Oklahoma's anti-indemnity statute (Okla. Stat. tit. 15, § 221) voids constructi
 
 ## Sources
 
-1. [Oklahoma workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/oklahoma/), OnPay, May 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Guide for employers](https://www.ok.gov/wcc/documents/Guide%20for%20Employers%20FINAL.pdf), Oklahoma Workers' Compensation Commission
+2. [Okla. Stat. tit. 15, § 221](https://law.justia.com/codes/oklahoma/title-15/section-15-221/), Justia
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

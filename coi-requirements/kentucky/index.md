@@ -14,7 +14,7 @@ General information, not legal or insurance advice. Forsured is a software compa
 
 ## Workers' comp in Kentucky
 
-Kentucky employers with one or more workers, counting family, temporary and part-time workers, must carry workers' comp. Out-of-state employers need Kentucky coverage for work done in the state, even briefly.
+Kentucky employers with one or more workers, counting family, temporary and part-time workers, must carry workers' comp. Out-of-state employers working in Kentucky need a policy that includes Kentucky coverage. An "all states" endorsement doesn't satisfy the rule.
 
 Agency: [Kentucky Department of Workers' Claims](https://elc.ky.gov/Workers-Compensation/)
 
@@ -37,7 +37,7 @@ Kentucky's anti-indemnity statute (Ky. Rev. Stat. § 371.180) voids construction
 
 ### Do contractors need workers' comp in Kentucky?
 
-Kentucky employers with one or more workers, counting family, temporary and part-time workers, must carry workers' comp. Out-of-state employers need Kentucky coverage for work done in the state, even briefly. As of Oct 28, 2026. General information, not legal advice.
+Kentucky employers with one or more workers, counting family, temporary and part-time workers, must carry workers' comp. Out-of-state employers working in Kentucky need a policy that includes Kentucky coverage. An "all states" endorsement doesn't satisfy the rule. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Kentucky require contractors to carry general liability insurance?
 
@@ -49,9 +49,10 @@ Kentucky's anti-indemnity statute (Ky. Rev. Stat. § 371.180) voids construction
 
 ## Sources
 
-1. [Kentucky workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/kentucky/), OnPay, Jan 2026
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+1. [Employer frequently asked questions](https://elc.ky.gov/Workers-Compensation/Pages/Employer-Frequently-Asked-Questions.aspx), Kentucky Department of Workers' Claims
+2. [Ky. Rev. Stat. § 371.180](https://law.justia.com/codes/kentucky/chapter-371/section-371-180/), Justia
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

@@ -49,11 +49,12 @@ North Dakota has no general construction anti-indemnity statute. Its laws void i
 
 ## Sources
 
-1. [North Dakota workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/north-dakota/), OnPay, Jun 2026
+1. [Coverage requirements](https://www.workforcesafety.com/employers/insurance-coverage-information/coverage-requirements), North Dakota Workforce Safety & Insurance
 2. [Contractors](https://sos.nd.gov/business/contractors), North Dakota Secretary of State
 3. [What is stop gap coverage?](https://www.hubinternational.com/en-us/insurance-glossary/s/stop-gap-coverage/), HUB International
-4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+4. [N.D. Cent. Code ch. 9-08](https://ndlegis.gov/cencode/t09c08.pdf), North Dakota Legislative Branch
+5. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 

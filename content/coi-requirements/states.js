@@ -151,19 +151,22 @@ const STATES = [
     },
     lic: noStateMinimum(),
     ai: { cite: 'Conn. Gen. Stat. § 52-572k', kind: 'broad' },
-    sources: [{ title: 'About workers\' compensation insurance', publisher: 'Connecticut Workers\' Compensation Commission', url: 'https://portal.ct.gov/wcc/knowledge-base/articles/employers/workers-compensation-insurance' }],
+    sources: [
+      { title: 'About workers\' compensation insurance', publisher: 'Connecticut Workers\' Compensation Commission', url: 'https://portal.ct.gov/wcc/knowledge-base/articles/employers/workers-compensation-insurance' },
+      { title: 'Conn. Gen. Stat. § 52-572k', publisher: 'Connecticut General Assembly', url: 'https://www.cga.ct.gov/current/pub/chap_925.htm#sec_52-572k' },
+    ],
   },
   {
     name: 'Delaware', code: 'DE',
     wc: {
       at: '1 employee',
       short: 'Delaware employers with one or more employees must carry workers\' comp.',
-      detail: 'Sole proprietors and partners don\'t have to cover themselves unless they choose to.',
+      detail: 'Some workers are exempt, such as certain farm workers and casual employees. The state points to 19 Del. C. §§ 2307 and 2308 for the full list.',
       agency: ['Delaware Office of Workers\' Compensation', 'https://industrialaffairs.delaware.gov/workers-compensation-v1?hsLang=en-us'],
     },
     lic: noStateMinimum(),
     ai: { cite: 'Del. Code Ann. tit. 6, § 2704', kind: 'broad' },
-    sources: [onpay('Delaware', 'delaware', 'May 2026')],
+    sources: [{ title: 'Workers\' compensation FAQs', publisher: 'Delaware Department of Labor, Office of Workers\' Compensation', url: 'https://industrialaffairs.delaware.gov/-workers-comp-faqs?hsLang=en#employers' }],
   },
   {
     name: 'District of Columbia', code: 'DC', slug: 'district-of-columbia',
@@ -198,6 +201,7 @@ const STATES = [
     sources: [
       { title: 'Coverage requirements', publisher: 'Florida Division of Workers\' Compensation', url: 'https://www.myfloridacfo.com/division/WC/employer/coverage.htm' },
       { title: 'Fla. Admin. Code R. 61G4-15.003, Public liability insurance', publisher: 'Legal Information Institute', url: 'https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-61G4-15-003' },
+      { title: 'Fla. Stat. § 725.06', publisher: 'The Florida Senate', url: 'https://www.flsenate.gov/Laws/Statutes/2025/725.06' },
     ],
   },
   {
@@ -233,6 +237,7 @@ const STATES = [
     sources: [
       { title: 'Workers\' compensation coverage', publisher: 'Hawaii Department of Labor and Industrial Relations', url: 'https://labor.hawaii.gov/dcd/?p=221' },
       { title: 'Contractors License Board', publisher: 'Hawaii Professional and Vocational Licensing', url: 'https://cca.hawaii.gov/pvl/2009' },
+      { title: 'Haw. Rev. Stat. § 431:10-222', publisher: 'Hawaii State Legislature', url: 'https://www.capitol.hawaii.gov/hrscurrent/Vol09_Ch0431-0435H/HRS0431/HRS_0431-0010-0222.htm' },
     ],
   },
   {
@@ -248,22 +253,22 @@ const STATES = [
     },
     ai: { cite: 'Idaho Code § 29-114', kind: 'sole' },
     sources: [
-      onpay('Idaho', 'idaho', 'May 2026'),
+      { title: 'Employers FAQs', publisher: 'Idaho Industrial Commission', url: 'https://iic.idaho.gov/employer-compliance-division/employer-information/employers-faqs/' },
       { title: 'Contractor registration FAQ', publisher: 'Idaho Division of Occupational and Professional Licenses', url: 'https://dopl.idaho.gov/con/con-faq/' },
+      { title: 'Idaho Code § 29-114', publisher: 'Idaho Legislature', url: 'https://legislature.idaho.gov/statutesrules/idstat/Title29/T29CH1/SECT29-114/' },
     ],
   },
   {
     name: 'Illinois', code: 'IL',
     wc: {
       at: '1 employee',
-      short: 'Illinois requires most employers with full-time or part-time employees to carry workers\' comp from the first day of employment.',
+      short: 'Illinois law requires most employers to carry workers\' comp for their employees.',
       agency: ['Illinois Workers\' Compensation Commission', 'https://iwcc.illinois.gov/coverage.html'],
     },
     lic: noStateMinimum('Illinois has no statewide general contractor license.'),
     ai: { cite: '740 ILCS 35/1', kind: 'broad' },
     sources: [
       { title: 'Insurance coverage', publisher: 'Illinois Workers\' Compensation Commission', url: 'https://iwcc.illinois.gov/coverage.html' },
-      onpay('Illinois', 'illinois', 'Apr 2026'),
     ],
   },
   {
@@ -291,7 +296,11 @@ const STATES = [
     },
     lic: noStateMinimum('Iowa requires contractors to register with the state.'),
     ai: { cite: 'Iowa Code § 537A.5', kind: 'broad' },
-    sources: [onpay('Iowa', 'iowa', 'May 2026')],
+    sources: [
+      { title: 'Workers\' compensation questions and answers', publisher: 'Iowa Division of Workers\' Compensation', url: 'https://dial.iowa.gov/media/8738/download?inline' },
+      { title: 'Rejection of coverage', publisher: 'Iowa Division of Workers\' Compensation', url: 'https://dial.iowa.gov/hearings/workers-comp/compliance/reporting/rejection-coverage' },
+      { title: 'Iowa Code § 537A.5', publisher: 'Iowa Legislature', url: 'https://www.legis.iowa.gov/docs/code/537A.5.pdf' },
+    ],
   },
   {
     name: 'Kansas', code: 'KS',
@@ -302,19 +311,25 @@ const STATES = [
     },
     lic: noStateMinimum('Kansas has no statewide general contractor license.'),
     ai: { cite: 'Kan. Stat. Ann. § 16-121', kind: 'broad', insure: 'yes' },
-    sources: [{ title: 'Workers\' compensation overview', publisher: 'Kansas Department of Labor', url: 'https://www.dol.ks.gov/workers-compensation/overview' }],
+    sources: [
+      { title: 'Workers\' compensation overview', publisher: 'Kansas Department of Labor', url: 'https://www.dol.ks.gov/workers-compensation/overview' },
+      { title: 'Kan. Stat. Ann. § 16-121', publisher: 'Kansas Office of Revisor of Statutes', url: 'https://www.ksrevisor.gov/statutes/chapters/ch16/016_001_0021.html' },
+    ],
   },
   {
     name: 'Kentucky', code: 'KY',
     wc: {
       at: '1 employee',
       short: 'Kentucky employers with one or more workers, counting family, temporary and part-time workers, must carry workers\' comp.',
-      detail: 'Out-of-state employers need Kentucky coverage for work done in the state, even briefly.',
+      detail: 'Out-of-state employers working in Kentucky need a policy that includes Kentucky coverage. An "all states" endorsement doesn\'t satisfy the rule.',
       agency: ['Kentucky Department of Workers\' Claims', 'https://elc.ky.gov/Workers-Compensation/'],
     },
     lic: noStateMinimum('Kentucky has no statewide general contractor license.'),
     ai: { cite: 'Ky. Rev. Stat. § 371.180', kind: 'broad' },
-    sources: [onpay('Kentucky', 'kentucky', 'Jan 2026')],
+    sources: [
+      { title: 'Employer frequently asked questions', publisher: 'Kentucky Department of Workers\' Claims', url: 'https://elc.ky.gov/Workers-Compensation/Pages/Employer-Frequently-Asked-Questions.aspx' },
+      { title: 'Ky. Rev. Stat. § 371.180', publisher: 'Justia', url: 'https://law.justia.com/codes/kentucky/chapter-371/section-371-180/' },
+    ],
   },
   {
     name: 'Louisiana', code: 'LA',
@@ -344,13 +359,13 @@ const STATES = [
     },
     lic: noStateMinimum('Maine has no statewide general contractor license.'),
     ai: { cite: 'no statute; see Emery v. Waterhouse Co., 467 A.2d 986 (Me. 1983)', kind: 'none' },
-    sources: [onpay('Maine', 'maine', 'May 2026')],
+    sources: [{ title: 'Employer\'s guide to workers\' compensation insurance in Maine', publisher: 'Maine Bureau of Insurance', url: 'https://www.maine.gov/pfr/insurance/sites/maine.gov.pfr.insurance/files/inline-files/Workers-Comp-Employer-Guide.pdf' }],
   },
   {
     name: 'Maryland', code: 'MD',
     wc: {
       at: '1 employee',
-      short: 'With few exceptions, Maryland employers with one or more employees, full-time or part-time, must carry workers\' comp.',
+      short: 'With few exceptions, Maryland employers must carry workers\' comp for their employees.',
       agency: ['Maryland Workers\' Compensation Commission', 'https://www.wcc.state.md.us/'],
     },
     lic: {
@@ -359,21 +374,25 @@ const STATES = [
     },
     ai: { cite: 'Md. Code Ann., Cts. & Jud. Proc. § 5-401', kind: 'sole' },
     sources: [
-      onpay('Maryland', 'maryland', 'May 2026'),
+      { title: 'Frequently asked questions: employers', publisher: 'Maryland Workers\' Compensation Commission', url: 'https://www.wcc.state.md.us/Gen_Info/FAQ%20Employers.html' },
       { title: 'Maryland Home Improvement Commission', publisher: 'Maryland Department of Labor', url: 'https://labor.maryland.gov/license/mhic/index.shtml' },
+      { title: 'Md. Code Ann., Cts. & Jud. Proc. § 5-401', publisher: 'Maryland General Assembly', url: 'https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcj&section=5-401&enactments=false' },
     ],
   },
   {
     name: 'Massachusetts', code: 'MA',
     wc: {
       at: '1 employee',
-      short: 'Every Massachusetts employer with one or more employees, including part-time workers, must carry workers\' comp.',
+      short: 'Every Massachusetts employer must carry workers\' comp for its employees, whatever the number of employees or hours worked.',
       detail: 'Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves.',
       agency: ['Massachusetts Department of Industrial Accidents', 'https://www.mass.gov/orgs/department-of-industrial-accidents'],
     },
     lic: noStateMinimum(),
     ai: { cite: 'Mass. Gen. Laws ch. 149, § 29C', at: 'Losses the contractor didn\'t cause', kind: 'custom', text: 'Massachusetts General Laws ch. 149, § 29C voids construction clauses that make a contractor indemnify another party for injury or damage that the contractor, its employees or the companies working under it did not cause.' },
-    sources: [onpay('Massachusetts', 'massachusetts', 'Jan 2026')],
+    sources: [
+      { title: 'Workers\' compensation insurance requirements', publisher: 'Massachusetts Department of Industrial Accidents', url: 'https://www.mass.gov/info-details/workers-compensation-insurance-requirements' },
+      { title: 'Mass. Gen. Laws ch. 149, § 29C', publisher: 'Massachusetts Legislature', url: 'https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section29C' },
+    ],
   },
   {
     name: 'Michigan', code: 'MI',
@@ -384,7 +403,10 @@ const STATES = [
     },
     lic: noStateMinimum('Michigan licenses residential builders, without a liability insurance minimum.'),
     ai: { cite: 'Mich. Comp. Laws § 691.991', kind: 'sole' },
-    sources: [{ title: 'Workers\' disability compensation insurance requirements', publisher: 'Michigan Department of Labor and Economic Opportunity', url: 'https://www.michigan.gov/leo/bureaus-agencies/wdca/Insurance-Requirements/Pages/workers-disability-compensation-insurance-requirements' }],
+    sources: [
+      { title: 'Workers\' disability compensation insurance requirements', publisher: 'Michigan Department of Labor and Economic Opportunity', url: 'https://www.michigan.gov/leo/bureaus-agencies/wdca/Insurance-Requirements/Pages/workers-disability-compensation-insurance-requirements' },
+      { title: 'Mich. Comp. Laws § 691.991', publisher: 'Michigan Legislature', url: 'https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-691-991' },
+    ],
   },
   {
     name: 'Minnesota', code: 'MN',
@@ -399,8 +421,9 @@ const STATES = [
     },
     ai: { cite: 'Minn. Stat. §§ 337.01 to 337.05', kind: 'broad' },
     sources: [
-      onpay('Minnesota', 'minnesota', 'Jun 2026'),
+      { title: 'Who needs workers\' compensation coverage?', publisher: 'Minnesota Department of Labor and Industry', url: 'https://www.dli.mn.gov/business/workers-compensation/work-comp-who-needs-workers-compensation-coverage' },
       { title: 'Residential building contractor license application instructions (Minn. Stat. § 326B.86)', publisher: 'Minnesota Department of Labor and Industry', url: 'https://dli.mn.gov/sites/default/files/pdf/ccld_lic-01Inst.pdf' },
+      { title: 'Minn. Stat. § 337.02', publisher: 'Minnesota Office of the Revisor of Statutes', url: 'https://www.revisor.mn.gov/statutes/cite/337.02' },
     ],
   },
   {
@@ -423,19 +446,26 @@ const STATES = [
     },
     lic: noStateMinimum('Missouri has no statewide general contractor license.'),
     ai: { cite: 'Mo. Rev. Stat. § 434.100', kind: 'broad' },
-    sources: [{ title: 'Who is required to carry workers\' compensation insurance coverage?', publisher: 'Missouri Department of Labor and Industrial Relations', url: 'https://labor.mo.gov/faqs/knowledge-base/who-required-carry-workers-compensation-insurance-coverage' }],
+    sources: [
+      { title: 'Who is required to carry workers\' compensation insurance coverage?', publisher: 'Missouri Department of Labor and Industrial Relations', url: 'https://labor.mo.gov/faqs/knowledge-base/who-required-carry-workers-compensation-insurance-coverage' },
+      { title: 'Mo. Rev. Stat. § 434.100', publisher: 'Missouri Revisor of Statutes', url: 'https://revisor.mo.gov/main/OneSection.aspx?section=434.100' },
+    ],
   },
   {
     name: 'Montana', code: 'MT',
     wc: {
       at: '1 employee',
-      short: 'Montana employers with full-time, part-time, seasonal or occasional employees must carry workers\' comp.',
-      detail: 'Self-employed contractors can apply for an Independent Contractor Exemption Certificate.',
+      short: 'Montana\'s Workers\' Compensation Act applies to all employers and employees, with listed exceptions such as casual employment.',
+      detail: 'Independent contractors must hold an Independent Contractor Exemption Certificate or their own coverage, and working without either can bring a fine of up to $5,000 per violation.',
       agency: ['Montana Department of Labor and Industry', 'https://erd.dli.mt.gov/'],
     },
     lic: noStateMinimum('Montana requires construction contractors to register with the state.'),
     ai: { cite: 'Mont. Code Ann. § 28-2-2111', kind: 'broad', insure: 'yes' },
-    sources: [onpay('Montana', 'montana', 'May 2026')],
+    sources: [
+      { title: 'Mont. Code Ann. § 39-71-401', publisher: 'Montana Legislature', url: 'https://mca.legmt.gov/bills/mca/title_0390/chapter_0710/part_0040/section_0010/0390-0710-0040-0010.html' },
+      { title: 'Independent contractor exemption certificates', publisher: 'Montana Department of Labor and Industry', url: 'https://erd.dli.mt.gov/work-comp-regulations/montana-contractor/independent-contractor' },
+      { title: 'Mont. Code Ann. § 28-2-2111', publisher: 'Montana Legislature', url: 'https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0210/section_0110/0280-0020-0210-0110.html' },
+    ],
   },
   {
     name: 'Nebraska', code: 'NE',
@@ -446,14 +476,17 @@ const STATES = [
     },
     lic: noStateMinimum('Nebraska requires contractors to register with the state.'),
     ai: { cite: 'Neb. Rev. Stat. § 25-21,187', kind: 'broad' },
-    sources: [onpay('Nebraska', 'nebraska', 'Jun 2026')],
+    sources: [
+      { title: 'Employer frequently asked questions', publisher: 'Nebraska Workers\' Compensation Court', url: 'https://www.newcc.gov/employers/employer-frequently-asked-questions' },
+      { title: 'Neb. Rev. Stat. § 25-21,187', publisher: 'Nebraska Legislature', url: 'https://nebraskalegislature.gov/laws/statutes.php?statute=25-21,187' },
+    ],
   },
   {
     name: 'Nevada', code: 'NV',
     wc: {
       at: '1 employee',
       short: 'Any Nevada employer with at least one employee must carry workers\' comp.',
-      detail: 'On most construction projects, the contractor in charge has to provide coverage for independent contractors working on the job.',
+      detail: 'The state\'s employer guide singles out construction trades: they must carry workers\' comp even where other businesses could claim an exemption.',
       agency: ['Nevada Division of Industrial Relations', 'https://dir.nv.gov/WCS/home/'],
     },
     lic: {
@@ -462,7 +495,7 @@ const STATES = [
     },
     ai: { cite: 'Nev. Rev. Stat. § 40.693', at: 'Residential contracts only', kind: 'custom', text: 'Nevada\'s statute (Nev. Rev. Stat. § 40.693) limits indemnity and defense clauses in residential construction contracts signed since February 24, 2015. Commercial contracts are judged under general contract law.' },
     sources: [
-      onpay('Nevada', 'nevada', 'May 2026'),
+      { title: 'Employer\'s guide to workers\' compensation', publisher: 'Nevada Division of Industrial Relations', url: 'https://dir.nv.gov/uploadedFiles/dirnvgov/content/WCS/EmployersDocs/EmployerBrochure.7.2026.pdf', date: '2026' },
       { title: 'NRS 624.256, Proof of industrial insurance', publisher: 'Nevada Legislature (via Public.Law)', url: 'https://nevada.public.law/statutes/nrs_624.256' },
     ],
   },
@@ -471,19 +504,19 @@ const STATES = [
     wc: {
       at: '1 employee',
       short: 'New Hampshire employers with one or more full-time or part-time employees must carry workers\' comp.',
-      detail: 'Corporations and LLCs with no employees and three or fewer officers or members can go without. A fourth officer or member makes coverage mandatory.',
+      detail: 'Up to three owners, members or executive officers can be excluded, but only through paperwork the insurer files with the Department of Labor. A sole proprietor isn\'t required to cover themselves.',
       agency: ['New Hampshire Department of Labor', 'https://www.dol.nh.gov/workers-compensation/employer-information'],
     },
     lic: noStateMinimum('New Hampshire has no statewide general contractor license.'),
     ai: { cite: 'N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A:2', kind: 'broad' },
-    sources: [onpay('New Hampshire', 'new-hampshire', 'May 2026')],
+    sources: [{ title: 'Workers\' compensation FAQs', publisher: 'New Hampshire Insurance Department', url: 'https://insurance.nh.gov/consumers/business-insurance/workers-compensation/faqs' }],
   },
   {
     name: 'New Jersey', code: 'NJ',
     wc: {
       at: '1 employee',
-      short: 'Almost every New Jersey employer must carry workers\' comp, including for part-time and seasonal workers.',
-      detail: 'Corporate officers are included. Partners, LLC members and sole proprietors without employees are not, unless they choose coverage.',
+      short: 'Every New Jersey employer not covered by a federal program must carry workers\' comp.',
+      detail: 'A corporation needs coverage as soon as anyone works for it, corporate officers included. Partners, LLC members and sole proprietors don\'t count themselves, so their coverage starts with the first worker who isn\'t an owner.',
       agency: ['New Jersey Division of Workers\' Compensation', 'https://www.nj.gov/labor/workerscompensation/employer-requirements/index.shtml?open=insurance'],
     },
     lic: {
@@ -492,7 +525,7 @@ const STATES = [
     },
     ai: { cite: 'N.J. Stat. Ann. §§ 2A:40A-1, 2A:40A-2', kind: 'sole' },
     sources: [
-      onpay('New Jersey', 'new-jersey', 'Dec 2025'),
+      { title: 'Employer requirements: insurance', publisher: 'New Jersey Division of Workers\' Compensation', url: 'https://www.nj.gov/labor/workerscompensation/employer-requirements/index.shtml?open=insurance' },
       { title: 'Home improvement contractor FAQ', publisher: 'New Jersey Division of Consumer Affairs', url: 'https://njconsumeraffairs.gov/hic/Pages/FAQ.aspx' },
     ],
   },
@@ -522,6 +555,7 @@ const STATES = [
     sources: [
       { title: 'Workers\' compensation coverage requirements', publisher: 'New York State Workers\' Compensation Board', url: 'https://www.wcb.ny.gov/content/main/coverage-requirements-wc/wc-coverage-required.jsp' },
       { title: 'Requirements for businesses applying for government permits, licenses or contracts', publisher: 'New York State Workers\' Compensation Board', url: 'https://WWW.WCB.NY.GOV/content/main/Employers/requirements-businesses-applying-government-permits-licenses-contracts.pdf' },
+      { title: 'N.Y. Gen. Oblig. Law § 5-322.1', publisher: 'New York State Senate', url: 'https://www.nysenate.gov/legislation/laws/GOB/5-322.1' },
     ],
   },
   {
@@ -533,7 +567,10 @@ const STATES = [
     },
     lic: noStateMinimum('North Carolina\'s general contractor license has financial requirements but no liability insurance minimum we could find.'),
     ai: { cite: 'N.C. Gen. Stat. § 22B-1', kind: 'broad' },
-    sources: [{ title: 'Employers\' obligation to obtain and maintain workers\' compensation coverage', publisher: 'North Carolina Industrial Commission', url: 'https://ic.nc.gov/wcinsrqmt.html' }],
+    sources: [
+      { title: 'Employers\' obligation to obtain and maintain workers\' compensation coverage', publisher: 'North Carolina Industrial Commission', url: 'https://ic.nc.gov/wcinsrqmt.html' },
+      { title: 'N.C. Gen. Stat. § 22B-1', publisher: 'North Carolina General Assembly', url: 'https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_22B/GS_22B-1.html' },
+    ],
   },
   {
     name: 'North Dakota', code: 'ND',
@@ -549,9 +586,10 @@ const STATES = [
     },
     ai: { cite: 'N.D. Cent. Code §§ 9-08-02, 9-08-02.1, 22-02-02, 22-02-03', at: 'No general statute', kind: 'custom', text: 'North Dakota has no general construction anti-indemnity statute. Its laws void indemnity for intentional or unlawful acts (N.D. Cent. Code § 9-08-02) and limit clauses that shift an owner\'s design errors onto a contractor (§ 9-08-02.1).' },
     sources: [
-      onpay('North Dakota', 'north-dakota', 'Jun 2026'),
+      { title: 'Coverage requirements', publisher: 'North Dakota Workforce Safety & Insurance', url: 'https://www.workforcesafety.com/employers/insurance-coverage-information/coverage-requirements' },
       { title: 'Contractors', publisher: 'North Dakota Secretary of State', url: 'https://sos.nd.gov/business/contractors' },
       SHARED.stopgap,
+      { title: 'N.D. Cent. Code ch. 9-08', publisher: 'North Dakota Legislative Branch', url: 'https://ndlegis.gov/cencode/t09c08.pdf' },
     ],
   },
   {
@@ -564,25 +602,33 @@ const STATES = [
     },
     lic: noStateMinimum('Ohio has no statewide general contractor license.'),
     ai: { cite: 'Ohio Rev. Code Ann. § 2305.31', kind: 'broad' },
-    sources: [onpay('Ohio', 'ohio', 'Dec 2025'), SHARED.stopgap],
+    sources: [
+      { title: 'For employers', publisher: 'Ohio Bureau of Workers\' Compensation', url: 'https://info.bwc.ohio.gov/for-employers' },
+      { title: 'Self-insurance program description', publisher: 'Ohio Bureau of Workers\' Compensation', url: 'https://bwc.ohio.gov/employer/programs/siinfo/siprogramdescription.asp' },
+      SHARED.stopgap,
+      { title: 'Ohio Rev. Code § 2305.31', publisher: 'Ohio Legislative Service Commission', url: 'https://codes.ohio.gov/ohio-revised-code/section-2305.31' },
+    ],
   },
   {
     name: 'Oklahoma', code: 'OK',
     wc: {
       at: '1 employee',
       short: 'Any Oklahoma employer with at least one full-time or part-time employee must carry workers\' comp.',
-      detail: 'Family businesses with fewer than five employees, all related by blood or marriage, are exempt.',
+      detail: 'A business with five or fewer employees, all related to the owner by blood or marriage, is exempt if the owner is an individual, a partnership or the incorporator of the corporation.',
       agency: ['Oklahoma Workers\' Compensation Commission', 'https://www.wcc.ok.gov/'],
     },
     lic: noStateMinimum('Oklahoma has no statewide general contractor license.'),
     ai: { cite: 'Okla. Stat. tit. 15, § 221', kind: 'broad', insure: 'yes' },
-    sources: [onpay('Oklahoma', 'oklahoma', 'May 2026')],
+    sources: [
+      { title: 'Guide for employers', publisher: 'Oklahoma Workers\' Compensation Commission', url: 'https://www.ok.gov/wcc/documents/Guide%20for%20Employers%20FINAL.pdf' },
+      { title: 'Okla. Stat. tit. 15, § 221', publisher: 'Justia', url: 'https://law.justia.com/codes/oklahoma/title-15/section-15-221/' },
+    ],
   },
   {
     name: 'Oregon', code: 'OR',
     wc: {
       at: '1 employee',
-      short: 'Nearly every Oregon employer with one or more employees, full-time or part-time, must carry workers\' comp.',
+      short: 'Nearly every Oregon employer with one or more workers must carry workers\' comp.',
       agency: ['Oregon Workers\' Compensation Division', 'https://wcd.oregon.gov/employer/Pages/index.aspx'],
     },
     lic: {
@@ -591,8 +637,9 @@ const STATES = [
     },
     ai: { cite: 'Or. Rev. Stat. § 30.140', kind: 'broad', insure: 'yes' },
     sources: [
-      onpay('Oregon', 'oregon', 'May 2026'),
+      { title: 'Workers\' compensation insurance overview', publisher: 'Oregon Workers\' Compensation Division', url: 'https://wcd.oregon.gov/employer/Pages/compensation-insurance-overview.aspx' },
       { title: 'OAR 812-003-0221, Liability insurance requirements', publisher: 'Oregon Construction Contractors Board (via Public.Law)', url: 'https://oregon.public.law/rules/oar_812-003-0221' },
+      { title: 'Or. Rev. Stat. ch. 30 (§ 30.140)', publisher: 'Oregon State Legislature', url: 'https://www.oregonlegislature.gov/bills_laws/ors/ors030.html' },
     ],
   },
   {
@@ -628,6 +675,7 @@ const STATES = [
     sources: [
       { title: 'Employers', publisher: 'Rhode Island Department of Labor and Training', url: 'https://dlt.ri.gov/wc/employers/' },
       { title: 'Contractor registration FAQs', publisher: 'Rhode Island Contractors\' Registration and Licensing Board', url: 'https://crb.ri.gov/contractor-registration/faqs' },
+      { title: 'R.I. Gen. Laws § 6-34-1', publisher: 'Rhode Island General Assembly', url: 'https://webserver.rilegislature.gov/Statutes/TITLE6/6-34/6-34-1.htm' },
     ],
   },
   {
@@ -639,7 +687,10 @@ const STATES = [
     },
     lic: noStateMinimum(),
     ai: { cite: 'S.C. Code Ann. § 32-2-10', kind: 'sole' },
-    sources: [{ title: 'Employer FAQs', publisher: 'South Carolina Workers\' Compensation Commission', url: 'https://wcc.sc.gov/employer-faqs' }],
+    sources: [
+      { title: 'Employer FAQs', publisher: 'South Carolina Workers\' Compensation Commission', url: 'https://wcc.sc.gov/employer-faqs' },
+      { title: 'S.C. Code Ann. tit. 32, ch. 2 (§ 32-2-10)', publisher: 'South Carolina Legislature', url: 'https://www.scstatehouse.gov/code/t32c002.php' },
+    ],
   },
   {
     name: 'South Dakota', code: 'SD',
@@ -696,13 +747,13 @@ const STATES = [
     name: 'Utah', code: 'UT',
     wc: {
       at: '1 employee',
-      short: 'Nearly every Utah employer with one or more employees must carry workers\' comp.',
+      short: 'With a few exceptions, every Utah employer must carry workers\' comp for all its employees.',
       agency: ['Utah Labor Commission, Industrial Accidents Division', 'https://laborcommission.utah.gov/divisions/industrial-accidents/employers/employers-guide-to-workers-compensation/'],
     },
     lic: {
-      at: '$100K/$300K (rising)',
+      at: '$100K/$300K (increase pending)',
       short: 'Utah\'s Division of Professional Licensing (DOPL) requires licensed contractors to keep general liability in force, naming DOPL as certificate holder. The published rule sets $100,000 per incident and $300,000 total.',
-      detail: 'In April 2026, Utah\'s Construction Services Commission was reported to have voted to raise the minimum to $1,000,000 per occurrence and $2,000,000 aggregate. Check DOPL for the amount in force today.',
+      detail: 'DOPL proposed a rule in February 2026 (filing 57745) that would raise the minimum to $1,000,000 per incident and $3,000,000 total. Broker reports since then cite $1,000,000 and $2,000,000, while DOPL\'s own instructions still show $100,000 and $300,000. Until the final rule is published, confirm the amount in force with DOPL.',
     },
     ai: {
       cite: 'Utah Code Ann. § 13-8-1', at: 'The other party\'s fault',
@@ -711,9 +762,11 @@ const STATES = [
       insure: 'yes',
     },
     sources: [
-      onpay('Utah', 'utah', 'Jan 2026'),
+      { title: 'Employer\'s guide to workers\' compensation', publisher: 'Utah Labor Commission', url: 'https://laborcommission.utah.gov/divisions/industrial-accidents/employers/employers-guide-to-workers-compensation/' },
       { title: 'Utah Code § 13-8-1', publisher: 'Utah Legislature', url: 'https://le.utah.gov/xcode/Title13/Chapter8/C13-8-S1_1800010118000101.html' },
       { title: 'Utah Admin. Code R156-55a-302d, Proof of insurance', publisher: 'Legal Information Institute', url: 'https://www.law.cornell.edu/regulations/utah/Utah-Admin-Code-R156-55a-302d' },
+      { title: 'General liability insurance requirements instructions', publisher: 'Utah Division of Professional Licensing', url: 'https://dopl.utah.gov/wp-content/uploads/2025/10/general-liability-insurance-requirements-instructions.pdf', date: '2025' },
+      { title: 'Utah State Bulletin, Feb. 15, 2026 (R156-55a proposed rule, filing 57745)', publisher: 'Utah Office of Administrative Rules', url: 'https://rules.utah.gov/wp-content/uploads/b20260215.pdf', date: 'Feb 2026' },
       { title: 'Utah DOPL contractor liability insurance: $1M / $2M (April 2026)', publisher: 'GRIT Insurance', url: 'https://gritinsurance.com/blog/utah-dopl-contractor-liability-insurance-1m-2m-april-2026', date: '2026' },
     ],
   },
@@ -727,7 +780,7 @@ const STATES = [
     },
     lic: noStateMinimum(),
     ai: { cite: 'no statute; see Tateosian v. State, 945 A.2d 833 (Vt. 2007)', kind: 'none' },
-    sources: [onpay('Vermont', 'vermont', 'May 2026')],
+    sources: [{ title: 'Application to exclude corporate officers or LLC members (Form 29)', publisher: 'Vermont Department of Labor', url: 'https://labor.vermont.gov/sites/labor/files/doc_library/Form29FillIn_0.pdf' }],
   },
   {
     name: 'Virginia', code: 'VA',
@@ -739,13 +792,16 @@ const STATES = [
     },
     lic: noStateMinimum('Virginia\'s contractor license has financial requirements but no liability insurance minimum we could find.'),
     ai: { cite: 'Va. Code Ann. §§ 11-4.1, 11-4.4', kind: 'sole' },
-    sources: [{ title: 'Employers', publisher: 'Virginia Workers\' Compensation Commission', url: 'https://workcomp.virginia.gov/content/employers' }],
+    sources: [
+      { title: 'Employers', publisher: 'Virginia Workers\' Compensation Commission', url: 'https://workcomp.virginia.gov/content/employers' },
+      { title: 'Va. Code Ann. § 11-4.1', publisher: 'Virginia General Assembly', url: 'https://law.lis.virginia.gov/vacode/title11/chapter1/section11-4.1/' },
+    ],
   },
   {
     name: 'Washington', code: 'WA',
     wc: {
       at: '1 employee (state fund)',
-      short: 'Any Washington business with at least one employee, even part-time, must have workers\' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can\'t write it.',
+      short: 'Any Washington business with employees must have workers\' comp through the state fund run by Labor & Industries (L&I), unless approved to self-insure. Private carriers can\'t write it.',
       agency: ['Washington Department of Labor & Industries', 'https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/'],
       mono: true,
     },
@@ -755,9 +811,10 @@ const STATES = [
     },
     ai: { cite: 'Wash. Rev. Code § 4.24.115', at: 'Sole negligence; shared fault limited', kind: 'custom', text: 'Washington\'s statute (RCW 4.24.115) voids construction clauses that make a contractor indemnify another party for that party\'s sole negligence. Where both share fault, indemnity is valid only to the extent of the contractor\'s own negligence.' },
     sources: [
-      onpay('Washington', 'washington', 'Jun 2026'),
+      { title: 'Do I need a workers\' comp account?', publisher: 'Washington Department of Labor & Industries', url: 'https://lni.wa.gov/insurance/insurance-requirements/do-i-need-a-workers-comp-account/' },
       { title: 'Register as a contractor', publisher: 'Washington Department of Labor & Industries', url: 'https://lni.wa.gov/licensing-permits/contractors/register-as-a-contractor/index' },
       SHARED.stopgap,
+      { title: 'Wash. Rev. Code § 4.24.115', publisher: 'Washington State Legislature', url: 'https://app.leg.wa.gov/RCW/default.aspx?cite=4.24.115' },
     ],
   },
   {
@@ -769,7 +826,10 @@ const STATES = [
     },
     lic: noStateMinimum(),
     ai: { cite: 'W. Va. Code § 55-8-14', kind: 'sole' },
-    sources: [{ title: 'Employer coverage', publisher: 'West Virginia Offices of the Insurance Commissioner', url: 'https://www.wvinsurance.gov/Employer-Coverage' }],
+    sources: [
+      { title: 'Employer coverage', publisher: 'West Virginia Offices of the Insurance Commissioner', url: 'https://www.wvinsurance.gov/Employer-Coverage' },
+      { title: 'W. Va. Code § 55-8-14', publisher: 'West Virginia Legislature', url: 'https://code.wvlegislature.gov/55-8-14/' },
+    ],
   },
   {
     name: 'Wisconsin', code: 'WI',
@@ -791,8 +851,9 @@ const STATES = [
   {
     name: 'Wyoming', code: 'WY',
     wc: {
-      at: 'Most employers (state fund)',
-      short: 'Wyoming employers covered by the Workers\' Compensation Act must register and buy coverage from the state fund before starting work. Private carriers and self-insurance aren\'t options.',
+      at: 'Required work (state fund)',
+      short: 'Wyoming employers in the occupations its Workers\' Compensation Act requires to be covered must buy coverage from the state fund and get a statement of coverage before starting work. They can\'t self-insure.',
+      detail: 'Employers outside the required occupations can choose coverage, and some can buy it from a private carrier. Check that a contractor\'s work falls under the state fund before accepting anything else.',
       agency: ['Wyoming Department of Workforce Services', 'https://dws.wyo.gov/dws-division/workers-compensation/new-employers/'],
       mono: true,
     },
@@ -800,7 +861,7 @@ const STATES = [
     ai: { cite: 'no general statute; see United Pacific Resources Co. v. Dolenc, 86 P.3d 1287 (Wyo. 2004)', kind: 'none' },
     sources: [
       { title: 'New employers', publisher: 'Wyoming Department of Workforce Services', url: 'https://dws.wyo.gov/dws-division/workers-compensation/new-employers/' },
-      onpay('Wyoming', 'wyoming', 'May 2026'),
+      { title: 'Workers\' compensation presentation to the Joint Appropriations Committee', publisher: 'Wyoming Department of Workforce Services', url: 'https://wyoleg.gov/InterimCommittee/2023/02-2023071010-04_WorkersCompensation_JAC_Final.pdf', date: '2023' },
       SHARED.stopgap,
     ],
   },

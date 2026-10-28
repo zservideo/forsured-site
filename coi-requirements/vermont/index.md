@@ -49,7 +49,7 @@ Vermont has no general construction anti-indemnity statute. Courts there general
 
 ## Sources
 
-1. [Vermont workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/vermont/), OnPay, May 2026
+1. [Application to exclude corporate officers or LLC members (Form 29)](https://labor.vermont.gov/sites/labor/files/doc_library/Form29FillIn_0.pdf), Vermont Department of Labor
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 

@@ -50,8 +50,9 @@ Virginia's anti-indemnity statute (Va. Code Ann. §§ 11-4.1, 11-4.4) voids cons
 ## Sources
 
 1. [Employers](https://workcomp.virginia.gov/content/employers), Virginia Workers' Compensation Commission
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Va. Code Ann. § 11-4.1](https://law.lis.virginia.gov/vacode/title11/chapter1/section11-4.1/), Virginia General Assembly
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
 General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
