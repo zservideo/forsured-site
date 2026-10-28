@@ -315,6 +315,20 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .sources .note{margin-top:16px;padding-top:14px;border-top:1px solid #E4E7EC;font-size:13px;line-height:1.6}
 .sources .note a{color:var(--tx)}
 .note{font-size:13px;color:var(--mt);margin-top:16px}
+/* Newsletter signup: one email field and the primary button, in the same white box as the share and sources blocks */
+.sub{margin-top:40px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-radius:12px}
+.sub h2{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:-.01em;line-height:1.3}
+.sub>div>p{font-size:15px;line-height:1.6;color:var(--mt);margin-top:8px;max-width:560px}
+.sub form{display:flex;gap:8px;margin-top:16px;max-width:520px}
+.sub input[type=email]{flex:1;min-width:0;height:40px;padding:0 12px;border:1px solid #E4E7EC;border-radius:8px;background:#fff;font:inherit;font-size:15px;color:var(--tx);box-shadow:0 1px 2px rgba(20,28,37,.04)}
+.sub input[type=email]:focus{outline:2px solid var(--f);outline-offset:1px;border-color:var(--f)}
+.sub .hp{display:none}
+.sub .fine{font-size:12px;line-height:1.5;color:var(--mt);margin-top:10px}
+.sub .err{font-size:13px;color:#C4291C;margin-top:10px}
+.sub .ok{font-size:15px;line-height:1.6;margin-top:12px;padding:12px 14px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #16864E;border-radius:8px;color:#16864E}
+.sub [hidden]{display:none}
+.index-sub{margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 48px;align-items:center;padding:28px}
+.index-sub form{margin-top:0}
 /* Keep reading: its own shaded band, so it reads as "what's next", not more of the post */
 .more{background:#F2F3F1;border-top:1px solid var(--bdr);padding:56px 0 72px}
 .more h2{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.015em}
@@ -355,7 +369,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
 .fbot p{font-size:11px;color:#6E6E6E}
 .fbot a{color:#6E6E6E}
 @media(max-width:980px){.nlinks{display:none}.mtog{display:block}nav>.cta-p{margin-left:auto}}
-@media(max-width:860px){.lead{grid-template-columns:1fr;padding:20px}.lead img{order:-1}}
+@media(max-width:860px){.index-sub{grid-template-columns:1fr;padding:24px}.index-sub form{margin-top:16px}.lead{grid-template-columns:1fr;padding:20px}.lead img{order:-1}}
 @media(max-width:768px){
   nav{padding:0 16px;height:56px}
   nav>.cta-p{display:none}
@@ -372,13 +386,16 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
   .hero{margin-top:24px}
   .sh{width:44px;height:44px}
   .share-end{padding:16px 18px}
+  .sub{padding:18px}
+  .sub form{flex-direction:column}
+  .sub input[type=email]{flex:none;width:100%;height:44px;font-size:16px}
   .extra.sources{margin:40px 0 56px;padding:16px 18px}
   .more{padding:40px 0 56px}
   .band .edge{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px}
   .band .btns{justify-content:stretch}
   .band .btns a{flex:1 1 100%}
 }
-@media print{nav,.mmenu,footer,.band,.more,.share,.share-end{display:none}}
+@media print{nav,.mmenu,footer,.band,.more,.share,.share-end,.sub{display:none}}
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;list-style:none}
 .fact{padding:16px 18px;background:#fff;border:1px solid #E4E7EC;border-radius:10px}
 .fact h2{font-family:var(--sans);font-size:13px;font-weight:600;line-height:1.4;color:#344051}
