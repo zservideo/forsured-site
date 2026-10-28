@@ -2,7 +2,9 @@
 
 > What Florida law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/florida/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/florida/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -39,24 +41,25 @@ Because Florida construction owners can exempt themselves, you'll see contractor
 
 ### Do contractors need workers' comp in Florida?
 
-Construction businesses in Florida need workers' comp with one or more employees, counting owners who are corporate officers or LLC members. Other businesses need it at four. Owners can opt out of coverage for themselves by getting an exemption from the Division of Workers' Compensation. The exemption covers the owner, not the company's employees.
+Construction businesses in Florida need workers' comp with one or more employees, counting owners who are corporate officers or LLC members. Other businesses need it at four. Owners can opt out of coverage for themselves by getting an exemption from the Division of Workers' Compensation. The exemption covers the owner, not the company's employees. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Florida require contractors to carry general liability insurance?
 
-Florida's Construction Industry Licensing Board requires certified and registered general and building contractors to carry at least $300,000 in public liability and $50,000 in property damage coverage. Residential contractors and most specialty trades need $100,000 and $25,000.
+Florida's Construction Industry Licensing Board requires certified and registered general and building contractors to carry at least $300,000 in public liability and $50,000 in property damage coverage. Residential contractors and most specialty trades need $100,000 and $25,000. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Florida construction contract make a contractor cover another party's negligence?
 
-Florida Statutes § 725.06 voids construction clauses that make a contractor indemnify another party for that party's own negligence unless the clause carries a monetary limit that bears a reasonable commercial relationship to the contract and is part of the project specifications or bid documents. Section 725.08 sets separate limits for design professionals.
+Florida Statutes § 725.06 voids construction clauses that make a contractor indemnify another party for that party's own negligence unless the clause carries a monetary limit that bears a reasonable commercial relationship to the contract and is part of the project specifications or bid documents. Section 725.08 sets separate limits for design professionals. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
 1. [Coverage requirements](https://www.myfloridacfo.com/division/WC/employer/coverage.htm), Florida Division of Workers' Compensation
 2. [Fla. Admin. Code R. 61G4-15.003, Public liability insurance](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-61G4-15-003), Legal Information Institute
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [Fla. Stat. § 725.06](https://www.flsenate.gov/Laws/Statutes/2025/725.06), The Florida Senate
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

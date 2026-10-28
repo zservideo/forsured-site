@@ -2,7 +2,9 @@
 
 > What Texas law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/texas/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/texas/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -39,15 +41,15 @@ Texas Labor Code § 406.096 and 28 Tex. Admin. Code § 110.110 require each cont
 
 ### Do contractors need workers' comp in Texas?
 
-Texas private employers can choose whether to carry workers' comp. Employers without it (non-subscribers) must tell their employees and file a notice with the state. On building and construction projects for a government entity, every contractor has to carry workers' comp for its people on the project.
+Texas private employers can choose whether to carry workers' comp. Employers without it (non-subscribers) must tell their employees and file a notice with the state. On building and construction projects for a government entity, every contractor has to carry workers' comp for its people on the project. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Texas require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Texas has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Texas has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Texas construction contract make a contractor cover another party's negligence?
 
-Texas Insurance Code chapter 151 voids construction clauses that make a contractor indemnify another party for that party's own negligence, with exceptions that include claims for injury to the contractor's own employees. It also voids additional insured requirements that would give the other party coverage it couldn't get through indemnity.
+Texas Insurance Code chapter 151 voids construction clauses that make a contractor indemnify another party for that party's own negligence, with exceptions that include claims for injury to the contractor's own employees. It also voids additional insured requirements that would give the other party coverage it couldn't get through indemnity. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -58,7 +60,7 @@ Texas Insurance Code chapter 151 voids construction clauses that make a contract
 5. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
 6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

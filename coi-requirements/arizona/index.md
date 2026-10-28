@@ -2,13 +2,15 @@
 
 > What Arizona law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/arizona/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/arizona/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
 - Workers' comp required at: 1 employee
 - License insurance minimum: No statewide minimum
-- Anti-indemnity statute voids: Sole negligence; broader for private
+- Anti-indemnity statute voids: Sole negligence; own negligence on public and home jobs
 
 ## Workers' comp in Arizona
 
@@ -22,7 +24,7 @@ We found no statewide general liability minimum tied to a general contractor lic
 
 ## Indemnity and additional insured clauses
 
-Arizona has anti-indemnity statutes for public contracts (Ariz. Rev. Stat. §§ 34-226 and 41-2586) and private construction contracts (§§ 32-1159 and 32-1159.01). They void clauses that make a contractor indemnify another party for that party's sole negligence, and the private-contract rules reach further. Some commentators read the statute as also voiding additional insured coverage for the other party's sole negligence.
+Arizona's private construction statute (Ariz. Rev. Stat. § 32-1159) voids clauses that make a contractor indemnify another party for that party's sole negligence. The rules reach further on public contracts (§§ 34-226 and 41-2586) and on private contracts for homes (§ 32-1159.01), where a clause can't make a contractor cover the other party's negligence at all. The home statute also limits what an additional insured endorsement has to pay for.
 
 ## What to check on a contractor COI for a Arizona project
 
@@ -35,24 +37,25 @@ Arizona has anti-indemnity statutes for public contracts (Ariz. Rev. Stat. §§ 
 
 ### Do contractors need workers' comp in Arizona?
 
-Any employer that regularly hires workers in its usual business must carry workers' comp, no matter how many, including part-time workers. A sole proprietor with no employees doesn't need to insure only themselves.
+Any employer that regularly hires workers in its usual business must carry workers' comp, no matter how many, including part-time workers. A sole proprietor with no employees doesn't need to insure only themselves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Arizona require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Arizona's Registrar of Contractors requires a license bond. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Arizona's Registrar of Contractors requires a license bond. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Arizona construction contract make a contractor cover another party's negligence?
 
-Arizona has anti-indemnity statutes for public contracts (Ariz. Rev. Stat. §§ 34-226 and 41-2586) and private construction contracts (§§ 32-1159 and 32-1159.01). They void clauses that make a contractor indemnify another party for that party's sole negligence, and the private-contract rules reach further. Some commentators read the statute as also voiding additional insured coverage for the other party's sole negligence.
+Arizona's private construction statute (Ariz. Rev. Stat. § 32-1159) voids clauses that make a contractor indemnify another party for that party's sole negligence. The rules reach further on public contracts (§§ 34-226 and 41-2586) and on private contracts for homes (§ 32-1159.01), where a clause can't make a contractor cover the other party's negligence at all. The home statute also limits what an additional insured endorsement has to pay for. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
 1. [Workers' compensation FAQs](https://www.azica.gov/sites/default/files/media/FAQs%20version%20updated%205-2020%20%281%29.pdf), Industrial Commission of Arizona, 2020
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [Contractual Insurance Requirements and Anti-Indemnity Statutes](https://www.irmi.com/articles/expert-commentary/contractual-insurance-requirements-and-anti-indemnity-statutes), IRMI, 2016
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Ariz. Rev. Stat. § 32-1159](https://www.azleg.gov/ars/32/01159.htm), Arizona Legislature
+3. [Ariz. Rev. Stat. § 34-226](https://www.azleg.gov/ars/34/00226.htm), Arizona Legislature
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

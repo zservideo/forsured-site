@@ -2,7 +2,9 @@
 
 > What Tennessee law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/tennessee/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/tennessee/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -39,15 +41,15 @@ A Tennessee construction exemption covers only the owner named on it, not the bu
 
 ### Do contractors need workers' comp in Tennessee?
 
-Tennessee construction employers with one or more employees must carry workers' comp, and construction business owners must cover themselves too unless they qualify for an exemption. Outside construction and coal mining, the threshold is five employees. Exempt construction owners are listed on the state's Exemption Registry, and the exemption covers only that person.
+Tennessee construction employers with one or more employees must carry workers' comp, and construction business owners must cover themselves too unless they qualify for an exemption. Outside construction and coal mining, the threshold is five employees. Exempt construction owners are listed on the state's Exemption Registry, and the exemption covers only that person. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Tennessee require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Tennessee's contractor license has financial requirements but no liability insurance minimum we could find. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Tennessee's contractor license has financial requirements but no liability insurance minimum we could find. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Tennessee construction contract make a contractor cover another party's negligence?
 
-Tennessee's anti-indemnity statute (Tenn. Code Ann. § 62-6-123) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Tennessee's anti-indemnity statute (Tenn. Code Ann. § 62-6-123) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -56,7 +58,7 @@ Tennessee's anti-indemnity statute (Tenn. Code Ann. § 62-6-123) voids construct
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

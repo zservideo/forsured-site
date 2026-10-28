@@ -2,7 +2,9 @@
 
 > What Illinois law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/illinois/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/illinois/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -12,7 +14,7 @@ Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/
 
 ## Workers' comp in Illinois
 
-Illinois requires most employers with full-time or part-time employees to carry workers' comp from the first day of employment.
+Illinois law requires most employers to carry workers' comp for their employees.
 
 Agency: [Illinois Workers' Compensation Commission](https://iwcc.illinois.gov/coverage.html)
 
@@ -35,24 +37,23 @@ Illinois's anti-indemnity statute (740 ILCS 35/1) voids construction contract cl
 
 ### Do contractors need workers' comp in Illinois?
 
-Illinois requires most employers with full-time or part-time employees to carry workers' comp from the first day of employment.
+Illinois law requires most employers to carry workers' comp for their employees. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Illinois require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Illinois has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Illinois has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Illinois construction contract make a contractor cover another party's negligence?
 
-Illinois's anti-indemnity statute (740 ILCS 35/1) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+Illinois's anti-indemnity statute (740 ILCS 35/1) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
 1. [Insurance coverage](https://iwcc.illinois.gov/coverage.html), Illinois Workers' Compensation Commission
-2. [Illinois workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/illinois/), OnPay, Apr 2026
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

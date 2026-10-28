@@ -2,7 +2,9 @@
 
 > What West Virginia law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/west-virginia/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/west-virginia/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,23 +37,24 @@ West Virginia's anti-indemnity statute (W. Va. Code § 55-8-14) voids constructi
 
 ### Do contractors need workers' comp in West Virginia?
 
-All West Virginia employers are required by law to carry workers' comp. The Offices of the Insurance Commissioner reviews applications for exemption.
+All West Virginia employers are required by law to carry workers' comp. The Offices of the Insurance Commissioner reviews applications for exemption. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does West Virginia require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a West Virginia construction contract make a contractor cover another party's negligence?
 
-West Virginia's anti-indemnity statute (W. Va. Code § 55-8-14) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+West Virginia's anti-indemnity statute (W. Va. Code § 55-8-14) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
 1. [Employer coverage](https://www.wvinsurance.gov/Employer-Coverage), West Virginia Offices of the Insurance Commissioner
-2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+2. [W. Va. Code § 55-8-14](https://code.wvlegislature.gov/55-8-14/), West Virginia Legislature
+3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

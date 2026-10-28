@@ -2,7 +2,9 @@
 
 > What Maine law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/maine/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/maine/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,23 +37,23 @@ Maine has no general construction anti-indemnity statute. Courts there generally
 
 ### Do contractors need workers' comp in Maine?
 
-Almost every Maine business with one or more employees must carry workers' comp. An owner of at least 20% of a corporation's voting stock can waive coverage for themselves in writing, on a form the Workers' Compensation Board approves.
+Almost every Maine business with one or more employees must carry workers' comp. An owner of at least 20% of a corporation's voting stock can waive coverage for themselves in writing, on a form the Workers' Compensation Board approves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Maine require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Maine has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Maine has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Maine construction contract make a contractor cover another party's negligence?
 
-Maine has no general construction anti-indemnity statute. Courts there generally enforce a clause that covers a party's own negligence only when the clause says so clearly (see Emery v. Waterhouse Co., 467 A.2d 986 (Me. 1983)).
+Maine has no general construction anti-indemnity statute. Courts there generally enforce a clause that covers a party's own negligence only when the clause says so clearly (see Emery v. Waterhouse Co., 467 A.2d 986 (Me. 1983)). As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
-1. [Maine workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/maine/), OnPay, May 2026
+1. [Employer's guide to workers' compensation insurance in Maine](https://www.maine.gov/pfr/insurance/sites/maine.gov.pfr.insurance/files/inline-files/Workers-Comp-Employer-Guide.pdf), Maine Bureau of Insurance
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

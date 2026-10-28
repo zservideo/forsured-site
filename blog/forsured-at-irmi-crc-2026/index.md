@@ -60,5 +60,7 @@ Forsured is construction insurance compliance software. It checks every contract
 1. [IRMI Construction Risk Conference (CRC)](https://www.irmi.com/conferences/construction-risk-conference), IRMI
 2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
