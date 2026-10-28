@@ -183,6 +183,13 @@ nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-cont
 .cta-g{background:#fff;color:#FB612A}
 .cta-g:hover{background:#FFF3EC}
 nav .cta-p{height:36px;padding:0 14px}
+.mtog{display:none;background:none;border:none;cursor:pointer;padding:11px 12px;margin-right:-12px;line-height:0}
+.mtog span{display:block;width:20px;height:2px;background:var(--tx);margin:4px 0;border-radius:2px}
+.mmenu{position:fixed;top:60px;left:0;right:0;bottom:0;z-index:4;display:flex;flex-direction:column;padding:24px;background:var(--bg);overflow-y:auto}
+.mmenu[hidden]{display:none}
+.mmenu a:not(.cta-p){padding:16px;font-size:16px;color:var(--mt);text-decoration:none;border-bottom:1px solid var(--bdr)}
+.mmenu a[aria-current]{color:var(--tx)}
+.mmenu .cta-p{margin-top:20px}
 /* Label: Forsured Flows Badge with status dot. Radius 6, Inter Medium 12/16 */
 .label{display:inline-flex;align-items:center;gap:6px;padding:1px 8px;border:1px solid #E4E7EC;border-radius:6px;background:#fff;font-size:12px;font-weight:500;line-height:16px;color:#344051}
 .label::before{content:'';width:6px;height:6px;border-radius:50%;background:#FB612A;flex:none}
@@ -271,13 +278,24 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .band .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
 .band .cta-g{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
 .band .cta-g:hover{background:rgba(255,255,255,.08)}
-footer{padding:28px 0 40px;font-size:12px;color:var(--mt)}
-footer .edge{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-footer a{display:inline-block;line-height:24px}
-@media(max-width:860px){.nlinks{display:none}.lead{grid-template-columns:1fr;padding:20px}.lead img{order:-1}}
+footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:28px}
+.fb .fl{font-family:'Chakra Petch',sans-serif;font-size:20px;font-weight:800;color:var(--tx);text-decoration:none}
+.fb p{font-size:12px;color:#6E6E6E;line-height:1.6;margin-top:8px;max-width:320px}
+.fc h2{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--tx);margin-bottom:10px}
+.fc a{display:block;font-size:13px;line-height:24px;color:#6E6E6E;text-decoration:none;margin-bottom:4px}
+.fc a:hover,.fbot a:hover{color:var(--f)}
+.fbot{border-top:1px solid var(--bdr);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:11px;color:#6E6E6E}
+.fbot a{color:#6E6E6E}
+@media(max-width:980px){.nlinks{display:none}.mtog{display:block}nav>.cta-p{margin-left:auto}}
+@media(max-width:860px){.lead{grid-template-columns:1fr;padding:20px}.lead img{order:-1}}
 @media(max-width:768px){
   nav{padding:0 16px;height:56px}
-  nav .cta-p{padding:0 12px;font-size:13px}
+  nav>.cta-p{display:none}
+  .mmenu{top:56px}
+  .fgrid{grid-template-columns:1fr;gap:28px}
+  footer{padding:32px 0 24px}
   .cta-p,.cta-g{min-height:44px}
   .edge{padding:0 16px}
   .post-head,.index-head{padding-top:32px}
@@ -294,7 +312,7 @@ footer a{display:inline-block;line-height:24px}
   .band .btns{justify-content:stretch}
   .band .btns a{flex:1 1 100%}
 }
-@media print{nav,.band,.more,.share,.share-end{display:none}}
+@media print{nav,.mmenu,footer,.band,.more,.share,.share-end{display:none}}
 `.trim();
 
 function head({ title, description, url, image, imageAlt, type, jsonld, published, modified, section, tags = [], md }) {
@@ -342,17 +360,31 @@ ${CSS}
 <body>`;
 }
 
+// Same links as the home page nav and footer, so a reader can reach the rest of the site from any post.
+const SITE_LINKS = [
+  ['/#platform', 'Platform'],
+  ['/#how', 'How It Works'],
+  ['/#gc', 'For GCs'],
+  ['/#brokers', 'For Brokers'],
+  ['/#why', 'Why Forsured'],
+];
+
 function nav(current) {
+  const blog = `<a href="/blog/"${current === 'blog' ? ' aria-current="page"' : ''}>Blog</a>`;
+  const links = SITE_LINKS.map(([href, text]) => `<a href="${href}">${text}</a>`);
   return `<a class="skip" href="#main">Skip to the content</a>
 <nav aria-label="Main navigation">
   <a href="/" class="nlogo" aria-label="Forsured, go to homepage">Forsured</a>
   <div class="nlinks">
-    <a href="/#platform">Platform</a>
-    <a href="/#how">How It Works</a>
-    <a href="/blog/"${current === 'blog' ? ' aria-current="page"' : ''}>Blog</a>
+    ${[...links, blog].join('\n    ')}
   </div>
   <a href="/#demo" class="cta-p">Free COI Risk Check →</a>
-</nav>`;
+  <button class="mtog" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
+</nav>
+<div class="mmenu" id="mm" aria-label="Mobile navigation" hidden>
+  ${[...links, blog].join('\n  ')}
+  <a href="/#demo" class="cta-p">Free COI Risk Check →</a>
+</div>`;
 }
 
 const BAND = `<section class="band" aria-label="Free COI risk check"><div class="edge">
@@ -366,10 +398,51 @@ const BAND = `<section class="band" aria-label="Free COI risk check"><div class=
   </div>
 </div></section>`;
 
+const MENU_JS = `<script>
+(() => {
+  const btn = document.querySelector('.mtog');
+  const menu = document.getElementById('mm');
+  const set = (open) => {
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  btn.addEventListener('click', () => set(menu.hidden));
+  menu.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { set(false); btn.focus(); } });
+  matchMedia('(min-width: 981px)').addEventListener('change', (e) => { if (e.matches) set(false); });
+})();
+</script>`;
+
 const FOOTER = () => `<footer><div class="edge">
-  <span>Independent commentary from Forsured. Not affiliated with or endorsed by IRMI or the publications we cite.</span>
-  <span>© ${year()} Forsured · <a href="/blog/feed.xml">RSS</a> · <a href="/">forsured.ai</a></span>
+  <div class="fgrid">
+    <div class="fb">
+      <a class="fl" href="/">Forsured</a>
+      <p>Continuous contractor insurance compliance for construction. Spot the risk. Flag the gap. Avoid the loss.</p>
+    </div>
+    <div class="fc">
+      <h2>Product</h2>
+      <a href="/#platform">Platform</a>
+      <a href="/#how">How It Works</a>
+      <a href="/#gc">General Contractors</a>
+      <a href="/#brokers">Brokers</a>
+      <a href="/#why">Why Forsured</a>
+    </div>
+    <div class="fc">
+      <h2>Company</h2>
+      <a href="/blog/">Blog</a>
+      <a href="mailto:hello@forsured.ai">Contact</a>
+      <a href="/#demo">Free COI Risk Check</a>
+      <a href="/blog/feed.xml">RSS feed</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>Independent commentary from Forsured. Not affiliated with or endorsed by IRMI or the publications we cite.</p>
+    <p>© ${year()} Forsured · <a href="/">forsured.ai</a></p>
+  </div>
 </div></footer>
+${MENU_JS}
 </body>
 </html>
 `;
