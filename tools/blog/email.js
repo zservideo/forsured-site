@@ -83,7 +83,7 @@ ${p.takeaways.map((t) => `        <p style="margin:8px 0 0">✅ <strong>${rich(t
   </td></tr>
   <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1.6;color:${INK}">
     <p style="margin:0">Questions, or a COI you want a second set of eyes on? Just hit reply. It comes straight to me.</p>
-    <p style="margin:16px 0 0"><strong>Zach</strong><br/><span style="color:${MUTED};font-size:14px">Forsured</span></p>
+    <p style="margin:16px 0 0"><strong>Zach Servideo</strong><br/><span style="color:${MUTED};font-size:14px">Founder / CGO<br/>Forsured</span></p>
   </td></tr>
   <tr><td style="padding:28px 32px 24px;${sans};font-size:12px;line-height:1.6;color:${MUTED};border-top:1px solid ${LINE}">
     <p style="margin:20px 0 0">You're getting this because you signed up for new posts on the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
@@ -110,7 +110,8 @@ ${p.takeaways.map((t) => `        <p style="margin:8px 0 0">✅ <strong>${rich(t
     '',
     'Questions, or a COI you want a second set of eyes on? Just hit reply. It comes straight to me.',
     '',
-    'Zach',
+    'Zach Servideo',
+    'Founder / CGO',
     'Forsured',
     '',
     `You're getting this because you signed up for new posts on the Forsured blog (${SITE}/blog/). Not for you anymore? Reply "stop" and I'll take you off.`,

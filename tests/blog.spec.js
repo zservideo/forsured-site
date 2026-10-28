@@ -323,6 +323,7 @@ test('subscriber email (tools/blog/email.js) is branded HTML with real links and
     expect(e.html, p.slug).toContain('Hi Pat,');
     expect(e.html, `${p.slug} hero`).toContain(`/blog/${p.slug}/hero.png`);
     expect(e.html, `${p.slug} button`).toContain('Read the full post');
+    for (const line of ['Zach Servideo', 'Founder / CGO']) expect(e.html + e.text, `${p.slug} signature`).toContain(line);
     expect(e.html, `${p.slug} no background shorthand`).not.toMatch(/[;"]background:/);
     const hrefs = [...e.html.matchAll(/href="([^"]+)"/g)].map(([, h]) => h);
     expect(hrefs.length, p.slug).toBeGreaterThan(2);
