@@ -415,14 +415,27 @@ ${shareLinks(p).map(([k, name, href]) => `        <a class="sh" href="${esc(href
 }
 
 // Copy link and the native share sheet need a little script; the network links work without it.
+// On phones, the LinkedIn, X and Facebook web share pages open in the browser, where most people
+// aren't signed in, so they hit a login wall even with the app installed. There the buttons open the
+// phone's share sheet instead, which hands the post to the signed-in app. Desktop keeps the web links.
 const SHARE_JS = `<script>
 (() => {
   const url = document.querySelector('link[rel=canonical]').href;
   const title = document.querySelector('h1').textContent;
+  const share = (u) => navigator.share({ title, url: u }).catch(() => {});
+  const phone = !!navigator.share && matchMedia('(pointer: coarse)').matches;
   for (const b of document.querySelectorAll('[data-share]')) {
     if (!navigator.share) continue;
     b.hidden = false;
-    b.addEventListener('click', () => navigator.share({ title, url }).catch(() => {}));
+    b.addEventListener('click', () => share(url));
+  }
+  if (phone) {
+    for (const a of document.querySelectorAll('a[data-net]:not([data-net=email])')) {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        share(url + '?utm_source=' + a.dataset.net + '&utm_medium=social&utm_campaign=blog_share');
+      });
+    }
   }
   for (const b of document.querySelectorAll('[data-copy]')) {
     b.addEventListener('click', async () => {

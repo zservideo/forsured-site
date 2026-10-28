@@ -124,6 +124,24 @@ test('the native share button shows only where the device has a share sheet', as
   expect(await page.evaluate(() => window.__shared.url)).toBe(`https://forsured.ai/blog/${POSTS[0]}/`);
 });
 
+test('on phones, network buttons open the share sheet instead of a web login page', async ({ browser }) => {
+  const context = await browser.newContext({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  await page.addInitScript(() => {
+    window.__shared = [];
+    Navigator.prototype.share = function (data) { window.__shared.push(data); return Promise.resolve(); };
+  });
+  const slug = POSTS[0];
+  await open(page, `/blog/${slug}/`, { fonts: false });
+  for (const net of ['linkedin', 'x', 'facebook']) await page.locator(`.post-head a[data-net="${net}"]`).click();
+  expect(page.url(), 'stays on the post').toContain(`/blog/${slug}/`);
+  expect(context.pages().length, 'no new tab').toBe(1);
+  expect(await page.evaluate(() => window.__shared.map((d) => d.url))).toEqual(
+    ['linkedin', 'x', 'facebook'].map((n) => `https://forsured.ai/blog/${slug}/?utm_source=${n}&utm_medium=social&utm_campaign=blog_share`)
+  );
+  await context.close();
+});
+
 test('every post has a Markdown copy for AI answer engines', async ({ page, request }) => {
   for (const slug of POSTS) {
     await open(page, `/blog/${slug}/`, { fonts: false });
