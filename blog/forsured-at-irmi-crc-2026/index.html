@@ -586,7 +586,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       const make = JSON.stringify({ email, subject: 'Forsured Blog Subscriber', form_source: 'Newsletter', placement: box.dataset.sub, page: location.pathname, submitted_at: new Date().toISOString() });
       Promise.all([
         fetch('https://api.web3forms.com/submit', { method: 'POST', body: w3 }),
-        fetch('https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: make }),
+        fetch('https://hook.us2.make.com/er2vury4yeu7eo6fflh031ngttpvwg3b', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: make }),
       ])
         .then((r) => r[0].json())
         .then((j) => {

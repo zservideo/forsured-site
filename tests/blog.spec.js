@@ -347,3 +347,13 @@ test('welcome email (tools/blog/email.js --welcome) links three posts and the fr
   for (const line of ['Free COI risk check', 'Zach Servideo', 'Founder / CGO']) expect(e.html + e.text).toContain(line);
   expect(e.text).not.toMatch(/<[a-z]|\*\*/);
 });
+
+test('every post publishes the email Make sends subscribers (blog/<slug>/email.json)', () => {
+  const { email } = require('../tools/blog/email');
+  const { readPosts } = require('../tools/blog/build');
+  for (const p of readPosts()) {
+    const j = JSON.parse(read(`blog/${p.slug}/email.json`));
+    expect(j, p.slug).toEqual({ subject: email(p).subject, html: email(p).html });
+    expect(j.html, p.slug).toContain('Hi there,');
+  }
+});
