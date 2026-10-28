@@ -118,17 +118,19 @@ function sendNewPostEmails() {
   try {
     const fresh = feedSlugs_().filter((slug) => !props.getProperty('sent:' + slug));
     if (!fresh.length) return;
-    const emails = subscriberEmails_();
+    const people = subscribers_();
     fresh.forEach((slug) => {
       const res = UrlFetchApp.fetch(SITE + '/blog/' + slug + '/email.json', { muteHttpExceptions: true });
       if (res.getResponseCode() !== 200) return; // Pages may not have deployed it yet; try next run.
       const mail = JSON.parse(res.getContentText('UTF-8'));
       // Record first, so a timeout mid-list can never double-send the people already done.
       props.setProperty('sent:' + slug, new Date().toISOString());
-      emails.forEach((to) => {
-        GmailApp.sendEmail(to, mail.subject, plain_(mail.html), { htmlBody: mail.html, name: FROM_NAME });
+      people.forEach((p) => {
+        // Same greeting the Make scenario used: "Hi <first name>," when Attio has one.
+        const html = p.first ? mail.html.replace('Hi there,', 'Hi ' + p.first + ',') : mail.html;
+        GmailApp.sendEmail(p.email, mail.subject, plain_(html), { htmlBody: html, name: FROM_NAME });
       });
-      console.log('Sent ' + slug + ' to ' + emails.length + ' subscribers');
+      console.log('Sent ' + slug + ' to ' + people.length + ' subscribers');
     });
   } finally {
     lock.releaseLock();
@@ -145,7 +147,7 @@ function feedSlugs_() {
     .map((m) => m[1]);
 }
 
-function subscriberEmails_() {
+function subscribers_() {
   const key = PropertiesService.getScriptProperties().getProperty('ATTIO_API_KEY');
   const headers = { Authorization: 'Bearer ' + key };
   const entries = JSON.parse(UrlFetchApp.fetch('https://api.attio.com/v2/lists/' + ATTIO_LIST + '/entries/query', {
@@ -156,10 +158,12 @@ function subscriberEmails_() {
     const person = JSON.parse(UrlFetchApp.fetch(
       'https://api.attio.com/v2/objects/people/records/' + entry.parent_record_id, { headers }
     ).getContentText()).data;
-    const first = (person.values.email_addresses || [])[0];
-    if (first && first.email_address) seen[first.email_address.toLowerCase()] = true;
+    const address = ((person.values.email_addresses || [])[0] || {}).email_address;
+    if (!address || seen[address.toLowerCase()]) return;
+    const first = ((person.values.name || [])[0] || {}).first_name || '';
+    seen[address.toLowerCase()] = { email: address, first: first.trim() };
   });
-  return Object.keys(seen);
+  return Object.values(seen);
 }
 
 // ---------- helpers ----------
