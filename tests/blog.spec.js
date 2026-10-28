@@ -1,7 +1,7 @@
 // The blog and the discovery files built from it (tools/blog/build.js): the generated pages are
 // current, every post carries the structured data, sources, hero image, share buttons and share card
 // that search engines, AI answer engines and social networks read, the home page nav, phone menu and
-// footer links, the newsletter signup, and the feed, sitemap, robots.txt,
+// footer links, the newsletter signup and the email subscribers get, and the feed, sitemap, robots.txt,
 // llms.txt, llms-full.txt and Markdown copies list everything. IndexNow's key file matches its workflow.
 // Copy, brand, SEO, accessibility, layout and performance checks cover each post through PAGES.
 const { test, expect } = require('@playwright/test');
@@ -311,5 +311,25 @@ test('on phones, the blog menu button opens the site menu and closes it again', 
 test('the blog source and tooling are not published', async ({ request }) => {
   for (const url of ['/content/blog/compliance-isnt-coverage.md', '/tools/blog/build.js']) {
     expect((await request.get(url)).status(), `${url} should not be served`).toBe(404);
+  }
+});
+
+test('subscriber email (tools/blog/email.js) is branded HTML with real links and a plain-text copy', () => {
+  const { email } = require('../tools/blog/email');
+  const { readPosts } = require('../tools/blog/build');
+  for (const p of readPosts()) {
+    const e = email(p, 'Pat');
+    expect(e.subject, p.slug).toContain(p.title);
+    expect(e.html, p.slug).toContain('Hi Pat,');
+    expect(e.html, `${p.slug} hero`).toContain(`/blog/${p.slug}/hero.png`);
+    expect(e.html, `${p.slug} button`).toContain('Read the full post');
+    expect(e.html, `${p.slug} no background shorthand`).not.toMatch(/[;"]background:/);
+    const hrefs = [...e.html.matchAll(/href="([^"]+)"/g)].map(([, h]) => h);
+    expect(hrefs.length, p.slug).toBeGreaterThan(2);
+    for (const h of hrefs) expect(h, p.slug).toMatch(/^https:\/\/forsured\.ai\/.*utm_source=email/);
+    expect(e.html.replace(/href="[^"]+"|src="[^"]+"/g, ''), `${p.slug} bare URLs`).not.toMatch(/https?:\/\//);
+    expect(e.text, p.slug).toContain(`https://forsured.ai${p.url}`);
+    expect(e.text, `${p.slug} plain text`).not.toMatch(/<[a-z]|\*\*/);
+    expect(email(p, '', { hero: '' }).html, `${p.slug} --no-hero`).not.toContain('<img');
   }
 });
