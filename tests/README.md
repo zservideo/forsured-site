@@ -24,8 +24,20 @@ A new push to a pull request cancels the run for the push before it.
 | `a11y.spec.js` | Accessibility: axe-core WCAG 2.1/2.2 AA rules, visible keyboard focus, alt text, landmarks. |
 | `seo.spec.js` | Title and description length, canonical URLs, link-preview tags and image, one h1 and no skipped heading levels, image sizes and lazy loading, every local link resolves, structured data, the CNAME. |
 | `blog.spec.js` | The blog (built from `content/blog` by `tools/blog/build.js`): the built pages are current, every post has BlogPosting, breadcrumb and FAQ structured data, a short answer up top and linked sources, a 1600x800 hero image, a share card and working share buttons (LinkedIn, X, Facebook, email, copy link, native share), the same nav, phone menu and footer links as the home page, a Markdown copy, and the RSS feed, `sitemap.xml`, `robots.txt`, `llms.txt` and `llms-full.txt` list every page. The IndexNow key file matches `.github/workflows/indexnow.yml`. Every post is also in `PAGES`, so all the checks above cover it. See `content/blog/README.md` to publish a post. |
+| `states.spec.js` | The state COI requirement pages (built from `content/coi-requirements` by `tools/blog/build.js`): all 50 states and DC, every fact sourced over https, each page's Article, breadcrumb and FAQ structured data, linked sources with the not-legal-advice note, share card and Markdown copy, a hub that links every state, footer links but no main-nav link, and the `llms.txt` entries. See `content/coi-requirements/README.md` to change a state. |
 | `setup.spec.js` | The CI image matches the installed Playwright version, so browser behavior and screenshots don't drift. |
 | `performance.spec.js` | Page-weight budgets on first load, file-size limits for HTML, images and the PDF, and no layout jumps while the page loads. |
+
+## State pages and run time
+
+The 51 state pages share one template and differ only in their text. Copy, SEO, structured data,
+source-color and file-size checks read every one of them. The checks that render a page in a browser
+(`responsive`, `a11y`, the rendered `brand` checks and page weight in `performance`) run on every
+other page and on a sample of state pages: the longest and shortest page, the longest state name and
+the longest fact-card answers, picked from the built files on every run (`BROWSER_PAGES` in
+`tests/helpers.js`). Running all of them on every state took the suite from about 3 minutes to over
+an hour without finding anything the sample misses. If a state page ever gets its own layout, add it
+to the sample.
 
 ## Design system
 
@@ -67,7 +79,7 @@ Most failures are real problems to fix in the page. A few are guardrails you upd
 - **Upgrading Playwright.** Change the image tag in both workflows to the new version
   (`setup.spec.js` fails until they match), then re-take the baselines as above.
 - **A new color.** Add it to `tests/brand.json` under the right group, so the change is visible in review.
-- **A new page.** Add it to `PAGES` in `tests/helpers.js` and to `STATIC_PAGES` in `tools/blog/build.js` (the sitemap); blog posts are added to both automatically; copy, brand, SEO, accessibility and
+- **A new page.** Add it to `PAGES` in `tests/helpers.js` and to `STATIC_PAGES` in `tools/blog/build.js` (the sitemap); blog posts and state pages are added to both automatically; copy, brand, SEO, accessibility and
   layout checks then cover it automatically.
 - **A new copy rule.** Add a pattern and the reason to `BANNED` in `tests/copy.spec.js`.
 

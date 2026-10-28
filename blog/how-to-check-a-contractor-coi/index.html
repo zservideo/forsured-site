@@ -328,6 +328,20 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .sources .note{margin-top:16px;padding-top:14px;border-top:1px solid #E4E7EC;font-size:13px;line-height:1.6}
 .sources .note a{color:var(--tx)}
 .note{font-size:13px;color:var(--mt);margin-top:16px}
+/* Newsletter signup: one email field and the primary button, in the same white box as the share and sources blocks */
+.sub{margin-top:40px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-radius:12px}
+.sub h2{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:-.01em;line-height:1.3}
+.sub>div>p{font-size:15px;line-height:1.6;color:var(--mt);margin-top:8px;max-width:560px}
+.sub form{display:flex;gap:8px;margin-top:16px;max-width:520px}
+.sub input[type=email]{flex:1;min-width:0;height:40px;padding:0 12px;border:1px solid #E4E7EC;border-radius:8px;background:#fff;font:inherit;font-size:15px;color:var(--tx);box-shadow:0 1px 2px rgba(20,28,37,.04)}
+.sub input[type=email]:focus{outline:2px solid var(--f);outline-offset:1px;border-color:var(--f)}
+.sub .hp{display:none}
+.sub .fine{font-size:12px;line-height:1.5;color:var(--mt);margin-top:10px}
+.sub .err{font-size:13px;color:#C4291C;margin-top:10px}
+.sub .ok{font-size:15px;line-height:1.6;margin-top:12px;padding:12px 14px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #16864E;border-radius:8px;color:#16864E}
+.sub [hidden]{display:none}
+.index-sub{margin:40px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 48px;align-items:center;padding:28px}
+.index-sub form{margin-top:0}
 /* Keep reading: its own shaded band, so it reads as "what's next", not more of the post */
 .more{background:#F2F3F1;border-top:1px solid var(--bdr);padding:56px 0 72px}
 .more h2{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.015em}
@@ -369,7 +383,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
 .fbot a{color:#6E6E6E}
 @media(max-width:1100px){.edge{padding:0 32px}}
 @media(max-width:980px){.nlinks{display:none}.mtog{display:block}nav>.cta-p{margin-left:auto}}
-@media(max-width:860px){.lead{grid-template-columns:1fr;padding:16px}.lead img{order:-1}}
+@media(max-width:860px){.index-sub{grid-template-columns:1fr;padding:24px}.index-sub form{margin-top:16px}.lead{grid-template-columns:1fr;padding:16px}.lead img{order:-1}}
 @media(max-width:768px){
   nav{padding:0 20px;height:56px}
   nav>.cta-p{display:none}
@@ -387,13 +401,16 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
   .hero{margin-top:24px}
   .sh{width:44px;height:44px}
   .share-end{padding:16px 18px}
+  .sub{padding:18px}
+  .sub form{flex-direction:column}
+  .sub input[type=email]{flex:none;width:100%;height:44px;font-size:16px}
   .extra.sources{margin:40px 0 56px;padding:16px 18px}
   .more{padding:40px 0 56px}
   .band .edge{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px}
   .band .btns{justify-content:stretch}
   .band .btns a{flex:1 1 100%}
 }
-@media print{nav,.mmenu,footer,.band,.more,.share,.share-end{display:none}}
+@media print{nav,.mmenu,footer,.band,.more,.share,.share-end,.sub{display:none}}
 </style>
 </head>
 <body>
@@ -480,6 +497,22 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
         <span class="share-s" role="status"></span>
       </div>
     </section>
+    <section class="sub" aria-labelledby="sub" data-sub="post">
+      <div>
+        <h2 id="sub">Get new posts by email.</h2>
+        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
+      </div>
+      <div>
+      <form novalidate>
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+        <input id="sub-email" type="email" name="email" autocomplete="email" placeholder="Work email" aria-label="Work email" required aria-describedby="sub-fine"/>
+        <button class="cta-p" type="submit">Subscribe</button>
+      </form>
+      <p class="err" role="alert" hidden></p>
+      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
+      <p class="fine" id="sub-fine">No spam. Unsubscribe from any email.</p>
+      </div>
+    </section>
     <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>
       <h3>What should I look for on a contractor's certificate of insurance?</h3>
@@ -539,6 +572,47 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
   }
 })();
 </script>
+<script>
+(() => {
+  const RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  for (const box of document.querySelectorAll('[data-sub]')) {
+    const form = box.querySelector('form');
+    const input = form.querySelector('input[type=email]');
+    const btn = form.querySelector('button');
+    const err = box.querySelector('.err');
+    const ok = box.querySelector('.ok');
+    const fail = (msg) => { err.textContent = msg; err.hidden = false; btn.disabled = false; btn.textContent = 'Subscribe'; };
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!RE.test(email)) { fail('Please enter a valid email.'); input.focus(); return; }
+      if (form.botcheck.checked) return;
+      err.hidden = true;
+      btn.disabled = true;
+      btn.textContent = 'Subscribing…';
+      const w3 = new FormData();
+      w3.append('access_key', '9f256d7f-4b10-4b26-8502-bf23abe8455d');
+      w3.append('subject', 'Forsured Blog Subscriber');
+      w3.append('from_name', 'Forsured Blog');
+      w3.append('email', email);
+      w3.append('page', location.pathname);
+      const make = JSON.stringify({ email, subject: 'Forsured Blog Subscriber', form_source: 'Newsletter', placement: box.dataset.sub, page: location.pathname, submitted_at: new Date().toISOString() });
+      Promise.all([
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: w3 }),
+        fetch('https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: make }),
+      ])
+        .then((r) => r[0].json())
+        .then((j) => {
+          if (!j.success) throw new Error();
+          form.hidden = true;
+          box.querySelector('.fine').hidden = true;
+          ok.hidden = false;
+        })
+        .catch(() => fail('Something went wrong. Please try again.'));
+    });
+  }
+})();
+</script>
 <footer><div class="edge">
   <div class="fgrid">
     <div class="fb">
@@ -556,6 +630,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
     <div class="fc">
       <h2>Company</h2>
       <a href="/blog/">Blog</a>
+      <a href="/coi-requirements/">COI Requirements by State</a>
       <a href="mailto:hello@forsured.ai">Contact</a>
       <a href="/#demo">Free COI Risk Check</a>
       <a href="/blog/feed.xml">RSS feed</a>

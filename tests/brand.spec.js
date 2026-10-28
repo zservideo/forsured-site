@@ -1,7 +1,7 @@
 // Brand guardrails: colors, fonts, logo and buttons stay on the brand defined in tests/brand.json.
 // A new color or font fails here until it is added to brand.json on purpose.
 const { test, expect } = require('@playwright/test');
-const { PAGES, BRAND, open, settle, parseColor, onBrand, hex, read } = require('./helpers');
+const { PAGES, BROWSER_PAGES, BRAND, open, settle, parseColor, onBrand, hex, read } = require('./helpers');
 
 // Colors written in the page source: CSS (including hover/focus states and media queries),
 // inline styles, SVG fill/stroke and the data-URI favicon.
@@ -28,7 +28,12 @@ for (const p of PAGES) {
       const off = sourceColors(read(p.file)).filter((c) => !onBrand(c.rgb));
       expect(off.map((c) => `${c.color} (${hex(c.rgb)}) near line ${c.line}`), 'colors missing from tests/brand.json').toEqual([]);
     });
+  });
+}
 
+// Rendered checks: every page, with the state pages represented by a sample (see tests/helpers.js).
+for (const p of BROWSER_PAGES) {
+  test.describe(`${p.name} brand`, () => {
     test('every rendered color is on the brand palette', async ({ page }) => {
       await open(page, p.url, { reveal: true });
       const used = await page.evaluate(() => {
