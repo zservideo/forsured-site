@@ -960,7 +960,13 @@ function build() {
   files.set('llms-full.txt', llmsFull(posts));
   // The welcome email Make sends each new subscriber, fetched by the scenario at send time so its
   // "Start here" reads stay current. Not a page: kept out of search and the sitemap.
-  const { welcome } = require('./email');
+  const { email, welcome } = require('./email');
+  // Each post's subscriber email ({subject, html} with "Hi there,"), which the Make scenario sends to
+  // every Blog subscribers member when the post shows up in the feed.
+  for (const p of posts) {
+    const e = email(p);
+    files.set(`blog/${p.slug}/email.json`, `${JSON.stringify({ subject: e.subject, html: e.html }, null, 2)}\n`);
+  }
   files.set('blog/email/welcome.html', welcome('', posts).html.replace('<meta charset="UTF-8"/>', '<meta charset="UTF-8"/><meta name="robots" content="noindex"/>'));
 
   const stale = [];
