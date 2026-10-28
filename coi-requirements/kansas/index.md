@@ -2,7 +2,9 @@
 
 > What Kansas law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/kansas/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/kansas/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Kansas's anti-indemnity statute (Kan. Stat. Ann. § 16-121) voids construction c
 
 ### Do contractors need workers' comp in Kansas?
 
-Kansas employers outside agriculture must carry workers' comp once gross annual payroll passes $20,000.
+Kansas employers outside agriculture must carry workers' comp once gross annual payroll passes $20,000. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Kansas require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Kansas has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Kansas has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Kansas construction contract make a contractor cover another party's negligence?
 
-Kansas's anti-indemnity statute (Kan. Stat. Ann. § 16-121) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids.
+Kansas's anti-indemnity statute (Kan. Stat. Ann. § 16-121) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Kansas's anti-indemnity statute (Kan. Stat. Ann. § 16-121) voids construction c
 3. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

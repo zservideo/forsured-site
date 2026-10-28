@@ -2,7 +2,9 @@
 
 > What Alabama law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/alabama/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/alabama/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Alabama has no general construction anti-indemnity statute. Courts there general
 
 ### Do contractors need workers' comp in Alabama?
 
-Employers that regularly employ five or more people, counting corporate officers, must carry workers' comp. The five-employee floor does not apply to building new single-family detached homes: employers doing that work need coverage at any headcount.
+Employers that regularly employ five or more people, counting corporate officers, must carry workers' comp. The five-employee floor does not apply to building new single-family detached homes: employers doing that work need coverage at any headcount. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Alabama require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Alabama construction contract make a contractor cover another party's negligence?
 
-Alabama has no general construction anti-indemnity statute. Courts there generally enforce a clause that covers a party's own negligence only when the clause says so clearly (see Craig Constr. Co. v. Hendrix, 568 So. 2d 752 (Ala. 1990)).
+Alabama has no general construction anti-indemnity statute. Courts there generally enforce a clause that covers a party's own negligence only when the clause says so clearly (see Craig Constr. Co. v. Hendrix, 568 So. 2d 752 (Ala. 1990)). As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,7 +53,7 @@ Alabama has no general construction anti-indemnity statute. Courts there general
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

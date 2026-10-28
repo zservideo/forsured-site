@@ -2,7 +2,9 @@
 
 > What Virginia law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/virginia/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/virginia/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Virginia's anti-indemnity statute (Va. Code Ann. §§ 11-4.1, 11-4.4) voids cons
 
 ### Do contractors need workers' comp in Virginia?
 
-Virginia businesses that regularly employ more than two people must carry workers' comp. A contractor counts the employees of the companies working under it toward that number, whether or not those companies have their own coverage.
+Virginia businesses that regularly employ more than two people must carry workers' comp. A contractor counts the employees of the companies working under it toward that number, whether or not those companies have their own coverage. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Virginia require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Virginia's contractor license has financial requirements but no liability insurance minimum we could find. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Virginia's contractor license has financial requirements but no liability insurance minimum we could find. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Virginia construction contract make a contractor cover another party's negligence?
 
-Virginia's anti-indemnity statute (Va. Code Ann. §§ 11-4.1, 11-4.4) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Virginia's anti-indemnity statute (Va. Code Ann. §§ 11-4.1, 11-4.4) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,7 +53,7 @@ Virginia's anti-indemnity statute (Va. Code Ann. §§ 11-4.1, 11-4.4) voids cons
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

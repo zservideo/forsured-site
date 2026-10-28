@@ -57,12 +57,22 @@ for (const s of STATES) {
     expect(items.find((i) => i['@type'] === 'BreadcrumbList'), 'breadcrumb').toBeTruthy();
     const faq = items.find((i) => i['@type'] === 'FAQPage');
     expect(faq, 'FAQPage').toBeTruthy();
-    for (const q of faq.mainEntity) expect(q.acceptedAnswer.text.length, q.name).toBeGreaterThan(40);
+    for (const q of faq.mainEntity) {
+      expect(q.acceptedAnswer.text.length, q.name).toBeGreaterThan(40);
+      // Answer engines quote FAQ answers without the page, so each one carries its own qualifier.
+      expect(q.acceptedAnswer.text, q.name).toContain('not legal advice');
+    }
+
+    // The not-advice notice sits in the page header, next to the facts, not only at the bottom.
+    const header = html.slice(html.indexOf('class="post-head"'), html.indexOf('</header>', html.indexOf('class="post-head"')));
+    expect(header).toContain('class="notice"');
+    expect(header).toContain('not legal or insurance advice');
 
     // Every source is linked in the Sources box, with the not-legal-advice note.
     const box = html.slice(html.indexOf('class="extra sources"'));
     for (const src of s.sources) expect(box, src.url).toContain(`href="${src.url.replace(/&/g, '&amp;')}"`);
-    expect(box).toContain('not legal advice');
+    expect(box).toContain('not legal or insurance advice');
+    expect(box).toContain('not a law firm or a licensed insurance agency');
     expect(html, 'free COI risk check').toContain('href="/#demo"');
 
     expect(fs.statSync(path.join(ROOT, `${u.slice(1)}og.png`)).size, 'share card under 5 MB').toBeLessThan(5e6);
@@ -109,6 +119,8 @@ test('the pages stay out of the main nav and are linked from the footer', async 
 test('llms.txt lists the hub and every state page with its Markdown copy', async ({ request }) => {
   const txt = await (await request.get('/llms.txt')).text();
   expect(txt).toContain('## Contractor insurance requirements by state');
+  const section = txt.slice(txt.indexOf('## Contractor insurance requirements by state'));
+  expect(section.split('\n- [')[0], 'qualifier before the list').toContain('not legal or insurance advice');
   for (const u of ['/coi-requirements/', ...STATES.map(url)]) expect(txt).toContain(`https://forsured.ai${u}index.md`);
 });
 

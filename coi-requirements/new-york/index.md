@@ -2,7 +2,9 @@
 
 > What New York law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-york/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-york/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -39,15 +41,15 @@ When a business applies for a permit, license or public contract in New York, th
 
 ### Do contractors need workers' comp in New York?
 
-Virtually every New York employer must carry workers' comp, including for part-time, temporary, leased and family workers. Sole proprietors and partnerships with no employees, and certain one- or two-owner corporations with no other workers, don't have to.
+Virtually every New York employer must carry workers' comp, including for part-time, temporary, leased and family workers. Sole proprietors and partnerships with no employees, and certain one- or two-owner corporations with no other workers, don't have to. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does New York require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. New York has no statewide general contractor license; New York City and other localities license contractors. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. New York has no statewide general contractor license; New York City and other localities license contractors. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a New York construction contract make a contractor cover another party's negligence?
 
-New York's anti-indemnity statute (N.Y. Gen. Oblig. Law §§ 5-322.1, 5-324) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+New York's anti-indemnity statute (N.Y. Gen. Oblig. Law §§ 5-322.1, 5-324) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -56,7 +58,7 @@ New York's anti-indemnity statute (N.Y. Gen. Oblig. Law §§ 5-322.1, 5-324) voi
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -21,6 +21,7 @@ const CSS = `
 .fact h2{font-family:var(--sans);font-size:13px;font-weight:600;line-height:1.4;color:#344051}
 .fact p{font-family:var(--serif);font-size:19px;line-height:1.3;letter-spacing:-.01em;margin-top:8px}
 .prose .fine{font-size:15px;color:var(--mt)}
+.notice,.hub-intro .notice{max-width:700px;margin-top:20px;padding:12px 16px;font-size:14px;line-height:1.55;color:#344051;background:#F9FAFB;border:1px solid #E4E7EC;border-radius:8px}
 .hub-intro{max-width:700px;margin-top:28px}
 .hub-intro p{font-size:17px;line-height:1.75;margin-top:16px}
 .hub-intro a,.states-all p a{text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:3px}
@@ -42,6 +43,11 @@ const CSS = `
 `.trim();
 
 // ---------- wording ----------
+
+// Shown near the top of every page, so the qualifier sits next to the facts and not only in the footer.
+const NOTICE = 'General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.';
+// Ends every FAQ answer. The FAQ markup is what answer engines quote on its own, without the page around it.
+const asOf = () => ` As of ${human(REVIEWED)}. General information, not legal advice.`;
 
 const caseCite = (cite) => cite.replace(/^no (general )?statute; /, '');
 
@@ -112,7 +118,7 @@ function faq(s) {
     { q: `Do contractors need workers' comp in ${s.name}?`, a: [s.wc.short, s.wc.detail].filter(Boolean).join(' ') },
     { q: `Does ${s.name} require contractors to carry general liability insurance?`, a: [s.lic.short, s.lic.detail].filter(Boolean).join(' ') },
     { q: `Can a ${s.name} construction contract make a contractor cover another party's negligence?`, a: [aiText(s), aiInsure(s)].filter(Boolean).join(' ') },
-  ];
+  ].map((f) => ({ ...f, a: f.a + asOf() }));
 }
 
 const meta = (s) => ({
@@ -188,7 +194,8 @@ ${nav('states')}
       <span class="label">State guide</span>
       <h1 style="margin-top:16px">${esc(m.h1)}</h1>
       <p class="dek">${esc(m.dek)}</p>
-      <p class="meta"><span>By the Forsured team</span><span>Reviewed <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
+      <p class="meta"><span>By the Forsured team</span><span>Last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
+      <p class="notice">${NOTICE}</p>
     </header>
     <ul class="facts">
       <li class="fact"><h2>Workers' comp required at</h2><p>${esc(s.wc.at)}</p></li>
@@ -219,7 +226,7 @@ ${qa.map((f) => `      <h3>${esc(f.q)}</h3>\n      <p>${esc(f.a)}</p>`).join('\n
     <section class="extra sources" aria-labelledby="sources">
       <h2 id="sources">Sources</h2>
       <ol>${sources.map((c) => `<li><a href="${esc(c.url)}">${esc(c.title)}</a>, ${esc(c.publisher)}${c.date ? `, ${esc(c.date)}` : ''}</li>`).join('')}</ol>
-      <p class="note">This guide is general information, not legal advice. Laws change and every contract is different, so confirm with the state agency, your broker or your attorney before you rely on it. Last reviewed ${human(REVIEWED)}. Spotted something out of date? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
+      <p class="note">This guide is general information about state law, not legal or insurance advice, and reading it doesn't make you a client of anyone. Forsured is a software company: we're not a law firm or a licensed insurance agency, and we don't sell insurance. Laws change and every contract and project is different, so confirm with the state agency, your broker or your attorney before you rely on it. We last checked these facts against the sources above on ${human(REVIEWED)}. Spotted something out of date? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
     </section>
   </div>
 </article>
@@ -241,7 +248,9 @@ function stateMarkdown(s) {
 
 > ${m.dek}
 
-Reviewed ${human(REVIEWED)} by Forsured. Source: ${SITE}${url(s)}
+Last checked ${human(REVIEWED)} by Forsured. Source: ${SITE}${url(s)}
+
+${NOTICE}
 
 ## The short version
 
@@ -275,7 +284,7 @@ ${faq(s).map((f) => `### ${f.q}\n\n${f.a}`).join('\n\n')}
 
 ${sources.map((c, i) => `${i + 1}. [${c.title}](${c.url}), ${c.publisher}${c.date ? `, ${c.date}` : ''}`).join('\n')}
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. ${SITE} · hello@forsured.ai
@@ -331,13 +340,13 @@ ${nav('states')}
     <span class="label">COI requirements by state</span>
     <h1 style="margin-top:16px">${HUB_TITLE}</h1>
     <p class="dek">Every state sets its own rules for workers' comp, contractor licensing and indemnity clauses. Here's what each one says, with the sources linked, and what it means for the contractor COIs on your projects.</p>
-    <p class="meta"><span>By the Forsured team</span><span>Reviewed <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
+    <p class="meta"><span>By the Forsured team</span><span>Last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
   </header>
   <div class="hub-intro">
     <p><strong>Workers' comp</strong> is where states differ most. Most require it from the first employee, some start at three, four or five, construction often has its own lower line, and four states only allow coverage from a state fund.</p>
     <p><strong>License insurance minimums</strong> are a floor for getting licensed, not a standard for your project. Many states set none, and the ones that do set them well below what most project requirements ask for.</p>
     <p><strong>Anti-indemnity statutes</strong> limit how much of another party's negligence a contract can push onto a contractor. In a handful of states they also limit additional insured requirements.</p>
-    <p>These guides are general information, not legal advice. Confirm with the state agency, your broker or your attorney before you rely on them.</p>
+    <p class="notice">${NOTICE}</p>
   </div>
   <section class="hub-table" aria-labelledby="all-states">
     <h2 id="all-states">All 50 states and DC at a glance</h2>
@@ -365,13 +374,15 @@ function hubMarkdown() {
 
 > ${HUB_DESC}
 
-Reviewed ${human(REVIEWED)} by Forsured. Source: ${SITE}${HUB}
+Last checked ${human(REVIEWED)} by Forsured. Source: ${SITE}${HUB}
+
+${NOTICE}
 
 | State | Workers' comp required at | License insurance minimum | Anti-indemnity statute voids |
 | --- | --- | --- | --- |
 ${STATES.map((s) => `| [${s.name}](${SITE}${url(s)}) | ${s.wc.at} | ${s.lic.at} | ${aiAt(s)} |`).join('\n')}
 
-General information, not legal advice. Each state guide lists its sources.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Each state guide lists its sources.
 
 ---
 Forsured: construction insurance compliance software. ${SITE} · hello@forsured.ai
@@ -397,6 +408,7 @@ function build() {
     files.set(`coi-requirements/${s.slug}/index.md`, stateMarkdown(s));
   }
   const llms = [
+    `${NOTICE} Facts last checked ${human(REVIEWED)}; each page lists its sources.\n`,
     `- [${HUB_TITLE}](${SITE}${HUB}): ${HUB_DESC} Markdown: ${SITE}${HUB}index.md`,
     ...STATES.map((s) => `- [${meta(s).h1}](${SITE}${url(s)}): workers' comp required at ${s.wc.at}; license insurance minimum: ${s.lic.at}; anti-indemnity statute voids: ${aiAt(s)}. Markdown: ${SITE}${url(s)}index.md`),
   ].join('\n');

@@ -2,7 +2,9 @@
 
 > What Maryland law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/maryland/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/maryland/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Maryland's anti-indemnity statute (Md. Code Ann., Cts. & Jud. Proc. § 5-401) vo
 
 ### Do contractors need workers' comp in Maryland?
 
-With few exceptions, Maryland employers with one or more employees, full-time or part-time, must carry workers' comp.
+With few exceptions, Maryland employers with one or more employees, full-time or part-time, must carry workers' comp. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Maryland require contractors to carry general liability insurance?
 
-Since June 1, 2024, Maryland home improvement contractors licensed by the Maryland Home Improvement Commission must carry at least $500,000 in general liability.
+Since June 1, 2024, Maryland home improvement contractors licensed by the Maryland Home Improvement Commission must carry at least $500,000 in general liability. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Maryland construction contract make a contractor cover another party's negligence?
 
-Maryland's anti-indemnity statute (Md. Code Ann., Cts. & Jud. Proc. § 5-401) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Maryland's anti-indemnity statute (Md. Code Ann., Cts. & Jud. Proc. § 5-401) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Maryland's anti-indemnity statute (Md. Code Ann., Cts. & Jud. Proc. § 5-401) vo
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

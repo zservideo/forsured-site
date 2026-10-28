@@ -2,7 +2,9 @@
 
 > What Indiana law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/indiana/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/indiana/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Indiana Code § 26-2-5-1 voids construction clauses that make a contractor indem
 
 ### Do contractors need workers' comp in Indiana?
 
-Indiana businesses with employees must carry workers' comp. The number of employees doesn't matter. Independent contractors aren't covered by the businesses that hire them. Indiana's Department of Revenue issues a workers' comp exemption clearance certificate to independent contractors who aren't required to carry coverage.
+Indiana businesses with employees must carry workers' comp. The number of employees doesn't matter. Independent contractors aren't covered by the businesses that hire them. Indiana's Department of Revenue issues a workers' comp exemption clearance certificate to independent contractors who aren't required to carry coverage. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Indiana require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Indiana has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Indiana has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Indiana construction contract make a contractor cover another party's negligence?
 
-Indiana Code § 26-2-5-1 voids construction clauses that make a contractor indemnify another party for that party's sole negligence. Highway contracts are treated differently (§ 26-2-5-2).
+Indiana Code § 26-2-5-1 voids construction clauses that make a contractor indemnify another party for that party's sole negligence. Highway contracts are treated differently (§ 26-2-5-2). As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Indiana Code § 26-2-5-1 voids construction clauses that make a contractor indem
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

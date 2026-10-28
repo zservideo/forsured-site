@@ -2,7 +2,9 @@
 
 > What Minnesota law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/minnesota/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/minnesota/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Minnesota's anti-indemnity statute (Minn. Stat. §§ 337.01 to 337.05) voids con
 
 ### Do contractors need workers' comp in Minnesota?
 
-Minnesota has no minimum number of employees: almost every employer must carry workers' comp, even for one part-time employee.
+Minnesota has no minimum number of employees: almost every employer must carry workers' comp, even for one part-time employee. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Minnesota require contractors to carry general liability insurance?
 
-Minnesota residential building contractors and remodelers must carry general liability of at least $100,000 per occurrence and $300,000 aggregate plus $25,000 in property damage, or a $300,000 single limit.
+Minnesota residential building contractors and remodelers must carry general liability of at least $100,000 per occurrence and $300,000 aggregate plus $25,000 in property damage, or a $300,000 single limit. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Minnesota construction contract make a contractor cover another party's negligence?
 
-Minnesota's anti-indemnity statute (Minn. Stat. §§ 337.01 to 337.05) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+Minnesota's anti-indemnity statute (Minn. Stat. §§ 337.01 to 337.05) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Minnesota's anti-indemnity statute (Minn. Stat. §§ 337.01 to 337.05) voids con
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

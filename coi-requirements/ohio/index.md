@@ -2,7 +2,9 @@
 
 > What Ohio law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/ohio/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/ohio/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Ohio's anti-indemnity statute (Ohio Rev. Code Ann. § 2305.31) voids constructio
 
 ### Do contractors need workers' comp in Ohio?
 
-Ohio employers with employees must carry workers' comp through the Ohio Bureau of Workers' Compensation (BWC) or be approved to self-insure. Private carriers can't write it.
+Ohio employers with employees must carry workers' comp through the Ohio Bureau of Workers' Compensation (BWC) or be approved to self-insure. Private carriers can't write it. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Ohio require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Ohio has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Ohio has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Ohio construction contract make a contractor cover another party's negligence?
 
-Ohio's anti-indemnity statute (Ohio Rev. Code Ann. § 2305.31) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+Ohio's anti-indemnity statute (Ohio Rev. Code Ann. § 2305.31) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Ohio's anti-indemnity statute (Ohio Rev. Code Ann. § 2305.31) voids constructio
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

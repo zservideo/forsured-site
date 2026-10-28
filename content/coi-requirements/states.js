@@ -79,12 +79,15 @@ const STATES = [
     },
     lic: noStateMinimum('Arizona\'s Registrar of Contractors requires a license bond.'),
     ai: {
-      cite: 'Ariz. Rev. Stat. §§ 34-226, 41-2586 (public) and 32-1159, 32-1159.01 (private)', at: 'Sole negligence; broader for private',
+      cite: 'Ariz. Rev. Stat. §§ 32-1159 (private), 32-1159.01 (homes), 34-226 and 41-2586 (public)', at: 'Sole negligence; own negligence on public and home jobs',
       kind: 'custom',
-      text: 'Arizona has anti-indemnity statutes for public contracts (Ariz. Rev. Stat. §§ 34-226 and 41-2586) and private construction contracts (§§ 32-1159 and 32-1159.01). They void clauses that make a contractor indemnify another party for that party\'s sole negligence, and the private-contract rules reach further.',
-      insure: 'maybe',
+      text: 'Arizona\'s private construction statute (Ariz. Rev. Stat. § 32-1159) voids clauses that make a contractor indemnify another party for that party\'s sole negligence. The rules reach further on public contracts (§§ 34-226 and 41-2586) and on private contracts for homes (§ 32-1159.01), where a clause can\'t make a contractor cover the other party\'s negligence at all. The home statute also limits what an additional insured endorsement has to pay for.',
     },
-    sources: [{ title: 'Workers\' compensation FAQs', publisher: 'Industrial Commission of Arizona', url: 'https://www.azica.gov/sites/default/files/media/FAQs%20version%20updated%205-2020%20%281%29.pdf', date: '2020' }],
+    sources: [
+      { title: 'Workers\' compensation FAQs', publisher: 'Industrial Commission of Arizona', url: 'https://www.azica.gov/sites/default/files/media/FAQs%20version%20updated%205-2020%20%281%29.pdf', date: '2020' },
+      { title: 'Ariz. Rev. Stat. § 32-1159', publisher: 'Arizona Legislature', url: 'https://www.azleg.gov/ars/32/01159.htm' },
+      { title: 'Ariz. Rev. Stat. § 34-226', publisher: 'Arizona Legislature', url: 'https://www.azleg.gov/ars/34/00226.htm' },
+    ],
   },
   {
     name: 'Arkansas', code: 'AR',
@@ -111,7 +114,7 @@ const STATES = [
     },
     lic: {
       at: 'Workers\' comp on file; LLCs $1M',
-      short: 'The Contractors State License Board (CSLB) requires a workers\' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Roofing (C-39) contractors must carry workers\' comp even with no employees.',
+      short: 'The Contractors State License Board (CSLB) requires a workers\' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Five license classifications must carry workers\' comp even with no employees: concrete (C-8), HVAC (C-20), asbestos abatement (C-22), roofing (C-39) and tree service (D-49).',
       detail: 'A law passed in 2021 (SB 216) set January 1, 2026 as the date every licensee would need workers\' comp, employees or not. A 2024 law (SB 1455) pushed that to January 1, 2028. Contractors licensed as LLCs must also carry at least $1 million in liability insurance (up to $5 million, depending on how many people are listed on the license).',
     },
     ai: {
@@ -208,7 +211,7 @@ const STATES = [
       at: '$500K GC; $300K residential',
       short: 'Georgia\'s licensing board requires general liability of at least $500,000 for general contractors and residential-light commercial contractors and $300,000 for residential-basic contractors, plus proof of workers\' comp as state law requires.',
     },
-    ai: { cite: 'Ga. Code Ann. § 13-8-2(b)', kind: 'sole', insure: 'maybe' },
+    ai: { cite: 'Ga. Code Ann. § 13-8-2(b)', kind: 'sole' },
     sources: [
       { title: 'Workers\' compensation law FAQs', publisher: 'Georgia State Board of Workers\' Compensation', url: 'https://sbwc.georgia.gov/frequently-asked-questions/workers-compensation-law-faqs' },
       { title: 'Ga. Comp. R. & Regs. 553-3 (residential contractor qualifications)', publisher: 'Georgia Secretary of State', url: 'https://rules.sos.ga.gov/gac/553-3' },
@@ -324,9 +327,10 @@ const STATES = [
       at: '$100K (residential)',
       short: 'Louisiana\'s licensing board requires residential and home improvement contractors to keep at least $100,000 in general liability and to show workers\' comp. Commercial license applicants don\'t file insurance with the board.',
     },
-    ai: { cite: 'La. Rev. Stat. § 9:2780.1', kind: 'broad' },
+    ai: { cite: 'La. Rev. Stat. § 9:2780.1', kind: 'broad', insure: 'yes' },
     sources: [
       onpay('Louisiana', 'louisiana', 'May 2026'),
+      { title: 'La. Rev. Stat. § 9:2780.1', publisher: 'Louisiana State Legislature', url: 'https://www.legis.la.gov/Legis/LawPrint.aspx?d=725435' },
       { title: 'Checklist of items required for initial license and to maintain license', publisher: 'Louisiana State Licensing Board for Contractors', url: 'https://lslbc.gov/checklist-of-items-required-for-initial-license-and-to-maintain-license/' },
     ],
   },
@@ -700,9 +704,15 @@ const STATES = [
       short: 'Utah\'s Division of Professional Licensing (DOPL) requires licensed contractors to keep general liability in force, naming DOPL as certificate holder. The published rule sets $100,000 per incident and $300,000 total.',
       detail: 'In April 2026, Utah\'s Construction Services Commission was reported to have voted to raise the minimum to $1,000,000 per occurrence and $2,000,000 aggregate. Check DOPL for the amount in force today.',
     },
-    ai: { cite: 'Utah Code Ann. § 13-8-1', kind: 'sole', insure: 'yes' },
+    ai: {
+      cite: 'Utah Code Ann. § 13-8-1', at: 'The other party\'s fault',
+      kind: 'custom',
+      text: 'Utah Code § 13-8-1 voids construction contract clauses that require a contractor to insure, indemnify or defend another party against liability caused by that party\'s fault. When the owner shares fault, its share is apportioned rather than shifted. Some summaries describe Utah\'s rule as reaching only sole negligence, so have an attorney read the clause.',
+      insure: 'yes',
+    },
     sources: [
       onpay('Utah', 'utah', 'Jan 2026'),
+      { title: 'Utah Code § 13-8-1', publisher: 'Utah Legislature', url: 'https://le.utah.gov/xcode/Title13/Chapter8/C13-8-S1_1800010118000101.html' },
       { title: 'Utah Admin. Code R156-55a-302d, Proof of insurance', publisher: 'Legal Information Institute', url: 'https://www.law.cornell.edu/regulations/utah/Utah-Admin-Code-R156-55a-302d' },
       { title: 'Utah DOPL contractor liability insurance: $1M / $2M (April 2026)', publisher: 'GRIT Insurance', url: 'https://gritinsurance.com/blog/utah-dopl-contractor-liability-insurance-1m-2m-april-2026', date: '2026' },
     ],

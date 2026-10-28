@@ -2,7 +2,9 @@
 
 > What Massachusetts law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/massachusetts/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/massachusetts/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Massachusetts General Laws ch. 149, § 29C voids construction clauses that make 
 
 ### Do contractors need workers' comp in Massachusetts?
 
-Every Massachusetts employer with one or more employees, including part-time workers, must carry workers' comp. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves.
+Every Massachusetts employer with one or more employees, including part-time workers, must carry workers' comp. Corporate officers who own at least 25% of the company can file an affidavit of exemption for themselves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Massachusetts require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Massachusetts construction contract make a contractor cover another party's negligence?
 
-Massachusetts General Laws ch. 149, § 29C voids construction clauses that make a contractor indemnify another party for injury or damage that the contractor, its employees or the companies working under it did not cause.
+Massachusetts General Laws ch. 149, § 29C voids construction clauses that make a contractor indemnify another party for injury or damage that the contractor, its employees or the companies working under it did not cause. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,7 +53,7 @@ Massachusetts General Laws ch. 149, § 29C voids construction clauses that make 
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

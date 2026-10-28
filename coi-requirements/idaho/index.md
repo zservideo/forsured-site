@@ -2,7 +2,9 @@
 
 > What Idaho law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/idaho/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/idaho/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Idaho's anti-indemnity statute (Idaho Code § 29-114) voids construction contrac
 
 ### Do contractors need workers' comp in Idaho?
 
-Idaho employers with one or more full-time, part-time, seasonal or occasional employees must carry workers' comp before the first hire.
+Idaho employers with one or more full-time, part-time, seasonal or occasional employees must carry workers' comp before the first hire. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Idaho require contractors to carry general liability insurance?
 
-Idaho contractor registration requires general liability, including products and completed operations, of at least $300,000 single limit, plus proof of workers' comp or a statement of why it isn't required.
+Idaho contractor registration requires general liability, including products and completed operations, of at least $300,000 single limit, plus proof of workers' comp or a statement of why it isn't required. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Idaho construction contract make a contractor cover another party's negligence?
 
-Idaho's anti-indemnity statute (Idaho Code § 29-114) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Idaho's anti-indemnity statute (Idaho Code § 29-114) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Idaho's anti-indemnity statute (Idaho Code § 29-114) voids construction contrac
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

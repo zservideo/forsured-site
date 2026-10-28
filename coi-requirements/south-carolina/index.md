@@ -2,7 +2,9 @@
 
 > What South Carolina law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/south-carolina/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/south-carolina/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ South Carolina's anti-indemnity statute (S.C. Code Ann. § 32-2-10) voids constr
 
 ### Do contractors need workers' comp in South Carolina?
 
-South Carolina employers with four or more employees in the state, counting part-time workers and family, must carry workers' comp. Businesses with annual payroll under $3,000 are exempt.
+South Carolina employers with four or more employees in the state, counting part-time workers and family, must carry workers' comp. Businesses with annual payroll under $3,000 are exempt. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does South Carolina require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a South Carolina construction contract make a contractor cover another party's negligence?
 
-South Carolina's anti-indemnity statute (S.C. Code Ann. § 32-2-10) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+South Carolina's anti-indemnity statute (S.C. Code Ann. § 32-2-10) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,7 +53,7 @@ South Carolina's anti-indemnity statute (S.C. Code Ann. § 32-2-10) voids constr
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -2,7 +2,9 @@
 
 > What North Dakota law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/north-dakota/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/north-dakota/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ North Dakota has no general construction anti-indemnity statute. Its laws void i
 
 ### Do contractors need workers' comp in North Dakota?
 
-Any business with employees working in North Dakota must have workers' comp, and it can only come from the state fund, Workforce Safety & Insurance (WSI).
+Any business with employees working in North Dakota must have workers' comp, and it can only come from the state fund, Workforce Safety & Insurance (WSI). As of Oct 28, 2026. General information, not legal advice.
 
 ### Does North Dakota require contractors to carry general liability insurance?
 
-North Dakota requires a contractor license for jobs over $4,000. The application needs a certificate of liability insurance with the Secretary of State as certificate holder and a WSI certificate of payment or letter of good standing.
+North Dakota requires a contractor license for jobs over $4,000. The application needs a certificate of liability insurance with the Secretary of State as certificate holder and a WSI certificate of payment or letter of good standing. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a North Dakota construction contract make a contractor cover another party's negligence?
 
-North Dakota has no general construction anti-indemnity statute. Its laws void indemnity for intentional or unlawful acts (N.D. Cent. Code § 9-08-02) and limit clauses that shift an owner's design errors onto a contractor (§ 9-08-02.1).
+North Dakota has no general construction anti-indemnity statute. Its laws void indemnity for intentional or unlawful acts (N.D. Cent. Code § 9-08-02) and limit clauses that shift an owner's design errors onto a contractor (§ 9-08-02.1). As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -53,7 +55,7 @@ North Dakota has no general construction anti-indemnity statute. Its laws void i
 4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

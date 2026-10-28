@@ -2,7 +2,9 @@
 
 > What Rhode Island law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/rhode-island/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/rhode-island/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Rhode Island's anti-indemnity statute (R.I. Gen. Laws § 6-34-1) voids construct
 
 ### Do contractors need workers' comp in Rhode Island?
 
-Rhode Island employers with one or more employees must carry workers' comp. Individual owners and partners are exempt.
+Rhode Island employers with one or more employees must carry workers' comp. Individual owners and partners are exempt. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Rhode Island require contractors to carry general liability insurance?
 
-Rhode Island contractor registration requires a $500,000 liability insurance certificate naming the Contractors' Registration and Licensing Board, plus a workers' comp certificate for contractors with employees.
+Rhode Island contractor registration requires a $500,000 liability insurance certificate naming the Contractors' Registration and Licensing Board, plus a workers' comp certificate for contractors with employees. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Rhode Island construction contract make a contractor cover another party's negligence?
 
-Rhode Island's anti-indemnity statute (R.I. Gen. Laws § 6-34-1) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+Rhode Island's anti-indemnity statute (R.I. Gen. Laws § 6-34-1) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Rhode Island's anti-indemnity statute (R.I. Gen. Laws § 6-34-1) voids construct
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

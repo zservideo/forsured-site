@@ -2,7 +2,9 @@
 
 > What Michigan law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/michigan/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/michigan/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Michigan's anti-indemnity statute (Mich. Comp. Laws § 691.991) voids constructi
 
 ### Do contractors need workers' comp in Michigan?
 
-Michigan private employers must carry workers' comp if they regularly employ three or more people at one time, or one or more people for 35 hours a week for 13 weeks or more in the past year.
+Michigan private employers must carry workers' comp if they regularly employ three or more people at one time, or one or more people for 35 hours a week for 13 weeks or more in the past year. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Michigan require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Michigan licenses residential builders, without a liability insurance minimum. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Michigan licenses residential builders, without a liability insurance minimum. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Michigan construction contract make a contractor cover another party's negligence?
 
-Michigan's anti-indemnity statute (Mich. Comp. Laws § 691.991) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Michigan's anti-indemnity statute (Mich. Comp. Laws § 691.991) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,7 +53,7 @@ Michigan's anti-indemnity statute (Mich. Comp. Laws § 691.991) voids constructi
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

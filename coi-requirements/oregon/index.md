@@ -2,7 +2,9 @@
 
 > What Oregon law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/oregon/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/oregon/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction co
 
 ### Do contractors need workers' comp in Oregon?
 
-Nearly every Oregon employer with one or more employees, full-time or part-time, must carry workers' comp.
+Nearly every Oregon employer with one or more employees, full-time or part-time, must carry workers' comp. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Oregon require contractors to carry general liability insurance?
 
-Oregon's Construction Contractors Board sets liability minimums by endorsement: $500,000 per occurrence for a residential general contractor, $1,000,000 aggregate for a commercial general contractor level 2, and $2,000,000 aggregate for level 1.
+Oregon's Construction Contractors Board sets liability minimums by endorsement: $500,000 per occurrence for a residential general contractor, $1,000,000 aggregate for a commercial general contractor level 2, and $2,000,000 aggregate for level 1. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Oregon construction contract make a contractor cover another party's negligence?
 
-Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids.
+Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -53,7 +55,7 @@ Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction co
 4. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
 5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
