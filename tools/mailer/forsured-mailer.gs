@@ -21,7 +21,7 @@ const ATTIO_LIST = 'blog_subscribers';
 // Fallback if the Gmail advanced service is off and the live signature can't be read.
 const FALLBACK_SIGNATURE =
   '<div style="font-family:Arial,sans-serif;font-size:12px">' +
-  '<b>Zach Servideo</b><br>Founder / CGO<br>' +
+  '<b>Zach Servideo</b><br>Founder / CGO<br><b>m:</b> 424.280.2876<br>' +
   '<b>w:</b> <a href="https://forsured.ai/">www.forsured.ai</a></div>';
 
 // ---------- setup ----------
