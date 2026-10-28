@@ -549,7 +549,7 @@ const SHARE_JS = `<script>
 // ---------- pages ----------
 
 // ---------- newsletter signup ----------
-// The weekly email list. Each signup goes to the same two places as the home page forms: Web3Forms
+// The blog's email list. Each signup goes to the same two places as the home page forms: Web3Forms
 // emails the team, and the Make webhook records it (form_source "Newsletter"), so no new third-party
 // script or key is needed. The form posts with plain fetch; with scripts off it does nothing harmful.
 const WEB3FORMS_KEY = '9f256d7f-4b10-4b26-8502-bf23abe8455d';
@@ -558,8 +558,8 @@ const MAKE_WEBHOOK = 'https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt
 function subscribe(id, where, cls = '') {
   return `<section class="sub${cls ? ` ${cls}` : ''}" aria-labelledby="${id}" data-sub="${where}">
       <div>
-        <h2 id="${id}">Get the week's posts in one email.</h2>
-        <p>New posts on contractor COIs and project requirements, plus the gaps we saw that week. Short, plain, once a week.</p>
+        <h2 id="${id}">Get new posts by email.</h2>
+        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
       </div>
       <div>
       <form novalidate>
@@ -568,8 +568,8 @@ function subscribe(id, where, cls = '') {
         <button class="cta-p" type="submit">Subscribe</button>
       </form>
       <p class="err" role="alert" hidden></p>
-      <p class="ok" role="status" hidden>You're on the list. The next issue comes this week.</p>
-      <p class="fine" id="${id}-fine">One email a week. Unsubscribe from any issue.</p>
+      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
+      <p class="fine" id="${id}-fine">No spam. Unsubscribe from any email.</p>
       </div>
     </section>`;
 }
