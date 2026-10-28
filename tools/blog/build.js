@@ -552,11 +552,12 @@ const SHARE_JS = `<script>
 // ---------- pages ----------
 
 // ---------- newsletter signup ----------
-// The blog's email list. Each signup goes to the same two places as the home page forms: Web3Forms
-// emails the team, and the Make webhook records it (form_source "Newsletter"), so no new third-party
-// script or key is needed. The form posts with plain fetch; with scripts off it does nothing harmful.
+// The blog's email list. Web3Forms emails the team, and the "Forsured Blog Signups" Make webhook
+// adds the person to Attio's Blog subscribers list and sends the welcome email (blog/email/welcome.html,
+// built below from tools/blog/email.js). The form posts with plain fetch; with scripts off it does
+// nothing harmful.
 const WEB3FORMS_KEY = '9f256d7f-4b10-4b26-8502-bf23abe8455d';
-const MAKE_WEBHOOK = 'https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt';
+const MAKE_WEBHOOK = 'https://hook.us2.make.com/er2vury4yeu7eo6fflh031ngttpvwg3b';
 
 function subscribe(id, where, cls = '') {
   return `<section class="sub${cls ? ` ${cls}` : ''}" aria-labelledby="${id}" data-sub="${where}">
@@ -957,6 +958,10 @@ function build() {
   files.set('robots.txt', ROBOTS);
   files.set('llms.txt', llms(posts));
   files.set('llms-full.txt', llmsFull(posts));
+  // The welcome email Make sends each new subscriber, fetched by the scenario at send time so its
+  // "Start here" reads stay current. Not a page: kept out of search and the sitemap.
+  const { welcome } = require('./email');
+  files.set('blog/email/welcome.html', welcome('', posts).html.replace('<meta charset="UTF-8"/>', '<meta charset="UTF-8"/><meta name="robots" content="noindex"/>'));
 
   const stale = [];
   for (const [rel, content] of files) {
