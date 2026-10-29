@@ -6,7 +6,31 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 28 Oct 2026 11:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 29 Oct 2026 11:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Can parametric insurance cover weather delays on a construction project?</title>
+    <link>https://forsured.ai/blog/parametric-builders-risk-weather-gap/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/parametric-builders-risk-weather-gap/</guid>
+    <pubDate>Thu, 29 Oct 2026 11:00:00 GMT</pubDate>
+    <category>Industry news</category>
+    <description>Builder's risk pays for physical damage, not for days lost to cold, heat or wind. A CRC panel explained how parametric cover fills that gap.</description>
+    <content:encoded><![CDATA[<ul><li>Yes. Parametric policies pay a set amount when a measured trigger is hit, such as a cold, heat, wind, rain or snow threshold, so they can cover weather that halts work without damaging it.</li><li>Traditional builder's risk covers physical damage only, so lost days, overtime and schedule pressure from weather usually fall on the contractor.</li><li>Panelists at IRMI's 2026 Construction Risk Conference said cover can be tailored to specific operations, such as cold only on concrete pour days or wind only on crane days.</li><li>Payouts can be used for any purpose, such as funding overtime after a delay.</li></ul><p><img src="https://forsured.ai/blog/parametric-builders-risk-weather-gap/hero.png" width="1600" height="800" alt="50%: How much a day below 40°F can cut the strength of poured concrete"/></p><p>Yes, it can. Builder's risk insurance pays when weather damages the work. It doesn't pay when weather stops the work. Parametric insurance fills that gap by paying a set amount when a measured trigger is hit at the site, such as a temperature, wind speed or rainfall threshold, whether or not anything was damaged.</p>
+<p>That was the case a panel made on Tuesday at IRMI's Construction Risk Conference in National Harbor, as reported by Business Insurance.</p>
+<h2 id="the-gap-builder-s-risk-leaves">The gap builder's risk leaves</h2>
+<p>Weather stops work long before it breaks anything. Rose Hall, founder of construction risk advisory firm RH Business Ventures, said a day below 40 degrees could cut poured concrete's strength by 50%, and winds above 20 mph can make some crane operations unsafe. Neither shows up as a builder's risk claim.</p>
+<p>&quot;Contractors are just absorbing (non-covered weather losses), mostly silently,&quot; Hall said.</p>
+<p>The panel also pointed to the human cost. Heat-related worker fatalities have risen, and builders often feel pressure to keep working through extreme conditions to stay on schedule.</p>
+<h2 id="cover-the-days-that-stop-your-work">Cover the days that stop your work</h2>
+<p>Parametric cover doesn't have to insure every storm. Gary Kaplan, former president of construction at AXA XL, put it this way: &quot;The goal is not to cover every weather event. It is to cover the specific events that stop your specific operations at your specific location.&quot;</p>
+<p>That means a policy can be shaped around the job:</p>
+<ul><li>Cold, but only on concrete pour days.</li><li>Wind, but only on crane days.</li><li>Payouts that can be used for anything, such as overtime to recover a delay.</li></ul>
+<p>Chris Smith, a senior director at the Baldwin Group, said larger builders could use it across a portfolio, and captive owners could use a payout to fund the captive's deductible after a catastrophic event. &quot;To me, this is schedule guardianship,&quot; he said.</p>
+<h2 id="a-better-weather-number-for-the-bid">A better weather number for the bid</h2>
+<p>Contractors usually set weather allowances in bids from rough estimates. Hall noted that a 10-year average can hide large swings from one year to the next. Kaplan proposed a &quot;zero-weather-day bid,&quot; built on site-specific weather estimates, that could give a bidder an edge.</p>
+<h2 id="what-it-means-for-project-requirements">What it means for project requirements</h2>
+<p>If parametric cover starts showing up in project requirements, it becomes one more line to verify, with its own triggers, limits and named site. As with every coverage, the certificate is only the summary. The policy terms are what pay. Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/parametric-builders-risk-weather-gap/og.png" type="image/png" length="53089"/>
+  </item>
   <item>
     <title>What does primary and noncontributory mean on a COI?</title>
     <link>https://forsured.ai/blog/primary-and-noncontributory/</link>
