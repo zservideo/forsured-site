@@ -128,7 +128,7 @@ function sendNewPostEmails() {
       people.forEach((p) => {
         // Same greeting the Make scenario used: "Hi <first name>," when Attio has one.
         const html = p.first ? mail.html.replace('Hi there,', 'Hi ' + p.first + ',') : mail.html;
-        GmailApp.sendEmail(p.email, mail.subject, plain_(html), { htmlBody: html, name: FROM_NAME });
+        send_(p.email, mail.subject, html);
       });
       console.log('Sent ' + slug + ' to ' + people.length + ' subscribers');
     });
@@ -168,6 +168,44 @@ function subscribers_() {
 
 // ---------- helpers ----------
 
+// Sends through the Gmail API with a hand-built UTF-8 message. GmailApp.sendEmail turns emoji in
+// the subject and body into rows of question marks; an RFC 2047 subject and base64 UTF-8 parts don't.
+function send_(to, subject, html) {
+  const b64 = (str) => Utilities.base64Encode(str, Utilities.Charset.UTF_8).replace(/.{76}/g, '$&\r\n');
+  const boundary = 'fsd' + Utilities.getUuid().replace(/-/g, '');
+  const mime = [
+    'From: "' + FROM_NAME + '" <' + Session.getActiveUser().getEmail() + '>',
+    'To: ' + to,
+    'Subject: ' + encodedWords_(subject),
+    'MIME-Version: 1.0',
+    'Content-Type: multipart/alternative; boundary="' + boundary + '"',
+    '',
+    '--' + boundary,
+    'Content-Type: text/plain; charset=UTF-8',
+    'Content-Transfer-Encoding: base64',
+    '',
+    b64(plain_(html)),
+    '--' + boundary,
+    'Content-Type: text/html; charset=UTF-8',
+    'Content-Transfer-Encoding: base64',
+    '',
+    b64(html),
+    '--' + boundary + '--',
+  ].join('\r\n');
+  Gmail.Users.Messages.send({ raw: Utilities.base64EncodeWebSafe(mime) }, 'me');
+}
+
+// RFC 2047 caps an encoded word at 75 characters, so long subjects go out as several, never
+// splitting an emoji.
+function encodedWords_(text) {
+  const chars = Array.from(text);
+  const words = [];
+  for (let i = 0; i < chars.length; i += 10) {
+    words.push('=?UTF-8?B?' + Utilities.base64Encode(chars.slice(i, i + 10).join(''), Utilities.Charset.UTF_8) + '?=');
+  }
+  return words.join('\r\n ');
+}
+
 function signature_() {
   try {
     const me = Session.getActiveUser().getEmail();
@@ -197,6 +235,7 @@ function plain_(html) {
     .replace(/<a [^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, '$2 ($1)')
     .replace(/<br\s*\/?>|<\/(p|div|tr|h\d|li)>/gi, '\n')
     .replace(/<[^>]+>/g, '')
+    .replace(/&#x([0-9a-f]+);/gi, (m, hex) => String.fromCodePoint(parseInt(hex, 16)))
     .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"')
     .replace(/[ \t]+\n/g, '\n').replace(/\n[ \t]+/g, '\n')
     .replace(/\n{3,}/g, '\n\n')

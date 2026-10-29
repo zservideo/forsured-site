@@ -19,6 +19,10 @@ const MUTED = '#555555';
 const LINE = '#E4E7EC';
 const BG = '#FAFBFA';
 
+// Emoji and other characters outside the Basic Multilingual Plane become numeric entities in the
+// HTML. Apps Script's GmailApp turns raw ones into a row of question marks.
+const entities = (html) => html.replace(/[\u{10000}-\u{10FFFF}]/gu, (c) => `&#x${c.codePointAt(0).toString(16).toUpperCase()};`);
+
 const EMOJI = {
   'COI basics': '📋',
   'How-to': '🛠️',
@@ -146,7 +150,7 @@ ${hero ? `  <tr><td style="padding:24px 32px 0">
     footer(),
   ].join('\n');
 
-  return { subject: `${emoji} ${p.title}`, html, text, date: human(p.date) };
+  return { subject: `${emoji} ${p.title}`, html: entities(html), text, date: human(p.date) };
 }
 
 // The welcome a new subscriber gets right after signing up: thanks, what to expect, three posts to
@@ -208,7 +212,7 @@ ${reads.map((p) => `    <p style="margin:12px 0 0;font-size:16px;line-height:1.4
     footer(),
   ].join('\n');
 
-  return { subject: '🧡 Welcome to the Forsured community', html, text };
+  return { subject: '🧡 Welcome to the Forsured community', html: entities(html), text };
 }
 
 module.exports = { email, welcome };
