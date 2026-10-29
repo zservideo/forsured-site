@@ -171,6 +171,12 @@ function subscribers_() {
 // Sends through the Gmail API with a hand-built UTF-8 message. GmailApp.sendEmail turns emoji in
 // the subject and body into rows of question marks; an RFC 2047 subject and base64 UTF-8 parts don't.
 function send_(to, subject, html) {
+  if (typeof Gmail === 'undefined') {
+    // Gmail advanced service not added: GmailApp still delivers, though emoji outside the BMP break.
+    console.log('Gmail advanced service is off; sending with GmailApp');
+    GmailApp.sendEmail(to, subject, plain_(html), { htmlBody: html, name: FROM_NAME });
+    return;
+  }
   const b64 = (str) => Utilities.base64Encode(str, Utilities.Charset.UTF_8).replace(/.{76}/g, '$&\r\n');
   const boundary = 'fsd' + Utilities.getUuid().replace(/-/g, '');
   const mime = [

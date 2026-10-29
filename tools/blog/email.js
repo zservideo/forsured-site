@@ -23,14 +23,17 @@ const BG = '#FAFBFA';
 // HTML. Apps Script's GmailApp turns raw ones into a row of question marks.
 const entities = (html) => html.replace(/[\u{10000}-\u{10FFFF}]/gu, (c) => `&#x${c.codePointAt(0).toString(16).toUpperCase()};`);
 
+// Subject emoji stay in the Basic Multilingual Plane: the Apps Script mailer's GmailApp turns
+// anything outside it (📰, 📋 and most newer emoji) into question marks in the subject line.
 const EMOJI = {
-  'COI basics': '📋',
-  'How-to': '🛠️',
-  'Market outlook': '📈',
-  'Industry news': '📰',
-  'Event takeaways': '🎤',
-  'Forsured news': '🧡',
+  'COI basics': '\u2705', // ✅
+  'How-to': '\u2699\uFE0F', // ⚙️
+  'Market outlook': '\u2602\uFE0F', // ☂️
+  'Industry news': '\u26A1', // ⚡
+  'Event takeaways': '\u2B50', // ⭐
+  'Forsured news': '\u2728', // ✨
 };
+const PIN = '\u270F\uFE0F'; // ✏️
 
 const track = (url, campaign = 'blog') => {
   const [base, hash] = url.split('#');
@@ -104,7 +107,7 @@ function email(p, firstName = '', { hero = `${SITE}/blog/${p.slug}/hero.png` } =
   const url = track(`${SITE}${p.url}`);
   const blog = track(`${SITE}/blog/`);
   const hi = firstName ? `Hi ${esc(firstName)},` : 'Hi there,';
-  const emoji = EMOJI[p.category] || '📌';
+  const emoji = EMOJI[p.category] || PIN;
 
   const html = frame({
     title: p.title,
@@ -160,7 +163,7 @@ function welcome(firstName = '', posts = readPosts()) {
   const offer = track(`${SITE}/#demo`, 'welcome');
   const hi = firstName ? `Hi ${esc(firstName)},` : 'Hi there,';
   const start = [...posts.filter((p) => EVERGREEN.includes(p.category)), ...posts.filter((p) => !EVERGREEN.includes(p.category))];
-  const reads = start.slice(0, 3).map((p) => ({ ...p, link: track(`${SITE}${p.url}`, 'welcome'), emoji: EMOJI[p.category] || '📌' }));
+  const reads = start.slice(0, 3).map((p) => ({ ...p, link: track(`${SITE}${p.url}`, 'welcome'), emoji: EMOJI[p.category] || PIN }));
   const expect = [
     ['New posts as they go live.', 'Plain-language reads on contractor COIs and project requirements.'],
     ['Short and useful.', 'Two-minute reads you can forward to your project team.'],
