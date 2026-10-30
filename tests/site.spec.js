@@ -1,4 +1,4 @@
-// Functionality of the forsured.ai home page: loading, navigation, the IRMI banner and both forms.
+// Functionality of the forsured.ai home page: loading, navigation, the event banner and both forms.
 // Runs on the desktop and mobile projects. Form backends are stubbed (see helpers.js).
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
@@ -181,15 +181,15 @@ test('trade contractor CTA preselects the role in the risk check form', async ({
   await expect(page.locator('#wl-role')).toHaveValue('Subcontractor');
 });
 
-test.describe('IRMI banner', () => {
+test.describe('Event banner', () => {
   test('shows the announcement above the nav without covering it', async ({ page }) => {
     await open(page);
     const bar = page.locator('#irmi-bar');
     await expect(bar).toBeVisible();
-    await expect(bar).toHaveText(/Catch us at IRMI, find the Forsured polos/);
-    const cta = bar.getByRole('link', { name: /Snag the IRMI field guide/ });
+    await expect(bar).toHaveText(/We're a BuiltWorlds Demo Day finalist/);
+    const cta = bar.getByRole('link', { name: /Get the Boston field guide/ });
     await expect(cta).toBeVisible();
-    await expect(cta).toHaveAttribute('href', 'irmi-field-guide/');
+    await expect(cta).toHaveAttribute('href', 'builtworlds-field-guide/');
     const barBox = await bar.boundingBox();
     const navBox = await page.locator('#nav').boundingBox();
     expect(barBox.y).toBe(0);
@@ -211,7 +211,7 @@ test.describe('IRMI banner', () => {
   test('field guide CTA opens the guide', async ({ page }) => {
     await open(page);
     await page.locator('#irmi-bar .ib-cta').click();
-    await expect(page).toHaveURL(/\/irmi-field-guide\/$/);
+    await expect(page).toHaveURL(/\/builtworlds-field-guide\/$/);
     await expect(page.locator('h1')).toBeVisible();
   });
 

@@ -688,7 +688,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .show-steps .ss-img{display:block;width:100%;height:auto;margin-top:14px;border-radius:12px;border:1px solid #E8DCCB}
   .show-cap{margin-top:16px}
 }
-/* IRMI BANNER (temporary): delete this block, the irmi-bar markup and its script to remove */
+/* EVENT BANNER (temporary, BuiltWorlds Demo Day since Oct 30; ids still say irmi): delete this block, the irmi-bar markup and its script to remove */
 :root{--bh:36px}
 html.no-irmi{--bh:0px}
 html{scroll-padding-top:var(--bh)}
@@ -711,13 +711,13 @@ html.no-irmi .irmi-bar{display:none}
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <div class="irmi-bar" id="irmi-bar" role="region" aria-label="Event announcement">
-  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span>Catch us at IRMI, find the Forsured polos</span>
-  <a class="ib-cta" href="irmi-field-guide/">Snag the IRMI field guide →</a>
+  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span>We're a BuiltWorlds Demo Day finalist</span>
+  <a class="ib-cta" href="builtworlds-field-guide/">Get the Boston field guide →</a>
   <button type="button" class="ib-x" aria-label="Dismiss announcement" onclick="dismissIrmi()">&times;</button>
 </div>
 <script>
-function dismissIrmi(){document.documentElement.classList.add('no-irmi');try{sessionStorage.setItem('irmi-dismissed','1')}catch(e){}}
-try{if(sessionStorage.getItem('irmi-dismissed'))document.documentElement.classList.add('no-irmi')}catch(e){}
+function dismissIrmi(){document.documentElement.classList.add('no-irmi');try{sessionStorage.setItem('bw-dismissed','1')}catch(e){}}
+try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList.add('no-irmi')}catch(e){}
 </script>
 
 <nav id="nav" role="navigation" aria-label="Main navigation">
