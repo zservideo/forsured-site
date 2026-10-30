@@ -15,6 +15,7 @@ Key facts:
 
 ## Blog
 
+- [What does "per written contract" mean on an additional insured endorsement?](https://forsured.ai/blog/per-written-contract-additional-insured/): Blanket additional insured endorsements add whoever a written contract requires. Whose contract, signed when, and saying what decides whether you're covered. Markdown: https://forsured.ai/blog/per-written-contract-additional-insured/index.md
 - [Can parametric insurance cover weather delays on a construction project?](https://forsured.ai/blog/parametric-builders-risk-weather-gap/): Builder's risk pays for physical damage, not for days lost to cold, heat or wind. A CRC panel explained how parametric cover fills that gap. Markdown: https://forsured.ai/blog/parametric-builders-risk-weather-gap/index.md
 - [What does primary and noncontributory mean on a COI?](https://forsured.ai/blog/primary-and-noncontributory/): Primary and noncontributory decides whose policy pays first when a contractor's work causes a loss. What it means, which endorsement creates it, and what to check. Markdown: https://forsured.ai/blog/primary-and-noncontributory/index.md
 - [What we heard at our first IRMI Construction Risk Conference](https://forsured.ai/blog/forsured-at-irmi-crc-2026/): Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them. Markdown: https://forsured.ai/blog/forsured-at-irmi-crc-2026/index.md
