@@ -186,8 +186,8 @@ test.describe('Event banner', () => {
     await open(page);
     const bar = page.locator('#irmi-bar');
     await expect(bar).toBeVisible();
-    await expect(bar).toHaveText(/We're a BuiltWorlds Demo Day finalist/);
-    const cta = bar.getByRole('link', { name: /Get the Boston field guide/ });
+    await expect(bar).toHaveText(/We're a BuiltWorlds Venture East Demo Day finalist, Nov 19 in Boston/);
+    const cta = bar.getByRole('link', { name: /Get the event \+ downtown Boston field guide/ });
     await expect(cta).toBeVisible();
     await expect(cta).toHaveAttribute('href', 'builtworlds-field-guide/');
     const barBox = await bar.boundingBox();
