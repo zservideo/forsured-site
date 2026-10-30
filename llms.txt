@@ -86,3 +86,4 @@ Key facts:
 - [Every post in full](https://forsured.ai/llms-full.txt)
 - [Blog RSS feed](https://forsured.ai/blog/feed.xml)
 - [IRMI CRC 2026 field guide](https://forsured.ai/irmi-field-guide/): an independent guide to the 2026 Construction Risk Conference
+- [BuiltWorlds Venture East 2026 field guide](https://forsured.ai/builtworlds-field-guide/): an independent guide to AEC Emerging Tech 2026 in Boston

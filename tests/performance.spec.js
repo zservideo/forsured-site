@@ -7,7 +7,7 @@ const { ROOT, PAGES, BROWSER_PAGES, open, read } = require('./helpers');
 
 // Bytes served from forsured.ai on first load, before any scrolling (fonts not counted).
 // Blog posts share one budget: text, one share image on the index, no other images.
-const LOAD_BUDGET = { home: 650 * 1024, 'field guide': 2.6 * 1024 * 1024, blog: 250 * 1024, post: 150 * 1024, 'coi requirements': 150 * 1024, state: 150 * 1024 };
+const LOAD_BUDGET = { home: 650 * 1024, 'field guide': 2.6 * 1024 * 1024, 'builtworlds field guide': 2.6 * 1024 * 1024, blog: 250 * 1024, post: 150 * 1024, 'coi requirements': 150 * 1024, state: 150 * 1024 };
 const HTML_BUDGET = 200 * 1024;
 const IMAGE_BUDGET = 450 * 1024;
 const PDF_BUDGET = 3 * 1024 * 1024;
