@@ -242,6 +242,7 @@ function plain_(html) {
     .replace(/<br\s*\/?>|<\/(p|div|tr|h\d|li)>/gi, '\n')
     .replace(/<[^>]+>/g, '')
     .replace(/&#x([0-9a-f]+);/gi, (m, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#([0-9]+);/g, (m, dec) => String.fromCodePoint(parseInt(dec, 10)))
     .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'").replace(/&quot;/g, '"')
     .replace(/[ \t]+\n/g, '\n').replace(/\n[ \t]+/g, '\n')
     .replace(/\n{3,}/g, '\n\n')
