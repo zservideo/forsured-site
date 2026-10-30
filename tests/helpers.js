@@ -24,6 +24,7 @@ const STATE_SLUGS = fs
 const PAGES = [
   { name: 'home', url: '/', file: 'index.html' },
   { name: 'field guide', url: '/irmi-field-guide/', file: 'irmi-field-guide/index.html' },
+  { name: 'builtworlds field guide', url: '/builtworlds-field-guide/', file: 'builtworlds-field-guide/index.html' },
   { name: 'blog', url: '/blog/', file: 'blog/index.html' },
   ...POSTS.map((slug) => ({ name: `post ${slug}`, url: `/blog/${slug}/`, file: `blog/${slug}/index.html`, post: true })),
   // State requirement pages, built from content/coi-requirements by tools/blog/build.js.
