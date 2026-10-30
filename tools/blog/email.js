@@ -121,7 +121,7 @@ ${hero ? `  <tr><td style="padding:24px 32px 0">
     <a href="${esc(url)}"><img src="${esc(hero)}" width="536" alt="${esc(p.title)}" style="display:block;width:100%;max-width:536px;height:auto;border:1px solid ${LINE};border-radius:10px"/></a>
   </td></tr>
 ` : ''}  <tr><td style="padding:20px 32px 0;${sans}">
-    <span style="display:inline-block;padding:2px 8px;border:1px solid ${LINE};border-radius:6px;font-size:12px;font-weight:600;color:#344051"><span style="color:${ORANGE}">&#9679;</span> ${esc(p.category)} · ${p.minutes} min read</span>
+    <span style="display:inline-block;padding:2px 8px;border:1px solid ${LINE};border-radius:6px;font-size:12px;font-weight:600;color:#344051"><span style="color:${ORANGE}">\u25CF</span> ${esc(p.category)} · ${p.minutes} min read</span>
   </td></tr>
   <tr><td style="padding:12px 32px 0;${serif}">
     <a href="${esc(url)}" style="font-size:28px;line-height:1.25;color:${INK};text-decoration:none">${esc(p.title)}</a>
