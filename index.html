@@ -697,13 +697,14 @@ nav{top:var(--bh)}
 .mmenu{top:calc(60px + var(--bh))}
 .irmi-bar{position:fixed;top:0;left:0;right:0;height:var(--bh);z-index:1001;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;background:#2C2D29;border-bottom:2px solid var(--f);color:#fff;font-size:13px;font-weight:500;white-space:nowrap}
 .irmi-bar .ib-msg{display:inline-flex;align-items:center;gap:10px}
+.irmi-bar .ib-short{display:none}
 .irmi-bar .ib-dot{width:7px;height:7px;border-radius:50%;background:var(--f);flex:none;box-shadow:0 0 0 3px rgba(251,97,42,.25)}
 .irmi-bar .ib-cta{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:8px;border:1px solid #FB612A;background:#FB612A;color:#fff;text-decoration:none;font-size:12px;font-weight:500;transition:background-color .15s,border-color .15s}
 .irmi-bar .ib-cta:hover,.irmi-bar .ib-cta:focus-visible{background:#D54E21;border-color:#D54E21}
 .irmi-bar .ib-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.7);font-size:18px;line-height:1;cursor:pointer}
 .irmi-bar .ib-x:hover,.irmi-bar .ib-x:focus-visible{color:#fff;background:rgba(255,255,255,.1)}
 html.no-irmi .irmi-bar{display:none}
-@media(max-width:768px){.mmenu{top:calc(56px + var(--bh))}:root{--bh:62px}html.no-irmi{--bh:0px}.irmi-bar{flex-direction:column;gap:5px;padding:0 40px}.irmi-bar .ib-dot{display:none}}
+@media(max-width:768px){.mmenu{top:calc(56px + var(--bh))}:root{--bh:62px}html.no-irmi{--bh:0px}.irmi-bar{flex-direction:column;gap:5px;padding:0 40px}.irmi-bar .ib-dot{display:none}.irmi-bar .ib-long{display:none}.irmi-bar .ib-short{display:inline}}
 @media(max-width:420px){.irmi-bar{font-size:12px;padding:0 36px}.irmi-bar .ib-x{right:4px}}
 </style>
 </head>
@@ -711,8 +712,8 @@ html.no-irmi .irmi-bar{display:none}
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <div class="irmi-bar" id="irmi-bar" role="region" aria-label="Event announcement">
-  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span>We're a BuiltWorlds Demo Day finalist</span>
-  <a class="ib-cta" href="builtworlds-field-guide/">Get the Boston field guide →</a>
+  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span><span class="ib-long">We're a BuiltWorlds Venture East Demo Day finalist, Nov 19 in Boston</span><span class="ib-short">BuiltWorlds Demo Day finalist, Nov 19</span></span>
+  <a class="ib-cta" href="builtworlds-field-guide/">Get the event + downtown Boston field guide →</a>
   <button type="button" class="ib-x" aria-label="Dismiss announcement" onclick="dismissIrmi()">&times;</button>
 </div>
 <script>
