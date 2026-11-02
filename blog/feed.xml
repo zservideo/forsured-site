@@ -6,7 +6,28 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 30 Oct 2026 11:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 11:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Does a project-specific liability policy cover work after the job is built?</title>
+    <link>https://forsured.ai/blog/project-specific-policy-after-completion/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/project-specific-policy-after-completion/</guid>
+    <pubDate>Mon, 02 Nov 2026 11:00:00 GMT</pubDate>
+    <category>Industry news</category>
+    <description>A Texas highway pileup case shows how a liability policy limited to one project's construction work can leave out claims about running the road after it opens.</description>
+    <content:encoded><![CDATA[<ul><li>Not always. A policy written for one project's construction work may not cover claims about what happens after the project is done, such as operating or maintaining it.</li><li>In a ruling reported Oct 29, 2026, Liberty Mutual was found to have no duty to defend the builders of a Fort Worth toll road in lawsuits over a 2021 pileup that killed six people.</li><li>The trial court held that the policy covered bodily injury arising out of work for the project, and that operating and maintaining the road after it opened in 2018 wasn't that work.</li><li>If a contractor also operates or maintains what it built, check that its coverage reaches that work too, not just the construction phase.</li></ul><p><img src="https://forsured.ai/blog/project-specific-policy-after-completion/hero.png" width="1600" height="800" alt="Same policy, different work. A sample contractor certificate of insurance: Liability policy One designated project, meets the requirement; Building the road Work for the project, meets the requirement; Running the road After it opened, No duty to defend. In the I-35W pileup case, the policy covered bodily injury arising out of work for the project. Suits over operation and maintenance fell outside it."/></p><p>Not always. A liability policy written for one project's construction work can stop short of claims about what happens after the job is built. A Texas highway case reported last week shows how.</p>
+<h2 id="the-pileup-and-the-policy">The pileup and the policy</h2>
+<p>On Feb. 11, 2021, a 130-car pileup in a winter storm on I-35W in Fort Worth killed six people and injured about 65, Business Insurance reports. The crash led to dozens of lawsuits against the builders of that stretch of highway, the tollway operator and trucking companies.</p>
+<p>The builders, North Tarrant Infrastructure, Ferrovial Construction US and Webber, had a 2013 liability policy from a Liberty Mutual unit for the toll road project. The policy excluded bodily injury arising out of work for any project other than the one it named: rebuilding 6.5 miles of I-35W, building new frontage roads and adding toll lanes. In the district court's words, &quot;the Policy only includes coverage for bodily injury arising out of work conducted for the project.&quot;</p>
+<h2 id="why-building-it-wasn-t-running-it">Why building it wasn't running it</h2>
+<p>Liberty Mutual defended the builders under a reservation of rights, then sued to get out of the defense. Under Texas's eight-corners rule, the duty to defend turns only on the policy and what the lawsuits allege.</p>
+<p>The lawsuits didn't allege the road was built wrong. They alleged failures in operating and maintaining it, including preparing for winter weather. The road opened in 2018, so the district court held that later operation and maintenance couldn't be work &quot;for&quot; a project defined as rebuilding, constructing and expanding the road. Liberty Mutual had no duty to defend.</p>
+<p>Business Insurance reports that the U.S. Court of Appeals for the Fifth Circuit has now affirmed the ruling, and quotes the court calling the policy &quot;clunky and poorly drafted.&quot; The district court left one question open: whether Liberty Mutual must pay any judgment. It said that wasn't ripe, since facts at trial could differ from the allegations.</p>
+<h2 id="what-it-means-for-project-requirements">What it means for project requirements</h2>
+<p>Some projects, like public-private toll roads, have the team that builds them also operate and maintain them. A policy that names a project and its construction work covers that phase. It may not cover the years after.</p>
+<ol><li>Read how the policy describes the covered project and the covered work. Narrow descriptions mean narrow coverage.</li><li>If a contractor will also operate or maintain the project, ask which policy covers that phase, and get it on file.</li><li>Match each phase in your project requirements to a policy that actually reaches it, including completed operations.</li><li>Remember a certificate won't show any of this. Get the policy wording or endorsements behind it.</li></ol>
+<p>Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/project-specific-policy-after-completion/og.png" type="image/png" length="51492"/>
+  </item>
   <item>
     <title>What does &quot;per written contract&quot; mean on an additional insured endorsement?</title>
     <link>https://forsured.ai/blog/per-written-contract-additional-insured/</link>
