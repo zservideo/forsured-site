@@ -66,7 +66,7 @@ for (const g of GUIDES) test.describe(g.dir, () => {
     await open(page);
     await expect(page.locator('nav .nlogo')).toHaveAttribute('href', '../');
     await expect(page.getByRole('link', { name: /Free COI Risk Check/ }).first()).toHaveAttribute('href', '../#demo');
-    await expect(page.locator('a[href="mailto:hello@forsured.ai"]')).toHaveCount(1);
+    await expect(page.locator('.band a[href="mailto:hello@forsured.ai"]')).toHaveCount(1);
     await expect(page.locator('footer')).toContainText(`Not affiliated with or endorsed by ${g.org}`);
   });
 
