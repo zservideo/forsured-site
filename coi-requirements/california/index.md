@@ -2,7 +2,9 @@
 
 > What California law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/california/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/california/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -18,7 +20,7 @@ Agency: [California Division of Workers' Compensation](https://dir.ca.gov/DWC/fa
 
 ## Contractor licensing and insurance
 
-The Contractors State License Board (CSLB) requires a workers' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Roofing (C-39) contractors must carry workers' comp even with no employees. A law passed in 2021 (SB 216) set January 1, 2026 as the date every licensee would need workers' comp, employees or not. A 2024 law (SB 1455) pushed that to January 1, 2028. Contractors licensed as LLCs must also carry at least $1 million in liability insurance (up to $5 million, depending on how many people are listed on the license).
+The Contractors State License Board (CSLB) requires a workers' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Five license classifications must carry workers' comp even with no employees: concrete (C-8), HVAC (C-20), asbestos abatement (C-22), roofing (C-39) and tree service (D-49). A law passed in 2021 (SB 216) set January 1, 2026 as the date every licensee would need workers' comp, employees or not. A 2024 law (SB 1455) pushed that to January 1, 2028. Contractors licensed as LLCs must also carry at least $1 million in liability insurance (up to $5 million, depending on how many people are listed on the license).
 
 ## Indemnity and additional insured clauses
 
@@ -39,15 +41,15 @@ A CSLB license lookup shows whether a contractor has a workers' comp certificate
 
 ### Do contractors need workers' comp in California?
 
-Every California employer with one or more employees must carry workers' comp. Going without it is a crime. An uninsured employer faces a misdemeanor with a fine of at least $10,000, penalties of up to $100,000, and a stop order that bars using employee labor until coverage is in place.
+Every California employer with one or more employees must carry workers' comp. Going without it is a crime. An uninsured employer faces a misdemeanor with a fine of at least $10,000, penalties of up to $100,000, and a stop order that bars using employee labor until coverage is in place. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does California require contractors to carry general liability insurance?
 
-The Contractors State License Board (CSLB) requires a workers' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Roofing (C-39) contractors must carry workers' comp even with no employees. A law passed in 2021 (SB 216) set January 1, 2026 as the date every licensee would need workers' comp, employees or not. A 2024 law (SB 1455) pushed that to January 1, 2028. Contractors licensed as LLCs must also carry at least $1 million in liability insurance (up to $5 million, depending on how many people are listed on the license).
+The Contractors State License Board (CSLB) requires a workers' comp certificate, or an exemption if the contractor has no employees, and a $25,000 license bond. Five license classifications must carry workers' comp even with no employees: concrete (C-8), HVAC (C-20), asbestos abatement (C-22), roofing (C-39) and tree service (D-49). A law passed in 2021 (SB 216) set January 1, 2026 as the date every licensee would need workers' comp, employees or not. A 2024 law (SB 1455) pushed that to January 1, 2028. Contractors licensed as LLCs must also carry at least $1 million in liability insurance (up to $5 million, depending on how many people are listed on the license). As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a California construction contract make a contractor cover another party's negligence?
 
-California Civil Code § 2782 voids construction clauses that make a contractor indemnify another party for that party's sole negligence or willful misconduct, with stricter limits on residential projects. For most private contracts signed since 2013, § 2782.05 also voids clauses that make a lower-tier contractor cover the active negligence of the contractor above it.
+California Civil Code § 2782 voids construction clauses that make a contractor indemnify another party for that party's sole negligence or willful misconduct, with stricter limits on residential projects. For most private contracts signed since 2013, § 2782.05 also voids clauses that make a lower-tier contractor cover the active negligence of the contractor above it. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -58,7 +60,7 @@ California Civil Code § 2782 voids construction clauses that make a contractor 
 5. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

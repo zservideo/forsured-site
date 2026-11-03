@@ -2,7 +2,9 @@
 
 > What New Jersey law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-jersey/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-jersey/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -12,7 +14,7 @@ Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/
 
 ## Workers' comp in New Jersey
 
-Almost every New Jersey employer must carry workers' comp, including for part-time and seasonal workers. Corporate officers are included. Partners, LLC members and sole proprietors without employees are not, unless they choose coverage.
+Every New Jersey employer not covered by a federal program must carry workers' comp. A corporation needs coverage as soon as anyone works for it, corporate officers included. Partners, LLC members and sole proprietors don't count themselves, so their coverage starts with the first worker who isn't an owner.
 
 Agency: [New Jersey Division of Workers' Compensation](https://www.nj.gov/labor/workerscompensation/employer-requirements/index.shtml?open=insurance)
 
@@ -35,24 +37,24 @@ New Jersey's anti-indemnity statute (N.J. Stat. Ann. §§ 2A:40A-1, 2A:40A-2) vo
 
 ### Do contractors need workers' comp in New Jersey?
 
-Almost every New Jersey employer must carry workers' comp, including for part-time and seasonal workers. Corporate officers are included. Partners, LLC members and sole proprietors without employees are not, unless they choose coverage.
+Every New Jersey employer not covered by a federal program must carry workers' comp. A corporation needs coverage as soon as anyone works for it, corporate officers included. Partners, LLC members and sole proprietors don't count themselves, so their coverage starts with the first worker who isn't an owner. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does New Jersey require contractors to carry general liability insurance?
 
-New Jersey home improvement contractors must register with the Division of Consumer Affairs and carry commercial general liability of at least $500,000 per occurrence.
+New Jersey home improvement contractors must register with the Division of Consumer Affairs and carry commercial general liability of at least $500,000 per occurrence. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a New Jersey construction contract make a contractor cover another party's negligence?
 
-New Jersey's anti-indemnity statute (N.J. Stat. Ann. §§ 2A:40A-1, 2A:40A-2) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+New Jersey's anti-indemnity statute (N.J. Stat. Ann. §§ 2A:40A-1, 2A:40A-2) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
-1. [New Jersey workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/new-jersey/), OnPay, Dec 2025
+1. [Employer requirements: insurance](https://www.nj.gov/labor/workerscompensation/employer-requirements/index.shtml?open=insurance), New Jersey Division of Workers' Compensation
 2. [Home improvement contractor FAQ](https://njconsumeraffairs.gov/hic/Pages/FAQ.aspx), New Jersey Division of Consumer Affairs
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -41,5 +41,7 @@ In design-build, the builder's team takes on design responsibility. That brings 
 1. [American Global tapped to update IRMI's Design-Build Risk and Insurance guide](https://www.constructiondive.com/press-release/20261023-american-global-tapped-to-update-irmis-design-build-risk-and-insurance-gui/), Construction Dive, Oct 23, 2026
 2. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

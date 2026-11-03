@@ -2,7 +2,9 @@
 
 > What Colorado law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/colorado/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/colorado/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Colorado's anti-indemnity statute (Colo. Rev. Stat. § 13-21-111.5) voids constr
 
 ### Do contractors need workers' comp in Colorado?
 
-All Colorado businesses with employees must carry workers' comp, whatever the headcount, including part-time workers and family members.
+All Colorado businesses with employees must carry workers' comp, whatever the headcount, including part-time workers and family members. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Colorado require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Colorado has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Colorado has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Colorado construction contract make a contractor cover another party's negligence?
 
-Colorado's anti-indemnity statute (Colo. Rev. Stat. § 13-21-111.5) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids.
+Colorado's anti-indemnity statute (Colo. Rev. Stat. § 13-21-111.5) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Colorado's anti-indemnity statute (Colo. Rev. Stat. § 13-21-111.5) voids constr
 3. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -91,6 +91,11 @@ for (const p of PAGES) {
       // The field guide names IRMI; the blog footer covers every organization it cites without naming one.
       await expect(page.locator('footer')).toContainText(/Not affiliated with or endorsed by (IRMI|the organizations or publications we cite)/);
     });
+
+    test('says in the footer that it is not legal or insurance advice', () => {
+      const html = read(p.file);
+      expect(html.slice(html.lastIndexOf('<footer'))).toContain('not legal or insurance advice');
+    });
   });
 }
 

@@ -2,7 +2,9 @@
 
 > What Wisconsin law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/wisconsin/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/wisconsin/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Wisconsin's anti-indemnity statute (Wis. Stat. § 895.447) voids construction co
 
 ### Do contractors need workers' comp in Wisconsin?
 
-Wisconsin employers must carry workers' comp once they have three or more full-time or part-time employees, or pay $500 or more in wages in any calendar quarter.
+Wisconsin employers must carry workers' comp once they have three or more full-time or part-time employees, or pay $500 or more in wages in any calendar quarter. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Wisconsin require contractors to carry general liability insurance?
 
-Wisconsin dwelling contractors must show general liability of at least $250,000 per occurrence (or a bond in its place), plus workers' comp and unemployment insurance where they apply.
+Wisconsin dwelling contractors must show general liability of at least $250,000 per occurrence (or a bond in its place), plus workers' comp and unemployment insurance where they apply. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Wisconsin construction contract make a contractor cover another party's negligence?
 
-Wisconsin's anti-indemnity statute (Wis. Stat. § 895.447) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+Wisconsin's anti-indemnity statute (Wis. Stat. § 895.447) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Wisconsin's anti-indemnity statute (Wis. Stat. § 895.447) voids construction co
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

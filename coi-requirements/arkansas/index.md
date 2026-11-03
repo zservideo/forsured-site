@@ -2,7 +2,9 @@
 
 > What Arkansas law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/arkansas/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/arkansas/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -35,15 +37,15 @@ Arkansas's anti-indemnity statute (Ark. Code Ann. §§ 4-56-104, 22-9-214) voids
 
 ### Do contractors need workers' comp in Arkansas?
 
-Most Arkansas employers with three or more employees must carry workers' comp, and employers with two or more employees doing building or building repair work must too. A contractor that hands part of its contract to another contractor needs coverage with even one employee, and so does the contractor doing that part of the work.
+Most Arkansas employers with three or more employees must carry workers' comp, and employers with two or more employees doing building or building repair work must too. A contractor that hands part of its contract to another contractor needs coverage with even one employee, and so does the contractor doing that part of the work. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Arkansas require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Arkansas construction contract make a contractor cover another party's negligence?
 
-Arkansas's anti-indemnity statute (Ark. Code Ann. §§ 4-56-104, 22-9-214) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
+Arkansas's anti-indemnity statute (Ark. Code Ann. §§ 4-56-104, 22-9-214) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -52,7 +54,7 @@ Arkansas's anti-indemnity statute (Ark. Code Ann. §§ 4-56-104, 22-9-214) voids
 3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 4. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -2,7 +2,9 @@
 
 > What Georgia law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/georgia/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/georgia/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -22,7 +24,7 @@ Georgia's licensing board requires general liability of at least $500,000 for ge
 
 ## Indemnity and additional insured clauses
 
-Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. Some commentators read the statute as also voiding additional insured coverage for the other party's sole negligence.
+Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed.
 
 ## What to check on a contractor COI for a Georgia project
 
@@ -35,15 +37,15 @@ Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction
 
 ### Do contractors need workers' comp in Georgia?
 
-Georgia businesses with three or more workers, counting regular part-time workers, must carry workers' comp.
+Georgia businesses with three or more workers, counting regular part-time workers, must carry workers' comp. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Georgia require contractors to carry general liability insurance?
 
-Georgia's licensing board requires general liability of at least $500,000 for general contractors and residential-light commercial contractors and $300,000 for residential-basic contractors, plus proof of workers' comp as state law requires.
+Georgia's licensing board requires general liability of at least $500,000 for general contractors and residential-light commercial contractors and $300,000 for residential-basic contractors, plus proof of workers' comp as state law requires. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Georgia construction contract make a contractor cover another party's negligence?
 
-Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. Some commentators read the statute as also voiding additional insured coverage for the other party's sole negligence.
+Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction contract clauses that make a contractor indemnify another party for that party's sole negligence. Clauses that cover shared fault are generally allowed. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
@@ -51,10 +53,9 @@ Georgia's anti-indemnity statute (Ga. Code Ann. § 13-8-2(b)) voids construction
 2. [Ga. Comp. R. & Regs. 553-3 (residential contractor qualifications)](https://rules.sos.ga.gov/gac/553-3), Georgia Secretary of State
 3. [Ga. Comp. R. & Regs. 553-4-.01 (general contractor qualifications)](https://regulations.justia.com/states/georgia/department-553/chapter-553-4/rule-553-4-01/), Justia Regulations
 4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-5. [Contractual Insurance Requirements and Anti-Indemnity Statutes](https://www.irmi.com/articles/expert-commentary/contractual-insurance-requirements-and-anti-indemnity-statutes), IRMI, 2016
-6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

@@ -2,7 +2,9 @@
 
 > What New Hampshire law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-hampshire/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/new-hampshire/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -12,7 +14,7 @@ Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/
 
 ## Workers' comp in New Hampshire
 
-New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Corporations and LLCs with no employees and three or fewer officers or members can go without. A fourth officer or member makes coverage mandatory.
+New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Up to three owners, members or executive officers can be excluded, but only through paperwork the insurer files with the Department of Labor. A sole proprietor isn't required to cover themselves.
 
 Agency: [New Hampshire Department of Labor](https://www.dol.nh.gov/workers-compensation/employer-information)
 
@@ -35,23 +37,23 @@ New Hampshire's anti-indemnity statute (N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A
 
 ### Do contractors need workers' comp in New Hampshire?
 
-New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Corporations and LLCs with no employees and three or fewer officers or members can go without. A fourth officer or member makes coverage mandatory.
+New Hampshire employers with one or more full-time or part-time employees must carry workers' comp. Up to three owners, members or executive officers can be excluded, but only through paperwork the insurer files with the Department of Labor. A sole proprietor isn't required to cover themselves. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does New Hampshire require contractors to carry general liability insurance?
 
-We found no statewide general liability minimum tied to a general contractor license. New Hampshire has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is.
+We found no statewide general liability minimum tied to a general contractor license. New Hampshire has no statewide general contractor license. Cities and counties can set their own licensing and insurance rules, so check where the project is. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a New Hampshire construction contract make a contractor cover another party's negligence?
 
-New Hampshire's anti-indemnity statute (N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A:2) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up.
+New Hampshire's anti-indemnity statute (N.H. Rev. Stat. Ann. §§ 338-A:1, 338-A:2) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
-1. [New Hampshire workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/new-hampshire/), OnPay, May 2026
+1. [Workers' compensation FAQs](https://insurance.nh.gov/consumers/business-insurance/workers-compensation/faqs), New Hampshire Insurance Department
 2. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
 3. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

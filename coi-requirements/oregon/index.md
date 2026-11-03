@@ -2,7 +2,9 @@
 
 > What Oregon law says about workers' comp, contractor license insurance and indemnity clauses, and what to check on a contractor COI for a project there.
 
-Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/oregon/
+Last checked Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/oregon/
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.
 
 ## The short version
 
@@ -12,7 +14,7 @@ Reviewed Oct 28, 2026 by Forsured. Source: https://forsured.ai/coi-requirements/
 
 ## Workers' comp in Oregon
 
-Nearly every Oregon employer with one or more employees, full-time or part-time, must carry workers' comp.
+Nearly every Oregon employer with one or more workers must carry workers' comp.
 
 Agency: [Oregon Workers' Compensation Division](https://wcd.oregon.gov/employer/Pages/index.aspx)
 
@@ -35,25 +37,26 @@ Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction co
 
 ### Do contractors need workers' comp in Oregon?
 
-Nearly every Oregon employer with one or more employees, full-time or part-time, must carry workers' comp.
+Nearly every Oregon employer with one or more workers must carry workers' comp. As of Oct 28, 2026. General information, not legal advice.
 
 ### Does Oregon require contractors to carry general liability insurance?
 
-Oregon's Construction Contractors Board sets liability minimums by endorsement: $500,000 per occurrence for a residential general contractor, $1,000,000 aggregate for a commercial general contractor level 2, and $2,000,000 aggregate for level 1.
+Oregon's Construction Contractors Board sets liability minimums by endorsement: $500,000 per occurrence for a residential general contractor, $1,000,000 aggregate for a commercial general contractor level 2, and $2,000,000 aggregate for level 1. As of Oct 28, 2026. General information, not legal advice.
 
 ### Can a Oregon construction contract make a contractor cover another party's negligence?
 
-Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids.
+Oregon's anti-indemnity statute (Or. Rev. Stat. § 30.140) voids construction contract clauses that make a contractor indemnify another party for that party's own negligence, even in part. Clauses limited to the contractor's own share of fault generally hold up. The statute also reaches insurance: a contract can't use an additional insured requirement to get coverage for the other party's negligence that the indemnity rule forbids. As of Oct 28, 2026. General information, not legal advice.
 
 ## Sources
 
-1. [Oregon workers' comp requirements](https://onpay.com/insights/workers-comp-requirements-by-state/oregon/), OnPay, May 2026
+1. [Workers' compensation insurance overview](https://wcd.oregon.gov/employer/Pages/compensation-insurance-overview.aspx), Oregon Workers' Compensation Division
 2. [OAR 812-003-0221, Liability insurance requirements](https://oregon.public.law/rules/oar_812-003-0221), Oregon Construction Contractors Board (via Public.Law)
-3. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
-4. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
-5. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
+3. [Or. Rev. Stat. ch. 30 (§ 30.140)](https://www.oregonlegislature.gov/bills_laws/ors/ors030.html), Oregon State Legislature
+4. [Anti-Indemnity Statutes in All 50 States (2023)](https://grsm.com/wp-content/uploads/2023/10/Anti-Indemnity-Statutes-2023.pdf), Gordon Rees Scully Mansukhani, 2023
+5. [Another State Joins List of "Anti-Additional Insured" States](https://blogs.duanemorris.com/constructionlaw/2012/01/05/another-state-joins-list-of-anti-additional-insured/), Duane Morris Construction Law Blog, 2012
+6. [State Workers' Compensation Officials](https://www.dol.gov/agencies/owcp/wc), U.S. Department of Labor
 
-General information, not legal advice. Confirm with the state agency, your broker or your attorney.
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Confirm with the state agency, your broker or your attorney.
 
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

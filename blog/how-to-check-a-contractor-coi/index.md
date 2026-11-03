@@ -74,5 +74,7 @@ The contractor's insurance broker or agent. The fastest path is to send the brok
 1. [Certificate of insurance (definition)](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance), IRMI
 2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

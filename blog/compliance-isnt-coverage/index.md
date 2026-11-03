@@ -67,5 +67,7 @@ At onboarding and again whenever a policy renews, changes or is close to expirin
 2. [Christopher Ruggiero to speak at the 2026 IRMI Construction Risk Conference](https://www.cullenllp.com/blog/partner-and-construction-litigation-chair-christopher-ruggiero-to-speak-at-the-2026-irmi-construction-risk-conference-crc/), Cullen and Dykman
 3. [Insurance Marketplace Realities 2027: Construction](https://www.wtwco.com/en-us/insights/2026/10/insurance-marketplace-realities-2027-construction), WTW, Oct 1, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
