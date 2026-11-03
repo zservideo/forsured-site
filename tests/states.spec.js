@@ -110,7 +110,7 @@ test('the pages stay out of the main nav and are linked from the footer', async 
     await open(page, u, { fonts: false });
     expect(await page.locator('nav a[href^="/coi-requirements/"]').count(), `${u} nav`).toBe(0);
   }
-  for (const u of ['/blog/', '/coi-requirements/', url(STATES[0])]) {
+  for (const u of ['/', '/blog/', '/coi-requirements/', url(STATES[0])]) {
     await open(page, u, { fonts: false });
     await expect(page.locator('footer a[href="/coi-requirements/"]'), `${u} footer`).toHaveText('COI Requirements by State');
   }
