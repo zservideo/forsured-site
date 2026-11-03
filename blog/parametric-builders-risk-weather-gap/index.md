@@ -63,5 +63,7 @@ Possibly. Contractors usually set weather allowances from rough averages, and a 
 
 1. [Parametric insurance fills gaps in builder's risk coverage: panel](https://www.businessinsurance.com/parametric-insurance-fills-gaps-in-builders-risk-coverage-panel/), Business Insurance, Oct 28, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

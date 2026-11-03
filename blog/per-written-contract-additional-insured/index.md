@@ -66,5 +66,7 @@ No. A certificate summarizes coverage. Additional insured status comes from an e
 3. [COI Requests: Is There a Blanket Additional Insured Endorsement?](https://www.iamagazine.com/strategies/coi-requests-is-there-a-blanket-additional-insured-endorsement), IA Magazine, Oct 12, 2018
 4. [Berkley's lawsuit accuses Trisura of refusing a project owner's defense](https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/berkleys-lawsuit-accuses-trisura-of-refusing-a-project-owners-defense-580981.aspx), Insurance Business, Jul 1, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

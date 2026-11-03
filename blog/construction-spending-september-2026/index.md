@@ -63,5 +63,7 @@ Public spending was essentially flat at $546.8 billion, down 0.1% from August an
 
 1. [Monthly Construction Spending, September 2026 (CB26-176)](https://www.census.gov/construction/c30/pdf/release.pdf), U.S. Census Bureau, Nov 2, 2026
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai

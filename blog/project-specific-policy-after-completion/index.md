@@ -59,5 +59,7 @@ Not necessarily. In this case the district court said the duty to indemnify wasn
 1. [Liberty Mutual needn't defend highway builders in pileup: court](https://www.businessinsurance.com/liberty-mutual-neednt-defend-highway-builders-in-pileup-court/), Business Insurance, Oct 29, 2026
 2. [Liberty Mutual Fire Insurance Co. v. North Tarrant Infrastructure, LLC, No. 4:23-cv-01043-O (N.D. Tex.)](https://www.courtlistener.com/opinion/10359814/liberty-mutual-fire-insurance-company-v-north-tarrant-infrastructure-llc/), CourtListener, Mar 19, 2025
 
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
 ---
 Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
