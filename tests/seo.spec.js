@@ -114,11 +114,13 @@ for (const p of PAGES) {
   });
 }
 
-test('the old short link stays out of search results', async () => {
-  const html = read('irmifieldguide/index.html');
-  expect(html).toMatch(/<meta name="robots" content="noindex"/);
-  expect(html).toMatch(/<link rel="canonical" href="https:\/\/forsured\.ai\/irmi-field-guide\/"/);
-});
+for (const [short, dir] of [['irmifieldguide', 'irmi-field-guide'], ['builtworldsfieldguide', 'builtworlds-field-guide']]) {
+  test(`the ${short} short link stays out of search results`, async () => {
+    const html = read(`${short}/index.html`);
+    expect(html).toMatch(/<meta name="robots" content="noindex"/);
+    expect(html).toContain(`<link rel="canonical" href="https://forsured.ai/${dir}/"`);
+  });
+}
 
 test('custom domain is set for GitHub Pages', async () => {
   expect(read('CNAME').trim()).toBe('forsured.ai');

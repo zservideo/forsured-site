@@ -16,6 +16,10 @@ Key facts:
 
 ## Blog
 
+- [Is U.S. construction spending down? What the September 2026 numbers show](https://forsured.ai/blog/construction-spending-september-2026/): Census data released Nov 2 shows U.S. construction spending fell 1.9% in September 2026. Residential pulled it down while nonresidential grew. Markdown: https://forsured.ai/blog/construction-spending-september-2026/index.md
+- [Does a project-specific liability policy cover work after the job is built?](https://forsured.ai/blog/project-specific-policy-after-completion/): A Texas highway pileup case shows how a liability policy limited to one project's construction work can leave out claims about running the road after it opens. Markdown: https://forsured.ai/blog/project-specific-policy-after-completion/index.md
+- [What does "per written contract" mean on an additional insured endorsement?](https://forsured.ai/blog/per-written-contract-additional-insured/): Blanket additional insured endorsements add whoever a written contract requires. Whose contract, signed when, and saying what decides whether you're covered. Markdown: https://forsured.ai/blog/per-written-contract-additional-insured/index.md
+- [Can parametric insurance cover weather delays on a construction project?](https://forsured.ai/blog/parametric-builders-risk-weather-gap/): Builder's risk pays for physical damage, not for days lost to cold, heat or wind. A CRC panel explained how parametric cover fills that gap. Markdown: https://forsured.ai/blog/parametric-builders-risk-weather-gap/index.md
 - [What does primary and noncontributory mean on a COI?](https://forsured.ai/blog/primary-and-noncontributory/): Primary and noncontributory decides whose policy pays first when a contractor's work causes a loss. What it means, which endorsement creates it, and what to check. Markdown: https://forsured.ai/blog/primary-and-noncontributory/index.md
 - [What we heard at our first IRMI Construction Risk Conference](https://forsured.ai/blog/forsured-at-irmi-crc-2026/): Forsured spent IRMI's 2026 Construction Risk Conference talking COIs with brokers, carriers and contractors. Five things we heard, and what we're doing about them. Markdown: https://forsured.ai/blog/forsured-at-irmi-crc-2026/index.md
 - [A COI on file isn't proof of coverage](https://forsured.ai/blog/compliance-isnt-coverage/): A certificate of insurance shows what a contractor bought on one day. Here's what it can't tell you, and what to check against your project requirements instead. Markdown: https://forsured.ai/blog/compliance-isnt-coverage/index.md
@@ -87,3 +91,4 @@ General information, not legal or insurance advice. Forsured is a software compa
 - [Every post in full](https://forsured.ai/llms-full.txt)
 - [Blog RSS feed](https://forsured.ai/blog/feed.xml)
 - [IRMI CRC 2026 field guide](https://forsured.ai/irmi-field-guide/): an independent guide to the 2026 Construction Risk Conference
+- [BuiltWorlds Venture East 2026 field guide](https://forsured.ai/builtworlds-field-guide/): an independent guide to AEC Emerging Tech 2026 in Boston

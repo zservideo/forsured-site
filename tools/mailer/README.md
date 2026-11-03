@@ -35,7 +35,8 @@ The script never sends these drafts. Zach reviews and sends.
 
 1. Go to https://script.new while signed in as zach@forsured.ai. Name the project "Forsured Mailer".
 2. Replace everything in `Code.gs` with this file and save.
-3. Left sidebar, **Services +** → **Gmail API** → Add. (It reads your live Gmail signature.)
+3. Left sidebar, **Services +** → **Gmail API** → Add. (It reads your live Gmail signature, and blog post
+   emails go out through it so emoji arrive intact. GmailApp turns them into question marks.)
 4. Pick `setup` in the function menu and press **Run**. Approve the Google prompt (Advanced →
    Go to Forsured Mailer if it warns that the app is unverified; it's your own script).
 5. Check Gmail Drafts for "[TEST] Forsured Mailer: clean links check" and click its link.
