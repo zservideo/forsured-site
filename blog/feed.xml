@@ -6,7 +6,28 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 02 Nov 2026 11:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Is U.S. construction spending down? What the September 2026 numbers show</title>
+    <link>https://forsured.ai/blog/construction-spending-september-2026/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/construction-spending-september-2026/</guid>
+    <pubDate>Tue, 03 Nov 2026 12:00:00 GMT</pubDate>
+    <category>Market outlook</category>
+    <description>Census data released Nov 2 shows U.S. construction spending fell 1.9% in September 2026. Residential pulled it down while nonresidential grew.</description>
+    <content:encoded><![CDATA[<ul><li>Yes. U.S. construction spending ran at a seasonally adjusted annual rate of $2,186.1 billion in September 2026, down 1.9% from August and 2.7% from a year earlier, the Census Bureau reported Nov 2.</li><li>Spending for the first nine months of 2026 was $1,649.6 billion, 2.9% below the same period in 2025.</li><li>Residential drove the drop: private residential spending fell 5.5% in the month.</li><li>Nonresidential kept growing. Private nonresidential rose 1.1% from August, and total nonresidential was 1.8% above September 2025.</li></ul><p><img src="https://forsured.ai/blog/construction-spending-september-2026/hero.png" width="1600" height="800" alt="-1.9%: Change in U.S. construction spending from August to September 2026"/></p><p>Yes. U.S. construction spending fell 1.9% in September 2026, to a seasonally adjusted annual rate of $2,186.1 billion, the Census Bureau reported Monday. That's 2.7% below September 2025. For the first nine months of the year, spending totaled $1,649.6 billion, down 2.9% from the same stretch of 2025.</p>
+<p>The headline hides a split, though. Almost all of the decline is residential.</p>
+<h2 id="where-the-drop-came-from">Where the drop came from</h2>
+<div class="table"><table><thead><tr><th scope="col">Segment</th><th scope="col">September 2026 (annual rate)</th><th scope="col">vs. August</th><th scope="col">vs. Sept. 2025</th></tr></thead><tbody><tr><th scope="row">Total</th><td>$2,186.1B</td><td>-1.9%</td><td>-2.7%</td></tr><tr><th scope="row">Total residential</th><td>$861.2B</td><td>-5.4%</td><td>-8.8%</td></tr><tr><th scope="row">Private nonresidential</th><td>$790.6B</td><td>+1.1%</td><td>+2.3%</td></tr><tr><th scope="row">Total nonresidential</th><td>$1,325.0B</td><td>+0.6%</td><td>+1.8%</td></tr><tr><th scope="row">Public</th><td>$546.8B</td><td>-0.1%</td><td>+1.0%</td></tr></tbody></table></div>
+<p>Private residential alone fell 5.5% in the month, to $848.8 billion. Nonresidential, the work most commercial GCs and trade contractors depend on, is the part still growing.</p>
+<p>On the public side, spending was essentially flat. Educational spending was $113.1 billion, virtually unchanged, and highway spending was $149.2 billion, down 0.3%.</p>
+<p>These are preliminary numbers. Census revises each month, and August was revised in this release. The next update is due Dec 1.</p>
+<h2 id="what-it-means-for-project-requirements">What it means for project requirements</h2>
+<p>A softer overall market tends to mean tighter bids and more competition for nonresidential work. That can bring new names onto your jobs: trade contractors you haven't worked with before, bidding into a segment that's still growing.</p>
+<p>New relationships are where insurance gaps hide. Before a new contractor mobilizes:</p>
+<ol><li>Check its COI against your project requirements, line by line, not just for a valid policy.</li><li>Ask for the additional insured and primary and noncontributory endorsements, not just the certificate.</li><li>Track expiration dates from day one, so coverage doesn't lapse mid-project.</li></ol>
+<p>Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/construction-spending-september-2026/og.png" type="image/png" length="56419"/>
+  </item>
   <item>
     <title>Does a project-specific liability policy cover work after the job is built?</title>
     <link>https://forsured.ai/blog/project-specific-policy-after-completion/</link>
