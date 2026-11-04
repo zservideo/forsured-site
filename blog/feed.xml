@@ -6,7 +6,29 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 03 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What does waiver of subrogation mean on a COI?</title>
+    <link>https://forsured.ai/blog/waiver-of-subrogation-coi/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/waiver-of-subrogation-coi/</guid>
+    <pubDate>Wed, 04 Nov 2026 12:00:00 GMT</pubDate>
+    <category>COI basics</category>
+    <description>A waiver of subrogation stops a contractor's insurer from suing you to recover what it paid. What it means, where it comes from, and what to check on each COI.</description>
+    <content:encoded><![CDATA[<ul><li>A waiver of subrogation is the insurer's agreement not to recover what it paid on a loss from a third party, such as the owner or GC, after paying its own insured.</li><li>Insurers usually agree to it because their insured already gave up its own right to recover in a contract. The waiver shows that contract promise didn't void the coverage.</li><li>It comes from policy wording, usually an endorsement. The workers' comp form, NCCI's WC 00 03 13, applies only to parties named in its schedule and can be limited to work under a written contract.</li><li>On each contractor COI, match the waiver to the policies your project requirements list, and ask for the endorsement.</li></ul><p><img src="https://forsured.ai/blog/waiver-of-subrogation-coi/hero.png" width="1600" height="800" alt="Four checks on a waiver of subrogation: Does the contract require it, in writing?; Is there an endorsement behind the checkbox?; Does it name you, or apply blanket?; Is it on every policy the contract lists?"/></p><p>A waiver of subrogation is an insurer's agreement not to go after a third party to recover what it paid on a claim. On a construction project, that third party is usually you: the owner or GC. Without the waiver, a contractor's insurer that pays for a loss could turn around and sue you to get its money back.</p>
+<h2 id="what-subrogation-is">What subrogation is</h2>
+<p>When an insurer pays a claim, it can step into its insured's shoes and pursue whoever caused the loss. In standard commercial policies, IRMI notes, that right sits in a condition called &quot;Transfer of Rights of Recovery Against Others to Us.&quot;</p>
+<p>A waiver gives that right up against named parties. IRMI explains that insurers usually agree to it because the insured has already waived its own right of recovery in a contract. Policies generally allow that waiver if it's made before a loss. Many exclude coverage if it's made after.</p>
+<p>That's why construction contracts ask for it. The contract has the contractor waive its rights against the owner and GC. The insurer's waiver is the proof that promise didn't cost the contractor its coverage.</p>
+<h2 id="where-it-comes-from">Where it comes from</h2>
+<p>Like additional insured status, the waiver comes from policy wording, not from the certificate. A checked waiver box on the certificate is only a summary.</p>
+<p>On workers' compensation, the standard form is NCCI's WC 00 03 13, &quot;Waiver of Our Right to Recover From Others Endorsement.&quot; Its key line: &quot;We will not enforce our right against the person or organization named in the Schedule.&quot; Two details matter:</p>
+<ul><li><strong>It's limited to the Schedule.</strong> The form says it &quot;shall not operate directly or indirectly to benefit anyone not named in the Schedule.&quot;</li><li><strong>It can be tied to a written contract.</strong> An optional sentence limits it to work done &quot;under a written contract that requires you to obtain this agreement from us.&quot;</li></ul>
+<p>It can also cost extra. NCCI's instructions say a premium charge may apply. Tennessee's insurance department, for example, allows a carrier-set charge in the voluntary market and, for assigned risk policies, 5% of the related manual premium with a $250 minimum per waiver.</p>
+<h2 id="what-to-check-on-a-contractor-coi">What to check on a contractor COI</h2>
+<ol><li>Confirm your project requirements call for the waiver, and on which policies: general liability, auto, workers' comp, umbrella.</li><li>Ask for the endorsement behind each checked box. Note the form number and edition.</li><li>Check that it names you, or applies to anyone a written contract requires, and that the contract is signed before work starts.</li><li>Recheck at renewal, when endorsements can drop off.</li></ol>
+<p>Forsured checks each contractor COI against the coverage a project actually requires, including the endorsements behind the checkboxes, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/waiver-of-subrogation-coi/og.png" type="image/png" length="48307"/>
+  </item>
   <item>
     <title>Is U.S. construction spending down? What the September 2026 numbers show</title>
     <link>https://forsured.ai/blog/construction-spending-september-2026/</link>
