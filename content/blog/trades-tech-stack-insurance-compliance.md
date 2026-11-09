@@ -4,16 +4,16 @@
   "seoTitle": "Insurance Compliance in the Trades Tech Stack | Forsured",
   "description": "Suffolk Technologies' new trades tech map puts insurance compliance under getting paid. Why it belongs at the start of the job, and why compliance isn't coverage.",
   "dek": "Suffolk Technologies just mapped the tools reshaping how trade contractors win, run, do and get paid for work. Insurance compliance made the map, in the last column. Where it sits says a lot about how the industry still treats it.",
-  "date": "2026-11-09T07:00:00-05:00",
-  "draft": true,
+  "date": "2026-11-09T06:45:00-05:00",
+  "draft": false,
   "category": "Industry news",
   "hero": {
     "type": "list",
-    "title": "Where insurance compliance belongs on the job",
+    "title": "Where compliance belongs on the job",
     "items": [
-      "Win and staff work: clear coverage before the crew mobilizes",
-      "Do the work: track renewals and changes as they happen",
-      "Get paid: payment confirms coverage, it doesn't discover gaps"
+      "Staffing: clear coverage first",
+      "The work: track every change",
+      "Payment: confirm, don't discover gaps"
     ]
   },
   "tags": [
