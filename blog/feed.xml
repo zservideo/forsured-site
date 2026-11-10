@@ -6,7 +6,29 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 09 Nov 2026 11:45:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 10 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What does per project aggregate mean on a COI?</title>
+    <link>https://forsured.ai/blog/per-project-aggregate-coi/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/per-project-aggregate-coi/</guid>
+    <pubDate>Tue, 10 Nov 2026 12:00:00 GMT</pubDate>
+    <category>COI basics</category>
+    <description>A contractor's general aggregate is shared by every job it works. The per project aggregate endorsement, CG 25 03, gives your project its own. What to check.</description>
+    <content:encoded><![CDATA[<ul><li>Per project aggregate means the contractor's general aggregate limit applies separately to each designated construction project, instead of one limit shared by all of its work.</li><li>Without it, claims paid on the contractor's other jobs during the policy year reduce the same aggregate that's supposed to protect your project.</li><li>ISO's standard form is CG 25 03, Designated Construction Project(s) General Aggregate Limit. It covers ongoing operations and doesn't change the separate products-completed operations aggregate.</li><li>If your project requirements call for a per project aggregate, ask for the endorsement and confirm it designates your project, or all projects.</li></ul><p><img src="https://forsured.ai/blog/per-project-aggregate-coi/hero.png" width="1600" height="800" alt="Sample: whose $2M is it?. A sample contractor certificate of insurance: Each occurrence $1M, meets the requirement; General aggregate $2M, Shared by every job; Per project aggregate Not endorsed, Ask for CG 25 03. Sample data only."/></p><p>Per project aggregate means the contractor's general liability aggregate applies separately to your project. Without it, one aggregate limit covers every job the contractor works during the policy year, and claims on those other jobs use up the same limit your project is counting on.</p>
+<h2 id="what-the-general-aggregate-is">What the general aggregate is</h2>
+<p>A general liability policy has two kinds of limits. The each occurrence limit caps what it pays for any one occurrence. The general aggregate caps the total.</p>
+<p>IRMI defines the general aggregate as &quot;the maximum limit of insurance payable during any given annual policy period&quot; for covered losses other than specified exposures. Products-completed operations claims are &quot;paid out of a separate aggregate.&quot; Once paid losses reach the general aggregate, &quot;that limit is exhausted and no more losses in any of those categories will be paid.&quot;</p>
+<p>That's the catch for an owner or GC. A certificate showing a $2 million general aggregate tells you what the contractor bought, not how much of it is left. A busy contractor with a bad year on two other jobs can show up to yours with far less.</p>
+<h2 id="what-cg-25-03-changes">What CG 25 03 changes</h2>
+<p>The ISO endorsement CG 25 03, Designated Construction Project(s) General Aggregate Limit, fixes that. IRMI says it makes &quot;the general aggregate limit apply separately to each designated construction project,&quot; which &quot;enables a contractor to comply with contractual requirements&quot; for a specified amount of insurance on a specific project.</p>
+<p>The form itself spells out how it works:</p>
+<ul><li><strong>Each project gets its own limit.</strong> &quot;A separate Designated Construction Project General Aggregate Limit applies to each designated construction project.&quot;</li><li><strong>Claims stay in their lane.</strong> Payments for a claim tied to one project reduce that project's limit and &quot;shall not reduce any other Designated Construction Project General Aggregate Limit.&quot;</li><li><strong>Completed operations stay shared.</strong> Products-completed operations claims reduce only the products-completed operations aggregate. IRMI confirms the endorsement &quot;does not affect the policy's other limits, including the products-completed operations aggregate limit.&quot;</li></ul>
+<p>A related form, CG 25 04, does the same for designated locations a contractor owns or rents, as Insureon explains.</p>
+<h2 id="what-to-check-on-a-contractor-coi">What to check on a contractor COI</h2>
+<ol><li>Confirm your project requirements call for a per project aggregate, and at what amount.</li><li>Look for it on the certificate, then ask for the CG 25 03 endorsement or the insurer's equivalent.</li><li>Check the schedule. It should name your project, or say it applies to all construction projects.</li><li>Remember completed operations. CG 25 03 doesn't separate that aggregate, so check its amount on its own.</li></ol>
+<p>Forsured checks each contractor COI against your project requirements, including the endorsements behind the limits shown, for the life of the job.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/per-project-aggregate-coi/og.png" type="image/png" length="48042"/>
+  </item>
   <item>
     <title>Insurance compliance is on the trades tech map. It's filed under getting paid.</title>
     <link>https://forsured.ai/blog/trades-tech-stack-insurance-compliance/</link>

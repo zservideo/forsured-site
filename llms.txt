@@ -16,6 +16,7 @@ Key facts:
 
 ## Blog
 
+- [What does per project aggregate mean on a COI?](https://forsured.ai/blog/per-project-aggregate-coi/): A contractor's general aggregate is shared by every job it works. The per project aggregate endorsement, CG 25 03, gives your project its own. What to check. Markdown: https://forsured.ai/blog/per-project-aggregate-coi/index.md
 - [Insurance compliance is on the trades tech map. It's filed under getting paid.](https://forsured.ai/blog/trades-tech-stack-insurance-compliance/): Suffolk Technologies' new trades tech map puts insurance compliance under getting paid. Why it belongs at the start of the job, and why compliance isn't coverage. Markdown: https://forsured.ai/blog/trades-tech-stack-insurance-compliance/index.md
 - [Does additional insured status cover you after the job is done?](https://forsured.ai/blog/completed-operations-additional-insured/): Since 1993, the standard ongoing operations endorsement stops covering you once the work is done. Why completed operations needs its own endorsement, and what to check. Markdown: https://forsured.ai/blog/completed-operations-additional-insured/index.md
 - [Will a COI tell you if a contractor's policy is cancelled?](https://forsured.ai/blog/notice-of-cancellation-coi/): The standard ACORD 25 certificate doesn't promise to tell you about a cancellation. What the box says, what New York law adds, and how to get real notice. Markdown: https://forsured.ai/blog/notice-of-cancellation-coi/index.md
