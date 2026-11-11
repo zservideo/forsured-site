@@ -139,6 +139,16 @@ const rfc822 = (iso) => new Date(iso).toUTCString();
 const year = () => new Date().getFullYear();
 
 const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FB612A'/%3E%3Ctext x='4' y='24' font-family='Arial' font-weight='900' font-size='22' fill='white'%3EF%3C/text%3E%3C/svg%3E";
+// Google tag for the GTM container, copied as-is from Google Analytics > Set up a Google tag.
+// head() puts it right after <head> on every generated page; the hand-written pages carry the same block.
+const GTAG = `<!-- Google tag (GTM-P6PXX2JM). Keep it first in <head>, once per page. tests/analytics.spec.js checks it. -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P6PXX2JM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+`;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Serif:opsz,wght@36,400&family=Inter:wght@400;500;600&display=swap';
 
 // The publisher entity every post points to. sameAs ties forsured.ai to Forsured's other official
@@ -338,7 +348,7 @@ function head({ title, description, url, image, imageAlt, type, jsonld, publishe
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
+${GTAG}<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}"/>
@@ -993,5 +1003,5 @@ function build() {
   return posts;
 }
 
-module.exports = { readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
+module.exports = { GTAG, readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
 if (require.main === module) build();
