@@ -6,7 +6,29 @@
   <atom:link href="https://forsured.ai/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 10 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 11 Nov 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Contractor backlog fell to 8.1 months. What it means for COIs</title>
+    <link>https://forsured.ai/blog/contractor-backlog-october-2026/</link>
+    <guid isPermaLink="true">https://forsured.ai/blog/contractor-backlog-october-2026/</guid>
+    <pubDate>Wed, 11 Nov 2026 12:00:00 GMT</pubDate>
+    <category>Market outlook</category>
+    <description>ABC's Construction Backlog Indicator dropped 0.6 months to 8.1 in October 2026. What the numbers say, and why thinner backlogs matter for contractor COIs.</description>
+    <content:encoded><![CDATA[<ul><li>ABC's Construction Backlog Indicator fell to 8.1 months in October 2026, down 0.6 months from September and 0.3 months from a year earlier.</li><li>The drop came from contractors without data center work. Their backlog fell from 8.3 to 7.6 months, while contractors with data center work rose from 11.3 to 11.5 months.</li><li>Infrastructure backlog fell to 8.7 months, its lowest since May 2025. Profit margin expectations improved, but sales and staffing expectations fell.</li><li>When backlog thins, more contractors bid on work outside their usual size or scope. Check that each contractor COI meets this project's requirements, not the contractor's last job's.</li></ul><p><img src="https://forsured.ai/blog/contractor-backlog-october-2026/hero.png" width="1600" height="800" alt="8.1 mo: ABC Construction Backlog Indicator, October 2026, down 0.6 months from September"/></p><p>Contractor backlog fell sharply in October. Associated Builders and Contractors reported Nov. 10 that its Construction Backlog Indicator dropped to 8.1 months, down 0.6 months from September and 0.3 months from October 2025. For owners and GCs, a thinner pipeline means more contractors chasing each job, and that's worth a closer look at the COIs that come with the bids.</p>
+<h2 id="what-abc-reported">What ABC reported</h2>
+<p>&quot;Backlog fell sharply in October, returning to levels not consistently observed since last winter,&quot; said ABC Chief Economist Anirban Basu.</p>
+<p>The split behind the number is stark:</p>
+<div class="table"><table><thead><tr><th scope="col">Group</th><th scope="col">September</th><th scope="col">October</th></tr></thead><tbody><tr><th scope="row">All contractors</th><td>8.7 months</td><td>8.1 months</td></tr><tr><th scope="row">Contractors without data center work (88%)</th><td>8.3 months</td><td>7.6 months</td></tr><tr><th scope="row">Contractors with data center work</th><td>11.3 months</td><td>11.5 months</td></tr></tbody></table></div>
+<p>ABC notes that most contractors doing data center work have more than $100 million in annual revenue. By category, infrastructure backlog fell to 8.7 months, the lowest since May 2025, while heavy industrial backlog rose to a 15-month high.</p>
+<p>The Construction Confidence Index was mixed. Profit margin expectations improved, while sales and staffing expectations fell. All three readings stayed above 50, the level ABC says signals expected growth over the next six months. Even so, Basu noted that &quot;roughly 1 in 4 contractors still expect their margins to shrink over the next six months,&quot; citing recent increases in materials prices and borrowing costs.</p>
+<h2 id="why-it-matters-for-contractor-cois">Why it matters for contractor COIs</h2>
+<p>When backlog shrinks, contractors widen their search for work. That can mean bidding on projects larger than their usual jobs, in a new sector, or in a new state.</p>
+<p>Their insurance was usually bought for the work they normally do. A program that fit a $10 million job can fall short on a $50 million one:</p>
+<ul><li><strong>Limits.</strong> Umbrella and excess limits may sit below what a larger project requires.</li><li><strong>Aggregates.</strong> A general aggregate shared across more jobs runs thinner. A <a href="https://forsured.ai/blog/per-project-aggregate-coi/">per project aggregate</a> keeps yours separate.</li><li><strong>Endorsements.</strong> Additional insured, <a href="https://forsured.ai/blog/completed-operations-additional-insured/">completed operations</a> and waiver wording may not match the new project's contract.</li></ul>
+<p>None of that shows up in a backlog number. It shows up when you read each contractor COI against the project requirements for the job in front of you, not the contractor's last one.</p>
+<p>Forsured checks every contractor COI against your project requirements and flags the gaps, so a competitive bid market doesn't bring a coverage gap with it.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/contractor-backlog-october-2026/og.png" type="image/png" length="51020"/>
+  </item>
   <item>
     <title>What does per project aggregate mean on a COI?</title>
     <link>https://forsured.ai/blog/per-project-aggregate-coi/</link>
