@@ -427,7 +427,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--sans);background:linear-gradient(180deg,#FBF8F3 0,#FBF8F3 560px,var(--bg) 1100px) no-repeat,var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,.table:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:10;background:#fff;padding:8px 12px}
 nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px;padding:0 40px;background:rgba(251,248,243,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
 .nlogo{font-family:'Chakra Petch',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--tx);text-decoration:none}
@@ -613,6 +613,15 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
 .states{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-top:20px;list-style:none}
 .states a{display:block;padding:10px 14px;background:#fff;border:1px solid #E4E7EC;border-radius:8px;font-size:14px;line-height:24px;text-decoration:none;transition:border-color .15s}
 .states a:hover{border-color:#FB612A}
+/* "About Forsured" block before the sources: product description, a customer quote, a state-named CTA. */
+.about-fs{margin-top:44px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
+.about-fs h2{margin-top:0}
+.about-fs p{font-size:16px;line-height:1.7;margin-top:12px}
+.about-fs ul{margin:12px 0 0 20px;font-size:16px;line-height:1.7}
+.about-fs figure{margin-top:20px;padding-top:20px;border-top:1px solid #E4E7EC}
+.about-fs blockquote{font-family:var(--serif);font-size:18px;line-height:1.55;letter-spacing:-.01em;color:var(--tx)}
+.about-fs figcaption{font-size:14px;color:var(--mt);margin-top:8px}
+.about-fs .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 @media(max-width:768px){.facts{grid-template-columns:1fr}.hub-intro p{font-size:16px}}
 </style>
 </head>

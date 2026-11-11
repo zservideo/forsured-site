@@ -91,8 +91,10 @@ function markdown(md, dir, base = '') {
       const { width, height } = pngSize(file);
       out.push(`<figure><img src="${esc(base + src)}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async"/>${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}</figure>`);
     } else if ((h = first.match(/^(#{2,3}) (.+)$/))) {
+      // `### Heading {#id}` sets the anchor by hand, for headings that tables or structured data link to.
       const level = h[1].length;
-      out.push(`<h${level} id="${slugify(h[2])}">${inline(h[2])}</h${level}>`);
+      const [, text, id] = h[2].match(/^(.*?)(?:\s+\{#([a-z0-9-]+)\})?$/);
+      out.push(`<h${level} id="${id || slugify(text)}">${inline(text)}</h${level}>`);
     } else if (lines.every((l) => /^- /.test(l) || /^ {2,}\S/.test(l))) {
       out.push('<ul>' + joinItems(lines, /^- /).map((i) => `<li>${inline(i)}</li>`).join('') + '</ul>');
     } else if (lines.every((l) => /^\d+\. /.test(l) || /^ {2,}\S/.test(l))) {
@@ -105,7 +107,8 @@ function markdown(md, dir, base = '') {
       const rows = lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map((l) => l.slice(1, -1).split('|').map((c) => c.trim()));
       const [head, ...rest] = rows;
       out.push(
-        '<div class="table"><table><thead><tr>' + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        // Focusable so keyboard users can scroll a wide table sideways on a phone (axe: scrollable-region-focusable).
+        `<div class="table" tabindex="0" role="region" aria-label="${esc(plain(head.join(', ')))}"><table><thead><tr>` + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
           rest.map((r) => '<tr>' + r.map((c, i) => (i ? `<td>${inline(c)}</td>` : `<th scope="row">${inline(c)}</th>`)).join('') + '</tr>').join('') +
           '</tbody></table></div>'
       );
@@ -169,7 +172,7 @@ const CSS = `
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--sans);background:linear-gradient(180deg,#FBF8F3 0,#FBF8F3 560px,var(--bg) 1100px) no-repeat,var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,.table:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:10;background:#fff;padding:8px 12px}
 nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px;padding:0 40px;background:rgba(251,248,243,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
 .nlogo{font-family:'Chakra Petch',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--tx);text-decoration:none}
@@ -662,6 +665,14 @@ function postPage(p, posts) {
     },
     WEBSITE,
   ];
+  // Extra schema.org nodes from front matter (`schema`), e.g. the ItemList and SoftwareApplication
+  // entries on a buyer's guide. Every node's @id must sit on this post's URL.
+  if (p.schema && p.schema.length) {
+    for (const n of p.schema) if (!String(n['@id'] || '').startsWith(`${SITE}${p.url}#`)) throw new Error(`${p.slug}: schema node @id must start with ${SITE}${p.url}#`);
+    const list = p.schema.find((n) => n['@type'] === 'ItemList');
+    if (list) graph[0].hasPart = { '@id': list['@id'] };
+    graph.splice(1, 0, ...p.schema);
+  }
   if (p.faq && p.faq.length) {
     graph.push({
       '@type': 'FAQPage',
@@ -897,7 +908,11 @@ ${statePages().llms}
 // The post as plain Markdown: what an AI answer engine reads when it follows the text/markdown alternate.
 // Image paths become absolute URLs.
 function postMarkdown(p) {
-  const abs = (md) => md.replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`);
+  const abs = (md) =>
+    md
+      .replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`)
+      .replace(/^(#{2,3} .*?)\s+\{#[a-z0-9-]+\}$/gm, '$1')
+      .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`);
   return `# ${p.title}
 
 > ${plain(p.dek)}

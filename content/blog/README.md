@@ -34,11 +34,12 @@ The file starts with a JSON block between `---` lines:
 | `updated` | no | Set when a post changes in substance. |
 | `hero` | yes | The picture at the top of the post. See below. |
 | `heroAlt` | no | Alt text for the hero when the generated one (from the hero fields) doesn't read well. |
-| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news. |
+| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news, Buyer's guide. |
 | `tags` | no | Search phrases the post answers. |
 | `takeaways` | yes | 2 to 4 bullets that answer the question on their own. AI answer engines quote these. |
 | `faq` | no | `{ "q", "a" }` pairs. Real questions, answers that stand alone. Becomes FAQPage markup. |
 | `sources` | yes | `{ "title", "publisher", "date", "url" }` for every fact we didn't produce ourselves. |
+| `schema` | no | Extra schema.org nodes for the page's `@graph`, such as the `ItemList` and `SoftwareApplication` entries on a buyer's guide. Each `@id` must start with the post's URL plus `#`. |
 | `draft` | no | `true` keeps a post out of the build (og.js still renders its images, so they can be reviewed). |
 
 ### Hero
@@ -59,16 +60,16 @@ A line on its own like `![Alt text that says what it shows](chart.png "Optional 
 `blog/<slug>/chart.png` in the post with its size set. Use it for a chart or diagram that makes a
 point faster than text. PNG only, at least 1400px wide, in the brand style.
 
-Body Markdown supports `##` and `###` headings, paragraphs, `-` and `1.` lists, `>` quotes
+Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor by hand), paragraphs, `-` and `1.` lists, `>` quotes
 (`> quote -- Name, Title`), tables, `**bold**`, `*italic*` and `[links](https://...)`.
 
 ## Writing rules
 
 - Plain voice, short sentences, specific numbers. The copy tests block stock marketing phrases and em-dash asides.
-- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements".
+- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question.
 - No founder names. Posts are by "the Forsured team".
 - Every number and claim from someone else links to the original in `sources`. Never invent a quote. Never put words from a private conversation in a named person's mouth.
-- Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors.
+- Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors, except in a `Buyer's guide`: there, every fact about another vendor comes from its own public pages, is linked under Sources, and carries the date it was checked. Re-check those facts every quarter.
 - Never imply IRMI or any publication endorses Forsured (the footer says we're independent).
 - Lead with the answer. The first paragraph and the takeaways should answer the headline's question.
 - Every post gets share buttons, the newsletter signup, the hero, a Markdown copy and full structured data automatically. Don't add your own.
