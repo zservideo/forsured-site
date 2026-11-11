@@ -159,6 +159,33 @@ const ORG = {
 };
 const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Forsured', url: SITE, publisher: { '@id': ORG['@id'] }, inLanguage: 'en-US' };
 
+// Closes every post and state page (Warren Brown AEO review, Nov 11 2026): what Forsured is, proof from a real
+// customer, and a CTA named for the state. QUOTE must be a real quote its author approved for the
+// website, word for word. This one already runs on the home page. Set QUOTE to null to drop it.
+const PRODUCT = 'Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project\'s insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.';
+const PRODUCT_POINTS = [
+  'Project requirements with exceptions, not one template for every job',
+  'Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate',
+  'A shared workspace where the contractor\'s broker sees exactly what\'s missing',
+  'A person on your team approves every result, with a full review history',
+];
+const QUOTE = {
+  text: 'What stood out to us is that Forsured doesn\'t just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.',
+  name: 'Stephanie Massei',
+  org: 'Milestone Construction',
+};
+function aboutForsured({ heading = 'About Forsured', ask = "Send us one project's requirements and a contractor COI or two. We'll show you every gap we find, free." } = {}) {
+  return `<section class="extra about-fs" aria-labelledby="about-forsured">
+      <h2 id="about-forsured">${esc(heading)}</h2>
+      <p>${esc(PRODUCT)}</p>
+      <ul>${PRODUCT_POINTS.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+${QUOTE ? `      <figure><blockquote>“${esc(QUOTE.text)}”</blockquote><figcaption><strong>${esc(QUOTE.name)}</strong>, ${esc(QUOTE.org)}</figcaption></figure>
+` : ''}      <p>${esc(ask)}</p>
+      <div class="btns"><a class="cta-p" href="/#demo">Get a Free COI Risk Check →</a><a class="cta-g" href="/#how">How Forsured works</a></div>
+    </section>`;
+}
+
+
 const CSS = `
 /* Fallback faces sized to match the web fonts, so text doesn't reflow (a layout shift) when Inter and
    Roboto Serif arrive. Each local font is tried in turn: Arial/Times on Mac and Windows, Liberation and
@@ -235,6 +262,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .prose blockquote{border-left:3px solid #E4E7EC;padding:4px 0 4px 20px;color:#344051}
 .prose blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--mt);margin-top:6px}
 .prose code{font-family:inherit;background:#F2F4F7;border-radius:4px;padding:1px 5px;font-size:.92em}
+/* "About Forsured" block before the sources (posts and state pages). */
+.about-fs{margin-top:44px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
+.about-fs h2{margin-top:0}
+.about-fs p{font-size:16px;line-height:1.7;margin-top:12px}
+.about-fs ul{margin:12px 0 0 20px;font-size:16px;line-height:1.7}
+.about-fs figure{margin-top:20px;padding-top:20px;border-top:1px solid #E4E7EC}
+.about-fs blockquote{font-family:var(--serif);font-size:18px;line-height:1.55;letter-spacing:-.01em;color:var(--tx)}
+.about-fs figcaption{font-size:14px;color:var(--mt);margin-top:8px}
+.about-fs .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .table{overflow-x:auto;border:1px solid #E4E7EC;border-radius:10px;background:#fff}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
 .prose th,.prose td{text-align:left;padding:10px 14px;border-bottom:1px solid #E4E7EC;vertical-align:top}
@@ -719,6 +755,7 @@ ${markdown(p.body, path.join(ROOT, 'blog', p.slug))}
       ${shareBar(p, 'Share this post again')}
     </section>
     ${subscribe('sub', 'post')}
+    ${aboutForsured()}
 ${p.faq && p.faq.length ? `    <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>
 ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`).join('\n')}
@@ -926,6 +963,14 @@ Published ${human(p.date)}${p.updated !== p.date ? `, updated ${human(p.updated)
 ${p.takeaways.map((t) => `- ${t}`).join('\n')}
 
 ${abs(p.body)}
+
+## About Forsured
+
+${PRODUCT}
+
+${PRODUCT_POINTS.map((t) => `- ${t}`).join('\n')}
+${QUOTE ? `\n> "${QUOTE.text}" -- ${QUOTE.name}, ${QUOTE.org}\n` : ''}
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. ${SITE}/#demo
 ${p.faq && p.faq.length ? `\n## Common questions\n\n${p.faq.map((f) => `### ${f.q}\n\n${f.a}`).join('\n\n')}\n` : ''}
 ## Sources
 
@@ -1008,5 +1053,5 @@ function build() {
   return posts;
 }
 
-module.exports = { readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
+module.exports = { PRODUCT, PRODUCT_POINTS, QUOTE, aboutForsured, readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
 if (require.main === module) build();

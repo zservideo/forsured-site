@@ -7,7 +7,7 @@
 // llms.txt entries, and --check covers them. Share cards come from node tools/states/og.js.
 const fs = require('fs');
 const path = require('path');
-const { esc, human, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT } = require('../blog/build');
+const { esc, human, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT, PRODUCT, PRODUCT_POINTS, QUOTE, aboutForsured: about } = require('../blog/build');
 const { REVIEWED, SHARED, STATES } = require('../../content/coi-requirements/states');
 
 const HUB = '/coi-requirements/';
@@ -39,15 +39,6 @@ const CSS = `
 .states{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-top:20px;list-style:none}
 .states a{display:block;padding:10px 14px;background:#fff;border:1px solid #E4E7EC;border-radius:8px;font-size:14px;line-height:24px;text-decoration:none;transition:border-color .15s}
 .states a:hover{border-color:#FB612A}
-/* "About Forsured" block before the sources: product description, a customer quote, a state-named CTA. */
-.about-fs{margin-top:44px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
-.about-fs h2{margin-top:0}
-.about-fs p{font-size:16px;line-height:1.7;margin-top:12px}
-.about-fs ul{margin:12px 0 0 20px;font-size:16px;line-height:1.7}
-.about-fs figure{margin-top:20px;padding-top:20px;border-top:1px solid #E4E7EC}
-.about-fs blockquote{font-family:var(--serif);font-size:18px;line-height:1.55;letter-spacing:-.01em;color:var(--tx)}
-.about-fs figcaption{font-size:14px;color:var(--mt);margin-top:8px}
-.about-fs .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 @media(max-width:768px){.facts{grid-template-columns:1fr}.hub-intro p{font-size:16px}}
 `.trim();
 
@@ -57,32 +48,6 @@ const CSS = `
 const NOTICE = 'General information, not legal or insurance advice. Forsured is a software company, not a law firm or an insurance agency. Laws change, so confirm with the state agency, your broker or your attorney before you rely on it.';
 // Ends every FAQ answer. The FAQ markup is what answer engines quote on its own, without the page around it.
 const asOf = () => ` As of ${human(REVIEWED)}. General information, not legal advice.`;
-
-// Closes every state page (Warren Brown AEO review, Nov 11 2026): what Forsured is, proof from a real
-// customer, and a CTA named for the state. QUOTE must be a real quote its author approved for the
-// website, word for word. This one already runs on the home page. Set QUOTE to null to drop it.
-const PRODUCT = 'Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project\'s insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.';
-const PRODUCT_POINTS = [
-  'Project requirements with exceptions, not one template for every job',
-  'Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate',
-  'A shared workspace where the contractor\'s broker sees exactly what\'s missing',
-  'A person on your team approves every result, with a full review history',
-];
-const QUOTE = {
-  text: 'What stood out to us is that Forsured doesn\'t just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.',
-  name: 'Stephanie Massei',
-  org: 'Milestone Construction',
-};
-function aboutForsured(s) {
-  return `<section class="extra about-fs" aria-labelledby="about-forsured">
-      <h2 id="about-forsured">Check your ${esc(s.name)} contractor COIs with Forsured</h2>
-      <p>${esc(PRODUCT)}</p>
-      <ul>${PRODUCT_POINTS.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-${QUOTE ? `      <figure><blockquote>“${esc(QUOTE.text)}”</blockquote><figcaption><strong>${esc(QUOTE.name)}</strong>, ${esc(QUOTE.org)}</figcaption></figure>
-` : ''}      <p>Send us one ${esc(s.name)} project's requirements and a contractor COI or two. We'll show you every gap we find, free.</p>
-      <div class="btns"><a class="cta-p" href="/#demo">Get a Free COI Risk Check →</a><a class="cta-g" href="/#how">How Forsured works</a></div>
-    </section>`;
-}
 
 const caseCite = (cite) => cite.replace(/^no (general )?statute; /, '');
 
@@ -258,7 +223,7 @@ ${(s.notes || []).map((n) => `<h2 id="${slugify(n.h)}">${esc(n.h)}</h2>\n<p>${es
       <h2 id="faq">Common questions</h2>
 ${qa.map((f) => `      <h3>${esc(f.q)}</h3>\n      <p>${esc(f.a)}</p>`).join('\n')}
     </section>
-    ${aboutForsured(s)}
+    ${about({ heading: `Check your ${s.name} contractor COIs with Forsured`, ask: `Send us one ${s.name} project's requirements and a contractor COI or two. We'll show you every gap we find, free.` })}
     <section class="extra sources" aria-labelledby="sources">
       <h2 id="sources">Sources</h2>
       <ol>${sources.map((c) => `<li><a href="${esc(c.url)}">${esc(c.title)}</a>, ${esc(c.publisher)}${c.date ? `, ${esc(c.date)}` : ''}</li>`).join('')}</ol>

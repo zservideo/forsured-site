@@ -325,6 +325,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .prose blockquote{border-left:3px solid #E4E7EC;padding:4px 0 4px 20px;color:#344051}
 .prose blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--mt);margin-top:6px}
 .prose code{font-family:inherit;background:#F2F4F7;border-radius:4px;padding:1px 5px;font-size:.92em}
+/* "About Forsured" block before the sources (posts and state pages). */
+.about-fs{margin-top:44px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
+.about-fs h2{margin-top:0}
+.about-fs p{font-size:16px;line-height:1.7;margin-top:12px}
+.about-fs ul{margin:12px 0 0 20px;font-size:16px;line-height:1.7}
+.about-fs figure{margin-top:20px;padding-top:20px;border-top:1px solid #E4E7EC}
+.about-fs blockquote{font-family:var(--serif);font-size:18px;line-height:1.55;letter-spacing:-.01em;color:var(--tx)}
+.about-fs figcaption{font-size:14px;color:var(--mt);margin-top:8px}
+.about-fs .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .table{overflow-x:auto;border:1px solid #E4E7EC;border-radius:10px;background:#fff}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
 .prose th,.prose td{text-align:left;padding:10px 14px;border-bottom:1px solid #E4E7EC;vertical-align:top}
@@ -520,6 +529,14 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
       <p class="fine" id="sub-fine">No spam. Unsubscribe from any email.</p>
       </div>
+    </section>
+    <section class="extra about-fs" aria-labelledby="about-forsured">
+      <h2 id="about-forsured">About Forsured</h2>
+      <p>Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.</p>
+      <ul><li>Project requirements with exceptions, not one template for every job</li><li>Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate</li><li>A shared workspace where the contractor's broker sees exactly what's missing</li><li>A person on your team approves every result, with a full review history</li></ul>
+      <figure><blockquote>“What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.”</blockquote><figcaption><strong>Stephanie Massei</strong>, Milestone Construction</figcaption></figure>
+      <p>Send us one project's requirements and a contractor COI or two. We'll show you every gap we find, free.</p>
+      <div class="btns"><a class="cta-p" href="/#demo">Get a Free COI Risk Check →</a><a class="cta-g" href="/#how">How Forsured works</a></div>
     </section>
     <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>

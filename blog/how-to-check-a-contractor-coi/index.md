@@ -55,6 +55,19 @@ Send the contractor's broker the specific requirement that isn't met, quoted fro
 
 A COI review is only as good as its date. Recheck when a policy renews, when a certificate is reissued, and ahead of every expiration. On a long project that means continuous monitoring, which is what Forsured does for every contractor on every active project.
 
+## About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
 ## Common questions
 
 ### What should I look for on a contractor's certificate of insurance?
