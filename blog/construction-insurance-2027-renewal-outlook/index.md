@@ -44,6 +44,19 @@ So check umbrella first. On every contractor COI, confirm the umbrella or excess
 
 WTW notes that carriers give favorable underwriting consideration to strong management of the trades a firm hires. A record showing every contractor checked against project requirements, with each gap tracked to a fix, is the kind of evidence an underwriter can use. A folder of unread certificates isn't.
 
+## About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
 ## Common questions
 
 ### How much will construction umbrella and excess insurance rates rise in 2027?

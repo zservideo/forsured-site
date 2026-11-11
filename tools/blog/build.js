@@ -91,8 +91,10 @@ function markdown(md, dir, base = '') {
       const { width, height } = pngSize(file);
       out.push(`<figure><img src="${esc(base + src)}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async"/>${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}</figure>`);
     } else if ((h = first.match(/^(#{2,3}) (.+)$/))) {
+      // `### Heading {#id}` sets the anchor by hand, for headings that tables or structured data link to.
       const level = h[1].length;
-      out.push(`<h${level} id="${slugify(h[2])}">${inline(h[2])}</h${level}>`);
+      const [, text, id] = h[2].match(/^(.*?)(?:\s+\{#([a-z0-9-]+)\})?$/);
+      out.push(`<h${level} id="${id || slugify(text)}">${inline(text)}</h${level}>`);
     } else if (lines.every((l) => /^- /.test(l) || /^ {2,}\S/.test(l))) {
       out.push('<ul>' + joinItems(lines, /^- /).map((i) => `<li>${inline(i)}</li>`).join('') + '</ul>');
     } else if (lines.every((l) => /^\d+\. /.test(l) || /^ {2,}\S/.test(l))) {
@@ -105,7 +107,8 @@ function markdown(md, dir, base = '') {
       const rows = lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map((l) => l.slice(1, -1).split('|').map((c) => c.trim()));
       const [head, ...rest] = rows;
       out.push(
-        '<div class="table"><table><thead><tr>' + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        // Focusable so keyboard users can scroll a wide table sideways on a phone (axe: scrollable-region-focusable).
+        `<div class="table" tabindex="0" role="region" aria-label="${esc(plain(head.join(', ')))}"><table><thead><tr>` + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
           rest.map((r) => '<tr>' + r.map((c, i) => (i ? `<td>${inline(c)}</td>` : `<th scope="row">${inline(c)}</th>`)).join('') + '</tr>').join('') +
           '</tbody></table></div>'
       );
@@ -166,6 +169,33 @@ const ORG = {
 };
 const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Forsured', url: SITE, publisher: { '@id': ORG['@id'] }, inLanguage: 'en-US' };
 
+// Closes every post and state page (Warren Brown AEO review, Nov 11 2026): what Forsured is, proof from a real
+// customer, and a CTA named for the state. QUOTE must be a real quote its author approved for the
+// website, word for word. This one already runs on the home page. Set QUOTE to null to drop it.
+const PRODUCT = 'Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project\'s insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.';
+const PRODUCT_POINTS = [
+  'Project requirements with exceptions, not one template for every job',
+  'Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate',
+  'A shared workspace where the contractor\'s broker sees exactly what\'s missing',
+  'A person on your team approves every result, with a full review history',
+];
+const QUOTE = {
+  text: 'What stood out to us is that Forsured doesn\'t just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.',
+  name: 'Stephanie Massei',
+  org: 'Milestone Construction',
+};
+function aboutForsured({ heading = 'About Forsured', ask = "Send us one project's requirements and a contractor COI or two. We'll show you every gap we find, free." } = {}) {
+  return `<section class="extra about-fs" aria-labelledby="about-forsured">
+      <h2 id="about-forsured">${esc(heading)}</h2>
+      <p>${esc(PRODUCT)}</p>
+      <ul>${PRODUCT_POINTS.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+${QUOTE ? `      <figure><blockquote>“${esc(QUOTE.text)}”</blockquote><figcaption><strong>${esc(QUOTE.name)}</strong>, ${esc(QUOTE.org)}</figcaption></figure>
+` : ''}      <p>${esc(ask)}</p>
+      <div class="btns"><a class="cta-p" href="/#demo">Get a Free COI Risk Check →</a><a class="cta-g" href="/#how">How Forsured works</a></div>
+    </section>`;
+}
+
+
 const CSS = `
 /* Fallback faces sized to match the web fonts, so text doesn't reflow (a layout shift) when Inter and
    Roboto Serif arrive. Each local font is tried in turn: Arial/Times on Mac and Windows, Liberation and
@@ -179,7 +209,7 @@ const CSS = `
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--sans);background:linear-gradient(180deg,#FBF8F3 0,#FBF8F3 560px,var(--bg) 1100px) no-repeat,var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,.table:focus-visible{outline:2px solid var(--f);outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:10;background:#fff;padding:8px 12px}
 nav{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px;padding:0 40px;background:rgba(251,248,243,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
 .nlogo{font-family:'Chakra Petch',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--tx);text-decoration:none}
@@ -242,6 +272,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .prose blockquote{border-left:3px solid #E4E7EC;padding:4px 0 4px 20px;color:#344051}
 .prose blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--mt);margin-top:6px}
 .prose code{font-family:inherit;background:#F2F4F7;border-radius:4px;padding:1px 5px;font-size:.92em}
+/* "About Forsured" block before the sources (posts and state pages). */
+.about-fs{margin-top:44px;padding:24px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #FB612A;border-radius:10px}
+.about-fs h2{margin-top:0}
+.about-fs p{font-size:16px;line-height:1.7;margin-top:12px}
+.about-fs ul{margin:12px 0 0 20px;font-size:16px;line-height:1.7}
+.about-fs figure{margin-top:20px;padding-top:20px;border-top:1px solid #E4E7EC}
+.about-fs blockquote{font-family:var(--serif);font-size:18px;line-height:1.55;letter-spacing:-.01em;color:var(--tx)}
+.about-fs figcaption{font-size:14px;color:var(--mt);margin-top:8px}
+.about-fs .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .table{overflow-x:auto;border:1px solid #E4E7EC;border-radius:10px;background:#fff}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
 .prose th,.prose td{text-align:left;padding:10px 14px;border-bottom:1px solid #E4E7EC;vertical-align:top}
@@ -672,6 +711,14 @@ function postPage(p, posts) {
     },
     WEBSITE,
   ];
+  // Extra schema.org nodes from front matter (`schema`), e.g. the ItemList and SoftwareApplication
+  // entries on a buyer's guide. Every node's @id must sit on this post's URL.
+  if (p.schema && p.schema.length) {
+    for (const n of p.schema) if (!String(n['@id'] || '').startsWith(`${SITE}${p.url}#`)) throw new Error(`${p.slug}: schema node @id must start with ${SITE}${p.url}#`);
+    const list = p.schema.find((n) => n['@type'] === 'ItemList');
+    if (list) graph[0].hasPart = { '@id': list['@id'] };
+    graph.splice(1, 0, ...p.schema);
+  }
   if (p.faq && p.faq.length) {
     graph.push({
       '@type': 'FAQPage',
@@ -718,6 +765,7 @@ ${markdown(p.body, path.join(ROOT, 'blog', p.slug))}
       ${shareBar(p, 'Share this post again')}
     </section>
     ${subscribe('sub', 'post')}
+    ${aboutForsured()}
 ${p.faq && p.faq.length ? `    <section class="extra" aria-labelledby="faq">
       <h2 id="faq">Common questions</h2>
 ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`).join('\n')}
@@ -907,7 +955,11 @@ ${statePages().llms}
 // The post as plain Markdown: what an AI answer engine reads when it follows the text/markdown alternate.
 // Image paths become absolute URLs.
 function postMarkdown(p) {
-  const abs = (md) => md.replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`);
+  const abs = (md) =>
+    md
+      .replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`)
+      .replace(/^(#{2,3} .*?)\s+\{#[a-z0-9-]+\}$/gm, '$1')
+      .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`);
   return `# ${p.title}
 
 > ${plain(p.dek)}
@@ -921,6 +973,14 @@ Published ${human(p.date)}${p.updated !== p.date ? `, updated ${human(p.updated)
 ${p.takeaways.map((t) => `- ${t}`).join('\n')}
 
 ${abs(p.body)}
+
+## About Forsured
+
+${PRODUCT}
+
+${PRODUCT_POINTS.map((t) => `- ${t}`).join('\n')}
+${QUOTE ? `\n> "${QUOTE.text}" -- ${QUOTE.name}, ${QUOTE.org}\n` : ''}
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. ${SITE}/#demo
 ${p.faq && p.faq.length ? `\n## Common questions\n\n${p.faq.map((f) => `### ${f.q}\n\n${f.a}`).join('\n\n')}\n` : ''}
 ## Sources
 
@@ -1003,5 +1063,5 @@ function build() {
   return posts;
 }
 
-module.exports = { GTAG, readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
+module.exports = { GTAG, PRODUCT, PRODUCT_POINTS, QUOTE, aboutForsured, readPosts, markdown, esc, inline, human, day, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT };
 if (require.main === module) build();

@@ -3,12 +3,18 @@
 // The customer quote is excluded because it is kept word for word.
 const { test, expect } = require('@playwright/test');
 const { PAGES, open, pageCopy, read } = require('./helpers');
+const { readPosts } = require('../tools/blog/build');
+
+// Buyer's guides answer the questions buyers type into search and AI assistants word for word, and
+// buyers type "subcontractor". Posts in that category may use it (Zach's call, Nov 11 2026, after
+// the Warren Brown AEO review). Every other page keeps the "contractor" wording.
+const GUIDES = new Set(readPosts().filter((p) => p.category === "Buyer's guide").map((p) => `/blog/${p.slug}/`));
 
 // Wording rules. Each entry: the pattern that must not appear, why, and optional settings.
 const BANNED = [
   // Neutral wording lands with GCs and trade contractors alike (Oct 26 IRMI learnings).
-  [/\bsub-?contractors?\b/i, 'say "contractor" or "trade contractor", not "subcontractor"'],
-  [/\bsubs\b/i, 'say "contractors", not "subs"'],
+  [/\bsub-?contractors?\b/i, 'say "contractor" or "trade contractor", not "subcontractor"', { guideOk: true }],
+  [/\bsubs\b/i, 'say "contractors", not "subs"', { guideOk: true }],
   [/\bsub COIs?\b/i, 'say "contractor COIs", not "sub COIs"'],
   [/\bGC requirements\b/i, 'say "project requirements", not "GC requirements"'],
   // Brand name: always "Forsured" (domain forsured.ai).
@@ -41,7 +47,7 @@ for (const p of PAGES) {
       const { text, segments } = await pageCopy(page);
       // Most rules read the page as one string so phrases split across tags still match;
       // per-segment rules look at each text node alone (a lone "—" in a table cell is fine).
-      const hits = BANNED.flatMap(([re, why, opts = {}]) =>
+      const hits = BANNED.filter(([, , opts = {}]) => !(opts.guideOk && GUIDES.has(p.url))).flatMap(([re, why, opts = {}]) =>
         (opts.perSegment ? segments : [text]).flatMap((t) => {
           const m = t.match(re);
           return m ? [`"${m[0]}" (${why}) in: …${t.slice(Math.max(0, m.index - 50), m.index + 50).trim()}…`] : [];
