@@ -7,7 +7,7 @@
 // llms.txt entries, and --check covers them. Share cards come from node tools/states/og.js.
 const fs = require('fs');
 const path = require('path');
-const { esc, human, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT } = require('../blog/build');
+const { esc, human, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT, PRODUCT, PRODUCT_POINTS, QUOTE, aboutForsured: about } = require('../blog/build');
 const { REVIEWED, SHARED, STATES } = require('../../content/coi-requirements/states');
 
 const HUB = '/coi-requirements/';
@@ -223,6 +223,7 @@ ${(s.notes || []).map((n) => `<h2 id="${slugify(n.h)}">${esc(n.h)}</h2>\n<p>${es
       <h2 id="faq">Common questions</h2>
 ${qa.map((f) => `      <h3>${esc(f.q)}</h3>\n      <p>${esc(f.a)}</p>`).join('\n')}
     </section>
+    ${about({ heading: `Check your ${s.name} contractor COIs with Forsured`, ask: `Send us one ${s.name} project's requirements and a contractor COI or two. We'll show you every gap we find, free.` })}
     <section class="extra sources" aria-labelledby="sources">
       <h2 id="sources">Sources</h2>
       <ol>${sources.map((c) => `<li><a href="${esc(c.url)}">${esc(c.title)}</a>, ${esc(c.publisher)}${c.date ? `, ${esc(c.date)}` : ''}</li>`).join('')}</ol>
@@ -275,6 +276,14 @@ ${(s.notes || []).map((n) => `\n## ${n.h}\n\n${n.p}\n`).join('')}
 ## What to check on a contractor COI for a ${s.name} project
 
 ${checks(s).map((c, i) => `${i + 1}. ${c}`).join('\n')}
+
+## Check your ${s.name} contractor COIs with Forsured
+
+${PRODUCT}
+
+${PRODUCT_POINTS.map((t) => `- ${t}`).join('\n')}
+${QUOTE ? `\n> "${QUOTE.text}" -- ${QUOTE.name}, ${QUOTE.org}\n` : ''}
+Free COI risk check: send one ${s.name} project's requirements and a contractor COI or two, and we'll show you every gap we find. ${SITE}/#demo
 
 ## Common questions
 
