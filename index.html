@@ -520,6 +520,8 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .wl-sub{display:flex;align-items:center;justify-content:center;width:100%;height:44px;padding:0 18px;border-radius:8px;background:#FB612A;color:#fff;border:1px solid #FB612A;box-shadow:0 1px 2px rgba(20,28,37,.04);cursor:pointer;font-size:16px;font-weight:500;line-height:24px;font-family:inherit;margin-top:6px;transition:background-color .15s,border-color .15s}
 .wl-sub:hover{background:#D54E21;border-color:#D54E21}
 .fnote{font-size:10px;color:var(--dm);text-align:center;margin-top:8px;line-height:1.4}
+.fnote a{color:inherit;text-decoration:underline}
+.fnote a:hover{color:var(--f)}
 .sstate{text-align:center;padding:28px 0;display:none}
 .sstate-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#E8F5EE,#D0EDD9);border:2px solid rgba(22,134,78,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
 .sstate h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:24px;letter-spacing:-.01em;margin-bottom:4px}
@@ -1058,7 +1060,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
             <p class="form-err" id="oh-err">Please fill in all required fields.</p>
             <button type="submit" id="oh-btn" class="wl-sub" style="margin-top:8px;position:relative;z-index:1">Join the Waitlist →</button>
           </form>
-          <p class="fnote" style="margin-top:10px">No spam. We'll only use this to follow up about Forsured.</p>
+          <p class="fnote" style="margin-top:10px">By submitting, you agree to our <a href="https://app.forsured.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://app.forsured.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. No spam. We'll only use this to follow up about Forsured.</p>
         </div>
         <div id="oh-success" style="display:none;padding:14px 0">
           <div style="display:flex;align-items:flex-start;gap:10px">
@@ -1115,7 +1117,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
           <p class="form-err" id="form-err">Please fill in all required fields.</p>
           <button type="submit" class="wl-sub" id="wl-btn">Get My Free Risk Check →</button>
         </form>
-        <p class="fnote">No spam. We'll only use this to follow up about Forsured.</p>
+        <p class="fnote">By submitting, you agree to our <a href="https://app.forsured.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://app.forsured.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. No spam. We'll only use this to follow up about Forsured.</p>
       </div>
       <div class="sstate" id="ss">
         <div class="sstate-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16864E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>

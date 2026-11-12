@@ -307,6 +307,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .sub input[type=email]:focus{outline:2px solid var(--f);outline-offset:1px;border-color:var(--f)}
 .sub .hp{display:none}
 .sub .fine{font-size:12px;line-height:1.5;color:var(--mt);margin-top:10px}
+.sub .fine a{color:inherit;text-decoration:underline}
 .sub .err{font-size:13px;color:#C4291C;margin-top:10px}
 .sub .ok{font-size:15px;line-height:1.6;margin-top:12px;padding:12px 14px;background:#fff;border:1px solid #E4E7EC;border-left:3px solid #16864E;border-radius:8px;color:#16864E}
 .sub [hidden]{display:none}
@@ -507,6 +508,7 @@ const FOOTER = () => `<footer><div class="edge">
     </div>
   </div>
   <div class="fbot">
+    <p><a href="https://app.forsured.com/privacy">Privacy Policy</a> &middot; <a href="https://app.forsured.com/terms">Terms of Service</a></p>
     <p>Independent commentary from Forsured. Not affiliated with or endorsed by the organizations or publications we cite. General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency.</p>
     <p>© ${year()} Forsured · <a href="/">forsured.ai</a></p>
   </div>
@@ -622,7 +624,7 @@ function subscribe(id, where, cls = '') {
       </form>
       <p class="err" role="alert" hidden></p>
       <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
-      <p class="fine" id="${id}-fine">No spam. Unsubscribe from any email.</p>
+      <p class="fine" id="${id}-fine">By subscribing, you agree to our <a href="https://app.forsured.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://app.forsured.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. No spam. Unsubscribe from any email.</p>
       </div>
     </section>`;
 }
