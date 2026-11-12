@@ -50,6 +50,26 @@ test('email links use the forsured.ai domain', async ({ page }) => {
   for (const m of mailtos) expect(m).toMatch(/@forsured\.ai$/);
 });
 
+test('every page footer links to the live Privacy Policy and Terms of Service', async () => {
+  const pages = [];
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (['node_modules', 'tests', '.git'].includes(e.name)) continue;
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (e.name.endsWith('.html')) pages.push(full);
+    }
+  };
+  walk(ROOT);
+  const withFooter = pages.filter((f) => fs.readFileSync(f, 'utf8').includes('<div class="fbot">'));
+  expect(withFooter.length).toBeGreaterThan(1);
+  for (const f of withFooter) {
+    const html = fs.readFileSync(f, 'utf8');
+    expect(html, `${f} privacy link`).toContain('<a href="https://app.forsured.com/privacy">Privacy Policy</a>');
+    expect(html, `${f} terms link`).toContain('<a href="https://app.forsured.com/terms">Terms of Service</a>');
+  }
+});
+
 test('local images referenced by the page exist', async () => {
   const srcs = [...HTML.matchAll(/(?:src|href)="([^"#:]+\.(?:png|jpe?g|svg|webp))"/g)].map((m) => m[1]);
   const srcset = [...HTML.matchAll(/srcset="([^"]+)"/g)].flatMap((m) => m[1].split(',').map((s) => s.trim().split(' ')[0]));
