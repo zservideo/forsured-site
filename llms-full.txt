@@ -178,6 +178,10 @@ This guide compares the eight tools in our [full comparison of COI tracking soft
 
 **If endorsements are the gap,** pick on review depth. PINS Advantage, TrustLayer, illumend and Forsured read wording; Billy and bcs check which forms are present. See [which COI tracking software checks endorsements](/blog/coi-tracking-software-endorsement-review/).
 
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
+
 **If you're paying non-compliant subcontractors,** pick the tool that reaches accounting. [Billy](https://billyforinsurance.com/) lists Procore, CMiC, Sage 300, Sage Intacct, JD Edwards, Viewpoint Vista, Trimble ProjectSight and Acumatica among its integrations.
 
 **If the certificate hides exclusions,** pick policy-level review: Jones's Policy Review add-on or bcs full service.
@@ -273,6 +277,10 @@ Don't put a made-up claim figure in front of a CFO. Instead:
 - Pick one live project and list every trade whose certificate or endorsements didn't meet the requirement on the day they started.
 - Note what was missing: completed operations, umbrella limit, waiver of subrogation, primary and noncontributory.
 - Ask your broker what that gap would mean on a claim.
+
+Video: [Insurance compliance is the elephant on every jobsite](https://www.youtube.com/shorts/jtpqI6e48kw) (0:30). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: There's an elephant on every job site, and it's not the crane. We talk schedule, we talk budget, we talk safety all day. Nobody talks insurance until something breaks. And when it breaks, it's expensive and it's got your name on it. You can't ignore it. You've got to lean into it and figure it out somehow. That's why I got into Forsured. It deals with the elephant so my team doesn't have to.
 
 That's a real number of real gaps. It's more persuasive than a statistic. If you want a starting point, our [free COI risk check](/#demo) reviews one project's requirements against a contractor COI or two.
 
@@ -468,6 +476,10 @@ Don't copy your old templates straight across. Use the move to fix them:
 ### Step 3: Re-check active subcontractors, don't import old results
 
 An old "compliant" flag tells you what the old tool decided against old requirements. Load the current certificates and endorsements for every active trade and check them fresh. Expect the new tool to find gaps the old one didn't. That's the point of switching. Our [guide to checking a contractor COI](/blog/how-to-check-a-contractor-coi/) covers what a full check includes.
+
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
 
 Archive closed projects as files from Step 1 rather than re-checking them.
 
@@ -701,6 +713,10 @@ If you're still deciding between the three, start with our COI Journal report on
 - Your owners' requirements vary by project and you want your own risk team holding the line.
 - You want the broker working directly from the gap, not from a service's email.
 - You want one person accountable for every waiver.
+
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
 
 That's the case Forsured is built for: a person on your team approves or waives every result, and the broker fixes the gap in the same workspace. If you want the review done for you, a managed service is the better fit.
 
@@ -1150,6 +1166,10 @@ Skip the feature grid for a minute. For a small general contractor, four things 
 
 **Forsured** reads each COI and endorsement against the requirements of the project the subcontractor is on, and puts the broker in a shared workspace where they see the gap, the requirement and the project. A person on your team approves or waives every result. Onboarding is by waitlist, pricing is by quote, and there's no managed review service. You can test it free with a [free COI risk check](/#demo): send one project's requirements and a contractor COI or two.
 
+Video: [I'm not an insurance guy (Plain Speak)](https://www.youtube.com/shorts/FpMactV_neg) (0:43). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: I'm not an insurance guy. I'm a general contractor. I don't know a damn thing about insurance. But here's what I did about it. I've been building in the Bay Area for a very long time. Every single job shows up with a stack of insurance paperwork, and most GCs fake their way through it. I did too, for years. I stopped pretending. Surrounded myself with insurance experts and guys who live this stuff day in and day out, including product nerds who build software. Together, we built something great. It's called Forsured. Forsured checks every contractor COI against the project requirements, then keeps watching until the job's done. Full disclosure, I'm an owner and Forsured's Chief Construction Officer. That's how much I believe in it.
+
 **Jones** prices per vendor record per property, billed annually, and never charges vendors or subcontractors. It fits small GCs that also own property. Most broker follow-up sits in the Operator tier.
 
 **illumend**, the AI platform from myCOI, lets AI make the compliance call and escalates only what it can't resolve. Pricing isn't published.
@@ -1271,6 +1291,10 @@ Depth 3 is where most construction gaps get caught, because that's where blanket
 #### Forsured: reads the wording against the project's requirements
 
 Forsured reads each certificate and endorsement against the requirements of the project the contractor is on, including project-level exceptions. Each gap comes with its reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The contractor's broker sees the requirement, the document and the project in one shared workspace. AI finds and explains each issue, and a person on your team approves or waives it.
+
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
 
 #### PINS Advantage: reads the wording, with the page linked
 
@@ -1432,6 +1456,10 @@ We looked at the same six things for every tool, in this order of weight:
 #### 1. Forsured: best for checking every COI against the project it's for
 
 Forsured is construction insurance compliance software for general contractors, trade contractors and the brokers who insure them. You set your insurance standards once, then apply project-level requirements and exceptions where a job needs them. Forsured reads each certificate and endorsement against that project's requirements and flags each gap with the reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The broker gets the gap in a shared workspace where they see the requirement, the document and the project, instead of another email chain. After approval, Forsured keeps tracking renewals and coverage changes across active projects. AI finds and explains each issue, and a person on your team approves or waives it.
+
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
 
 **Good fit if** your projects carry different owner, lender or contract requirements, you want the broker working from the same requirement you are, and you want a person on every approval.
 
@@ -1898,6 +1926,10 @@ The problem is timing. By the time a payment is held, the crew has already been 
 
 The map's first stage, win and staff work, already includes safety and onboarding. That's where insurance compliance belongs too. A contractor should prove its insurance meets the project requirements when it's staffed onto the job, before it mobilizes, the same way crews complete orientation before they start.
 
+Video: [Insurance compliance is the elephant on every jobsite](https://www.youtube.com/shorts/jtpqI6e48kw) (0:30). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: There's an elephant on every job site, and it's not the crane. We talk schedule, we talk budget, we talk safety all day. Nobody talks insurance until something breaks. And when it breaks, it's expensive and it's got your name on it. You can't ignore it. You've got to lean into it and figure it out somehow. That's why I got into Forsured. It deals with the elephant so my team doesn't have to.
+
 Then it should keep running in the do the work stage. Policies renew, change and cancel mid-project. A check that happens once at onboarding and again at each pay app misses everything in between.
 
 Placed that way, payment becomes a confirmation, not a discovery. The pay app goes out on time because compliance was already clean.
@@ -1980,6 +2012,10 @@ A checked additional insured box on a contractor COI usually means CG 20 10, and
 ### Why does CG 20 10 stop covering you at completion?
 
 CG 20 10 stops at completion because ISO rewrote it in 1993. The original 1985 edition, CG 20 10 11 85, covered liability arising out of the contractor's "your work," which included both ongoing and completed operations. [Construction Executive](https://constructionexec.com/article/the-right-endorsement-additional-insureds/) explains that the October 1993 edition changed the wording to liability arising out of "your ongoing operations," which effectively removed additional insured status for completed operations.
+
+Video: [What does additional insured mean? The sixth-grade version](https://www.youtube.com/shorts/F7jjPH1311o) (0:33). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Additional insured, sixth-grade version. Let's go. Your contractor's insurance protects them. Additional insured means it protects you too, from problems that come from their work. Think of it as your name on their umbrella. A checkbox on the certificate isn't enough. The policy has to actually be endorsed, and it has to match what's in the project requirements. Forsured checks that your name is really under the umbrella the way the project's requirements say it should be.
 
 [Insurance Journal](https://www.insurancejournal.com/magazines/mag-features/2015/06/15/371046.htm) puts it in one line: "'Ongoing operations' does not include completed operations." Every edition of CG 20 10 since 1993 works the same way.
 
@@ -2119,6 +2155,10 @@ So the real question is what the policy says. Standard cancellation conditions r
 
 It's tempting to ask the agent to type a note into the ACORD 25 description box, such as "30 days' notice to the certificate holder." That doesn't create the right.
 
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
+
 New York put this in statute. [Insurance Law section 502](https://www.nysenate.gov/legislation/laws/ISC/502) says a certificate "shall not amend, extend, or alter the coverage" of the policy it refers to, and "shall further not confer to any person any rights beyond those expressly provided by the policy." It also bars anyone from willfully requiring certificate language the policy "does not expressly include." [New York's Department of Financial Services](https://www.dfs.ny.gov/apps_and_licensing/insurance_companies/certificates_of_insurance) traces the rules to a new Article 5 of the Insurance Law, added by laws passed in 2014 and 2015.
 
 The certificate summarizes. The policy decides.
@@ -2142,6 +2182,10 @@ Table: Ways to learn a contractor's policy was canceled or lapsed
 | An insurer endorsement that schedules you | Cancellation, with written notice for the days set in its schedule | Policies without the endorsement |
 | A renewal certificate before each POLICY EXP date | Policies that expire without renewal | Cancellation before the expiration date |
 | Ongoing verification of each contractor COI | Cancellations and expirations, for the life of the job | Nothing, if it runs on every policy your requirements list |
+
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
 
 **Ask for a notice of cancellation endorsement.** The fix is an insurer endorsement that schedules you to receive notice. [BCS's](https://www.getbcs.com/blog/2011/08/02/how-to-obtain-a-30-day-notice-of-cancellation-despite-the-new-acord-form) example: "we agree to mail prior written notice of cancellation to the person(s) or organization(s) shown in the Schedule." Another sample BCS quotes gives at least 60 days' written notice of cancellation, or at least 10 days in the case of nonpayment of premium. BCS also warned these endorsements "are not generally available and are used sparingly by Insurers," so ask early.
 
@@ -2574,6 +2618,10 @@ You check per written contract wording by reading the endorsement, not the certi
 5. Keep the signed contract, with its insurance requirements, on file next to the endorsement and the contractor COI.
 6. Recheck at renewal, when forms can change.
 
+Video: [What does additional insured mean? The sixth-grade version](https://www.youtube.com/shorts/F7jjPH1311o) (0:33). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Additional insured, sixth-grade version. Let's go. Your contractor's insurance protects them. Additional insured means it protects you too, from problems that come from their work. Think of it as your name on their umbrella. A checkbox on the certificate isn't enough. The policy has to actually be endorsed, and it has to match what's in the project requirements. Forsured checks that your name is really under the umbrella the way the project's requirements say it should be.
+
 IA Magazine's advice to agents applies to you as the reader: a certificate should list the endorsement and its edition date, and you should get a copy. "Always read the COI like a person with no insurance background would."
 
 ### What else should your project requirements say?
@@ -2878,6 +2926,10 @@ The answers were consistent enough that we want to share them. Nobody below is n
 
 The complaint we heard most came from people already paying for COI tracking. Their tools flag everything. Certificates get rejected over small formatting issues, contractors get frustrated, and the alerts that matter (a lapsed policy, an umbrella below the project requirement, an additional insured endorsement without completed operations) get lost in the noise.
 
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
+
 What they want is a review that reads the certificate and the endorsements the way a risk manager would, ranks what actually exposes the project, and says why.
 
 ### 2. Brokers want data for renewals
@@ -2959,6 +3011,10 @@ Every general contractor has a folder of contractor COIs. Most were looked at on
 
 A certificate of insurance proves that certain policies existed on the day it was issued, and not much more. [IRMI](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance) defines it as a document giving evidence that certain general types of insurance have been bought, with the coverage types and limits. That's the whole job: evidence, on one date.
 
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
+
 The standard ACORD 25 says so on its face. The [2025/12 edition](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf) is "issued as a matter of information only and confers no rights upon the certificate holder," and it doesn't amend, extend or alter the coverage of the policies listed. When the certificate and the policy disagree, the policy wins.
 
 ### Why isn't a certificate of insurance proof of coverage?
@@ -2976,6 +3032,10 @@ This is general information, not legal advice. How your state treats a certifica
 ### What can a contractor COI hide?
 
 A contractor COI hides most of what decides a claim. The one-page form summarizes policies that run dozens of pages, and the details that matter most never make it onto the page.
+
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
 
 Table: What a contractor COI shows, and what actually decides coverage
 | Item | What the certificate shows | What decides coverage |
@@ -3094,6 +3154,10 @@ The coverage you negotiated only holds if the endorsement on the contractor's po
 ### 2. Prequalification is a snapshot. Insurance is a moving target.
 
 "The Prequalification Puzzle" was on Tuesday's agenda, and it's a good reminder of how much happens after a contractor clears prequal. A contractor COI that passed in March can be out of compliance by July. Policies renew with new terms, lapse for nonpayment and get re-endorsed mid-project.
+
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
 
 Prequalification answers "can this firm do the work?" It was never built to answer "is this firm covered today, for this project?"
 
@@ -3232,11 +3296,19 @@ Learning how to read a certificate of insurance starts with the contract, not th
 - Who must be named: owner, lender, GC and anyone else the contract lists
 - How long completed operations coverage must last after the job, and whether the aggregate must apply per project
 
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
+
 Requirements differ by owner, lender and contract, so a template from the last job is a guess, not a standard.
 
 ### What does each ACORD 25 field tell you?
 
 The ACORD 25 is the standard liability certificate, published by [ACORD](https://www.acord.org/standards-architecture/acord-forms). The current edition is 2025/12 (the [form as posted by the New York Department of Financial Services](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf)). Here's how to read a certificate of insurance on that form, field by field.
+
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
 
 Table: ACORD 25 fields and what to check against your project requirements
 | ACORD 25 field | What it shows | What to check |

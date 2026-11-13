@@ -21,6 +21,32 @@ const CHECK = process.argv.includes('--check');
 const aeo = require('./aeo');
 const { readAuthors } = aeo;
 
+// Ask the Construction Guy videos (content/videos.json). A line `::video <id>` in a post body embeds one.
+const VIDEO_FILE = path.join(ROOT, 'content', 'videos.json');
+const VIDEO_DATA = fs.existsSync(VIDEO_FILE) ? JSON.parse(fs.readFileSync(VIDEO_FILE, 'utf8')) : { videos: {} };
+const VIDEO_LINE = /^::video ([\w-]{11})$/;
+function video(id) {
+  const v = VIDEO_DATA.videos[id];
+  if (!v) throw new Error(`video ${id} is not in content/videos.json`);
+  return v;
+}
+const videoIds = (body) => [...body.matchAll(/^::video ([\w-]{11})$/gm)].map((m) => m[1]);
+const clock = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+const watchUrl = (id) => `https://www.youtube.com/shorts/${id}`;
+const disclosure = () => `${VIDEO_DATA.host.name}, ${VIDEO_DATA.host.role}. ${VIDEO_DATA.host.disclosure}`;
+// Click to play: only the poster image loads with the page. The YouTube player (and its cookies-free
+// embed) loads after a reader presses play, so a video costs a post nothing until someone watches it.
+function videoBlock(id) {
+  const v = video(id);
+  const poster = `https://i.ytimg.com/vi/${id}/${v.poster || 'oardefault'}.jpg`;
+  const [w, h] = v.poster === 'maxresdefault' ? [1280, 720] : [1080, 1920];
+  return `<figure class="video" id="video-${id}">
+<div class="video-frame"><a class="video-play" href="${watchUrl(id)}" data-video="${id}" data-title="${esc(v.title)}" aria-label="Play video: ${esc(v.title)} (${clock(v.seconds)})"><img src="${poster}" width="${w}" height="${h}" alt="" loading="lazy" decoding="async"/><span class="video-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.5v13l11-6.5z" fill="#fff"/></svg></span></a></div>
+<figcaption><strong>Ask the Construction Guy:</strong> ${esc(v.title)} (${clock(v.seconds)}). ${esc(disclosure())}</figcaption>
+<details class="video-transcript"><summary>Read the transcript</summary><blockquote><p>${esc(v.transcript)}</p></blockquote></details>
+</figure>`;
+}
+
 // ---------- reading posts ----------
 
 // Drafts are left out unless includeDrafts is set (og.js renders their images ahead of publishing).
@@ -86,7 +112,11 @@ function markdown(md, dir, base = '') {
     const lines = block.split('\n').map((l) => l.trimEnd());
     const first = lines[0];
     let h;
-    if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.png)(?: "([^"]+)")?\)$/))) {
+    if (lines.length === 1 && (h = first.match(VIDEO_LINE))) {
+      const v = video(h[1]);
+      // The RSS feed and emails can't run the player, so they get a plain link.
+      out.push(base ? `<p><a href="${watchUrl(h[1])}">Watch: ${esc(v.title)} (${clock(v.seconds)})</a>. ${esc(disclosure())}</p>` : videoBlock(h[1]));
+    } else if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.png)(?: "([^"]+)")?\)$/))) {
       const [, alt, src, caption] = h;
       const file = path.join(dir || '', src);
       if (!dir || !fs.existsSync(file)) throw new Error(`image ${src} not found${dir ? ` in ${path.relative(ROOT, dir)}` : ''}`);
@@ -253,6 +283,19 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Ask the Construction Guy: vertical video, click to play */
+/* Whole-pixel sizes (270x480 is exactly 9:16 and fits a 320px phone) so the rest of the post doesn't
+   land on fractional pixels and blur in the screenshot tests. */
+.prose .video{width:270px;margin:32px auto}
+.prose .video figcaption{line-height:20px}
+.video-frame{position:relative;height:480px;border:1px solid #E4E7EC;border-radius:12px;overflow:hidden;background:#2C2D29}
+.video-frame iframe,.video-play,.prose .video-play img{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0}
+.prose .video-play img{object-fit:cover}
+.video-btn{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#FB612A;box-shadow:0 2px 8px rgba(20,28,37,.25);transition:background .15s}
+.video-play:hover .video-btn{background:#D54E21}
+.video-transcript{margin-top:8px;font-size:14px;color:var(--mt)}
+.video-transcript summary{cursor:pointer;font-weight:500;color:#344051;line-height:24px}
+.video-transcript blockquote{margin-top:8px}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -583,6 +626,20 @@ ${shareLinks(p).map(([k, name, href]) => `        <a class="sh" href="${esc(href
 // On phones, the LinkedIn, X and Facebook web share pages open in the browser, where most people
 // aren't signed in, so they hit a login wall even with the app installed. There the buttons open the
 // phone's share sheet instead, which hands the post to the signed-in app. Desktop keeps the web links.
+const VIDEO_JS = `<script>
+document.querySelectorAll('.video-play').forEach(function(a){a.addEventListener('click',function(e){
+  e.preventDefault();
+  var f=document.createElement('iframe');
+  f.src='https://www.youtube-nocookie.com/embed/'+a.dataset.video+'?autoplay=1&rel=0&playsinline=1';
+  f.title=a.dataset.title;
+  f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.referrerPolicy='strict-origin-when-cross-origin';
+  f.allowFullscreen=true;
+  a.replaceWith(f);
+  f.focus();
+});});
+</script>`;
+
 const SHARE_JS = `<script>
 (() => {
   const url = document.querySelector('link[rel=canonical]').href;
@@ -687,8 +744,8 @@ const SUB_JS = `<script>
 // ---------- people (AEO S8, J1) ----------
 // content/authors.json holds the real people who write and review posts, with titles exactly as the
 // Forsured site or an approved release states them (W8). A post names one by "author" (and
-// optionally "reviewer"). Empty until a person is approved, and founders stay off until the Nov 19
-// launch (copy.spec.js), so posts fall back to the Organization.
+// optionally "reviewer"). Empty until a person is approved,
+// so posts fall back to the Organization.
 const personId = (a) => `${SITE}/#${a.id}`;
 const personNode = (a) => ({
   '@type': 'Person',
@@ -756,7 +813,7 @@ function postPage(p, posts) {
       mainEntityOfPage: `${SITE}${p.url}`,
       articleSection: p.category,
       keywords: (p.tags || []).join(', '),
-      wordCount: p.body.split(/\s+/).length,
+      wordCount: p.body.replace(/^::video .*$/gm, '').trim().split(/\s+/).length,
       inLanguage: 'en-US',
       isPartOf: { '@type': 'Blog', '@id': `${SITE}/blog/#blog`, name: 'Forsured Blog', isPartOf: { '@id': WEBSITE['@id'] } },
       encoding: { '@type': 'MediaObject', encodingFormat: 'text/markdown', contentUrl: `${SITE}${p.url}index.md` },
@@ -783,6 +840,29 @@ function postPage(p, posts) {
     const list = p.schema.find((n) => n['@type'] === 'ItemList');
     if (list) graph[0].hasPart = { '@id': list['@id'] };
     graph.splice(1, 0, ...p.schema);
+  }
+  // One VideoObject per embedded Ask the Construction Guy video, linked from the article.
+  const vids = [...new Set(videoIds(p.body))];
+  if (vids.length) {
+    graph[0].video = vids.map((id) => ({ '@id': `${SITE}${p.url}#video-${id}` }));
+    graph.splice(1, 0, ...vids.map((id) => {
+      const v = video(id);
+      return {
+        '@type': 'VideoObject',
+        '@id': `${SITE}${p.url}#video-${id}`,
+        name: v.title,
+        description: v.description,
+        thumbnailUrl: [`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`, `https://i.ytimg.com/vi/${id}/hqdefault.jpg`],
+        uploadDate: v.uploadDate,
+        duration: `PT${v.seconds}S`,
+        embedUrl: `https://www.youtube.com/embed/${id}`,
+        url: watchUrl(id),
+        inLanguage: 'en-US',
+        transcript: v.transcript,
+        actor: { '@type': 'Person', name: VIDEO_DATA.host.name },
+        publisher: { '@id': ORG['@id'] },
+      };
+    }));
   }
   if (p.faq && p.faq.length) {
     graph.push({
@@ -848,7 +928,7 @@ ${related.length ? `<section class="more" aria-labelledby="more"><div class="edg
 
 ${BAND}
 
-${SHARE_JS}
+${vids.length ? VIDEO_JS + '\n' : ''}${SHARE_JS}
 ${SUB_JS}
 ${FOOTER()}`;
 }
@@ -1091,7 +1171,11 @@ function postMarkdown(p) {
     md
       .replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`)
       .replace(/^(#{2,3} .*?)\s+\{#[a-z0-9-]+\}$/gm, '$1')
-      .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`);
+      .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`)
+      .replace(/^::video ([\w-]{11})$/gm, (_, id) => {
+        const v = video(id);
+        return `Video: [${v.title}](${watchUrl(id)}) (${clock(v.seconds)}). ${disclosure()}\n\n> Transcript: ${v.transcript}`;
+      });
   return `# ${p.title}
 
 > ${plain(p.dek)}

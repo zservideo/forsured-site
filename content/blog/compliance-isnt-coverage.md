@@ -123,6 +123,8 @@ Every general contractor has a folder of contractor COIs. Most were looked at on
 
 A certificate of insurance proves that certain policies existed on the day it was issued, and not much more. [IRMI](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance) defines it as a document giving evidence that certain general types of insurance have been bought, with the coverage types and limits. That's the whole job: evidence, on one date.
 
+::video ZfDXobNtztQ
+
 The standard ACORD 25 says so on its face. The [2025/12 edition](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf) is "issued as a matter of information only and confers no rights upon the certificate holder," and it doesn't amend, extend or alter the coverage of the policies listed. When the certificate and the policy disagree, the policy wins.
 
 ## Why isn't a certificate of insurance proof of coverage?
@@ -140,6 +142,8 @@ This is general information, not legal advice. How your state treats a certifica
 ## What can a contractor COI hide?
 
 A contractor COI hides most of what decides a claim. The one-page form summarizes policies that run dozens of pages, and the details that matter most never make it onto the page.
+
+::video 7svNMPuxtOQ
 
 Table: What a contractor COI shows, and what actually decides coverage
 | Item | What the certificate shows | What decides coverage |

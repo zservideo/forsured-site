@@ -80,6 +80,8 @@ If you're still deciding between the three, start with our COI Journal report on
 - You want the broker working directly from the gap, not from a service's email.
 - You want one person accountable for every waiver.
 
+::video nQtgE0uRkPI
+
 That's the case Forsured is built for: a person on your team approves or waives every result, and the broker fixes the gap in the same workspace. If you want the review done for you, a managed service is the better fit.
 
 ## About this guide

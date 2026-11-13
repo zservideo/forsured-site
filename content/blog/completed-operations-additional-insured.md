@@ -101,6 +101,8 @@ A checked additional insured box on a contractor COI usually means CG 20 10, and
 
 CG 20 10 stops at completion because ISO rewrote it in 1993. The original 1985 edition, CG 20 10 11 85, covered liability arising out of the contractor's "your work," which included both ongoing and completed operations. [Construction Executive](https://constructionexec.com/article/the-right-endorsement-additional-insureds/) explains that the October 1993 edition changed the wording to liability arising out of "your ongoing operations," which effectively removed additional insured status for completed operations.
 
+::video F7jjPH1311o
+
 [Insurance Journal](https://www.insurancejournal.com/magazines/mag-features/2015/06/15/371046.htm) puts it in one line: "'Ongoing operations' does not include completed operations." Every edition of CG 20 10 since 1993 works the same way.
 
 ## What counts as completed operations?

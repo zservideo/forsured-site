@@ -341,6 +341,8 @@ We looked at the same six things for every tool, in this order of weight:
 
 Forsured is construction insurance compliance software for general contractors, trade contractors and the brokers who insure them. You set your insurance standards once, then apply project-level requirements and exceptions where a job needs them. Forsured reads each certificate and endorsement against that project's requirements and flags each gap with the reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The broker gets the gap in a shared workspace where they see the requirement, the document and the project, instead of another email chain. After approval, Forsured keeps tracking renewals and coverage changes across active projects. AI finds and explains each issue, and a person on your team approves or waives it.
 
+::video nQtgE0uRkPI
+
 **Good fit if** your projects carry different owner, lender or contract requirements, you want the broker working from the same requirement you are, and you want a person on every approval.
 
 **Watch for:** onboarding is by waitlist, the Procore integration is for early access customers and isn't on the Procore Marketplace yet, and there's no managed review service.

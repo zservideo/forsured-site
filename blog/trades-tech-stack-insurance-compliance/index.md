@@ -43,6 +43,10 @@ The problem is timing. By the time a payment is held, the crew has already been 
 
 The map's first stage, win and staff work, already includes safety and onboarding. That's where insurance compliance belongs too. A contractor should prove its insurance meets the project requirements when it's staffed onto the job, before it mobilizes, the same way crews complete orientation before they start.
 
+Video: [Insurance compliance is the elephant on every jobsite](https://www.youtube.com/shorts/jtpqI6e48kw) (0:30). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: There's an elephant on every job site, and it's not the crane. We talk schedule, we talk budget, we talk safety all day. Nobody talks insurance until something breaks. And when it breaks, it's expensive and it's got your name on it. You can't ignore it. You've got to lean into it and figure it out somehow. That's why I got into Forsured. It deals with the elephant so my team doesn't have to.
+
 Then it should keep running in the do the work stage. Policies renew, change and cancel mid-project. A check that happens once at onboarding and again at each pay app misses everything in between.
 
 Placed that way, payment becomes a confirmation, not a discovery. The pay app goes out on time because compliance was already clean.
