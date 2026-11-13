@@ -1,0 +1,37 @@
+name: Release COI Journal research
+
+# COI Journal releases its queued reports each weekday at 11:30 UTC. Twenty minutes later, move
+# content/research/coi-journal.json "through" to today (Eastern), rebuild, and commit, so the
+# /research/ hub lists each report the day it goes live. Commits only when a report was added.
+on:
+  schedule:
+    - cron: '50 11 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Move the release date to today (Eastern)
+        run: |
+          node -e "const f='content/research/coi-journal.json',fs=require('fs'),d=JSON.parse(fs.readFileSync(f));d.through=process.argv[1];fs.writeFileSync(f,JSON.stringify(d,null,2)+'\n')" "$(TZ=America/New_York date +%F)"
+      - run: node tools/blog/build.js
+      - name: Commit if a report was added
+        run: |
+          git config user.name "Forsured research release"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- research/; then echo "Nothing to release today."; exit 0; fi
+          git add -A
+          git commit -m "Research hub: add COI Journal reports released $(TZ=America/New_York date +%F)"
+          git push

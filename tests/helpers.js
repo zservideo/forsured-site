@@ -29,6 +29,8 @@ const PAGES = [
   ...POSTS.map((slug) => ({ name: `post ${slug}`, url: `/blog/${slug}/`, file: `blog/${slug}/index.html`, post: true })),
   // State requirement pages, built from content/coi-requirements by tools/blog/build.js.
   { name: 'coi requirements', url: '/coi-requirements/', file: 'coi-requirements/index.html' },
+  // COI Journal research hub, built from content/research/coi-journal.json by tools/blog/build.js.
+  { name: 'research', url: '/research/', file: 'research/index.html' },
   ...STATE_SLUGS.map((slug) => ({ name: `state ${slug}`, url: `/coi-requirements/${slug}/`, file: `coi-requirements/${slug}/index.html`, state: true })),
 ];
 

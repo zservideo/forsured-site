@@ -1,0 +1,393 @@
+{
+  "_note": "COI Journal reports listed on forsured.ai/research/. Reports dated after 'through' stay hidden until the Release workflow moves the date. Source of truth: the coi-journal repo, content/reports.",
+  "through": "2026-11-13",
+  "reports": [
+    {
+      "number": "R-01",
+      "kind": "White paper",
+      "title": "A certificate is not coverage: six ways contractor COIs fail project requirements",
+      "question": "",
+      "summary": "Why contractor certificates of insurance pass a glance and still fail the project, and the six failure modes worth checking.",
+      "url": "https://coijournal.com/reports/certificate-is-not-coverage/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-02",
+      "kind": "Analyst brief",
+      "title": "Rented, falsified, excluded: what 2026's cases say about trusting a contractor COI",
+      "question": "",
+      "summary": "Four 2026 fraud and coverage cases, what a certificate could and couldn't have shown in each, and the checks that matter.",
+      "url": "https://coijournal.com/reports/rented-falsified-excluded/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-03",
+      "kind": "White paper",
+      "title": "Why every trade sends a certificate: the COI's job in construction risk transfer",
+      "question": "What is a certificate of insurance, and why do general contractors require one from every trade contractor?",
+      "summary": "What a certificate of insurance is, why general contractors collect one from every trade, and what it can and can't prove.",
+      "url": "https://coijournal.com/reports/why-contractors-send-certificates/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-04",
+      "kind": "White paper",
+      "title": "How to read a COI against contract requirements, line by line",
+      "question": "How do I read a certificate of insurance to check whether a contractor's coverage meets our contract requirements?",
+      "summary": "A box-by-box method for reading an ACORD 25 certificate against a project's insurance requirements, with what each box can't show.",
+      "url": "https://coijournal.com/reports/reading-a-coi-against-requirements/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-05",
+      "kind": "White paper",
+      "title": "Additional insured endorsements, explained: CG 20 10, CG 20 37 and the automatic forms",
+      "question": "What is an additional insured endorsement like CG 20 10, and why does a construction project need it?",
+      "summary": "Additional insured endorsements: what CG 20 10, CG 20 37, CG 20 38 and the automatic forms do, and how to check them.",
+      "url": "https://coijournal.com/reports/additional-insured-endorsements/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-06",
+      "kind": "White paper",
+      "title": "When a contractor's coverage lapses mid-project: the exposure and the playbook",
+      "question": "What happens to a general contractor if a trade contractor's insurance lapses in the middle of a project?",
+      "summary": "What a GC is exposed to when a trade's insurance lapses or is cancelled mid-project, and a step-by-step playbook to respond.",
+      "url": "https://coijournal.com/reports/coverage-lapse-mid-project/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-07",
+      "kind": "White paper",
+      "title": "What goes into subcontract insurance requirements: a field guide for GCs and brokers",
+      "question": "What insurance requirements do general contractors typically put in subcontract agreements?",
+      "summary": "The insurance requirements GCs put in subcontracts, piece by piece, with real examples from two public owners' published exhibits.",
+      "url": "https://coijournal.com/reports/subcontract-insurance-requirements/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-08",
+      "kind": "White paper",
+      "title": "The broker's side of the COI: why requests pile up and how to answer deficiency notices",
+      "question": "As an insurance broker, how do I handle constant COI and endorsement requests and deficiency notices from contractor clients on construction jobs?",
+      "summary": "For construction brokers on where COI and endorsement requests come from, why deficiency notices repeat, and a way to cut the load.",
+      "url": "https://coijournal.com/reports/broker-coi-request-load/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-09",
+      "kind": "White paper",
+      "title": "Spreadsheet, service or software: a vendor-neutral way to choose how to manage contractor COIs",
+      "question": "Is it better to manage contractor COIs in a spreadsheet, outsource COI tracking, or use software?",
+      "summary": "Comparing spreadsheets, outsourced tracking services and software for contractor COIs, with a scoring method that names no vendors.",
+      "url": "https://coijournal.com/reports/spreadsheet-service-software/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-10",
+      "kind": "White paper",
+      "title": "Can AI review a COI? What machines do well, and where people stay in the loop",
+      "question": "Can AI accurately review certificates of insurance and endorsements against project insurance requirements?",
+      "summary": "What AI can and can't do when reviewing contractor COIs and endorsements against project requirements, and where people stay in charge.",
+      "url": "https://coijournal.com/reports/can-ai-review-a-coi/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-11",
+      "kind": "White paper",
+      "title": "One set of rules per project: tracking requirements and renewals across active jobs",
+      "question": "How do construction companies set different insurance requirements per project, and monitor contractor insurance expirations and renewals across all active projects?",
+      "summary": "Running different insurance requirements per project and keeping every contractor renewal current across a portfolio of jobs.",
+      "url": "https://coijournal.com/reports/per-project-requirements-and-renewals/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-12",
+      "kind": "White paper",
+      "title": "Closing a coverage gap without the email chain: a deficiency workflow for GCs and brokers",
+      "question": "How can brokers and general contractors fix contractor coverage gaps faster, without endless email back-and-forth?",
+      "summary": "A deficiency workflow that helps GCs, trades and brokers close contractor coverage gaps in one pass instead of an email chain.",
+      "url": "https://coijournal.com/reports/fixing-gaps-brokers-gcs/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-13",
+      "kind": "White paper",
+      "title": "What to require from any COI tool: a vendor-neutral specification",
+      "question": "What should a general contractor look for in COI tracking software, and which checks matter most when choosing one?",
+      "summary": "A vendor-neutral specification for COI tracking tools: what to require, how to test it, and the questions to ask in a demo.",
+      "url": "https://coijournal.com/reports/coi-tool-specification/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-14",
+      "kind": "Analyst brief",
+      "title": "The ACORD 25's new limits sentence: what changed in the 2025/12 edition, and what GCs should do",
+      "question": "What changed on the ACORD 25 certificate of liability insurance in the 2025/12 edition?",
+      "summary": "The ACORD 25 (2025/12) limits wording: certificates may now show requested limits rather than full policy limits.",
+      "url": "https://coijournal.com/reports/acord-25-limits-wording/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-15",
+      "kind": "Analyst brief",
+      "title": "The Q3 2026 insurance market for contractors: casualty up, property down, and what it means for endorsements",
+      "question": "What is happening to construction insurance rates in 2026, and what does it mean for contractor coverage requirements?",
+      "summary": "Q3 2026 commercial insurance rates from Marsh's index, construction carrier growth, and what it means for contractor requirements.",
+      "url": "https://coijournal.com/reports/construction-insurance-market-q3-2026/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-16",
+      "kind": "Analyst brief",
+      "title": "What insurance regulators say about AI, and what it means for AI-assisted COI review",
+      "question": "How are insurance regulators approaching AI, and what should GCs ask before trusting AI to review COIs?",
+      "summary": "The NAIC's AI model bulletin, its adoption by 24 states and D.C., the 2026 pilot, and lessons for buyers of AI-assisted COI review.",
+      "url": "https://coijournal.com/reports/naic-ai-bulletin-and-coi-review/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-17",
+      "kind": "Analyst brief",
+      "title": "Checking workers' comp yourself: what public proof of coverage lookups can and can't tell you",
+      "question": "How can a general contractor verify that a trade contractor's workers' comp coverage is actually in force?",
+      "summary": "Public workers' comp proof of coverage lookups in New York, Florida and elsewhere, what they show, and their limits for GCs.",
+      "url": "https://coijournal.com/reports/workers-comp-coverage-lookups/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-18",
+      "kind": "Analyst brief",
+      "title": "Underreported payroll: what six construction workers' comp fraud cases show GCs",
+      "question": "How does workers' comp premium fraud by contractors work, and how can a GC spot the risk?",
+      "summary": "Six construction workers' comp premium fraud cases from 2022 to 2026, the common pattern, and what a GC can check.",
+      "url": "https://coijournal.com/reports/workers-comp-premium-fraud/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-19",
+      "kind": "Analyst brief",
+      "title": "How the ISO additional insured endorsements changed: 2004, 2013 and 2019",
+      "question": "How have ISO additional insured endorsements like CG 20 10 and CG 20 37 changed, and why does the edition date matter?",
+      "summary": "How ISO's additional insured endorsements changed in 2004, 2013 and 2019, and why the edition date on an endorsement matters.",
+      "url": "https://coijournal.com/reports/iso-additional-insured-editions/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-20",
+      "kind": "Analyst brief",
+      "title": "Two public owners, two insurance exhibits: Oregon DOT and Sonoma County compared",
+      "question": "What insurance requirements do public owners put on construction contractors, and how much do they differ?",
+      "summary": "Comparing the published contractor insurance requirements of Oregon DOT and Sonoma County, line by line, with what GCs should take away.",
+      "url": "https://coijournal.com/reports/public-owner-requirements-compared/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-21",
+      "kind": "Analyst brief",
+      "title": "Wrap-ups and certificates: what changes for contractor COIs on an OCIP or CCIP",
+      "question": "On a wrap-up project with an OCIP or CCIP, what insurance do contractors still need to carry and prove?",
+      "summary": "Owner and contractor controlled insurance programs, what they cover and exclude, and which COIs a GC still has to collect.",
+      "url": "https://coijournal.com/reports/wrap-ups-and-cois/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-22",
+      "kind": "Analyst brief",
+      "title": "Fake certificates and phantom insurers: what state regulators have warned",
+      "question": "How common are fake certificates of insurance, and what do state regulators advise contractors and GCs to do?",
+      "summary": "What New Jersey, Maryland, Texas and Florida regulators have said about false certificates, fake insurers and how to verify coverage.",
+      "url": "https://coijournal.com/reports/certificate-fraud-regulators/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-23",
+      "kind": "Analyst brief",
+      "title": "What does manual COI tracking cost? Reading the one published estimate",
+      "question": "How much does it cost a construction company to track contractor COIs manually, and how should it build its own estimate?",
+      "summary": "The BCS estimate that manual COI tracking costs $36,400 a year: how it's built, what it leaves out, and how to build your own.",
+      "url": "https://coijournal.com/reports/cost-of-manual-coi-tracking/",
+      "date": "2026-11-13"
+    },
+    {
+      "number": "R-24",
+      "kind": "Analyst brief",
+      "title": "Primary and noncontributory: what the words mean and what actually proves it",
+      "question": "What does primary and noncontributory mean on a construction project, and how does a GC confirm a trade's policy actually provides it?",
+      "summary": "Primary and noncontributory wording: what it does, the ISO CG 20 01 endorsement, its conditions, and how to confirm it.",
+      "url": "https://coijournal.com/reports/primary-and-noncontributory-proof/",
+      "date": "2026-11-16"
+    },
+    {
+      "number": "R-25",
+      "kind": "Analyst brief",
+      "title": "Waivers of subrogation on construction jobs: the endorsements, the limits, and the checks",
+      "question": "What is a waiver of subrogation endorsement, why do GCs require one from trade contractors, and how do you confirm it is on the policy?",
+      "summary": "Waivers of subrogation: the ISO CG 24 04 and NCCI WC 00 03 13 endorsements, what they do and don't do, and how GCs confirm them.",
+      "url": "https://coijournal.com/reports/waiver-of-subrogation-endorsements/",
+      "date": "2026-11-17"
+    },
+    {
+      "number": "R-26",
+      "kind": "Analyst brief",
+      "title": "Per project aggregate limits: why owners ask for them and how CG 25 03 works",
+      "question": "What is a per project aggregate endorsement, and how can a GC tell whether a trade contractor's general liability limit is shared across every job?",
+      "summary": "Per project aggregate limits: the ISO CG 25 03 endorsement, what it changes, what it leaves alone, and how to check it.",
+      "url": "https://coijournal.com/reports/per-project-aggregate-limits/",
+      "date": "2026-11-18"
+    },
+    {
+      "number": "R-27",
+      "kind": "Analyst brief",
+      "title": "Federal jobs: what FAR 52.228-5 requires of contractors and their trades",
+      "question": "What insurance does the federal government require on construction work at a government installation, and what has to flow down to trade contractors?",
+      "summary": "FAR 52.228-5 and 28.307-2: federal minimum insurance, the 30-day notice endorsement, and what flows down to trade contractors.",
+      "url": "https://coijournal.com/reports/federal-contracts-far-insurance/",
+      "date": "2026-11-19"
+    },
+    {
+      "number": "R-28",
+      "kind": "Analyst brief",
+      "title": "Monopolistic workers comp states: why the certificate looks different and what to ask for",
+      "question": "How do workers comp and employer's liability requirements work for trades in Ohio, North Dakota, Washington and Wyoming?",
+      "summary": "The four monopolistic workers comp states, why their certificates look different, and the stop gap coverage GCs should ask for.",
+      "url": "https://coijournal.com/reports/monopolistic-workers-comp-states/",
+      "date": "2026-11-20"
+    },
+    {
+      "number": "R-29",
+      "kind": "Analyst brief",
+      "title": "California's anti-indemnity rules and what they do to additional insured coverage",
+      "question": "How do California Civil Code 2782 and Insurance Code 11580.04 limit indemnity and additional insured coverage on construction projects?",
+      "summary": "California Civil Code 2782, section 2782.05 and Insurance Code 11580.04, and how they shape additional insured coverage on jobs.",
+      "url": "https://coijournal.com/reports/california-anti-indemnity-additional-insured/",
+      "date": "2026-11-23"
+    },
+    {
+      "number": "R-30",
+      "kind": "Analyst brief",
+      "title": "Texas's anti-indemnity act and additional insured coverage on construction contracts",
+      "question": "How does Texas Insurance Code Chapter 151 limit indemnity and additional insured requirements in construction contracts?",
+      "summary": "Texas Insurance Code Chapter 151: how it limits indemnity and additional insured coverage, and its employee and wrap-up exceptions.",
+      "url": "https://coijournal.com/reports/texas-anti-indemnity-additional-insured/",
+      "date": "2026-11-24"
+    },
+    {
+      "number": "R-31",
+      "kind": "Analyst brief",
+      "title": "Surplus lines carriers on certificates: what non-admitted means for a GC",
+      "question": "Is it a problem when a trade contractor's certificate shows a surplus lines or non-admitted insurer, and what should a GC check?",
+      "summary": "Surplus lines insurers on contractor certificates: what non-admitted means, the guaranty fund gap, and how to check the carrier.",
+      "url": "https://coijournal.com/reports/surplus-lines-carriers-on-certificates/",
+      "date": "2026-11-25"
+    },
+    {
+      "number": "R-32",
+      "kind": "Analyst brief",
+      "title": "Carrier financial ratings in project requirements: what A- VII means and how to check it",
+      "question": "What does a carrier rating requirement like A- VII mean in a subcontract, and how does a GC confirm a trade's insurer meets it?",
+      "summary": "Carrier rating requirements in subcontracts: AM Best strength ratings, size classes like A- VII, and how GCs confirm them.",
+      "url": "https://coijournal.com/reports/carrier-ratings-in-requirements/",
+      "date": "2026-11-30"
+    },
+    {
+      "number": "R-33",
+      "kind": "Analyst brief",
+      "title": "The certificate holder box: what it does, what it doesn't, and the naming mistakes that matter",
+      "question": "What does being the certificate holder on an ACORD 25 mean, and is it the same as being an additional insured?",
+      "summary": "The ACORD 25 certificate holder box: what it does and doesn't confer, how it differs from additional insured status, and naming errors.",
+      "url": "https://coijournal.com/reports/certificate-holder-box/",
+      "date": "2026-12-01"
+    },
+    {
+      "number": "R-34",
+      "kind": "White paper",
+      "title": "New York's Scaffold Law and the insurance market for trades working in the state",
+      "question": "Why is construction liability insurance so expensive in New York, and what does Labor Law 240 mean for GCs collecting trade certificates there?",
+      "summary": "New York Labor Law 240 and 241, what they do to liability insurance for contractors, and what GCs should check on trade COIs.",
+      "url": "https://coijournal.com/reports/new-york-labor-law-240-insurance/",
+      "date": "2026-11-16"
+    },
+    {
+      "number": "R-35",
+      "kind": "White paper",
+      "title": "Where insurance fits in trade prequalification",
+      "question": "What insurance checks belong in a general contractor's trade prequalification process, and which belong after award?",
+      "summary": "Where insurance belongs in trade prequalification, which checks to run before award, which after, and the red flags to watch for.",
+      "url": "https://coijournal.com/reports/prequalification-and-insurance/",
+      "date": "2026-11-17"
+    },
+    {
+      "number": "R-36",
+      "kind": "White paper",
+      "title": "Onboarding a new trade: the day-one compliance file",
+      "question": "What insurance and compliance documents should a general contractor collect before a new trade contractor starts work on site?",
+      "summary": "The compliance file a GC should have before a new trade starts work: signed subcontract, certificate, endorsements, licenses and a diary.",
+      "url": "https://coijournal.com/reports/onboarding-a-new-trade/",
+      "date": "2026-11-18"
+    },
+    {
+      "number": "R-37",
+      "kind": "White paper",
+      "title": "What a defensible COI file looks like",
+      "question": "What records should a general contractor keep to prove it verified a trade contractor's insurance if a claim or dispute comes up later?",
+      "summary": "What a defensible contractor COI file contains: requirements, certificates, endorsements, review notes, follow-ups and retention.",
+      "url": "https://coijournal.com/reports/defensible-coi-file/",
+      "date": "2026-11-19"
+    },
+    {
+      "number": "R-38",
+      "kind": "White paper",
+      "title": "Tying pay applications to insurance compliance",
+      "question": "Can a general contractor hold payment to a trade contractor until its insurance is compliant, and how do GCs build that into the pay application process?",
+      "summary": "Linking trade pay applications to insurance compliance: contract terms, the review step before payment, and keeping it fair.",
+      "url": "https://coijournal.com/reports/pay-applications-and-insurance-compliance/",
+      "date": "2026-11-20"
+    },
+    {
+      "number": "R-39",
+      "kind": "White paper",
+      "title": "A data model for project requirements",
+      "question": "How should a general contractor structure project insurance requirements as data so certificates can be checked against them consistently, by people or software?",
+      "summary": "Proposes a simple data model for project insurance requirements: projects, tiers, lines, endorsements, parties and the source clause.",
+      "url": "https://coijournal.com/reports/project-requirements-data-model/",
+      "date": "2026-11-23"
+    },
+    {
+      "number": "R-40",
+      "kind": "White paper",
+      "title": "COI 101 for trade contractors: how to get compliant fast and get paid",
+      "question": "As a trade contractor, how do I get my insurance approved quickly by a general contractor and avoid payment holds over certificates?",
+      "summary": "For trade contractors on getting insurance approved by GCs fast: what to send, what to ask your broker for, and how to avoid holds.",
+      "url": "https://coijournal.com/reports/coi-101-for-trade-contractors/",
+      "date": "2026-11-24"
+    },
+    {
+      "number": "R-41",
+      "kind": "White paper",
+      "title": "Building a COI program from scratch in 90 days",
+      "question": "How should a general contractor with no formal process set up a contractor COI compliance program, step by step?",
+      "summary": "Lays out a 90-day plan for a GC to build a contractor COI program: requirements, intake, review, follow-up, renewals and reporting.",
+      "url": "https://coijournal.com/reports/coi-program-in-90-days/",
+      "date": "2026-11-25"
+    },
+    {
+      "number": "R-42",
+      "kind": "White paper",
+      "title": "Closeout: proving completed operations coverage before final payment",
+      "question": "What insurance proof should a general contractor collect from trade contractors at closeout, and how long does completed operations coverage need to last?",
+      "summary": "Insurance at closeout: completed operations additional insured coverage, how long it runs, and what to collect before final payment.",
+      "url": "https://coijournal.com/reports/closeout-completed-operations/",
+      "date": "2026-11-30"
+    },
+    {
+      "number": "R-43",
+      "kind": "White paper",
+      "title": "Lower-tier trades: insurance compliance below the first tier",
+      "question": "How should a general contractor make sure the lower-tier trades hired by its trade contractors carry the right insurance?",
+      "summary": "Insurance compliance for lower-tier trades: flowing requirements down, what to collect, and where the gaps open below the first tier.",
+      "url": "https://coijournal.com/reports/lower-tier-trades-compliance/",
+      "date": "2026-12-01"
+    }
+  ]
+}

@@ -166,6 +166,9 @@ const ORG = {
   email: 'hello@forsured.ai',
   sameAs: ['https://forsured.com', 'https://www.linkedin.com/company/forsured/', 'https://www.instagram.com/getforsured/'],
   knowsAbout: ['Construction insurance compliance', 'Certificates of insurance', 'Additional insured endorsements', 'Contractor risk management'],
+  // COI Journal is Forsured's editorial site. Its own markup names Forsured as parentOrganization.
+  // Not sameAs: that means the same entity, and the Journal is a separate publication.
+  subOrganization: { '@type': 'NewsMediaOrganization', '@id': 'https://coijournal.com/#publication', name: 'COI Journal', url: 'https://coijournal.com/' },
 };
 const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Forsured', url: SITE, publisher: { '@id': ORG['@id'] }, inLanguage: 'en-US' };
 
@@ -501,6 +504,8 @@ const FOOTER = () => `<footer><div class="edge">
       <h2>Company</h2>
       <a href="/blog/">Blog</a>
       <a href="/coi-requirements/">COI Requirements by State</a>
+      <a href="/research/">Research</a>
+      <a href="https://coijournal.com/">COI Journal</a>
       <a href="mailto:hello@forsured.ai">Contact</a>
       <a href="/#demo">Free COI Risk Check</a>
       <a href="/blog/feed.xml">RSS feed</a>
@@ -893,6 +898,7 @@ function sitemap(posts) {
     { url: '/blog/', priority: '0.8', lastmod: latest },
     ...posts.map((p) => ({ url: p.url, priority: '0.7', lastmod: day(p.updated) })),
     ...statePages().urls.map((url) => ({ url, priority: url === '/coi-requirements/' ? '0.8' : '0.6', lastmod: statePages().reviewed })),
+    { url: researchPages().url, priority: '0.7', lastmod: researchPages().updated },
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -943,6 +949,10 @@ ${posts.map((p) => `- [${p.title}](${SITE}${p.url}): ${p.description} Markdown: 
 ## Contractor insurance requirements by state
 
 ${statePages().llms}
+
+## Research from COI Journal
+
+${researchPages().llms}
 
 ## Optional
 
@@ -1005,6 +1015,12 @@ ${posts.map((p) => postMarkdown(p).replace(/^# /, '## ').replace(/\n(#{2,3}) /g,
 // ---------- state guides ----------
 // /coi-requirements/ and one page per state, from content/coi-requirements/states.js. They share this
 // file's page parts, so tools/states/pages.js is loaded once this module's exports are in place.
+let researchCache;
+function researchPages() {
+  if (!researchCache) researchCache = require('../research/pages').build();
+  return researchCache;
+}
+
 let stateCache;
 function statePages() {
   if (!stateCache) stateCache = require('../states/pages').build();
@@ -1029,6 +1045,7 @@ function build() {
     files.set(`blog/${p.slug}/index.md`, postMarkdown(p));
   }
   for (const [rel, content] of statePages().files) files.set(rel, content);
+  for (const [rel, content] of researchPages().files) files.set(rel, content);
   files.set('blog/feed.xml', feed(posts));
   files.set('sitemap.xml', sitemap(posts));
   files.set('robots.txt', ROBOTS);
