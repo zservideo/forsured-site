@@ -1,0 +1,86 @@
+{
+  "slug": "primary-and-noncontributory",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "slug_locked": true,
+  "questions": [
+    "What does primary and noncontributory mean on a COI?",
+    "Does CG 20 01 apply to the umbrella?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "primary and noncontributory",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "CG 20 01",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "additional insured",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "other insurance",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Section 11 #3 (Warren, Nov 13 2026), third post of the additional insured cluster. Facts from IRMI, Claims Journal (2013), County of Sonoma, Jones Day, ACORD 25 2025/12. Umbrella P&NC and vertical exhaustion not sourced yet; add when a reputable source is read.",
+  "competing_sources": [
+    {
+      "url": "https://www.irmi.com/term/insurance-definitions/primary-and-noncontributory",
+      "title": "primary and noncontributory (IRMI)",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "",
+      "what_we_cover_that_they_dont": "How policies respond, CG 20 01 conditions, checklist."
+    },
+    {
+      "url": "https://www.claimsjournal.com/news/national/2013/04/09/226615.htm",
+      "title": "ISO's CGL Changes for 2013, Part III",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Other 2013 forms.",
+      "what_we_cover_that_they_dont": "GC checklist, contribution outcomes."
+    },
+    {
+      "url": "https://sonomacounty.gov/administrative-support-and-fiscal-services/human-resources/divisions-and-units/liability-and-insurance/insurance/help-and-support/contract-insurance-requirements-reference-guide/additional-insured-endorsements",
+      "title": "Additional Insured Endorsements (County of Sonoma)",
+      "h2s": [
+        "Primary and Non-Contributory Coverage",
+        "Primary Coverage",
+        "Non-contributory Coverage"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Self-insurance context.",
+      "what_we_cover_that_they_dont": "CG 20 01 conditions, umbrella, checklist."
+    }
+  ],
+  "plan": {
+    "table": "How the two policies respond under each wording",
+    "internal_links": [
+      "/blog/per-written-contract-additional-insured/",
+      "/blog/completed-operations-additional-insured/",
+      "/blog/waiver-of-subrogation-coi/",
+      "/blog/per-project-aggregate-coi/",
+      "/blog/how-to-check-a-contractor-coi/"
+    ],
+    "external_links": [
+      "https://www.irmi.com/",
+      "https://www.claimsjournal.com/",
+      "https://sonomacounty.gov/",
+      "https://www.jonesday.com/",
+      "https://www.dfs.ny.gov/"
+    ],
+    "forsured_paragraph": "Forsured checks the primary and noncontributory endorsement behind every contractor COI against each project's requirements."
+  }
+}
