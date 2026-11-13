@@ -34,6 +34,8 @@ For a GC, that turns COI review from back-office cleanup into something you can 
 
 Want to see what your own contractor COI file would tell a carrier? That's what our free COI risk check is for.
 
+Underwriters are asking the question behind it: [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/) It isn't, and [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/) shows what to check instead.
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

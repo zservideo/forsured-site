@@ -45,6 +45,8 @@ New relationships are where insurance gaps hide. Before a new contractor mobiliz
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
 
+For each new contractor, the question is the same: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) The endorsements matter as much as the policy, starting with [primary and noncontributory](/blog/primary-and-noncontributory/) wording.
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

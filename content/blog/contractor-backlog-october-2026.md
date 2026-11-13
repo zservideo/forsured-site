@@ -81,3 +81,5 @@ Their insurance was usually bought for the work they normally do. A program that
 None of that shows up in a backlog number. It shows up when you read each contractor COI against the project requirements for the job in front of you, not the contractor's last one.
 
 Forsured checks every contractor COI against your project requirements and flags the gaps, so a competitive bid market doesn't bring a coverage gap with it.
+
+Which leads to the question that matters on every job, whatever the backlog: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)

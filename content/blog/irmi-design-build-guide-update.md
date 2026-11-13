@@ -66,3 +66,5 @@ Design-build shifts design responsibility to the builder's side of the contract.
 WTW's 2027 outlook expects contractor's professional liability to run flat to up 5% on annual programs and flat to up 10% on project-specific policies, so the coverage is available. The job is making sure the contractors who need it actually carry it, at the limits the project requires.
 
 IRMI's guides are a standard reference for construction risk teams, and this one is worth reading when it lands.
+
+Whatever the delivery method, the question is the same: [how do you check each contractor COI against the project requirements for its role?](/blog/how-to-check-a-contractor-coi/) A certificate alone won't answer it, because [a certificate of insurance isn't proof of coverage](/blog/compliance-isnt-coverage/).

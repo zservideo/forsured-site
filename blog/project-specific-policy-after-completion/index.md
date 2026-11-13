@@ -40,6 +40,8 @@ Some projects, like public-private toll roads, have the team that builds them al
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
 
+That's the question behind point 3: [does additional insured status cover you after the job is done?](/blog/completed-operations-additional-insured/) For the rest of the certificate, see [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/).
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

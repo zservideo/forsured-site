@@ -66,6 +66,8 @@ Suffolk Technologies is right that the trades deserve a better tech stack, built
 
 That's the layer we're building at Forsured. If you want to see what it looks like on your own paperwork, send us one project's requirements and a contractor COI or two at hello@forsured.ai, and we'll run a free check.
 
+Checking coverage starts with one question: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

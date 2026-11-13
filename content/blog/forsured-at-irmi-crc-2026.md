@@ -86,3 +86,5 @@ We came in using the general contractor's shorthand for the paperwork. By the en
 We're following up with everyone who asked to see Forsured on their own paperwork. If we didn't get to meet you at the Gaylord, the offer is the same: a free COI risk check, no strings attached. Send one project's requirements and a contractor COI or two to hello@forsured.ai, and we'll walk you through every gap we find.
 
 We'll also keep writing here every weekday about what's moving in construction insurance and contractor COI compliance. Thank you to IRMI and everyone in National Harbor who stopped to talk.
+
+If you're starting from scratch, begin with two questions: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) And [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/)

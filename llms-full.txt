@@ -1687,6 +1687,8 @@ None of that shows up in a backlog number. It shows up when you read each contra
 
 Forsured checks every contractor COI against your project requirements and flags the gaps, so a competitive bid market doesn't bring a coverage gap with it.
 
+Which leads to the question that matters on every job, whatever the backlog: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)
+
 ### About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
@@ -1918,6 +1920,8 @@ Those answers decide who pays when something goes wrong. They're also the slowes
 Suffolk Technologies is right that the trades deserve a better tech stack, built around the field. Its map already shows that insurance compliance is part of that stack. The next step is moving it from the end of the job to the start, and from checking paperwork to checking coverage.
 
 That's the layer we're building at Forsured. If you want to see what it looks like on your own paperwork, send us one project's requirements and a contractor COI or two at hello@forsured.ai, and we'll run a free check.
+
+Checking coverage starts with one question: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)
 
 ### About Forsured
 
@@ -2386,6 +2390,8 @@ New relationships are where insurance gaps hide. Before a new contractor mobiliz
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
 
+For each new contractor, the question is the same: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) The endorsements matter as much as the policy, starting with [primary and noncontributory](/blog/primary-and-noncontributory/) wording.
+
 ### About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
@@ -2464,6 +2470,8 @@ Some projects, like public-private toll roads, have the team that builds them al
 4. Remember a certificate won't show any of this. Get the policy wording or endorsements behind it.
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
+
+That's the question behind point 3: [does additional insured status cover you after the job is done?](/blog/completed-operations-additional-insured/) For the rest of the certificate, see [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/).
 
 ### About Forsured
 
@@ -2673,6 +2681,8 @@ Contractors usually set weather allowances in bids from rough estimates. Hall no
 ### What it means for project requirements
 
 If parametric cover starts showing up in project requirements, it becomes one more line to verify, with its own triggers, limits and named site. As with every coverage, the certificate is only the summary. The policy terms are what pay. Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
+
+The question behind it applies to every line on the certificate: [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/) For the full review, see [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/).
 
 ### About Forsured
 
@@ -2892,6 +2902,8 @@ We're following up with everyone who asked to see Forsured on their own paperwor
 
 We'll also keep writing here every weekday about what's moving in construction insurance and contractor COI compliance. Thank you to IRMI and everyone in National Harbor who stopped to talk.
 
+If you're starting from scratch, begin with two questions: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) And [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/)
+
 ### About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
@@ -3093,6 +3105,8 @@ Structured COI data turns that into a two-minute answer, and it's the same data 
 
 If you want that answer for one of your own projects, start with one project's requirements and a contractor COI or two.
 
+The question underneath is simple: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) For the endorsements behind the certificate, start with [completed operations additional insured coverage](/blog/completed-operations-additional-insured/).
+
 ### About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
@@ -3158,6 +3172,8 @@ Design-build shifts design responsibility to the builder's side of the contract.
 WTW's 2027 outlook expects contractor's professional liability to run flat to up 5% on annual programs and flat to up 10% on project-specific policies, so the coverage is available. The job is making sure the contractors who need it actually carry it, at the limits the project requires.
 
 IRMI's guides are a standard reference for construction risk teams, and this one is worth reading when it lands.
+
+Whatever the delivery method, the question is the same: [how do you check each contractor COI against the project requirements for its role?](/blog/how-to-check-a-contractor-coi/) A certificate alone won't answer it, because [a certificate of insurance isn't proof of coverage](/blog/compliance-isnt-coverage/).
 
 ### About Forsured
 
@@ -3364,6 +3380,8 @@ For a GC, that turns COI review from back-office cleanup into something you can 
 
 Want to see what your own contractor COI file would tell a carrier? That's what our free COI risk check is for.
 
+Underwriters are asking the question behind it: [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/) It isn't, and [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/) shows what to check instead.
+
 ### About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
@@ -3439,6 +3457,8 @@ Project requirements rarely bend to the market. If the contract calls for a $10 
 Put that next to a bidding market where, as Construction Dive reported from ABC's Anirban Basu, jobs that once drew 2 to 4 bids are drawing 12 to 16. Thin margins and rising umbrella costs push in the same direction: carry less, and hope nobody checks.
 
 So check umbrella first. On every contractor COI, confirm the umbrella or excess limit meets the project requirement, that it follows form over the underlying policies the contract requires, and that it won't expire before the work is done.
+
+So the question for each contractor on your jobs is whether its umbrella, aggregates and endorsements still match your project requirements. Start with [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/), and check the [per project aggregate](/blog/per-project-aggregate-coi/) while you're there.
 
 ### The upside at your own renewal
 
