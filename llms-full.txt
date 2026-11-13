@@ -2406,7 +2406,7 @@ Other courts have read similar per written contract language both ways. [IRMI](h
 ISO's two construction blanket additional insured forms answer the privity question differently.
 
 Table: CG 20 33 and CG 20 38 compared, per IA Magazine and Jones Day
-| | CG 20 33 | CG 20 38 |
+| Question | CG 20 33 | CG 20 38 |
 |---|---|---|
 | Who it adds | Parties the named insured has a written construction agreement with | Those parties, plus other parties that agreement requires it to add |
 | Privity of contract | Required | Not necessarily required |
