@@ -84,6 +84,8 @@ Put that next to a bidding market where, as Construction Dive reported from ABC'
 
 So check umbrella first. On every contractor COI, confirm the umbrella or excess limit meets the project requirement, that it follows form over the underlying policies the contract requires, and that it won't expire before the work is done.
 
+So the question for each contractor on your jobs is whether its umbrella, aggregates and endorsements still match your project requirements. Start with [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/), and check the [per project aggregate](/blog/per-project-aggregate-coi/) while you're there.
+
 ## The upside at your own renewal
 
 WTW notes that carriers give favorable underwriting consideration to strong management of the trades a firm hires. A record showing every contractor checked against project requirements, with each gap tracked to a fix, is the kind of evidence an underwriter can use. A folder of unread certificates isn't.

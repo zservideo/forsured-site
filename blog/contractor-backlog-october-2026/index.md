@@ -45,6 +45,8 @@ None of that shows up in a backlog number. It shows up when you read each contra
 
 Forsured checks every contractor COI against your project requirements and flags the gaps, so a competitive bid market doesn't bring a coverage gap with it.
 
+Which leads to the question that matters on every job, whatever the backlog: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

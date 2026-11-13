@@ -34,6 +34,8 @@ Structured COI data turns that into a two-minute answer, and it's the same data 
 
 If you want that answer for one of your own projects, start with one project's requirements and a contractor COI or two.
 
+The question underneath is simple: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) For the endorsements behind the certificate, start with [completed operations additional insured coverage](/blog/completed-operations-additional-insured/).
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

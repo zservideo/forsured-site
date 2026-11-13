@@ -98,3 +98,5 @@ Some projects, like public-private toll roads, have the team that builds them al
 4. Remember a certificate won't show any of this. Get the policy wording or endorsements behind it.
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
+
+That's the question behind point 3: [does additional insured status cover you after the job is done?](/blog/completed-operations-additional-insured/) For the rest of the certificate, see [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/).

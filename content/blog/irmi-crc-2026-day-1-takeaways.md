@@ -71,3 +71,5 @@ WTW's outlook says carriers give favorable underwriting consideration to firms w
 For a GC, that turns COI review from back-office cleanup into something you can show a carrier at renewal: every contractor checked against project requirements, every gap tracked to a fix.
 
 Want to see what your own contractor COI file would tell a carrier? That's what our free COI risk check is for.
+
+Underwriters are asking the question behind it: [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/) It isn't, and [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/) shows what to check instead.

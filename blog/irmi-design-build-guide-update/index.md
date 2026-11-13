@@ -30,6 +30,8 @@ WTW's 2027 outlook expects contractor's professional liability to run flat to up
 
 IRMI's guides are a standard reference for construction risk teams, and this one is worth reading when it lands.
 
+Whatever the delivery method, the question is the same: [how do you check each contractor COI against the project requirements for its role?](/blog/how-to-check-a-contractor-coi/) A certificate alone won't answer it, because [a certificate of insurance isn't proof of coverage](/blog/compliance-isnt-coverage/).
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

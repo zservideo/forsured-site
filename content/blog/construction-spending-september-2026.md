@@ -81,3 +81,5 @@ New relationships are where insurance gaps hide. Before a new contractor mobiliz
 3. Track expiration dates from day one, so coverage doesn't lapse mid-project.
 
 Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
+
+For each new contractor, the question is the same: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) The endorsements matter as much as the policy, starting with [primary and noncontributory](/blog/primary-and-noncontributory/) wording.

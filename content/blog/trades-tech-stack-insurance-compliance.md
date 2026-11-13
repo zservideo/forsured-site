@@ -106,3 +106,5 @@ Those answers decide who pays when something goes wrong. They're also the slowes
 Suffolk Technologies is right that the trades deserve a better tech stack, built around the field. Its map already shows that insurance compliance is part of that stack. The next step is moving it from the end of the job to the start, and from checking paperwork to checking coverage.
 
 That's the layer we're building at Forsured. If you want to see what it looks like on your own paperwork, send us one project's requirements and a contractor COI or two at hello@forsured.ai, and we'll run a free check.
+
+Checking coverage starts with one question: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/)

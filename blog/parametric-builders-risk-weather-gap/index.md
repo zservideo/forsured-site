@@ -45,6 +45,8 @@ Contractors usually set weather allowances in bids from rough estimates. Hall no
 
 If parametric cover starts showing up in project requirements, it becomes one more line to verify, with its own triggers, limits and named site. As with every coverage, the certificate is only the summary. The policy terms are what pay. Forsured checks each contractor COI against the coverage a project actually requires, for the life of the job.
 
+The question behind it applies to every line on the certificate: [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/) For the full review, see [how to read a certificate of insurance](/blog/how-to-check-a-contractor-coi/).
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.

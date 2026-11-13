@@ -1,0 +1,90 @@
+{
+  "slug": "per-project-aggregate-coi",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "slug_locked": true,
+  "questions": [
+    "What does per project aggregate mean on a COI?",
+    "Does CG 25 03 cover completed operations?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "per project aggregate",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "general aggregate",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "CG 25 03",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "products-completed operations",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Section 11 #3 (Warren, Nov 13 2026), fifth post of the additional insured cluster. Facts from IRMI (2 terms), CG 25 03 05 09 (NY OGS), Insureon (Jul 20 2026), ACORD 25 2025/12. Removed the earlier claim that a schedule can say 'all projects': the form doesn't say that. Products-completed per project form not named; IRMI names no number.",
+  "competing_sources": [
+    {
+      "url": "https://www.insureon.com/small-business-insurance/general-liability/per-project-aggregate-endorsement",
+      "title": "Per project aggregate endorsement (Insureon)",
+      "h2s": [
+        "What is a per-project aggregate endorsement in general liability insurance?",
+        "How does a per-project aggregate endorsement affect general liability coverage limits?",
+        "How much does a per-project aggregate endorsement cost?",
+        "Who needs a per-project aggregate endorsement?",
+        "Is per-project aggregate coverage different than products-completed aggregate coverage?",
+        "How do I get a per-project aggregate endorsement?"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Worked claim example, cost factors.",
+      "what_we_cover_that_they_dont": "Form paragraphs A to D, ACORD 25 fields, GC checklist."
+    },
+    {
+      "url": "https://www.irmi.com/term/insurance-definitions/designated-construction-project-general-aggregate-limit-endorsement",
+      "title": "designated construction project general aggregate limit endorsement (IRMI)",
+      "h2s": [
+        "Related Terms"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "",
+      "what_we_cover_that_they_dont": "How to check it."
+    },
+    {
+      "url": "https://ogs.ny.gov/spc-exhibit-21",
+      "title": "CG 25 03 05 09 form",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Full form text.",
+      "what_we_cover_that_they_dont": "Plain English, checklist."
+    }
+  ],
+  "plan": {
+    "table": "Which aggregate a claim reduces under CG 25 03",
+    "internal_links": [
+      "/blog/completed-operations-additional-insured/",
+      "/blog/per-written-contract-additional-insured/",
+      "/blog/primary-and-noncontributory/",
+      "/blog/waiver-of-subrogation-coi/",
+      "/blog/how-to-check-a-contractor-coi/"
+    ],
+    "external_links": [
+      "https://www.irmi.com/",
+      "https://ogs.ny.gov/",
+      "https://www.insureon.com/",
+      "https://www.dfs.ny.gov/"
+    ],
+    "forsured_paragraph": "Forsured checks each contractor COI against your project requirements, including the per project aggregate endorsement behind the limits shown."
+  }
+}

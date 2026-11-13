@@ -45,6 +45,8 @@ We're following up with everyone who asked to see Forsured on their own paperwor
 
 We'll also keep writing here every weekday about what's moving in construction insurance and contractor COI compliance. Thank you to IRMI and everyone in National Harbor who stopped to talk.
 
+If you're starting from scratch, begin with two questions: [how do you check a contractor COI against your project requirements?](/blog/how-to-check-a-contractor-coi/) And [is a certificate of insurance proof of coverage?](/blog/compliance-isnt-coverage/)
+
 ## About Forsured
 
 Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
