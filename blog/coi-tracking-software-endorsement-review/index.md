@@ -2,7 +2,7 @@
 
 > Almost every COI tracking tool now says it checks endorsements. What differs is how far it reads: the form type, a list of required forms, the wording, or the full policy. Here's where eight tools land, from their own pages.
 
-Published Nov 12, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-endorsement-review/
+Published Nov 12, 2026, updated Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-endorsement-review/
 
 ![Four depths of endorsement review in COI tracking software: names the endorsement type, flags missing required forms, reads the wording, reads the full policy](https://forsured.ai/blog/coi-tracking-software-endorsement-review/hero.png)
 
@@ -34,7 +34,7 @@ Depth 3 is where most construction gaps get caught, because that's where blanket
 
 | Tool | Deepest review described | Endorsements named on its page | Final call |
 |---|---|---|---|
-| [Forsured](https://forsured.ai/blog/coi-tracking-software-endorsement-review/#forsured) | Reads the wording against project requirements | Additional insured for ongoing and completed operations, waiver of subrogation, primary and noncontributory, umbrella limits | A person on your team |
+| [Forsured](https://forsured.ai/blog/coi-tracking-software-endorsement-review/#forsured) | Reads each endorsement against project requirements | Additional insured for ongoing operations (CG 20 10), umbrella limits | A person on your team |
 | [PINS Advantage](https://forsured.ai/blog/coi-tracking-software-endorsement-review/#pins-advantage) | Reads the wording | Additional insured for ongoing and completed operations (CG D3 81 vs CG 20 10 and CG 20 37), primary and noncontributory, waiver of subrogation | A person, nothing auto-approved |
 | [TrustLayer](https://forsured.ai/blog/coi-tracking-software-endorsement-review/#trustlayer) | Reads the wording | Additional insured and equivalents, primary and noncontributory, waiver of subrogation, completed operations, blanket vs scheduled | A person confirms |
 | [illumend](https://forsured.ai/blog/coi-tracking-software-endorsement-review/#illumend) | Reads the wording | Additional insured, waiver of subrogation, primary and noncontributory, per project aggregates | AI |
@@ -45,7 +45,7 @@ Depth 3 is where most construction gaps get caught, because that's where blanket
 
 ### Forsured: reads the wording against the project's requirements
 
-Forsured reads each certificate and endorsement against the requirements of the project the contractor is on, including project-level exceptions. Each gap comes with its reason, such as a missing ongoing operations additional insured endorsement (CG 20 10), a completed operations endorsement that doesn't match the project, or an umbrella below the required aggregate. The contractor's broker sees the requirement, the document and the project in one shared workspace. AI finds and explains each issue, and a person on your team approves or waives it.
+Forsured reads each certificate and endorsement against the requirements of the project the contractor is on, including project-level exceptions. Each gap comes with its reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The contractor's broker sees the requirement, the document and the project in one shared workspace. AI finds and explains each issue, and a person on your team approves or waives it.
 
 ### PINS Advantage: reads the wording, with the page linked
 
