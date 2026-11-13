@@ -21,6 +21,10 @@ The answers were consistent enough that we want to share them. Nobody below is n
 
 The complaint we heard most came from people already paying for COI tracking. Their tools flag everything. Certificates get rejected over small formatting issues, contractors get frustrated, and the alerts that matter (a lapsed policy, an umbrella below the project requirement, an additional insured endorsement without completed operations) get lost in the noise.
 
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
+
 What they want is a review that reads the certificate and the endorsements the way a risk manager would, ranks what actually exposes the project, and says why.
 
 ## 2. Brokers want data for renewals

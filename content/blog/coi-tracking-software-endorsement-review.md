@@ -103,6 +103,8 @@ Depth 3 is where most construction gaps get caught, because that's where blanket
 
 Forsured reads each certificate and endorsement against the requirements of the project the contractor is on, including project-level exceptions. Each gap comes with its reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The contractor's broker sees the requirement, the document and the project in one shared workspace. AI finds and explains each issue, and a person on your team approves or waives it.
 
+::video ZfDXobNtztQ
+
 ### PINS Advantage: reads the wording, with the page linked {#pins-advantage}
 
 [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) say their AI reads every endorsement in full and "confirms ongoing and completed operations coverage, including whether a CG D3 81 meets a CG 20 10 and CG 20 37 requirement." They check primary and noncontributory and waiver of subrogation wording, and flag restrictive language such as privity of contract limits. Each answer is pass, fail or needs review, with reasoning and a link to the exact page. Their line on depth: "the wording matters more than the form number." Nothing is auto-approved.

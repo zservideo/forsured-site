@@ -61,6 +61,15 @@ A line on its own like `![Alt text that says what it shows](chart.png "Optional 
 `blog/<slug>/chart.png` in the post with its size set. Use it for a chart or diagram that makes a
 point faster than text. PNG only, at least 1400px wide, in the brand style.
 
+### Videos
+
+A line on its own like `::video ZfDXobNtztQ` embeds an Ask the Construction Guy video from
+`content/videos.json`: a click-to-play player (only the poster image loads until a reader presses
+play), the ownership disclosure, the transcript as a quote, and a `VideoObject` in the post's
+structured data. The RSS feed and the Markdown copy get a link and the transcript instead. Put the
+line after a section's first paragraph, never above the answer. At most two per post. These videos
+promote Forsured, so they never go on COI Journal or `/research/`.
+
 Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor by hand), paragraphs, `-` and `1.` lists, `>` quotes
 (`> quote -- Name, Title`), tables, `**bold**`, `*italic*` and `[links](https://...)`.
 

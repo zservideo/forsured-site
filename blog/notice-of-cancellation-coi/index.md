@@ -30,6 +30,10 @@ So the real question is what the policy says. Standard cancellation conditions r
 
 It's tempting to ask the agent to type a note into the ACORD 25 description box, such as "30 days' notice to the certificate holder." That doesn't create the right.
 
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
+
 New York put this in statute. [Insurance Law section 502](https://www.nysenate.gov/legislation/laws/ISC/502) says a certificate "shall not amend, extend, or alter the coverage" of the policy it refers to, and "shall further not confer to any person any rights beyond those expressly provided by the policy." It also bars anyone from willfully requiring certificate language the policy "does not expressly include." [New York's Department of Financial Services](https://www.dfs.ny.gov/apps_and_licensing/insurance_companies/certificates_of_insurance) traces the rules to a new Article 5 of the Insurance Law, added by laws passed in 2014 and 2015.
 
 The certificate summarizes. The policy decides.
@@ -53,6 +57,10 @@ Table: Ways to learn a contractor's policy was canceled or lapsed
 | An insurer endorsement that schedules you | Cancellation, with written notice for the days set in its schedule | Policies without the endorsement |
 | A renewal certificate before each POLICY EXP date | Policies that expire without renewal | Cancellation before the expiration date |
 | Ongoing verification of each contractor COI | Cancellations and expirations, for the life of the job | Nothing, if it runs on every policy your requirements list |
+
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
 
 **Ask for a notice of cancellation endorsement.** The fix is an insurer endorsement that schedules you to receive notice. [BCS's](https://www.getbcs.com/blog/2011/08/02/how-to-obtain-a-30-day-notice-of-cancellation-despite-the-new-acord-form) example: "we agree to mail prior written notice of cancellation to the person(s) or organization(s) shown in the Schedule." Another sample BCS quotes gives at least 60 days' written notice of cancellation, or at least 10 days in the case of nonpayment of premium. BCS also warned these endorsements "are not generally available and are used sparingly by Insurers," so ask early.
 

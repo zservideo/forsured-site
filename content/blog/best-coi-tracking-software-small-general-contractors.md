@@ -95,6 +95,8 @@ Skip the feature grid for a minute. For a small general contractor, four things 
 
 **Forsured** reads each COI and endorsement against the requirements of the project the subcontractor is on, and puts the broker in a shared workspace where they see the gap, the requirement and the project. A person on your team approves or waives every result. Onboarding is by waitlist, pricing is by quote, and there's no managed review service. You can test it free with a [free COI risk check](/#demo): send one project's requirements and a contractor COI or two.
 
+::video FpMactV_neg
+
 **Jones** prices per vendor record per property, billed annually, and never charges vendors or subcontractors. It fits small GCs that also own property. Most broker follow-up sits in the Operator tier.
 
 **illumend**, the AI platform from myCOI, lets AI make the compliance call and escalates only what it can't resolve. Pricing isn't published.

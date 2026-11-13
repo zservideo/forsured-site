@@ -38,6 +38,10 @@ Don't put a made-up claim figure in front of a CFO. Instead:
 - Note what was missing: completed operations, umbrella limit, waiver of subrogation, primary and noncontributory.
 - Ask your broker what that gap would mean on a claim.
 
+Video: [Insurance compliance is the elephant on every jobsite](https://www.youtube.com/shorts/jtpqI6e48kw) (0:30). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: There's an elephant on every job site, and it's not the crane. We talk schedule, we talk budget, we talk safety all day. Nobody talks insurance until something breaks. And when it breaks, it's expensive and it's got your name on it. You can't ignore it. You've got to lean into it and figure it out somehow. That's why I got into Forsured. It deals with the elephant so my team doesn't have to.
+
 That's a real number of real gaps. It's more persuasive than a statistic. If you want a starting point, our [free COI risk check](/#demo) reviews one project's requirements against a contractor COI or two.
 
 ## Part 4: Price the options

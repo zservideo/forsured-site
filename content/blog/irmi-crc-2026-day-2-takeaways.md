@@ -63,6 +63,8 @@ The coverage you negotiated only holds if the endorsement on the contractor's po
 
 "The Prequalification Puzzle" was on Tuesday's agenda, and it's a good reminder of how much happens after a contractor clears prequal. A contractor COI that passed in March can be out of compliance by July. Policies renew with new terms, lapse for nonpayment and get re-endorsed mid-project.
 
+::video 7svNMPuxtOQ
+
 Prequalification answers "can this firm do the work?" It was never built to answer "is this firm covered today, for this project?"
 
 ## 3. Insurance data you can't search is its own risk

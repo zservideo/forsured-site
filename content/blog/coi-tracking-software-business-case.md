@@ -64,6 +64,8 @@ Don't put a made-up claim figure in front of a CFO. Instead:
 - Note what was missing: completed operations, umbrella limit, waiver of subrogation, primary and noncontributory.
 - Ask your broker what that gap would mean on a claim.
 
+::video jtpqI6e48kw
+
 That's a real number of real gaps. It's more persuasive than a statistic. If you want a starting point, our [free COI risk check](/#demo) reviews one project's requirements against a contractor COI or two.
 
 ## Part 4: Price the options

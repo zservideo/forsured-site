@@ -31,7 +31,7 @@ const WRITING = [
 ];
 
 const words = (s) => (String(s).trim().match(/\S+/g) || []).length;
-const plain = (md) => String(md).replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\{#[a-z0-9-]+\}/g, '').replace(/[*`|>#]/g, ' ').replace(/^-{3,}$/gm, ' ');
+const plain = (md) => String(md).replace(/^::video .*$/gm, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\{#[a-z0-9-]+\}/g, '').replace(/[*`|>#]/g, ' ').replace(/^-{3,}$/gm, ' ');
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const count = (hay, needle) => (hay.toLowerCase().match(new RegExp(needle.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
 
