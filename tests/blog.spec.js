@@ -9,6 +9,12 @@ const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { ROOT, PAGES, POSTS, open, read } = require('./helpers');
+const { readPosts } = require('../tools/blog/build');
+// Library posts are full posts kept off the blog index, the feed and email; /guides/ lists them with
+// every buyer's guide.
+const LIBRARY = readPosts().filter((p) => p.library).map((p) => p.slug);
+const FEED = POSTS.filter((s) => !LIBRARY.includes(s));
+const GUIDE_POSTS = readPosts().filter((p) => p.library || p.category === "Buyer's guide").map((p) => p.slug);
 
 test.beforeEach(({}, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'source checks run once');
@@ -31,10 +37,10 @@ test('every post in content/blog was built', () => {
   expect(POSTS.length).toBe(sources.length - drafts.length);
 });
 
-test('the blog index links to every post, newest first', async ({ page }) => {
+test('the blog index links to every post except library posts, newest first', async ({ page }) => {
   await open(page, '/blog/', { fonts: false });
   const hrefs = await page.locator('main a[href^="/blog/"]').evaluateAll((as) => [...new Set(as.map((a) => a.getAttribute('href')))]);
-  expect(hrefs.sort()).toEqual(POSTS.map((s) => `/blog/${s}/`).sort());
+  expect(hrefs.sort()).toEqual(FEED.map((s) => `/blog/${s}/`).sort());
   const dates = await page.locator('main time').evaluateAll((ts) => ts.map((t) => t.getAttribute('datetime')));
   expect(dates).toEqual([...dates].sort().reverse());
 });
@@ -222,8 +228,24 @@ test('RSS feed lists every post with full text', async ({ request }) => {
   expect(res.status()).toBe(200);
   const xml = await res.text();
   expect(xml).toMatch(/^<\?xml/);
-  for (const slug of POSTS) expect(xml).toContain(`<guid isPermaLink="true">https://forsured.ai/blog/${slug}/</guid>`);
-  expect((xml.match(/<content:encoded>/g) || []).length).toBe(POSTS.length);
+  for (const slug of FEED) expect(xml).toContain(`<guid isPermaLink="true">https://forsured.ai/blog/${slug}/</guid>`);
+  expect((xml.match(/<content:encoded>/g) || []).length).toBe(FEED.length);
+});
+
+// Library posts ("library": true) build up reference guides without flooding the blog: no index card,
+// no feed item, no subscriber email. They must still be findable: the sitemap, llms.txt and /guides/.
+test('library posts stay off the blog index, feed and email but are listed on /guides/', async ({ page, request }) => {
+  const xml = await (await request.get('/blog/feed.xml')).text();
+  const llms = await (await request.get('/llms.txt')).text();
+  for (const slug of LIBRARY) {
+    expect(xml, slug).not.toContain(`<guid isPermaLink="true">https://forsured.ai/blog/${slug}/</guid>`);
+    expect(require('fs').existsSync(path.join(ROOT, 'blog', slug, 'email.json')), `${slug} email.json`).toBe(false);
+    expect(llms, slug).toContain(`https://forsured.ai/blog/${slug}/`);
+  }
+  await open(page, '/guides/', { fonts: false });
+  const hrefs = await page.locator('main a[href^="/blog/"]').evaluateAll((as) => as.map((a) => a.getAttribute('href')));
+  expect(hrefs.sort()).toEqual(GUIDE_POSTS.map((s) => `/blog/${s}/`).sort());
+  for (const slug of LIBRARY) await expect(page.locator(`a[href="/blog/${slug}/"]`)).toBeVisible();
 });
 
 test('sitemap lists every public page', async ({ request }) => {
@@ -351,7 +373,7 @@ test('welcome email (tools/blog/email.js --welcome) links three posts and the fr
 test('every post publishes the email Make sends subscribers (blog/<slug>/email.json)', () => {
   const { email } = require('../tools/blog/email');
   const { readPosts } = require('../tools/blog/build');
-  for (const p of readPosts()) {
+  for (const p of readPosts().filter((p) => !p.library)) {
     const j = JSON.parse(read(`blog/${p.slug}/email.json`));
     expect(j, p.slug).toEqual({ subject: email(p).subject, html: email(p).html });
     expect(j.html, p.slug).toContain('Hi there,');

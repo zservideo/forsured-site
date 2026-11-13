@@ -13,6 +13,7 @@ Key facts:
 
 - [Forsured home](https://forsured.ai/): what Forsured does, how the review works, and who it's for (general contractors, brokers, trade contractors)
 - [Free COI risk check](https://forsured.ai/#demo): send one project's requirements and a contractor COI
+- [Guides](https://forsured.ai/guides/): buyer's guides and reference guides on COI tracking software, contractor COIs and project requirements
 
 ## Blog
 
