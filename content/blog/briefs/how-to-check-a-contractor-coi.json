@@ -1,0 +1,33 @@
+{
+  "slug": "how-to-check-a-contractor-coi",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager or project manager",
+  "pillar": "/blog/compliance-isnt-coverage/",
+  "questions": [
+    "How do I read a certificate of insurance to check whether coverage meets our contract requirements?",
+    "What are the most common gaps in contractor insurance certificates on construction projects?"
+  ],
+  "target_keywords": [
+    { "kw": "contractor COI", "vol": null, "kd": null },
+    { "kw": "how to read a certificate of insurance", "vol": 210, "kd": null },
+    { "kw": "certificate of insurance", "vol": null, "kd": null },
+    { "kw": "ACORD 25", "vol": null, "kd": null },
+    { "kw": "project requirements", "vol": null, "kd": null }
+  ],
+  "notes": "Section 11 item 1 (Warren, Nov 13 2026). Slug kept for existing links, so the primary keyword is the slug phrase; 'how to read a certificate of insurance' carries the title, H1, description and 5 body uses. Pillar link points to compliance-isnt-coverage until the COI pillar (Backlog #1) ships, then repoint.",
+  "competing_sources": [
+    { "url": "https://www.getbcs.com/blog/how-to-read-a-certificate-of-insurance-a-field-by-field-guide", "title": "How to Read a Certificate of Insurance: a Field-by-Field Guide", "h2s": ["What to Check First on a Certificate of Insurance", "What a certificate of insurance shows, and what it doesn't", "The producer and insured section", "Coverage types decoded", "Policy limits explained", "Certificate holder vs. additional insured", "Expiration dates and the compliance window", "Red flags", "What a certificate of insurance cannot tell you", "Frequently asked questions"], "faqs": ["What is an ACORD 25 form?", "What's the difference between a certificate holder and an additional insured?", "Does a certificate of insurance guarantee coverage?", "What does 'per occurrence' mean on a COI?", "Can a vendor's insurance lapse after a certificate is issued?", "How long should I keep certificates of insurance on file?"], "what_they_cover_that_we_dont": "Coverage-type primer for each line; record retention.", "what_we_cover_that_they_dont": "Endorsement form numbers, per project aggregate, the 2025/12 limits note, state rules, a broker fix note." },
+    { "url": "https://billyforinsurance.com/resources/acord-25-explained/", "title": "ACORD 25 Explained Box by Box: How to Read the COI Form", "h2s": ["Key takeaways", "What an ACORD 25 actually is", "Box-by-box walkthrough of the ACORD 25", "The GC review checklist", "Why the certificate alone isn't enough", "Common mistakes and fraud red flags", "Frequently asked questions"], "faqs": ["What is the difference between ACORD 25 and ACORD 27 or 28?", "How long is a certificate of insurance valid?", "Can an ACORD 25 be faked?", "What should I do if a subcontractor will not provide endorsements?", "Are the certificate holder and additional insured the same?"], "what_they_cover_that_we_dont": "Fraud red flags; ACORD 27/28.", "what_we_cover_that_they_dont": "Form text quoted from the 2025/12 edition, state rules, broker fix note." },
+    { "url": "https://getjones.com/blog/coi-certificates-explained-what-to-look-for-on-an-acord-form", "title": "COI Certificates Explained: What to Look for on an ACORD Form", "h2s": ["What Is a COI Certificate?", "The ACORD 25: What It Covers (And What It Doesn't)", "7 Red Flags to Watch for on Every COI", "Why Policy Review Matters More Than the Certificate"], "faqs": [], "what_they_cover_that_we_dont": "Scenario examples per box.", "what_we_cover_that_they_dont": "FAQ, per project aggregate, state rules, fix script." },
+    { "url": "https://www.insureon.com/blog/how-to-read-a-certificate-of-insurance-form", "title": "How to Read a Certificate of Insurance Form", "h2s": ["Why is a certificate of insurance important?", "What are the main sections of a certificate of insurance form?", "How to review a certificate of insurance", "Is a certificate of insurance form the same as an insurance policy?"], "faqs": [], "what_they_cover_that_we_dont": "Small business framing.", "what_we_cover_that_they_dont": "Everything construction-specific: endorsements, aggregate, completed operations." },
+    { "url": "https://amtrustfinancial.com/getmedia/35303f0c-4a43-449b-bcb0-0fd07c75b947/Reviewing-Certificates-of-Insurance.pdf", "title": "Reviewing Certificates of Insurance (ISO Services, 2013)", "h2s": ["Types of Certificates", "Certificate Review", "Deficient Certificates"], "faqs": [], "what_they_cover_that_we_dont": "Certificate types beyond ACORD 25.", "what_we_cover_that_they_dont": "Field-by-field table and endorsement guidance." }
+  ],
+  "plan": {
+    "h2s": ["What do you need before you read a certificate of insurance?", "What does each ACORD 25 field tell you?", "What doesn't a contractor COI tell you?", "What are the most common gaps on a contractor COI?", "How do state rules change what you check on a certificate of insurance?", "How do you get a gap on a contractor COI fixed?"],
+    "faqs": 6,
+    "table": "ACORD 25 field by field: what it shows and what to check against project requirements",
+    "internal_links": ["/blog/compliance-isnt-coverage/", "/blog/notice-of-cancellation-coi/", "/blog/completed-operations-additional-insured/", "/blog/per-project-aggregate-coi/", "/blog/waiver-of-subrogation-coi/", "/blog/primary-and-noncontributory/", "/coi-requirements/"],
+    "external_links": ["https://www.acord.org/", "https://www.dfs.ny.gov/", "https://www.irmi.com/", "https://amtrustfinancial.com/"],
+    "forsured_paragraph": "Forsured reads the certificate and the endorsement forms attached to each contractor COI, checks them against the requirements set for that project, and flags every line that falls short."
+  }
+}
