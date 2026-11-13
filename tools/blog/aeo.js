@@ -135,7 +135,8 @@ function check(p, brief, html, authors = readAuthors()) {
     for (const [where, text] of [['title tag', seoTitle], ['H1', p.title], ['first paragraph', plain(p.dek)], ['meta description', p.description]]) {
       if (!text.toLowerCase().includes(primary.toLowerCase())) miss('S9', `primary keyword "${primary}" missing from the ${where}`);
     }
-    if (!p.slug.includes(slugify(primary))) miss('S9', `primary keyword "${primary}" missing from the URL slug`);
+    // An existing post keeps its URL (links and citations point at it): its brief sets "slug_locked": true.
+    if (!brief.slug_locked && !p.slug.includes(slugify(primary))) miss('S9', `primary keyword "${primary}" missing from the URL slug`);
   }
 
   // L1, L2, L3: links.

@@ -1,0 +1,28 @@
+{
+  "slug": "compliance-isnt-coverage",
+  "slug_locked": true,
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "questions": ["Why isn't a COI alone enough to prove a contractor is properly insured?", "Is a certificate of insurance proof of coverage?"],
+  "target_keywords": [
+    { "kw": "certificate of insurance", "vol": 2400, "kd": null },
+    { "kw": "proof of coverage", "vol": null, "kd": null },
+    { "kw": "contractor COI", "vol": null, "kd": null },
+    { "kw": "additional insured", "vol": 720, "kd": 27 },
+    { "kw": "project requirements", "vol": null, "kd": null }
+  ],
+  "notes": "Section 11 #2 and Sprint 2 Fix P4 (Warren, Nov 13 2026). Slug kept for existing links. Pillar (Backlog #1, what is a certificate of insurance) not built yet; link up to it once it ships. Taft bulletin is from 2011, so cited only for the Ohio minority view.",
+  "competing_sources": [
+    { "url": "https://getjones.com/blog/coi-vs-policy-how-to-close-the-risk-gap/", "title": "COI vs Policy: What Certificates of Insurance Don't Tell You", "h2s": ["What Is a COI (and What Is It Missing)?", "Why Relying on a COI Alone Is Risky", "Exclusions That Certificates of Insurance (COIs) Can Hide", "Frequently Asked Questions (FAQs)"], "faqs": ["Why isn't a Certificate of Insurance (COI) enough to verify insurance coverage?", "What types of insurance gaps can only be found in the full policy?", "How does full policy review improve insurance compliance?"], "what_they_cover_that_we_dont": "Longer exclusion list.", "what_we_cover_that_they_dont": "Case law, 2025/12 limits note, state rules, a show-vs-decides table." },
+    { "url": "https://www.rmmagazine.com/articles/article/2021/10/01/the-limitations-of-certificates-of-insurance", "title": "The Limitations of Certificates of Insurance", "h2s": ["What Is a COI?", "What a COI Is Not", "No Proof of Insurance", "The Future of the COI"], "faqs": [], "what_they_cover_that_we_dont": "Future of COI technology.", "what_we_cover_that_they_dont": "Endorsement and aggregate specifics, FAQ, what to check." },
+    { "url": "https://www.taftlaw.com/news-events/law-bulletins/be-careful-with-certificates-of-insurance-on-construction-projects/", "title": "Be Careful With Certificates Of Insurance On Construction Projects", "h2s": [], "faqs": [], "what_they_cover_that_we_dont": "Contract language tips (2011).", "what_we_cover_that_they_dont": "Current form text, field-level checks." },
+    { "url": "https://www.koleyjessen.com/insights/publications/certificates-of-insurance-proceed-with-caution", "title": "Certificates of Insurance: Proceed with Caution", "h2s": ["Issues with a Certificate of Insurance", "What Happens if the Certificate of Insurance is Wrong?", "Best Practices for Contractors to Minimize Risk Related to Certificates of Insurance"], "faqs": [], "what_they_cover_that_we_dont": "Nothing material.", "what_we_cover_that_they_dont": "Named cases, endorsements, table, FAQ." },
+    { "url": "https://www.illumend.ai/insurance-knowledge/why-a-certificate-of-insurance-is-not-enough-and-what-to-do-about-it", "title": "Why a Certificate of Insurance Is Not Enough (and What To Do About It)", "h2s": [], "faqs": [], "what_they_cover_that_we_dont": "Not read (redirect from mycoitracking.com not followed); recheck next review.", "what_we_cover_that_they_dont": "" }
+  ],
+  "plan": {
+    "table": "What a contractor COI shows vs what decides coverage",
+    "internal_links": ["/blog/how-to-check-a-contractor-coi/", "/blog/completed-operations-additional-insured/", "/blog/per-written-contract-additional-insured/", "/blog/per-project-aggregate-coi/", "/blog/notice-of-cancellation-coi/", "/coi-requirements/"],
+    "external_links": ["https://www.irmi.com/", "https://www.dfs.ny.gov/", "https://www.koleyjessen.com/", "https://www.taftlaw.com/", "https://www.rmmagazine.com/", "https://www.wtwco.com/"],
+    "forsured_paragraph": "Forsured checks each contractor COI and its endorsement forms against the requirements set for that project, flags each gap for your team to approve, and keeps checking for the life of the job."
+  }
+}
