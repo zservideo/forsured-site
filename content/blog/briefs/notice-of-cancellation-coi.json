@@ -1,0 +1,89 @@
+{
+  "slug": "notice-of-cancellation-coi",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "slug_locked": true,
+  "questions": [
+    "Will a COI tell you if a contractor's policy is canceled?",
+    "What happens to a GC when a contractor's insurance lapses mid-project?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "notice of cancellation",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "ACORD 25",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "lapse",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "workers' compensation",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Section 11 #4 (Warren, Nov 13 2026): expanded toward Sprint 3 P6 (coverage lapse mid-project). Facts from ACORD 25 2025/12, NY Ins. Law 502, NY DFS, BCS (2011), Minnesota DLI (Feb 2025), Construction Executive (2021), Amwins (Jul 2025). No source read describes what an insurer owes a certificate holder after a mid-term cancellation; not claimed. Other states' statutory employer rules not yet sourced. Link the planned coverage-lapse-mid-project post once live.",
+  "competing_sources": [
+    {
+      "url": "https://www.getbcs.com/blog/2011/08/02/how-to-obtain-a-30-day-notice-of-cancellation-despite-the-new-acord-form",
+      "title": "New ACORD Form & 30-Day Notice of Cancellation (BCS)",
+      "h2s": [
+        "ACORD Changes",
+        "Option 1: Insurer Issued Cancellation Endorsements",
+        "Option 2: A Miscellaneous Attachment to the ACORD 25 Certificate",
+        "In Summary"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Attachment option detail.",
+      "what_we_cover_that_they_dont": "Mid-project lapse cost, NY law, requirements checklist."
+    },
+    {
+      "url": "https://www.dli.mn.gov/sites/default/files/pdf/infosheet_contractor_liability.pdf",
+      "title": "Workers' compensation liability of contractors (Minnesota DLI)",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Misclassification tests.",
+      "what_we_cover_that_they_dont": "Certificates, notice, monitoring."
+    },
+    {
+      "url": "https://www.amwins.com/resources-and-insights/market-insights/article/when-small-contractors-face-big-claims",
+      "title": "When Small Contractors Face Big Claims (Amwins)",
+      "h2s": [
+        "Executive Summary"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Carrier sublimits on uninsured trades.",
+      "what_we_cover_that_they_dont": "Notice of cancellation mechanics."
+    }
+  ],
+  "plan": {
+    "table": "Ways to learn a contractor's policy was canceled or lapsed",
+    "internal_links": [
+      "/coi-requirements/",
+      "/blog/completed-operations-additional-insured/",
+      "/blog/per-project-aggregate-coi/",
+      "/blog/how-to-check-a-contractor-coi/"
+    ],
+    "external_links": [
+      "https://www.dfs.ny.gov/",
+      "https://www.nysenate.gov/",
+      "https://www.getbcs.com/",
+      "https://www.dli.mn.gov/",
+      "https://constructionexec.com/",
+      "https://www.amwins.com/"
+    ],
+    "forsured_paragraph": "Forsured checks each contractor COI against your project requirements and keeps checking for the life of the job, so a canceled or expired policy doesn't hide in a file of old PDFs."
+  }
+}
