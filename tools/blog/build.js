@@ -503,6 +503,7 @@ const FOOTER = () => `<footer><div class="edge">
     <div class="fc">
       <h2>Company</h2>
       <a href="/blog/">Blog</a>
+      <a href="/guides/">Guides</a>
       <a href="/coi-requirements/">COI Requirements by State</a>
       <a href="/research/">Research</a>
       <a href="https://coijournal.com/">COI Journal</a>
@@ -711,7 +712,7 @@ function postPage(p, posts) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Forsured', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+        p.library ? { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE}/guides/` } : { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
         { '@type': 'ListItem', position: 3, name: p.title, item: `${SITE}${p.url}` },
       ],
     },
@@ -751,7 +752,7 @@ ${nav('blog')}
 <article class="edge">
   <div class="col">
     <header class="post-head">
-      <p class="crumbs"><a href="/blog/">Blog</a> / ${esc(p.category)}</p>
+      <p class="crumbs">${p.library ? '<a href="/guides/">Guides</a>' : '<a href="/blog/">Blog</a>'} / ${esc(p.category)}</p>
       <span class="label">${esc(p.category)}</span>
       <h1 style="margin-top:16px">${esc(p.title)}</h1>
       <p class="dek">${inline(p.dek)}</p>
@@ -854,6 +855,65 @@ const INDEX = {
   description: 'Plain answers on contractor COIs, project requirements, additional insured endorsements and construction risk, with the sources linked.',
 };
 
+// ---------- guides library ----------
+// /guides/: every buyer's guide and every library post in one place. A library post ("library": true)
+// is a full post at /blog/<slug>/ that stays out of the blog index, the RSS feed and subscriber emails,
+// so a large set of reference guides can build up without flooding the blog. It is still in the
+// sitemap, llms.txt and this hub, and other posts link to it, so search and AI answer engines find it.
+const GUIDES = {
+  title: "Guides: COI software buyer's guides and references | Forsured",
+  description: "Buyer's guides and reference guides on COI tracking software, contractor certificates, endorsements and project requirements, with the sources linked.",
+};
+const isGuide = (p) => p.library || p.category === "Buyer's guide";
+
+function guidesPage(posts) {
+  const guides = posts.filter(isGuide);
+  const groups = [...new Set(guides.map((p) => p.category))].map((c) => [c, guides.filter((p) => p.category === c)]);
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `${SITE}/guides/#collection`,
+        name: 'Forsured Guides',
+        url: `${SITE}/guides/`,
+        description: GUIDES.description,
+        publisher: ORG,
+        isPartOf: { '@id': WEBSITE['@id'] },
+        inLanguage: 'en-US',
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: guides.length,
+          itemListElement: guides.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}${p.url}`, name: p.title })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Forsured', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE}/guides/` },
+        ],
+      },
+      WEBSITE,
+    ],
+  };
+  return `${head({ ...GUIDES, url: '/guides/', image: '/blog/og.png', imageAlt: 'Forsured Guides', type: 'website', jsonld })}
+${nav('guides')}
+
+<main id="main" class="edge">
+  <header class="index-head">
+    <span class="label">Guides</span>
+    <h1 style="margin-top:16px">Guides for buying and running COI compliance.</h1>
+    <p class="dek">Buyer's guides and reference guides on COI tracking software, contractor certificates, endorsements and project requirements. Plain answers, with the sources linked.</p>
+  </header>
+${groups.map(([c, list], i) => `  <section class="all" aria-labelledby="g-${i}"><h2 id="g-${i}">${esc(c)}</h2><ul class="cards">${list.map((p) => card(p)).join('')}</ul></section>`).join('\n')}
+</main>
+
+${BAND}
+
+${FOOTER()}`;
+}
+
 function feed(posts) {
   const items = posts
     .map(
@@ -896,6 +956,7 @@ function sitemap(posts) {
   const urls = [
     ...STATIC_PAGES.map((p) => ({ ...p, lastmod: null })),
     { url: '/blog/', priority: '0.8', lastmod: latest },
+    { url: '/guides/', priority: '0.8', lastmod: day(posts.filter(isGuide).map((p) => p.updated).sort().pop() || posts[0].updated) },
     ...posts.map((p) => ({ url: p.url, priority: '0.7', lastmod: day(p.updated) })),
     ...statePages().urls.map((url) => ({ url, priority: url === '/coi-requirements/' ? '0.8' : '0.6', lastmod: statePages().reviewed })),
     { url: researchPages().url, priority: '0.7', lastmod: researchPages().updated },
@@ -941,6 +1002,7 @@ Key facts:
 
 - [Forsured home](${SITE}/): what Forsured does, how the review works, and who it's for (general contractors, brokers, trade contractors)
 - [Free COI risk check](${SITE}/#demo): send one project's requirements and a contractor COI
+- [Guides](${SITE}/guides/): buyer's guides and reference guides on COI tracking software, contractor COIs and project requirements
 
 ## Blog
 
@@ -1039,14 +1101,17 @@ function build() {
   if (missing.length) throw new Error(`missing images (run node tools/blog/og.js): ${missing.join(', ')}`);
 
   const files = new Map();
-  files.set('blog/index.html', indexPage(posts));
+  // Library posts are built and listed on /guides/, but kept off the blog index, the feed and email.
+  const feedPosts = posts.filter((p) => !p.library);
+  files.set('blog/index.html', indexPage(feedPosts));
+  files.set('guides/index.html', guidesPage(posts));
   for (const p of posts) {
     files.set(`blog/${p.slug}/index.html`, postPage(p, posts));
     files.set(`blog/${p.slug}/index.md`, postMarkdown(p));
   }
   for (const [rel, content] of statePages().files) files.set(rel, content);
   for (const [rel, content] of researchPages().files) files.set(rel, content);
-  files.set('blog/feed.xml', feed(posts));
+  files.set('blog/feed.xml', feed(feedPosts));
   files.set('sitemap.xml', sitemap(posts));
   files.set('robots.txt', ROBOTS);
   files.set('llms.txt', llms(posts));
@@ -1056,11 +1121,11 @@ function build() {
   const { email, welcome } = require('./email');
   // Each post's subscriber email ({subject, html} with "Hi there,"), which the Make scenario sends to
   // every Blog subscribers member when the post shows up in the feed.
-  for (const p of posts) {
+  for (const p of feedPosts) {
     const e = email(p);
     files.set(`blog/${p.slug}/email.json`, `${JSON.stringify({ subject: e.subject, html: e.html }, null, 2)}\n`);
   }
-  files.set('blog/email/welcome.html', welcome('', posts).html.replace('<meta charset="UTF-8"/>', '<meta charset="UTF-8"/><meta name="robots" content="noindex"/>'));
+  files.set('blog/email/welcome.html', welcome('', feedPosts).html.replace('<meta charset="UTF-8"/>', '<meta charset="UTF-8"/><meta name="robots" content="noindex"/>'));
 
   const stale = [];
   for (const [rel, content] of files) {

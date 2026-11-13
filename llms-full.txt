@@ -13,9 +13,20 @@ Key facts:
 
 - [Forsured home](https://forsured.ai/): what Forsured does, how the review works, and who it's for (general contractors, brokers, trade contractors)
 - [Free COI risk check](https://forsured.ai/#demo): send one project's requirements and a contractor COI
+- [Guides](https://forsured.ai/guides/): buyer's guides and reference guides on COI tracking software, contractor COIs and project requirements
 
 ## Blog
 
+- [Best contractor insurance compliance software for general contractors (2026)](https://forsured.ai/blog/subcontractor-insurance-compliance-software/): Insurance compliance software for GCs compared on more than COIs: endorsements, prequalification, lien waivers, payroll, policy review and live monitoring. Markdown: https://forsured.ai/blog/subcontractor-insurance-compliance-software/index.md
+- [The business case for COI tracking software: how to make it to your CFO](https://forsured.ai/blog/coi-tracking-software-business-case/): How to build the business case for COI tracking software: count the hours, the chases and the uninsured exposure, compare options, and present it to finance. Markdown: https://forsured.ai/blog/coi-tracking-software-business-case/index.md
+- [COI tracking software security: 12 questions to ask before you buy](https://forsured.ai/blog/coi-tracking-software-security-questions/): Security, data and AI questions for COI tracking software vendors: SOC reports, where your files live, who can see them, how AI uses them, and what you get back. Markdown: https://forsured.ai/blog/coi-tracking-software-security-questions/index.md
+- [How to switch COI tracking software without losing your history](https://forsured.ai/blog/switch-coi-tracking-software/): A step-by-step plan for moving to a new COI tracking tool: what to export, how to rebuild requirements, when to cut over, and how to keep the audit trail. Markdown: https://forsured.ai/blog/switch-coi-tracking-software/index.md
+- [COI tracking software demo: 15 questions and a test packet to bring](https://forsured.ai/blog/coi-tracking-software-demo-questions/): What to ask in a COI tracking software demo, and the five test certificates to bring, so you see how each tool handles a real gap instead of a clean sample. Markdown: https://forsured.ai/blog/coi-tracking-software-demo-questions/index.md
+- [Managed COI tracking services for construction (2026): who reviews for you](https://forsured.ai/blog/managed-coi-tracking-services-construction/): Outsourced COI tracking for construction compared: which vendors put their own reviewers on your certificates, what the service covers and published minimums. Markdown: https://forsured.ai/blog/managed-coi-tracking-services-construction/index.md
+- [COI tracking software for large, multi-project general contractors (2026)](https://forsured.ai/blog/coi-tracking-software-large-general-contractors/): For GCs running dozens of projects: COI tracking software compared on project-level requirements, ERP links, payment holds, audit trail and review at scale. Markdown: https://forsured.ai/blog/coi-tracking-software-large-general-contractors/index.md
+- [COI tracking software for owners and developers (2026): 8 tools compared](https://forsured.ai/blog/coi-tracking-software-owners-developers/): COI tracking software for real estate owners and developers who build, compared on property and project tracking, policy review and who chases the broker. Markdown: https://forsured.ai/blog/coi-tracking-software-owners-developers/index.md
+- [Best AI-powered COI tracking software (2026): who makes the final call](https://forsured.ai/blog/best-ai-coi-tracking-software/): AI COI tracking software for construction compared on what the AI reads, whether it decides on its own, and how you see the reasoning behind each result. Markdown: https://forsured.ai/blog/best-ai-coi-tracking-software/index.md
+- [Best COI tracking software for small general contractors (2026)](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/): COI tracking software for small general contractors compared on free tiers, starting prices, setup and endorsement review, from vendors' own pages. Markdown: https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/index.md
 - [Which COI tracking software checks endorsements, not just certificates?](https://forsured.ai/blog/coi-tracking-software-endorsement-review/): Which COI tracking software checks endorsements, not just certificates? Eight construction tools sorted by how deep they read the endorsement, and who decides. Markdown: https://forsured.ai/blog/coi-tracking-software-endorsement-review/index.md
 - [Best COI tracking software for construction (2026): 8 tools compared](https://forsured.ai/blog/best-coi-tracking-software-construction/): Eight COI tracking software tools for construction compared on endorsement review, project requirements, broker follow-up, Procore and published pricing. Markdown: https://forsured.ai/blog/best-coi-tracking-software-construction/index.md
 - [Contractor backlog fell to 8.1 months. What it means for COIs](https://forsured.ai/blog/contractor-backlog-october-2026/): ABC's Construction Backlog Indicator dropped 0.6 months to 8.1 in October 2026. What the numbers say, and why thinner backlogs matter for contractor COIs. Markdown: https://forsured.ai/blog/contractor-backlog-october-2026/index.md
@@ -131,6 +142,1086 @@ COI Journal (https://coijournal.com) is the vendor-neutral editorial site publis
 - [BuiltWorlds Venture East 2026 field guide](https://forsured.ai/builtworlds-field-guide/): an independent guide to AEC Emerging Tech 2026 in Boston
 
 # Full text of every post
+
+## Best contractor insurance compliance software for general contractors (2026)
+
+> Subcontractor compliance is bigger than the certificate. Here's which tools stop at the COI, and which also cover endorsements, prequalification, lien waivers, payroll or full policies.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/subcontractor-insurance-compliance-software/
+
+![Contractor insurance compliance software compared on what each covers beyond the certificate](https://forsured.ai/blog/subcontractor-insurance-compliance-software/hero.png)
+
+### The short version
+
+- All eight major tools track certificates and look at endorsements. They differ on what else they cover: Billy adds prequalification, certified payroll, lien waivers and warranties; Jones and bcs offer full policy review; Certificial monitors policies through the agent.
+- Pick on the gap you can't close today. If it's endorsements, choose depth of review. If it's payments going to non-compliant subcontractors, choose the tool that reaches accounting.
+- Insurance compliance is one piece of subcontractor risk. Prequalification, safety and financial checks often live in separate tools, so ask what connects.
+
+"COI tracking" and "subcontractor insurance compliance" get used as if they mean the same thing. They overlap. COI tracking is collecting certificates and watching dates. Subcontractor insurance compliance is proving that each subcontractor's actual coverage meets what the contract and the owner require, for as long as it has to, and acting when it doesn't.
+
+This guide compares the eight tools in our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/) on that wider job. Every fact comes from each vendor's own pages, linked under Sources.
+
+### What compliance covers beyond the certificate
+
+| Tool | Endorsement review | Beyond insurance | Policy-level view | Reaches accounting |
+|---|---|---|---|---|
+| Forsured | Wording against each project's requirements | No | Monitoring after approval | Procore for early access customers |
+| Billy | Missing required forms | Prequalification, certified payroll, lien waivers, warranties | No | Yes, construction ERPs listed |
+| PINS Advantage | Wording, with the page linked | No | No | Status on the Procore commitment |
+| TrustLayer | Required language and equivalents | No | Pulse verifies a policy at the source | Pro tier integrations |
+| Jones | AI and specialists | No | Policy Review add-on | Procore |
+| bcs | Endorsement type with a matrix | No | Full policy review on full service | Procore, Yardi, MRI |
+| illumend | AI reads every endorsement and decides | No | No | Procore, as myCOI |
+| Certificial | Extracted details to accept or reject | No | Live data from the agent of record | Not listed |
+
+### Pick on the gap you can't close
+
+**If endorsements are the gap,** pick on review depth. PINS Advantage, TrustLayer, illumend and Forsured read wording; Billy and bcs check which forms are present. See [which COI tracking software checks endorsements](/blog/coi-tracking-software-endorsement-review/).
+
+**If you're paying non-compliant subcontractors,** pick the tool that reaches accounting. [Billy](https://billyforinsurance.com/) lists Procore, CMiC, Sage 300, Sage Intacct, JD Edwards, Viewpoint Vista, Trimble ProjectSight and Acumatica among its integrations.
+
+**If the certificate hides exclusions,** pick policy-level review: Jones's Policy Review add-on or bcs full service.
+
+**If mid-term cancellations worry you,** Certificial's model, with certificates from the agent of record, is built to flag changes as they happen. It depends on the agency being on their network.
+
+**If requirements change by owner and project, and the fix keeps dying in email,** that's what Forsured is built for: each project's requirements and exceptions, and a shared workspace where the broker sees the gap, the requirement and the project.
+
+### Where insurance compliance stops
+
+Prequalification, safety records and financial checks are part of subcontractor risk too. Billy covers prequalification alongside insurance; most other tools here stay on insurance. If you already run a prequalification platform, ask each COI vendor what it connects to.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Products change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What is subcontractor insurance compliance software?
+
+Software that collects each subcontractor's certificates and endorsements, checks them against the general contractor's and owner's insurance requirements, flags gaps, follows up with the subcontractor's broker and tracks renewals. Some tools also cover prequalification, lien waivers, certified payroll or full policy review.
+
+#### What is the best subcontractor insurance compliance software for general contractors?
+
+For requirements that change by project and a broker who fixes the gap in a shared workspace, Forsured. For insurance plus prequalification, lien waivers and certified payroll in one construction tool, Billy. For full policy review, Jones or bcs full service. For deep endorsement wording checks, PINS Advantage. For live policy data from the agent, Certificial.
+
+### Sources
+
+1. [Billy home page and integrations menu](https://billyforinsurance.com/), Billy, checked Nov 13, 2026
+2. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+3. [Pricing and plans](https://getjones.com/pricing/), Jones, checked Nov 11, 2026
+4. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 13, 2026
+5. [Certificial home page](https://www.certificial.com/), Certificial, checked Nov 13, 2026
+6. [AI COI review](https://www.pinsadvantage.com/product/ai-coi-review), PINS Advantage, checked Nov 11, 2026
+7. [Enhanced Endorsements](https://www.trustlayer.io/pages/enhanced-endorsements), TrustLayer, checked Nov 11, 2026
+8. [illumend home page](https://www.illumend.ai/), illumend, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## The business case for COI tracking software: how to make it to your CFO
+
+> Finance won't approve software because a certificate was late. They'll approve it when you show the hours you spend, the exposure you carry, and what each option costs against both.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-business-case/
+
+![Five parts of the business case for COI tracking software](https://forsured.ai/blog/coi-tracking-software-business-case/hero.png)
+
+### The short version
+
+- Build the case on your own numbers: certificates read per year, hours per certificate, broker round trips, and the gaps you found after a trade was already working.
+- bcs, which sells COI tracking software, estimates manual tracking at $36,400 a year (20 hours a week at $35 an hour). Treat it as a vendor's example and replace it with your own count.
+- Price the risk side plainly: one uninsured claim can cost more than years of software. Don't invent a number for it; show the exposure on one real project.
+
+Most COI tracking purchases start with a scare: a trade on site with a lapsed policy, or a claim where the additional insured endorsement wasn't what the certificate implied. A scare gets attention. It doesn't get a budget line. For that, finance wants numbers they can check.
+
+This guide shows how to build them. For the options themselves, see the [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/).
+
+### Part 1: Count the hours
+
+Pick one recent quarter and count:
+
+- **Certificates read.** Subcontractors times active projects times renewals and revisions.
+- **Minutes per certificate,** including the endorsements. Time five of them honestly.
+- **Who reads them,** and what their hour costs.
+
+bcs, which sells COI tracking software, publishes one version of this math: [20 hours a week, 52 weeks, at $35 an hour, about $36,400 a year](https://www.getbcs.com/blog/the-36000-problem-what-manual-coi-tracking-is-really-costing-you). It's a vendor's illustration, not a benchmark. Our COI Journal report [takes the estimate apart](https://coijournal.com/reports/cost-of-manual-coi-tracking/?utm_source=forsured) and shows how to build your own.
+
+### Part 2: Count the chases
+
+For the same quarter, count how many certificates came back wrong the first time and how many round trips each took with the broker. Each one is time on both sides, and time a trade may be working without the coverage you required.
+
+### Part 3: Show the exposure, without inventing it
+
+Don't put a made-up claim figure in front of a CFO. Instead:
+
+- Pick one live project and list every trade whose certificate or endorsements didn't meet the requirement on the day they started.
+- Note what was missing: completed operations, umbrella limit, waiver of subrogation, primary and noncontributory.
+- Ask your broker what that gap would mean on a claim.
+
+That's a real number of real gaps. It's more persuasive than a statistic. If you want a starting point, our [free COI risk check](/#demo) reviews one project's requirements against a contractor COI or two.
+
+### Part 4: Price the options
+
+| Option | What it costs | What it leaves with you |
+|---|---|---|
+| Spreadsheet | Staff hours only | All reading, chasing and recording |
+| Software your team runs | Subscription plus review hours | The decisions and the record |
+| Managed service | Service fee | The decisions, and oversight of the service |
+
+Published starting prices help anchor the range: bcs self-service at $11.40 per vendor per year, Billy from $500 a year, PINS Advantage from about $300 a month with most annual contracts at $7,500 or less. Others quote. See [managed COI tracking services](/blog/managed-coi-tracking-services-construction/) for the service side.
+
+### Part 5: Say who carries the risk
+
+Finance cares who is accountable. Say plainly who approves a trade with a gap today, how that's recorded, and how it changes with each option.
+
+### A one-page template
+
+1. **Today:** X certificates a year, Y hours, Z gaps found after start.
+2. **Exposure:** on Project A, N trades started short of the requirement.
+3. **Options:** three rows, with cost and what stays with us.
+4. **Recommendation:** the option, the price, and the first project to run it on.
+5. **Check-in:** re-count hours and gaps after one quarter.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes COI tracking software. Prices quoted are from each vendor's own pages as of the dates under Sources and change often.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What is the ROI of COI tracking software?
+
+It comes from two places: hours your team stops spending on reading certificates and chasing brokers, and gaps caught before a trade is on site. Count your own hours and gaps for one quarter, then compare them with each option's price.
+
+#### How much does manual COI tracking cost?
+
+One published estimate, from bcs, a COI tracking vendor, puts it at $36,400 a year: 20 hours a week, 52 weeks, at $35 an hour. Your number depends on how many certificates you read, how long each takes, and who does it.
+
+### Sources
+
+1. [The $36,000 Problem: What Manual COI Tracking Is Really Costing You](https://www.getbcs.com/blog/the-36000-problem-what-manual-coi-tracking-is-really-costing-you), bcs, May 14, 2026
+2. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 13, 2026
+3. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 13, 2026
+4. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## COI tracking software security: 12 questions to ask before you buy
+
+> A COI tool holds your subcontractors' policies, your project list and your owners' requirements. Ask how it's protected before IT asks you.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-security-questions/
+
+![Security questions to ask COI tracking software vendors](https://forsured.ai/blog/coi-tracking-software-security-questions/hero.png)
+
+### The short version
+
+- Ask for the vendor's current SOC report, not a badge on the website. SOC reports are issued by CPAs under AICPA standards and cover a defined period.
+- Ask where your documents are stored, who at the vendor can open them, and whether your files are used to train AI models.
+- Get the exit terms in writing: export format, what's included, and how long your data is kept after you cancel.
+
+A COI tracking tool ends up holding more than certificates. It has your subcontractors' policy numbers and endorsements, your project list, your owners' insurance exhibits and, if you connect it, links into your project and accounting systems. That's worth a security review before you sign, and these 12 questions cover what to ask.
+
+They pair with our [COI tracking software demo questions](/blog/coi-tracking-software-demo-questions/) and the [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/).
+
+### Independent assurance
+
+1. **Which SOC report do you have, and for what period?** The [AICPA](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) describes System and Organization Controls (SOC) as a suite of services CPAs provide on a service organization's controls. Ask for the report itself, its type, the period it covers, and any exceptions the auditor noted. A logo on a website isn't the report.
+2. **Which of your subprocessors are in scope?** Cloud hosting, OCR and AI providers handle your files too.
+
+### Where your data lives and who sees it
+
+3. **Where are documents stored, and in what country?**
+4. **Who at your company can open our files, and is that access logged?**
+5. **How is access controlled on our side?** Single sign-on, user roles by project, and removing a departing employee's access.
+6. **What can brokers and subcontractors see?** They should see their own documents and requests, not your other trades.
+
+### AI and your documents
+
+7. **Which AI models read our documents, and who runs them?**
+8. **Are our documents used to train or improve models?** Get the answer in the contract.
+9. **If a third-party AI provider processes our files, what are they allowed to keep, and for how long?**
+
+### Integrations
+
+10. **What access does each integration need?** A Procore or accounting connection should have the narrowest access that does the job.
+
+### When you leave
+
+11. **What do we get back, and in what format?** Every document, requirement, result and decision.
+12. **How long after we cancel is our data kept, and how is it deleted?**
+
+### Questions for your own team
+
+- Who signs off on the security review, and on what timeline?
+- Does your contract with the vendor cover data breach notice and responsibility?
+- Do your owners' contracts say anything about where project data can live?
+
+See our COI Journal brief on [what insurance regulators say about AI](https://coijournal.com/reports/naic-ai-bulletin-and-coi-review/?utm_source=forsured) for the wider context on AI in insurance work.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes COI tracking software and answers the same questions for its customers. This guide is general information, not legal or security advice; have your own security and legal advisers review any vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### Should COI tracking software have a SOC 2 report?
+
+It's a reasonable thing to ask for. A SOC 2 report is an independent CPA's examination of a service organization's controls, under AICPA standards. Ask for the report itself and the period it covers, and have whoever handles vendor security at your company read it.
+
+#### Does COI tracking software use my documents to train AI?
+
+Ask each vendor directly and get the answer in the contract. Some vendors use customer data to improve models and some don't. Ask whether a third-party AI provider processes your files and what that provider is allowed to keep.
+
+### Sources
+
+1. [System and Organization Controls: SOC Suite of Services](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services), AICPA & CIMA, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## How to switch COI tracking software without losing your history
+
+> Changing COI tools mid-season feels risky because it is. Here's how to move without a gap in coverage checks or a hole in the record.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/switch-coi-tracking-software/
+
+![Five steps to switch COI tracking software without losing history](https://forsured.ai/blog/switch-coi-tracking-software/hero.png)
+
+### The short version
+
+- Before you cancel, export every certificate, endorsement and decision, with dates and who approved it. That record is what defends you on an old claim.
+- Don't migrate old pass or fail results into the new tool. Re-check every active subcontractor against each project's current requirements instead.
+- Overlap the tools for one renewal cycle and tell brokers once, in writing, where certificates go from a set date.
+
+People switch COI tracking software for ordinary reasons: the price went up, the old tool doesn't read endorsements, the company outgrew one template, or the vendor changed under them. myCOI customers, for example, are being moved to illumend, myCOI's new AI platform. Whatever the reason, the move has one rule: no week where nobody is checking, and no lost record of what was checked before.
+
+If you're still choosing where to go, see the [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/) and the [demo questions and test packet](/blog/coi-tracking-software-demo-questions/).
+
+### Step 1: Export everything, including the decisions
+
+Before you give notice, export:
+
+- Every certificate and endorsement file, for active and closed projects.
+- The requirements each one was checked against.
+- Each result, its date, and who approved or waived it, with any note.
+- Vendor and broker contacts.
+
+Closed projects matter. A completed operations claim can arrive years after closeout, and your old file is the proof of what you required and what you accepted. Ask the old vendor in writing what format the export comes in and how long your data stays available after you cancel.
+
+### Step 2: Rebuild requirements per project
+
+Don't copy your old templates straight across. Use the move to fix them:
+
+- Start from each owner's insurance exhibit and your subcontract language.
+- Set one standard, then project-level exceptions where an owner asks for more.
+- Check [contractor insurance requirements by state](/coi-requirements/) for anti-indemnity and workers' comp rules.
+
+### Step 3: Re-check active subcontractors, don't import old results
+
+An old "compliant" flag tells you what the old tool decided against old requirements. Load the current certificates and endorsements for every active trade and check them fresh. Expect the new tool to find gaps the old one didn't. That's the point of switching. Our [guide to checking a contractor COI](/blog/how-to-check-a-contractor-coi/) covers what a full check includes.
+
+Archive closed projects as files from Step 1 rather than re-checking them.
+
+### Step 4: Overlap for one renewal cycle
+
+Keep the old tool read-only for at least one round of renewals. That way a certificate sent to the old address isn't lost, and you can compare results on the same trades.
+
+### Step 5: Tell brokers once, clearly
+
+Send one notice to every broker and trade with:
+
+- The date certificates go to the new place.
+- How to upload, and whether they need an account.
+- Who to call with a question.
+
+Repeat it in your next deficiency notice, then stop using the old address.
+
+### A cutover checklist
+
+| Item | Owner | Done |
+|---|---|---|
+| Full export received and stored | Risk or compliance lead | |
+| Requirements rebuilt per project | Risk lead with project managers | |
+| Active trades re-checked | Reviewer | |
+| Accounting and project system links tested | Finance and IT | |
+| Broker notice sent | Compliance | |
+| Old tool set to read-only | Admin | |
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes COI tracking software. If you're moving, send us one project's requirements and a few current COIs for a [free COI risk check](/#demo) against the new requirements.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### How do I switch COI tracking software?
+
+Export every document and decision from the old tool, rebuild your requirements per project in the new one, re-check every active subcontractor against those requirements, run both tools for one renewal cycle, and send brokers one clear notice of where certificates go from a set date.
+
+#### What should I export from my old COI tracking software?
+
+Every certificate and endorsement file, the requirement each was checked against, the result, the date, and who approved or waived it, for active and closed projects. Closed projects matter because completed operations claims arrive years later.
+
+#### How long does it take to switch COI tracking tools?
+
+It depends on volume and vendor. Plan for a few weeks of setup plus one renewal cycle of overlap. Ask the new vendor for their own numbers; PINS Advantage, for example, says most teams are live within a week and a full rollout typically takes 30 to 90 days.
+
+### Sources
+
+1. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 13, 2026
+2. [illumend integration with Procore](https://www.illumend.ai/integrations/procore), illumend, checked Nov 11, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## COI tracking software demo: 15 questions and a test packet to bring
+
+> Every demo uses a clean certificate. Bring your own messy ones, and ask the questions that show what happens after the software reads them.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-demo-questions/
+
+![Five test certificates to bring to a COI tracking software demo](https://forsured.ai/blog/coi-tracking-software-demo-questions/hero.png)
+
+### The short version
+
+- Vendor demos use certificates that pass. Bring five of your own that don't, and run every tool against the same project requirements.
+- The questions that separate tools are about after the read: who decides, how the broker hears about the gap, what's recorded, and what happens at renewal.
+- Score each demo on what you saw happen to your test packet, not on the feature list.
+
+A COI tracking software demo is built to go well. The sample certificate is clean, the endorsement is the ISO form the tool knows best, and the broker on screen answers in a minute. None of that tells you what happens on your jobs.
+
+This guide gives you a test packet to bring and 15 questions to ask, so every vendor is judged on the same real problems. Use it with our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/) to pick who gets a demo.
+
+### The test packet
+
+Pull five real certificates from your files, remove personal details, and bring the project requirements they were supposed to meet.
+
+1. **No completed operations coverage.** An ongoing operations additional insured endorsement (CG 20 10) with no completed operations form. See [whether additional insured status covers you after the job is done](/blog/completed-operations-additional-insured/).
+2. **A carrier's own endorsement form.** Not an ISO form number. The tool should judge the wording, not the number. PINS Advantage puts it this way on their site: the wording matters more than the form number.
+3. **An umbrella below the owner's limit.** The certificate looks complete; the number is short.
+4. **A named insured that doesn't match.** A related company, a dba, or a misspelling.
+5. **A policy that renews mid-project.** So you can see what the tool does next.
+
+### 15 questions to ask
+
+#### Reading the documents
+
+1. Does the tool read the endorsement wording or check that a form is attached?
+2. Show me the page and the language behind this result.
+3. What does it do with a scanned, rotated or partial PDF?
+4. The ACORD 25 says the certificate doesn't amend, extend or alter the policy. How does your tool get from the certificate to the endorsements and the policy?
+
+#### Deciding
+
+5. Who makes the final call on each result: the AI, your reviewers or my team?
+6. When my team overrules a result, where is that recorded and who can see it?
+7. Can one project carry different requirements from another, with exceptions?
+
+#### Fixing the gap
+
+8. Show me this deficient certificate going to the broker. What exactly does the broker see?
+9. Does the broker or subcontractor need an account, and do they ever pay?
+10. How does the corrected document come back, and is it re-checked automatically?
+
+#### After approval
+
+11. What happens at renewal, and how early do requests go out?
+12. How do you hear about a mid-term cancellation or limit change?
+
+#### Fitting in
+
+13. Where does compliance status show up in our project and accounting systems, and can it hold a payment?
+14. How long until our first project is live, and what do you need from us? PINS Advantage, for example, says most teams are live within a week and a full rollout typically takes 30 to 90 days.
+15. What does the price include, and what is extra: endorsement review, integrations, users, policy review?
+
+### How to score it
+
+Score each demo on what happened to your five certificates:
+
+| Test | Caught it | Explained why | Broker got a clear ask | Recorded the decision |
+|---|---|---|---|---|
+| No completed operations | | | | |
+| Carrier form | | | | |
+| Umbrella short | | | | |
+| Wrong named insured | | | | |
+| Mid-project renewal | | | | |
+
+Our COI Journal report [What to require from any COI tool](https://coijournal.com/reports/coi-tool-specification/?utm_source=forsured) is a vendor-neutral spec you can attach to an RFP.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes COI tracking software, and we'd rather be judged on your test packet than on our demo. Send us one project's requirements and a contractor COI or two for a [free COI risk check](/#demo).
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What should I ask in a COI tracking software demo?
+
+Ask the vendor to run your own deficient certificates against your project requirements, then ask who makes the final call, how the broker learns what's missing, where an accepted gap is recorded, how renewals are tracked, and where compliance status shows up in your project and accounting systems.
+
+#### What test certificates should I bring to a COI software demo?
+
+Five: one missing completed operations additional insured coverage, one with a carrier's own endorsement form instead of an ISO form, one with an umbrella below the owner's limit, one with a named insured that doesn't match the subcontract, and one whose policy renews in the middle of the project. Remove personal details first.
+
+### Sources
+
+1. [AI COI review](https://www.pinsadvantage.com/product/ai-coi-review), PINS Advantage, checked Nov 11, 2026
+2. [ACORD 25 Certificate of Liability Insurance (2025/12), as posted by the New York State Department of Financial Services](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf), ACORD / NY DFS
+3. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## Managed COI tracking services for construction (2026): who reviews for you
+
+> If nobody on your team has time to read endorsements and chase brokers, you can pay someone to. Here's who offers that, what it includes, and what you give up.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/managed-coi-tracking-services-construction/
+
+![Managed COI tracking services for construction: Billy, bcs, Jones and TrustLayer, compared with software-only tools](https://forsured.ai/blog/managed-coi-tracking-services-construction/hero.png)
+
+### The short version
+
+- Four of the major COI tracking vendors offer a managed or full-service option: Billy's managed plan, bcs full service, Jones's Operator tier and TrustLayer+. Forsured and PINS Advantage are software your own team runs.
+- bcs is the only one that publishes its full-service rate: from $17.80 per vendor per year with a $10,000 annual minimum. The others quote.
+- A service saves your team's hours, but the risk decision is still yours. Ask how the service records each accepted gap and how you overrule it.
+
+There are three ways to manage contractor COIs: a spreadsheet, software your team runs, or a service that runs it for you. This guide is about the third. It compares the managed options from the tools in our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/), using each vendor's own pages, linked under Sources.
+
+If you're still deciding between the three, start with our COI Journal report on [spreadsheet, service or software](https://coijournal.com/reports/spreadsheet-service-software/?utm_source=forsured).
+
+### Who offers a managed option
+
+| Service | What their team does | Published price |
+|---|---|---|
+| Billy managed plan | CRIS-certified reviewers check every certificate and endorsement | Plans from $500 a year; managed by quote |
+| bcs full service | US-based analysts handle outreach and call the vendor and, when needed, the vendor's agent, with no cap on attempts; full policy and description of operations review included | From $17.80 per vendor per year, $10,000 annual minimum |
+| Jones Operator tier | A concierge team handles the back-and-forth with brokers, agents and third parties; Policy Review add-on reads full policies | Per record per property, by quote |
+| TrustLayer+ | Licensed insurance professionals run the program | By quote |
+| Forsured | No managed service. Software your team runs, with the broker in a shared workspace | Quote |
+| PINS Advantage | No managed service. Software your team runs | From about $300 a month |
+
+### What a service does and doesn't take off your plate
+
+**It takes:** reading certificates and endorsements, sending deficiency notices, chasing vendors and brokers, and renewal follow-up.
+
+**It doesn't take:** the decision to let a trade on site with a gap, the requirements you set, or the loss if the review was wrong. Your contract with the service decides how much of that they stand behind, so read it.
+
+### Questions to ask any managed COI service
+
+1. Who are the reviewers, and what credential do they hold? Billy names CRIS certification; ask the others.
+2. Do they read endorsement wording, or check that a form number is present?
+3. How do they record an accepted gap, and can you see it?
+4. What happens when you disagree with a result?
+5. How many attempts do they make before escalating to you? bcs says there's no cap.
+6. What's the minimum? bcs publishes $10,000 a year. Ask the rest.
+7. Do your subcontractors or their brokers ever pay or sign up?
+
+### When software beats a service
+
+- Your owners' requirements vary by project and you want your own risk team holding the line.
+- You want the broker working directly from the gap, not from a service's email.
+- You want one person accountable for every waiver.
+
+That's the case Forsured is built for: a person on your team approves or waives every result, and the broker fixes the gap in the same workspace. If you want the review done for you, a managed service is the better fit.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here and does not offer a managed service. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Services change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### Can I outsource COI tracking for my construction company?
+
+Yes. Billy, bcs, Jones and TrustLayer each offer a managed or full-service option where their reviewers check certificates and endorsements and follow up with vendors or brokers. bcs publishes full-service pricing; the others quote.
+
+#### How much does outsourced COI tracking cost?
+
+bcs full service starts at $17.80 per vendor per year with a $10,000 annual minimum. Billy, Jones and TrustLayer quote their managed tiers. Compare it against what the same hours cost on your own team.
+
+#### Is a managed COI service better than software?
+
+Neither is better in general. A service fits when you can't staff endorsement review. Software fits when you want your own risk team making and recording each decision. Many GCs use software and add a service only for outreach.
+
+### Sources
+
+1. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 13, 2026
+2. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+3. [Pricing and plans](https://getjones.com/pricing/), Jones, checked Nov 11, 2026
+4. [Plans](https://www.trustlayer.io/plans), TrustLayer, checked Nov 11, 2026
+5. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## COI tracking software for large, multi-project general contractors (2026)
+
+> At 30 active projects and 500 subcontractors, the hard part isn't reading one certificate. It's holding every project's requirements straight and proving who approved what.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-large-general-contractors/
+
+![Five things large multi-project general contractors need from COI tracking software](https://forsured.ai/blog/coi-tracking-software-large-general-contractors/hero.png)
+
+### The short version
+
+- Large GCs outgrow COI tools on three things: requirements that differ by owner and project, compliance status that has to reach accounting before a payment goes out, and an audit trail of who accepted each gap.
+- Billy lists integrations with Procore, CMiC, Sage 300, Sage Intacct, JD Edwards, Viewpoint Vista, Trimble ProjectSight and Acumatica. TrustLayer's Procore, CMiC and Vista integrations start at its Pro tier.
+- Decide early whether your team reviews results or a vendor's team does. At scale, that choice sets your staffing more than the software fee does.
+
+A small general contractor's COI problem is time. A large one's is consistency. With 30 active projects, a dozen owners with their own insurance exhibits and hundreds of subcontractors, the question isn't whether someone can read a certificate. It's whether every project is checked against its own requirements, whether accounting knows before a check goes out, and whether you can show who approved a gap when a claim lands two years later.
+
+This guide looks at COI tracking software from that seat. It uses the eight tools in our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/), with every fact from each vendor's own pages, linked under Sources.
+
+### Five things that break at scale
+
+1. **One template for every project.** Owners and lenders ask for different limits, endorsements and completed operations periods. A tool needs requirements per project, with exceptions.
+2. **Status that stops at the COI tool.** If accounting can't see it, a non-compliant trade gets paid.
+3. **No record of the decision.** When a gap is waived, you need who, when and why.
+4. **Email as the fix channel.** At 500 trades, every deficiency becomes a thread.
+5. **Review nobody can staff.** Endorsement review is reading work. Either your team does it, AI does it with checks, or a service does it.
+
+### How the tools handle scale
+
+| Tool | Requirements per project | Systems it lists | Who reviews | Broker fix channel |
+|---|---|---|---|---|
+| Billy | Yes | Procore, CMiC, Sage 300, Sage Intacct, JD Edwards, Viewpoint Vista, Trimble ProjectSight, Acumatica, others | Your team or Billy's reviewers | Deficiency list and upload link |
+| PINS Advantage | Yes, from contracts | Procore, with status on the commitment | Your team | Upload link and revised endorsement requests |
+| TrustLayer | Yes | Procore, CMiC and Vista from the Pro tier | AI confirmed by a person, or TrustLayer+ | Broker access |
+| Jones | By record, project or property | Procore | AI and Jones specialists | Concierge on the Operator tier |
+| Forsured | Yes, with exceptions | Procore for early access customers | Your team | Shared GC and broker workspace |
+| bcs | Yes | Procore, Yardi, MRI | AI with a person on disagreements, or bcs full service | Analyst outreach on full service |
+| illumend | By contract | Procore, listed as myCOI | AI decides | illumend follows up |
+| Certificial | Project layer | Agent network | Your team | The vendor's agent keeps it current |
+
+### What to look at closely
+
+#### Requirements per project, with exceptions
+
+Ask each vendor to load two of your real owner exhibits and show you the same trade checked against both. Watch for how exceptions work: a waived umbrella limit on one small scope shouldn't lower the bar on the next job. Our COI Journal report on [setting requirements per project and tracking renewals](https://coijournal.com/reports/per-project-requirements-and-renewals/?utm_source=forsured) covers how to structure them.
+
+#### Status in the systems that pay
+
+[Billy](https://billyforinsurance.com/) lists the widest set of construction ERP and project integrations. [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) writes Approved or Not Approved to the Procore project directory and the commitment's compliance tab. [TrustLayer](https://www.trustlayer.io/plans) puts its construction integrations in paid tiers. Ask what field changes, in which system, and whether it can hold a payment.
+
+#### The record of who approved what
+
+Every tool keeps history. The question is whether it shows the requirement, the document, the reason and the person for each accepted gap. That record is what you hand your broker, carrier or attorney after a claim. Keep the requirement version, the documents, the reason and the reviewer's name together for each one.
+
+#### Rollout
+
+[PINS Advantage](https://www.pinsadvantage.com/pricing) says most teams are live within a week and a full rollout typically takes 30 to 90 days. Ask every vendor for the same two numbers, and what they need from you to hit them.
+
+### Where Forsured fits
+
+Forsured is built for requirements that change by project and owner. It reads each certificate and endorsement against that project's requirements, puts the broker in a shared workspace with the gap and the requirement, and records the person who approved or waived each result. It's newer than the others here: onboarding is by waitlist, the Procore integration is for early access customers, and there's no managed review service.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Products change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What COI tracking software do large general contractors use?
+
+Large GCs usually need requirements set per project, accounting and project system links, and a record of every approval. Billy, PINS Advantage, TrustLayer, Jones and Forsured all set requirements by project. Billy and TrustLayer list construction ERP integrations, and PINS Advantage writes approval status into Procore commitments.
+
+#### How do large GCs stop paying non-compliant subcontractors?
+
+By putting compliance status where pay applications are approved. Some COI tools sync status to the accounting or project system so a payment can be held until the certificate and endorsements meet the project's requirements. Ask each vendor exactly which field it writes and which system reads it.
+
+#### Should a large GC use software or a managed COI service?
+
+It depends on who you want reviewing. Software keeps the decision with your risk team and gives you the record. A managed service adds reviewers and outreach. Billy, bcs, Jones and TrustLayer offer both, while Forsured and PINS Advantage are software your team runs.
+
+### Sources
+
+1. [Billy home page and integrations menu](https://billyforinsurance.com/), Billy, checked Nov 13, 2026
+2. [Plans](https://www.trustlayer.io/plans), TrustLayer, checked Nov 11, 2026
+3. [AI COI review](https://www.pinsadvantage.com/product/ai-coi-review), PINS Advantage, checked Nov 11, 2026
+4. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 13, 2026
+5. [Pricing and plans](https://getjones.com/pricing/), Jones, checked Nov 11, 2026
+6. [Certificial home page](https://www.certificial.com/), Certificial, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## COI tracking software for owners and developers (2026): 8 tools compared
+
+> An owner tracks insurance twice: once for the GC and trades on each project, and again for tenants and vendors at the property. Here's which COI tools handle both, and which only handle one.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/coi-tracking-software-owners-developers/
+
+![COI tracking software for real estate owners and developers compared on project and property tracking](https://forsured.ai/blog/coi-tracking-software-owners-developers/hero.png)
+
+### The short version
+
+- Owners and developers need two kinds of tracking: contractor COIs on each project, and tenant and vendor COIs at each property. Jones and bcs are built for both, and Billy covers developers and owners on the construction side.
+- On a project, the owner usually sits as an additional insured on every trade's policy, through the GC. Check that the tool can confirm the owner's own name, ongoing and completed operations coverage, and the owner's limits.
+- If you want exclusions in the full policy read, Jones sells Policy Review as an add-on and bcs includes full policy review on full service.
+
+An owner or developer who builds sits at the top of every insurance chain on the job. The GC names you as an additional insured, the GC's trades name you too, and the subcontract language decides whether that coverage actually reaches you. Then the building opens and a second set of certificates starts: tenants, property vendors, the elevator company.
+
+Most COI tracking software was built for one side of that. This guide compares the eight tools in our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/) from the owner's seat. Every fact comes from each vendor's own pages, linked under Sources.
+
+### What owners need that GCs don't
+
+- **Projects and properties in one place.** Contractor COIs per project, tenant and vendor COIs per property.
+- **Proof the coverage reaches the owner.** Your exact legal name, ongoing and completed operations, and your limits, on every trade's policy, not only the GC's.
+- **Completed operations that lasts.** Defect claims show up years after closeout. See [whether additional insured status covers you after the job is done](/blog/completed-operations-additional-insured/).
+- **Visibility into the GC's review.** If the GC tracks the trades, you want to see the status, not trust it.
+
+### Owners' options at a glance
+
+| Tool | Projects | Properties, tenants and vendors | Policy-level review | Pricing shown |
+|---|---|---|---|---|
+| [Jones](https://forsured.ai/blog/coi-tracking-software-owners-developers/#jones) | Yes | Yes | Policy Review add-on | Model only |
+| [bcs](https://forsured.ai/blog/coi-tracking-software-owners-developers/#bcs) | Yes | Yes | On full service | Yes |
+| [Billy](https://forsured.ai/blog/coi-tracking-software-owners-developers/#billy) | Yes, construction only | No | Endorsement checks | Starting price |
+| [Certificial](https://forsured.ai/blog/coi-tracking-software-owners-developers/#certificial) | Project layer | Supplier programs | Endorsement details | Yes |
+| [TrustLayer](https://forsured.ai/blog/coi-tracking-software-owners-developers/#trustlayer) | Yes | Yes, many industries | Endorsement language | Free tier only |
+| [Forsured](https://forsured.ai/blog/coi-tracking-software-owners-developers/#forsured) | Yes, with exceptions | No | Endorsements against each project | Quote |
+| PINS Advantage | Yes | No | Endorsement wording | Yes |
+| illumend | By contract | Not stated | AI reads every endorsement | Quote |
+
+### The tools, from the owner's seat
+
+#### Jones: built for owners who also build
+
+[Jones](https://getjones.com/) say they're built for commercial real estate owners and operators, property managers and construction general contractors. Requirements can be set by record, project or property, and AI and Jones's specialists review COIs and endorsements. Policy Review reads full policies for exclusions a certificate won't show. Pricing is per tenant or vendor record per property, billed annually, and Jones never charges your vendors or subcontractors.
+
+#### bcs: property and project templates, published rates
+
+[bcs](https://www.getbcs.com/) serve property managers, general contractors, risk managers and procurement teams. Templates can be set by vendor type, project or property. bcs is free up to 25 vendors, self-service is $11.40 per vendor per year, and full service, which adds analyst outreach and full policy review, starts at $17.80 per vendor per year with a $10,000 annual minimum.
+
+#### Billy: the construction side for developers
+
+[Billy](https://billyforinsurance.com/) is construction only, for GCs, developers, owners and homebuilders, and also tracks prequalification, certified payroll, lien waivers and warranties through closeout. It won't cover tenants after the building opens.
+
+#### Certificial: live data for large programs
+
+[Certificial](https://www.certificial.com/) get certificates from the vendor's agent of record through a network they put at more than 25,000 agencies, and say they alert you when coverage changes. That's useful for an owner with hundreds of property vendors. It's aimed at enterprise programs more than construction projects.
+
+#### TrustLayer and illumend: more than construction
+
+[TrustLayer](https://www.trustlayer.io/) serve construction, real estate, retail, finance and other industries, are free up to 50 vendors, and track insurance per project. [illumend](https://www.illumend.ai/) track vendors across more than one industry and let their AI make the compliance call against each contract.
+
+#### Forsured and PINS Advantage: project depth for the construction side
+
+Forsured checks every certificate and endorsement against the requirements of the project the contractor is on, including the owner's and lender's, and gives the broker a shared workspace to fix the gap. [PINS Advantage](https://www.pinsadvantage.com/) reads endorsement wording against requirements built from your contracts. Neither tracks tenant certificates, so pair either with a property tool if you need both.
+
+### How to choose
+
+1. **Decide who tracks the trades.** You, the GC, or both. If the GC does it, require them to share status by project.
+2. **Write your owner requirements once.** Limits, endorsements and the completed operations period. Check [contractor insurance requirements by state](/coi-requirements/), since anti-indemnity rules change what you can ask for.
+3. **Test the owner's name.** Send each tool a certificate where the owner's entity name is slightly wrong. A tool that passes it isn't reading.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Products change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What COI tracking software works for real estate owners and developers?
+
+Jones serves commercial real estate owners, property managers and general contractors, and tracks by record, project or property. bcs serves property managers and general contractors with requirements set by vendor type, project or property. Billy is construction only and names developers and owners among its customers. Certificial suits large vendor programs that want live policy data from the agent.
+
+#### Should an owner track contractor COIs or leave it to the GC?
+
+Both. The GC collects and checks the trades' certificates, but the owner carries the loss if the GC's review misses a gap. Many owners require the GC to share compliance status, or track the GC and key trades themselves.
+
+#### What should an owner check on a contractor's COI?
+
+That the owner's exact legal name is an additional insured for ongoing and completed operations, that limits meet the owner's requirement, that the policy is primary and noncontributory and waives subrogation where the contract calls for it, and that the policy stays in force through the completed operations period.
+
+### Sources
+
+1. [Jones home page](https://getjones.com/), Jones, checked Nov 13, 2026
+2. [Pricing and plans](https://getjones.com/pricing/), Jones, checked Nov 11, 2026
+3. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 13, 2026
+4. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+5. [Certificial home page](https://www.certificial.com/), Certificial, checked Nov 13, 2026
+6. [Plans](https://www.trustlayer.io/plans), TrustLayer, checked Nov 11, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## Best AI-powered COI tracking software (2026): who makes the final call
+
+> Every COI tool says AI now. The difference that matters is what happens after the AI reads the certificate: does it decide, does a person check it, or does it hand you the evidence?
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/best-ai-coi-tracking-software/
+
+![AI COI tracking software compared by who makes the final call: AI alone, AI with a check, or your team](https://forsured.ai/blog/best-ai-coi-tracking-software/hero.png)
+
+### The short version
+
+- All eight major COI tracking tools use AI to read certificates. They split on the final call: illumend lets its AI decide, bcs and TrustLayer add a second check, and Forsured and PINS Advantage leave every decision to your team.
+- The best AI COI tracking software for you depends on who carries the risk when a claim lands. AI that decides on its own moves fastest on volume. A person on every approval leaves a clear record of who accepted a gap and why.
+- Ask every vendor to show the evidence behind one result: the page, the endorsement wording and the requirement it was checked against. If you can't see why it passed, you can't defend it.
+
+Two years ago, "AI" on a COI tracking page meant it could read the dates off an ACORD 25. Now every tool in the category uses AI to read certificates, and most read endorsements too. So the question for a general contractor isn't whether a tool uses AI. It's what the AI is allowed to decide, and whether you can see why it decided.
+
+This guide sorts AI-powered COI tracking software by that question. It covers the same eight tools as our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/), using what each vendor says on its own pages, linked under Sources.
+
+### Five ways AI COI tracking works
+
+| Model | Tools | What the AI does | Who signs off |
+|---|---|---|---|
+| AI decides | illumend | Reads every COI and endorsement and makes the compliance call | AI, with escalation on items it can't resolve |
+| AI with a second check | bcs, TrustLayer | Reads and flags, then a second model or a person checks | A person on disagreements or confirmations |
+| AI explains, your team decides | Forsured, PINS Advantage | Finds each gap and shows the reasoning and the page | Your team, on every result |
+| AI plus a service | Billy, Jones, and bcs and TrustLayer service plans | Reads and flags, and the vendor's reviewers work the result | The vendor's reviewers, or your team |
+| AI extracts, you judge | Certificial | Pulls carrier, form number, policy number and exclusions | Your team accepts or rejects |
+
+### The tools, by model
+
+#### AI decides: illumend
+
+[illumend](https://www.illumend.ai/), the AI platform from myCOI, is the clearest example. Their site says their AI, Lumie, "reads everything and makes a compliance decision," reviews all of your COIs and endorsements automatically, and raises its hand only on the rare item it can't resolve, where a reviewer can step in. More human oversight is something you add to your subscription.
+
+**Good fit if** you track high volume across many vendors and you're comfortable with the AI's call standing unless it flags itself.
+
+#### AI with a second check: bcs and TrustLayer
+
+[bcs](https://www.getbcs.com/) reads each certificate twice, with a long-running extractor and a separate vision model, and sends any disagreement to a person. [TrustLayer](https://www.trustlayer.io/)'s Enhanced Endorsements check for the language you require and show where it appears, and a person confirms the result.
+
+**Good fit if** you want speed on the clean certificates and a human on the doubtful ones.
+
+#### AI explains, your team decides: Forsured and PINS Advantage
+
+[PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) says its AI reads every endorsement in full and answers pass, fail or needs review, with its reasoning and a link to the exact page. Nothing is auto-approved. Forsured reads each certificate and endorsement against the requirements of the project the subcontractor is on, explains each gap, and a person on your team approves or waives it. The broker sees the same gap in a shared workspace.
+
+**Good fit if** you want a named person behind every accepted gap.
+
+#### AI plus a service: Billy and Jones
+
+Billy's AI checks each COI for missing endorsements such as CG 20 10, CG 20 37 and waiver of subrogation, and on their managed plan their reviewers check every certificate. Jones uses AI with their own insurance specialists. bcs full service and TrustLayer+ add a service layer too.
+
+**Good fit if** you'd rather pay someone than staff the review.
+
+#### AI extracts, you judge: Certificial
+
+Certificial's EndorsementIQ pulls the details from each endorsement so you can accept or reject it against your criteria. Their bigger AI story is data: certificates come from the agent of record, and Certificial says it alerts you when coverage changes.
+
+### How to test an AI COI tool in one afternoon
+
+1. Pick three real certificates: one clean, one missing completed operations additional insured coverage, and one with a carrier's own endorsement form instead of an ISO form.
+2. Run them through each tool against the same project requirements.
+3. For every result, ask to see the page, the wording and the requirement it was checked against.
+4. Ask who changed the result if it was wrong, and where that change is recorded.
+
+The carrier-form test is the one that separates tools. Wording that does the same job under a different form number should be judged on its words. See [which COI tracking software checks endorsements, not just certificates](/blog/coi-tracking-software-endorsement-review/).
+
+### What regulators say about AI
+
+Insurance regulators have written rules for insurers' use of AI, not for a contractor's COI review. Our COI Journal brief on [what regulators say about AI and what it means for COI review](https://coijournal.com/reports/naic-ai-bulletin-and-coi-review/?utm_source=forsured) covers the NAIC model bulletin and why a documented human decision still matters on your side.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Products change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### What is the best AI-powered COI tracking software?
+
+It depends on how much you want the AI to decide. For AI that makes the compliance call on its own, illumend. For AI with a second check, bcs and TrustLayer. For AI that finds and explains each gap and leaves the decision to your team, Forsured and PINS Advantage. Test each one on the same deficient certificate before you pick.
+
+#### Can AI review a certificate of insurance on its own?
+
+Some tools let it. illumend says its AI makes the compliance decision and raises a hand only on items it can't resolve. Most other tools use AI to read and flag, then route the result to a person. AI can misread a scanned form or a carrier's own endorsement wording, so whoever signs off should see the evidence.
+
+#### Does AI COI tracking read endorsements?
+
+The better tools do. PINS Advantage, TrustLayer, illumend and Forsured read endorsement wording against your requirements. Certificial pulls endorsement details for you to accept or reject. Ask whether a tool reads the wording or only checks that a form number is present.
+
+### Sources
+
+1. [illumend home page](https://www.illumend.ai/), illumend, checked Nov 13, 2026
+2. [AI COI review](https://www.pinsadvantage.com/product/ai-coi-review), PINS Advantage, checked Nov 11, 2026
+3. [Enhanced Endorsements](https://www.trustlayer.io/pages/enhanced-endorsements), TrustLayer, checked Nov 11, 2026
+4. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 13, 2026
+5. [Certificial home page](https://www.certificial.com/), Certificial, checked Nov 13, 2026
+6. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+7. [Jones home page](https://getjones.com/), Jones, checked Nov 13, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
+
+## Best COI tracking software for small general contractors (2026)
+
+> If you run 20 to 100 subcontractors and nobody's job title says compliance, here's which COI tracking tools you can start on cheaply, and what the cheap plans leave out.
+
+Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/
+
+![COI tracking software for small general contractors in 2026: free tiers, low starting prices and quote-only tools](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/hero.png)
+
+### The short version
+
+- Three tools publish a free tier: bcs (up to 25 vendors), TrustLayer (up to 50 vendors) and Certificial (up to 5 suppliers). Billy starts at $500 a year and PINS Advantage at about $300 a month.
+- For a small general contractor the real cost is the hours someone spends reading endorsements and chasing brokers. A free plan that leaves that work to you can cost more than a paid one that does it.
+- Pick on three things: does the plan you can afford read endorsements, can subcontractors upload without an account, and who chases the broker when a COI falls short.
+
+A small general contractor usually has the same COI problem as a large one, with a fraction of the people. Thirty to a hundred subcontractors, a few active jobs, and certificates that land in a project manager's inbox between everything else. Nobody's title says compliance, so the review happens when someone has time, which is usually after the trade is already on site.
+
+This guide compares COI tracking software for that situation. It covers the eight tools in our [full comparison of COI tracking software for construction](/blog/best-coi-tracking-software-construction/), sorted by what a small GC can start on, what it costs, and what the cheaper plans leave for you to do. Every price and feature comes from each vendor's own pages, linked under Sources.
+
+### What a small GC actually needs
+
+Skip the feature grid for a minute. For a small general contractor, four things decide whether a tool helps or becomes one more inbox:
+
+1. **It reads the endorsements.** Expiration reminders are easy. The gaps that cost money are a missing completed operations endorsement or an umbrella below the owner's limit. See [how to check a contractor COI against your project requirements](/blog/how-to-check-a-contractor-coi/).
+2. **Subcontractors can upload without an account.** If the trade's broker has to sign up for something, the COI arrives late or not at all.
+3. **Someone chases the broker.** Either the tool tells the broker exactly what's missing, or a service does it for you.
+4. **Setup takes days, not a project.** You need your standard requirements in, plus a way to handle the one owner who asks for more.
+
+### Small-GC options at a glance
+
+| Tool | Cheapest way in | Published starting price | Reads endorsements | Who chases the broker |
+|---|---|---|---|---|
+| [bcs](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/#bcs) | Free up to 25 vendors | $11.40 per vendor per year | Yes | You, or bcs on full service |
+| TrustLayer | Free up to 50 vendors | Paid tiers by quote | Yes, confirmed by a person | You, or TrustLayer+ |
+| Certificial | Free up to 5 suppliers | $99 a month | Extracts details for you to accept | The vendor's agent keeps it current |
+| [Billy](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/#billy) | Free trial | From $500 a year | Yes | You, or Billy's managed plan |
+| PINS Advantage | None listed | About $300 a month | Yes, wording level | You |
+| [Forsured](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/#forsured) | Free COI risk check | Quote | Yes, against each project | You and the broker, in one workspace |
+| Jones | None listed | Quote | Yes | Jones's concierge on the Operator tier |
+| illumend | None listed | Quote | Yes, AI decides | illumend follows up |
+
+### The options, by how you'd start
+
+#### Start free: bcs, TrustLayer or Certificial
+
+**bcs** is free up to 25 vendors with every software feature, which makes it the easiest way to test real COI tracking on a small job list. Past that, self-service is $11.40 per vendor per year, so 60 subcontractors runs about $684 a year at the published rate. Full service, where bcs analysts call vendors and their agents, starts at $17.80 per vendor per year with a $10,000 annual minimum, which puts it out of reach for most small GCs. bcs isn't built only for construction.
+
+**TrustLayer** is free up to 50 vendors. Paid tiers are by quote, and the Procore, CMiC and Vista integrations start at the Pro tier. Their endorsement review shows the page behind each result and a person confirms it.
+
+**Certificial** is free up to 5 suppliers, with Professional from $99 a month. It works differently: certificates come from the vendor's insurance agent, and Certificial flags cancellations and limit changes as they happen. That only works when the agent is on their network, and the product is aimed more at enterprise procurement than construction.
+
+#### Start cheap and construction-specific: Billy or PINS Advantage
+
+**Billy** is built for construction only and starts at $500 a year, with a free trial. Requirements are set per project, renewal requests go out three months, one month and the day before a policy expires, and Billy also tracks lien waivers and certified payroll if you need them. A managed plan puts their reviewers on every certificate.
+
+**PINS Advantage** starts around $300 a month with unlimited users and onboarding, and most annual contracts come in at $7,500 or less. There are no feature tiers. It reads endorsement wording against your contract requirements and your team approves each result. It's the most expensive published option here, and the deepest on wording.
+
+#### Quote only: Forsured, Jones and illumend
+
+**Forsured** reads each COI and endorsement against the requirements of the project the subcontractor is on, and puts the broker in a shared workspace where they see the gap, the requirement and the project. A person on your team approves or waives every result. Onboarding is by waitlist, pricing is by quote, and there's no managed review service. You can test it free with a [free COI risk check](/#demo): send one project's requirements and a contractor COI or two.
+
+**Jones** prices per vendor record per property, billed annually, and never charges vendors or subcontractors. It fits small GCs that also own property. Most broker follow-up sits in the Operator tier.
+
+**illumend**, the AI platform from myCOI, lets AI make the compliance call and escalates only what it can't resolve. Pricing isn't published.
+
+### The cost a small GC forgets
+
+The subscription is the small number. The big one is time. bcs, which sells COI tracking software, [estimates manual tracking at about $36,400 a year](https://www.getbcs.com/blog/the-36000-problem-what-manual-coi-tracking-is-really-costing-you): 20 hours a week at $35 an hour. That's a vendor's estimate built on assumptions, and our COI Journal report [takes the math apart and shows how to build your own](https://coijournal.com/reports/cost-of-manual-coi-tracking/?utm_source=forsured). The point holds either way: if a free plan still leaves a project manager reading endorsements and emailing brokers, it isn't free.
+
+Two quick ways to size it:
+
+- **Count the COIs.** Subcontractors times active projects times policies that renew in a year. That's how many certificates someone has to read.
+- **Count the chases.** How many came back wrong the first time last year? Each one is a round trip with a broker.
+
+### How to pick in a week
+
+1. List your next three projects and what each owner requires.
+2. Pick two tools from the table: one free or low-priced, one that reads endorsements against each project.
+3. Send both the same three real COIs, including one you know is short on completed operations or umbrella limits. See [which COI tracking software checks endorsements](/blog/coi-tracking-software-endorsement-review/).
+4. Watch who catches the gap, how the broker hears about it, and how long the fix takes.
+
+Check [contractor insurance requirements by state](/coi-requirements/) too. Workers' comp thresholds and anti-indemnity rules change what you can ask for.
+
+### About this guide
+
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Product and pricing facts come from each vendor's own public pages as of Nov 11, 2026. Prices change, so confirm with each vendor.
+
+### About Forsured
+
+Forsured is construction insurance compliance software for general contractors and the brokers who insure their trade contractors. You set each project's insurance requirements once. Forsured reads every contractor COI and endorsement against them, flags each gap with the reason, and keeps checking through renewals until the job is done.
+
+- Project requirements with exceptions, not one template for every job
+- Endorsement review (additional insured, waiver of subrogation, primary and noncontributory), not just the certificate
+- A shared workspace where the contractor's broker sees exactly what's missing
+- A person on your team approves every result, with a full review history
+
+> "What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value." -- Stephanie Massei, Milestone Construction
+
+Free COI risk check: send one project's requirements and a contractor COI or two, and we'll show you every gap we find. https://forsured.ai/#demo
+
+### Common questions
+
+#### Is there free COI tracking software for small contractors?
+
+Yes. bcs is free up to 25 vendors with every software feature, TrustLayer is free up to 50 vendors, and Certificial is free up to 5 suppliers. Billy offers a free trial. Check what each free plan reviews, because endorsement review and integrations are where plans differ.
+
+#### How much does COI tracking software cost for a small general contractor?
+
+Published prices start at $500 a year (Billy), $11.40 per vendor per year (bcs self-service), $99 a month (Certificial Professional) and about $300 a month (PINS Advantage, where most annual contracts come in at $7,500 or less). Forsured, illumend and Jones quote on request.
+
+#### Do I need COI tracking software if I only have 30 subcontractors?
+
+Not always. A spreadsheet can track 30 expiration dates. It can't tell you whether an endorsement covers completed operations or meets a project's requirement, and that's where small GCs get hurt. If nobody on your team reads endorsements today, software or a service that does is worth more than a reminder tool.
+
+#### Can subcontractors upload COIs without creating an account?
+
+With most tools, yes. Billy, bcs, Jones, PINS Advantage and TrustLayer let vendors and their brokers upload through a link. Certificial takes certificates only from the vendor's insurance agent, and agents use it free.
+
+### Sources
+
+1. [Pricing and plans](https://www.getbcs.com/pricing-and-plans), bcs, checked Nov 11, 2026
+2. [FAQ: requirements, renewals and pricing](https://billyforinsurance.com/resources/faq/), Billy, checked Nov 11, 2026
+3. [Pricing](https://www.certificial.com/pricing), Certificial, checked Nov 11, 2026
+4. [Pricing](https://www.pinsadvantage.com/pricing), PINS Advantage, checked Nov 11, 2026
+5. [Plans](https://www.trustlayer.io/plans), TrustLayer, checked Nov 11, 2026
+6. [Pricing and plans](https://getjones.com/pricing/), Jones, checked Nov 11, 2026
+7. [The $36,000 Problem: What Manual COI Tracking Is Really Costing You](https://www.getbcs.com/blog/the-36000-problem-what-manual-coi-tracking-is-really-costing-you), bcs, May 14, 2026
+
+General information, not legal or insurance advice. Forsured is a software company, not a law firm or a licensed insurance agency. Confirm anything you'll rely on with your broker or attorney.
+
+---
+Forsured: construction insurance compliance software. https://forsured.ai · hello@forsured.ai
+
 
 ## Which COI tracking software checks endorsements, not just certificates?
 
@@ -472,6 +1563,8 @@ The best COI tracking software for one general contractor can be the wrong fit f
 5. **Software or service?** Decide whether your team will review AI COI tracking results, or whether you'd rather pay someone to handle subcontractor COI tracking for you.
 
 State rules matter too. Workers' comp thresholds and anti-indemnity statutes change what you can require, so check [contractor insurance requirements by state](https://forsured.ai/coi-requirements/) before you build your templates.
+
+For a closer look by company type, see COI tracking software for [small general contractors](/blog/best-coi-tracking-software-small-general-contractors/), [large multi-project GCs](/blog/coi-tracking-software-large-general-contractors/) and [owners and developers](/blog/coi-tracking-software-owners-developers/), or compare [AI-powered COI tracking](/blog/best-ai-coi-tracking-software/) and [managed COI tracking services](/blog/managed-coi-tracking-services-construction/). Bring our [demo questions and test packet](/blog/coi-tracking-software-demo-questions/) to every demo. Every guide is on [Guides](/guides/).
 
 ### About this ranking
 

@@ -40,6 +40,7 @@ The file starts with a JSON block between `---` lines:
 | `faq` | no | `{ "q", "a" }` pairs. Real questions, answers that stand alone. Becomes FAQPage markup. |
 | `sources` | yes | `{ "title", "publisher", "date", "url" }` for every fact we didn't produce ourselves. |
 | `schema` | no | Extra schema.org nodes for the page's `@graph`, such as the `ItemList` and `SoftwareApplication` entries on a buyer's guide. Each `@id` must start with the post's URL plus `#`. |
+| `library` | no | `true` makes it a library post: built at `/blog/<slug>/` and listed on `/guides/`, the sitemap and llms.txt, but kept off the blog index, the RSS feed and subscriber emails. Use it for reference and ranking guides that other posts link to. Link every library post from at least one live post or state page. |
 | `draft` | no | `true` keeps a post out of the build (og.js still renders its images, so they can be reviewed). |
 
 ### Hero

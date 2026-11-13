@@ -485,6 +485,8 @@ The best COI tracking software for one general contractor can be the wrong fit f
 
 State rules matter too. Workers' comp thresholds and anti-indemnity statutes change what you can require, so check [contractor insurance requirements by state](https://forsured.ai/coi-requirements/) before you build your templates.
 
+For a closer look by company type, see COI tracking software for [small general contractors](/blog/best-coi-tracking-software-small-general-contractors/), [large multi-project GCs](/blog/coi-tracking-software-large-general-contractors/) and [owners and developers](/blog/coi-tracking-software-owners-developers/), or compare [AI-powered COI tracking](/blog/best-ai-coi-tracking-software/) and [managed COI tracking services](/blog/managed-coi-tracking-services-construction/). Bring our [demo questions and test packet](/blog/coi-tracking-software-demo-questions/) to every demo. Every guide is on [Guides](/guides/).
+
 ## About this ranking
 
 This ranking was written by the Forsured team. Forsured makes one of the eight tools compared here and is listed first; the other seven follow in alphabetical order. No vendor paid to be included or saw this page before it was published. Every product, integration and pricing fact comes from the vendor's own public pages and the Procore Marketplace as of Nov 11, 2026. Prices and features change, so confirm them with each vendor. We didn't include review-site ratings.
