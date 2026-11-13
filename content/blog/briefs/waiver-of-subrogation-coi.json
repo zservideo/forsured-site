@@ -1,0 +1,82 @@
+{
+  "slug": "waiver-of-subrogation-coi",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "slug_locked": true,
+  "questions": [
+    "What does waiver of subrogation mean on a COI?",
+    "Is a checked SUBR WVD box enough?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "waiver of subrogation",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "subrogation",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "WC 00 03 13",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "SUBR WVD",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Section 11 #3 (Warren, Nov 13 2026), fourth post of the additional insured cluster. Facts from IRMI, NCRB WC 00 03 13 instructions, Tennessee bulletin (May 2015), ACORD 25 2025/12. ISO's general liability waiver form not named: its source page failed to load. Add once read.",
+  "competing_sources": [
+    {
+      "url": "https://www.irmi.com/term/insurance-definitions/waiver-of-subrogation",
+      "title": "waiver of subrogation (IRMI)",
+      "h2s": [
+        "Related Terms"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "",
+      "what_we_cover_that_they_dont": "Construction use, forms, cost, checklist."
+    },
+    {
+      "url": "https://www.ncrb.org/Portals/0/ncrb/workers%20comp%20services/WC%20Endorsements/WC_00_03_13%20Instructions.pdf",
+      "title": "WC 00 03 13 instruction sheet (NCRB)",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Rating manual references.",
+      "what_we_cover_that_they_dont": "GC checklist."
+    },
+    {
+      "url": "https://www.tn.gov/content/dam/tn/commerce/documents/insurance/bulletins/051915-Waiver-of-Subrogation-Endorsement.pdf",
+      "title": "Waiver of Subrogation Endorsement (Tennessee bulletin)",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Legal basis for charges.",
+      "what_we_cover_that_they_dont": "How to check a contractor COI."
+    }
+  ],
+  "plan": {
+    "table": "Where a waiver of subrogation appears and what each piece proves",
+    "internal_links": [
+      "/blog/per-written-contract-additional-insured/",
+      "/blog/primary-and-noncontributory/",
+      "/blog/completed-operations-additional-insured/",
+      "/blog/how-to-check-a-contractor-coi/"
+    ],
+    "external_links": [
+      "https://www.irmi.com/",
+      "https://www.ncrb.org/",
+      "https://www.tn.gov/",
+      "https://www.dfs.ny.gov/"
+    ],
+    "forsured_paragraph": "Forsured checks each contractor COI against the coverage a project actually requires, including the waiver of subrogation endorsements behind the checkboxes."
+  }
+}
