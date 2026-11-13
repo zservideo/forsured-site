@@ -1,0 +1,107 @@
+{
+  "slug": "per-written-contract-additional-insured",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "slug_locked": true,
+  "questions": [
+    "What does per written contract mean on an additional insured endorsement?",
+    "Does a blanket additional insured endorsement cover an owner with no direct contract?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "per written contract",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "blanket additional insured",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "CG 20 38",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "CG 20 33",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Section 11 #3 (Warren, Nov 13 2026), second post of the additional insured cluster. Facts from Jones Day (Gilbane), IRMI (case survey), IA Magazine (CG 20 33 vs CG 20 38), County of Sonoma, Insurance Business (Berkley v. Trisura). IRMI's case list is from 2014; cases not re-checked for later history. Neither source states ongoing vs completed operations scope for CG 20 33 or CG 20 38.",
+  "competing_sources": [
+    {
+      "url": "https://www.jonesday.com/en/insights/2018/04/dont-sleep-on-this-new-york-high-court-addresses-s",
+      "title": "Don't Sleep on This (Jones Day)",
+      "h2s": [
+        "The Situation",
+        "The Development",
+        "Looking Ahead",
+        "Tips to Avoid Unintended Consequences",
+        "Three Key Takeaways"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Full procedural history of Gilbane.",
+      "what_we_cover_that_they_dont": "Other states, signing and writing questions, GC checklist."
+    },
+    {
+      "url": "https://www.irmi.com/articles/expert-commentary/making-your-bed-blanket-additional-insured-endorsements-and-the-underlying-agreement",
+      "title": "Making Your Bed (IRMI)",
+      "h2s": [
+        "A \"Contract\" May Not Be Needed",
+        "The Contract or Agreement Could Be Oral",
+        "Beware the Prior Execution Requirement",
+        "Magic Words May Not Be Necessary",
+        "Direct Contractual Relationship Is Not Always Required",
+        "Conclusion"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Deeper case analysis.",
+      "what_we_cover_that_they_dont": "Gilbane (2018), CG 20 33 vs CG 20 38 table, 2026 dispute, checklist."
+    },
+    {
+      "url": "https://www.iamagazine.com/strategies/coi-requests-is-there-a-blanket-additional-insured-endorsement",
+      "title": "COI Requests: Is There a Blanket Additional Insured Endorsement?",
+      "h2s": [],
+      "faqs": [
+        "Is the carrier correct?"
+      ],
+      "what_they_cover_that_we_dont": "Agent-side COI wording.",
+      "what_we_cover_that_they_dont": "Case law, GC checklist."
+    },
+    {
+      "url": "https://sonomacounty.gov/administrative-support-and-fiscal-services/human-resources/divisions-and-units/liability-and-insurance/insurance/help-and-support/contract-insurance-requirements-reference-guide/additional-insured-endorsements",
+      "title": "Additional Insured Endorsements (County of Sonoma)",
+      "h2s": [
+        "Automatic or 'Blanket' Additional Insured Endorsements",
+        "Insurer Proprietary Additional Insured Endorsements"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Permit forms.",
+      "what_we_cover_that_they_dont": "Privity question, case law."
+    }
+  ],
+  "plan": {
+    "table": "CG 20 33 and CG 20 38 compared",
+    "internal_links": [
+      "/blog/completed-operations-additional-insured/",
+      "/blog/primary-and-noncontributory/",
+      "/blog/how-to-check-a-contractor-coi/",
+      "/coi-requirements/"
+    ],
+    "external_links": [
+      "https://www.jonesday.com/",
+      "https://www.irmi.com/",
+      "https://www.iamagazine.com/",
+      "https://sonomacounty.gov/",
+      "https://www.insurancebusinessmag.com/"
+    ],
+    "forsured_paragraph": "Forsured reads the endorsements behind each contractor COI and flags per written contract wording that doesn't reach every party the project requirements name."
+  }
+}
