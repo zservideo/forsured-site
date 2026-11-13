@@ -1,0 +1,27 @@
+{
+  "slug": "completed-operations-additional-insured",
+  "type": "evergreen",
+  "reader": "GC risk/compliance manager",
+  "questions": ["What is an additional insured endorsement like CG 20 10 and why does a construction project need it?", "Does additional insured status cover a GC after the job is done?"],
+  "target_keywords": [
+    { "kw": "completed operations", "vol": null, "kd": null },
+    { "kw": "additional insured", "vol": 720, "kd": 27 },
+    { "kw": "CG 20 37", "vol": null, "kd": null },
+    { "kw": "CG 20 10", "vol": 30, "kd": 0 },
+    { "kw": "contractor COI", "vol": null, "kd": null }
+  ],
+  "notes": "Section 11 #3 (Warren, Nov 13 2026), first of the additional insured cluster. Pillar #2 (additional insured endorsements) not built yet; link up once it ships. 2004 trigger change and 2013 limits from Construction Executive (2018). TotalCSR mentions a CG 20 37 12 19 edition without detail; not used until verified.",
+  "competing_sources": [
+    { "url": "https://billyforinsurance.com/resources/cg-20-37-completed-operations/", "title": "CG 20 37: Why Completed Operations Coverage Is the Endorsement GCs Forget", "h2s": ["What Is CG 20 37?", "CG 20 10 vs. CG 20 37: What Each Covers", "Why You Need Both, Not One or the Other", "Completed Operations and the Warranty Period", "How to Verify Your Subs Have CG 20 37", "Frequently Asked Questions"], "faqs": ["Is CG 20 37 always separate from CG 20 10?", "How long should completed operations coverage run?", "What if a sub can't get CG 20 37?"], "what_they_cover_that_we_dont": "Warranty period framing.", "what_we_cover_that_they_dont": "Edition history table, blanket forms, products-completed ops aggregate, public owner rules." },
+    { "url": "https://totalcsr.com/insurance-agency-blog/cg-20-37-additional-insured-for-completed-operations/", "title": "CG 20 37: Additional Insured for Completed Operations", "h2s": ["The Key Functions of CG 20 37", "Main Distinctions from CG 20 10", "Real-World Example", "Common Oversights", "Best Practices", "Quick Comparison Table"], "faqs": [], "what_they_cover_that_we_dont": "Agency-side workflow.", "what_we_cover_that_they_dont": "FAQ, edition changes, GC checklist." },
+    { "url": "https://constructionexec.com/article/the-right-endorsement-additional-insureds/", "title": "The Right Endorsement: Additional Insureds", "h2s": ["Who typically asks to have additional insured status and why?", "What are the major changes that have occurred in the CG 20 10 and CG 20 37 endorsements?", "Potential implications of the latest CG2010 & CG2037 editions"], "faqs": [], "what_they_cover_that_we_dont": "Deeper discussion of trigger wording.", "what_we_cover_that_they_dont": "Current checklist, aggregate, blanket forms." },
+    { "url": "https://sonomacounty.gov/administrative-support-and-fiscal-services/human-resources/divisions-and-units/liability-and-insurance/insurance/help-and-support/contract-insurance-requirements-reference-guide/additional-insured-endorsements", "title": "Additional Insured Endorsements (County of Sonoma)", "h2s": ["Basic Concepts", "Primary and Non-Contributory Coverage", "Common ISO Additional Insured Endorsements", "Automatic or 'Blanket' Additional Insured Endorsements", "Insurer Proprietary Additional Insured Endorsements"], "faqs": [], "what_they_cover_that_we_dont": "Permit and lease forms (CG 20 12, CG 20 11).", "what_we_cover_that_they_dont": "Edition history, GC checklist." },
+    { "url": "https://constructioncoverage.com/insurance/additional-insured-endorsement", "title": "Additional insured endorsement", "h2s": [], "faqs": [], "what_they_cover_that_we_dont": "Not read (fetch failed); recheck next review.", "what_we_cover_that_they_dont": "" }
+  ],
+  "plan": {
+    "table": "CG 20 10 and CG 20 37 editions and what each covers",
+    "internal_links": ["/blog/per-written-contract-additional-insured/", "/blog/primary-and-noncontributory/", "/blog/waiver-of-subrogation-coi/", "/blog/per-project-aggregate-coi/", "/blog/how-to-check-a-contractor-coi/", "/coi-requirements/"],
+    "external_links": ["https://constructionexec.com/", "https://www.insurancejournal.com/", "https://www.irmi.com/", "https://sonomacounty.gov/", "https://www.dfs.ny.gov/"],
+    "forsured_paragraph": "Forsured reads the endorsement forms attached to each contractor COI and flags an additional insured endorsement that covers ongoing operations but not completed operations, against the requirements set for that project."
+  }
+}
