@@ -77,7 +77,7 @@ Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor b
 
 - Plain voice, short sentences, specific numbers. The copy tests block stock marketing phrases and em-dash asides.
 - Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question.
-- No founder names. Posts are by "the Forsured team".
+- Posts are by "the Forsured team" unless the front matter names an `author` from `content/authors.json`.
 - Every number and claim from someone else links to the original in `sources`. Never invent a quote. Never put words from a private conversation in a named person's mouth.
 - Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors, except in a `Buyer's guide`: there, every fact about another vendor comes from its own public pages, is linked under Sources, and carries the date it was checked. Re-check those facts every quarter.
 - Never imply IRMI or any publication endorses Forsured (the footer says we're independent).
@@ -123,7 +123,7 @@ news posts.
 - **S4** body word count for the type. **S5** at least one table (not news) with a `Table: <caption>` line directly above its rows.
 - **S6** 5 to 8 FAQs, each answer 40 to 80 words, starting with a yes/no or a definition.
 - **S7** one plain body paragraph on what Forsured does for this exact item, only from the homepage feature list. No adjectives.
-- **S8 / J1** `"author"` (and optional `"reviewer"`) names a person in `content/authors.json`. Until one is approved, the gate warns instead of failing. Never invent a name or a title: titles come from the Forsured site or an approved release, and founders stay off every page until the Nov 19 launch.
+- **S8 / J1** `"author"` (and optional `"reviewer"`) names a person in `content/authors.json`. Until one is approved, the gate warns instead of failing. Never invent a name or a title: titles come from the Forsured site or an approved release.
 - **S9** each target keyword in at least one heading and at least 5 times in the body; the primary keyword in the title tag, H1, dek, description and slug. Drop a keyword rather than force it. A rewrite of an existing post keeps its URL: set `"slug_locked": true` in its brief, which skips only the slug check.
 - **L1** 3 to 8 internal body links (pillar, the `/coi-requirements/<state>/` page when state law matters, the next sibling post). **L2** 3 to 8 external links to primary sources (IRMI, ISO/Verisk, NCCI, state insurance departments, ACORD, courts); link the first mention of each outside organization. COI Journal links count as neither. **L3** descriptive anchors, never a visible URL; emails as `mailto:`.
 - **J2** publisher is the homepage Organization by `@id`. **J3** mentions carry a `url`. **J5** `updated` is the visible Updated date; bump it only when the content changes. **J6** no HTML comments, minified JSON-LD.

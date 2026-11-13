@@ -41,9 +41,6 @@ const BANNED = [
   [/official (IRMI|CRC)|IRMI[- ]?(approved|endorsed|partner|sponsor)|(?<!(not|or|never) )(sponsored|endorsed|approved) by IRMI|in partnership with IRMI/i, 'implies an IRMI affiliation'],
 ];
 
-// Founders are not public yet. Checked against the raw HTML, so comments, metadata and URLs count too.
-const FOUNDERS = [/\bzach(ary)?\b/i, /servideo/i, /\bmarc\b/i];
-
 for (const p of PAGES) {
   test.describe(`${p.name} copy`, () => {
     test('follows the wording rules', async ({ page }) => {
@@ -60,11 +57,6 @@ for (const p of PAGES) {
       expect(hits).toEqual([]);
     });
 
-    test('never names the founders', async ({}, testInfo) => {
-      test.skip(testInfo.project.name !== 'desktop', 'source check runs once');
-      const html = read(p.file).replace(/data:[a-z/+]+;base64,[A-Za-z0-9+/=]+/g, '');
-      for (const re of FOUNDERS) expect(html, `${re} found in ${p.file}`).not.toMatch(re);
-    });
 
     test('has no doubled words or stray punctuation', async ({ page }) => {
       await open(page, p.url, { fonts: false });

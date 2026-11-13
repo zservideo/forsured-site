@@ -741,8 +741,8 @@ const SUB_JS = `<script>
 // ---------- people (AEO S8, J1) ----------
 // content/authors.json holds the real people who write and review posts, with titles exactly as the
 // Forsured site or an approved release states them (W8). A post names one by "author" (and
-// optionally "reviewer"). Empty until a person is approved, and founders stay off until the Nov 19
-// launch (copy.spec.js), so posts fall back to the Organization.
+// optionally "reviewer"). Empty until a person is approved,
+// so posts fall back to the Organization.
 const personId = (a) => `${SITE}/#${a.id}`;
 const personNode = (a) => ({
   '@type': 'Person',
