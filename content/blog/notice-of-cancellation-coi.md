@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Will a COI tell you if a contractor's policy is cancelled?",
+  "title": "Will a COI tell you if a contractor's policy is canceled?",
   "seoTitle": "Notice of Cancellation on a COI: What It Promises | Forsured",
   "description": "The standard ACORD 25 certificate doesn't promise to tell you about a cancellation. What the box says, what New York law adds, and how to get real notice.",
   "dek": "The cancellation box on the certificate reads like a promise. Since 2009 it only points back to the policy, and the policy usually doesn't mention you.",
@@ -9,7 +9,7 @@
   "category": "COI basics",
   "hero": {
     "type": "list",
-    "title": "Three ways to learn a policy was cancelled",
+    "title": "Three ways to learn a policy was canceled",
     "items": [
       "A notice endorsement that schedules you",
       "Fresh COIs at every renewal date",
@@ -89,4 +89,4 @@ The certificate summarizes. The policy decides.
 2. **Track every policy period.** Note each policy's expiration date from the COI and ask for a renewal certificate before that date, not after.
 3. **Keep checking for the life of the job.** A COI is a snapshot from the day it was issued. Put the check in your project requirements and repeat it, so a lapse shows up before a loss does.
 
-Forsured checks each contractor COI against your project requirements and keeps checking for the life of the job, so a cancelled or expired policy doesn't hide in a file of old PDFs.
+Forsured checks each contractor COI against your project requirements and keeps checking for the life of the job, so a canceled or expired policy doesn't hide in a file of old PDFs.

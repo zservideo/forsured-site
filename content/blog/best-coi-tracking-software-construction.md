@@ -150,7 +150,7 @@
           "position": 1,
           "url": "https://forsured.ai/blog/best-coi-tracking-software-construction/#forsured",
           "item": {
-            "@id": "https://forsured.ai/blog/best-coi-tracking-software-construction/#vendor-forsured"
+            "@id": "https://forsured.ai/#software"
           }
         },
         {
@@ -210,19 +210,6 @@
           }
         }
       ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://forsured.ai/blog/best-coi-tracking-software-construction/#vendor-forsured",
-      "name": "Forsured",
-      "url": "https://forsured.ai/",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "COI tracking software",
-      "operatingSystem": "Web",
-      "description": "Construction insurance compliance software that checks each contractor COI and endorsement against project-level requirements and exceptions, with a shared GC and broker workspace and monitoring after approval.",
-      "creator": {
-        "@id": "https://forsured.ai/#organization"
-      }
     },
     {
       "@type": "SoftwareApplication",

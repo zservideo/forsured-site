@@ -33,6 +33,10 @@ const BANNED = [
   [/\b(seamless(ly)?|leverag(e|es|ed|ing)|unlock(s|ing)?|elevat(e|es|ing)|game[- ]chang(er|ing)|revolutioni[sz]\w*|cutting[- ]edge|delve|supercharg\w*|empower\w*|next[- ]level|effortless(ly)?|robust|streamlin\w*|transformative|unparalleled|best[- ]in[- ]class|world[- ]class|state[- ]of[- ]the[- ]art|ever[- ]evolving|synerg\w*|holistic)\b/i, 'generic marketing cliché, say it plainly'],
   [/\bin today's\b|\bharness(ing)? the power\b|\bnavigat(e|ing) the complexit/i, 'boilerplate phrasing'],
   [/\w ?— ?\w/, 'em-dash aside, use a comma, period or colon', { perSegment: true }],
+  // Warren Brown's AEO writing rules W2, W4, W5 (Nov 13 2026; tools/blog/aeo.js holds the same list).
+  [/\b(call to action|CTA|conversions?|funnel|value prop(osition)?|ICP|target audience|SERP|share of voice|click-through|brand awareness|go-to-market|pain points?|use cases?|differentiators?)\b|positions? itself/i, 'marketing vocabulary, say what it does for the reader (AEO W4)'],
+  [/worth noting|worth stating|and that's the point|\bdeliberately\b/i, 'meta-commentary (AEO W5)'],
+  [/\bcancell(ed|ing)\b(?! before the expiration date thereof)|\blicence\b|\bcatalogue\b|\bbehaviour\b/i, 'US spelling: canceled, license, catalog, behavior (AEO W2)'],
   // IRMI: we can be there, but never imply we are part of, sponsored or approved by IRMI.
   [/official (IRMI|CRC)|IRMI[- ]?(approved|endorsed|partner|sponsor)|(?<!(not|or|never) )(sponsored|endorsed|approved) by IRMI|in partnership with IRMI/i, 'implies an IRMI affiliation'],
 ];

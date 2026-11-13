@@ -75,3 +75,50 @@ Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor b
 - Lead with the answer. The first paragraph and the takeaways should answer the headline's question.
 - Every post gets share buttons, the newsletter signup, the hero, a Markdown copy and full structured data automatically. Don't add your own.
 - Tie each post back to contractor COI compliance lightly. At most one soft line about Forsured near the end.
+
+## AEO checklist (build gate, from Nov 16 2026)
+
+Warren Brown's AEO recommendations (Get AI Authority, Nov 13 2026; the full file is in project files at
+`content/aeo/warren-2026-11-13/AEO-RECOMMENDATIONS.md`). `tools/blog/aeo.js` runs the Section 9
+checklist on every **gated** post, and `build.js` refuses to build if anything misses. A post is gated
+when it has a brief, or when its `date` is on or after 2026-11-16. Older posts join the gate when
+they're rewritten (write their brief first), in this order: how-to-check-a-contractor-coi,
+compliance-isnt-coverage, the additional insured cluster, notice-of-cancellation-coi, then T3 links on
+news posts.
+
+**1. Brief first.** `content/blog/briefs/<slug>.json`, written before the draft:
+
+```json
+{
+  "slug": "what-is-a-certificate-of-insurance",
+  "type": "pillar",
+  "reader": "GC risk/compliance manager",
+  "pillar": "/blog/what-is-a-certificate-of-insurance/",
+  "questions": ["What is a certificate of insurance and why do general contractors require one?"],
+  "target_keywords": [{ "kw": "certificate of insurance", "vol": 2400, "kd": null }],
+  "competing_sources": [{ "url": "", "title": "", "h2s": [], "faqs": [], "what_they_cover_that_we_dont": "", "what_we_cover_that_they_dont": "" }],
+  "plan": { "h2s": [], "faqs": [], "table": "", "internal_links": [], "external_links": [], "forsured_paragraph": "" }
+}
+```
+
+- `type`: pillar (2,000 to 3,000 body words), evergreen (1,000 to 1,600), buyer (1,200 to 2,000; rankings too), news (600 to 900).
+- 1 to 3 `questions`, in the buyer's words. 5 to 10 `target_keywords`; the first is the primary.
+- `competing_sources`: the top pages ChatGPT, Perplexity and Google actually cite for the questions, read for real (B2). The post covers everything the best one covers and adds one thing none has.
+- `pillar`: the cluster's pillar URL, which the post must link up to. `plan.internal_links` and `plan.external_links` must all appear in the body.
+- Monthly mix: about 50% evergreen, 30% buyer, 20% or less news. A news post links to at least two evergreen posts and ends its "why it matters" section on the evergreen question.
+
+**2. What the gate checks.**
+
+- **S1** the `dek` is the answer: one 40 to 60 word paragraph that names the term and stands alone.
+- **S2** every `##` in the body is a question ending in "?". **S3** open each section with a sentence that answers its heading and repeats the noun (not "It" or "This").
+- **S4** body word count for the type. **S5** at least one table (not news) with a `Table: <caption>` line directly above its rows.
+- **S6** 5 to 8 FAQs, each answer 40 to 80 words, starting with a yes/no or a definition.
+- **S7** one plain body paragraph on what Forsured does for this exact item, only from the homepage feature list. No adjectives.
+- **S8 / J1** `"author"` (and optional `"reviewer"`) names a person in `content/authors.json`. Until one is approved, the gate warns instead of failing. Never invent a name or a title: titles come from the Forsured site or an approved release, and founders stay off every page until the Nov 19 launch.
+- **S9** each target keyword in at least one heading and at least 5 times in the body; the primary keyword in the title tag, H1, dek, description and slug. Drop a keyword rather than force it.
+- **L1** 3 to 8 internal body links (pillar, the `/coi-requirements/<state>/` page when state law matters, the next sibling post). **L2** 3 to 8 external links to primary sources (IRMI, ISO/Verisk, NCCI, state insurance departments, ACORD, courts); link the first mention of each outside organization. COI Journal links count as neither. **L3** descriptive anchors, never a visible URL; emails as `mailto:`.
+- **J2** publisher is the homepage Organization by `@id`. **J3** mentions carry a `url`. **J5** `updated` is the visible Updated date; bump it only when the content changes. **J6** no HTML comments, minified JSON-LD.
+- **W1 to W6** no em dash, US spelling ("canceled"), no marketing vocabulary (call to action, funnel, keyword, use case, pain point, leverage...), no meta-commentary ("it's worth noting", "deliberately"), never mention AI visibility research or prompts. Write with contractions, for the PM reviewing COIs on a Tuesday. Companies are "they", products and forms are "it".
+- **W9** the not-advice line (the Sources note carries it) and the structure checks (balanced tags, ends with `</html>`).
+
+**Rankings and comparisons (R2, Buyer's guide category only):** every vendor fact linked to the vendor's own page and checked the month of publishing; publish criteria and weights with every score, or use a "best for" format when Forsured wouldn't honestly rank first; a four-paragraph intro (problem, who it's for, method, where Forsured fits including its limits); a screenshot of each vendor's own page; no section defending the list's independence; an "About this ranking" credit at the foot.

@@ -27,7 +27,7 @@ The standard ACORD 25 certificate says so on its face. It is "issued as a matter
 
 **The endorsements.** Additional insured status, waivers of subrogation and primary and noncontributory wording are created by endorsements on the contractor's policy. A checked "ADDL INSD" box on a certificate is not the endorsement. And endorsement forms keep changing, a point Cullen and Dykman's Christopher Ruggiero made in his session on decoding additional insured endorsements at IRMI's 2026 Construction Risk Conference: the coverage you negotiate in the contract only holds if the endorsement on the policy matches it.
 
-**The dates.** Policies lapse, get cancelled for nonpayment and renew with new terms. A contractor COI that cleared prequalification in March can be out of compliance by July, and nobody finds out until there's a claim.
+**The dates.** Policies lapse, get canceled for nonpayment and renew with new terms. A contractor COI that cleared prequalification in March can be out of compliance by July, and nobody finds out until there's a claim.
 
 **The limits.** Project requirements often call for higher umbrella limits than a contractor carries on its standard program. With umbrella and excess rates still climbing (WTW expects another 5% to 15% in 2027), that is exactly the line where contractors trim.
 

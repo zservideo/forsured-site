@@ -225,13 +225,13 @@
     <enclosure url="https://forsured.ai/blog/completed-operations-additional-insured/og.png" type="image/png" length="50689"/>
   </item>
   <item>
-    <title>Will a COI tell you if a contractor's policy is cancelled?</title>
+    <title>Will a COI tell you if a contractor's policy is canceled?</title>
     <link>https://forsured.ai/blog/notice-of-cancellation-coi/</link>
     <guid isPermaLink="true">https://forsured.ai/blog/notice-of-cancellation-coi/</guid>
     <pubDate>Thu, 05 Nov 2026 12:00:00 GMT</pubDate>
     <category>COI basics</category>
     <description>The standard ACORD 25 certificate doesn't promise to tell you about a cancellation. What the box says, what New York law adds, and how to get real notice.</description>
-    <content:encoded><![CDATA[<ul><li>Usually not. Since the 2009/09 edition, the ACORD 25 cancellation box says only that notice &quot;will be delivered in accordance with the policy provisions.&quot;</li><li>Standard policy provisions send cancellation notice to the named insured, the contractor, not to the certificate holder.</li><li>New York's certificate law bars requiring certificate terms the policy doesn't contain, so adding notice wording to the certificate itself doesn't create it.</li><li>To get real notice, ask for an insurer endorsement that schedules you, and keep checking coverage for the life of the job.</li></ul><p><img src="https://forsured.ai/blog/notice-of-cancellation-coi/hero.png" width="1600" height="800" alt="Three ways to learn a policy was cancelled: A notice endorsement that schedules you; Fresh COIs at every renewal date; Ongoing checks, not a file of old PDFs"/></p><p>Usually not. The cancellation box on the standard ACORD 25 certificate reads like a promise, but since the 2009/09 edition it only points back to the policy. And the policy usually sends cancellation notice to the contractor who bought it, not to you.</p>
+    <content:encoded><![CDATA[<ul><li>Usually not. Since the 2009/09 edition, the ACORD 25 cancellation box says only that notice &quot;will be delivered in accordance with the policy provisions.&quot;</li><li>Standard policy provisions send cancellation notice to the named insured, the contractor, not to the certificate holder.</li><li>New York's certificate law bars requiring certificate terms the policy doesn't contain, so adding notice wording to the certificate itself doesn't create it.</li><li>To get real notice, ask for an insurer endorsement that schedules you, and keep checking coverage for the life of the job.</li></ul><p><img src="https://forsured.ai/blog/notice-of-cancellation-coi/hero.png" width="1600" height="800" alt="Three ways to learn a policy was canceled: A notice endorsement that schedules you; Fresh COIs at every renewal date; Ongoing checks, not a file of old PDFs"/></p><p>Usually not. The cancellation box on the standard ACORD 25 certificate reads like a promise, but since the 2009/09 edition it only points back to the policy. And the policy usually sends cancellation notice to the contractor who bought it, not to you.</p>
 <h2 id="what-the-box-actually-says">What the box actually says</h2>
 <p>Here is the current wording:</p>
 <blockquote><p>Should any of the above described policies be cancelled before the expiration date thereof, notice will be delivered in accordance with the policy provisions.</p></blockquote>
@@ -243,8 +243,8 @@
 <p>The certificate summarizes. The policy decides.</p>
 <h2 id="how-to-actually-hear-about-a-cancellation">How to actually hear about a cancellation</h2>
 <ol><li><strong>Ask for a notice endorsement.</strong> The fix is an insurer endorsement that schedules you to receive notice. BCS's example: &quot;we agree to mail prior written notice of cancellation to the person(s) or organization(s) shown in the Schedule.&quot; BCS also warned these &quot;are not generally available and are used sparingly by Insurers,&quot; so ask early.</li><li><strong>Track every policy period.</strong> Note each policy's expiration date from the COI and ask for a renewal certificate before that date, not after.</li><li><strong>Keep checking for the life of the job.</strong> A COI is a snapshot from the day it was issued. Put the check in your project requirements and repeat it, so a lapse shows up before a loss does.</li></ol>
-<p>Forsured checks each contractor COI against your project requirements and keeps checking for the life of the job, so a cancelled or expired policy doesn't hide in a file of old PDFs.</p>]]></content:encoded>
-    <enclosure url="https://forsured.ai/blog/notice-of-cancellation-coi/og.png" type="image/png" length="46748"/>
+<p>Forsured checks each contractor COI against your project requirements and keeps checking for the life of the job, so a canceled or expired policy doesn't hide in a file of old PDFs.</p>]]></content:encoded>
+    <enclosure url="https://forsured.ai/blog/notice-of-cancellation-coi/og.png" type="image/png" length="47310"/>
   </item>
   <item>
     <title>What does waiver of subrogation mean on a COI?</title>
@@ -418,7 +418,7 @@
 <p>The standard ACORD 25 certificate says so on its face. It is &quot;issued as a matter of information only and confers no rights upon the certificate holder,&quot; and it does not amend, extend or alter the coverage of the policies listed. If the certificate and the policy disagree, the policy wins.</p>
 <h2 id="where-the-gap-hides">Where the gap hides</h2>
 <p><strong>The endorsements.</strong> Additional insured status, waivers of subrogation and primary and noncontributory wording are created by endorsements on the contractor's policy. A checked &quot;ADDL INSD&quot; box on a certificate is not the endorsement. And endorsement forms keep changing, a point Cullen and Dykman's Christopher Ruggiero made in his session on decoding additional insured endorsements at IRMI's 2026 Construction Risk Conference: the coverage you negotiate in the contract only holds if the endorsement on the policy matches it.</p>
-<p><strong>The dates.</strong> Policies lapse, get cancelled for nonpayment and renew with new terms. A contractor COI that cleared prequalification in March can be out of compliance by July, and nobody finds out until there's a claim.</p>
+<p><strong>The dates.</strong> Policies lapse, get canceled for nonpayment and renew with new terms. A contractor COI that cleared prequalification in March can be out of compliance by July, and nobody finds out until there's a claim.</p>
 <p><strong>The limits.</strong> Project requirements often call for higher umbrella limits than a contractor carries on its standard program. With umbrella and excess rates still climbing (WTW expects another 5% to 15% in 2027), that is exactly the line where contractors trim.</p>
 <p><strong>The fine print in the requirements themselves.</strong> Owners and lenders write requirements that differ project to project. A certificate that satisfies one job can fail the next one across the street.</p>
 <h2 id="what-to-check-instead">What to check instead</h2>

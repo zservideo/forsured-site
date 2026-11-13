@@ -18,6 +18,8 @@ const ROOT = path.resolve(__dirname, '..', '..');
 const SRC = path.join(ROOT, 'content', 'blog');
 const SITE = 'https://forsured.ai';
 const CHECK = process.argv.includes('--check');
+const aeo = require('./aeo');
+const { readAuthors } = aeo;
 
 // ---------- reading posts ----------
 
@@ -103,12 +105,14 @@ function markdown(md, dir, base = '') {
       const text = lines.map((l) => l.replace(/^> ?/, '')).join(' ');
       const [quote, cite] = text.split(/\s+--\s+/);
       out.push(`<blockquote><p>${inline(quote)}</p>${cite ? `<cite>${inline(cite)}</cite>` : ''}</blockquote>`);
-    } else if (lines.every((l) => /^\|.*\|$/.test(l))) {
+    } else if (lines.every((l) => /^\|.*\|$/.test(l)) || (/^Table: /.test(lines[0]) && lines.length > 2 && lines.slice(1).every((l) => /^\|.*\|$/.test(l)))) {
+      // An optional `Table: <caption>` line right above the rows becomes the table's <caption> (AEO S5).
+      const caption = /^Table: /.test(lines[0]) ? lines.shift().replace(/^Table: /, '') : '';
       const rows = lines.filter((l) => !/^\|[\s:|-]+\|$/.test(l)).map((l) => l.slice(1, -1).split('|').map((c) => c.trim()));
       const [head, ...rest] = rows;
       out.push(
         // Focusable so keyboard users can scroll a wide table sideways on a phone (axe: scrollable-region-focusable).
-        `<div class="table" tabindex="0" role="region" aria-label="${esc(plain(head.join(', ')))}"><table><thead><tr>` + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        `<div class="table" tabindex="0" role="region" aria-label="${esc(caption ? plain(caption) : plain(head.join(', ')))}"><table>${caption ? `<caption>${inline(caption)}</caption>` : ''}<thead><tr>` + head.map((c) => `<th scope="col">${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
           rest.map((r) => '<tr>' + r.map((c, i) => (i ? `<td>${inline(c)}</td>` : `<th scope="row">${inline(c)}</th>`)).join('') + '</tr>').join('') +
           '</tbody></table></div>'
       );
@@ -144,8 +148,8 @@ const year = () => new Date().getFullYear();
 const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FB612A'/%3E%3Ctext x='4' y='24' font-family='Arial' font-weight='900' font-size='22' fill='white'%3EF%3C/text%3E%3C/svg%3E";
 // Google tag for the GTM container, copied as-is from Google Analytics > Set up a Google tag.
 // head() puts it right after <head> on every generated page; the hand-written pages carry the same block.
-const GTAG = `<!-- Google tag (GTM-P6PXX2JM). Keep it first in <head>, once per page. tests/analytics.spec.js checks it. -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P6PXX2JM"></script>
+// Keep it first in <head>, once per page (tests/analytics.spec.js). No HTML comments in published pages (AEO J6).
+const GTAG = `<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P6PXX2JM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -287,6 +291,10 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .table{overflow-x:auto;border:1px solid #E4E7EC;border-radius:10px;background:#fff}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
 .prose th,.prose td{text-align:left;padding:10px 14px;border-bottom:1px solid #E4E7EC;vertical-align:top}
+.prose caption{caption-side:top;text-align:left;font-size:14px;font-weight:600;color:#344051;padding:12px 14px 4px}
+.about-article .who{display:flex;gap:16px;align-items:flex-start}
+.about-article .who img{border-radius:50%;flex:none}
+.about-article p{font-size:15px;line-height:1.6}
 .prose thead th{font-size:13px;font-weight:600;color:#344051;background:#F9FAFB}
 .prose tbody th{font-weight:500}
 .prose tr:last-child>*{border-bottom:0}
@@ -419,7 +427,7 @@ ${published ? `<meta property="article:published_time" content="${published}"/>\
 <meta name="twitter:image" content="${SITE}${image}"/>
 <meta name="twitter:image:alt" content="${esc(imageAlt)}"/>
 <script type="application/ld+json">
-${JSON.stringify(jsonld, null, 2)}
+${JSON.stringify(jsonld)}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -676,11 +684,58 @@ const SUB_JS = `<script>
 })();
 </script>`;
 
+// ---------- people (AEO S8, J1) ----------
+// content/authors.json holds the real people who write and review posts, with titles exactly as the
+// Forsured site or an approved release states them (W8). A post names one by "author" (and
+// optionally "reviewer"). Empty until a person is approved, and founders stay off until the Nov 19
+// launch (copy.spec.js), so posts fall back to the Organization.
+const personId = (a) => `${SITE}/#${a.id}`;
+const personNode = (a) => ({
+  '@type': 'Person',
+  '@id': personId(a),
+  name: a.name,
+  jobTitle: a.jobTitle,
+  ...(a.url ? { url: a.url } : {}),
+  ...(a.image ? { image: a.image.startsWith('http') ? a.image : `${SITE}${a.image}` } : {}),
+  ...(a.linkedin ? { sameAs: [a.linkedin] } : {}),
+  worksFor: { '@id': ORG['@id'] },
+  ...(a.knowsAbout ? { knowsAbout: a.knowsAbout } : {}),
+});
+const personLink = (a) => (a.linkedin ? `<a href="${esc(a.linkedin)}">${esc(a.name)}</a>` : esc(a.name));
+
+// The credit block at the foot of every post (S8): who wrote it, who reviewed it, and the dates.
+function aboutArticle(p, author, reviewer) {
+  const dates = `Published <time datetime="${day(p.date)}">${human(p.date)}</time>${day(p.updated) !== day(p.date) ? `. Updated <time datetime="${day(p.updated)}">${human(p.updated)}</time>` : ''}.`;
+  const who = author
+    ? `<div class="who">${author.image ? `<img src="${esc(author.image)}" width="64" height="64" alt="${esc(author.name)}" loading="lazy" decoding="async"/>` : ''}<p>Written by ${personLink(author)}, ${esc(author.jobTitle)}.${author.credential ? ` ${esc(author.credential)}` : ''}</p></div>`
+    : '<p>Written by the Forsured team.</p>';
+  const rev = reviewer ? `\n      <p>Reviewed by ${personLink(reviewer)}, ${esc(reviewer.jobTitle)}.</p>` : '';
+  return `    <section class="extra about-article" aria-labelledby="about-article">
+      <h2 id="about-article">About this article</h2>
+      ${who}${rev}
+      <p>${dates} Every source is linked above.</p>
+    </section>`;
+}
+
 function postPage(p, posts) {
   const image = `/blog/${p.slug}/og.png`;
   const publishers = [...new Set(p.sources.map((s) => s.publisher).filter(Boolean))];
   const others = posts.filter((o) => o !== p);
   const related = [...others.filter((o) => o.category === p.category), ...others.filter((o) => o.category !== p.category)].slice(0, 3);
+  const people = readAuthors();
+  const author = p.author && people.find((a) => a.id === p.author);
+  const reviewer = p.reviewer && people.find((a) => a.id === p.reviewer);
+  if (p.author && !author) throw new Error(`${p.slug}: author "${p.author}" is not in content/authors.json`);
+  if (p.reviewer && !reviewer) throw new Error(`${p.slug}: reviewer "${p.reviewer}" is not in content/authors.json`);
+  // Publisher sites, taken from the source links themselves (AEO J3). Never a guessed Wikidata ID.
+  const publisherUrl = (name) => {
+    const s = p.sources.find((x) => x.publisher === name);
+    try {
+      return new URL(s.url).origin + '/';
+    } catch {
+      return undefined;
+    }
+  };
   const graph = [
     {
       '@type': 'BlogPosting',
@@ -694,8 +749,10 @@ function postPage(p, posts) {
       thumbnailUrl: `${SITE}${image}`,
       datePublished: p.date,
       dateModified: p.updated,
-      author: { '@id': ORG['@id'] },
-      publisher: ORG,
+      author: { '@id': author ? personId(author) : ORG['@id'] },
+      ...(reviewer ? { reviewedBy: { '@id': personId(reviewer) } } : {}),
+      // The one canonical Organization is defined on the homepage (AEO J2); posts point to it.
+      publisher: { '@id': ORG['@id'] },
       mainEntityOfPage: `${SITE}${p.url}`,
       articleSection: p.category,
       keywords: (p.tags || []).join(', '),
@@ -703,7 +760,7 @@ function postPage(p, posts) {
       inLanguage: 'en-US',
       isPartOf: { '@type': 'Blog', '@id': `${SITE}/blog/#blog`, name: 'Forsured Blog', isPartOf: { '@id': WEBSITE['@id'] } },
       encoding: { '@type': 'MediaObject', encodingFormat: 'text/markdown', contentUrl: `${SITE}${p.url}index.md` },
-      mentions: publishers.map((name) => ({ '@type': 'Organization', name })),
+      mentions: publishers.map((name) => ({ '@type': 'Organization', name, url: publisherUrl(name) })),
       about: (p.tags || []).slice(0, 4).map((t) => ({ '@type': 'Thing', name: t })),
       citation: p.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url, publisher: s.publisher ? { '@type': 'Organization', name: s.publisher } : undefined })),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.dek', '.tldr'] },
@@ -717,6 +774,7 @@ function postPage(p, posts) {
       ],
     },
     WEBSITE,
+    ...[author, reviewer].filter(Boolean).filter((a, i, all) => all.indexOf(a) === i).map(personNode),
   ];
   // Extra schema.org nodes from front matter (`schema`), e.g. the ItemList and SoftwareApplication
   // entries on a buyer's guide. Every node's @id must sit on this post's URL.
@@ -756,7 +814,7 @@ ${nav('blog')}
       <span class="label">${esc(p.category)}</span>
       <h1 style="margin-top:16px">${esc(p.title)}</h1>
       <p class="dek">${inline(p.dek)}</p>
-      <p class="meta"><span>By the Forsured team</span><time datetime="${day(p.date)}">${human(p.date)}</time><span>${p.minutes} min read</span></p>
+      <p class="meta"><span>Published <time datetime="${day(p.date)}">${human(p.date)}</time></span>${day(p.updated) !== day(p.date) ? `<span>Updated <time datetime="${day(p.updated)}">${human(p.updated)}</time></span>` : ''}</p>
       ${shareBar(p, 'Share this post')}
     </header>
     <figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" fetchpriority="high" decoding="async"/></figure>
@@ -782,6 +840,7 @@ ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`)
       <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}">${esc(s.title)}</a>${s.publisher ? `, ${esc(s.publisher)}` : ''}${s.date ? `, ${esc(s.date)}` : ''}</li>`).join('')}</ol>
       <p class="note">We link to the original reporting and research behind every post. This post is general information, not legal or insurance advice: Forsured is a software company, not a law firm or a licensed insurance agency, so confirm anything you'll rely on with your broker or attorney. Spotted something we got wrong? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
     </section>
+${aboutArticle(p, author, reviewer)}
   </div>
 </article>
 ${related.length ? `<section class="more" aria-labelledby="more"><div class="edge"><h2 id="more">Keep reading</h2><ul class="cards">${related.map((r) => card(r)).join('')}</ul></div></section>` : ''}
@@ -1037,7 +1096,7 @@ function postMarkdown(p) {
 
 > ${plain(p.dek)}
 
-Published ${human(p.date)}${p.updated !== p.date ? `, updated ${human(p.updated)}` : ''} by Forsured. ${p.category}. Source: ${SITE}${p.url}
+Published ${human(p.date)}${day(p.updated) !== day(p.date) ? `, updated ${human(p.updated)}` : ''} by ${postAuthorName(p)}. ${p.category}. Source: ${SITE}${p.url}
 
 ![${heroAlt(p)}](${SITE}${p.url}hero.png)
 
@@ -1064,6 +1123,11 @@ General information, not legal or insurance advice. Forsured is a software compa
 ---
 Forsured: construction insurance compliance software. ${SITE} · hello@forsured.ai
 `;
+}
+
+function postAuthorName(p) {
+  const a = p.author && readAuthors().find((x) => x.id === p.author);
+  return a ? `${a.name}, ${a.jobTitle}, Forsured` : 'Forsured';
 }
 
 // Every post in full, for answer engines that read one file instead of crawling (llmstxt.org).
@@ -1105,10 +1169,20 @@ function build() {
   const feedPosts = posts.filter((p) => !p.library);
   files.set('blog/index.html', indexPage(feedPosts));
   files.set('guides/index.html', guidesPage(posts));
+  const gateFails = [];
   for (const p of posts) {
-    files.set(`blog/${p.slug}/index.html`, postPage(p, posts));
+    const html = postPage(p, posts);
+    files.set(`blog/${p.slug}/index.html`, html);
     files.set(`blog/${p.slug}/index.md`, postMarkdown(p));
+    // AEO pre-publish checklist (tools/blog/aeo.js): a gated post that misses anything doesn't build.
+    const brief = aeo.readBrief(p.slug);
+    if (aeo.gated(p, brief)) {
+      const { fails, warns } = aeo.check(p, brief, html);
+      for (const w of warns) console.warn(`aeo warning, ${p.slug}: ${w}`);
+      gateFails.push(...fails.map((f) => `${p.slug}: ${f}`));
+    }
   }
+  if (gateFails.length) throw new Error(`AEO checklist failed (content/blog/README.md, "AEO checklist"):\n  ${gateFails.join('\n  ')}`);
   for (const [rel, content] of statePages().files) files.set(rel, content);
   for (const [rel, content] of researchPages().files) files.set(rel, content);
   files.set('blog/feed.xml', feed(feedPosts));
