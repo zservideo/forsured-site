@@ -20,6 +20,10 @@
 //   sources    [{ title, publisher, url, date? }]
 
 const REVIEWED = '2026-10-28';
+// When the pages themselves last changed (dateModified, sitemap lastmod, the visible Updated date).
+// REVIEWED is when the state facts were last checked against the sources; bump UPDATED on any
+// content change (Nov 11 2026: the About Forsured close), REVIEWED only on a fact check.
+const UPDATED = '2026-11-11';
 
 const SHARED = {
   dol: { title: 'State Workers\' Compensation Officials', publisher: 'U.S. Department of Labor', url: 'https://www.dol.gov/agencies/owcp/wc' },
@@ -869,4 +873,4 @@ const STATES = [
 
 for (const s of STATES) s.slug = s.slug || s.name.toLowerCase().replace(/[^a-z]+/g, '-');
 
-module.exports = { REVIEWED, SHARED, STATES };
+module.exports = { REVIEWED, UPDATED, SHARED, STATES };

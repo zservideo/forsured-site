@@ -7,7 +7,7 @@ name: IndexNow
 on:
   push:
     branches: [main]
-    paths: ['blog/**', 'sitemap.xml', 'index.html', 'irmi-field-guide/**']
+    paths: ['blog/**', 'guides/**', 'coi-requirements/**', 'research/**', 'sitemap.xml', 'index.html', 'irmi-field-guide/**', 'builtworlds-field-guide/**']
   workflow_dispatch:
 
 env:

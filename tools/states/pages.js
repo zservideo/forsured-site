@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { esc, human, head, nav, FOOTER, BAND, ORG, WEBSITE, SITE, ROOT, PRODUCT, PRODUCT_POINTS, QUOTE, aboutForsured: about } = require('../blog/build');
-const { REVIEWED, SHARED, STATES } = require('../../content/coi-requirements/states');
+const { REVIEWED, UPDATED, SHARED, STATES } = require('../../content/coi-requirements/states');
 
 const HUB = '/coi-requirements/';
 const HUB_TITLE = 'Contractor insurance requirements by state';
@@ -147,7 +147,7 @@ function statePage(s) {
       description: m.description,
       image: { '@type': 'ImageObject', url: `${SITE}${image}`, width: 1200, height: 630 },
       datePublished: REVIEWED,
-      dateModified: REVIEWED,
+      dateModified: UPDATED,
       author: ORG_REF,
       publisher: ORG,
       mainEntityOfPage: `${SITE}${url(s)}`,
@@ -178,7 +178,7 @@ function statePage(s) {
     imageAlt: m.h1,
     type: 'article',
     published: REVIEWED,
-    modified: REVIEWED,
+    modified: UPDATED,
     section: 'COI requirements by state',
     md: true,
     css: CSS,
@@ -194,7 +194,7 @@ ${nav('states')}
       <span class="label">State guide</span>
       <h1 style="margin-top:16px">${esc(m.h1)}</h1>
       <p class="dek">${esc(m.dek)}</p>
-      <p class="meta"><span>By the Forsured team</span><span>Last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
+      <p class="meta"><span>Updated <time datetime="${UPDATED}">${human(UPDATED)}</time></span><span>Facts last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
       <p class="notice">${NOTICE}</p>
     </header>
     <ul class="facts">
@@ -312,7 +312,7 @@ function hubPage() {
       name: HUB_TITLE,
       url: `${SITE}${HUB}`,
       description: HUB_DESC,
-      dateModified: REVIEWED,
+      dateModified: UPDATED,
       publisher: ORG,
       isPartOf: { '@id': WEBSITE['@id'] },
       inLanguage: 'en-US',
@@ -349,7 +349,7 @@ ${nav('states')}
     <span class="label">COI requirements by state</span>
     <h1 style="margin-top:16px">${HUB_TITLE}</h1>
     <p class="dek">Every state sets its own rules for workers' comp, contractor licensing and indemnity clauses. Here's what each one says, with the sources linked, and what it means for the contractor COIs on your projects.</p>
-    <p class="meta"><span>By the Forsured team</span><span>Last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
+    <p class="meta"><span>Updated <time datetime="${UPDATED}">${human(UPDATED)}</time></span><span>Facts last checked <time datetime="${REVIEWED}">${human(REVIEWED)}</time></span></p>
   </header>
   <div class="hub-intro">
     <p><strong>Workers' comp</strong> is where states differ most. Most require it from the first employee, some start at three, four or five, construction often has its own lower line, and four states only allow coverage from a state fund.</p>
@@ -421,7 +421,7 @@ function build() {
     `- [${HUB_TITLE}](${SITE}${HUB}): ${HUB_DESC} Markdown: ${SITE}${HUB}index.md`,
     ...STATES.map((s) => `- [${meta(s).h1}](${SITE}${url(s)}): workers' comp required at ${s.wc.at}; license insurance minimum: ${s.lic.at}; anti-indemnity statute voids: ${aiAt(s)}. Markdown: ${SITE}${url(s)}index.md`),
   ].join('\n');
-  return { files, urls: [HUB, ...STATES.map(url)], reviewed: REVIEWED, llms };
+  return { files, urls: [HUB, ...STATES.map(url)], reviewed: UPDATED, llms };
 }
 
 module.exports = { build, STATES, HUB, HUB_TITLE, url, meta };

@@ -59,7 +59,9 @@ for (const slug of POSTS) {
       expect(post.mainEntityOfPage).toBe(`https://forsured.ai/blog/${slug}/`);
       expect(post.citation.length, 'cites its sources').toBeGreaterThan(0);
       expect(post.image.map((i) => i.url), 'hero and share card').toEqual([`https://forsured.ai/blog/${slug}/hero.png`, `https://forsured.ai/blog/${slug}/og.png`]);
-      expect(post.publisher.sameAs.length, 'publisher is tied to its other official profiles').toBeGreaterThan(0);
+      // One canonical Organization, defined on the homepage with its sameAs profiles (AEO J2).
+      expect(post.publisher, 'publisher points to the homepage Organization').toEqual({ '@id': 'https://forsured.ai/#organization' });
+      for (const m of post.mentions || []) expect(m.url, `mention ${m.name} has a url (AEO J3)`).toMatch(/^https:\/\//);
       expect(post.encoding.contentUrl).toBe(`https://forsured.ai/blog/${slug}/index.md`);
       expect(items.find((i) => i['@type'] === 'WebSite'), 'WebSite entity').toBeTruthy();
       expect(items.find((i) => i['@type'] === 'BreadcrumbList')).toBeTruthy();
