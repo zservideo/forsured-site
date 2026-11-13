@@ -102,8 +102,11 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
 /* Ask the Construction Guy: vertical video, click to play */
-.prose .video{max-width:320px;margin:32px auto}
-.video-frame{position:relative;aspect-ratio:9/16;border:1px solid #E4E7EC;border-radius:12px;overflow:hidden;background:#2C2D29}
+/* Whole-pixel sizes (270x480 is exactly 9:16 and fits a 320px phone) so the rest of the post doesn't
+   land on fractional pixels and blur in the screenshot tests. */
+.prose .video{width:270px;margin:32px auto}
+.prose .video figcaption{line-height:20px}
+.video-frame{position:relative;height:480px;border:1px solid #E4E7EC;border-radius:12px;overflow:hidden;background:#2C2D29}
 .video-frame iframe,.video-play,.prose .video-play img{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0}
 .prose .video-play img{object-fit:cover}
 .video-btn{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#FB612A;box-shadow:0 2px 8px rgba(20,28,37,.25);transition:background .15s}
