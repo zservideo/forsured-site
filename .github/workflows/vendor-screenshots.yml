@@ -1,0 +1,102 @@
+name: Vendor screenshots
+
+# Takes the vendor page screenshots listed under "screenshots" in a post's brief
+# (content/blog/briefs/<slug>.json) and commits them to blog/<slug>/ on the branch.
+# Run it from the Actions tab with the post's slug, or add the "vendor-shots" label to a
+# pull request (it then shoots every brief the pull request changes).
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: Post slug
+        required: true
+  pull_request:
+    types: [labeled]
+
+permissions:
+  contents: write
+  actions: write
+  pull-requests: write
+
+env:
+  BRANCH: ${{ github.head_ref || github.ref_name }}
+
+jobs:
+  shots:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'vendor-shots'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: apt-get update -qq && apt-get install -y -qq pngquant
+      - name: Take the screenshots
+        env:
+          SLUG: ${{ github.event.inputs.slug }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          if [ -n "$SLUG" ]; then slugs="$SLUG"; else
+            slugs=$(git diff --name-only "$BASE" HEAD -- 'content/blog/briefs/*.json' | xargs -r -n1 basename | sed 's/\.json$//')
+          fi
+          [ -n "$slugs" ] || { echo "No brief to shoot."; exit 1; }
+          for s in $slugs; do
+            grep -q '"screenshots"' "content/blog/briefs/$s.json" || continue
+            node tools/blog/vendor-shots.js "$s"
+            pngquant --force --skip-if-larger --quality 60-85 --ext .png blog/"$s"/shot-*.png || true
+            ls -l blog/"$s"/shot-*.png
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shots
+          path: blog/*/shot-*.png
+          retention-days: 1
+
+  commit:
+    needs: shots
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: shots
+          path: blog/
+      - name: Commit the screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/*/shot-*.png
+          if git diff --cached --quiet; then
+            echo "Screenshots unchanged."
+          else
+            git commit -m "Add vendor screenshots"
+            git push origin "HEAD:$BRANCH"
+          fi
+      # A push made by this workflow does not start CI by itself, so start it here.
+      - name: Run the site tests on the branch
+        run: gh workflow run test.yml --ref "$BRANCH" --repo "$GITHUB_REPOSITORY"
+
+  remove-label:
+    needs: [shots, commit]
+    if: always() && github.event_name == 'pull_request' && github.event.label.name == 'vendor-shots'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Take the label off so it can be added again next time
+        run: gh pr edit ${{ github.event.pull_request.number }} --remove-label vendor-shots --repo "$GITHUB_REPOSITORY"
