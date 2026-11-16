@@ -17,6 +17,7 @@ Key facts:
 
 ## Blog
 
+- [Boston Built Week 2026: what's on, and our free field guide](https://forsured.ai/blog/boston-built-week-2026/): Boston Built Week 2026 runs Nov 15 to 21: four anchor events, 26 on the calendar, most free with host approval. The week in short, plus our free field guide. Markdown: https://forsured.ai/blog/boston-built-week-2026/index.md
 - [Alternatives to myCOI, TrustLayer and Jones for construction COI tracking (2026)](https://forsured.ai/blog/alternatives-to-mycoi-trustlayer-jones/): Five alternatives to myCOI, TrustLayer and Jones for construction COI tracking, compared on endorsement review, project requirements, Procore and pricing. Markdown: https://forsured.ai/blog/alternatives-to-mycoi-trustlayer-jones/index.md
 - [Best contractor insurance compliance software for general contractors (2026)](https://forsured.ai/blog/subcontractor-insurance-compliance-software/): Insurance compliance software for GCs compared on more than COIs: endorsements, prequalification, lien waivers, payroll, policy review and live monitoring. Markdown: https://forsured.ai/blog/subcontractor-insurance-compliance-software/index.md
 - [The business case for COI tracking software: how to make it to your CFO](https://forsured.ai/blog/coi-tracking-software-business-case/): How to build the business case for COI tracking software: count the hours, the chases and the uninsured exposure, compare options, and present it to finance. Markdown: https://forsured.ai/blog/coi-tracking-software-business-case/index.md
