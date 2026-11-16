@@ -5,6 +5,7 @@
   "description": "Five alternatives to myCOI, TrustLayer and Jones for construction COI tracking, compared on endorsement review, project requirements, Procore and pricing.",
   "dek": "The main alternatives to myCOI, TrustLayer and Jones for construction COI tracking are Forsured, PINS Advantage, bcs, Billy and Certificial. Each one is best for a different job: project-level requirements with the broker in the fix, endorsement wording inside Procore, published per-vendor pricing, payment holds, or live policy data.",
   "date": "2026-11-16T07:00:00-05:00",
+  "updated": "2026-11-16T10:00:00-05:00",
   "draft": false,
   "category": "Buyer's guide",
   "hero": {
@@ -111,11 +112,15 @@ Each alternative below fits a different kind of construction COI tracking progra
 
 Forsured checks each contractor COI and endorsement against the requirements of the project it's for, including project-level exceptions. It flags gaps such as a missing additional insured endorsement for ongoing operations (CG 20 10) or an umbrella aggregate below the requirement, and explains what's wrong and what's needed. The broker sees the requirement, the document and the project in one shared workspace. Forsured keeps tracking renewals and coverage changes after approval, and a person on your team approves or waives every result.
 
+![The Forsured homepage, showing a sample contractor checked against project requirements with two gaps flagged](shot-forsured.png "forsured.ai homepage, checked Nov 16, 2026")
+
 **Watch for:** onboarding is by waitlist, there's no managed review service, and pricing is by quote.
 
 ### PINS Advantage: best for endorsement wording checks inside Procore {#pins-advantage}
 
 [PINS Advantage](https://www.pinsadvantage.com/pricing) reads every certificate and endorsement against requirements built from your contracts, shows its reasoning and links the page it came from. It goes into the wording, such as whether a carrier's own blanket form meets a CG 20 10 and CG 20 37 requirement. Nothing is auto-approved. Plans start around $300 a month with unlimited users, most annual contracts come in at $7,500 or less, and Procore is included.
+
+![The PINS Advantage pricing page, saying plans start around $300 a month with unlimited users](shot-pins-advantage.png "PINS Advantage pricing page, checked Nov 16, 2026")
 
 **Watch for:** brokers respond through an upload link rather than a shared workspace.
 
@@ -123,17 +128,23 @@ Forsured checks each contractor COI and endorsement against the requirements of 
 
 [bcs](https://www.getbcs.com/pricing-and-plans) is free up to 25 vendors with every software feature. Self-service is $11.40 per vendor per year and connects to Procore at no extra cost. Its AI identifies each endorsement type and sends every suggestion to a compliance analyst before anything is applied. Full service starts at $17.80 per vendor per year with a $10,000 annual minimum and adds full policy reviews.
 
+![The bcs pricing page, listing the free tier, self-service and full-service rates](shot-bcs.png "bcs pricing page, checked Nov 16, 2026")
+
 **Watch for:** bcs isn't built only for construction, and deeper endorsement review sits in full service.
 
 ### Billy: best for payment holds tied to compliance {#billy}
 
 [Billy](https://billyforinsurance.com/resources/faq/) is built for construction. It syncs projects and vendors with Procore and works with accounting systems such as Sage 300, Sage Intacct, Viewpoint Vista, CMiC and JD Edwards, so a contractor with a gap is held before the check run. Its AI flags missing endorsements by form, including CG 20 10, CG 20 37, waiver of subrogation and primary and noncontributory. A managed plan uses a CRIS-certified team. Plans start at $500 a year, with a free trial.
 
+![The Billy FAQ page, describing its platform from prequalification to closeout](shot-billy.png "Billy FAQ page, checked Nov 16, 2026")
+
 **Watch for:** brokers fix gaps from a deficiency list rather than a shared workspace, and there's no full price list.
 
 ### Certificial: best for live policy data from the agent {#certificial}
 
 [Certificial](https://www.certificial.com/pricing) takes certificates from the vendor's agent, so it can flag a cancellation or limit change as it happens. EndorsementIQ pulls the carrier, form number and exclusions from each endorsement so you can accept or reject it against your criteria. Requestor Basic is free for up to 5 suppliers, Professional starts at $99 a month, and Enterprise is quoted.
+
+![The Certificial pricing page, showing Requestor Basic, Professional from $99 a month and Enterprise](shot-certificial.png "Certificial pricing page, checked Nov 16, 2026")
 
 **Watch for:** no Procore integration is listed, and live data depends on the vendor's agency being on the network.
 
@@ -163,4 +174,4 @@ State law changes what you can require, so check [contractor insurance requireme
 
 ### About this ranking
 
-This comparison was written by the Forsured team. Forsured makes one of the five alternatives and is listed first; the other four follow in alphabetical order. Every product, integration and pricing fact comes from each vendor's own public pages, checked in November 2026 and linked under Sources. Confirm details with each vendor before you buy.
+This comparison was written by the Forsured team. Forsured makes one of the five alternatives and is listed first; the other four follow in alphabetical order. Every product, integration and pricing fact comes from each vendor's own public pages, checked in November 2026 and linked under Sources. The screenshots show the first screen of each vendor's page as it looked on Nov 16, 2026. Confirm details with each vendor before you buy.

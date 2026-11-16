@@ -34,7 +34,7 @@
       "kd": null
     }
   ],
-  "notes": "Buyer's guide ramp item 1 (P22). Best-for format: Forsured wouldn't honestly rank first on every criterion. Vendor facts from vendor pages checked Nov 16, 2026 (pricing, plans, illumend) and Nov 12 (endorsement pages). Procore Marketplace listings not confirmed this month (marketplace page didn't load), so the post only says what each vendor's own page says about Procore. Vendor screenshots (R2) not added yet: page-weight budget; open item.",
+  "notes": "Buyer's guide ramp item 1 (P22). Best-for format: Forsured wouldn't honestly rank first on every criterion. Vendor facts from vendor pages checked Nov 16, 2026 (pricing, plans, illumend) and Nov 12 (endorsement pages). Procore Marketplace listings not confirmed this month (marketplace page didn't load), so the post only says what each vendor's own page says about Procore. Vendor screenshots (R2) taken by the Vendor screenshots workflow Nov 16 (Zach OK'd Nov 16); lazy-loaded so first-load budget holds.",
   "competing_sources": [
     {
       "url": "https://getjones.com/blog/trustlayer-alternatives/",
@@ -154,5 +154,27 @@
     ],
     "forsured_paragraph": "Forsured checks each contractor COI and endorsement against the project's requirements, brings the broker in to fix gaps, keeps tracking after approval, and a person approves or waives each result.",
     "one_thing_none_has": "All three incumbents and five alternatives side by side with published prices and who makes the final call."
-  }
+  },
+  "screenshots": [
+    {
+      "file": "shot-forsured.png",
+      "url": "https://forsured.ai/"
+    },
+    {
+      "file": "shot-pins-advantage.png",
+      "url": "https://www.pinsadvantage.com/pricing"
+    },
+    {
+      "file": "shot-bcs.png",
+      "url": "https://www.getbcs.com/pricing-and-plans"
+    },
+    {
+      "file": "shot-billy.png",
+      "url": "https://billyforinsurance.com/resources/faq/"
+    },
+    {
+      "file": "shot-certificial.png",
+      "url": "https://www.certificial.com/pricing"
+    }
+  ]
 }
