@@ -1,4 +1,4 @@
-// Tests for the event field guide pages (/irmi-field-guide/, /builtworlds-field-guide/) and their short-URL redirects.
+// Tests for the event field guide pages (/irmi-field-guide/, /builtworlds-field-guide/, /built-week-field-guide/) and their short-URL redirects.
 const { test, expect } = require('@playwright/test');
 const path = require('path');
 const fs = require('fs');
@@ -9,6 +9,7 @@ const PAGES = 7;
 const GUIDES = [
   { dir: 'irmi-field-guide', short: 'irmifieldguide', title: /IRMI CRC 2026 Field Guide/, org: 'IRMI' },
   { dir: 'builtworlds-field-guide', short: 'builtworldsfieldguide', title: /BuiltWorlds Venture East 2026 Field Guide/, org: 'BuiltWorlds' },
+  { dir: 'built-week-field-guide', short: 'builtweekfieldguide', title: /Boston Built Week 2026 Field Guide/, org: 'Boston Built Week' },
 ];
 
 for (const g of GUIDES) test.describe(g.dir, () => {

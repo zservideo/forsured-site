@@ -1008,6 +1008,7 @@ const STATIC_PAGES = [
   { url: '/', priority: '1.0' },
   { url: '/irmi-field-guide/', priority: '0.5' },
   { url: '/builtworlds-field-guide/', priority: '0.5' },
+  { url: '/built-week-field-guide/', priority: '0.5' },
 ];
 
 function sitemap(posts) {
@@ -1081,6 +1082,7 @@ ${researchPages().llms}
 - [Blog RSS feed](${SITE}/blog/feed.xml)
 - [IRMI CRC 2026 field guide](${SITE}/irmi-field-guide/): an independent guide to the 2026 Construction Risk Conference
 - [BuiltWorlds Venture East 2026 field guide](${SITE}/builtworlds-field-guide/): an independent guide to AEC Emerging Tech 2026 in Boston
+- [Boston Built Week 2026 field guide](${SITE}/built-week-field-guide/): an independent guide to every event on the Boston Built Week calendar, Nov 15 to 21, 2026
 `;
 }
 
