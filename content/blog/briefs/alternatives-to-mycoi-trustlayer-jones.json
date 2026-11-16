@@ -1,0 +1,158 @@
+{
+  "slug": "alternatives-to-mycoi-trustlayer-jones",
+  "type": "buyer",
+  "reader": "GC risk/compliance manager replacing myCOI, TrustLayer or Jones",
+  "pillar": "/blog/best-coi-tracking-software-construction/",
+  "questions": [
+    "What are the top alternatives to myCOI, TrustLayer and Jones for construction COI tracking?",
+    "Which COI tracking software should a GC look at instead of TrustLayer or Jones?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "alternatives to myCOI",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "TrustLayer alternatives",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "Jones alternatives",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "COI tracking software",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "construction COI tracking",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Buyer's guide ramp item 1 (P22). Best-for format: Forsured wouldn't honestly rank first on every criterion. Vendor facts from vendor pages checked Nov 16, 2026 (pricing, plans, illumend) and Nov 12 (endorsement pages). Procore Marketplace listings not confirmed this month (marketplace page didn't load), so the post only says what each vendor's own page says about Procore. Vendor screenshots (R2) not added yet: page-weight budget; open item.",
+  "competing_sources": [
+    {
+      "url": "https://getjones.com/blog/trustlayer-alternatives/",
+      "title": "We Compared 3 Trustlayer Alternatives. Here's The Best Tool For GCs (Jones)",
+      "h2s": [
+        "Overview of Trustlayer",
+        "Trustlayer Alternatives #1: Jones",
+        "Trustlayer Alternatives #2: Ebix",
+        "Trustlayer Alternatives #3: myCOI",
+        "Trustlayer Alternatives Final Verdict",
+        "Frequently Asked Questions"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Endorsement index claims and Procore comparison from Jones's side.",
+      "what_we_cover_that_they_dont": "Pricing, per-project requirements, broker workflow, five alternatives side by side."
+    },
+    {
+      "url": "https://billyforinsurance.com/resources/jones-alternatives/",
+      "title": "5 Best Jones Alternatives for Construction (2026) (Billy)",
+      "h2s": [
+        "Why Companies Switch Away from Jones",
+        "Feature Comparison: Jones Alternatives Side by Side",
+        "How to Evaluate a Jones Alternative",
+        "Migrating from Jones: What to Expect",
+        "Frequently Asked Questions"
+      ],
+      "faqs": [
+        "What are the best Jones alternatives in 2026?",
+        "Why do companies switch away from Jones?",
+        "How does Jones compare to Billy on Procore integration?",
+        "How long does it take to migrate from Jones to Billy?",
+        "How do I choose the right Jones alternative?"
+      ],
+      "what_they_cover_that_we_dont": "Migration timeline from Billy's view.",
+      "what_we_cover_that_they_dont": "Published prices, who makes the final call, broker in the fix."
+    },
+    {
+      "url": "https://billyforinsurance.com/resources/mycoi-alternatives/",
+      "title": "5 Best myCOI Alternatives in 2026 (Billy)",
+      "h2s": [
+        "Why Companies Switch Away from myCOI",
+        "Feature Comparison: myCOI Alternatives Side by Side",
+        "How to Evaluate a myCOI Alternative",
+        "Migrating from myCOI: What to Expect",
+        "Frequently Asked Questions"
+      ],
+      "faqs": [
+        "What are the best myCOI alternatives in 2026?",
+        "Why do companies switch away from myCOI?",
+        "How do I choose the right myCOI alternative?",
+        "How long does it take to migrate off myCOI?"
+      ],
+      "what_they_cover_that_we_dont": "Migration time ranges.",
+      "what_we_cover_that_they_dont": "myCOI's move to illumend, pricing, endorsement depth per tool."
+    },
+    {
+      "url": "https://www.certificial.com/blog-post/trustlayer-alternatives",
+      "title": "We compared the 3 best TrustLayer Alternatives (Certificial)",
+      "h2s": [
+        "What's Wrong with TrustLayer",
+        "Why do Smart COIs matter?",
+        "Final Comparison - Which TrustLayer Alternative is Right for You?",
+        "The Bottom Line",
+        "Frequently Asked Questions"
+      ],
+      "faqs": [
+        "What are the main reasons companies switch from TrustLayer to alternatives?",
+        "Can TrustLayer detect when a Vendor's insurance policy is cancelled mid-term?",
+        "What should I look for when comparing TrustLayer alternatives?"
+      ],
+      "what_they_cover_that_we_dont": "Estimated prices for myCOI and Ebix.",
+      "what_we_cover_that_they_dont": "Construction: Procore, project requirements, payment holds."
+    },
+    {
+      "url": "https://www.g2.com/products/trustlayer/competitors/alternatives",
+      "title": "Top 10 TrustLayer Alternatives & Competitors (G2)",
+      "h2s": [
+        "Top 10 Alternatives to TrustLayer Recently Reviewed By G2 Community"
+      ],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Review counts.",
+      "what_we_cover_that_they_dont": "Construction fit, endorsements, pricing."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "What are the best alternatives to myCOI, TrustLayer and Jones?",
+      "What do myCOI, TrustLayer and Jones offer today?",
+      "Which alternative fits which general contractor?",
+      "How should you pick between the alternatives?"
+    ],
+    "faqs": [
+      "What are the best alternatives to myCOI, TrustLayer and Jones?",
+      "What happened to myCOI?",
+      "Is there a free alternative to TrustLayer?",
+      "Which Jones alternatives work with Procore?",
+      "Does any alternative let AI approve COIs on its own?",
+      "How hard is it to switch COI tracking software?"
+    ],
+    "table": "Alternatives to myCOI, TrustLayer and Jones for construction COI tracking, compared",
+    "internal_links": [
+      "/blog/best-coi-tracking-software-construction/",
+      "/blog/coi-tracking-software-endorsement-review/",
+      "/blog/switch-coi-tracking-software/",
+      "/blog/coi-tracking-software-demo-questions/",
+      "/blog/managed-coi-tracking-services-construction/",
+      "/coi-requirements/"
+    ],
+    "external_links": [
+      "https://www.illumend.ai/",
+      "https://www.trustlayer.io/plans",
+      "https://getjones.com/pricing/",
+      "https://www.pinsadvantage.com/pricing",
+      "https://www.getbcs.com/pricing-and-plans",
+      "https://billyforinsurance.com/resources/faq/",
+      "https://www.certificial.com/pricing"
+    ],
+    "forsured_paragraph": "Forsured checks each contractor COI and endorsement against the project's requirements, brings the broker in to fix gaps, keeps tracking after approval, and a person approves or waives each result.",
+    "one_thing_none_has": "All three incumbents and five alternatives side by side with published prices and who makes the final call."
+  }
+}
