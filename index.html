@@ -1070,6 +1070,7 @@ function submitAccessRequest(e){
   .then(function(responses){return responses[0].json();})
   .then(function(json){
     if(json.success){
+      window.dataLayer.push({event:'generate_lead',form_key:'risk_check',form_location:location.pathname});
       document.getElementById('fc').style.display='none';
       document.getElementById('ss').style.display='block';
     } else {
@@ -1126,6 +1127,7 @@ function submitWaitlistSignup(e){
   .then(function(responses){return responses[0].json();})
   .then(function(json){
     if(json.success){
+      window.dataLayer.push({event:'generate_lead',form_key:'waitlist',form_location:location.pathname});
       document.getElementById('oh-form-wrap').style.display='none';
       document.getElementById('oh-success').style.display='block';
     } else {

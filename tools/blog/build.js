@@ -674,6 +674,7 @@ const SUB_JS = `<script>
         .then((r) => r[0].json())
         .then((j) => {
           if (!j.success) throw new Error();
+          (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_key: 'blog_subscribe', form_location: location.pathname });
           form.hidden = true;
           box.querySelector('.fine').hidden = true;
           ok.hidden = false;
