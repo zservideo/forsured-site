@@ -150,18 +150,17 @@ for (const vp of VIEWPORTS) {
       const steps = page.locator('#product .show-steps li');
       await expect(steps).toHaveCount(4);
       if (vp.width > 900) {
-        // Desktop: the composite, then the four steps in one row beneath it.
+        // Desktop: the composite on the left, the four steps stacked in a column to its right.
         await expect(comp).toBeVisible();
         await comp.scrollIntoViewIfNeeded();
         await expect.poll(() => comp.evaluate((img) => img.complete && img.naturalWidth)).toBeGreaterThan(0);
         const image = await comp.boundingBox();
         const boxes = await steps.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().toJSON()));
         for (const [i, b] of boxes.entries()) {
-          expect(b.top, `step ${i + 1} sits below the image`).toBeGreaterThanOrEqual(image.y + image.height);
-          expect(Math.abs(b.top - boxes[0].top), `step ${i + 1} lines up with the row`).toBeLessThanOrEqual(1);
-          expect(b.left, `step ${i + 1} inside the column`).toBeGreaterThanOrEqual(image.x - 1);
-          expect(b.right, `step ${i + 1} inside the column`).toBeLessThanOrEqual(image.x + image.width + 1);
-          if (i) expect(b.left, `steps ${i} and ${i + 1} overlap`).toBeGreaterThanOrEqual(boxes[i - 1].right);
+          expect(b.left, `step ${i + 1} sits right of the image`).toBeGreaterThanOrEqual(image.x + image.width);
+          expect(Math.abs(b.left - boxes[0].left), `step ${i + 1} lines up with the column`).toBeLessThanOrEqual(1);
+          expect(b.right, `step ${i + 1} stays on screen`).toBeLessThanOrEqual(vp.width);
+          if (i) expect(b.top, `steps ${i} and ${i + 1} overlap`).toBeGreaterThanOrEqual(boxes[i - 1].bottom - 1);
         }
         await expect(page.locator('#product .ss-img').first()).toBeHidden();
       } else {
