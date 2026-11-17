@@ -553,9 +553,10 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
 /* ROUND 2: centered section heads, every desktop section sized to fit one 1440x900 screen */
 section{padding:48px 0}
 .h2{font-size:clamp(28px,2.8vw,40px)}
-.shead{text-align:center;max-width:960px;margin:0 auto 32px}
+.shead{text-align:left;max-width:none;margin:0 0 32px}
+.shead .h2{max-width:none;text-wrap:pretty}
 .shead .label{margin-bottom:14px}
-.shead .sub{max-width:780px;margin:12px auto 0;font-size:16px;line-height:1.6}
+.shead .sub{max-width:820px;margin:12px 0 0;font-size:16px;line-height:1.6}
 /* Hero: whole first screen, caption included */
 .hero{padding:108px 0 56px}
 .ha-body{padding:18px 20px 16px}
@@ -578,13 +579,13 @@ section{padding:48px 0}
 /* Problem: centered head, compact cards, quote moved to its own band */
 .prob-head{margin-bottom:28px}
 .prob-head .h2{max-width:none}
-.prob-head .sub{max-width:960px}
+.prob-head .sub{max-width:900px}
 .chaos-visual,.forsured-visual{height:150px}
 .pc h3{margin-top:16px}
 .pc>p{margin-bottom:14px}
 .pc-items{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
 .quote-sec{background:#FBF8F3;border-top:1px solid #EFE6DA;border-bottom:1px solid #EFE6DA;padding:64px 0}
-.tml{display:block;max-width:860px;margin:0 auto;padding:0;border:0;text-align:center}
+.tml{display:block;max-width:960px;margin:0;padding:0;border:0;text-align:left}
 .tml-k{display:block;font-size:12px;font-weight:500;color:#6B6055;margin-bottom:18px;letter-spacing:.02em}
 .tml blockquote{padding:0;border:0;max-width:none;font-size:clamp(20px,2vw,26px);line-height:1.45}
 .tml figcaption{margin-top:22px;padding:0}
@@ -594,7 +595,7 @@ section{padding:48px 0}
 #platform{padding:40px 0}
 .plat{display:block;max-width:1120px;margin:0 auto}
 .plat-h .h2{font-size:clamp(28px,2.8vw,40px);line-height:1.15}
-.plat-h .sub{margin:12px auto 0;max-width:780px}
+.plat-h .sub{margin:12px 0 0;max-width:880px}
 .plat-row{grid-template-columns:40px minmax(0,250px) minmax(0,1fr) 230px;gap:24px;align-items:center;padding:12px 0}
 .plat-n{padding-top:0}
 .plat-row h3{font-size:20px}
@@ -604,11 +605,11 @@ section{padding:48px 0}
 /* How it works: its own charcoal band, full width */
 .how-sec{background:#2C2D29;color:#fff}
 .steps-band{margin-top:0;background:none;border-radius:0;padding:0}
-.sb-head{display:block;text-align:center;max-width:860px;margin:0 auto 48px}
+.sb-head{display:block;text-align:left;max-width:none;margin:0 0 48px}
 .sb-head .label{background:transparent;border-color:rgba(255,255,255,.22);color:#fff}
 .sb-head .h2{color:#fff}
-.sb-head .sub{color:rgba(255,255,255,.72);margin:12px auto 0;max-width:620px;font-size:16px}
-.int-row{text-align:center}
+.sb-head .sub{color:rgba(255,255,255,.72);margin:12px 0 0;max-width:720px;font-size:16px}
+.int-row{text-align:left}
 @media(min-width:769px){
   .sg{gap:16px}
   .sg::before{left:18px;right:18px}
@@ -642,7 +643,7 @@ section{padding:48px 0}
 /* FAQ: centered head over a centered list */
 .faq-wrap{display:block}
 .faq-side{position:static}
-.faq-list{max-width:820px;margin:0 auto}
+.faq-list{max-width:880px;margin:0}
 @media(max-width:1100px){
   .wl-copy,.wl-field,.wl-form{grid-row:auto;grid-column:auto}
 }
@@ -979,17 +980,17 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
   <div class="shead reveal">
     <div class="label">Why Forsured</div>
     <h2 class="h2">Built around the way construction insurance compliance <span class="accent">actually gets resolved.</span></h2>
-    <p class="sub">Insurance compliance is a decision workflow, not a document-storage problem. Forsured is built for the people who own that decision.</p>
+    <p class="sub">Most COI tools track whether a certificate is on file and current. Forsured checks whether the coverage actually meets the project, and keeps the GC, contractor and broker on the same record until it does.</p>
   </div>
-  <table class="vs reveal" aria-label="How Forsured compares with the usual way of tracking contractor insurance">
-    <thead><tr><td></td><th scope="col">The usual way</th><th scope="col" class="fs">With Forsured</th></tr></thead>
+  <table class="vs reveal" aria-label="How Forsured compares with typical COI tracking tools">
+    <thead><tr><td></td><th scope="col">Typical COI tracking</th><th scope="col" class="fs">With Forsured</th></tr></thead>
     <tbody>
-      <tr><th scope="row">What it's built around</th><td class="old" data-k="The usual way">Documents in a folder or a spreadsheet</td><td class="fs" data-k="With Forsured">Projects, contractors, insurance requirements, endorsements, exceptions, and the people responsible for resolving them</td></tr>
-      <tr><th scope="row">What a COI is checked against</th><td class="old" data-k="The usual way">A generic document checklist</td><td class="fs" data-k="With Forsured">The requirements of the actual project</td></tr>
-      <tr><th scope="row">How gaps get fixed</th><td class="old" data-k="The usual way">Another disconnected email chain</td><td class="fs" data-k="With Forsured">The teams requesting, reviewing, and correcting insurance documentation work in one shared workflow</td></tr>
-      <tr><th scope="row">Who does the reading</th><td class="old" data-k="The usual way">A person, line by line</td><td class="fs" data-k="With Forsured">AI surfaces and explains issues while accountable people stay in control of approvals and exceptions</td></tr>
-      <tr><th scope="row">What it takes to start</th><td class="old" data-k="The usual way">An oversized enterprise transformation</td><td class="fs" data-k="With Forsured">Meaningful compliance automation with a mid-market implementation mindset</td></tr>
-      <tr><th scope="row">Who has to change</th><td class="old" data-k="The usual way">Everyone, with new friction for contractors and brokers</td><td class="fs" data-k="With Forsured">A better process for the GC without unnecessary friction for contractors and brokers</td></tr>
+      <tr><th scope="row">What it's built around</th><td class="old" data-k="Typical COI tracking">A vendor list: certificates on file, with expiration dates</td><td class="fs" data-k="With Forsured">Each project, with its own requirements, contractors, brokers and exceptions</td></tr>
+      <tr><th scope="row">What a COI is checked against</th><td class="old" data-k="Typical COI tracking">One requirement set per company or vendor type</td><td class="fs" data-k="With Forsured">The requirements of the specific project, exceptions included</td></tr>
+      <tr><th scope="row">Endorsements</th><td class="old" data-k="Typical COI tracking">The certificate gets read; endorsement wording often still needs a manual look</td><td class="fs" data-k="With Forsured">Endorsements are read against the project's requirements, with the reason for any gap</td></tr>
+      <tr><th scope="row">When checking happens</th><td class="old" data-k="Typical COI tracking">At onboarding, then again at renewal or before payment</td><td class="fs" data-k="With Forsured">From prequalification through closeout, and whenever coverage changes</td></tr>
+      <tr><th scope="row">How gaps get fixed</th><td class="old" data-k="Typical COI tracking">Automated reminders until a new certificate arrives</td><td class="fs" data-k="With Forsured">The broker sees the requirement, the document and the gap in one shared record</td></tr>
+      <tr><th scope="row">Who makes the call</th><td class="old" data-k="Typical COI tracking">Software pulls the fields; anything unusual lands back in someone's inbox</td><td class="fs" data-k="With Forsured">AI flags and explains each issue; your team approves, declines and signs off on exceptions</td></tr>
     </tbody>
   </table>
 </div></section>
