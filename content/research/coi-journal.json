@@ -124,7 +124,7 @@
       "kind": "Analyst brief",
       "title": "The ACORD 25's new limits sentence: what changed in the 2025/12 edition, and what GCs should do",
       "question": "What changed on the ACORD 25 certificate of liability insurance in the 2025/12 edition?",
-      "summary": "The ACORD 25 (2025/12) limits wording: certificates may now show requested limits rather than full policy limits.",
+      "summary": "The ACORD 25 (2025/12) limits sentence, which ACORD calls a clarification of existing practice, and why a certificate's limits may not be the policy's ceiling.",
       "url": "https://coijournal.com/reports/acord-25-limits-wording/",
       "date": "2026-11-13"
     },
@@ -243,7 +243,7 @@
       "question": "What insurance does the federal government require on construction work at a government installation, and what has to flow down to trade contractors?",
       "summary": "FAR 52.228-5 and 28.307-2: federal minimum insurance, the 30-day notice endorsement, and what flows down to trade contractors.",
       "url": "https://coijournal.com/reports/federal-contracts-far-insurance/",
-      "date": "2026-11-19"
+      "date": "2026-11-20"
     },
     {
       "number": "R-28",
@@ -252,7 +252,7 @@
       "question": "How do workers comp and employer's liability requirements work for trades in Ohio, North Dakota, Washington and Wyoming?",
       "summary": "The four monopolistic workers comp states, why their certificates look different, and the stop gap coverage GCs should ask for.",
       "url": "https://coijournal.com/reports/monopolistic-workers-comp-states/",
-      "date": "2026-11-20"
+      "date": "2026-11-24"
     },
     {
       "number": "R-29",
@@ -261,7 +261,7 @@
       "question": "How do California Civil Code 2782 and Insurance Code 11580.04 limit indemnity and additional insured coverage on construction projects?",
       "summary": "California Civil Code 2782, section 2782.05 and Insurance Code 11580.04, and how they shape additional insured coverage on jobs.",
       "url": "https://coijournal.com/reports/california-anti-indemnity-additional-insured/",
-      "date": "2026-11-23"
+      "date": "2026-11-30"
     },
     {
       "number": "R-30",
@@ -270,7 +270,7 @@
       "question": "How does Texas Insurance Code Chapter 151 limit indemnity and additional insured requirements in construction contracts?",
       "summary": "Texas Insurance Code Chapter 151: how it limits indemnity and additional insured coverage, and its employee and wrap-up exceptions.",
       "url": "https://coijournal.com/reports/texas-anti-indemnity-additional-insured/",
-      "date": "2026-11-24"
+      "date": "2026-12-02"
     },
     {
       "number": "R-31",
@@ -279,7 +279,7 @@
       "question": "Is it a problem when a trade contractor's certificate shows a surplus lines or non-admitted insurer, and what should a GC check?",
       "summary": "Surplus lines insurers on contractor certificates: what non-admitted means, the guaranty fund gap, and how to check the carrier.",
       "url": "https://coijournal.com/reports/surplus-lines-carriers-on-certificates/",
-      "date": "2026-11-25"
+      "date": "2026-12-04"
     },
     {
       "number": "R-32",
@@ -288,7 +288,7 @@
       "question": "What does a carrier rating requirement like A- VII mean in a subcontract, and how does a GC confirm a trade's insurer meets it?",
       "summary": "Carrier rating requirements in subcontracts: AM Best strength ratings, size classes like A- VII, and how GCs confirm them.",
       "url": "https://coijournal.com/reports/carrier-ratings-in-requirements/",
-      "date": "2026-11-30"
+      "date": "2026-12-08"
     },
     {
       "number": "R-33",
@@ -297,7 +297,7 @@
       "question": "What does being the certificate holder on an ACORD 25 mean, and is it the same as being an additional insured?",
       "summary": "The ACORD 25 certificate holder box: what it does and doesn't confer, how it differs from additional insured status, and naming errors.",
       "url": "https://coijournal.com/reports/certificate-holder-box/",
-      "date": "2026-12-01"
+      "date": "2026-12-10"
     },
     {
       "number": "R-34",
@@ -324,7 +324,7 @@
       "question": "What insurance and compliance documents should a general contractor collect before a new trade contractor starts work on site?",
       "summary": "The compliance file a GC should have before a new trade starts work: signed subcontract, certificate, endorsements, licenses and a diary.",
       "url": "https://coijournal.com/reports/onboarding-a-new-trade/",
-      "date": "2026-11-18"
+      "date": "2026-11-19"
     },
     {
       "number": "R-37",
@@ -333,7 +333,7 @@
       "question": "What records should a general contractor keep to prove it verified a trade contractor's insurance if a claim or dispute comes up later?",
       "summary": "What a defensible contractor COI file contains: requirements, certificates, endorsements, review notes, follow-ups and retention.",
       "url": "https://coijournal.com/reports/defensible-coi-file/",
-      "date": "2026-11-19"
+      "date": "2026-11-23"
     },
     {
       "number": "R-38",
@@ -342,7 +342,7 @@
       "question": "Can a general contractor hold payment to a trade contractor until its insurance is compliant, and how do GCs build that into the pay application process?",
       "summary": "Linking trade pay applications to insurance compliance: contract terms, the review step before payment, and keeping it fair.",
       "url": "https://coijournal.com/reports/pay-applications-and-insurance-compliance/",
-      "date": "2026-11-20"
+      "date": "2026-11-25"
     },
     {
       "number": "R-39",
@@ -351,7 +351,7 @@
       "question": "How should a general contractor structure project insurance requirements as data so certificates can be checked against them consistently, by people or software?",
       "summary": "Proposes a simple data model for project insurance requirements: projects, tiers, lines, endorsements, parties and the source clause.",
       "url": "https://coijournal.com/reports/project-requirements-data-model/",
-      "date": "2026-11-23"
+      "date": "2026-12-01"
     },
     {
       "number": "R-40",
@@ -360,7 +360,7 @@
       "question": "As a trade contractor, how do I get my insurance approved quickly by a general contractor and avoid payment holds over certificates?",
       "summary": "For trade contractors on getting insurance approved by GCs fast: what to send, what to ask your broker for, and how to avoid holds.",
       "url": "https://coijournal.com/reports/coi-101-for-trade-contractors/",
-      "date": "2026-11-24"
+      "date": "2026-12-03"
     },
     {
       "number": "R-41",
@@ -369,7 +369,7 @@
       "question": "How should a general contractor with no formal process set up a contractor COI compliance program, step by step?",
       "summary": "Lays out a 90-day plan for a GC to build a contractor COI program: requirements, intake, review, follow-up, renewals and reporting.",
       "url": "https://coijournal.com/reports/coi-program-in-90-days/",
-      "date": "2026-11-25"
+      "date": "2026-12-07"
     },
     {
       "number": "R-42",
@@ -378,7 +378,7 @@
       "question": "What insurance proof should a general contractor collect from trade contractors at closeout, and how long does completed operations coverage need to last?",
       "summary": "Insurance at closeout: completed operations additional insured coverage, how long it runs, and what to collect before final payment.",
       "url": "https://coijournal.com/reports/closeout-completed-operations/",
-      "date": "2026-11-30"
+      "date": "2026-12-09"
     },
     {
       "number": "R-43",
@@ -387,7 +387,7 @@
       "question": "How should a general contractor make sure the lower-tier trades hired by its trade contractors carry the right insurance?",
       "summary": "Insurance compliance for lower-tier trades: flowing requirements down, what to collect, and where the gaps open below the first tier.",
       "url": "https://coijournal.com/reports/lower-tier-trades-compliance/",
-      "date": "2026-12-01"
+      "date": "2026-12-11"
     }
   ]
 }
