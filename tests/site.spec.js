@@ -135,49 +135,61 @@ test.describe('navigation', () => {
   });
 });
 
+// One form, two intents: the free COI risk check (default) and the waitlist. Each intent must keep
+// the form_source and subject the old separate forms sent, because Web3Forms and Make route on them.
 for (const form of [
-  { name: 'free COI risk check', prefix: 'wl', button: '#wl-btn', success: '#ss', err: '#form-err' },
-  { name: 'waitlist', prefix: 'oh', button: '#oh-btn', success: '#oh-success', err: '#oh-err' },
+  { name: 'free COI risk check', intent: '#wl-intent-check', source: 'Access Request', subject: 'Forsured Access Request', btn: /Free Risk Check/, done: /be in touch/ },
+  { name: 'waitlist', intent: '#wl-intent-waitlist', source: 'Waitlist', subject: 'Forsured Waitlist Request', btn: /Join the Waitlist/, done: /on the list/ },
 ]) {
   test.describe(`${form.name} form`, () => {
+    const choose = async (page) => {
+      await page.locator(form.intent).scrollIntoViewIfNeeded();
+      await page.locator(form.intent).click();
+      await expect(page.locator(form.intent)).toBeChecked();
+      await expect(page.locator('#wl-btn')).toHaveText(form.btn);
+    };
+
     test('blocks empty submissions', async ({ page }) => {
       const { posts } = await open(page);
-      await page.locator(form.button).scrollIntoViewIfNeeded();
-      await page.locator(form.button).click();
-      await expect(page.locator(form.err)).toBeVisible();
+      await choose(page);
+      await page.locator('#wl-btn').click();
+      await expect(page.locator('#form-err')).toBeVisible();
       expect(posts).toEqual([]);
     });
 
     test('rejects a malformed email', async ({ page }) => {
       const { posts } = await open(page);
-      await page.fill(`#${form.prefix}-name`, 'Test Person');
-      await page.fill(`#${form.prefix}-email`, 'test.example.com');
-      await page.selectOption(`#${form.prefix}-role`, 'Insurance Broker');
-      await page.locator(form.button).scrollIntoViewIfNeeded();
-      await page.locator(form.button).click();
-      await expect(page.locator(form.err)).toBeVisible();
-      await expect(page.locator(`#${form.prefix}-email`)).toBeFocused();
+      await choose(page);
+      await page.fill('#wl-name', 'Test Person');
+      await page.fill('#wl-email', 'test.example.com');
+      await page.selectOption('#wl-role', 'Insurance Broker');
+      await page.locator('#wl-btn').click();
+      await expect(page.locator('#form-err')).toBeVisible();
+      await expect(page.locator('#wl-email')).toBeFocused();
       expect(posts).toEqual([]);
     });
 
     test('submits and shows success', async ({ page }) => {
       const { posts } = await open(page);
-      await page.fill(`#${form.prefix}-name`, 'Test Person');
-      await page.fill(`#${form.prefix}-email`, 'test@example.com');
-      await page.fill(`#${form.prefix}-company`, 'Test Co');
+      await choose(page);
+      await page.fill('#wl-name', 'Test Person');
+      await page.fill('#wl-email', 'test@example.com');
+      await page.fill('#wl-company', 'Test Co');
       // Form routing in Web3Forms and the Make scenario keys on these option values; keep them stable.
-      await page.selectOption(`#${form.prefix}-role`, 'Subcontractor');
-      await page.locator(form.button).scrollIntoViewIfNeeded();
-      await page.locator(form.button).click();
-      await expect(page.locator(form.success)).toBeVisible();
+      await page.selectOption('#wl-role', 'Subcontractor');
+      await page.locator('#wl-btn').click();
+      await expect(page.locator('#ss')).toBeVisible();
+      await expect(page.locator('#ss')).toContainText(form.done);
       expect(posts.map((p) => new URL(p.url).host).sort()).toEqual(['api.web3forms.com', 'hook.us2.make.com']);
       const make = JSON.parse(posts.find((p) => p.url.includes('make.com')).body);
-      expect(make).toMatchObject({ name: 'Test Person', email: 'test@example.com', role: 'Subcontractor' });
+      expect(make).toMatchObject({ name: 'Test Person', email: 'test@example.com', role: 'Subcontractor', form_source: form.source, subject: form.subject });
+      const w3 = posts.find((p) => p.url.includes('web3forms')).body;
+      expect(w3).toContain(form.subject);
     });
 
     test('keeps the role values the backends route on', async ({ page }) => {
       await open(page);
-      const values = await page.locator(`#${form.prefix}-role option`).evaluateAll((os) => os.map((o) => o.value).filter(Boolean));
+      const values = await page.locator('#wl-role option').evaluateAll((os) => os.map((o) => o.value).filter(Boolean));
       expect(values).toEqual(expect.arrayContaining(['General Contractor / Construction Manager', 'Insurance Broker', 'Subcontractor']));
     });
   });
@@ -202,12 +214,14 @@ test('trade contractor CTA preselects the role in the risk check form', async ({
 });
 
 test.describe('Event banner', () => {
-  test('shows the announcement above the nav without covering it', async ({ page }) => {
+  test('shows the announcement above the nav without covering it', async ({ page, isMobile }) => {
     await open(page);
     const bar = page.locator('#irmi-bar');
     await expect(bar).toBeVisible();
-    await expect(bar).toHaveText(/We're a BuiltWorlds Venture East Demo Day finalist, Nov 19 in Boston/);
-    const cta = bar.getByRole('link', { name: /Get the event \+ downtown Boston field guide/ });
+    await expect(bar).toHaveText(isMobile ? /Demo Day presenter, Nov 19/ : /one of nine companies presenting at BuiltWorlds Venture East Demo Day, Nov 19 in Boston/);
+    // Wording BuiltWorlds approved: a presenter, one of nine. Never "finalist".
+    await expect(bar).not.toHaveText(/finalist/i);
+    const cta = bar.getByRole('link', { name: /field guide/i });
     await expect(cta).toBeVisible();
     await expect(cta).toHaveAttribute('href', 'builtworlds-field-guide/');
     const barBox = await bar.boundingBox();
