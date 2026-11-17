@@ -1,0 +1,92 @@
+{
+  "slug": "coi-tracking-software-cost",
+  "type": "buyer",
+  "reader": "GC risk/compliance or finance lead pricing COI tracking software before a demo",
+  "pillar": "/blog/best-coi-tracking-software-construction/",
+  "questions": [
+    "How much does COI tracking software for construction cost?",
+    "What do COI tracking tools charge per vendor, and what costs extra?"
+  ],
+  "target_keywords": [
+    { "kw": "COI tracking software cost", "vol": null, "kd": null },
+    { "kw": "COI tracking software pricing", "vol": null, "kd": null },
+    { "kw": "per vendor", "vol": null, "kd": null },
+    { "kw": "free COI tracking software", "vol": null, "kd": null },
+    { "kw": "managed COI tracking", "vol": null, "kd": null }
+  ],
+  "notes": "Buyer's guide ramp item 2 (P23). Published prices only, each from the vendor's own page, checked Nov 17, 2026 (CertFocus figures from Vertikal's own Jan 2026 pricing guide). The one thing no competing page has: list-price math at 50, 200 and 500 contractors from published prices, showing that annual minimums, not per-vendor rates, set the price for most GCs on managed tiers. Forsured price not published (quote). No paying-customer prices (embargo, and confidential). Vendor screenshots via the vendor-shots workflow (R2).",
+  "competing_sources": [
+    {
+      "url": "https://www.vertikalrms.com/article/how-much-does-coi-tracking-software-cost-2026-pricing-guide/",
+      "title": "How Much Does COI Tracking Software Cost? 2026 Pricing Guide (Vertikal RMS)",
+      "h2s": ["How Much Does a Certificate of Insurance Actually Cost?", "What Are the Real Costs of Manual COI Management?", "COI Tracking Software Pricing Breakdown by Features", "Low-Cost COI Tracking Software Providers", "Is COI Tracking Software Worth the Investment?", "What Factors Affect COI Software Pricing?", "Can You Get Discounts for Combined Services?", "CertFocus by Vertikal RMS Pricing"],
+      "faqs": ["How Much Does COI Tracking Software Cost per Year?", "What's the Cheapest COI Tracking Software Available?", "Do COI Tracking Platforms Charge per User or per Vendor?", "Are There Hidden Fees in COI Software Pricing?", "How Do I Calculate ROI for COI Tracking Software?"],
+      "gap": "Market ranges and competitor prices are unsourced; written by a seller; no math by company size."
+    },
+    {
+      "url": "https://getjones.com/blog/understanding-coi-management-solution-pricing/",
+      "title": "Understanding COI Management Solution Pricing (Jones, 2023)",
+      "h2s": ["What You're Really Getting", "Per-Document Pricing vs. Square Footage Based Pricing", "Passing the Cost on to Tenants, Vendors, and Subcontractors", "Choosing the Right COI Management Solution for Your Organization"],
+      "faqs": [],
+      "gap": "No dollar figures; real-estate framing; 2023."
+    },
+    {
+      "url": "https://www.getbcs.com/blog/the-36000-problem-what-manual-coi-tracking-is-really-costing-you",
+      "title": "The $36,000 Problem: What Manual COI Tracking Is Really Costing You (bcs)",
+      "h2s": ["How the $36,000 figure gets built", "Where manual COI management breaks down at scale", "What automated COI tracking software changes", "What to look for before you choose a platform", "How bcs addresses the $36,000 problem"],
+      "faqs": ["How do I calculate what manual COI tracking is costing my organization?", "Is free COI tracking software a real option, or just a trial with a different label?"],
+      "gap": "Only its own price; labor only; no full-service minimum math."
+    },
+    {
+      "url": "https://billyforinsurance.com/coi-tracking-software-for-general-contractors/",
+      "title": "COI Tracking Software for General Contractors (Billy)",
+      "h2s": ["What Is Manual Tracking Costing You?", "Spreadsheets Don't Enforce.", "Billy vs. The Alternatives", "Frequently Asked"],
+      "faqs": ["How much does COI tracking software cost?", "Does Billy integrate with Procore?", "Do subcontractors need to create an account?"],
+      "gap": "Cost FAQ gives no figure; calculator default only."
+    },
+    {
+      "url": "https://www.getbcs.com/pricing-and-plans",
+      "title": "COI Tracking Software Pricing & Plans (bcs)",
+      "h2s": ["How Much Does COI Tracking Software Cost?"],
+      "faqs": [],
+      "gap": "One vendor's prices only."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "How much does COI tracking software cost in 2026?",
+      "What does each vendor publish for COI tracking software pricing?",
+      "What does COI tracking software cost at 50, 200 and 500 contractors?",
+      "Is free COI tracking software enough for a general contractor?",
+      "What does managed COI tracking cost?",
+      "What costs more than the per vendor price?",
+      "How should you compare quotes?"
+    ],
+    "table": "Published COI tracking software pricing, checked Nov 17, 2026",
+    "internal_links": [
+      "/blog/best-coi-tracking-software-construction/",
+      "/blog/coi-tracking-software-business-case/",
+      "/blog/managed-coi-tracking-services-construction/",
+      "/blog/alternatives-to-mycoi-trustlayer-jones/",
+      "/blog/coi-tracking-software-demo-questions/"
+    ],
+    "external_links": [
+      "https://www.getbcs.com/pricing-and-plans",
+      "https://www.pinsadvantage.com/pricing",
+      "https://www.certificial.com/pricing",
+      "https://billyforinsurance.com/resources/faq/",
+      "https://www.trustlayer.io/plans",
+      "https://getjones.com/pricing/",
+      "https://www.vertikalrms.com/article/how-much-does-coi-tracking-software-cost-2026-pricing-guide/"
+    ]
+  },
+  "screenshots": [
+    { "file": "shot-bcs.png", "url": "https://www.getbcs.com/pricing-and-plans" },
+    { "file": "shot-pins-advantage.png", "url": "https://www.pinsadvantage.com/pricing" },
+    { "file": "shot-certificial.png", "url": "https://www.certificial.com/pricing" },
+    { "file": "shot-billy.png", "url": "https://billyforinsurance.com/resources/faq/" },
+    { "file": "shot-trustlayer.png", "url": "https://www.trustlayer.io/plans" },
+    { "file": "shot-jones.png", "url": "https://getjones.com/pricing/" },
+    { "file": "shot-certfocus.png", "url": "https://www.vertikalrms.com/article/how-much-does-coi-tracking-software-cost-2026-pricing-guide/" }
+  ]
+}
