@@ -41,7 +41,22 @@ The script never sends these drafts. Zach reviews and sends.
    Go to Forsured Mailer if it warns that the app is unverified; it's your own script).
 5. Check Gmail Drafts for "[TEST] Forsured Mailer: clean links check" and click its link.
 
-## Blog post emails (optional, replaces Make scenario 6806850)
+## Weekly digest (the subscriber email since 2026-11-17)
+
+Subscribers get one email every Monday at about 7 AM ET with short summaries of the posts published
+the week before (Monday to Sunday). `node tools/blog/build.js` writes one file per week that has posts,
+`blog/email/weekly/<that Monday>.json`; preview one with `node tools/blog/email.js --weekly 2026-11-16`.
+A week with no posts has no file, so nothing goes out.
+
+To switch over from one email per post (one time, about 2 minutes):
+
+1. Paste the current `forsured-mailer.gs` into the Apps Script project and save.
+2. Project Settings → Time zone → **(GMT-05:00) Eastern Time - New York**.
+3. Pick `setupWeeklyDigest` in the function menu and press **Run**. It turns off the per-post job and
+   installs the Monday trigger.
+4. Optional: run `previewWeeklyDigest` to send last week's digest to yourself only.
+
+## Blog post emails (RETIRED 2026-11-17, replaced by the weekly digest)
 
 1. In Attio, Settings → Developers → create an access token with read access to records and lists.
 2. In Apps Script, Project Settings → Script Properties → add `ATTIO_API_KEY`.

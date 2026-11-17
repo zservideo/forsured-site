@@ -32,6 +32,7 @@ const EMOJI = {
   'Industry news': '\u26A1', // ⚡
   'Event takeaways': '\u2B50', // ⭐
   'Forsured news': '\u2728', // ✨
+  'Tech stack': '\u2699\uFE0F', // ⚙️
 };
 const PIN = '\u270F\uFE0F'; // ✏️
 
@@ -71,7 +72,7 @@ ${rows}  <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1
     <p style="margin:16px 0 0"><strong>Zach Servideo</strong><br/><span style="color:${MUTED};font-size:14px">Founder / CGO<br/>Forsured</span></p>
   </td></tr>
   <tr><td style="padding:28px 32px 24px;${sans};font-size:12px;line-height:1.6;color:${MUTED};border-top:1px solid ${LINE}">
-    <p style="margin:20px 0 0">You're getting this because you signed up for new posts on the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
+    <p style="margin:20px 0 0">You're getting this because you signed up for the weekly email from the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
   </td></tr>
 </table>
 </td></tr>
@@ -83,7 +84,7 @@ ${rows}  <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1
 
 const SIGN_OFF = ['Zach Servideo', 'Founder / CGO', 'Forsured'];
 const footer = () =>
-  `You're getting this because you signed up for new posts on the Forsured blog (${SITE}/blog/). Not for you anymore? Reply "stop" and I'll take you off.`;
+  `You're getting this because you signed up for the weekly email from the Forsured blog (${SITE}/blog/). Not for you anymore? Reply "stop" and I'll take you off.`;
 
 const button = (href, label) => `  <tr><td align="left" style="padding:24px 32px 0">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -165,7 +166,7 @@ function welcome(firstName = '', posts = readPosts()) {
   const start = [...posts.filter((p) => EVERGREEN.includes(p.category)), ...posts.filter((p) => !EVERGREEN.includes(p.category))];
   const reads = start.slice(0, 3).map((p) => ({ ...p, link: track(`${SITE}${p.url}`, 'welcome'), emoji: EMOJI[p.category] || PIN }));
   const expect = [
-    ['New posts as they go live.', 'Plain-language reads on contractor COIs and project requirements.'],
+    ['One email a week.', 'Every Monday, short summaries of what we published the week before on contractor COIs and project requirements.'],
     ['Short and useful.', 'Two-minute reads you can forward to your project team.'],
     ['A real person on the other end.', 'Hit reply anytime. It comes straight to me.'],
   ];
@@ -218,10 +219,97 @@ ${reads.map((p) => `    <p style="margin:12px 0 0;font-size:16px;line-height:1.4
   return { subject: '🧡 Welcome to the Forsured community', html: entities(html), text };
 }
 
-module.exports = { email, welcome };
+// ---------- the weekly digest ----------
+// One email every Monday with short summaries of the posts published the week before (Monday to
+// Sunday, Eastern). It replaced the one-email-per-post send on 2026-11-17. Weeks key on their Monday.
+
+// A post's date as written (front matter dates carry the Eastern offset), so no timezone math.
+const mondayOf = (iso) => {
+  const d = new Date(`${iso.slice(0, 10)}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+  return d.toISOString().slice(0, 10);
+};
+const plusDays = (ymd, n) => {
+  const d = new Date(`${ymd}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+};
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const short = (ymd) => `${MON[Number(ymd.slice(5, 7)) - 1]} ${Number(ymd.slice(8, 10))}`;
+// "Nov 16 to 22", or "Nov 30 to Dec 6" across a month.
+const span = (a, b) => (a.slice(5, 7) === b.slice(5, 7) ? `${short(a)} to ${Number(b.slice(8, 10))}` : `${short(a)} to ${short(b)}`);
+
+// Posts grouped by week: Map of Monday (YYYY-MM-DD) -> posts oldest first, so the email reads in order.
+function weeks(posts = readPosts()) {
+  const out = new Map();
+  for (const p of [...posts].reverse()) {
+    const k = mondayOf(p.date);
+    if (!out.has(k)) out.set(k, []);
+    out.get(k).push(p);
+  }
+  return out;
+}
+
+const DIGEST = '✉️'; // ✉️ (Basic Multilingual Plane, safe in Apps Script subjects)
+
+function weekly(monday, posts, firstName = '') {
+  const range = span(monday, plusDays(monday, 6));
+  const blog = track(`${SITE}/blog/`, 'weekly');
+  const offer = track(`${SITE}/#demo`, 'weekly');
+  const hi = firstName ? `Hi ${esc(firstName)},` : 'Hi there,';
+  const n = posts.length;
+  const count = n === 1 ? 'one new post' : `${n} new posts`;
+  const items = posts.map((p) => ({ ...p, link: track(`${SITE}${p.url}`, 'weekly'), emoji: EMOJI[p.category] || PIN }));
+
+  const html = frame({
+    title: `Last week on the Forsured blog, ${range}`,
+    preheader: `${count[0].toUpperCase()}${count.slice(1)}: ${posts.map((p) => plain(p.title)).join(' / ')}`.slice(0, 180),
+    blog,
+    rows: `  <tr><td style="padding:24px 32px 0;${sans};font-size:16px;line-height:1.6;color:${INK}">
+    <p style="margin:0 0 12px">${hi}</p>
+    <p style="margin:0">Here's what we published last week (${range}): ${count}, each in a few lines. Open the ones that matter to your projects. ${DIGEST}</p>
+  </td></tr>
+${items.map((p) => `  <tr><td style="padding:24px 32px 0;${sans}">
+    <span style="display:inline-block;padding:2px 8px;border:1px solid ${LINE};border-radius:6px;font-size:12px;font-weight:600;color:#344051"><span style="color:${ORANGE}">●</span> ${esc(p.category)} · ${p.minutes} min read</span>
+    <p style="margin:10px 0 0;${serif};font-size:21px;line-height:1.3">${p.emoji} <a href="${esc(p.link)}" style="color:${INK};text-decoration:none">${esc(p.title)}</a></p>
+    <p style="margin:8px 0 0;font-size:15px;line-height:1.55;color:${MUTED}">${rich(p.dek)}</p>
+${p.takeaways.slice(0, 2).map((t) => `    <p style="margin:6px 0 0;font-size:15px;line-height:1.55;color:${INK}">✅ ${rich(t)}</p>`).join('\n')}
+    <p style="margin:10px 0 0;font-size:15px"><a href="${esc(p.link)}" style="color:${ORANGE};font-weight:600;text-decoration:none">Read the post →</a></p>
+  </td></tr>
+`).join('')}` +
+      box('🎁 Free COI risk check', `        <p style="margin:8px 0 0"><strong>No strings attached.</strong> Send us one project's requirements and a contractor COI or two, and we'll walk you through every gap we find. <a href="${esc(offer)}" style="color:${INK}">Get yours →</a></p>`),
+    closer: 'Questions, or a topic you want us to cover? Just hit reply. It comes straight to me.',
+  });
+
+  const text = [
+    firstName ? `Hi ${firstName},` : 'Hi there,',
+    '',
+    `Here's what we published last week (${range}): ${count}, each in a few lines.`,
+    '',
+    ...items.flatMap((p) => [`${p.title} (${p.category}, ${p.minutes} min)`, plain(p.dek), ...p.takeaways.slice(0, 2).map((t) => `- ${plain(t)}`), `Read: ${p.link}`, '']),
+    `Free COI risk check, no strings attached: ${offer}`,
+    '',
+    'Questions, or a topic you want us to cover? Just hit reply. It comes straight to me.',
+    '',
+    ...SIGN_OFF,
+    '',
+    footer(),
+  ].join('\n');
+
+  return { week: monday, subject: `${DIGEST} Last week on the Forsured blog: ${range}`, html: entities(html), text, slugs: posts.map((p) => p.slug) };
+}
+
+module.exports = { email, welcome, weekly, weeks, mondayOf };
 
 if (require.main === module) {
   const args = process.argv.slice(2);
+  if (args[0] === '--weekly') {
+    const all = weeks();
+    const monday = args[1] && /^\d{4}-\d{2}-\d{2}$/.test(args[1]) ? mondayOf(args[1]) : [...all.keys()].pop();
+    if (!all.has(monday)) throw new Error(`no posts in the week of ${monday}`);
+    process.stdout.write(JSON.stringify(weekly(monday, all.get(monday), args[2]), null, 2) + '\n');
+    process.exit(0);
+  }
   if (args[0] === '--welcome') {
     process.stdout.write(JSON.stringify(welcome(args[1]), null, 2) + '\n');
     process.exit(0);

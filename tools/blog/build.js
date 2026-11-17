@@ -626,7 +626,7 @@ const MAKE_WEBHOOK = 'https://hook.us2.make.com/er2vury4yeu7eo6fflh031ngttpvwg3b
 function subscribe(id, where, cls = '') {
   return `<section class="sub${cls ? ` ${cls}` : ''}" aria-labelledby="${id}" data-sub="${where}">
       <div>
-        <h2 id="${id}">Get new posts by email.</h2>
+        <h2 id="${id}">Get the week's posts in one email.</h2>
         <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
       </div>
       <div>
@@ -1195,12 +1195,19 @@ function build() {
   files.set('llms-full.txt', llmsFull(posts));
   // The welcome email Make sends each new subscriber, fetched by the scenario at send time so its
   // "Start here" reads stay current. Not a page: kept out of search and the sitemap.
-  const { email, welcome } = require('./email');
+  const { email, welcome, weekly, weeks } = require('./email');
   // Each post's subscriber email ({subject, html} with "Hi there,"), which the Make scenario sends to
   // every Blog subscribers member when the post shows up in the feed.
   for (const p of feedPosts) {
     const e = email(p);
     files.set(`blog/${p.slug}/email.json`, `${JSON.stringify({ subject: e.subject, html: e.html }, null, 2)}\n`);
+  }
+  // The Monday digest: one {week, subject, html, slugs} per week that has posts, keyed on its Monday.
+  // The Apps Script mailer fetches last week's file every Monday morning and sends it to every
+  // Blog subscribers member. A week with no posts has no file, so nothing goes out.
+  for (const [monday, list] of weeks(feedPosts)) {
+    const w = weekly(monday, list);
+    files.set(`blog/email/weekly/${monday}.json`, `${JSON.stringify({ week: w.week, subject: w.subject, html: w.html, slugs: w.slugs }, null, 2)}\n`);
   }
   files.set('blog/email/welcome.html', welcome('', feedPosts).html.replace('<meta charset="UTF-8"/>', '<meta charset="UTF-8"/><meta name="robots" content="noindex"/>'));
 
