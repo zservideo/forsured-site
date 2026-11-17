@@ -183,7 +183,7 @@ for (const vp of VIEWPORTS) {
 
     test('home: forms are usable', async ({ page }) => {
       await open(page, '/', { reveal: true });
-      for (const id of ['#wl-name', '#wl-email', '#wl-role', '#wl-btn', '#oh-name', '#oh-email', '#oh-role', '#oh-btn']) {
+      for (const id of ['#wl-name', '#wl-email', '#wl-role', '#wl-btn']) {
         const el = page.locator(id);
         await el.scrollIntoViewIfNeeded();
         const box = await el.boundingBox();

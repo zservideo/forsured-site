@@ -195,7 +195,7 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .fv-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;flex-shrink:0;}
 .fv-sc{background:#fff;border:1px solid #EDEDED;border-radius:6px;padding:8px 10px;}
 .fv-sc-v{font-size:19px;font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:2px;}
-.fv-sc-l{font-size:8px;color:#999;font-weight:500;}
+.fv-sc-l{font-size:8px;color:#6E6E6E;font-weight:500;}
 .fv-ai{background:linear-gradient(135deg,#111827,#1F2937);border-radius:8px;padding:9px 11px;display:flex;align-items:center;gap:9px;flex-shrink:0;}
 .fv-ai-icon{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#FB612A,#F07040);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .fv-ai-content{flex:1;min-width:0;}
@@ -204,177 +204,186 @@ nav.scrolled{background:rgba(250,251,250,.95);backdrop-filter:blur(20px);-webkit
 .fv-ai-msg{font-size:8px;color:rgba(255,255,255,.75);line-height:1.35;}
 .fv-ai-btn{flex-shrink:0;background:#16864E;color:#fff;font-size:7px;font-weight:700;border-radius:4px;padding:4px 8px;white-space:nowrap;}
 .fv-thread{background:#fff;border:1px solid #EDEDED;border-radius:7px;padding:8px 10px;flex:1;overflow:hidden;}
-.fv-thread-hdr{font-size:8px;color:#999;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
+.fv-thread-hdr{font-size:8px;color:#6E6E6E;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
 .fv-thread-hdr span{color:#FB612A;font-size:7px;font-weight:700;}
 .fv-msg{display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;}
 .fv-msg:last-child{margin-bottom:0;}
 .fv-av{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:6px;font-weight:800;flex-shrink:0;margin-top:1px;}
 .fv-av.ai{background:linear-gradient(135deg,#FB612A,#F07040);color:#fff;}
-.fv-av.u{background:#E8F5EE;color:#16864E;}
+.fv-av.u{background:#E8F5EE;color:#0A7D52;}
 .fv-msg-text{font-size:8px;color:#555;line-height:1.4;}
 .fv-msg-text strong{color:#1a1a1a;font-weight:700;}
 
+/* HERO PROOF: two plain facts under the buttons */
+.hero-proof{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;padding-top:20px;border-top:1px solid #E8DCCB;max-width:470px}
+.hero-proof li{display:flex;align-items:center;gap:8px;font-size:13px;color:#6B6055;line-height:1.4}
+.hero-proof li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--f);flex:none}
+
 /* PROBLEM */
-.prob-sec{background:linear-gradient(180deg,var(--wh),var(--warm) 30%,#FFEDE5 50%,var(--warm) 70%,var(--bg))}
-.prob-head{max-width:620px;margin:0 0 40px}
-.reactive-banner{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:24px;background:linear-gradient(135deg,#FFF0EA,#FFE8DA);border:1px solid rgba(251,97,42,.2);border-radius:12px;overflow:hidden}
-.rb-stat{padding:18px 20px;display:flex;flex-direction:column;gap:3px;border-right:1px solid rgba(251,97,42,.15)}
-.rb-stat:last-child{border-right:none}
-.rb-num{font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--f);line-height:1}
-.rb-label{font-size:11px;color:var(--mt);line-height:1.3;font-weight:500}
-.prob{display:grid;grid-template-columns:1fr 48px 1fr;align-items:stretch}
-.pc{padding:32px;background:var(--wh);border-radius:14px;box-shadow:0 0 0 1px rgba(0,0,0,.05),0 4px 20px rgba(0,0,0,.05);position:relative;overflow:hidden}
-.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
-.pc.old::before{background:linear-gradient(90deg,var(--rd),transparent 70%)}
-.pc.new::before{background:linear-gradient(90deg,var(--f),var(--fl))}
-.pc h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:22px;letter-spacing:-.01em;line-height:1.25;margin-bottom:5px}
-.pc>p{font-size:12px;color:var(--dm);margin-bottom:20px;line-height:1.5}
-.pc-items{display:flex;flex-direction:column;gap:14px}
+.prob-sec{background:linear-gradient(180deg,var(--bg),var(--wh) 18%,var(--wh) 82%,var(--bg))}
+.prob-head{margin:0 0 40px}
+.prob-head .h2{max-width:1040px}
+.prob-head .sub{max-width:720px;margin-top:14px}
+.chaos-visual,.forsured-visual{height:184px}
+.prob{display:grid;grid-template-columns:minmax(0,1fr) 72px minmax(0,1fr);align-items:stretch}
+.pc{padding:24px 24px 28px;background:var(--wh);border:1px solid #E8DCCB;border-radius:12px;position:relative}
+.pc.old{border-top:2px solid var(--rd)}
+.pc.new{border-top:2px solid var(--f)}
+.pc h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:21px;letter-spacing:-.01em;line-height:1.25;margin:20px 0 4px}
+.pc>p{font-size:13px;color:var(--dm);margin-bottom:18px;line-height:1.5}
+.pc-items{display:flex;flex-direction:column;gap:12px}
 .pci{display:flex;gap:10px;align-items:flex-start}
-.pci-bar{width:3px;align-self:stretch;border-radius:2px;flex-shrink:0;min-height:36px}
+.pci-bar{width:2px;align-self:stretch;border-radius:2px;flex-shrink:0;min-height:34px}
 .pci-bar.bad{background:var(--rd)}.pci-bar.good{background:var(--f)}
-.pci p{font-size:12px;color:var(--mt);line-height:1.45}
-.pci strong{font-weight:700;color:var(--tx);display:block;margin-bottom:1px;font-size:12px}
-.tml{margin:52px auto 0;max-width:760px;text-align:left}
-.tml-mark{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:56px;color:var(--f);line-height:.7;margin-bottom:6px;user-select:none}
-.tml blockquote{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(18px,2vw,22px);line-height:1.5;color:var(--tx);letter-spacing:-.01em}
-.tml figcaption{margin-top:18px}
-.tml figcaption strong{display:block;font-size:14px;font-weight:600;color:var(--tx)}
-.tml figcaption span{display:block;font-size:12px;color:var(--dm);margin-top:2px}
+.pci p{font-size:13px;color:var(--mt);line-height:1.45}
+.pci strong{font-weight:600;color:var(--tx);display:block;margin-bottom:1px;font-size:13px}
 .prob-arrow{display:flex;align-items:center;justify-content:center}
-.prob-arrow-inner{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--f),var(--fl));display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(251,97,42,.25);flex-shrink:0;animation:arr-p 2.2s ease-in-out infinite}
-@keyframes arr-p{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.prob-arrow-inner{width:32px;height:32px;border-radius:50%;background:var(--wh);border:1px solid #E8DCCB;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* Quote: left-aligned with the cards, attribution in its own column */
+.tml{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;margin-top:56px;padding-top:32px;border-top:1px solid #E8DCCB;align-items:start}
+.tml figcaption{padding-top:6px}
+.tml-k{display:block;font-size:12px;font-weight:500;color:#6B6055;margin-bottom:10px}
+.tml figcaption strong{display:block;font-size:14px;font-weight:600;color:var(--tx)}
+.tml figcaption span:last-child{display:block;font-size:13px;color:var(--dm);margin-top:2px}
+.tml blockquote{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(19px,1.7vw,22px);line-height:1.5;color:var(--tx);letter-spacing:-.01em;max-width:820px;padding-left:28px;border-left:2px solid var(--f)}
 
-/* PLATFORM */
-.plat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:40px;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;background:var(--wh)}
-.plat-item{padding:26px;min-width:0;border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr);position:relative;overflow:hidden;transition:background .2s}
-.plat-item:hover{background:var(--warm)}
-.plat-item:nth-child(3n){border-right:none}
-.plat-item:nth-child(n+4){border-bottom:none}
-.plat-item-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;background:linear-gradient(135deg,#FFF0EA,#FFE2D0);border:1px solid rgba(251,97,42,.15)}
-.plat-item::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--f),transparent);opacity:0;transition:opacity .2s}
-.plat-item:hover::after{opacity:1}
-.plat-item h3{font-size:15px;font-weight:600;margin-bottom:5px}
-.plat-item p{font-size:12px;color:var(--mt);line-height:1.5}
-.plat-grid.five{grid-template-columns:repeat(6,minmax(0,1fr))}
-.plat-grid.five .plat-item{grid-column:span 2}
-.plat-grid.five .plat-item:nth-child(4){grid-column:span 3}
-.plat-grid.five .plat-item:nth-child(5){grid-column:span 3;border-right:none}
+/* PLATFORM: headline column beside a ledger of capabilities, each with a piece of the product */
+.plat{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:72px;align-items:start}
+.plat-h{position:sticky;top:120px}
+.plat-h .h2{font-size:clamp(32px,3.6vw,50px);line-height:1.08}
+.plat-h .accent{color:var(--f)}
+.plat-h .sub{margin-top:18px;max-width:420px}
+.plat-h .cta-g{margin-top:28px}
+.plat-list{list-style:none;border-top:1px solid #D9C9B6}
+.plat-row{display:grid;grid-template-columns:44px minmax(0,1fr) 224px;gap:20px;align-items:start;padding:24px 0;border-bottom:1px solid #E8DCCB}
+.plat-n{font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;color:#6B6055;padding-top:6px}
+.plat-row h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:21px;letter-spacing:-.01em;line-height:1.25;color:var(--tx)}
+.plat-row p{margin-top:6px;font-size:14px;line-height:1.55;color:var(--mt)}
+.plat-spec{justify-self:end;width:100%;background:var(--wh);border:1px solid #E8DCCB;border-radius:10px;padding:10px 12px;font-size:12px;line-height:1.4;color:#344051;box-shadow:0 1px 2px rgba(20,28,37,.04)}
+.plat-spec b{display:block;font-size:12.5px;font-weight:600;color:#141C25}
+.plat-spec .ps-row{display:flex;align-items:center;justify-content:space-between;gap:8px;white-space:nowrap}
+.plat-spec .ps-row+.ps-row{margin-top:6px}
+.plat-spec .ha-chip{font-size:10px;padding:2px 6px}
+.plat-spec .ha-chip.p{color:#B03B15}
+.ps-people .ha-av.c2{background:#6B6055}
+.ps-tri{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+.ps-tri span{display:block;border-radius:6px;padding:5px 0;font-size:11px;font-weight:500}
+.ps-tri strong{display:block;font-size:15px;font-weight:600;line-height:1.2}
+.ps-tri .ok{background:#E7F8F1;color:#0A7D52}.ps-tri .rv{background:#FFF3EC;color:#B03B15}.ps-tri .gp{background:#FFECEB;color:#C42D2D}
+.ps-people{display:flex;align-items:center;gap:8px}
+.ps-people .ha-av{width:22px;height:22px;font-size:9px}
+.ps-people .ha-av+.ha-av{margin-left:-8px;box-shadow:0 0 0 2px #fff}
+.ps-dot{width:6px;height:6px;border-radius:50%;background:#B27D00;flex:none}
+.plat-note{margin-top:14px;font-size:12px;color:var(--dm)}
 
-/* STEPS BAND */
-.steps-band{margin-top:44px;background:linear-gradient(135deg,#F4EDE5,#EDE0D4,#F4EDE5);border-radius:18px;padding:44px;position:relative;overflow:hidden;border:1px solid rgba(180,150,120,.18)}
-.steps-band::before{content:'';position:absolute;inset:0;opacity:.025;background-image:repeating-linear-gradient(45deg,var(--f) 0,var(--f) 1px,transparent 0,transparent 50%);background-size:12px 12px;pointer-events:none}
-.steps-band::after{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(251,97,42,.07),transparent 60%);pointer-events:none}
-.sb-head{margin-bottom:36px}
-.sb-head h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.2;max-width:500px;color:var(--tx)}
-.sg{display:grid;grid-template-columns:repeat(5,1fr)}
-.sg-item{padding:0 20px;border-left:1px solid rgba(251,97,42,.2);position:relative;transition:opacity .4s}
-.sg-item:first-child{border-left:none;padding-left:0}
-/* top bar — always present as faint track */
-.sg-item::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(251,97,42,.12)}
-/* active fill sweeps in */
-.sg-item::after{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--f),var(--fl));transition:width .55s cubic-bezier(.4,0,.2,1)}
-.sg-item.step-active::after{width:100%}
-.sg-item.step-done::after{width:100%;background:linear-gradient(90deg,var(--gr),#22C55E)}
-.sg-num{font-size:30px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:rgba(251,97,42,.2);line-height:1;margin-bottom:8px;transition:color .3s,transform .3s}
-.sg-item.step-active .sg-num{color:rgba(251,97,42,.65);transform:scale(1.04)}
-.sg-item.step-done .sg-num{color:rgba(22,134,78,.5)}
-.sg-item h3{font-size:15px;font-weight:600;margin-bottom:3px;color:var(--tx)}
-.sg-item p{font-size:11px;color:var(--mt);line-height:1.5}
-/* completion sparkle burst */
-.sg-done-burst{position:absolute;top:4px;right:6px;font-size:24px;opacity:0;transform:scale(0);transition:opacity .3s,transform .3s;pointer-events:none}
-.sg-item.step-done .sg-done-burst{opacity:1;transform:scale(1)}
-.int-row{margin-top:28px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08);font-size:12px;color:var(--dm);line-height:1.5}
-.int-row strong{color:var(--mt);font-weight:600}
+/* HOW IT WORKS: dark band, one progress track that fills step by step */
+.steps-band{margin-top:80px;background:#2C2D29;border-radius:16px;padding:48px 48px 36px;color:#fff;position:relative;overflow:hidden}
+.sb-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sb-head h2{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:clamp(24px,2.5vw,34px);letter-spacing:-.02em;line-height:1.2;color:#fff}
+.sb-head p{font-size:13px;color:rgba(255,255,255,.7)}
+.sg{--i:0;position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;padding-top:30px}
+.sg::before,.sg-fill{content:'';position:absolute;top:5px;left:0;height:2px;border-radius:2px}
+.sg::before{right:0;background:rgba(255,255,255,.14)}
+.sg-fill{width:calc(var(--i) * ((100% - 96px) / 5 + 24px) + 6px);background:var(--f);transition:width .9s cubic-bezier(.4,0,.2,1)}
+.sg-item{position:relative}
+.sg-item::before{content:'';position:absolute;top:-30px;left:0;width:12px;height:12px;border-radius:50%;background:#2C2D29;border:2px solid rgba(255,255,255,.32);transition:background-color .3s,border-color .3s,box-shadow .3s}
+.sg-item.step-done::before{background:var(--f);border-color:var(--f)}
+.sg-item.step-active::before{background:var(--f);border-color:var(--f);box-shadow:0 0 0 6px rgba(251,97,42,.22)}
+.sg-num{font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.6);margin-bottom:8px;transition:color .3s}
+.sg-item h3{font-size:16px;font-weight:600;margin-bottom:4px;color:#fff}
+.sg-item p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.5;transition:color .3s}
+.sg-item.step-active .sg-num{color:var(--f)}
+.sg-item.step-active p{color:rgba(255,255,255,.9)}
+.int-row{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.7);line-height:1.5}
+.int-row strong{color:#fff;font-weight:600}
+@media (prefers-reduced-motion:reduce){.sg-fill,.sg-item::before{transition:none}}
 
-/* SOLUTIONS */
-.cmp-sec{background:var(--s1)}.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px}
-.sol{padding:0 40px;position:relative;display:flex;flex-direction:column}
+/* WHO IT'S FOR: three columns on a shared row grid so tags, lists and buttons line up */
+.sol-sec{background:var(--wh)}
+.sol-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end}
+.sol-head .sub{max-width:520px}
+.sol-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto 1fr auto;margin-top:36px}
+.sol{display:grid;grid-template-rows:subgrid;grid-row:span 5;padding:0 36px;position:relative}
 .sol:first-child{padding-left:0}.sol:last-child{padding-right:0}
-.sol+.sol::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--bdr) 20%,var(--bdr) 80%,transparent)}
-.sol-num{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:52px;color:rgba(251,97,42,.07);line-height:1;margin-bottom:-4px;user-select:none}
-.sol h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:24px;letter-spacing:-.01em;line-height:1.25;margin-bottom:6px;color:var(--tx)}
-.sol-tag{font-size:14px;color:#344051;font-weight:500;margin-bottom:16px}
-.sol-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px;flex:1}
-.sol-list li{font-size:13px;color:#3a3a3a;line-height:1.5;display:flex;align-items:flex-start;gap:9px}
-.sol-list li svg{flex-shrink:0;margin-top:1px}
-.sol .cta-sm{align-self:flex-start;margin-top:auto}
+.sol+.sol{border-left:1px solid #E8DCCB}
+.sol-num{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:44px;color:rgba(251,97,42,.1);line-height:1;margin-bottom:-6px;user-select:none}
+.sol h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:23px;letter-spacing:-.01em;line-height:1.25;color:var(--tx)}
+.sol-tag{font-size:14px;color:#344051;font-weight:500;margin:4px 0 16px}
+.sol-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.sol-list li{font-size:13.5px;color:#3a3a3a;line-height:20px;display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:start}
+.sol-list li svg{margin-top:3px}
+.sol .cta-sm{justify-self:start}
 
-/* COMPARE */
+/* WHY FORSURED: the usual way next to how Forsured does it */
 .cmp-sec{background:var(--s1)}
+.vs{width:100%;margin-top:36px;border-collapse:separate;border-spacing:0;background:var(--wh);border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.vs th,.vs td{text-align:left;vertical-align:top;padding:16px 22px;border-bottom:1px solid var(--bdr);font-size:14px;line-height:1.5}
+.vs tr:last-child th,.vs tr:last-child td{border-bottom:0}
+.vs thead th{font-size:12px;font-weight:500;color:#637083;background:#F9FAFB;padding-top:12px;padding-bottom:12px}
+.vs thead th.fs{color:#B03B15}
+.vs tbody th{width:24%;font-weight:600;color:var(--tx)}
+.vs td.old{width:30%;color:#637083}
+.vs td.fs{color:var(--tx);background:#FFF8F4;border-left:2px solid var(--f)}
+.vs thead th.fs{background:#FFF3EC;border-left:2px solid var(--f)}
 
-.cmp-scroll-hint{display:none;font-size:12px;font-weight:500;color:#637083;text-align:center;margin-top:10px}
-.cmp-scroll-hint svg{display:inline-block;vertical-align:middle;margin-right:4px}
-/* COMPARE TABLE */
-.cmp-wrap{margin-top:36px;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.cmp-table{width:100%;border-collapse:collapse;background:var(--wh)}
-.cmp-table th{padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--dm);background:var(--s1);border-bottom:2px solid var(--bdr);text-align:left;white-space:nowrap}
-.cmp-table th.fs{background:linear-gradient(135deg,#FFF5EE,#FFF0E8);color:var(--f);border-left:2px solid var(--f)}
-.cmp-table td{padding:12px 16px;font-size:13px;border-bottom:1px solid var(--bdr);vertical-align:middle}
-.cmp-table tr:last-child td{border-bottom:none}
-.cmp-table tbody tr:hover td{background:var(--s1)}
-.cmp-table tbody tr:hover td.fs{background:rgba(251,97,42,.04)}
-.cmp-table td:first-child{color:var(--mt);font-weight:500}
-.cmp-table td.fs{background:rgba(251,97,42,.025);border-left:2px solid var(--f)}
-.cmp-y{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--f),var(--fl));display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cmp-y svg{width:11px;height:11px}
-.cmp-n{width:20px;height:20px;border-radius:50%;background:var(--s2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cmp-n svg{width:10px;height:10px}
+/* FAQ: question list beside the heading, hairlines instead of a boxed card */
+.faq-sec{background:var(--wh)}
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:72px;align-items:start}
+.faq-side{position:sticky;top:120px}
+.faq-side p{margin-top:16px;font-size:14px;color:var(--mt);line-height:1.6}
+.faq-side a{color:var(--tx);text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:2px}
+.faq-list{border-top:1px solid #D9C9B6}
+.faq-item{border-bottom:1px solid #E8DCCB}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0}
+.faq-item summary h3{font-size:16px;font-weight:500;line-height:1.45;color:var(--tx);margin:0;transition:color .15s}
+.faq-item summary:hover h3{color:#C44D1E}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-ic{position:relative;width:14px;height:14px;flex:none}
+.faq-ic::before,.faq-ic::after{content:'';position:absolute;left:0;top:6px;width:14px;height:2px;border-radius:1px;background:var(--f);transition:transform .2s}
+.faq-ic::after{transform:rotate(90deg)}
+.faq-item[open] .faq-ic::after{transform:rotate(0)}
+.faq-item summary:focus-visible{outline:2px solid #FB612A;outline-offset:2px}
+.faq-item p{padding:0 40px 22px 0;font-size:15px;line-height:1.65;color:var(--mt);max-width:680px}
+.faq-item a{color:var(--tx);text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:2px}
 
-/* WHAT'S NEXT */
-.faq-sec{background:var(--s1)}.faq-list{margin-top:32px;max-width:820px;border:1px solid var(--bdr);border-radius:14px;background:var(--wh);overflow:hidden}.faq-item{border-bottom:1px solid var(--bdr)}.faq-item:last-child{border-bottom:0}.faq-item summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;font-size:16px;font-weight:600;color:var(--tx);position:relative}.faq-item summary h3{font:inherit;color:inherit;margin:0}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:20px;font-weight:400;color:#FB612A}.faq-item[open] summary::after{content:"\2212"}.faq-item summary:focus-visible{outline:2px solid #FB612A;outline-offset:-2px}.faq-item p{padding:0 22px 20px;font-size:15px;line-height:1.65;color:var(--mt)}.faq-item a{color:var(--tx);text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:2px}
-.next-sec{position:relative;overflow:hidden;background:var(--bg)}
-.next-sec::before{content:'';position:absolute;inset:0;opacity:.012;background-image:repeating-linear-gradient(0deg,var(--f) 0,var(--f) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,var(--f) 0,var(--f) 1px,transparent 1px,transparent 40px);pointer-events:none}
-.construction-visuals{display:flex;align-items:center;gap:12px;margin-top:24px;padding:16px 20px;background:linear-gradient(135deg,#FDFAF7,#FAF3EC);border:1px solid rgba(251,97,42,.12);border-radius:10px;width:fit-content}
-.cv-item{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;font-weight:600;color:var(--dm);text-transform:uppercase;letter-spacing:.04em}
-.cv-div{color:rgba(251,97,42,.25);font-size:14px;margin-bottom:14px}
-.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:40px}
-.ri{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(0,0,0,.05)}
-.ri:last-child{border-bottom:none}
-.ri-vis{display:flex;flex-direction:column;align-items:center}
-.ri-block{width:30px;height:30px;border-radius:7px;border:2px solid var(--bdr2);background:var(--wh);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:var(--dm);position:relative;z-index:1;flex-shrink:0}
-.ri:first-child .ri-block{border-color:var(--f);background:linear-gradient(135deg,#FFF0EA,#FFE0D4);color:var(--f);font-size:16px}
-.ri:first-child .ri-block::after{content:'';position:absolute;inset:-4px;border-radius:10px;border:1.5px solid var(--fb)}
-.ri-line{width:2px;flex:1;background:linear-gradient(to bottom,var(--bdr2),transparent);min-height:10px}
-.ri:last-child .ri-line{display:none}
-.ri-phase{font-size:11px;font-weight:500;color:var(--dm)}
-.ri:first-child .ri-phase{color:var(--f);font-weight:600}
-.ri-title{font-size:15px;font-weight:600;margin-top:2px;color:var(--tx)}
-.ri-desc{font-size:12px;color:var(--mt);margin-top:2px;line-height:1.45}
-.proof{background:linear-gradient(135deg,#FFF5EE,#FFEDE2);border:1px solid rgba(251,97,42,.12);border-radius:18px;padding:40px;position:relative;}
-.proof::before{content:'';position:absolute;inset:0;opacity:.02;background-image:repeating-linear-gradient(45deg,var(--f) 0,var(--f) 1px,transparent 0,transparent 50%);background-size:10px 10px;pointer-events:none;border-radius:18px;}
-.proof::before{content:'';position:absolute;inset:0;opacity:.02;background-image:repeating-linear-gradient(45deg,var(--f) 0,var(--f) 1px,transparent 0,transparent 50%);background-size:10px 10px}
-.proof blockquote{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:20px;line-height:1.5;letter-spacing:-.01em;color:var(--tx);max-width:400px;position:relative}
-.proof cite{display:block;margin-top:14px;font-style:normal;font-size:12px;color:var(--mt)}
-.proof cite strong{font-weight:700}
-
-/* WAITLIST */
-.wl-sec{background:var(--s1);position:relative;overflow:hidden}
-.wl-sec::before{content:'';position:absolute;top:50%;left:50%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(251,97,42,.03),transparent 60%);transform:translate(-50%,-50%);pointer-events:none}
-.wl{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;position:relative}
-.wl-bens{display:flex;flex-direction:column;gap:10px;margin-top:24px}
-.wl-b{display:flex;align-items:flex-start;gap:12px;background:var(--wh);border:1px solid var(--bdr);border-radius:10px;padding:12px 14px}
-.wl-b-icon{width:32px;height:32px;border-radius:8px;background:var(--fg);border:1px solid var(--fb);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.wl-b-text strong{display:block;font-size:13px;font-weight:700;color:var(--tx);margin-bottom:1px}
-.wl-b-text span{font-size:11px;color:var(--dm);line-height:1.35}
-.wl-form{background:var(--wh);border:1px solid var(--bdr);border-radius:16px;padding:36px;box-shadow:0 2px 8px rgba(0,0,0,.03),0 12px 32px rgba(0,0,0,.05)}
-.wl-form h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:24px;letter-spacing:-.01em;line-height:1.25;margin-bottom:4px}
-.wl-form>p{font-size:13px;color:var(--mt);margin-bottom:18px}
-.fld{margin-bottom:10px}
-.fld label{display:block;font-size:11px;font-weight:600;color:var(--mt);margin-bottom:4px}
-.fld input,.fld select{width:100%;height:41px;background:var(--s1);border:1.5px solid var(--bdr2);border-radius:9px;padding:11px 13px;font-size:14px;color:var(--tx);font-family:inherit;outline:none;transition:border .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+/* RISK CHECK + WAITLIST: one section, one form, two intents */
+.wl-sec{background:#FBF8F3;border-top:1px solid #EFE6DA}
+.wl{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px 72px;align-items:start}
+.wl-copy .sub{margin-top:14px;font-size:15px;max-width:480px}
+.wl-steps{list-style:none;margin-top:28px;display:grid;gap:14px;max-width:480px;counter-reset:wl}
+.wl-steps li{counter-increment:wl;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;font-size:14px;line-height:1.5;color:var(--mt)}
+.wl-steps li::before{content:counter(wl);width:24px;height:24px;border-radius:50%;border:1px solid #D9C9B6;background:var(--wh);display:grid;place-items:center;font-size:12px;font-weight:600;color:#6B6055}
+.wl-steps strong{display:block;font-weight:600;color:var(--tx)}
+.wl-form{grid-column:2;grid-row:1 / span 2}
+.wl-field{grid-column:1;margin-top:0;padding-top:24px;border-top:1px solid #E8DCCB;max-width:480px}
+.wl-field h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:20px;letter-spacing:-.01em;line-height:1.3;color:var(--tx)}
+.wl-field p{margin-top:8px;font-size:14px;line-height:1.6;color:var(--mt)}
+.wl-form{background:var(--wh);border:1px solid #E8DCCB;border-radius:12px;padding:28px;box-shadow:0 1px 2px rgba(20,28,37,.04),0 18px 40px -28px rgba(42,38,35,.25)}
+.wl-form h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:22px;letter-spacing:-.01em;line-height:1.25;margin-bottom:4px}
+.wl-form #fc>p{font-size:13px;color:var(--mt);margin-bottom:16px}
+.seg{display:grid;grid-template-columns:1fr 1fr;padding:3px;margin-bottom:18px;background:#F7F2EB;border:1px solid #E8DCCB;border-radius:8px}
+.seg-opt{position:relative;display:block}
+.seg input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;height:40px;border-radius:6px;font-size:14px;font-weight:500;color:#6B6055;cursor:pointer;transition:background-color .15s,color .15s}
+.seg input:checked+span{background:var(--wh);color:var(--tx);box-shadow:0 1px 2px rgba(20,28,37,.08)}
+.seg input:focus-visible+span{outline:2px solid var(--f);outline-offset:1px}
+.fgrid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.fld{margin-bottom:12px;min-width:0}
+.fld label{display:block;font-size:12px;font-weight:500;color:#344051;margin-bottom:4px}
+.fld input,.fld select{width:100%;height:42px;background:var(--wh);border:1px solid #D9C9B6;border-radius:8px;padding:10px 12px;font-size:14px;color:var(--tx);font-family:inherit;outline:none;transition:border .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
 .fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
 .fld input::placeholder{color:var(--dm)}
 .fld input:focus,.fld select:focus{border-color:var(--f);box-shadow:0 0 0 3px var(--fg)}
 /* Form submit: the Figma primary Button at 44px */
-.wl-sub{display:flex;align-items:center;justify-content:center;width:100%;height:44px;padding:0 18px;border-radius:8px;background:#FB612A;color:#fff;border:1px solid #FB612A;box-shadow:0 1px 2px rgba(20,28,37,.04);cursor:pointer;font-size:16px;font-weight:500;line-height:24px;font-family:inherit;margin-top:6px;transition:background-color .15s,border-color .15s}
+.wl-sub{display:flex;align-items:center;justify-content:center;width:100%;height:44px;padding:0 18px;border-radius:8px;background:#FB612A;color:#fff;border:1px solid #FB612A;box-shadow:0 1px 2px rgba(20,28,37,.04);cursor:pointer;font-size:16px;font-weight:500;line-height:24px;font-family:inherit;margin-top:4px;transition:background-color .15s,border-color .15s}
 .wl-sub:hover{background:#D54E21;border-color:#D54E21}
-.fnote{font-size:10px;color:var(--dm);text-align:center;margin-top:8px;line-height:1.4}
+.fnote{font-size:11px;color:var(--dm);text-align:center;margin-top:10px;line-height:1.4}
 .sstate{text-align:center;padding:28px 0;display:none}
-.sstate-icon{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#E8F5EE,#D0EDD9);border:2px solid rgba(22,134,78,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.sstate-icon{width:52px;height:52px;border-radius:50%;background:#E8F5EE;border:2px solid rgba(22,134,78,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
 .sstate h3{font-family:'Roboto Serif',Georgia,serif;font-weight:400;font-size:24px;letter-spacing:-.01em;margin-bottom:4px}
 .sstate p{font-size:14px;color:var(--mt)}
-.form-err{font-size:12px;color:var(--rd);margin-top:4px;display:none}
+.form-err{font-size:12px;color:var(--rd);margin:0 0 8px;display:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* FOOTER */
 footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
@@ -417,36 +426,42 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .edge{padding:0 32px}
   .hero{padding:116px 0 72px}
   .hero-in{gap:40px;padding:0 32px}
-  .plat-grid,.plat-grid.five{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .plat-item:nth-child(n){border-right:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
-  .plat-item:nth-child(2n){border-right:none}
-  #why .plat-item:nth-child(n+5){border-bottom:none}
-  .plat-grid.five .plat-item:nth-child(n){grid-column:auto}
-  .plat-grid.five .plat-item:nth-child(5){grid-column:1/-1;border-right:none;border-bottom:none}
-  .sg{grid-template-columns:1fr 1fr}
-  .sg-item:nth-child(2n+1){border-left:none}
-  .sg-item{padding:16px 16px 16px 0!important}
-  .next-grid{grid-template-columns:1fr}
-  .wl{grid-template-columns:1fr;align-items:start}
-  .prob{grid-template-columns:1fr;gap:16px}
+  .plat{grid-template-columns:1fr;gap:36px}
+  .plat-h{position:static}
+  .plat-h .sub{max-width:560px}
+  .faq-wrap{grid-template-columns:1fr;gap:28px}
+  .faq-side{position:static}
+  .wl{grid-template-columns:1fr;gap:40px}
+  .wl-form,.wl-field{grid-column:auto;grid-row:auto}
+  .wl-copy .sub,.wl-steps,.wl-field{max-width:640px}
+  .sg{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+  .sg-fill{width:calc(var(--i) * ((100% - 64px) / 5 + 16px) + 6px)}
+  .steps-band{padding:40px 32px 32px}
+  .prob{grid-template-columns:1fr;gap:12px}
   .prob-arrow{transform:rotate(90deg)}
-  .cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px}
-  .cmp-table{min-width:480px}
-  .cmp-table th{padding:11px 12px;font-size:10px}
-  .cmp-table td{padding:10px 12px;font-size:12px}
 }
 
 /* HERO: stack the copy above the project screen */
 @media(max-width:900px){
   .hero-in{grid-template-columns:1fr;gap:48px}
   .hero-copy,.hero-fig{max-width:640px}
+  .hero-proof{max-width:none}
+  /* Steps: one column, the track runs down the left */
+  .sg{grid-template-columns:1fr;gap:20px;padding-top:0;padding-left:30px}
+  .sg::before{top:6px;bottom:6px;left:5px;right:auto;width:2px;height:auto}
+  .sg-fill{display:none}
+  .sg-item::before{top:3px;left:-30px}
+  .sg-num{margin-bottom:2px}
 }
 
-/* SOLUTIONS: stack to one column before three columns get cramped */
+/* WHO IT'S FOR: stack before three columns get cramped */
 @media(max-width:1024px){
-  .sol-grid{grid-template-columns:1fr}
-  .sol{padding:28px 0!important}
-  .sol+.sol::before{width:100%;height:1px;top:0;left:0;bottom:auto;background:linear-gradient(90deg,transparent,var(--bdr),transparent)}
+  .sol-head{grid-template-columns:1fr;gap:12px}
+  .sol-grid{grid-template-columns:1fr;grid-template-rows:none}
+  .sol{display:flex;flex-direction:column;grid-row:auto;padding:28px 0!important}
+  .sol+.sol{border-left:0;border-top:1px solid #E8DCCB}
+  .sol .cta-sm{align-self:flex-start}
+  .plat-row{grid-template-columns:36px minmax(0,1fr) 200px}
 }
 
 /* MOBILE */
@@ -459,7 +474,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .nr .cta-p{display:none}
   .mtog{display:block}
   .mmenu{top:56px}
-  .hero{padding:84px 0 56px}
+  .hero{padding:80px 0 48px}
   .hero-in{padding:0 20px;gap:36px}
   .hero-kicker{font-size:13px;margin-bottom:12px}
   .h1{font-size:clamp(32px,8.8vw,40px)}
@@ -467,6 +482,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .hero .sub{font-size:16px;margin-bottom:24px}
   .hero-btns{flex-direction:column}
   .hero-btns .cta-p,.hero-btns .cta-g{width:100%;justify-content:center}
+  .hero-proof{flex-direction:column;gap:8px;margin-top:22px;padding-top:16px}
   .ha-band{height:48px;padding:0 12px}
   .ha-body{padding:16px 14px 14px}
   .ha-title{font-size:21px}
@@ -475,52 +491,45 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .ha-row{grid-template-columns:30px minmax(0,1fr) auto;gap:10px;padding:11px 12px}
   .ha-ic{width:30px;height:30px}
   .ha-foot{margin-top:14px;font-size:12.5px}
-  .reactive-banner{grid-template-columns:1fr 1fr}
-  .rb-stat{border-right:1px solid rgba(251,97,42,.15);border-bottom:none;padding:14px 14px}
-  .rb-stat:nth-child(2n){border-right:none}
-  .rb-stat:last-child{grid-column:1/-1;border-top:1px solid rgba(251,97,42,.15)}
-  .rb-num{font-size:20px}
-  .rb-label{font-size:10px}
-  .prob{grid-template-columns:1fr;gap:16px}
-  .prob-arrow{transform:rotate(90deg)}
-  .plat-grid,.plat-grid.five{grid-template-columns:1fr}
-  .plat-grid.five .plat-item:nth-child(n){grid-column:auto}
-  .plat-item:nth-child(n){border-right:none!important;border-bottom:1px solid var(--bdr)!important}
-  .plat-item:last-child{border-bottom:none!important}
-  .steps-band{padding:28px 20px;border-radius:14px}
-  .sb-head{margin-bottom:24px}
-  .sg{grid-template-columns:1fr}
-  .sg-item{padding:14px 0!important;border-left:none!important}
-  .sg-item::before{display:none}
-  .sg-num{font-size:28px}
-  .construction-visuals{flex-wrap:wrap}
-  .cv-div{display:none}
-  .cmp-scroll-hint{display:block}
-  .sol-grid{grid-template-columns:1fr}
-  .sol{padding:28px 0!important}
-  .sol+.sol::before{width:100%;height:1px;top:0;left:0;bottom:auto;background:linear-gradient(90deg,transparent,var(--bdr),transparent)}
+  .prob-head{margin-bottom:28px}
+  .pc{padding:16px 16px 22px}
+  .chaos-visual,.forsured-visual{height:210px}
+  .pc h3{font-size:20px;margin-top:16px}
+  .tml{grid-template-columns:1fr;gap:16px;margin-top:40px;padding-top:24px}
+  .tml figcaption{order:2;padding:0 0 0 22px}
+  .tml-k{display:none}
+  .tml blockquote{padding-left:20px;font-size:18px}
+  .plat-h .h2{font-size:clamp(30px,8.4vw,38px)}
+  .plat-row{grid-template-columns:28px minmax(0,1fr);gap:4px 12px;padding:20px 0}
+  .plat-row h3{font-size:19px}
+  .plat-spec{grid-column:2;justify-self:start;max-width:280px;margin-top:10px}
+  .steps-band{margin-top:56px;padding:28px 20px 24px;border-radius:12px}
+  .sb-head{margin-bottom:28px}
+  .vs,.vs tbody,.vs tr,.vs th,.vs td{display:block;width:auto!important}
+  .vs thead{display:none}
+  .vs tr{padding:16px 18px;border-bottom:1px solid var(--bdr)}
+  .vs tr:last-child{border-bottom:0}
+  .vs th,.vs td{padding:0;border:0!important;background:none!important;font-size:14px}
+  .vs tbody th{margin-bottom:8px}
+  .vs td::before{content:attr(data-k);display:block;font-size:11px;font-weight:500;color:#637083;margin-bottom:2px}
+  .vs td.fs{margin-top:10px;padding-left:12px;border-left:2px solid var(--f)!important}
+  .vs td.fs::before{color:#B03B15}
   .fgrid{grid-template-columns:1fr}
   footer{padding:32px 20px 24px}
-  .wl{grid-template-columns:1fr;align-items:start}
-  .wl-form{padding:24px 20px}
-  .proof{padding:28px 20px}
-  .proof blockquote{font-size:15px}
-  .next-grid{gap:32px;grid-template-columns:1fr}
-  .wl-bens{gap:8px}
+  .wl-form{padding:22px 18px}
+  .fgrid2{grid-template-columns:1fr}
+  .faq-item summary{padding:18px 0}
+  .faq-item p{padding-right:0}
 }
 
 @media(max-width:480px){
   .fgrid{grid-template-columns:1fr}
   .cf-sms-bubble{white-space:normal;max-width:190px}
-  .reactive-banner{grid-template-columns:1fr}
-  .rb-stat{border-right:none!important;border-bottom:1px solid rgba(251,97,42,.15)}
-  .rb-stat:last-child{grid-column:auto;border-top:none}
 }
 
-/* SMALL SCREENS: comfortable tap targets, stat labels that wrap instead of overflowing */
+/* SMALL SCREENS: comfortable tap targets */
 @media(max-width:768px){.cta-p,.cta-g,.wl-sub{min-height:44px}.mtog{padding:11px 12px}}
 @media(max-width:380px){.ha-row{grid-template-columns:minmax(0,1fr) auto}.ha-ic{display:none}}
-
 /* PRODUCT SHOWCASE */
 .show-sec{background:linear-gradient(180deg,var(--bg),#FBF8F3 40%,var(--bg))}
 .show-head{max-width:760px}
@@ -542,31 +551,33 @@ footer{border-top:1px solid var(--bdr);padding:44px 40px 28px}
   .show-cap{margin-top:16px}
 }
 /* EVENT BANNER (temporary, BuiltWorlds Demo Day since Oct 30; ids still say irmi): delete this block, the irmi-bar markup and its script to remove */
-:root{--bh:36px}
+:root{--bh:44px}
 html.no-irmi{--bh:0px}
 html{scroll-padding-top:var(--bh)}
 body{padding-top:var(--bh)}
 nav{top:var(--bh)}
 .mmenu{top:calc(60px + var(--bh))}
-.irmi-bar{position:fixed;top:0;left:0;right:0;height:var(--bh);z-index:1001;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 44px;background:#2C2D29;border-bottom:2px solid var(--f);color:#fff;font-size:13px;font-weight:500;white-space:nowrap}
+.irmi-bar{position:fixed;top:0;left:0;right:0;height:var(--bh);z-index:1001;display:flex;align-items:center;justify-content:center;gap:16px;padding:0 56px;background:#2C2D29;border-bottom:1px solid #3C3D37;color:#fff;font-size:13px;font-weight:500;white-space:nowrap}
 .irmi-bar .ib-msg{display:inline-flex;align-items:center;gap:10px}
-.irmi-bar .ib-short{display:none}
-.irmi-bar .ib-dot{width:7px;height:7px;border-radius:50%;background:var(--f);flex:none;box-shadow:0 0 0 3px rgba(251,97,42,.25)}
-.irmi-bar .ib-cta{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:8px;border:1px solid #FB612A;background:#FB612A;color:#fff;text-decoration:none;font-size:12px;font-weight:500;transition:background-color .15s,border-color .15s}
-.irmi-bar .ib-cta:hover,.irmi-bar .ib-cta:focus-visible{background:#D54E21;border-color:#D54E21}
-.irmi-bar .ib-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.7);font-size:18px;line-height:1;cursor:pointer}
+.irmi-bar .ib-short,.irmi-bar .ib-mid,.irmi-bar .ib-cs{display:none}
+@media(max-width:1180px){.irmi-bar .ib-long,.irmi-bar .ib-cl{display:none}.irmi-bar .ib-mid,.irmi-bar .ib-cs{display:inline}}
+.irmi-bar .ib-dot{width:6px;height:6px;border-radius:50%;background:var(--f);flex:none}
+.irmi-bar .ib-cta{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:6px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;text-decoration:none;font-size:12.5px;font-weight:500;transition:background-color .15s,border-color .15s}
+.irmi-bar .ib-cta .ib-arr{color:var(--f)}
+.irmi-bar .ib-cta:hover,.irmi-bar .ib-cta:focus-visible{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+.irmi-bar .ib-x{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.7);font-size:18px;line-height:1;cursor:pointer}
 .irmi-bar .ib-x:hover,.irmi-bar .ib-x:focus-visible{color:#fff;background:rgba(255,255,255,.1)}
 html.no-irmi .irmi-bar{display:none}
-@media(max-width:768px){.mmenu{top:calc(56px + var(--bh))}:root{--bh:62px}html.no-irmi{--bh:0px}.irmi-bar{flex-direction:column;gap:5px;padding:0 40px}.irmi-bar .ib-dot{display:none}.irmi-bar .ib-long{display:none}.irmi-bar .ib-short{display:inline}}
-@media(max-width:420px){.irmi-bar{font-size:12px;padding:0 36px}.irmi-bar .ib-x{right:4px}}
+@media(max-width:768px){.mmenu{top:calc(56px + var(--bh))}:root{--bh:48px}html.no-irmi{--bh:0px}.irmi-bar{justify-content:flex-start;gap:12px;padding:0 44px 0 20px;font-size:12.5px}.irmi-bar .ib-dot{display:none}.irmi-bar .ib-long,.irmi-bar .ib-mid,.irmi-bar .ib-cl{display:none}.irmi-bar .ib-short,.irmi-bar .ib-cs{display:inline}.irmi-bar .ib-cta{margin-left:auto;padding:0 10px}}
+@media(max-width:380px){.irmi-bar{padding:0 38px 0 14px;font-size:12px;gap:8px}.irmi-bar .ib-x{right:4px}}
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <div class="irmi-bar" id="irmi-bar" role="region" aria-label="Event announcement">
-  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span><span class="ib-long">We're a BuiltWorlds Venture East Demo Day finalist, Nov 19 in Boston</span><span class="ib-short">BuiltWorlds Demo Day finalist, Nov 19</span></span>
-  <a class="ib-cta" href="builtworlds-field-guide/">Get the event + downtown Boston field guide →</a>
+  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span><span class="ib-long">Forsured is one of nine companies presenting at BuiltWorlds Venture East Demo Day, Nov 19 in Boston</span><span class="ib-mid">One of nine companies presenting at BuiltWorlds Demo Day, Nov 19</span><span class="ib-short">Demo Day presenter, Nov 19</span></span>
+  <a class="ib-cta" href="builtworlds-field-guide/"><span class="ib-cl">Event + downtown Boston field guide</span><span class="ib-cs">Field guide</span><span class="ib-arr" aria-hidden="true">→</span></a>
   <button type="button" class="ib-x" aria-label="Dismiss announcement" onclick="dismissIrmi()">&times;</button>
 </div>
 <script>
@@ -612,6 +623,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
         <a href="#demo" class="cta-p cta-lg">Free COI Risk Check →</a>
         <a href="#platform" class="cta-g cta-lg">See How Forsured Works</a>
       </div>
+      <ul class="hero-proof"><li>Reads endorsements, not just the ACORD 25</li><li>Procore integration for early access customers</li></ul>
     </div>
     <figure class="hero-fig">
       <div class="hero-app" role="img" aria-label="A Forsured project screen with sample data. Riverside Medical Pavilion is at 88%, with 15 of 17 requirements met. Two gaps are flagged: the umbrella aggregate is $4M of the $5M required, and the additional insured endorsement for ongoing operations (CG 20 10) is missing. The broker is fixing both.">
@@ -657,7 +669,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
   <div class="prob-head reveal">
     <div class="label">The Problem</div>
     <h2 class="h2">Insurance compliance was never built for how <span class="accent">construction actually works.</span></h2>
-    <p class="sub" style="margin-top:8px;max-width:760px">Every project creates another web of project requirements, contractors, COIs, endorsements, brokers, expirations, and email threads. The hard part is not storing the documents. The hard part is getting a confident answer about whether a contractor's coverage meets the requirements of a specific project.</p>
+    <p class="sub">Every project creates another web of project requirements, contractors, COIs, endorsements, brokers, expirations, and email threads. The hard part is not storing the documents. The hard part is getting a confident answer about whether a contractor's coverage meets the requirements of a specific project.</p>
   </div>
   <div class="prob reveal">
     <div class="pc old">
@@ -696,7 +708,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
           </div>
         </div>
       </div>
-      <h3 style="margin-top:20px">Today’s reality</h3>
+      <h3>Today’s reality</h3>
       <p>Spreadsheets, inboxes, and interpretation work.</p>
       <div class="pc-items">
         <div class="pci"><div class="pci-bar bad"></div><p><strong>Scattered requirements</strong>Insurance standards live in contracts and project documents.</p></div>
@@ -705,7 +717,7 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
         <div class="pci"><div class="pci-bar bad"></div><p><strong>Hidden gaps</strong>A submission can look complete while a critical requirement is missing.</p></div>
       </div>
     </div>
-    <div class="prob-arrow" aria-hidden="true"><div class="prob-arrow-inner"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+    <div class="prob-arrow" aria-hidden="true"><div class="prob-arrow-inner"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
     <div class="pc new">
       <div class="forsured-visual" aria-hidden="true">
         <div class="fv-scores">
@@ -732,8 +744,9 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
             <div class="fv-msg-text"><strong>Jennifer W.:</strong> Thanks. Rivera confirmed update. COI re-issued and verified.</div>
           </div>
         </div>
-      </div>      <h3 style="margin-top:20px">The Forsured difference</h3>
-      <p>A decision workflow, not a document-storage problem.</p>
+      </div>
+      <h3>The Forsured difference</h3>
+      <p>One clear answer per contractor, per project.</p>
       <div class="pc-items">
         <div class="pci"><div class="pci-bar good"></div><p><strong>Understand the requirement</strong>Capture the project's insurance standard, including exceptions.</p></div>
         <div class="pci"><div class="pci-bar good"></div><p><strong>Review the submission</strong>AI-assisted review flags coverage, endorsement, and expiration issues.</p></div>
@@ -743,45 +756,54 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
     </div>
   </div>
   <figure class="tml reveal">
-    <div class="tml-mark" aria-hidden="true">“</div>
-    <blockquote>What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.”</blockquote>
-    <figcaption><strong>Stephanie Massei</strong><span>Milestone Construction</span></figcaption>
+    <figcaption><span class="tml-k">From the field</span><strong>Stephanie Massei</strong><span>Milestone Construction</span></figcaption>
+    <blockquote>“What stood out to us is that Forsured doesn't just organize the paperwork. It helps us understand what meets the project requirements, what needs attention, and what needs to happen next. That clarity across the GC, subcontractor, and broker is where we see the real value.”</blockquote>
   </figure>
 </div></section>
 
 <section id="platform"><div class="edge">
-  <div class="reveal">
-    <div class="label">The Platform</div>
-    <h2 class="h2">One workflow from insurance requirement to <span class="accent">ongoing compliance.</span></h2>
-    <p class="sub" style="margin-top:8px">Define what a project requires, review the COIs contractors submit, and keep compliance current, all in one place.</p>
-  </div>
-  <div class="plat-grid five reveal">
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><h3>Project-Specific Requirements</h3><p>Define your insurance standards once, then apply project-level requirements and exceptions where the work demands it.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>AI-Assisted Insurance Review</h3><p>Review submitted insurance documents against the requirements that matter and surface missing, inconsistent, or non-compliant items.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>Clear Compliance Triage</h3><p>See what is ready, what needs review, and what needs to be resolved across contractors and active projects.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h3>Shared GC + Broker Workflow</h3><p>Give the people resolving an issue the same context, documents, comments, and status instead of another disconnected email chain.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div><h3>Continuous Monitoring</h3><p>Track expirations and changing compliance status across active projects so issues are addressed before they become jobsite problems.</p></div>
+  <div class="plat">
+    <div class="plat-h reveal">
+      <div class="label">The Platform</div>
+      <h2 class="h2">Everything between the requirement and <span class="accent">the renewal.</span></h2>
+      <p class="sub">Define what a project requires, review the COIs contractors submit, and keep compliance current, all in one place.</p>
+      <a href="#demo" class="cta-g">Try it on one project →</a>
+    </div>
+    <div class="reveal">
+      <ol class="plat-list">
+        <li class="plat-row"><span class="plat-n" aria-hidden="true">01</span><div><h3>Project-specific requirements</h3><p>Define your insurance standards once, then apply project-level requirements and exceptions where the work demands it.</p></div><div class="plat-spec" aria-hidden="true"><b>Riverside Medical Pavilion</b><div class="ps-row"><span>17 requirements</span><span>2 exceptions</span></div></div></li>
+        <li class="plat-row"><span class="plat-n" aria-hidden="true">02</span><div><h3>AI-assisted insurance review</h3><p>Review submitted insurance documents against the requirements that matter and surface missing, inconsistent, or non-compliant items.</p></div><div class="plat-spec" aria-hidden="true"><div class="ps-row"><b>CG 20 10 endorsement</b><span class="ha-chip gap">Missing</span></div><div class="ps-row"><span>Umbrella aggregate</span><span>$4M / $5M</span></div></div></li>
+        <li class="plat-row"><span class="plat-n" aria-hidden="true">03</span><div><h3>Clear compliance triage</h3><p>See what is ready, what needs review, and what needs to be resolved across contractors and active projects.</p></div><div class="plat-spec ps-tri" aria-hidden="true"><span class="ok"><strong>12</strong>Ready</span><span class="rv"><strong>3</strong>Review</span><span class="gp"><strong>2</strong>Fix</span></div></li>
+        <li class="plat-row"><span class="plat-n" aria-hidden="true">04</span><div><h3>Shared GC and broker workflow</h3><p>Give the people resolving an issue the same context, documents, comments, and status instead of another disconnected email chain.</p></div><div class="plat-spec" aria-hidden="true"><div class="ps-people"><span class="ha-av">HB</span><span class="ha-av c2">EC</span><b>Sent to the broker</b></div><div class="ps-row" style="margin-top:6px"><span>Summit Ridge Insurance</span><span class="ha-chip p">Fixing 2</span></div></div></li>
+        <li class="plat-row"><span class="plat-n" aria-hidden="true">05</span><div><h3>Continuous monitoring</h3><p>Track expirations and changing compliance status across active projects so issues are addressed before they become jobsite problems.</p></div><div class="plat-spec" aria-hidden="true"><div class="ps-row"><b>Workers’ comp renewal</b><span class="ps-dot"></span></div><div class="ps-row"><span>Northgate Electric</span><span>14 days</span></div></div></li>
+      </ol>
+      <p class="plat-note">Examples use sample data.</p>
+    </div>
   </div>
   <div class="steps-band reveal" id="how" style="scroll-margin-top:80px">
     <div class="sb-head">
       <h2>From requirements to continuous compliance.</h2>
+      <p>Five steps, one shared record.</p>
     </div>
     <div class="sg">
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">01</div><h3>Set</h3><p>Define the project's insurance requirements, starting from your standards and applying project-specific exceptions.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">02</div><h3>Submit</h3><p>Contractors or their brokers send the COIs and endorsements needed for review.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">03</div><h3>Review</h3><p>Forsured evaluates the submission against project requirements and organizes what passes, what needs review, and what is missing.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">04</div><h3>Resolve</h3><p>GCs, contractors, and brokers share context, correct issues, and move toward approval in one place.</p></div>
-      <div class="sg-item"><span class="sg-done-burst" aria-hidden="true">✦</span><div class="sg-num">05</div><h3>Monitor</h3><p>Track expirations and status changes across active projects so compliance is not a one-time checkpoint.</p></div>
+      <span class="sg-fill" aria-hidden="true"></span>
+      <div class="sg-item"><div class="sg-num">01</div><h3>Set</h3><p>Start from your standards and add the project's exceptions.</p></div>
+      <div class="sg-item"><div class="sg-num">02</div><h3>Submit</h3><p>Contractors or their brokers send the COIs and endorsements.</p></div>
+      <div class="sg-item"><div class="sg-num">03</div><h3>Review</h3><p>Each document is checked against the project requirements.</p></div>
+      <div class="sg-item"><div class="sg-num">04</div><h3>Resolve</h3><p>GC, contractor and broker fix what's missing in one place.</p></div>
+      <div class="sg-item"><div class="sg-num">05</div><h3>Monitor</h3><p>Expirations and changes are tracked across active projects.</p></div>
     </div>
     <div class="int-row"><strong>Integrations:</strong> Procore integration available for early access customers. Additional integrations are in development, designed to fit the construction stack you already use.</div>
   </div>
 </div></section>
 
 <section class="sol-sec" id="solutions"><div class="edge">
-  <div class="reveal">
-    <div class="label">Who It's For</div>
-    <h2 class="h2">Built for the GC <span class="accent">caught in the middle.</span></h2>
-    <p class="sub" style="margin-top:8px;max-width:720px">Forsured starts with the GC's compliance problem, creates a shared workflow with insurance brokers, and makes submission and correction easier for trade contractors.</p>
+  <div class="sol-head reveal">
+    <div>
+      <div class="label">Who It's For</div>
+      <h2 class="h2">Built for the GC <span class="accent">caught in the middle.</span></h2>
+    </div>
+    <p class="sub">Forsured starts with the GC's compliance problem, creates a shared workflow with insurance brokers, and makes submission and correction easier for trade contractors.</p>
   </div>
   <div class="sol-grid reveal">
     <div class="sol" id="gc" style="scroll-margin-top:80px">
@@ -789,12 +811,10 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
       <h3>General Contractors</h3>
       <div class="sol-tag">One place to see what is required, submitted, wrong, and next.</div>
       <ul class="sol-list">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Standardize insurance requirements across projects while preserving project-level exceptions</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Reduce manual document review and repetitive follow-up</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>See compliance status across contractors and projects</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Give brokers the context they need to resolve deficiencies faster</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Keep a transparent review trail without relying on inbox history</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Make it easier for contractors to understand and correct what is missing</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Standardize insurance requirements across projects while preserving project-level exceptions</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Reduce manual document review and repetitive follow-up</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>See compliance status across contractors and projects</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Keep a transparent review trail without relying on inbox history</span></li>
       </ul>
       <a href="#demo" class="cta-p cta-sm">Free COI Risk Check →</a>
     </div>
@@ -803,28 +823,24 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
       <h3>Insurance Brokers</h3>
       <div class="sol-tag">Make your GC clients easier to serve.</div>
       <ul class="sol-list">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>See exactly what each project requires</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Understand why a submission needs attention</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Reduce repeated email requests and document-version confusion</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Collaborate directly around the deficiency</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Help clients modernize compliance without losing the advisory relationship</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Create a more consistent experience across GC accounts</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>See exactly what each project requires</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Understand why a submission needs attention</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Reduce repeated email requests and document-version confusion</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Help clients modernize compliance without losing the advisory relationship</span></li>
       </ul>
-      <a href="#demo" class="cta-p cta-sm">Talk to Forsured →</a>
+      <a href="#demo" class="cta-g cta-sm">Talk to Forsured →</a>
     </div>
     <div class="sol">
       <div class="sol-num" aria-hidden="true">Trade</div>
       <h3>Trade Contractors</h3>
       <div class="sol-tag">Compliance that is easier to complete.</div>
       <ul class="sol-list">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Straightforward document submission</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Clear project-specific requirements</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Faster visibility into missing or incorrect items</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Less repeated back-and-forth</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Work with your broker from the same requirements and compliance status</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>A simpler route from submission to GC approval</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Clear project-specific requirements</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Faster visibility into missing or incorrect items</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Work with your broker from the same requirements and compliance status</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>A simpler route from submission to GC approval</span></li>
       </ul>
-      <a href="#demo" class="cta-p cta-sm" data-preselect-role="Subcontractor">Get Connected →</a>
+      <a href="#demo" class="cta-g cta-sm" data-preselect-role="Subcontractor">Get Connected →</a>
     </div>
   </div>
 </div></section>
@@ -835,47 +851,50 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
     <h2 class="h2">Built around the way construction insurance compliance <span class="accent">actually gets resolved.</span></h2>
     <p class="sub" style="margin-top:8px;max-width:720px">Insurance compliance is a decision workflow, not a document-storage problem. Forsured is built for the people who own that decision.</p>
   </div>
-  <div class="plat-grid reveal">
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Construction-specific workflow</h3><p>Built around projects, contractors, insurance requirements, endorsements, exceptions, and the people responsible for resolving them.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h3>Project-level decision context</h3><p>Review a submission against the requirements of the actual project, not merely a generic document checklist.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><h3>GC + broker collaboration</h3><p>Bring the teams requesting, reviewing, and correcting insurance documentation into a shared workflow.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Transparent AI assistance</h3><p>AI surfaces and explains issues while accountable people stay in control of approvals and exceptions.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-4"/></svg></div><h3>Mid-market implementation mindset</h3><p>Meaningful compliance automation without forcing a construction company into an oversized enterprise transformation.</p></div>
-    <div class="plat-item"><div class="plat-item-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Built for adoption</h3><p>A better process for the GC without creating unnecessary friction for contractors and brokers.</p></div>
-  </div>
+  <table class="vs reveal" aria-label="How Forsured compares with the usual way of tracking contractor insurance">
+    <thead><tr><td></td><th scope="col">The usual way</th><th scope="col" class="fs">With Forsured</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">What it's built around</th><td class="old" data-k="The usual way">Documents in a folder or a spreadsheet</td><td class="fs" data-k="With Forsured">Projects, contractors, insurance requirements, endorsements, exceptions, and the people responsible for resolving them</td></tr>
+      <tr><th scope="row">What a COI is checked against</th><td class="old" data-k="The usual way">A generic document checklist</td><td class="fs" data-k="With Forsured">The requirements of the actual project</td></tr>
+      <tr><th scope="row">How gaps get fixed</th><td class="old" data-k="The usual way">Another disconnected email chain</td><td class="fs" data-k="With Forsured">The teams requesting, reviewing, and correcting insurance documentation work in one shared workflow</td></tr>
+      <tr><th scope="row">Who does the reading</th><td class="old" data-k="The usual way">A person, line by line</td><td class="fs" data-k="With Forsured">AI surfaces and explains issues while accountable people stay in control of approvals and exceptions</td></tr>
+      <tr><th scope="row">What it takes to start</th><td class="old" data-k="The usual way">An oversized enterprise transformation</td><td class="fs" data-k="With Forsured">Meaningful compliance automation with a mid-market implementation mindset</td></tr>
+      <tr><th scope="row">Who has to change</th><td class="old" data-k="The usual way">Everyone, with new friction for contractors and brokers</td><td class="fs" data-k="With Forsured">A better process for the GC without unnecessary friction for contractors and brokers</td></tr>
+    </tbody>
+  </table>
 </div></section>
 
-<section class="next-sec"><div class="edge">
-  <div class="reveal">
-    <div class="label">Built in the Field</div>
-    <h2 class="h2">Built with construction and insurance professionals, <span class="accent">not in a vacuum.</span></h2>
-    <p class="sub" style="margin-top:6px;max-width:720px">Forsured is being built alongside leading general contractors, brokers, and industry advisors using real construction compliance workflows. We're intentionally managing onboarding so our team can work closely with early customers while scaling the platform thoughtfully.</p>
-  </div>
-  <div class="next-grid reveal">
-    <div>
-      <h3 class="serif" style="font-size:24px;line-height:1.25;margin-bottom:8px">We’re Managing Demand</h3>
-      <p style="font-size:14px;color:var(--mt);line-height:1.6;max-width:460px">Forsured is onboarding a limited number of general contractors and broker partners at a time so every team gets the attention required to implement the platform successfully. Join the waitlist and we'll reach out as onboarding capacity becomes available.</p>
-      <div class="pc-items" style="margin-top:24px">
-        <div class="pci"><div class="pci-bar good"></div><p><strong>White-glove onboarding</strong>Work directly with the Forsured team through setup and workflow implementation.</p></div>
-        <div class="pci"><div class="pci-bar good"></div><p><strong>Your real workflows</strong>Bring your actual projects, insurance requirements, contractors, and broker relationships into Forsured.</p></div>
-        <div class="pci"><div class="pci-bar good"></div><p><strong>Brokers included by design</strong>Your insurance partners work from the same requirements, documents, and compliance context.</p></div>
-      </div>
+<section class="wl-sec" id="demo"><div class="edge">
+  <div class="wl">
+    <div class="wl-copy reveal">
+      <div class="label">Free COI Risk Check</div>
+      <h2 class="h2">Spot the risk.<br>Flag the gap.<br><span class="accent">Avoid the loss.</span></h2>
+      <p class="sub">Get a free COI risk check, no strings attached. Send us one project's requirements and a contractor COI or two, through the form or to <a href="mailto:hello@forsured.ai" style="color:inherit;text-decoration:underline">hello@forsured.ai</a>. We'll run the check, then hop on a call to walk you through what we found and show you what Forsured can do.</p>
+      <ol class="wl-steps">
+        <li><span><strong>Send one project</strong>One project's requirements and a contractor COI or two.</span></li>
+        <li><span><strong>We run the check</strong>Every COI reviewed against the project requirements.</span></li>
+        <li><span><strong>Walk through the gaps</strong>A short call on what we found and what to fix. Free, whether or not Forsured is a fit.</span></li>
+      </ol>
     </div>
-    <div class="proof">
-      <div class="label">Join the Waitlist</div>
-      <div style="margin-top:16px;position:relative;z-index:1">
-        <div id="oh-form-wrap">
-          <p style="font-size:13px;color:var(--mt);margin-bottom:14px">Tell us about your team and we'll follow up as Forsured onboarding capacity becomes available.</p>
-          <form id="oh-form" onsubmit="return submitWaitlistSignup(event)" novalidate style="display:flex;flex-direction:column;gap:0">
-            <input type="hidden" name="access_key" value="9f256d7f-4b10-4b26-8502-bf23abe8455d"/>
-            <input type="hidden" name="subject" value="Forsured Waitlist Request"/>
-            <input type="hidden" name="from_name" value="Forsured Waitlist"/>
-            <input type="hidden" name="redirect" value="false"/>
-            <div class="fld"><label for="oh-name">Full Name <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="text" id="oh-name" name="name" placeholder="Your name" required autocomplete="name"/></div>
-            <div class="fld"><label for="oh-email">Work Email <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="email" id="oh-email" name="email" placeholder="you@company.com" required autocomplete="email"/></div>
-            <div class="fld"><label for="oh-company">Company</label><input type="text" id="oh-company" name="company" placeholder="Your company" autocomplete="organization"/></div>
-            <div class="fld"><label for="oh-role">I am a… <span style="color:var(--rd)" aria-hidden="true">*</span></label>
-              <select id="oh-role" name="role" required>
+    <div class="wl-form reveal">
+      <div id="fc">
+        <h3 id="fc-h">Get Your Free COI Risk Check</h3>
+        <p id="fc-p">Tell us who you are and we'll reply with where to send your project requirements and contractor COIs.</p>
+        <form id="wl-form" onsubmit="return submitAccessRequest(event)" novalidate>
+          <input type="hidden" name="access_key" value="9f256d7f-4b10-4b26-8502-bf23abe8455d"/>
+          <input type="hidden" name="subject" id="wl-subject" value="Forsured Access Request"/>
+          <input type="hidden" name="from_name" id="wl-from" value="Forsured Access Request"/>
+          <input type="hidden" name="redirect" value="false"/>
+          <div class="seg" role="radiogroup" aria-label="What would you like?">
+            <label class="seg-opt"><input type="radio" name="intent" id="wl-intent-check" value="risk_check" checked/><span>Free risk check</span></label>
+            <label class="seg-opt"><input type="radio" name="intent" id="wl-intent-waitlist" value="waitlist"/><span>Join the waitlist</span></label>
+          </div>
+          <div class="fgrid2">
+            <div class="fld"><label for="wl-name">Full Name <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="text" id="wl-name" name="name" placeholder="Your name" required autocomplete="name"/></div>
+            <div class="fld"><label for="wl-email">Work Email <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="email" id="wl-email" name="email" placeholder="you@company.com" required autocomplete="email"/></div>
+            <div class="fld"><label for="wl-company">Company</label><input type="text" id="wl-company" name="company" placeholder="Your company" autocomplete="organization"/></div>
+            <div class="fld"><label for="wl-role">I am a… <span style="color:var(--rd)" aria-hidden="true">*</span></label>
+              <select id="wl-role" name="role" required>
                 <option value="" disabled selected>Select your role</option>
                 <option value="General Contractor / Construction Manager">General Contractor / Construction Manager</option>
                 <option value="Insurance Broker">Insurance Broker</option>
@@ -885,61 +904,6 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
                 <option value="Other">Other</option>
               </select>
             </div>
-            <div class="fld"><label for="oh-ref">Referral / Broker Code</label><input type="text" id="oh-ref" name="referral_code" placeholder="Optional"/></div>
-            <p class="form-err" id="oh-err">Please fill in all required fields.</p>
-            <button type="submit" id="oh-btn" class="wl-sub" style="margin-top:8px;position:relative;z-index:1">Join the Waitlist →</button>
-          </form>
-          <p class="fnote" style="margin-top:10px">No spam. We'll only use this to follow up about Forsured.</p>
-        </div>
-        <div id="oh-success" style="display:none;padding:14px 0">
-          <div style="display:flex;align-items:flex-start;gap:10px">
-            <div style="width:32px;height:32px;border-radius:50%;background:#E8F5EE;border:2px solid rgba(22,134,78,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16864E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div>
-              <p style="font-size:14px;font-weight:700;color:var(--tx)">You're on the list.</p>
-              <p style="font-size:12.5px;color:var(--mt);line-height:1.55;margin-top:4px">Thanks for your interest in Forsured. Our team will review your submission and follow up as onboarding capacity becomes available.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="wl-sec" id="demo"><div class="edge">
-  <div class="wl">
-    <div class="reveal">
-      <div class="label">Free COI Risk Check</div>
-      <h2 class="h2">Spot the risk.<br>Flag the gap.<br><span class="accent">Avoid the loss.</span></h2>
-      <p class="sub" style="margin-top:10px;font-size:15px">Get a free COI risk check, no strings attached. Send us one project's requirements and a contractor COI or two, through the form or to <a href="mailto:hello@forsured.ai" style="color:inherit;text-decoration:underline">hello@forsured.ai</a>. We'll run the check, then hop on a call to walk you through what we found and show you what Forsured can do.</p>
-      <div class="wl-bens">
-        <div class="wl-b"><div class="wl-b-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="wl-b-text"><strong>Send one project</strong><span>One project's requirements and a contractor COI or two</span></div></div>
-        <div class="wl-b"><div class="wl-b-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><circle cx="20" cy="7" r="3"/></svg></div><div class="wl-b-text"><strong>We run the check</strong><span>Every COI reviewed against the project requirements</span></div></div>
-        <div class="wl-b"><div class="wl-b-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="wl-b-text"><strong>Walk through the gaps</strong><span>A short call on what we found and what to fix</span></div></div>
-        <div class="wl-b"><div class="wl-b-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FB612A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div><div class="wl-b-text"><strong>No strings attached</strong><span>The check is free, whether or not Forsured is a fit</span></div></div>
-      </div>
-    </div>
-    <div class="wl-form reveal">
-      <div id="fc">
-        <h3>Get Your Free COI Risk Check</h3>
-        <p>Tell us who you are and we'll reply with where to send your project requirements and contractor COIs.</p>
-        <form id="wl-form" onsubmit="return submitAccessRequest(event)" novalidate>
-          <input type="hidden" name="access_key" value="9f256d7f-4b10-4b26-8502-bf23abe8455d"/>
-          <input type="hidden" name="subject" value="Forsured Access Request"/>
-          <input type="hidden" name="from_name" value="Forsured Access Request"/>
-          <input type="hidden" name="redirect" value="false"/>
-          <div class="fld"><label for="wl-name">Full Name <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="text" id="wl-name" name="name" placeholder="Your name" required autocomplete="name"/></div>
-          <div class="fld"><label for="wl-email">Work Email <span style="color:var(--rd)" aria-hidden="true">*</span></label><input type="email" id="wl-email" name="email" placeholder="you@company.com" required autocomplete="email"/></div>
-          <div class="fld"><label for="wl-company">Company</label><input type="text" id="wl-company" name="company" placeholder="Your company" autocomplete="organization"/></div>
-          <div class="fld"><label for="wl-role">I am a… <span style="color:var(--rd)" aria-hidden="true">*</span></label>
-            <select id="wl-role" name="role" required>
-              <option value="" disabled selected>Select your role</option>
-              <option value="General Contractor / Construction Manager">General Contractor / Construction Manager</option>
-              <option value="Insurance Broker">Insurance Broker</option>
-              <option value="Subcontractor">Trade Contractor</option>
-              <option value="Insurance Carrier">Insurance Carrier</option>
-              <option value="Construction Technology / Partner">Construction Technology / Partner</option>
-              <option value="Other">Other</option>
-            </select>
           </div>
           <div class="fld"><label for="wl-ref">Referral / Broker Code</label><input type="text" id="wl-ref" name="referral_code" placeholder="Optional"/></div>
           <p class="form-err" id="form-err">Please fill in all required fields.</p>
@@ -949,27 +913,34 @@ try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList
       </div>
       <div class="sstate" id="ss">
         <div class="sstate-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16864E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <h3>Thanks. We’ll be in touch.</h3>
-        <p>A member of the Forsured team will follow up with next steps for your free COI risk check.</p>
+        <h3 id="ss-h">Thanks. We’ll be in touch.</h3>
+        <p id="ss-p">A member of the Forsured team will follow up with next steps for your free COI risk check.</p>
       </div>
+    </div>
+    <div class="wl-field reveal">
+      <h3>Built with construction and insurance professionals, not in a vacuum.</h3>
+      <p>We onboard a limited number of general contractors and broker partners at a time: white-glove setup on your real projects, with your brokers included by design. Not ready for a check? Join the waitlist and we'll reach out as capacity opens.</p>
     </div>
   </div>
 </div></section>
 
 <section class="faq-sec" id="faq" aria-labelledby="faq-h"><div class="edge">
-  <div class="reveal">
-    <div class="label">FAQ</div>
-    <h2 class="h2" id="faq-h">Questions GCs and brokers <span class="accent">ask us.</span></h2>
-  </div>
-  <div class="faq-list reveal">
-    <details class="faq-item"><summary><h3>What is the best COI tracking software for construction?</h3></summary><p>It depends on how your company builds. If your projects carry different owner, lender or contract requirements, look for COI tracking software that checks every certificate and endorsement against the requirements of the project it's for, brings the contractor's broker into the fix, and keeps checking after approval. That's what Forsured is built to do. Our <a href="/blog/best-coi-tracking-software-construction/">COI tracking software buyer's guide</a> compares eight tools on endorsement review, project requirements, broker follow-up, Procore and pricing.</p></details>
-    <details class="faq-item"><summary><h3>Does Forsured check endorsements, not just certificates?</h3></summary><p>Yes. Forsured reads each certificate and endorsement, not just the ACORD 25, and compares them to the limits and terms the project actually requires. It flags gaps such as a missing additional insured endorsement for ongoing operations (CG 20 10) or an umbrella aggregate below the requirement, and explains what's wrong and what's needed. A person on your team approves or waives every result. See <a href="/blog/coi-tracking-software-endorsement-review/">which COI tracking software checks endorsements</a>.</p></details>
-    <details class="faq-item"><summary><h3>What is Forsured?</h3></summary><p>Forsured is construction insurance compliance software. It checks contractor COIs and endorsements against project requirements for general contractors, identifies coverage gaps, brings insurance brokers in to resolve deficiencies, and monitors compliance across active projects.</p></details>
-    <details class="faq-item"><summary><h3>How does Forsured use AI?</h3></summary><p>Forsured uses AI to assist the review of submitted insurance documents against a project's specific requirements. It surfaces missing, inconsistent, or non-compliant items such as coverage limits, endorsements, and expirations, and explains what does not match so the next action is clear. People responsible for risk stay in control of approvals, declines, and exceptions.</p></details>
-    <details class="faq-item"><summary><h3>Who is Forsured built for?</h3></summary><p>Forsured is built primarily for general contractors and construction managers who are responsible for contractor insurance compliance. Insurance brokers work inside the same workflow as collaborative partners, and trade contractors get a clearer path to submit documentation and correct what is missing.</p></details>
-    <details class="faq-item"><summary><h3>What is a COI and why does compliance matter in construction?</h3></summary><p>A Certificate of Insurance (COI) is a document that summarizes a contractor's insurance coverage. In construction, each project's requirements spell out the coverage, limits, and endorsements every contractor on the job must carry. Reviewing those submissions accurately matters because a certificate can look complete while a critical requirement is still missing, which leaves the project carrying avoidable risk.</p></details>
-    <details class="faq-item"><summary><h3>Does Forsured integrate with Procore or other construction software?</h3></summary><p>A Procore integration is available for Forsured early access customers, keeping project and contractor data aligned with the compliance workflow. Additional integrations are in development.</p></details>
-    <details class="faq-item"><summary><h3>How do I get access to Forsured?</h3></summary><p>Forsured is intentionally onboarding a limited number of general contractors and broker partners at a time so every team gets direct access to the Forsured team and a high-quality implementation. Teams can request a free COI risk check or join the waitlist on the Forsured website, and Forsured follows up as onboarding capacity becomes available.</p></details>
+  <div class="faq-wrap">
+    <div class="faq-side reveal">
+      <div class="label">FAQ</div>
+      <h2 class="h2" id="faq-h">Questions GCs and brokers <span class="accent">ask us.</span></h2>
+      <p>Something we didn't cover? Email <a href="mailto:hello@forsured.ai">hello@forsured.ai</a>.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item"><summary><h3>What is the best COI tracking software for construction?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>It depends on how your company builds. If your projects carry different owner, lender or contract requirements, look for COI tracking software that checks every certificate and endorsement against the requirements of the project it's for, brings the contractor's broker into the fix, and keeps checking after approval. That's what Forsured is built to do. Our <a href="/blog/best-coi-tracking-software-construction/">COI tracking software buyer's guide</a> compares eight tools on endorsement review, project requirements, broker follow-up, Procore and pricing.</p></details>
+      <details class="faq-item"><summary><h3>Does Forsured check endorsements, not just certificates?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>Yes. Forsured reads each certificate and endorsement, not just the ACORD 25, and compares them to the limits and terms the project actually requires. It flags gaps such as a missing additional insured endorsement for ongoing operations (CG 20 10) or an umbrella aggregate below the requirement, and explains what's wrong and what's needed. A person on your team approves or waives every result. See <a href="/blog/coi-tracking-software-endorsement-review/">which COI tracking software checks endorsements</a>.</p></details>
+      <details class="faq-item"><summary><h3>What is Forsured?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>Forsured is construction insurance compliance software. It checks contractor COIs and endorsements against project requirements for general contractors, identifies coverage gaps, brings insurance brokers in to resolve deficiencies, and monitors compliance across active projects.</p></details>
+      <details class="faq-item"><summary><h3>How does Forsured use AI?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>Forsured uses AI to assist the review of submitted insurance documents against a project's specific requirements. It surfaces missing, inconsistent, or non-compliant items such as coverage limits, endorsements, and expirations, and explains what does not match so the next action is clear. People responsible for risk stay in control of approvals, declines, and exceptions.</p></details>
+      <details class="faq-item"><summary><h3>Who is Forsured built for?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>Forsured is built primarily for general contractors and construction managers who are responsible for contractor insurance compliance. Insurance brokers work inside the same workflow as collaborative partners, and trade contractors get a clearer path to submit documentation and correct what is missing.</p></details>
+      <details class="faq-item"><summary><h3>What is a COI and why does compliance matter in construction?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>A Certificate of Insurance (COI) is a document that summarizes a contractor's insurance coverage. In construction, each project's requirements spell out the coverage, limits, and endorsements every contractor on the job must carry. Reviewing those submissions accurately matters because a certificate can look complete while a critical requirement is still missing, which leaves the project carrying avoidable risk.</p></details>
+      <details class="faq-item"><summary><h3>Does Forsured integrate with Procore or other construction software?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>A Procore integration is available for Forsured early access customers, keeping project and contractor data aligned with the compliance workflow. Additional integrations are in development.</p></details>
+      <details class="faq-item"><summary><h3>How do I get access to Forsured?</h3><span class="faq-ic" aria-hidden="true"></span></summary><p>Forsured is intentionally onboarding a limited number of general contractors and broker partners at a time so every team gets direct access to the Forsured team and a high-quality implementation. Teams can request a free COI risk check or join the waitlist on the Forsured website, and Forsured follows up as onboarding capacity becomes available.</p></details>
+    </div>
   </div>
 </div></section>
 
@@ -1027,12 +998,34 @@ function closeMenu(){
   document.body.style.overflow='';
 }
 
-/* ACCESS REQUEST FORM, Web3Forms backend */
+/* RISK CHECK + WAITLIST FORM, Web3Forms backend plus the Make webhook.
+   One form, two intents. Each intent keeps the subject, from_name and form_source the
+   old separate forms sent, so routing in Web3Forms and the Make scenario is unchanged. */
 var MAKE_WEBHOOK='https://hook.us2.make.com/odt88hvecabemah7qbvfcl13ibo3f6qt';
 var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var INTENTS={
+  risk_check:{subject:'Forsured Access Request',from:'Forsured Access Request',source:'Access Request',key:'risk_check',btn:'Get My Free Risk Check →',
+    h:'Get Your Free COI Risk Check',p:'Tell us who you are and we\'ll reply with where to send your project requirements and contractor COIs.',
+    sh:'Thanks. We’ll be in touch.',sp:'A member of the Forsured team will follow up with next steps for your free COI risk check.'},
+  waitlist:{subject:'Forsured Waitlist Request',from:'Forsured Waitlist',source:'Waitlist',key:'waitlist',btn:'Join the Waitlist →',
+    h:'Join the Waitlist',p:'Tell us about your team and we\'ll follow up as Forsured onboarding capacity becomes available.',
+    sh:'You\'re on the list.',sp:'Thanks for your interest in Forsured. Our team will review your submission and follow up as onboarding capacity becomes available.'}
+};
+function currentIntent(){var c=document.querySelector('#wl-form input[name="intent"]:checked');return INTENTS[c?c.value:'risk_check'];}
+function applyIntent(){
+  var it=currentIntent();
+  document.getElementById('wl-subject').value=it.subject;
+  document.getElementById('wl-from').value=it.from;
+  document.getElementById('fc-h').textContent=it.h;
+  document.getElementById('fc-p').textContent=it.p;
+  var btn=document.getElementById('wl-btn');
+  if(!btn.disabled)btn.textContent=it.btn;
+}
+document.querySelectorAll('#wl-form input[name="intent"]').forEach(function(r){r.addEventListener('change',applyIntent);});
 
 function submitAccessRequest(e){
   e.preventDefault();
+  var it=currentIntent();
   var name=document.getElementById('wl-name').value.trim();
   var email=document.getElementById('wl-email').value.trim();
   var company=document.getElementById('wl-company').value.trim();
@@ -1059,10 +1052,16 @@ function submitAccessRequest(e){
   var makePayload=JSON.stringify({
     name:name,email:email,company:company,role:role,
     referral_code:referral,
-    subject:'Forsured Access Request',
-    form_source:'Access Request',
+    subject:it.subject,
+    form_source:it.source,
     submitted_at:new Date().toISOString()
   });
+  function fail(){
+    btn.disabled=false;
+    btn.textContent=it.btn;
+    errEl.textContent='Something went wrong. Please try again.';
+    errEl.style.display='block';
+  }
 
   Promise.all([
     fetch('https://api.web3forms.com/submit',{method:'POST',body:w3data}),
@@ -1071,82 +1070,16 @@ function submitAccessRequest(e){
   .then(function(responses){return responses[0].json();})
   .then(function(json){
     if(json.success){
-      window.dataLayer.push({event:'generate_lead',form_key:'risk_check',form_location:location.pathname});
+      window.dataLayer.push({event:'generate_lead',form_key:it.key,form_location:location.pathname});
+      document.getElementById('ss-h').textContent=it.sh;
+      document.getElementById('ss-p').textContent=it.sp;
       document.getElementById('fc').style.display='none';
       document.getElementById('ss').style.display='block';
-    } else {
-      btn.disabled=false;
-      btn.textContent='Get My Free Risk Check →';
-      errEl.textContent='Something went wrong. Please try again.';
-      errEl.style.display='block';
-    }
+    } else { fail(); }
   })
-  .catch(function(){
-    btn.disabled=false;
-    btn.textContent='Get My Free Risk Check →';
-    errEl.textContent='Something went wrong. Please try again.';
-    errEl.style.display='block';
-  });
+  .catch(fail);
   return false;
 }
-
-/* WAITLIST FORM */
-function submitWaitlistSignup(e){
-  e.preventDefault();
-  var name=document.getElementById('oh-name').value.trim();
-  var email=document.getElementById('oh-email').value.trim();
-  var company=document.getElementById('oh-company').value.trim();
-  var role=document.getElementById('oh-role').value;
-  var referral=document.getElementById('oh-ref').value.trim();
-  var errEl=document.getElementById('oh-err');
-  var btn=document.getElementById('oh-btn');
-  var emailOk=EMAIL_RE.test(email);
-  if(!name||!emailOk||!role){
-    errEl.textContent=name&&email&&role?'Please enter a valid work email.':'Please fill in all required fields.';
-    errEl.style.display='block';
-    if(!name){document.getElementById('oh-name').focus();}
-    else if(!emailOk){document.getElementById('oh-email').focus();}
-    else{document.getElementById('oh-role').focus();}
-    return false;
-  }
-  errEl.style.display='none';
-  btn.disabled=true;
-  btn.textContent='Submitting…';
-  var form=document.getElementById('oh-form');
-  var w3data=new FormData(form);
-  var makePayload=JSON.stringify({
-    name:name,email:email,company:company,role:role,
-    referral_code:referral,
-    subject:'Forsured Waitlist Request',
-    form_source:'Waitlist',
-    submitted_at:new Date().toISOString()
-  });
-  Promise.all([
-    fetch('https://api.web3forms.com/submit',{method:'POST',body:w3data}),
-    fetch(MAKE_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:makePayload})
-  ])
-  .then(function(responses){return responses[0].json();})
-  .then(function(json){
-    if(json.success){
-      window.dataLayer.push({event:'generate_lead',form_key:'waitlist',form_location:location.pathname});
-      document.getElementById('oh-form-wrap').style.display='none';
-      document.getElementById('oh-success').style.display='block';
-    } else {
-      btn.disabled=false;
-      btn.textContent='Join the Waitlist →';
-      errEl.textContent='Something went wrong. Please try again.';
-      errEl.style.display='block';
-    }
-  })
-  .catch(function(){
-    btn.disabled=false;
-    btn.textContent='Join the Waitlist →';
-    errEl.textContent='Something went wrong. Please try again.';
-    errEl.style.display='block';
-  });
-  return false;
-}
-
 var ro=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}
@@ -1160,6 +1093,8 @@ document.querySelectorAll('[data-preselect-role]').forEach(function(a){
     var role=a.getAttribute('data-preselect-role');
     var sel=document.getElementById('wl-role');
     if(sel){sel.value=role;}
+    var rc=document.getElementById('wl-intent-check');
+    if(rc&&!rc.checked){rc.checked=true;applyIntent();}
   });
 });
 
@@ -1174,52 +1109,28 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   });
 });
 
-/* STEPS ANIMATION: hops through steps in order, sparkle on done, then restart */
+/* STEPS ANIMATION: the track fills one step at a time, then starts over.
+   With reduced motion, every step shows as done and nothing moves. */
 (function(){
+  var sg=document.querySelector('.sg');
   var steps=document.querySelectorAll('.sg-item');
-  if(!steps.length)return;
-  var cur=0;
-  var STEP_DURATION=2800; // ms per step (active bar fill)
-  var DONE_PAUSE=1200;    // ms to show sparkle on each completed step
-
-  function clearAll(){
-    steps.forEach(function(s){
-      s.classList.remove('step-active','step-done');
+  if(!sg||!steps.length)return;
+  var STEP=2600;
+  function show(i){
+    sg.style.setProperty('--i',i);
+    steps.forEach(function(s,j){
+      s.classList.toggle('step-done',j<i);
+      s.classList.toggle('step-active',j===i);
     });
   }
-
-  function activateStep(i){
-    clearAll();
-    steps[i].classList.add('step-active');
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){
+    sg.style.setProperty('--i',steps.length-1);
+    steps.forEach(function(s){s.classList.add('step-done');});
+    return;
   }
-
-  function markDone(i){
-    steps[i].classList.remove('step-active');
-    steps[i].classList.add('step-done');
-  }
-
-  // Start at step 0
-  activateStep(0);
-
-  setInterval(function(){
-    // Mark current as done — show sparkle for DONE_PAUSE
-    markDone(cur);
-    cur++;
-
-    if(cur < steps.length){
-      // Wait same DONE_PAUSE before moving to next step
-      setTimeout(function(){
-        activateStep(cur);
-      }, DONE_PAUSE);
-    } else {
-      // All done — restart after DONE_PAUSE
-      setTimeout(function(){
-        clearAll();
-        cur=0;
-        activateStep(0);
-      }, DONE_PAUSE);
-    }
-  }, STEP_DURATION + DONE_PAUSE);
+  var cur=0;
+  show(0);
+  setInterval(function(){cur=(cur+1)%(steps.length+1);show(cur===steps.length?steps.length-1:cur);if(cur===steps.length){steps[cur-1].classList.remove('step-active');steps[cur-1].classList.add('step-done');}},STEP);
 })();
 </script>
 </body>

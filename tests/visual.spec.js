@@ -35,6 +35,8 @@ async function ready(page, url, fonts = FONTS) {
       s.classList.remove('step-active', 'step-done');
       if (i === 0) s.classList.add('step-active');
     });
+    const sg = document.querySelector('.sg');
+    if (sg) sg.style.setProperty('--i', 0);
   });
 }
 
@@ -52,8 +54,8 @@ test.describe('home', () => {
     ['platform', '#platform'],
     ['solutions', '#solutions'],
     ['why', '#why'],
-    ['built-in-the-field', '.next-sec'],
     ['risk-check-form', '#demo'],
+    ['faq', '#faq'],
     ['footer', 'footer'],
   ];
   for (const [name, selector] of SECTIONS) {
