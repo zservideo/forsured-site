@@ -6,6 +6,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## White papers
 
+- [R-35: Where insurance fits in trade prequalification](https://coijournal.com/reports/prequalification-and-insurance/): Where insurance belongs in trade prequalification, which checks to run before award, which after, and the red flags to watch for. Markdown: https://coijournal.com/reports/prequalification-and-insurance/index.md
 - [R-34: New York's Scaffold Law and the insurance market for trades working in the state](https://coijournal.com/reports/new-york-labor-law-240-insurance/): New York Labor Law 240 and 241, what they do to liability insurance for contractors, and what GCs should check on trade COIs. Markdown: https://coijournal.com/reports/new-york-labor-law-240-insurance/index.md
 - [R-13: What to require from any COI tool: a vendor-neutral specification](https://coijournal.com/reports/coi-tool-specification/): A vendor-neutral specification for COI tracking tools: what to require, how to test it, and the questions to ask in a demo. Markdown: https://coijournal.com/reports/coi-tool-specification/index.md
 - [R-12: Closing a coverage gap without the email chain: a deficiency workflow for GCs and brokers](https://coijournal.com/reports/fixing-gaps-brokers-gcs/): A deficiency workflow that helps GCs, trades and brokers close contractor coverage gaps in one pass instead of an email chain. Markdown: https://coijournal.com/reports/fixing-gaps-brokers-gcs/index.md
@@ -22,6 +23,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## Analyst briefs
 
+- [R-25: Waivers of subrogation on construction jobs: the endorsements, the limits, and the checks](https://coijournal.com/reports/waiver-of-subrogation-endorsements/): Waivers of subrogation: the ISO CG 24 04 and NCCI WC 00 03 13 endorsements, what they do and don't do, and how GCs confirm them. Markdown: https://coijournal.com/reports/waiver-of-subrogation-endorsements/index.md
 - [R-24: Primary and noncontributory: what the words mean and what actually proves it](https://coijournal.com/reports/primary-and-noncontributory-proof/): Primary and noncontributory wording: what it does, the ISO CG 20 01 endorsement, its conditions, and how to confirm it. Markdown: https://coijournal.com/reports/primary-and-noncontributory-proof/index.md
 - [R-23: What does manual COI tracking cost? Reading the one published estimate](https://coijournal.com/reports/cost-of-manual-coi-tracking/): The BCS estimate that manual COI tracking costs $36,400 a year: how it's built, what it leaves out, and how to build your own. Markdown: https://coijournal.com/reports/cost-of-manual-coi-tracking/index.md
 - [R-22: Fake certificates and phantom insurers: what state regulators have warned](https://coijournal.com/reports/certificate-fraud-regulators/): What New Jersey, Maryland, Texas and Florida regulators have said about false certificates, fake insurers and how to verify coverage. Markdown: https://coijournal.com/reports/certificate-fraud-regulators/index.md
