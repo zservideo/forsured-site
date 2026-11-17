@@ -36,6 +36,35 @@ Table: Published COI tracking software pricing, checked Nov 17, 2026
 | PINS Advantage | None listed | From about $300 a month | Certificates tracked | Not stated |
 | TrustLayer | Up to 50 vendors | Pro and Complete quoted | Vendors | Not stated |
 
+## What does COI tracking software cost at 50, 200 and 500 contractors?
+
+Run the published rates at three sizes and the COI tracking software cost changes less than you'd expect, because minimums do most of the work. These are list prices for one year, before volume pricing, tax or anything a quote adds.
+
+- **50 contractors.** TrustLayer Starter is free. bcs self-service is $570. Billy starts at $500 and Certificial Professional at $1,188. PINS Advantage starts at about $3,600. bcs full service is $10,000, the minimum.
+- **200 contractors.** bcs self-service is $2,280, the same figure bcs uses on its own blog. CertFocus self-service works out to $1,200 to $1,600 at its rate, so the $7,500 minimum applies, plus implementation in year one. bcs full service is still $10,000, because 200 times $17.80 is $3,560.
+- **500 contractors.** bcs self-service is $5,700. bcs full service is still the $10,000 minimum, since 500 times $17.80 is $8,900. CertFocus full service at $13 to $29 per vendor location is $10,000 to $14,500.
+
+The per vendor rate only starts to set the price on bcs full service above about 562 contractors. Below that, compare minimums, not rates.
+
+## Is free COI tracking software enough for a general contractor?
+
+Free COI tracking software is enough for a small general contractor with a short list of trades, or for a trial before you buy. TrustLayer's 50-vendor limit is the most room in free COI tracking software today, and bcs gives every software feature up to 25 vendors. A GC with several active projects passes 50 contractors quickly. Free COI tracking software also leaves the reading to you: someone still checks each endorsement against project requirements.
+
+## What does managed COI tracking cost?
+
+Managed COI tracking costs more because the vendor's team chases brokers and reviews documents for you. bcs full service starts at $17.80 per vendor a year with a $10,000 minimum, and Vertikal lists CertFocus full service at $13 to $29 per vendor location with a $10,000 minimum. Managed COI tracking makes sense when you don't have anyone to do the follow-up. Our guide to [managed COI tracking services](/blog/managed-coi-tracking-services-construction/) covers what the review actually includes.
+
+## What costs more than the per vendor price?
+
+The per vendor price is rarely the whole bill. Four items change the total:
+
+1. **Implementation.** CertFocus lists $3,500 to $4,800. PINS Advantage includes onboarding. Ask everyone else.
+2. **Integrations.** bcs and PINS Advantage include Procore. TrustLayer puts integrations on paid plans, Jones sells them as an add-on, and PINS Advantage charges extra for Vista.
+3. **Fees on your contractors.** Jones and Billy say they don't charge them. CertFocus has a vendor-pay option at $85 to $150 per vendor a year. A fee on your trades can slow their responses.
+4. **Your team's time.** Software doesn't read endorsements against your requirements unless it says it does. Our COI Journal report on [what manual COI tracking costs](https://coijournal.com/reports/cost-of-manual-coi-tracking/?utm_source=forsured) walks through the one published labor estimate.
+
+[illumend](https://www.illumend.ai/), the platform myCOI customers are moving to, doesn't publish prices, and it sells added human oversight as part of the subscription package.
+
 ## What does each vendor publish for COI tracking software pricing?
 
 COI tracking software pricing is published in full by bcs and in part by PINS Advantage, Certificial, Billy and Vertikal. TrustLayer and Jones publish their COI tracking software pricing model but not paid prices. Here's what each page says.
@@ -73,35 +102,6 @@ COI tracking software pricing is published in full by bcs and in part by PINS Ad
 ![The Jones pricing page, showing its Platform and Operator plans with no dollar prices](https://forsured.ai/blog/coi-tracking-software-cost/shot-jones.png "Jones pricing page, checked Nov 17, 2026")
 
 ![Vertikal's 2026 COI tracking software pricing guide, which lists CertFocus prices](https://forsured.ai/blog/coi-tracking-software-cost/shot-certfocus.png "Vertikal pricing guide, checked Nov 17, 2026")
-
-## What does COI tracking software cost at 50, 200 and 500 contractors?
-
-Run the published rates at three sizes and the COI tracking software cost changes less than you'd expect, because minimums do most of the work. These are list prices for one year, before volume pricing, tax or anything a quote adds.
-
-- **50 contractors.** TrustLayer Starter is free. bcs self-service is $570. Billy starts at $500 and Certificial Professional at $1,188. PINS Advantage starts at about $3,600. bcs full service is $10,000, the minimum.
-- **200 contractors.** bcs self-service is $2,280, the same figure bcs uses on its own blog. CertFocus self-service works out to $1,200 to $1,600 at its rate, so the $7,500 minimum applies, plus implementation in year one. bcs full service is still $10,000, because 200 times $17.80 is $3,560.
-- **500 contractors.** bcs self-service is $5,700. bcs full service is still the $10,000 minimum, since 500 times $17.80 is $8,900. CertFocus full service at $13 to $29 per vendor location is $10,000 to $14,500.
-
-The per vendor rate only starts to set the price on bcs full service above about 562 contractors. Below that, compare minimums, not rates.
-
-## Is free COI tracking software enough for a general contractor?
-
-Free COI tracking software is enough for a small general contractor with a short list of trades, or for a trial before you buy. TrustLayer's 50-vendor limit is the most room in free COI tracking software today, and bcs gives every software feature up to 25 vendors. A GC with several active projects passes 50 contractors quickly. Free COI tracking software also leaves the reading to you: someone still checks each endorsement against project requirements.
-
-## What does managed COI tracking cost?
-
-Managed COI tracking costs more because the vendor's team chases brokers and reviews documents for you. bcs full service starts at $17.80 per vendor a year with a $10,000 minimum, and Vertikal lists CertFocus full service at $13 to $29 per vendor location with a $10,000 minimum. Managed COI tracking makes sense when you don't have anyone to do the follow-up. Our guide to [managed COI tracking services](/blog/managed-coi-tracking-services-construction/) covers what the review actually includes.
-
-## What costs more than the per vendor price?
-
-The per vendor price is rarely the whole bill. Four items change the total:
-
-1. **Implementation.** CertFocus lists $3,500 to $4,800. PINS Advantage includes onboarding. Ask everyone else.
-2. **Integrations.** bcs and PINS Advantage include Procore. TrustLayer puts integrations on paid plans, Jones sells them as an add-on, and PINS Advantage charges extra for Vista.
-3. **Fees on your contractors.** Jones and Billy say they don't charge them. CertFocus has a vendor-pay option at $85 to $150 per vendor a year. A fee on your trades can slow their responses.
-4. **Your team's time.** Software doesn't read endorsements against your requirements unless it says it does. Our COI Journal report on [what manual COI tracking costs](https://coijournal.com/reports/cost-of-manual-coi-tracking/?utm_source=forsured) walks through the one published labor estimate.
-
-[illumend](https://www.illumend.ai/), the platform myCOI customers are moving to, doesn't publish prices, and it sells added human oversight as part of the subscription package.
 
 ## How should you compare quotes?
 
