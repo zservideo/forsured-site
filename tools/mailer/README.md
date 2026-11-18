@@ -56,6 +56,23 @@ To switch over from one email per post (one time, about 2 minutes):
    installs the Monday trigger.
 4. Optional: run `previewWeeklyDigest` to send last week's digest to yourself only.
 
+## One-click unsubscribe (since 2026-11-18)
+
+Every digest has a personal **Unsubscribe** link in the footer, and List-Unsubscribe headers so Gmail
+and Apple Mail show their own Unsubscribe button. Both go to this script deployed as a web app.
+
+- A clicked link shows a confirm page first (company email scanners open links in incoming mail and
+  would otherwise unsubscribe people by accident). The mail app's own button unsubscribes at once.
+- Unsubscribes are kept in Script Properties as `unsub:<email>`; every send skips them. To re-add
+  someone who asks, delete their `unsub:` property.
+- The script also removes the person from Attio's Blog subscribers list if `ATTIO_API_KEY` has the
+  `list_entry:read-write` scope. With a read-only key the Attio entry stays, but they still get nothing.
+- Until the web app is deployed, the link falls back to an email to Zach with the subject "unsubscribe".
+
+One-time setup: Deploy → New deployment → type **Web app**, Execute as **Me**, Who has access
+**Anyone** → Deploy, and approve the prompt. After later code changes, Deploy → Manage deployments →
+edit → Version: **New version**, so the web app runs the new code (the URL stays the same).
+
 ## Blog post emails (RETIRED 2026-11-17, replaced by the weekly digest)
 
 1. In Attio, Settings → Developers → create an access token with read access to records and lists.
