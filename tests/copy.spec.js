@@ -7,8 +7,10 @@ const { readPosts } = require('../tools/blog/build');
 
 // Buyer's guides answer the questions buyers type into search and AI assistants word for word, and
 // buyers type "subcontractor". Posts in that category may use it (Zach's call, Nov 11 2026, after
-// the Warren Brown AEO review). Every other page keeps the "contractor" wording.
-const GUIDES = new Set(readPosts().filter((p) => p.category === "Buyer's guide").map((p) => `/blog/${p.slug}/`));
+// the Warren Brown AEO review). Tech stack posts may too, because the tools they cover use the word
+// in their own feature names (Zach's call, Nov 17 2026). Every other page keeps the "contractor" wording.
+const GUIDE_CATEGORIES = ["Buyer's guide", 'Tech stack'];
+const GUIDES = new Set(readPosts().filter((p) => GUIDE_CATEGORIES.includes(p.category)).map((p) => `/blog/${p.slug}/`));
 
 // Wording rules. Each entry: the pattern that must not appear, why, and optional settings.
 const BANNED = [

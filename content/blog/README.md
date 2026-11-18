@@ -37,7 +37,7 @@ The file starts with a JSON block between `---` lines:
 | `updated` | no | Set when a post changes in substance. |
 | `hero` | yes | The picture at the top of the post. See below. |
 | `heroAlt` | no | Alt text for the hero when the generated one (from the hero fields) doesn't read well. |
-| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news, Buyer's guide. |
+| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news, Buyer's guide, Tech stack. |
 | `tags` | no | Search phrases the post answers. |
 | `takeaways` | yes | 2 to 4 bullets that answer the question on their own. AI answer engines quote these. |
 | `faq` | no | `{ "q", "a" }` pairs. Real questions, answers that stand alone. Becomes FAQPage markup. |
@@ -71,7 +71,7 @@ Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor b
 
 A recurring post on the software general contractors run: Procore, Autodesk Construction Cloud,
 Trimble Viewpoint, Sage, Oracle Textura, CMiC, Foundation, Bluebeam, AI assistants like Claude and
-ChatGPT, and the rest. Category `Tech stack`, tag `whats-in-your-stack`. Every claim about what a tool
+ChatGPT, and the rest. Category `Tech stack`, with "What's in your stack" as one of its tags. Every claim about what a tool
 does, costs or connects to cites the vendor's own current page in `sources`, checked the day the post
 is written. Never describe a named company's stack from a private conversation; a named GC's stack
 comes only from public material (its own case study, press release or job posting) or a written Q&A
@@ -80,7 +80,7 @@ the GC approved for publishing.
 ## Writing rules
 
 - Plain voice, short sentences, specific numbers. The copy tests block stock marketing phrases and em-dash asides.
-- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question.
+- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question, and a `Tech stack` post may where a tool uses it in its own feature names.
 - No founder names. Posts are by "the Forsured team".
 - Every number and claim from someone else links to the original in `sources`. Never invent a quote. Never put words from a private conversation in a named person's mouth.
 - Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors, except in a `Buyer's guide`: there, every fact about another vendor comes from its own public pages, is linked under Sources, and carries the date it was checked. Re-check those facts every quarter.
