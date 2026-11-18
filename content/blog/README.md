@@ -20,6 +20,12 @@ are out of date with the Markdown.
 Subscribers no longer get an email per post. Every Monday they get one digest of the week before,
 built from each post's `dek` and first two `takeaways` (see `tools/mailer/README.md`), so write those to stand alone.
 
+Some days carry two posts. A big announcement (a launch, funding, a major customer or partner release)
+gets its own post at the announcement or embargo time, on top of the regular daily post. Publish the
+regular post first, early in the morning, and the announcement at its embargo time. This repo is public,
+so embargoed text stays off GitHub until shortly before the embargo lifts. Rebuild the second branch on
+`main` after the first merges, since the sitemap, feed, index and weekly digest regenerate.
+
 When the change reaches `main`, GitHub Pages publishes it and the IndexNow workflow tells Bing and the
 other IndexNow search engines to crawl the changed pages.
 

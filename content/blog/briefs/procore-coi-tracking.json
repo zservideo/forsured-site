@@ -1,0 +1,70 @@
+{
+  "slug": "procore-coi-tracking",
+  "type": "evergreen",
+  "reader": "GC project manager, project accountant or risk lead who runs projects in Procore and wants to know where contractor insurance lives in it and what it does and doesn't check",
+  "pillar": "/blog/how-to-check-a-contractor-coi/",
+  "questions": [
+    "Can Procore track certificates of insurance?",
+    "Where does contractor insurance data live in Procore?",
+    "Does Procore check endorsements on a COI?"
+  ],
+  "target_keywords": [
+    { "kw": "Procore COI tracking", "vol": null, "kd": null },
+    { "kw": "Procore insurance", "vol": null, "kd": null },
+    { "kw": "Procore Pay", "vol": null, "kd": null },
+    { "kw": "insurance compliance", "vol": null, "kd": null },
+    { "kw": "contractor COI", "vol": null, "kd": null }
+  ],
+  "notes": "Thursday 'What's in your stack' post #1 (Procore). Category Tech stack. Every Procore claim comes from Procore's own pages (pricing, support docs for Company and Project Directory insurance, Procore Pay compliance tab and insurance compliance statuses, prequalification, marketplace), checked Nov 18 2026. Names no COI vendors. Never names any GC's stack. Published early morning Nov 19 ahead of the 8 AM launch post (two-post day). The thing none of the competing pages has: a field-by-field map of the insurance record, the two Procore Pay compliance methods side by side, and the exact line between what Procore stores and what someone still has to read on the endorsement.",
+  "competing_sources": [
+    {
+      "url": "https://billyforinsurance.com/resources/how-to-track-cois-in-procore/",
+      "title": "How to Track COIs in Procore: Where It Works & Where It Breaks (vendor)",
+      "h2s": ["What Procore Actually Does for COI Tracking", "Where Procore's COI Tracking Breaks Down", "What This Looks Like When It Goes Wrong", "How Teams That Have Been There Are Fixing It", "The Procore and Billy Workflow From Start to Finish", "Frequently Asked Questions"],
+      "faqs": ["Can I just use Procore's built-in insurance tracking?", "What is the difference between a Certificate Holder and an Additional Insured?", "What endorsements should GCs require from subcontractors?"],
+      "gap": "No setup steps, permissions or Procore Pay configuration; says Directory and commitment compliance aren't connected, which Procore's own Directory method contradicts."
+    },
+    {
+      "url": "https://www.getbcs.com/blog/procore-coi-tracking-integration-automate-certificate-management-without-leaving-your-project-dashboard",
+      "title": "Procore + COI Tracking Integration (vendor)",
+      "h2s": ["Why the Vendor Insurance Compliance Gap Exists", "What Procore COI Tracking Does for Your Business", "Procore Insurance Compliance: The Risk You Can't See", "What to Look for in a Procore Integration Partner", "Frequently Asked Questions About Procore + COI Tracking Integration"],
+      "faqs": ["Does Procore have built-in COI tracking?", "What does a Procore COI integration actually do?", "Can bcs track project-specific insurance requirements?"],
+      "gap": "Doesn't say which Procore records an integration reads or writes; no Procore Pay detail."
+    },
+    {
+      "url": "https://getjones.com/procore-integration/",
+      "title": "Jones + Procore Integration (vendor)",
+      "h2s": ["See the Jones + Procore integration in action", "Track insurance at the Project or Company level in Procore", "Empower every department that depends on insurance compliance"],
+      "faqs": [],
+      "gap": "No FAQ; no Procore permissions or Procore Pay requirement setup."
+    },
+    {
+      "url": "https://support.procore.com/products/online/procore-pay/tutorials/about-the-compliance-tab-on-a-commitment-with-procore-pay",
+      "title": "About the Compliance Tab on a Commitment with Procore Pay (Procore)",
+      "h2s": ["Background", "Things to Consider", "Steps"],
+      "faqs": [],
+      "gap": "Doesn't connect to Directory insurance fields or endorsements; written as a how-to, not an overview."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "Can Procore track certificates of insurance?",
+      "Where does contractor insurance data live in Procore?",
+      "How does Procore Pay use insurance compliance?",
+      "What doesn't Procore insurance tracking check?",
+      "How do you set up Procore COI tracking?",
+      "Where does contractor insurance and COI data sit in Procore?"
+    ],
+    "table": "Where contractor insurance lives in Procore: tool, level, what it holds, who maintains it",
+    "internal_links": ["/blog/how-to-check-a-contractor-coi/", "/blog/coi-tracking-software-endorsement-review/", "/blog/coi-tracking-software-checklist/", "/blog/best-coi-tracking-software-construction/", "/coi-requirements/"],
+    "external_links": [
+      "https://www.procore.com/en-ae/pricing",
+      "https://v2.support.procore.com/product-manuals/directory-company/tutorials/add-insurance-to-a-company-record-in-the-company-directory",
+      "https://v2.support.procore.com/product-manuals/directory-project/tutorials/add-project-insurance-to-a-company-in-the-project-directory",
+      "https://support.procore.com/products/online/procore-pay/tutorials/about-the-compliance-tab-on-a-commitment-with-procore-pay",
+      "https://support.procore.com/products/online/procore-pay/tutorials/manage-insurance-documents-and-compliance-statuses-for-a-commitment",
+      "https://www.procore.com/prequalification",
+      "https://marketplace.procore.com/"
+    ]
+  }
+}
