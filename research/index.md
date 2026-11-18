@@ -23,6 +23,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## Analyst briefs
 
+- [R-26: Per project aggregate limits: why owners ask for them and how CG 25 03 works](https://coijournal.com/reports/per-project-aggregate-limits/): Per project aggregate limits: the ISO CG 25 03 endorsement, what it changes, what it leaves alone, and how to check it. Markdown: https://coijournal.com/reports/per-project-aggregate-limits/index.md
 - [R-25: Waivers of subrogation on construction jobs: the endorsements, the limits, and the checks](https://coijournal.com/reports/waiver-of-subrogation-endorsements/): Waivers of subrogation: the ISO CG 24 04 and NCCI WC 00 03 13 endorsements, what they do and don't do, and how GCs confirm them. Markdown: https://coijournal.com/reports/waiver-of-subrogation-endorsements/index.md
 - [R-24: Primary and noncontributory: what the words mean and what actually proves it](https://coijournal.com/reports/primary-and-noncontributory-proof/): Primary and noncontributory wording: what it does, the ISO CG 20 01 endorsement, its conditions, and how to confirm it. Markdown: https://coijournal.com/reports/primary-and-noncontributory-proof/index.md
 - [R-23: What does manual COI tracking cost? Reading the one published estimate](https://coijournal.com/reports/cost-of-manual-coi-tracking/): The BCS estimate that manual COI tracking costs $36,400 a year: how it's built, what it leaves out, and how to build your own. Markdown: https://coijournal.com/reports/cost-of-manual-coi-tracking/index.md
