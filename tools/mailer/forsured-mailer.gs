@@ -26,6 +26,9 @@ const OUTBOX_FOLDER_ID = '18DQRIlsK0VsgALUEO-LwYQroVHSHvnjd';
 const FROM_NAME = 'Zach Servideo';
 const SITE = 'https://forsured.ai';
 const ATTIO_LIST = 'blog_subscribers';
+// The public web app URL (Deploy > Manage deployments, "Newsletter unsubscribe"). Hard-coded because
+// ScriptApp.getService().getUrl() returns the owner-only /dev test URL when a function runs from the editor.
+const UNSUB_WEB_APP = 'https://script.google.com/macros/s/AKfycbx8O0s_ZIq5CJtH_MNqP7w6npu7iN0Y4NRg_iLnLDt2w78jr5i3DdWuwedK-K7v5PB6nA/exec';
 
 // Fallback if the Gmail advanced service is off and the live signature can't be read.
 const FALLBACK_SIGNATURE =
@@ -302,8 +305,8 @@ function removeFromAttio_(email) {
 }
 
 function unsubLink_(email) {
-  const url = ScriptApp.getService().getUrl();
-  // Not deployed as a web app yet: fall back to an email to Zach, so a send never goes out with a dead link.
+  const url = UNSUB_WEB_APP;
+  // No web app URL set: fall back to an email to Zach, so a send never goes out with a dead link.
   if (!url) return 'mailto:' + Session.getActiveUser().getEmail() + '?subject=unsubscribe';
   const address = email.toLowerCase();
   return url + '?e=' + encodeURIComponent(address) + '&t=' + token_(address);
