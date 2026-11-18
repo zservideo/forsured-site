@@ -1,0 +1,78 @@
+{
+  "slug": "coi-tracking-software-checklist",
+  "type": "buyer",
+  "reader": "GC risk/compliance manager or project executive writing down requirements before shortlisting COI tools",
+  "pillar": "/blog/best-coi-tracking-software-construction/",
+  "questions": [
+    "What should a general contractor look for in COI tracking software?",
+    "Which COI tracking software features matter most for construction?"
+  ],
+  "target_keywords": [
+    { "kw": "COI tracking software checklist", "vol": null, "kd": null },
+    { "kw": "COI tracking software features", "vol": null, "kd": null },
+    { "kw": "project requirements", "vol": null, "kd": null },
+    { "kw": "endorsement review", "vol": null, "kd": null },
+    { "kw": "contractor COI", "vol": null, "kd": null }
+  ],
+  "notes": "Buyer's guide ramp item 3 (P9). Vendor-neutral: names no vendors, so no vendor screenshots. Links our COI Journal report coi-tool-specification in the body (not under sources). The one thing none of the competing pages has: a test for each of the 12 points that a GC can run with their own documents in a demo, plus wrap-ups (OCIP/CCIP) and who-makes-the-call in one checklist.",
+  "competing_sources": [
+    {
+      "url": "https://www.getbcs.com/blog/what-features-should-i-look-for-in-coi-tracking-software",
+      "title": "What Features Should I Look for in COI Tracking Software? (bcs)",
+      "h2s": ["Real-Time AI Analysis on COI Documents", "Frictionless Vendor Submissions Increase Compliance Rates", "Comprehensive Integration With Your Existing Systems", "Which Features Are Essential COI Tracking Software?", "Extensive Pre-Vetted Vendor Networks", "Automated Renewal Tracking That Prevents Liability Gaps", "Instant, Actionable Compliance Feedback", "Expert Support From Licensed Insurance Professionals", "Transparent, Usage-Based Pricing Without Hidden Costs"],
+      "faqs": ["Should I prioritize industry-specific COI tracking software or choose a platform that serves multiple sectors?", "Which features impact compliance the most?", "AI vs OCR: what's the difference?"],
+      "gap": "No wrap-ups (OCIP/CCIP); no test per feature."
+    },
+    {
+      "url": "https://getjones.com/blog/coi-compliance-tracking-tools-buyers-guide-2025/",
+      "title": "COI Compliance Tracking Tools Buyers Guide 2025 (Jones)",
+      "h2s": ["Why Manual COI Compliance Tracking Creates Risk", "What to Expect from a COI Compliance Tracking Tool", "Key COI Compliance Tracking Features to Look For", "How to Choose the Right COI Compliance Tracking Tool for Your Team"],
+      "faqs": ["Does this platform verify policies or just store certificates?", "Can it detect hidden exclusions that expose us to risk?", "Does it integrate with our existing tools?"],
+      "gap": "No cost; no per-project requirements."
+    },
+    {
+      "url": "https://www.constrafor.com/the-build-up/key-features-that-large-gcs-care-about",
+      "title": "Key Features That Large GCs Care About (Constrafor)",
+      "h2s": ["What Large General Contractors Want in a Construction Insurance Tracking Tool"],
+      "faqs": [],
+      "gap": "No integrations; no who-decides."
+    },
+    {
+      "url": "https://billyforinsurance.com/coi-tracking-software-buyers-guide",
+      "title": "COI Tracking Software Buyer's Guide (Billy)",
+      "h2s": ["What Is a Certificate of Insurance & Why Is It Important?"],
+      "faqs": [],
+      "gap": "Content gated behind a download."
+    },
+    {
+      "url": "https://www.trustlayer.io/resources/blog-coi-tracking-software-features-01f40",
+      "title": "Essential Features of COI Tracking Software (TrustLayer)",
+      "h2s": ["Understanding COI Tracking Software", "Key Features of COI Tracking Software", "Evaluating the Effectiveness of COI Tracking Software", "Future Trends in COI Tracking Software", "Choosing the Right COI Tracking Software for Your Needs"],
+      "faqs": [],
+      "gap": "No endorsement review against contract requirements."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "What should a general contractor look for in COI tracking software?",
+      "What is on the COI tracking software checklist?",
+      "Which COI tracking software features matter most?",
+      "How do you use the checklist in a demo?"
+    ],
+    "table": "COI tracking software checklist: 12 points and how to test each one",
+    "internal_links": [
+      "/blog/best-coi-tracking-software-construction/",
+      "/blog/coi-tracking-software-endorsement-review/",
+      "/blog/coi-tracking-software-demo-questions/",
+      "/blog/coi-tracking-software-security-questions/",
+      "/blog/coi-tracking-software-cost/",
+      "/coi-requirements/"
+    ],
+    "external_links": [
+      "https://www.irmi.com/term/insurance-definitions/additional-insured",
+      "https://content.naic.org/sites/default/files/inline-files/2023-12-4%20Model%20Bulletin_Adopted_0.pdf",
+      "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
+      "https://marketplace.procore.com/"
+    ]
+  }
+}
