@@ -4,9 +4,12 @@
 // "Forsured Mail Outbox" into Gmail DRAFTS with clean links and Zach's Gmail signature.
 // It never sends these. Zach reviews and hits Send.
 //
-// Job 2 (off until ENABLE_POST_EMAILS is set): when a new post appears in forsured.ai/blog/feed.xml,
-// send blog/<slug>/email.json to everyone on the Attio "Blog subscribers" list. This replaces
-// Make scenario 6806850 and is meant to run only after that scenario is turned off.
+// Job 2 (RETIRED 2026-11-17, kept for reference): emailed every subscriber each time a post went live.
+// setupWeeklyDigest() turns it off. Make scenario 6806850, its predecessor, is also off.
+//
+// Job 3 (the subscriber email since 2026-11-17): every Monday morning, send last week's digest,
+// forsured.ai/blog/email/weekly/<last Monday>.json, to everyone on the Attio "Blog subscribers" list.
+// A week with no posts has no file, so nothing goes out.
 //
 // Why this exists: the Gmail connector Claude uses rewrites every link into a google.com/url
 // redirect. GmailApp hands Gmail the HTML as written, so links stay clean.
@@ -47,6 +50,30 @@ function setupPostEmails() {
     .filter((t) => t.getHandlerFunction() === 'sendNewPostEmails')
     .forEach((t) => ScriptApp.deleteTrigger(t));
   ScriptApp.newTrigger('sendNewPostEmails').timeBased().everyMinutes(30).create();
+}
+
+// Run once to switch from one email per post to the Monday digest (Job 3). It turns Job 2 off,
+// installs a Monday 7 AM trigger (Project Settings > Time zone must be America/New_York). The first
+// digest goes out the next Monday and covers the week before it, including any post already emailed.
+function setupWeeklyDigest() {
+  const props = PropertiesService.getScriptProperties();
+  if (!props.getProperty('ATTIO_API_KEY')) throw new Error('Add the ATTIO_API_KEY script property first.');
+  props.setProperty('ENABLE_POST_EMAILS', 'false');
+  props.setProperty('ENABLE_WEEKLY_DIGEST', 'true');
+  ScriptApp.getProjectTriggers()
+    .filter((t) => ['sendNewPostEmails', 'sendWeeklyDigest'].includes(t.getHandlerFunction()))
+    .forEach((t) => ScriptApp.deleteTrigger(t));
+  ScriptApp.newTrigger('sendWeeklyDigest').timeBased().onWeekDay(ScriptApp.WeekDay.MONDAY).atHour(7).create();
+}
+
+// Sends one digest to yourself only, to check it before the first Monday. Pick a Monday that has
+// posts, e.g. previewWeeklyDigest('2026-11-16'), from the editor with a small wrapper, or edit the date.
+function previewWeeklyDigest(monday) {
+  const week = monday || lastMonday_();
+  const res = UrlFetchApp.fetch(SITE + '/blog/email/weekly/' + week + '.json', { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) throw new Error('No digest for the week of ' + week);
+  const mail = JSON.parse(res.getContentText('UTF-8'));
+  send_(Session.getActiveUser().getEmail(), '[PREVIEW] ' + mail.subject, mail.html);
 }
 
 // ---------- Job 1: Outbox -> Gmail drafts ----------
@@ -135,6 +162,42 @@ function sendNewPostEmails() {
   } finally {
     lock.releaseLock();
   }
+}
+
+// ---------- Job 3: Monday digest -> every subscriber ----------
+
+function sendWeeklyDigest() {
+  const props = PropertiesService.getScriptProperties();
+  if (props.getProperty('ENABLE_WEEKLY_DIGEST') !== 'true') return;
+  const lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return;
+  try {
+    const week = lastMonday_();
+    if (props.getProperty('sent:week:' + week)) return;
+    const res = UrlFetchApp.fetch(SITE + '/blog/email/weekly/' + week + '.json', { muteHttpExceptions: true });
+    if (res.getResponseCode() === 404) { console.log('No posts the week of ' + week + ', nothing sent'); return; }
+    if (res.getResponseCode() !== 200) throw new Error('Digest fetch failed: HTTP ' + res.getResponseCode());
+    const mail = JSON.parse(res.getContentText('UTF-8'));
+    const people = subscribers_();
+    // Record first, so a timeout mid-list can never double-send the people already done.
+    props.setProperty('sent:week:' + week, new Date().toISOString());
+    people.forEach((p) => {
+      const html = p.first ? mail.html.replace('Hi there,', 'Hi ' + p.first + ',') : mail.html;
+      send_(p.email, mail.subject, html);
+    });
+    console.log('Sent the week of ' + week + ' (' + mail.slugs.length + ' posts) to ' + people.length + ' subscribers');
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+// The Monday of the week before this one, in the script's time zone (set it to America/New_York).
+function lastMonday_() {
+  const tz = Session.getScriptTimeZone();
+  const now = new Date();
+  const dow = Number(Utilities.formatDate(now, tz, 'u')); // 1 = Monday ... 7 = Sunday
+  const d = new Date(now.getTime() - (dow - 1 + 7) * 86400000);
+  return Utilities.formatDate(d, tz, 'yyyy-MM-dd');
 }
 
 function feedSlugs_() {

@@ -17,6 +17,9 @@ it is the first thing on the page and the image the social posts reuse. After a 
 re-render that post with `node tools/blog/og.js <slug>`. `tests/blog.spec.js` fails if the built files
 are out of date with the Markdown.
 
+Subscribers no longer get an email per post. Every Monday they get one digest of the week before,
+built from each post's `dek` and first two `takeaways` (see `tools/mailer/README.md`), so write those to stand alone.
+
 When the change reaches `main`, GitHub Pages publishes it and the IndexNow workflow tells Bing and the
 other IndexNow search engines to crawl the changed pages.
 
@@ -63,6 +66,16 @@ point faster than text. PNG only, at least 1400px wide, in the brand style.
 
 Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor by hand), paragraphs, `-` and `1.` lists, `>` quotes
 (`> quote -- Name, Title`), tables, `**bold**`, `*italic*` and `[links](https://...)`.
+
+## Tech stack series ("What's in your stack")
+
+A recurring post on the software general contractors run: Procore, Autodesk Construction Cloud,
+Trimble Viewpoint, Sage, Oracle Textura, CMiC, Foundation, Bluebeam, AI assistants like Claude and
+ChatGPT, and the rest. Category `Tech stack`, tag `whats-in-your-stack`. Every claim about what a tool
+does, costs or connects to cites the vendor's own current page in `sources`, checked the day the post
+is written. Never describe a named company's stack from a private conversation; a named GC's stack
+comes only from public material (its own case study, press release or job posting) or a written Q&A
+the GC approved for publishing.
 
 ## Writing rules
 
