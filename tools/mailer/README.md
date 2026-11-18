@@ -71,7 +71,8 @@ and Apple Mail show their own Unsubscribe button. Both go to this script deploye
 
 One-time setup: Deploy → New deployment → type **Web app**, Execute as **Me**, Who has access
 **Anyone** → Deploy, and approve the prompt. After later code changes, Deploy → Manage deployments →
-edit → Version: **New version**, so the web app runs the new code (the URL stays the same).
+edit → Version: **New version**, so the web app runs the new code (the URL stays the same). If you ever create a
+new deployment instead, its URL changes: update `UNSUB_WEB_APP` at the top of the script.
 
 ## Blog post emails (RETIRED 2026-11-17, replaced by the weekly digest)
 
