@@ -54,7 +54,7 @@ const rich = (s) => inline(s).replace(/<a [^>]*>([^<]*)<\/a>/g, '$1');
 const plain = (s) => String(s).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\*([^*]+)\*/g, '$1').replace(/`([^`]+)`/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
 
 // The frame every subscriber email shares: wordmark, rows, Zach's sign-off and the opt-out footer.
-function frame({ title, preheader, rows, closer, blog }) {
+function frame({ title, preheader, rows, closer, blog, unsubscribe = '' }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="color-scheme" content="light"/><title>${esc(title)}</title></head>
@@ -72,7 +72,7 @@ ${rows}  <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1
     <p style="margin:16px 0 0"><strong>Zach Servideo</strong><br/><span style="color:${MUTED};font-size:14px">Founder / CGO<br/>Forsured</span></p>
   </td></tr>
   <tr><td style="padding:28px 32px 24px;${sans};font-size:12px;line-height:1.6;color:${MUTED};border-top:1px solid ${LINE}">
-    <p style="margin:20px 0 0">You're getting this because you signed up for the Forsured weekly newsletter on the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
+    <p style="margin:20px 0 0">You're getting this because you signed up for the Forsured weekly newsletter on the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? ${unsubscribe ? `<a href="${unsubscribe}" style="color:${MUTED};font-weight:600">Unsubscribe</a> in one click, or reply "stop."` : 'Reply "stop" and I\'ll take you off.'}</p>
   </td></tr>
 </table>
 </td></tr>
@@ -250,6 +250,7 @@ function weeks(posts = readPosts()) {
   return out;
 }
 
+const UNSUB = '%%UNSUBSCRIBE%%';
 const DIGEST = '✉️'; // ✉️ (Basic Multilingual Plane, safe in Apps Script subjects)
 
 function weekly(monday, posts, firstName = '') {
@@ -262,6 +263,8 @@ function weekly(monday, posts, firstName = '') {
   const items = posts.map((p) => ({ ...p, link: track(`${SITE}${p.url}`, 'weekly'), emoji: EMOJI[p.category] || PIN }));
 
   const html = frame({
+    // The Apps Script mailer swaps this for each subscriber's own one-click unsubscribe link.
+    unsubscribe: UNSUB,
     title: `Last week on the Forsured blog, ${range}`,
     preheader: `${count[0].toUpperCase()}${count.slice(1)}: ${posts.map((p) => plain(p.title)).join(' / ')}`.slice(0, 180),
     blog,

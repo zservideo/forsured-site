@@ -11,6 +11,12 @@
 // forsured.ai/blog/email/weekly/<last Monday>.json, to everyone on the Attio "Blog subscribers" list.
 // A week with no posts has no file, so nothing goes out.
 //
+// Unsubscribe (since 2026-11-18): every digest carries a personal one-click link, plus the
+// List-Unsubscribe headers that make Gmail and Apple Mail show their own Unsubscribe button. Both hit
+// this script deployed as a web app (doGet / doPost below). An unsubscribe is stored in Script
+// Properties ("unsub:<email>"), which every send checks, and the person is also taken off the Attio
+// list when the ATTIO_API_KEY can edit list entries.
+//
 // Why this exists: the Gmail connector Claude uses rewrites every link into a google.com/url
 // redirect. GmailApp hands Gmail the HTML as written, so links stay clean.
 //
@@ -73,7 +79,9 @@ function previewWeeklyDigest(monday) {
   const res = UrlFetchApp.fetch(SITE + '/blog/email/weekly/' + week + '.json', { muteHttpExceptions: true });
   if (res.getResponseCode() !== 200) throw new Error('No digest for the week of ' + week);
   const mail = JSON.parse(res.getContentText('UTF-8'));
-  send_(Session.getActiveUser().getEmail(), '[PREVIEW] ' + mail.subject, mail.html);
+  const me = Session.getActiveUser().getEmail();
+  const link = unsubLink_(me);
+  send_(me, '[PREVIEW] ' + mail.subject, mail.html.split('%%UNSUBSCRIBE%%').join(link), link);
 }
 
 // ---------- Job 1: Outbox -> Gmail drafts ----------
@@ -182,8 +190,10 @@ function sendWeeklyDigest() {
     // Record first, so a timeout mid-list can never double-send the people already done.
     props.setProperty('sent:week:' + week, new Date().toISOString());
     people.forEach((p) => {
-      const html = p.first ? mail.html.replace('Hi there,', 'Hi ' + p.first + ',') : mail.html;
-      send_(p.email, mail.subject, html);
+      const link = unsubLink_(p.email);
+      let html = p.first ? mail.html.replace('Hi there,', 'Hi ' + p.first + ',') : mail.html;
+      html = html.split('%%UNSUBSCRIBE%%').join(link);
+      send_(p.email, mail.subject, html, link);
     });
     console.log('Sent the week of ' + week + ' (' + mail.slugs.length + ' posts) to ' + people.length + ' subscribers');
   } finally {
@@ -216,24 +226,121 @@ function subscribers_() {
   const entries = JSON.parse(UrlFetchApp.fetch('https://api.attio.com/v2/lists/' + ATTIO_LIST + '/entries/query', {
     method: 'post', contentType: 'application/json', headers, payload: JSON.stringify({ limit: 500 }),
   }).getContentText()).data;
+  const props = PropertiesService.getScriptProperties();
   const seen = {};
   entries.forEach((entry) => {
     const person = JSON.parse(UrlFetchApp.fetch(
       'https://api.attio.com/v2/objects/people/records/' + entry.parent_record_id, { headers }
     ).getContentText()).data;
     const address = ((person.values.email_addresses || [])[0] || {}).email_address;
-    if (!address || seen[address.toLowerCase()]) return;
+    if (!address || seen[address.toLowerCase()] || props.getProperty('unsub:' + address.toLowerCase())) return;
     const first = ((person.values.name || [])[0] || {}).first_name || '';
     seen[address.toLowerCase()] = { email: address, first: first.trim() };
   });
   return Object.values(seen);
 }
 
+// ---------- Unsubscribe web app ----------
+// Deploy > New deployment > Web app, Execute as: Me, Who has access: Anyone. The link in each email
+// is <web app URL>?e=<email>&t=<token>; the token is an HMAC of the address, so nobody can
+// unsubscribe someone else by editing the link.
+//
+// A plain click (GET) shows a confirm button first, because company email scanners open links in
+// incoming mail and would otherwise unsubscribe people by accident. The mail app's one-click
+// button sends a POST, which scanners don't do, so that one unsubscribes right away.
+
+function doGet(e) {
+  const p = (e && e.parameter) || {};
+  const email = String(p.e || '').trim().toLowerCase();
+  if (!validToken_(email, p.t)) return page_('This link didn\'t work', '<p>Reply "stop" to any Forsured email and Zach will take you off the list.</p>');
+  if (p.confirm !== '1') {
+    const confirm = unsubLink_(email) + '&confirm=1';
+    return page_('Unsubscribe from the Forsured weekly newsletter?',
+      '<p>' + esc_(email) + ' will stop getting the Monday email.</p>' +
+      '<p><a class="btn" href="' + esc_(confirm) + '" target="_top">Unsubscribe</a></p>');
+  }
+  unsubscribe_(email, 'link');
+  return page_('You\'re unsubscribed', '<p>' + esc_(email) + ' won\'t get the Forsured weekly newsletter anymore. Changed your mind? Sign up again anytime at <a href="' + SITE + '/blog/" target="_top">forsured.ai/blog</a>.</p>');
+}
+
+function doPost(e) {
+  const p = (e && e.parameter) || {};
+  const email = String(p.e || '').trim().toLowerCase();
+  if (validToken_(email, p.t)) unsubscribe_(email, 'one-click');
+  return ContentService.createTextOutput('ok');
+}
+
+function unsubscribe_(email, how) {
+  const props = PropertiesService.getScriptProperties();
+  if (!props.getProperty('unsub:' + email)) props.setProperty('unsub:' + email, new Date().toISOString() + ' ' + how);
+  console.log('Unsubscribed ' + email + ' (' + how + ')');
+  try {
+    removeFromAttio_(email);
+  } catch (err) {
+    // Usually a read-only Attio token. The Script Properties entry still stops every send.
+    console.log('Attio removal failed for ' + email + ': ' + err);
+  }
+}
+
+function removeFromAttio_(email) {
+  const key = PropertiesService.getScriptProperties().getProperty('ATTIO_API_KEY');
+  if (!key) return;
+  const headers = { Authorization: 'Bearer ' + key };
+  const entries = JSON.parse(UrlFetchApp.fetch('https://api.attio.com/v2/lists/' + ATTIO_LIST + '/entries/query', {
+    method: 'post', contentType: 'application/json', headers, payload: JSON.stringify({ limit: 500 }),
+  }).getContentText()).data;
+  entries.forEach((entry) => {
+    const person = JSON.parse(UrlFetchApp.fetch(
+      'https://api.attio.com/v2/objects/people/records/' + entry.parent_record_id, { headers }
+    ).getContentText()).data;
+    const addresses = (person.values.email_addresses || []).map((a) => String(a.email_address || '').toLowerCase());
+    if (addresses.includes(email)) {
+      UrlFetchApp.fetch('https://api.attio.com/v2/lists/' + ATTIO_LIST + '/entries/' + entry.id.entry_id, { method: 'delete', headers });
+      console.log('Removed ' + email + ' from Attio ' + ATTIO_LIST);
+    }
+  });
+}
+
+function unsubLink_(email) {
+  const url = ScriptApp.getService().getUrl();
+  // Not deployed as a web app yet: fall back to an email to Zach, so a send never goes out with a dead link.
+  if (!url) return 'mailto:' + Session.getActiveUser().getEmail() + '?subject=unsubscribe';
+  const address = email.toLowerCase();
+  return url + '?e=' + encodeURIComponent(address) + '&t=' + token_(address);
+}
+
+function token_(email) {
+  const props = PropertiesService.getScriptProperties();
+  let secret = props.getProperty('UNSUB_SECRET');
+  if (!secret) { secret = Utilities.getUuid() + Utilities.getUuid(); props.setProperty('UNSUB_SECRET', secret); }
+  return Utilities.base64EncodeWebSafe(Utilities.computeHmacSha256Signature(email, secret)).replace(/=+$/, '').slice(0, 22);
+}
+
+function validToken_(email, t) {
+  return !!email && !!t && email.indexOf('@') > 0 && token_(email) === String(t);
+}
+
+function esc_(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function page_(title, body) {
+  const html = '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<style>body{font-family:Inter,Arial,sans-serif;background:#FAFBFA;color:#0A0A0E;margin:0;padding:48px 16px}' +
+    '.card{max-width:480px;margin:0 auto;background:#fff;border:1px solid #E4E7EC;border-top:4px solid #FB612A;border-radius:12px;padding:28px}' +
+    'h1{font-size:22px;margin:0 0 12px}p{font-size:16px;line-height:1.55;color:#344051}a{color:#0A0A0E}' +
+    '.btn{display:inline-block;background:#FB612A;color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:8px}</style></head>' +
+    '<body><div class="card"><p style="font-weight:800;font-size:18px;color:#0A0A0E;margin:0 0 16px">Forsured</p><h1>' + esc_(title) + '</h1>' + body + '</div></body></html>';
+  return HtmlService.createHtmlOutput(html).setTitle(title).addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
 // ---------- helpers ----------
 
 // Sends through the Gmail API with a hand-built UTF-8 message. GmailApp.sendEmail turns emoji in
 // the subject and body into rows of question marks; an RFC 2047 subject and base64 UTF-8 parts don't.
-function send_(to, subject, html) {
+// unsubUrl (optional): adds List-Unsubscribe and List-Unsubscribe-Post (RFC 8058), so mail apps show
+// their own one-click Unsubscribe button. Only the Gmail API path can set headers.
+function send_(to, subject, html, unsubUrl) {
   if (typeof Gmail === 'undefined') {
     // Gmail advanced service not added: GmailApp still delivers, though emoji outside the BMP break.
     console.log('Gmail advanced service is off; sending with GmailApp');
@@ -246,6 +353,10 @@ function send_(to, subject, html) {
     'From: "' + FROM_NAME + '" <' + Session.getActiveUser().getEmail() + '>',
     'To: ' + to,
     'Subject: ' + encodedWords_(subject),
+    ...(unsubUrl && /^https:/.test(unsubUrl) ? [
+      'List-Unsubscribe: <' + unsubUrl + '&one=1>, <mailto:' + Session.getActiveUser().getEmail() + '?subject=unsubscribe>',
+      'List-Unsubscribe-Post: List-Unsubscribe=One-Click',
+    ] : []),
     'MIME-Version: 1.0',
     'Content-Type: multipart/alternative; boundary="' + boundary + '"',
     '',
