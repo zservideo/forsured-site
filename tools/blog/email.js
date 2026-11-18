@@ -72,7 +72,7 @@ ${rows}  <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1
     <p style="margin:16px 0 0"><strong>Zach Servideo</strong><br/><span style="color:${MUTED};font-size:14px">Founder / CGO<br/>Forsured</span></p>
   </td></tr>
   <tr><td style="padding:28px 32px 24px;${sans};font-size:12px;line-height:1.6;color:${MUTED};border-top:1px solid ${LINE}">
-    <p style="margin:20px 0 0">You're getting this because you signed up for the weekly email from the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
+    <p style="margin:20px 0 0">You're getting this because you signed up for the Forsured weekly newsletter on the <a href="${esc(blog)}" style="color:${MUTED}">Forsured blog</a>. Not for you anymore? Reply "stop" and I'll take you off.</p>
   </td></tr>
 </table>
 </td></tr>
@@ -84,7 +84,7 @@ ${rows}  <tr><td style="padding:28px 32px 0;${sans};font-size:16px;line-height:1
 
 const SIGN_OFF = ['Zach Servideo', 'Founder / CGO', 'Forsured'];
 const footer = () =>
-  `You're getting this because you signed up for the weekly email from the Forsured blog (${SITE}/blog/). Not for you anymore? Reply "stop" and I'll take you off.`;
+  `You're getting this because you signed up for the Forsured weekly newsletter on the Forsured blog (${SITE}/blog/). Not for you anymore? Reply "stop" and I'll take you off.`;
 
 const button = (href, label) => `  <tr><td align="left" style="padding:24px 32px 0">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>

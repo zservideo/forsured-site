@@ -626,8 +626,8 @@ const MAKE_WEBHOOK = 'https://hook.us2.make.com/er2vury4yeu7eo6fflh031ngttpvwg3b
 function subscribe(id, where, cls = '') {
   return `<section class="sub${cls ? ` ${cls}` : ''}" aria-labelledby="${id}" data-sub="${where}">
       <div>
-        <h2 id="${id}">Get the week's posts in one email.</h2>
-        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
+        <h2 id="${id}">Get the Forsured weekly newsletter.</h2>
+        <p>One email every Monday: short summaries of the week's posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects.</p>
       </div>
       <div>
       <form novalidate>
@@ -636,8 +636,8 @@ function subscribe(id, where, cls = '') {
         <button class="cta-p" type="submit">Subscribe</button>
       </form>
       <p class="err" role="alert" hidden></p>
-      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
-      <p class="fine" id="${id}-fine">No spam. Unsubscribe from any email.</p>
+      <p class="ok" role="status" hidden>You're on the list. Look for the newsletter on Monday.</p>
+      <p class="fine" id="${id}-fine">One email a week. No spam. Unsubscribe anytime.</p>
       </div>
     </section>`;
 }
