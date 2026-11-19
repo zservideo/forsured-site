@@ -6,6 +6,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## White papers
 
+- [R-36: Onboarding a new trade: the day-one compliance file](https://coijournal.com/reports/onboarding-a-new-trade/): The compliance file a GC should have before a new trade starts work: signed subcontract, certificate, endorsements, licenses and a diary. Markdown: https://coijournal.com/reports/onboarding-a-new-trade/index.md
 - [R-35: Where insurance fits in trade prequalification](https://coijournal.com/reports/prequalification-and-insurance/): Where insurance belongs in trade prequalification, which checks to run before award, which after, and the red flags to watch for. Markdown: https://coijournal.com/reports/prequalification-and-insurance/index.md
 - [R-34: New York's Scaffold Law and the insurance market for trades working in the state](https://coijournal.com/reports/new-york-labor-law-240-insurance/): New York Labor Law 240 and 241, what they do to liability insurance for contractors, and what GCs should check on trade COIs. Markdown: https://coijournal.com/reports/new-york-labor-law-240-insurance/index.md
 - [R-13: What to require from any COI tool: a vendor-neutral specification](https://coijournal.com/reports/coi-tool-specification/): A vendor-neutral specification for COI tracking tools: what to require, how to test it, and the questions to ask in a demo. Markdown: https://coijournal.com/reports/coi-tool-specification/index.md
