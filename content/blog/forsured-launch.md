@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Forsured launches: continuous insurance compliance for construction, as its first general contractors move from pilot to paid",
+  "title": "Forsured launches continuous insurance compliance for construction as its first GCs go from pilot to paid",
   "seoTitle": "Forsured Launch: Continuous Insurance Compliance | Forsured",
   "description": "Forsured launch: continuous insurance compliance software that checks every contractor COI against project requirements, brings in the broker and keeps watching.",
   "dek": "Forsured launch day is here. Forsured is continuous insurance compliance software for construction: it checks every contractor COI against the project requirements it's for, before work starts, routes each fix to the broker who can make it, and keeps checking for the life of the job. It debuts today at BuiltWorlds Demo Day in Boston.",
@@ -68,8 +68,6 @@ Today is the Forsured launch, timed to BuiltWorlds Demo Day. Forsured came out o
 
 Forsured is approaching 10 general contractor pilots, the first several now paid.
 
-"We kept our heads down and built. Then the market started pulling," said Zach Servideo, Founder and Chief Growth Officer of Forsured. "Contractors asked us to replace the tools they have. Brokers started bringing us their clients. General contractors started paying before we'd said a word in public. Being selected for Demo Day at BuiltWorlds' Venture East told us it was time to stop being quiet."
-
 ## What is Forsured?
 
 Forsured is continuous insurance compliance software for construction. It checks every contractor COI against the project requirements of the job it's for, before the contractor steps on site, then keeps checking and routes every fix to the broker.
@@ -91,8 +89,6 @@ It works in six parts:
 - **Humans in control.** AI reads the documents; people can review and approve. Every decision is auditable.
 - **Fits your stack.** Forsured integrates with Procore, and trade contractors don't have to sign up for anything on day one. See [where insurance sits in Procore](/blog/procore-coi-tracking/).
 
-"Anyone can point AI at a certificate and call it valid. That's not the job," said Marc Gigliotti, Founder and Chief Product Officer of Forsured. "The job is knowing whether this contractor is covered for this project, today, and getting the gap closed before work starts and continued through the project. We built Forsured side by side with the brokers and general contractors who use it every day, and they actively shape what we build next."
-
 ## What does Forsured cost?
 
 As of the Forsured launch, general contractors pay an annual subscription, and the first project is free. Trade contractors and brokers pay nothing, and Forsured takes no commission.
@@ -103,7 +99,7 @@ More than 20 RiskProNet brokerages, with about $2 billion in combined revenue, a
 
 "Brokers get pulled into compliance fire drills after everyone is already frustrated," said Erik Wenstone, Founder and CEO of Forsured and a principal at CMR Risk & Insurance Services. "Forsured moves that conversation upstream. The broker sees exactly what the project needs and fixes it once. Nobody pays a commission, and the broker's client relationship gets stronger."
 
-The founding team pairs general contractor owners Steve Massei (Chief Construction Officer) and Stephanie Massei (CFO) with broker Erik Wenstone (CEO), Vince Giacomini (President), Marc Gigliotti (Chief Product Officer) and Zach Servideo (Chief Growth Officer). Ryan Morris leads engineering.
+The founding team pairs general contractor owners Steve Massei (Chief Construction Officer) and Stephanie Massei (CFO) with broker Erik Wenstone (CEO) and Vince Giacomini (President), alongside product, growth and engineering leaders.
 
 ## Where can you see Forsured at BuiltWorlds Demo Day?
 
