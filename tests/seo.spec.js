@@ -114,7 +114,7 @@ for (const p of PAGES) {
   });
 }
 
-for (const [short, dir] of [['irmifieldguide', 'irmi-field-guide'], ['builtworldsfieldguide', 'builtworlds-field-guide']]) {
+for (const [short, dir] of [['irmifieldguide', 'irmi-field-guide'], ['builtworldsfieldguide', 'builtworlds-field-guide'], ['builtweekfieldguide', 'built-week-field-guide']]) {
   test(`the ${short} short link stays out of search results`, async () => {
     const html = read(`${short}/index.html`);
     expect(html).toMatch(/<meta name="robots" content="noindex"/);

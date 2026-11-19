@@ -1,0 +1,86 @@
+{
+  "slug": "boston-built-week-2026",
+  "type": "news",
+  "reader": "GC, owner or construction tech attendee planning Boston Built Week",
+  "pillar": "/built-week-field-guide/",
+  "questions": [
+    "What is happening at Boston Built Week 2026?",
+    "How do you get into Boston Built Week events?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "Boston Built Week",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "field guide",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "anchor events",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "BuiltWorlds Demo Day",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "calendar",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Zach asked Nov 16 for a same-day news post: acknowledge Built Week, TL;DR the week, link the Built Week and BuiltWorlds field guides. Facts re-read Nov 16 from bostonbuiltweek.com (26 calendar entries incl. the 4 anchors, presented by Suffolk Technologies, Nov 15-21) and the BuiltWorlds event page (Demo Day 10:50-12:20, The Forum, 9 presenters, winner 3:15). No BOOST 7 times: host page and BuiltWorlds listing disagree.",
+  "competing_sources": [
+    {
+      "url": "https://bostonbuiltweek.com/",
+      "title": "Boston Built Week, November 15 to 21, 2026",
+      "h2s": [
+        "2026 Anchor Events",
+        "Partner Events",
+        "Road to Boston Built Week",
+        "Ways to be part of Boston Built Week",
+        "Where to Stay",
+        "Frequently asked questions"
+      ],
+      "faqs": [
+        "How does Boston Built Week work?",
+        "How can my company host an event?",
+        "When is Boston Built Week 2026?",
+        "How can I attend?"
+      ],
+      "what_they_cover_that_we_dont": "Hosting an event, sponsors, 2025 recap, hotels.",
+      "what_we_cover_that_they_dont": "The week in one read, how to get in, transit between neighborhoods, and a single-view field guide of all 26 events."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "What is Boston Built Week?",
+      "What are the anchor events at Boston Built Week?",
+      "What else is on the Boston Built Week calendar?",
+      "How do you get into Boston Built Week events?",
+      "Where is Forsured during Boston Built Week?",
+      "What's in the Boston Built Week field guide?",
+      "Why does Boston Built Week matter for insurance compliance?"
+    ],
+    "faqs": [],
+    "table": "",
+    "internal_links": [
+      "/built-week-field-guide/",
+      "/builtworlds-field-guide/",
+      "/blog/compliance-isnt-coverage/",
+      "/blog/how-to-check-a-contractor-coi/"
+    ],
+    "external_links": [
+      "https://bostonbuiltweek.com/",
+      "https://builtworlds.com/event/2026-aec-emerging-tech/",
+      "https://suffolktech.com/",
+      "https://www.mbta.com/"
+    ],
+    "forsured_paragraph": "Forsured checks each contractor COI against the requirements of the project it's for, flags gaps with the reason, brings in the contractor's broker to fix them, and keeps watching after approval."
+  }
+}

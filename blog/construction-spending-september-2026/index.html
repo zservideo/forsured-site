@@ -335,8 +335,8 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
     </section>
     <section class="sub" aria-labelledby="sub" data-sub="post">
       <div>
-        <h2 id="sub">Get new posts by email.</h2>
-        <p>New posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects. Short and plain.</p>
+        <h2 id="sub">Get the Forsured weekly newsletter.</h2>
+        <p>One email every Monday: short summaries of the week's posts on contractor COIs and project requirements, plus the coverage gaps we're seeing on real projects.</p>
       </div>
       <div>
       <form novalidate>
@@ -345,8 +345,8 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
         <button class="cta-p" type="submit">Subscribe</button>
       </form>
       <p class="err" role="alert" hidden></p>
-      <p class="ok" role="status" hidden>You're on the list. Thanks for reading.</p>
-      <p class="fine" id="sub-fine">No spam. Unsubscribe from any email.</p>
+      <p class="ok" role="status" hidden>You're on the list. Look for the newsletter on Monday.</p>
+      <p class="fine" id="sub-fine">One email a week. No spam. Unsubscribe anytime.</p>
       </div>
     </section>
     <section class="extra about-fs" aria-labelledby="about-forsured">
@@ -378,7 +378,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
     </section>
   </div>
 </article>
-<section class="more" aria-labelledby="more"><div class="edge"><h2 id="more">Keep reading</h2><ul class="cards"><li><a class="card" href="/blog/contractor-backlog-october-2026/"><span class="label">Market outlook</span><h3>Contractor backlog fell to 8.1 months. What it means for COIs</h3><p>ABC's Construction Backlog Indicator dropped 0.6 months to 8.1 in October 2026. What the numbers say, and why thinner backlogs matter for contractor COIs.</p><time datetime="2026-11-11">Nov 11, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/construction-insurance-2027-renewal-outlook/"><span class="label">Market outlook</span><h3>What the 2027 construction insurance outlook means for contractor COIs</h3><p>WTW forecasts construction umbrella and excess rates up 5% to 15% in 2027. Here's the full outlook by line, and why it raises the stakes on contractor COI review.</p><time datetime="2026-10-26">Oct 26, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/subcontractor-insurance-compliance-software/"><span class="label">Buyer's guide</span><h3>Best contractor insurance compliance software for general contractors (2026)</h3><p>Insurance compliance software for GCs compared on more than COIs: endorsements, prequalification, lien waivers, payroll, policy review and live monitoring.</p><time datetime="2026-11-13">Nov 13, 2026 · 3 min read</time></a></li></ul></div></section>
+<section class="more" aria-labelledby="more"><div class="edge"><h2 id="more">Keep reading</h2><ul class="cards"><li><a class="card" href="/blog/contractor-backlog-october-2026/"><span class="label">Market outlook</span><h3>Contractor backlog fell to 8.1 months. What it means for COIs</h3><p>ABC's Construction Backlog Indicator dropped 0.6 months to 8.1 in October 2026. What the numbers say, and why thinner backlogs matter for contractor COIs.</p><time datetime="2026-11-11">Nov 11, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/construction-insurance-2027-renewal-outlook/"><span class="label">Market outlook</span><h3>What the 2027 construction insurance outlook means for contractor COIs</h3><p>WTW forecasts construction umbrella and excess rates up 5% to 15% in 2027. Here's the full outlook by line, and why it raises the stakes on contractor COI review.</p><time datetime="2026-10-26">Oct 26, 2026 · 2 min read</time></a></li><li><a class="card" href="/blog/procore-coi-tracking/"><span class="label">Tech stack</span><h3>Procore COI tracking: where contractor insurance lives in Procore and what it checks</h3><p>Procore COI tracking, mapped: the Directory insurance record, project vs company insurance, Procore Pay compliance statuses, expiration emails and what it skips.</p><time datetime="2026-11-19">Nov 19, 2026 · 6 min read</time></a></li></ul></div></section>
 </main>
 
 <section class="band" aria-label="Free COI risk check"><div class="edge">
@@ -453,6 +453,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
         .then((r) => r[0].json())
         .then((j) => {
           if (!j.success) throw new Error();
+          (window.dataLayer = window.dataLayer || []).push({ event: 'generate_lead', form_key: 'blog_subscribe', form_location: location.pathname });
           form.hidden = true;
           box.querySelector('.fine').hidden = true;
           ok.hidden = false;

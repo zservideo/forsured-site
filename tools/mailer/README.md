@@ -41,7 +41,40 @@ The script never sends these drafts. Zach reviews and sends.
    Go to Forsured Mailer if it warns that the app is unverified; it's your own script).
 5. Check Gmail Drafts for "[TEST] Forsured Mailer: clean links check" and click its link.
 
-## Blog post emails (optional, replaces Make scenario 6806850)
+## Weekly digest (the subscriber email since 2026-11-17)
+
+Subscribers get one email every Monday at about 7 AM ET with short summaries of the posts published
+the week before (Monday to Sunday). `node tools/blog/build.js` writes one file per week that has posts,
+`blog/email/weekly/<that Monday>.json`; preview one with `node tools/blog/email.js --weekly 2026-11-16`.
+A week with no posts has no file, so nothing goes out.
+
+To switch over from one email per post (one time, about 2 minutes):
+
+1. Paste the current `forsured-mailer.gs` into the Apps Script project and save.
+2. Project Settings → Time zone → **(GMT-05:00) Eastern Time - New York**.
+3. Pick `setupWeeklyDigest` in the function menu and press **Run**. It turns off the per-post job and
+   installs the Monday trigger.
+4. Optional: run `previewWeeklyDigest` to send last week's digest to yourself only.
+
+## One-click unsubscribe (since 2026-11-18)
+
+Every digest has a personal **Unsubscribe** link in the footer, and List-Unsubscribe headers so Gmail
+and Apple Mail show their own Unsubscribe button. Both go to this script deployed as a web app.
+
+- A clicked link shows a confirm page first (company email scanners open links in incoming mail and
+  would otherwise unsubscribe people by accident). The mail app's own button unsubscribes at once.
+- Unsubscribes are kept in Script Properties as `unsub:<email>`; every send skips them. To re-add
+  someone who asks, delete their `unsub:` property.
+- The script also removes the person from Attio's Blog subscribers list if `ATTIO_API_KEY` has the
+  `list_entry:read-write` scope. With a read-only key the Attio entry stays, but they still get nothing.
+- Until the web app is deployed, the link falls back to an email to Zach with the subject "unsubscribe".
+
+One-time setup: Deploy → New deployment → type **Web app**, Execute as **Me**, Who has access
+**Anyone** → Deploy, and approve the prompt. After later code changes, Deploy → Manage deployments →
+edit → Version: **New version**, so the web app runs the new code (the URL stays the same). If you ever create a
+new deployment instead, its URL changes: update `UNSUB_WEB_APP` at the top of the script.
+
+## Blog post emails (RETIRED 2026-11-17, replaced by the weekly digest)
 
 1. In Attio, Settings → Developers → create an access token with read access to records and lists.
 2. In Apps Script, Project Settings → Script Properties → add `ATTIO_API_KEY`.

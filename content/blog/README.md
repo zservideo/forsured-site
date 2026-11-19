@@ -17,6 +17,15 @@ it is the first thing on the page and the image the social posts reuse. After a 
 re-render that post with `node tools/blog/og.js <slug>`. `tests/blog.spec.js` fails if the built files
 are out of date with the Markdown.
 
+Subscribers no longer get an email per post. Every Monday they get one digest of the week before,
+built from each post's `dek` and first two `takeaways` (see `tools/mailer/README.md`), so write those to stand alone.
+
+Some days carry two posts. A big announcement (a launch, funding, a major customer or partner release)
+gets its own post at the announcement or embargo time, on top of the regular daily post. Publish the
+regular post first, early in the morning, and the announcement at its embargo time. This repo is public,
+so embargoed text stays off GitHub until shortly before the embargo lifts. Rebuild the second branch on
+`main` after the first merges, since the sitemap, feed, index and weekly digest regenerate.
+
 When the change reaches `main`, GitHub Pages publishes it and the IndexNow workflow tells Bing and the
 other IndexNow search engines to crawl the changed pages.
 
@@ -34,7 +43,7 @@ The file starts with a JSON block between `---` lines:
 | `updated` | no | Set when a post changes in substance. |
 | `hero` | yes | The picture at the top of the post. See below. |
 | `heroAlt` | no | Alt text for the hero when the generated one (from the hero fields) doesn't read well. |
-| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news, Buyer's guide. |
+| `category` | yes | Reuse one: COI basics, How-to, Market outlook, Industry news, Event takeaways, Forsured news, Buyer's guide, Tech stack. |
 | `tags` | no | Search phrases the post answers. |
 | `takeaways` | yes | 2 to 4 bullets that answer the question on their own. AI answer engines quote these. |
 | `faq` | no | `{ "q", "a" }` pairs. Real questions, answers that stand alone. Becomes FAQPage markup. |
@@ -73,10 +82,20 @@ promote Forsured, so they never go on COI Journal or `/research/`.
 Body Markdown supports `##` and `###` headings (add ` {#id}` to set the anchor by hand), paragraphs, `-` and `1.` lists, `>` quotes
 (`> quote -- Name, Title`), tables, `**bold**`, `*italic*` and `[links](https://...)`.
 
+## Tech stack series ("What's in your stack")
+
+A recurring post on the software general contractors run: Procore, Autodesk Construction Cloud,
+Trimble Viewpoint, Sage, Oracle Textura, CMiC, Foundation, Bluebeam, AI assistants like Claude and
+ChatGPT, and the rest. Category `Tech stack`, with "What's in your stack" as one of its tags. Every claim about what a tool
+does, costs or connects to cites the vendor's own current page in `sources`, checked the day the post
+is written. Never describe a named company's stack from a private conversation; a named GC's stack
+comes only from public material (its own case study, press release or job posting) or a written Q&A
+the GC approved for publishing.
+
 ## Writing rules
 
 - Plain voice, short sentences, specific numbers. The copy tests block stock marketing phrases and em-dash asides.
-- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question.
+- Say "contractor COIs" and "project requirements". Never "subcontractor", "subs", "sub COIs" or "GC requirements". Exception: a `Buyer's guide` post may say "subcontractor" where it mirrors how buyers phrase the question, and a `Tech stack` post may where a tool uses it in its own feature names.
 - Posts are by "the Forsured team" unless the front matter names an `author` from `content/authors.json`.
 - Every number and claim from someone else links to the original in `sources`. Never invent a quote. Never put words from a private conversation in a named person's mouth.
 - Never name customers, prospects or partners as customers, prospects or partners without written approval. Never name competitors, except in a `Buyer's guide`: there, every fact about another vendor comes from its own public pages, is linked under Sources, and carries the date it was checked. Re-check those facts every quarter.

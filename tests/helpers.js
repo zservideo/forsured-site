@@ -25,6 +25,7 @@ const PAGES = [
   { name: 'home', url: '/', file: 'index.html' },
   { name: 'field guide', url: '/irmi-field-guide/', file: 'irmi-field-guide/index.html' },
   { name: 'builtworlds field guide', url: '/builtworlds-field-guide/', file: 'builtworlds-field-guide/index.html' },
+  { name: 'built week field guide', url: '/built-week-field-guide/', file: 'built-week-field-guide/index.html' },
   { name: 'blog', url: '/blog/', file: 'blog/index.html' },
   // Buyer's guides and library posts (kept off the blog index and feed), built by tools/blog/build.js.
   { name: 'guides', url: '/guides/', file: 'guides/index.html' },

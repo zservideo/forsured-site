@@ -10,7 +10,7 @@ const { GTAG } = require('../tools/blog/build');
 
 const ID = 'GTM-P6PXX2JM';
 const SRC = `https://www.googletagmanager.com/gtm.js?id=${ID}`;
-const REDIRECTS = ['irmifieldguide/index.html', 'builtworldsfieldguide/index.html'];
+const REDIRECTS = ['irmifieldguide/index.html', 'builtworldsfieldguide/index.html', 'builtweekfieldguide/index.html'];
 
 // Every HTML file that GitHub Pages publishes (see _config.yml), so a new page can't slip past.
 const SKIP = new Set(['node_modules', 'tests', 'tools', 'content', 'test-results', 'playwright-report', '.git', '.github']);
