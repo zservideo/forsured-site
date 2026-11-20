@@ -5,6 +5,7 @@
   "description": "Eight COI tracking software tools for construction compared on endorsement review, project requirements, broker follow-up, Procore and published pricing.",
   "dek": "What each tool checks on a subcontractor COI, who fixes the gap, whether it connects to Procore, and what it costs, from Forsured, Billy, bcs, Jones, PINS Advantage, TrustLayer, illumend and Certificial.",
   "date": "2026-11-11T10:00:00-05:00",
+  "updated": "2026-11-20T07:00:00-05:00",
   "category": "Buyer's guide",
   "hero": {
     "type": "list",
@@ -341,6 +342,8 @@ We looked at the same six things for every tool, in this order of weight:
 
 Forsured is construction insurance compliance software for general contractors, trade contractors and the brokers who insure them. You set your insurance standards once, then apply project-level requirements and exceptions where a job needs them. Forsured reads each certificate and endorsement against that project's requirements and flags each gap with the reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The broker gets the gap in a shared workspace where they see the requirement, the document and the project, instead of another email chain. After approval, Forsured keeps tracking renewals and coverage changes across active projects. AI finds and explains each issue, and a person on your team approves or waives it.
 
+![The Forsured homepage, showing a sample contractor checked against project requirements with two gaps flagged](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-forsured.png "forsured.ai homepage, checked Nov 20, 2026")
+
 **Good fit if** your projects carry different owner, lender or contract requirements, you want the broker working from the same requirement you are, and you want a person on every approval.
 
 **Watch for:** onboarding is by waitlist, the Procore integration is for early access customers and isn't on the Procore Marketplace yet, and there's no managed review service.
@@ -350,6 +353,8 @@ Forsured is construction insurance compliance software for general contractors, 
 ### 2. bcs: best for published per-vendor pricing and a free tier {#bcs}
 
 [bcs](https://www.getbcs.com/) have tracked insurance certificates since 2008, for property managers, general contractors, risk managers and procurement teams. Requirement templates can be set by vendor type, project or property. Their AI reads each certificate twice, with a long-running extractor and a separate vision model, and sends any disagreement to a person. AI endorsement review identifies the endorsement type and walks you through it with an endorsement matrix. On the full-service plan, US-based analysts handle outreach and call the vendor and, when needed, the vendor's insurance agent, with no cap on attempts.
+
+![The bcs pricing page, listing the free tier, self-service and full-service rates](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-bcs.png "bcs pricing page, checked Nov 20, 2026")
 
 **Good fit if** you want to start free, see rates up front, and keep the option of handing outreach to a service.
 
@@ -361,6 +366,8 @@ Forsured is construction insurance compliance software for general contractors, 
 
 [Billy](https://billyforinsurance.com/) are COI tracking software for construction only: general contractors, developers, owners and homebuilders. Beyond COIs, they track prequalification, certified payroll, lien waivers and warranties through closeout. Each requirement is set per project, and their AI checks each COI for missing endorsements like CG 20 10, CG 20 37 and waiver of subrogation. Renewal requests go out three months before a policy expires, one month before, and on the day. Compliance status can sync to your accounting system to hold a payment before the check run. You can run it yourself, or use their managed plan, where CRIS-certified reviewers check every certificate and endorsement.
 
+![The Billy FAQ page, describing its platform from prequalification to closeout](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-billy.png "Billy FAQ page, checked Nov 20, 2026")
+
 **Good fit if** you run Procore with a construction ERP such as Sage, Viewpoint Vista, CMiC or JD Edwards, and want payment holds tied to compliance.
 
 **Watch for:** brokers fix gaps from a deficiency list and an upload link rather than a shared workspace, and there's no full price list.
@@ -370,6 +377,8 @@ Forsured is construction insurance compliance software for general contractors, 
 ### 4. Certificial: best for live policy data from the agent of record {#certificial}
 
 [Certificial](https://www.certificial.com/) work differently from the rest of this list. Certificates come only from the vendor's agent of record, through a network of more than 25,000 agencies, and the agency's system keeps each certificate current. That lets Certificial flag mid-term cancellations and limit changes as they happen rather than at the next renewal. Their EndorsementIQ pulls the carrier, form number, policy number and exclusions from each endorsement so you can accept or reject it against your criteria, and a project layer handles more than one set of requirements. Agents and brokers use it free.
+
+![The Certificial pricing page, showing Requestor Basic, Professional from $99 a month and Enterprise](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-certificial.png "Certificial pricing page, checked Nov 20, 2026")
 
 **Good fit if** you run a large vendor program and want to hear about a cancellation the day it happens.
 
@@ -381,6 +390,8 @@ Forsured is construction insurance compliance software for general contractors, 
 
 [illumend](https://www.illumend.ai/) is the AI platform from myCOI, who've worked in third-party insurance compliance since 2009 from Indianapolis. The old mycoitracking.com address now redirects to illumend, and myCOI customers are being moved over. Their AI, Lumie, reads every line of each COI and endorsement, from additional insureds and waivers of subrogation to primary and noncontributory wording and per project aggregates (see [what per project aggregate means on a COI](https://forsured.ai/blog/per-project-aggregate-coi/)), and decides whether the language meets your contract. It raises a hand only on items it can't resolve, and follows up with vendors and their brokers until gaps close. In Procore, illumend builds the agreement from a commitment and rechecks the certificate at renewal.
 
+![The illumend homepage, introducing illumend from myCOI and its AI, Lumie, with a sample compliance score by coverage](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-illumend.png "illumend homepage, checked Nov 20, 2026")
+
 **Good fit if** you track a high volume of vendors across more than one industry and you're comfortable with AI COI tracking that decides on its own.
 
 **Watch for:** requirements follow the contract rather than separate project-level requirement sets, the Procore Marketplace listing still carries the myCOI name, and more human oversight is an add-on.
@@ -390,6 +401,8 @@ Forsured is construction insurance compliance software for general contractors, 
 ### 6. Jones: best for GCs that also own or manage real estate {#jones}
 
 [Jones](https://getjones.com/) serve commercial real estate owners and property managers as well as construction general contractors, from New York. AI and Jones's insurance specialists review COIs and endorsements, and the Policy Review add-on reads full policies for exclusions a certificate won't show. Requirements can be set by record, project or property, and in Procore you can track insurance at the project or company level. The Operator tier adds a concierge team that handles the back-and-forth with brokers, agents and third parties.
+
+![The Jones pricing page, comparing the Jones Platform and Jones Operator tiers](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-jones.png "Jones pricing page, checked Nov 20, 2026")
 
 **Good fit if** your company builds and also owns or manages property, and you want exclusions in the full policy reviewed.
 
@@ -401,6 +414,8 @@ Forsured is construction insurance compliance software for general contractors, 
 
 [PINS Advantage](https://www.pinsadvantage.com/) started with a California insurance agent supporting commercial contractors. PINS reads every certificate and endorsement against requirements built from your contracts, shows its reasoning and the page it came from, and goes into the wording: whether a CG D3 81 meets a CG 20 10 and CG 20 37 requirement, for example, or whether privity of contract language limits who's covered. Your team approves, rejects or waives every result. In Procore, PINS reviews each COI against the requirements tied to the commitment and writes Approved or Not Approved back to the project directory and the commitment's compliance tab, which Procore Pay uses.
 
+![The PINS Advantage pricing page, saying plans start around $300 a month with unlimited users](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-pins-advantage.png "PINS Advantage pricing page, checked Nov 20, 2026")
+
 **Good fit if** Procore is the center of your workflow and you want Procore COI tracking with endorsement wording checked and a person on every decision.
 
 **Watch for:** brokers respond through an upload link and revised endorsement requests rather than a shared workspace, and monitoring is renewal and expiration notices rather than live policy data.
@@ -410,6 +425,8 @@ Forsured is construction insurance compliance software for general contractors, 
 ### 8. TrustLayer: best for a large vendor network and broker partners {#trustlayer}
 
 [TrustLayer](https://www.trustlayer.io/) serve construction, real estate, retail, finance and other industries. Their Enhanced Endorsements feature checks for the language you require, including additional insured and common equivalents, primary and noncontributory, waiver of subrogation, and blanket versus scheduled endorsements, then shows the page that proves it, with a person confirming the result. Insurance can be tracked per project. Brokers get their own access, and some brokers resell TrustLayer and offer review services. Pulse verifies a policy at the source, and TrustLayer+ is their full-service option with licensed insurance professionals.
+
+![The TrustLayer plans page, with Starter (Free), Pro and Complete tiers](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-trustlayer.png "TrustLayer plans page, checked Nov 20, 2026")
 
 **Good fit if** your subs' brokers already use TrustLayer, or you want policy verification at the source.
 
@@ -476,4 +493,4 @@ For a closer look by company type, see COI tracking software for [small general 
 
 ## About this ranking
 
-This ranking was written by the Forsured team. Forsured makes one of the eight tools compared here and is listed first; the other seven follow in alphabetical order. No vendor paid to be included or saw this page before it was published. Every product, integration and pricing fact comes from the vendor's own public pages and the Procore Marketplace as of Nov 11, 2026. Prices and features change, so confirm them with each vendor. We didn't include review-site ratings.
+This ranking was written by the Forsured team. Forsured makes one of the eight tools compared here and is listed first; the other seven follow in alphabetical order. No vendor paid to be included or saw this page before it was published. Every product, integration and pricing fact comes from the vendor's own public pages and the Procore Marketplace as of Nov 11, 2026. Prices and features change, so confirm them with each vendor. The screenshots show the first screen of each vendor's page as it looked on Nov 20, 2026. We didn't include review-site ratings.
