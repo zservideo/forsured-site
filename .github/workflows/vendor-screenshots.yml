@@ -1,7 +1,8 @@
 name: Vendor screenshots
 
 # Takes the vendor page screenshots listed under "screenshots" in a post's brief
-# (content/blog/briefs/<slug>.json) and commits them to blog/<slug>/ on the branch.
+# (content/blog/briefs/<slug>.json, or content/blog/shots/<slug>.json for an older post with no
+# brief yet) and commits them to blog/<slug>/ on the branch.
 # Run it from the Actions tab with the post's slug, or add the "vendor-shots" label to a
 # pull request (it then shoots every brief the pull request changes).
 on:
@@ -46,11 +47,11 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           if [ -n "$SLUG" ]; then slugs="$SLUG"; else
-            slugs=$(git diff --name-only "$BASE" HEAD -- 'content/blog/briefs/*.json' | xargs -r -n1 basename | sed 's/\.json$//')
+            slugs=$(git diff --name-only "$BASE" HEAD -- 'content/blog/briefs/*.json' 'content/blog/shots/*.json' | xargs -r -n1 basename | sed 's/\.json$//' | sort -u)
           fi
           [ -n "$slugs" ] || { echo "No brief to shoot."; exit 1; }
           for s in $slugs; do
-            grep -q '"screenshots"' "content/blog/briefs/$s.json" || continue
+            grep -qs '"screenshots"' "content/blog/briefs/$s.json" "content/blog/shots/$s.json" || continue
             node tools/blog/vendor-shots.js "$s"
             pngquant --force --skip-if-larger --quality 60-85 --ext .png blog/"$s"/shot-*.png || true
             ls -l blog/"$s"/shot-*.png
