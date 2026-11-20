@@ -1,0 +1,73 @@
+{
+  "slug": "forsured-launch",
+  "type": "news",
+  "reader": "GC owners, project executives, risk managers and construction brokers seeing Forsured for the first time on launch day",
+  "pillar": "/blog/how-to-check-a-contractor-coi/",
+  "questions": [
+    "What is Forsured?",
+    "How does continuous insurance compliance work for contractor COIs?",
+    "What does Forsured cost a general contractor?"
+  ],
+  "target_keywords": [
+    {
+      "kw": "Forsured launch",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "continuous insurance compliance",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "contractor COI",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "project requirements",
+      "vol": null,
+      "kd": null
+    },
+    {
+      "kw": "BuiltWorlds Demo Day",
+      "vol": null,
+      "kd": null
+    }
+  ],
+  "notes": "Launch announcement, published at the embargo time (Thu Nov 19 2026 8:00 AM ET) as the second post of a two-post day (Zach, Nov 18). Built from the final release (Google Doc 'Forsured Launch Release v3'). Quotes verbatim from the release only. The 45-55% stat is cited to IA Magazine Feb 28 2026 in its own wording ('initial COI submissions ... rejected for errors or missing information', per industry estimates). The release's Stoel Rives $350K-$2M figure is left out: on Stoel's pages it's an SDI deductible range, not the cost of an uninsured gap. The BCS hours stat is left out (names a competitor outside a Buyer's guide). Real-case cost example (Zach chose Nov 18): Chuck Hamilton Construction, Ark. Ct. App. Mar 11 2026, $750K settlement, total >$1.2M, per Insurance Business Mar 13 2026.",
+  "competing_sources": [
+    {
+      "url": "https://builtworlds.com/event/2026-aec-emerging-tech/",
+      "title": "2026 Venture East: AEC Emerging Tech (BuiltWorlds)",
+      "h2s": [
+        "Agenda",
+        "Demo Day | Thursday, November 19, 2026"
+      ],
+      "faqs": [],
+      "gap": "Event page; says nothing about contractor COIs or Forsured."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "What is Forsured?",
+      "Why contractor COI checks go stale",
+      "How does continuous insurance compliance work?",
+      "What does Forsured cost?",
+      "Where can you see Forsured at BuiltWorlds Demo Day?",
+      "How do you check a contractor COI against project requirements?"
+    ],
+    "table": null,
+    "internal_links": [
+      "/blog/how-to-check-a-contractor-coi/",
+      "/blog/compliance-isnt-coverage/",
+      "/blog/procore-coi-tracking/"
+    ],
+    "external_links": [
+      "https://builtworlds.com/event/2026-aec-emerging-tech/",
+      "https://www.irmi.com/term/insurance-definitions/additional-insured",
+      "https://www.iamagazine.com/2026/02/28/magic-in-a-bottle-challenges-and-opportunities-with-certificates-of-insurance/",
+      "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/arkansas-court-rules-insurer-owes-nothing-to-contractor-left-off-policy-568482.aspx"
+    ]
+  }
+}

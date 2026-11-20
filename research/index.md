@@ -6,6 +6,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## White papers
 
+- [R-36: Onboarding a new trade: the day-one compliance file](https://coijournal.com/reports/onboarding-a-new-trade/): The compliance file a GC should have before a new trade starts work: signed subcontract, certificate, endorsements, licenses and a diary. Markdown: https://coijournal.com/reports/onboarding-a-new-trade/index.md
 - [R-35: Where insurance fits in trade prequalification](https://coijournal.com/reports/prequalification-and-insurance/): Where insurance belongs in trade prequalification, which checks to run before award, which after, and the red flags to watch for. Markdown: https://coijournal.com/reports/prequalification-and-insurance/index.md
 - [R-34: New York's Scaffold Law and the insurance market for trades working in the state](https://coijournal.com/reports/new-york-labor-law-240-insurance/): New York Labor Law 240 and 241, what they do to liability insurance for contractors, and what GCs should check on trade COIs. Markdown: https://coijournal.com/reports/new-york-labor-law-240-insurance/index.md
 - [R-13: What to require from any COI tool: a vendor-neutral specification](https://coijournal.com/reports/coi-tool-specification/): A vendor-neutral specification for COI tracking tools: what to require, how to test it, and the questions to ask in a demo. Markdown: https://coijournal.com/reports/coi-tool-specification/index.md
@@ -23,6 +24,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## Analyst briefs
 
+- [R-27: Federal jobs: what FAR 52.228-5 requires of contractors and their trades](https://coijournal.com/reports/federal-contracts-far-insurance/): FAR 52.228-5 and 28.307-2: federal minimum insurance, the 30-day notice endorsement, and what flows down to trade contractors. Markdown: https://coijournal.com/reports/federal-contracts-far-insurance/index.md
 - [R-26: Per project aggregate limits: why owners ask for them and how CG 25 03 works](https://coijournal.com/reports/per-project-aggregate-limits/): Per project aggregate limits: the ISO CG 25 03 endorsement, what it changes, what it leaves alone, and how to check it. Markdown: https://coijournal.com/reports/per-project-aggregate-limits/index.md
 - [R-25: Waivers of subrogation on construction jobs: the endorsements, the limits, and the checks](https://coijournal.com/reports/waiver-of-subrogation-endorsements/): Waivers of subrogation: the ISO CG 24 04 and NCCI WC 00 03 13 endorsements, what they do and don't do, and how GCs confirm them. Markdown: https://coijournal.com/reports/waiver-of-subrogation-endorsements/index.md
 - [R-24: Primary and noncontributory: what the words mean and what actually proves it](https://coijournal.com/reports/primary-and-noncontributory-proof/): Primary and noncontributory wording: what it does, the ISO CG 20 01 endorsement, its conditions, and how to confirm it. Markdown: https://coijournal.com/reports/primary-and-noncontributory-proof/index.md

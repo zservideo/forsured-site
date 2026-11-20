@@ -5,6 +5,7 @@
   "description": "Which COI tracking software checks endorsements, not just certificates? Eight construction tools sorted by how deep they read the endorsement, and who decides.",
   "dek": "Almost every COI tracking tool now says it checks endorsements. What differs is how far it reads: the form type, a list of required forms, the wording, or the full policy. Here's where eight tools land, from their own pages.",
   "date": "2026-11-12T07:00:00-05:00",
+  "updated": "2026-11-20T07:00:00-05:00",
   "updated": "2026-11-13T07:00:00-05:00",
   "draft": false,
   "category": "Buyer's guide",
@@ -103,35 +104,51 @@ Depth 3 is where most construction gaps get caught, because that's where blanket
 
 Forsured reads each certificate and endorsement against the requirements of the project the contractor is on, including project-level exceptions. Each gap comes with its reason, such as a missing ongoing operations additional insured endorsement (CG 20 10) or an umbrella below the required aggregate. The contractor's broker sees the requirement, the document and the project in one shared workspace. AI finds and explains each issue, and a person on your team approves or waives it.
 
+![The Forsured homepage, showing a sample contractor checked against project requirements with a missing CG 20 10 endorsement flagged](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-forsured.png "forsured.ai homepage, checked Nov 20, 2026")
+
 ::video ZfDXobNtztQ
 
 ### PINS Advantage: reads the wording, with the page linked {#pins-advantage}
 
 [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) say their AI reads every endorsement in full and "confirms ongoing and completed operations coverage, including whether a CG D3 81 meets a CG 20 10 and CG 20 37 requirement." They check primary and noncontributory and waiver of subrogation wording, and flag restrictive language such as privity of contract limits. Each answer is pass, fail or needs review, with reasoning and a link to the exact page. Their line on depth: "the wording matters more than the form number." Nothing is auto-approved.
 
+![The PINS Advantage AI COI review page, headed AI COI Review That Reads Every Endorsement](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-pins-advantage.png "PINS Advantage AI COI review page, checked Nov 20, 2026")
+
 ### TrustLayer: reads the wording, rolling out by plan {#trustlayer}
 
 TrustLayer's [Enhanced Endorsements](https://www.trustlayer.io/pages/enhanced-endorsements) check for additional insured language and common equivalents, primary and noncontributory, waiver of subrogation on general liability, auto and workers' comp, completed operations wording, blanket versus scheduled requirements, and project, location or owner clauses. They also check that an endorsement is actually included, not just referred to. The result shows where the language appears and why it matched or didn't, and a person reviews it. TrustLayer say the feature is rolling out in phases and availability can depend on your plan.
+
+![The TrustLayer Enhanced Endorsements page, saying the COI looked fine but the endorsement changed the meaning](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-trustlayer.png "TrustLayer Enhanced Endorsements page, checked Nov 20, 2026")
 
 ### illumend: reads the wording, and AI decides {#illumend}
 
 [illumend](https://www.illumend.ai/), the AI platform from myCOI, say their AI, Lumie, "reads every endorsement, every time, line by line," including additional insureds, waivers of subrogation, primary and noncontributory and per project aggregates, and checks them against your contract. Lumie makes each compliance decision itself and escalates only what it can't resolve. In their [Procore integration](https://www.illumend.ai/integrations/procore), your team confirms the result.
 
+![The illumend homepage, introducing illumend from myCOI and its AI, Lumie, with a sample compliance score by coverage](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-illumend.png "illumend homepage, checked Nov 20, 2026")
+
 ### Billy: flags missing required endorsements {#billy}
 
 Billy's [AI review assistant](https://billyforinsurance.com/resources/faq/) flags missing endorsements by form: CG 20 10, CG 20 37, waiver of subrogation and primary and noncontributory, plus missing additional insured language, and tells the vendor how to fix it. On the managed plan, their CRIS-certified team reviews every certificate and endorsement. Their pages don't say whether the AI reads endorsement wording or checks for the form.
+
+![The Billy FAQ page, describing its platform from prequalification to closeout](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-billy.png "Billy FAQ page, checked Nov 20, 2026")
 
 ### bcs: names the endorsement type, with full review on full service {#bcs}
 
 The [bcs ai](https://www.getbcs.com/bcs-ai) page describes "instant endorsement type identification" and a question and answer walkthrough of the document, and says nothing the AI concludes is applied automatically: a compliance analyst signs off. bcs's [full-service plan](https://www.getbcs.com/pricing-and-plans) adds full policy reviews covering endorsements and description of operations language.
 
+![The bcs ai page, describing its AI for COI tracking with extraction, review and verification](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-bcs.png "bcs ai page, checked Nov 20, 2026")
+
 ### Certificial: names the endorsement and pulls key fields {#certificial}
 
 Certificial's [EndorsementIQ](https://www.certificial.com/endorsementiq) pulls the carrier, form number, policy numbers and exclusions from each endorsement so you can accept or reject it against your own criteria. Their page doesn't say how far it reads the wording.
 
+![The Certificial EndorsementIQ page, showing carrier, form number, policy number and exclusions pulled from an endorsement with accept and deny buttons](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-certificial.png "Certificial EndorsementIQ page, checked Nov 20, 2026")
+
 ### Jones: reads full policies as an add-on {#jones}
 
 Jones's AI and insurance specialists review COIs and required endorsements, and their [Policy Review](https://getjones.com/policy-review/) add-on reads full policies for exclusions: up to five pre-agreed exclusions on Standard, and relevant exclusions and restrictions on Comprehensive. It's the only tool here that describes reading the policy itself as a product feature.
+
+![The Jones Policy Review page, headed Catch The Risk A COI Can't Show](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-jones.png "Jones Policy Review page, checked Nov 20, 2026")
 
 ## Five questions to ask in a demo
 
@@ -145,4 +162,4 @@ State rules can change what you're allowed to require, so check [contractor insu
 
 ## About this guide
 
-This guide was written by the Forsured team. Forsured makes one of the eight tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of Nov 12, 2026. Products change, so confirm the details with each vendor.
+This guide was written by the Forsured team. Forsured makes one of the eight tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of Nov 12, 2026. The screenshots show the first screen of each vendor's page as it looked on Nov 20, 2026. Products change, so confirm the details with each vendor.
