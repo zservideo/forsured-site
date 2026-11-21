@@ -403,6 +403,10 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .crumbs a{text-decoration:none;display:inline-block;line-height:24px}
 .crumbs a:hover{color:var(--tx)}
 .post-head{padding:48px 0 8px}
+.byline{display:flex;align-items:center;gap:12px;margin-top:20px;font-size:15px;line-height:1.4;font-weight:500}
+.byline img{width:40px;height:40px;border-radius:50%;border:1px solid #E4E7EC}
+.byline a{text-decoration:none}.byline a:hover{text-decoration:underline;text-decoration-color:#FB612A}
+.byline-t{display:block;font-size:13px;font-weight:400;color:var(--mt)}
 .hero{margin:32px 0 0}
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
@@ -872,18 +876,20 @@ const SUB_JS = `<script>
 // optionally "reviewer"). Empty until a person is approved,
 // so posts fall back to the Organization.
 const personId = (a) => `${SITE}/#${a.id}`;
+const authorUrl = (a) => `/blog/authors/${a.id}/`;
 const personNode = (a) => ({
   '@type': 'Person',
   '@id': personId(a),
   name: a.name,
   jobTitle: a.jobTitle,
-  ...(a.url ? { url: a.url } : {}),
+  url: `${SITE}${authorUrl(a)}`,
+  ...(a.bio ? { description: a.bio } : {}),
   ...(a.image ? { image: a.image.startsWith('http') ? a.image : `${SITE}${a.image}` } : {}),
   ...(a.linkedin ? { sameAs: [a.linkedin] } : {}),
   worksFor: { '@id': ORG['@id'] },
   ...(a.knowsAbout ? { knowsAbout: a.knowsAbout } : {}),
 });
-const personLink = (a) => (a.linkedin ? `<a href="${esc(a.linkedin)}">${esc(a.name)}</a>` : esc(a.name));
+const personLink = (a) => `<a href="${authorUrl(a)}" rel="author">${esc(a.name)}</a>`;
 
 // The credit block at the foot of every post (S8): who wrote it, who reviewed it, and the dates.
 function aboutArticle(p, author, reviewer) {
@@ -1019,7 +1025,8 @@ ${nav('blog')}
       <p class="crumbs">${p.library ? '<a href="/guides/">Guides</a>' : '<a href="/blog/">Blog</a>'} / ${esc(p.category)}</p>
       <span class="label">${esc(p.category)}</span>
       <h1 style="margin-top:16px">${esc(p.title)}</h1>
-      <p class="dek">${inline(p.dek)}</p>
+      <p class="dek">${inline(p.dek)}</p>${author ? `
+      <p class="byline">${author.image ? `<img src="${esc(author.image)}" width="40" height="40" alt="" decoding="async"/>` : ''}<span>By ${personLink(author)}<span class="byline-t">${esc(author.jobTitle)}, Forsured</span></span></p>` : ''}
       <p class="meta"><span>Published <time datetime="${day(p.date)}">${human(p.date)}</time></span>${day(p.updated) !== day(p.date) ? `<span>Updated <time datetime="${day(p.updated)}">${human(p.updated)}</time></span>` : ''}</p>
       ${shareBar(p, 'Share this post')}
     </header>
@@ -1212,6 +1219,79 @@ ${items}
 }
 
 // Every public page goes in the sitemap. Pages outside the blog keep their own list here.
+// One page per person in content/authors.json, at /blog/authors/<id>/: who they are, where to find
+// them, and every post they wrote. The Person here is the same @id each post's author points to (AEO J1).
+function authorPage(a, posts) {
+  const mine = posts.filter((p) => p.author === a.id);
+  const url = authorUrl(a);
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${SITE}${url}#page`,
+        url: `${SITE}${url}`,
+        name: `${a.name}, ${a.jobTitle} at Forsured`,
+        isPartOf: { '@id': WEBSITE['@id'] },
+        mainEntity: { '@id': personId(a) },
+        inLanguage: 'en-US',
+        ...(mine.length ? { hasPart: mine.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${SITE}${p.url}`, datePublished: p.date })) } : {}),
+      },
+      personNode(a),
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Forsured', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+          { '@type': 'ListItem', position: 3, name: a.name, item: `${SITE}${url}` },
+        ],
+      },
+      WEBSITE,
+    ],
+  };
+  const first = a.name.split(' ')[0];
+  return `${head({
+    title: `${a.name}, ${a.jobTitle} | Forsured`,
+    description: `${a.name} is ${a.jobTitle} at Forsured, continuous insurance compliance software for construction. Posts, background and where to find ${first}.`.slice(0, 170),
+    url,
+    image: '/blog/og.png',
+    imageAlt: `${a.name}, Forsured`,
+    type: 'profile',
+    css: AUTHOR_CSS,
+    jsonld,
+  })}
+${nav('blog')}
+
+<main id="main" class="edge">
+  <div class="col">
+    <header class="author-head">
+      <p class="crumbs"><a href="/blog/">Blog</a> / Authors</p>
+      ${a.image ? `<img class="author-img" src="${esc(a.image)}" width="128" height="128" alt="Portrait of ${esc(a.name)}" decoding="async"/>` : ''}
+      <h1>${esc(a.name)}</h1>
+      <p class="author-t">${esc(a.jobTitle)}, Forsured</p>
+      ${a.bio ? `<p class="dek">${esc(a.bio)}</p>` : ''}
+      <div class="btns"><a class="cta-g" href="${esc(a.linkedin)}" rel="me">Follow ${esc(first)} on LinkedIn</a></div>
+    </header>
+    <section class="author-posts" aria-labelledby="author-posts">
+      <h2 id="author-posts">${mine.length ? `Posts by ${esc(first)}` : `${esc(first)}'s posts will show here`}</h2>
+      ${mine.length ? `<ul class="cards">${mine.map((p) => card(p)).join('')}</ul>` : `<p>Read the latest from the Forsured team on the <a href="/blog/">blog</a>.</p>`}
+    </section>
+  </div>
+</main>
+
+${BAND}
+
+${FOOTER()}`;
+}
+const AUTHOR_CSS = `.author-head{padding:48px 0 8px}
+.author-img{display:block;width:128px;height:128px;border-radius:50%;border:1px solid #E4E7EC;margin:8px 0 20px}
+.author-t{margin-top:8px;font-size:16px;font-weight:500;color:#344051}
+.author-head .btns{display:flex;gap:12px;margin-top:24px}
+.author-posts{padding:40px 0 64px}
+.author-posts h2{font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:-.015em;line-height:1.25;margin-bottom:20px}
+.author-posts .cards{grid-template-columns:1fr}
+.author-posts p a{text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:3px}`;
+
 const STATIC_PAGES = [
   { url: '/', priority: '1.0' },
   { url: '/irmi-field-guide/', priority: '0.5' },
@@ -1228,6 +1308,7 @@ function sitemap(posts) {
     ...posts.map((p) => ({ url: p.url, priority: '0.7', lastmod: day(p.updated) })),
     ...statePages().urls.map((url) => ({ url, priority: url === '/coi-requirements/' ? '0.8' : '0.6', lastmod: statePages().reviewed })),
     { url: researchPages().url, priority: '0.7', lastmod: researchPages().updated },
+    ...readAuthors().map((a) => ({ url: authorUrl(a), priority: '0.5', lastmod: null })),
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -1399,6 +1480,7 @@ function build() {
     }
   }
   if (gateFails.length) throw new Error(`AEO checklist failed (content/blog/README.md, "AEO checklist"):\n  ${gateFails.join('\n  ')}`);
+  for (const a of readAuthors()) files.set(`blog/authors/${a.id}/index.html`, authorPage(a, feedPosts));
   for (const [rel, content] of statePages().files) files.set(rel, content);
   for (const [rel, content] of researchPages().files) files.set(rel, content);
   files.set('blog/feed.xml', feed(feedPosts));

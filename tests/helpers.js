@@ -34,6 +34,8 @@ const PAGES = [
   { name: 'coi requirements', url: '/coi-requirements/', file: 'coi-requirements/index.html' },
   // COI Journal research hub, built from content/research/coi-journal.json by tools/blog/build.js.
   { name: 'research', url: '/research/', file: 'research/index.html' },
+  // Author pages, one per person in content/authors.json, built by tools/blog/build.js.
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, 'content', 'authors.json'), 'utf8')).people.map((a) => ({ name: `author ${a.id}`, url: `/blog/authors/${a.id}/`, file: `blog/authors/${a.id}/index.html`, author: true })),
   ...STATE_SLUGS.map((slug) => ({ name: `state ${slug}`, url: `/coi-requirements/${slug}/`, file: `coi-requirements/${slug}/index.html`, state: true })),
 ];
 

@@ -120,7 +120,10 @@ function check(p, brief, html, authors = readAuthors()) {
   const ids = new Set(authors.map((a) => a.id));
   if (p.author && !ids.has(p.author)) miss('S8', `author "${p.author}" is not in content/authors.json`);
   if (p.reviewer && !ids.has(p.reviewer)) miss('S8', `reviewer "${p.reviewer}" is not in content/authors.json`);
-  if (!p.author) (authors.length ? fails : warns).push(`S8: no "author" yet${authors.length ? '' : ' (content/authors.json has no approved person; required once it does)'}`);
+  // Posts the team writes together stay "by the Forsured team" (Zach, Nov 21 2026: bylines are for
+  // posts a person actually writes, like a founder's launch note or a product update). A missing
+  // author is a reminder, not a failure.
+  if (!p.author) warns.push(`S8: no "author" (byline is the Forsured team)${authors.length ? '' : '; content/authors.json has no approved person yet'}`);
 
   // S9: keyword placement.
   const lowerHeadings = headings.join('\n').toLowerCase();

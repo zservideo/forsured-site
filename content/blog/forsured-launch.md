@@ -2,10 +2,10 @@
 {
   "title": "Forsured launch highlights: the Built Week video, the press coverage and the momentum since Demo Day",
   "seoTitle": "Forsured Launch Highlights: Video, Press and Momentum | Forsured",
-  "description": "Forsured launch highlights: the Built Week video, Boston Business Journal and Banker & Tradesman coverage, and our network's response to the Nov 19 debut.",
-  "dek": "Here are the Forsured launch highlights: the Built Week video, coverage from the Boston Business Journal and Banker & Tradesman, and the response from our network. Forsured is continuous insurance compliance software that checks every contractor COI against project requirements, and it came out of stealth Nov 19 at BuiltWorlds Demo Day in Boston.",
+  "description": "Forsured launch highlights from the founders: the Built Week video, Boston Business Journal and Banker & Tradesman coverage, and a thank-you to our network.",
+  "dek": "Thank you. That's the first thing we want to say about the Forsured launch. On Nov 19 we came out of stealth at BuiltWorlds Demo Day in Boston with continuous insurance compliance software that checks every contractor COI against project requirements. Here's the week: the video, the press, and the people who showed up for us.",
   "date": "2026-11-19T08:00:00-05:00",
-  "updated": "2026-11-21T00:05:00-05:00",
+  "updated": "2026-11-21T08:40:00-05:00",
   "draft": false,
   "category": "Forsured news",
   "hero": {
@@ -29,7 +29,7 @@
   ],
   "takeaways": [
     "Forsured launched Nov 19, 2026, on stage at BuiltWorlds Demo Day in Boston, opening its continuous insurance compliance software to general contractors and their brokers nationwide. It's approaching 10 general contractor pilots, with the first several now paying customers.",
-    "The Boston Business Journal and Banker & Tradesman covered the launch, and the Built Week video and Zach Servideo's LinkedIn launch post carry the story from the stage.",
+    "The Boston Business Journal and Banker & Tradesman covered the launch, and our network showed up on LinkedIn. This page collects the Built Week video, the stories and the comments in one place.",
     "Forsured checks every contractor COI and endorsement against the project requirements it's for, routes each gap to the contractor's broker, and keeps checking renewals and coverage changes for the life of the job."
   ],
   "faq": [
@@ -164,11 +164,6 @@
   ],
   "quotes": [
     {
-      "text": "We kept our heads down and built. Then the market started pulling. Contractors asked us to replace the tools they have. Brokers started bringing us their clients. General contractors started paying before we'd said a word in public.",
-      "name": "Zach Servideo",
-      "title": "Founder and Chief Growth Officer"
-    },
-    {
       "text": "Anyone can point AI at a certificate and call it valid. That's not the job. The job is knowing whether this contractor is covered for this project, today, and getting the gap closed before work starts and continued through the project.",
       "name": "Marc Gigliotti",
       "title": "Founder and Chief Product Officer"
@@ -180,7 +175,7 @@
     "date": "Nov 20, 2026",
     "url": "https://www.linkedin.com/posts/zservideo_contech-construction-portfoliocareer-ugcPost-7529586815067160576-Qxza/",
     "text": "In our 20s we made each other a promise: one day we'd build products together. Our own. Forsured is us just doing the thing.",
-    "ask": "Help us spread the word. Like, comment on or repost Zach's launch post, and it reaches another general contractor or broker.",
+    "ask": "Want to help? Like, comment on or repost the launch post. Every share puts Forsured in front of another general contractor or broker.",
     "cta": "Like, comment or repost on LinkedIn"
   },
   "shoutouts": [
@@ -209,32 +204,35 @@
       "name": "Anil Rathi",
       "text": "Congratulations Zach Servideo on the new venture, sounds like a big market opportunity for risk management!"
     }
-  ]
+  ],
+  "author": "zach-servideo"
 }
 ---
-Forsured came out of stealth on Nov 19, 2026, on stage at [BuiltWorlds Demo Day](https://builtworlds.com/event/2026-aec-emerging-tech/), one of nine companies presenting at the 2026 Venture East: AEC Emerging Tech conference during Boston Built Week. This page collects the Forsured launch highlights: the video, the press, the founders and the people cheering us on.
+On Nov 19, 2026, we walked onto the [BuiltWorlds Demo Day](https://builtworlds.com/event/2026-aec-emerging-tech/) stage in Boston and took Forsured out of stealth. We built this page to say thank you, and to put the Forsured launch highlights in one place: the video, the press, our team and the people cheering us on.
 
 ## Who covered the Forsured launch? {#press}
 
-Two publications covered the Forsured launch on launch day. Grant Welker wrote it up for the [Boston Business Journal](https://www.bizjournals.com/boston/news/2026/11/19/boston-construction-insurance-compliance-startup-l.html), and Steve Adams covered it for [Banker & Tradesman](https://bankerandtradesman.com/startup-pitches-insurance-compliance-for-construction-industry/). Both are subscriber stories, so you may need a login to read them in full.
+Two publications covered the Forsured launch on launch day, and we're grateful to both. Grant Welker wrote it up for the [Boston Business Journal](https://www.bizjournals.com/boston/news/2026/11/19/boston-construction-insurance-compliance-startup-l.html), and Steve Adams covered it for [Banker & Tradesman](https://bankerandtradesman.com/startup-pitches-insurance-compliance-for-construction-industry/).
 
 ::coverage
 
 ## What did the founders say about the Forsured launch?
 
-The founders say the Forsured launch at BuiltWorlds Demo Day came after the market started pulling. Marc Gigliotti and Zach Servideo have been friends since age three in Methuen. Marc leads product, and Zach leads growth.
+The short version of the Forsured launch at BuiltWorlds Demo Day: we kept our heads down and built, and then the market started pulling. Contractors asked us to replace the tools they have. Brokers started bringing us their clients. General contractors started paying before we'd said a word in public.
 
 ![Marc Gigliotti and Zach Servideo, two of the Forsured founders, smiling together in a sunlit atrium, Zach in a black Forsured polo](founders.jpg "Marc Gigliotti (left), Chief Product Officer, and Zach Servideo, Chief Growth Officer.")
+
+Marc and Zach have been friends since age three in Methuen. Marc leads product. Here's how he puts the job:
 
 ::quotes
 
 ## How did our network react to the Forsured launch?
 
-Our network showed up for the Forsured launch. Zach's [LinkedIn launch post](https://www.linkedin.com/posts/zservideo_contech-construction-portfoliocareer-ugcPost-7529586815067160576-Qxza/) drew congratulations from founders, operators, investors and brokers within hours. If you want to help, like, comment on or repost it. Every share reaches another general contractor or broker who still checks a contractor COI by hand.
+Our network showed up for the Forsured launch, and it meant the world to us. Founders, operators, investors and brokers filled the comments on our [LinkedIn launch post](https://www.linkedin.com/posts/zservideo_contech-construction-portfoliocareer-ugcPost-7529586815067160576-Qxza/) within hours. If you want to help, like, comment on or repost it.
 
 ::linkedin
 
-A few of the comments on the post:
+A few of the comments that made our week:
 
 ::shoutouts
 
@@ -263,18 +261,18 @@ Continuous insurance compliance works in six parts:
 
 ## What does Forsured cost?
 
-As of the Forsured launch, general contractors pay an annual subscription, and the first project is free. Trade contractors and brokers pay nothing, and Forsured takes no commission.
+At launch, general contractors pay an annual subscription, and the first project is free. Trade contractors and brokers pay nothing, and we take no commission.
 
 > We're a Boston general contractor and we run lean. Our insurance tracking lived in a spreadsheet and one person's inbox. Forsured showed us exactly where our contractors' coverage fell short of what our projects require, and it keeps watching so we don't have to. Saying yes was easy. -- Steve Stoddard, owner of Lighthouse Construction and one of Forsured's first paying customers
 
-More than 20 RiskProNet brokerages, with about $2 billion in combined revenue, are advocating for Forsured with their contractor clients.
+We're not doing this alone. More than 20 RiskProNet brokerages, with about $2 billion in combined revenue, are advocating for Forsured with their contractor clients.
 
 > Brokers get pulled into compliance fire drills after everyone is already frustrated. Forsured moves that conversation upstream. The broker sees exactly what the project needs and fixes it once. Nobody pays a commission, and the broker's client relationship gets stronger. -- Erik Wenstone, Founder and CEO of Forsured and a principal at CMR Risk & Insurance Services
 
 ## What happened at BuiltWorlds Demo Day?
 
-BuiltWorlds Demo Day was the stage for the Forsured launch. Forsured pitched on Thursday, Nov 19, in the 10:50 AM to 12:20 PM ET session at Convene One Boston Place, 201 Washington St., Boston. Missed BuiltWorlds Demo Day? Send one project's requirements and a contractor COI for a free COI risk check, the same check behind the pitch.
+BuiltWorlds Demo Day was the stage for the Forsured launch. We pitched on Thursday, Nov 19, in the 10:50 AM to 12:20 PM ET session at Convene One Boston Place, 201 Washington St., Boston. Missed BuiltWorlds Demo Day? Send us one project's requirements and a contractor COI, and we'll run the same free COI risk check behind the pitch.
 
 ## How do you check a contractor COI against project requirements?
 
-You check a contractor COI against project requirements by reading the certificate and every endorsement behind it against what the contract asks for: limits, additional insured, primary and noncontributory, waiver of subrogation and dates. That's continuous insurance compliance, and the core of the Forsured launch. Our guide on [how to check a contractor COI](/blog/how-to-check-a-contractor-coi/) walks through each line.
+You check a contractor COI against project requirements by reading the certificate and every endorsement behind it against what the contract asks for: limits, additional insured, primary and noncontributory, waiver of subrogation and dates. That's continuous insurance compliance, and it's why we built Forsured. Our guide on [how to check a contractor COI](/blog/how-to-check-a-contractor-coi/) walks through each line.
