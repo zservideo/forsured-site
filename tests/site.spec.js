@@ -214,16 +214,17 @@ test('trade contractor CTA preselects the role in the risk check form', async ({
 });
 
 test.describe('Event banner', () => {
+  // Since Nov 21 2026 the banner sends visitors to the launch highlights post (Zach, after Demo Day).
   test('shows the announcement above the nav without covering it', async ({ page, isMobile }) => {
     await open(page);
     const bar = page.locator('#irmi-bar');
     await expect(bar).toBeVisible();
-    await expect(bar).toHaveText(isMobile ? /Demo Day presenter, Nov 19/ : /one of nine companies presenting at BuiltWorlds Venture East Demo Day, Nov 19 in Boston/);
+    await expect(bar).toHaveText(isMobile ? /Our launch highlights/ : /Check out our launch highlights/);
     // Wording BuiltWorlds approved: a presenter, one of nine. Never "finalist".
     await expect(bar).not.toHaveText(/finalist/i);
-    const cta = bar.getByRole('link', { name: /field guide/i });
+    const cta = bar.getByRole('link', { name: /See (the launch post|them)/ });
     await expect(cta).toBeVisible();
-    await expect(cta).toHaveAttribute('href', 'builtworlds-field-guide/');
+    await expect(cta).toHaveAttribute('href', 'blog/forsured-launch/');
     const barBox = await bar.boundingBox();
     const navBox = await page.locator('#nav').boundingBox();
     expect(barBox.y).toBe(0);
@@ -242,11 +243,11 @@ test.describe('Event banner', () => {
     expect((await page.locator('#nav').boundingBox()).y).toBeGreaterThan(0);
   });
 
-  test('field guide CTA opens the guide', async ({ page }) => {
+  test('launch highlights CTA opens the launch post', async ({ page }) => {
     await open(page);
     await page.locator('#irmi-bar .ib-cta').click();
-    await expect(page).toHaveURL(/\/builtworlds-field-guide\/$/);
-    await expect(page.locator('h1')).toBeVisible();
+    await expect(page).toHaveURL(/\/blog\/forsured-launch\/$/);
+    await expect(page.locator('h1')).toContainText('Forsured launch highlights');
   });
 
   test('can be dismissed and stays dismissed on reload', async ({ page }) => {

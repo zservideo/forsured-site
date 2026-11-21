@@ -83,6 +83,8 @@ for (const slug of POSTS) {
       const hero = page.locator('figure.hero img');
       await expect(hero).toHaveAttribute('src', 'hero.png');
       expect((await hero.getAttribute('alt')).length, 'hero alt text says what the image shows').toBeGreaterThan(30);
+      // A post with a feature panel (video up top) lazy-loads its hero further down the page.
+      await hero.scrollIntoViewIfNeeded();
       await expect.poll(() => hero.evaluate((img) => img.complete && [img.naturalWidth, img.naturalHeight].join('x'))).toBe('1600x800');
       const meta = (sel) => page.locator(sel).getAttribute('content');
       expect(await meta('meta[property="og:image"]')).toBe(`https://forsured.ai/blog/${slug}/og.png`);

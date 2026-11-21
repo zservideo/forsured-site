@@ -35,7 +35,7 @@
       "kd": null
     }
   ],
-  "notes": "Launch announcement, published at the embargo time (Thu Nov 19 2026 8:00 AM ET) as the second post of a two-post day (Zach, Nov 18). Built from the final release (Google Doc 'Forsured Launch Release v3'). Quotes verbatim from the release only. The 45-55% stat is cited to IA Magazine Feb 28 2026 in its own wording ('initial COI submissions ... rejected for errors or missing information', per industry estimates). The release's Stoel Rives $350K-$2M figure is left out: on Stoel's pages it's an SDI deductible range, not the cost of an uninsured gap. The BCS hours stat is left out (names a competitor outside a Buyer's guide). Real-case cost example (Zach chose Nov 18): Chuck Hamilton Construction, Ark. Ct. App. Mar 11 2026, $750K settlement, total >$1.2M, per Insurance Business Mar 13 2026.",
+  "notes": "Launch announcement, published at the embargo time (Thu Nov 19 2026 8:00 AM ET) as the second post of a two-post day (Zach, Nov 18). Built from the final release (Google Doc 'Forsured Launch Release v3'). Quotes verbatim from the release only. The 45-55% stat is cited to IA Magazine Feb 28 2026 in its own wording ('initial COI submissions ... rejected for errors or missing information', per industry estimates). The release's Stoel Rives $350K-$2M figure is left out: on Stoel's pages it's an SDI deductible range, not the cost of an uninsured gap. The BCS hours stat is left out (names a competitor outside a Buyer's guide). Real-case cost example (Zach chose Nov 18): Chuck Hamilton Construction, Ark. Ct. App. Mar 11 2026, $750K settlement, total >$1.2M, per Insurance Business Mar 13 2026. Nov 21 2026 rewrite (Zach): launch highlights post. Built Week video moved to a feature panel at the top; press coverage (BBJ, Grant Welker; Banker & Tradesman, Steve Adams) from front matter `coverage`; Zach's LinkedIn launch post card and six public comments from it (`linkedin`, `shoutouts`); Zach and Marc quotes verbatim from the approved release (`quotes`); founders photo from brand/builtweek-onsite. To add Axios Boston or any new story, append to `coverage` and bump the '2' stat.",
   "competing_sources": [
     {
       "url": "https://builtworlds.com/event/2026-aec-emerging-tech/",
@@ -50,11 +50,14 @@
   ],
   "plan": {
     "h2s": [
+      "Who covered the Forsured launch?",
+      "What did the founders say about the Forsured launch?",
+      "How did our network react to the Forsured launch?",
       "What is Forsured?",
-      "Why contractor COI checks go stale",
+      "Why do contractor COI checks go stale?",
       "How does continuous insurance compliance work?",
       "What does Forsured cost?",
-      "Where can you see Forsured at BuiltWorlds Demo Day?",
+      "What happened at BuiltWorlds Demo Day?",
       "How do you check a contractor COI against project requirements?"
     ],
     "table": null,
@@ -67,7 +70,11 @@
       "https://builtworlds.com/event/2026-aec-emerging-tech/",
       "https://www.irmi.com/term/insurance-definitions/additional-insured",
       "https://www.iamagazine.com/2026/02/28/magic-in-a-bottle-challenges-and-opportunities-with-certificates-of-insurance/",
-      "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/arkansas-court-rules-insurer-owes-nothing-to-contractor-left-off-policy-568482.aspx"
+      "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/arkansas-court-rules-insurer-owes-nothing-to-contractor-left-off-policy-568482.aspx",
+      "https://www.bizjournals.com/boston/news/2026/11/19/boston-construction-insurance-compliance-startup-l.html",
+      "https://bankerandtradesman.com/startup-pitches-insurance-compliance-for-construction-industry/",
+      "https://www.linkedin.com/posts/zservideo_contech-construction-portfoliocareer-ugcPost-7529586815067160576-Qxza/"
     ]
-  }
+  },
+  "slug_locked": true
 }

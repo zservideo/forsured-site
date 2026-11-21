@@ -42,15 +42,118 @@ const series = (v) => v.series || 'Ask the Construction Guy';
 const videoText = (v) => (v.transcript ? `> Transcript: ${v.transcript}` : `Summary: ${v.summary}`);
 // Click to play: only the poster image loads with the page. The YouTube player (and its cookies-free
 // embed) loads after a reader presses play, so a video costs a post nothing until someone watches it.
-function videoBlock(id) {
+function videoBlock(id, brief = false) {
   const v = video(id);
   const poster = `https://i.ytimg.com/vi/${id}/${v.poster || 'oardefault'}.jpg`;
   const [w, h] = v.poster === 'maxresdefault' ? [1280, 720] : [1080, 1920];
   return `<figure class="video" id="video-${id}">
 <div class="video-frame"><a class="video-play" href="${watchUrl(id)}" data-video="${id}" data-title="${esc(v.title)}" aria-label="Play video: ${esc(v.title)} (${clock(v.seconds)})"><img src="${poster}" width="${w}" height="${h}" alt="" loading="lazy" decoding="async"/><span class="video-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.5v13l11-6.5z" fill="#fff"/></svg></span></a></div>
-<figcaption><strong>${esc(series(v))}:</strong> ${esc(v.title)} (${clock(v.seconds)}).${v.summary ? ` ${esc(v.summary)}` : ''}${disclosure(v) ? ` ${esc(disclosure(v))}` : ''}</figcaption>
+<figcaption><strong>${esc(series(v))}:</strong> ${esc(v.title)} (${clock(v.seconds)}).${v.summary && !brief ? ` ${esc(v.summary)}` : ''}${disclosure(v) ? ` ${esc(disclosure(v))}` : ''}</figcaption>
 ${v.transcript ? `<details class="video-transcript"><summary>Read the transcript</summary><blockquote><p>${esc(v.transcript)}</p></blockquote></details>` : ''}
 </figure>`;
+}
+
+// ---------- announcement media (launch posts) ----------
+// Styles ship only on posts that use these blocks, so other posts keep their page weight.
+const MEDIA_CSS = `/* Announcement posts: feature panel (video beside the week's numbers), press cards, LinkedIn card, comments, pull quotes */
+.feat{display:grid;grid-template-columns:270px 1fr;gap:32px;align-items:start;margin:32px 0 0;padding:24px;background:#2C2D29;border-radius:12px;color:#fff}
+.feat .video{width:270px;margin:0}
+.feat .video-frame{border-color:#3C3D37}
+.feat .video figcaption{font-size:12.5px;line-height:18px;color:rgba(255,255,255,.66);margin-top:10px}
+.feat h2{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);padding-top:4px}
+.feat-stats{list-style:none;margin-top:12px}
+.feat-stats li{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.12)}
+.feat-stats li:first-child{border-top:0}
+.feat-stats strong{white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1;letter-spacing:-.02em;color:#fff}
+.feat-stats span{font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.82)}
+.feat-stats a{color:#fff;text-decoration:underline;text-decoration-color:#FB612A;text-underline-offset:3px}
+.feat-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.feat-links .cta-g{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.feat-links .cta-g:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6)}
+.prose .press{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.prose .press li+li{margin-top:0}
+.press-a{display:flex;flex-direction:column;height:100%;padding:20px;background:#fff;border:1px solid #E4E7EC;border-radius:12px;text-decoration:none!important;transition:border-color .15s}
+.press-a:hover{border-color:#FB612A}
+.press-o{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#344051}
+.prose .press-t{border:0;padding:0;margin:10px 0 0;color:var(--tx);font-family:var(--serif);font-size:20px;line-height:1.35;letter-spacing:-.01em}
+.press-m{margin-top:12px;font-size:13px;line-height:1.5;color:var(--mt)}
+.press-n{margin-top:4px;font-size:13px;line-height:1.5;color:var(--mt)}
+.press-r{margin-top:auto;padding-top:14px;font-size:14px;font-weight:500;color:#FB612A}
+.li-card{padding:24px;background:#fff;border:1px solid #E4E7EC;border-radius:12px}
+.li-h{display:flex;align-items:center;gap:12px;font-size:15px;line-height:1.4;color:var(--tx)}
+.li-ico{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:#2C2D29;color:#fff;flex:none}
+.li-r{display:block;font-size:13px;color:var(--mt)}
+.prose .li-q{border:0;padding:0;margin-top:16px;color:var(--tx);font-size:17px;line-height:1.7}
+.li-ask{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-top:20px;padding-top:16px;border-top:1px solid #E4E7EC}
+.prose .li-ask p{font-size:15px;line-height:1.5;color:#344051;max-width:420px}
+.li-ask .cta-p{color:#fff;text-decoration:none}
+.prose .shout{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prose .shout li+li{margin-top:0}
+.shout li{display:flex;flex-direction:column;padding:16px 18px;background:#FBF8F3;border:1px solid #EFE7DA;border-radius:10px}
+.prose .shout blockquote{border:0;padding:0;color:var(--tx);font-size:15px;line-height:1.6}
+.shout-n{margin-top:10px;font-size:13px;font-weight:600;color:#344051}
+.shout-c{font-size:12.5px;color:var(--mt)}
+.prose .hero{margin:28px 0}
+.prose .pull{border-left:3px solid #FB612A;padding:2px 0 2px 20px}
+.prose .pull p{font-family:var(--serif);font-size:21px;line-height:1.5;letter-spacing:-.01em;color:var(--tx)}
+@media(max-width:768px){.feat{grid-template-columns:1fr;gap:20px;padding:20px}.feat .video{margin:0 auto}.prose .press,.prose .shout{grid-template-columns:1fr}.feat-stats li{grid-template-columns:80px 1fr;gap:12px}.feat-stats strong{font-size:24px}}
+@media(max-width:400px){.feat{padding:16px 12px}.feat .video{width:100%;max-width:270px}.li-card{padding:18px}.li-ask .cta-p{white-space:normal;height:auto;min-height:44px;padding:10px 14px}}
+`;
+// A line on its own like `::coverage` renders that list from the post's front matter, so a post can carry
+// press coverage, a LinkedIn post, network comments and pull quotes without repeating markup. Every
+// item must be real and linked to where it was published. Headlines, quotes and comments sit in
+// <blockquote> because they are kept word for word.
+const MEDIA_LINE = /^::(coverage|linkedin|shoutouts|quotes|hero)$/;
+const MEDIA_LINE_ANY = /^::(coverage|linkedin|shoutouts|quotes|hero)$/m;
+const needList = (p, key) => {
+  const v = p && p[key];
+  if (!v || (Array.isArray(v) && !v.length)) throw new Error(`${p ? p.slug : 'post'}: ::${key} needs "${key}" in the front matter`);
+  return v;
+};
+const LI_ICON = '<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
+function mediaBlock(kind, p, feed) {
+  if (kind === 'coverage') {
+    const items = needList(p, 'coverage');
+    if (feed) return `<ul>${items.map((c) => `<li><a href="${esc(c.url)}">${esc(c.outlet)}: ${esc(c.title)}</a>${c.author ? `, by ${esc(c.author)}` : ''}, ${esc(c.date)}</li>`).join('')}</ul>`;
+    return `<ul class="press" aria-label="Press coverage">${items.map((c) => `<li class="press-i"><a class="press-a" href="${esc(c.url)}"><span class="press-o">${esc(c.outlet)}</span><blockquote class="press-t"><p>${esc(c.title)}</p></blockquote><span class="press-m">${c.author ? `${esc(c.author)} · ` : ''}${esc(c.date)}</span>${c.note ? `<span class="press-n">${esc(c.note)}</span>` : ''}<span class="press-r">Read the story<span aria-hidden="true"> →</span></span></a></li>`).join('')}</ul>`;
+  }
+  if (kind === 'linkedin') {
+    const l = needList(p, 'linkedin');
+    if (feed) return `<p><a href="${esc(l.url)}">${esc(l.cta || 'Read the launch post on LinkedIn')}</a>: ${esc(l.text)} (${esc(l.author)})</p>`;
+    return `<figure class="li-card"><figcaption class="li-h"><span class="li-ico">${LI_ICON}</span><span><strong>${esc(l.author)}</strong><span class="li-r">${esc(l.role)} · ${esc(l.date)} on LinkedIn</span></span></figcaption><blockquote class="li-q"><p>${esc(l.text)}</p></blockquote><div class="li-ask"><p>${esc(l.ask)}</p><a class="cta-p" href="${esc(l.url)}">${LI_ICON}${esc(l.cta || 'Like, comment or repost')}</a></div></figure>`;
+  }
+  if (kind === 'shoutouts') {
+    const s = needList(p, 'shoutouts');
+    if (feed) return s.map((c) => `<blockquote><p>${esc(c.text)}</p><cite>${esc(c.name)}, on LinkedIn</cite></blockquote>`).join('');
+    return `<ul class="shout" aria-label="Comments on the LinkedIn launch post">${s.map((c) => `<li><blockquote><p>${esc(c.text)}</p></blockquote><span class="shout-n">${esc(c.name)}</span>${c.context ? `<span class="shout-c">${esc(c.context)}</span>` : ''}</li>`).join('')}</ul>`;
+  }
+  // `::hero` places the hero image inside the body on a post with a feature panel, below the first screen.
+  if (kind === 'hero') return feed ? '' : `<figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" loading="lazy" decoding="async"/></figure>`;
+  if (kind === 'quotes') {
+    const q = needList(p, 'quotes');
+    return q.map((c) => `<blockquote class="pull"><p>“${esc(c.text)}”</p><cite>${esc(c.name)}, ${esc(c.title)}</cite></blockquote>`).join('\n');
+  }
+  return '';
+}
+const mediaText = (kind, p) => {
+  if (kind === 'coverage') return p.coverage.map((c) => `- [${c.outlet}: ${c.title}](${c.url})${c.author ? `, by ${c.author}` : ''}, ${c.date}`).join('\n');
+  if (kind === 'linkedin') return `> ${p.linkedin.text} -- ${p.linkedin.author}, on LinkedIn\n\n[${p.linkedin.cta || 'Read the launch post on LinkedIn'}](${p.linkedin.url})`;
+  if (kind === 'shoutouts') return p.shoutouts.map((c) => `> ${c.text} -- ${c.name}, on LinkedIn`).join('\n\n');
+  if (kind === 'quotes') return p.quotes.map((c) => `> "${c.text}" -- ${c.name}, ${c.title}`).join('\n\n');
+  return '';
+};
+
+// A feature panel at the top of an announcement post: the video beside the week's numbers.
+function featureBlock(p) {
+  const f = p.feature;
+  const stats = f.stats || [];
+  return `<section class="feat" aria-labelledby="feat-h">
+      ${videoBlock(f.video, true)}
+      <div class="feat-side">
+        <h2 id="feat-h">${esc(f.heading || 'At a glance')}</h2>
+        <ul class="feat-stats">${stats.map((s) => `<li><strong>${esc(s.value)}</strong><span>${inline(s.label)}</span></li>`).join('')}</ul>
+${f.links && f.links.length ? `        <div class="feat-links">${f.links.map((l, i) => `<a class="${i ? 'cta-g' : 'cta-p'}" href="${esc(l.url)}">${esc(l.label)}</a>`).join('')}</div>\n` : ''}      </div>
+    </section>`;
 }
 
 // ---------- reading posts ----------
@@ -110,23 +213,38 @@ function pngSize(file) {
   return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
 }
 
+// Width and height from a JPEG's start-of-frame marker (photos, which would be too heavy as PNG).
+function jpgSize(file) {
+  const b = fs.readFileSync(file);
+  if (b[0] !== 0xff || b[1] !== 0xd8) throw new Error(`${file} is not a JPEG`);
+  for (let i = 2; i < b.length; ) {
+    const marker = b[i + 1];
+    const len = b.readUInt16BE(i + 2);
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return { height: b.readUInt16BE(i + 5), width: b.readUInt16BE(i + 7) };
+    i += 2 + len;
+  }
+  throw new Error(`${file}: no JPEG size found`);
+}
+
 // dir: the post's output folder, where its images live (blog/<slug>/).
 // base: prefix for image URLs (the feed and Markdown copies need absolute ones).
-function markdown(md, dir, base = '') {
+function markdown(md, dir, base = '', p = null) {
   const out = [];
   for (const block of md.split(/\n\s*\n/)) {
     const lines = block.split('\n').map((l) => l.trimEnd());
     const first = lines[0];
     let h;
-    if (lines.length === 1 && (h = first.match(VIDEO_LINE))) {
+    if (lines.length === 1 && (h = first.match(MEDIA_LINE))) {
+      out.push(mediaBlock(h[1], p, Boolean(base)));
+    } else if (lines.length === 1 && (h = first.match(VIDEO_LINE))) {
       const v = video(h[1]);
       // The RSS feed and emails can't run the player, so they get a plain link.
       out.push(base ? `<p><a href="${watchUrl(h[1])}">Watch: ${esc(v.title)} (${clock(v.seconds)})</a>.${v.summary ? ` ${esc(v.summary)}` : ''}${disclosure(v) ? ` ${esc(disclosure(v))}` : ''}</p>` : videoBlock(h[1]));
-    } else if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.png)(?: "([^"]+)")?\)$/))) {
+    } else if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.(?:png|jpg))(?: "([^"]+)")?\)$/))) {
       const [, alt, src, caption] = h;
       const file = path.join(dir || '', src);
       if (!dir || !fs.existsSync(file)) throw new Error(`image ${src} not found${dir ? ` in ${path.relative(ROOT, dir)}` : ''}`);
-      const { width, height } = pngSize(file);
+      const { width, height } = /\.jpg$/.test(src) ? jpgSize(file) : pngSize(file);
       out.push(`<figure><img src="${esc(base + src)}" width="${width}" height="${height}" alt="${esc(alt)}" loading="lazy" decoding="async"/>${caption ? `<figcaption>${inline(caption)}</figcaption>` : ''}</figure>`);
     } else if ((h = first.match(/^(#{2,3}) (.+)$/))) {
       // `### Heading {#id}` sets the anchor by hand, for headings that tables or structured data link to.
@@ -820,7 +938,7 @@ function postPage(p, posts) {
       mainEntityOfPage: `${SITE}${p.url}`,
       articleSection: p.category,
       keywords: (p.tags || []).join(', '),
-      wordCount: p.body.replace(/^::video .*$/gm, '').trim().split(/\s+/).length,
+      wordCount: p.body.replace(/^::\w+.*$/gm, '').trim().split(/\s+/).length,
       inLanguage: 'en-US',
       isPartOf: { '@type': 'Blog', '@id': `${SITE}/blog/#blog`, name: 'Forsured Blog', isPartOf: { '@id': WEBSITE['@id'] } },
       encoding: { '@type': 'MediaObject', encodingFormat: 'text/markdown', contentUrl: `${SITE}${p.url}index.md` },
@@ -849,7 +967,7 @@ function postPage(p, posts) {
     graph.splice(1, 0, ...p.schema);
   }
   // One VideoObject per embedded Ask the Construction Guy video, linked from the article.
-  const vids = [...new Set(videoIds(p.body))];
+  const vids = [...new Set([...(p.feature ? [p.feature.video] : []), ...videoIds(p.body)])];
   if (vids.length) {
     graph[0].video = vids.map((id) => ({ '@id': `${SITE}${p.url}#video-${id}` }));
     graph.splice(1, 0, ...vids.map((id) => {
@@ -889,6 +1007,7 @@ function postPage(p, posts) {
     section: p.category,
     tags: p.tags,
     md: true,
+    css: p.feature || MEDIA_LINE_ANY.test(p.body) ? MEDIA_CSS : '',
     jsonld: { '@context': 'https://schema.org', '@graph': graph },
   })}
 ${nav('blog')}
@@ -904,13 +1023,15 @@ ${nav('blog')}
       <p class="meta"><span>Published <time datetime="${day(p.date)}">${human(p.date)}</time></span>${day(p.updated) !== day(p.date) ? `<span>Updated <time datetime="${day(p.updated)}">${human(p.updated)}</time></span>` : ''}</p>
       ${shareBar(p, 'Share this post')}
     </header>
-    <figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" fetchpriority="high" decoding="async"/></figure>
-    <aside class="tldr" aria-labelledby="tldr">
+${p.feature ? `    ${featureBlock(p)}
+` : `    <figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" fetchpriority="high" decoding="async"/></figure>
+`}    <aside class="tldr" aria-labelledby="tldr">
       <h2 id="tldr">The short version</h2>
       <ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul>
-    </aside>
+    </aside>${p.feature && !/^::hero$/m.test(p.body) ? `
+    <figure class="hero"><img src="hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}" loading="lazy" decoding="async"/></figure>` : ''}
     <div class="prose">
-${markdown(p.body, path.join(ROOT, 'blog', p.slug))}
+${markdown(p.body, path.join(ROOT, 'blog', p.slug), '', p)}
     </div>
     <section class="share-end" aria-labelledby="share-end">
       <h2 id="share-end">Know someone who reviews contractor COIs? Pass this along.</h2>
@@ -924,7 +1045,7 @@ ${p.faq.map((f) => `      <h3>${inline(f.q)}</h3>\n      <p>${inline(f.a)}</p>`)
     </section>
 ` : ''}    <section class="extra sources" aria-labelledby="sources">
       <h2 id="sources">Sources</h2>
-      <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}">${esc(s.title)}</a>${s.publisher ? `, ${esc(s.publisher)}` : ''}${s.date ? `, ${esc(s.date)}` : ''}</li>`).join('')}</ol>
+      <ol>${p.sources.map((s) => `<li><a href="${esc(s.url)}"${s.verbatim ? ' data-verbatim' : ''}>${esc(s.title)}</a>${s.publisher ? `, ${esc(s.publisher)}` : ''}${s.date ? `, ${esc(s.date)}` : ''}</li>`).join('')}</ol>
       <p class="note">We link to the original reporting and research behind every post. This post is general information, not legal or insurance advice: Forsured is a software company, not a law firm or a licensed insurance agency, so confirm anything you'll rely on with your broker or attorney. Spotted something we got wrong? Write to <a href="mailto:hello@forsured.ai">hello@forsured.ai</a> and we'll fix it.</p>
     </section>
 ${aboutArticle(p, author, reviewer)}
@@ -1070,7 +1191,7 @@ function feed(posts) {
     <pubDate>${rfc822(p.date)}</pubDate>
     <category>${esc(p.category)}</category>
     <description>${esc(p.description)}</description>
-    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul><p><img src="${SITE}${p.url}hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}"/></p>${markdown(p.body, path.join(ROOT, 'blog', p.slug), `${SITE}${p.url}`)}]]></content:encoded>
+    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul><p><img src="${SITE}${p.url}hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}"/></p>${p.feature ? markdown(`::video ${p.feature.video}`, null, `${SITE}${p.url}`) : ''}${markdown(p.body, path.join(ROOT, 'blog', p.slug), `${SITE}${p.url}`, p)}]]></content:encoded>
     <enclosure url="${SITE}${p.url}og.png" type="image/png" length="${fs.statSync(path.join(ROOT, 'blog', p.slug, 'og.png')).size}"/>
   </item>`
     )
@@ -1178,7 +1299,9 @@ ${researchPages().llms}
 function postMarkdown(p) {
   const abs = (md) =>
     md
-      .replace(/!\[([^\]]*)\]\(([\w.-]+\.png)/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`)
+      .replace(/!\[([^\]]*)\]\(([\w.-]+\.(?:png|jpg))/g, (_, a, src) => `![${a}](${SITE}${p.url}${src}`)
+      .replace(/^::hero$/gm, '')
+      .replace(/^::(coverage|linkedin|shoutouts|quotes)$/gm, (_, kind) => mediaText(kind, p))
       .replace(/^(#{2,3} .*?)\s+\{#[a-z0-9-]+\}$/gm, '$1')
       .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`)
       .replace(/^::video ([\w-]{11})$/gm, (_, id) => {
@@ -1196,7 +1319,7 @@ Published ${human(p.date)}${day(p.updated) !== day(p.date) ? `, updated ${human(
 ## The short version
 
 ${p.takeaways.map((t) => `- ${t}`).join('\n')}
-
+${p.feature ? `\n${abs(`::video ${p.feature.video}`)}\n` : ''}
 ${abs(p.body)}
 
 ## About Forsured

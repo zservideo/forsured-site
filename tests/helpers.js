@@ -156,7 +156,8 @@ async function settle(page) {
 // Returns { text: one string for phrase checks, segments: each text node / attribute on its own }.
 async function pageCopy(page) {
   return page.evaluate(() => {
-    const skip = (el) => el.closest('script,style,noscript,blockquote');
+    // A press headline we cite (data-verbatim) is kept word for word, like a quote.
+    const skip = (el) => el.closest('script,style,noscript,blockquote,[data-verbatim]');
     const head = [document.title];
     for (const m of document.querySelectorAll('meta[name="description"],meta[property^="og:"],meta[name^="twitter:"]')) {
       const c = m.getAttribute('content');
@@ -173,7 +174,7 @@ async function pageCopy(page) {
       .filter((el) => !skip(el))
       .flatMap((el) => ['alt', 'aria-label', 'title'].map((a) => el.getAttribute(a)).filter(Boolean));
     const clone = document.body.cloneNode(true);
-    clone.querySelectorAll('script,style,noscript,blockquote').forEach((n) => n.remove());
+    clone.querySelectorAll('script,style,noscript,blockquote,[data-verbatim]').forEach((n) => n.remove());
     const body = clone.textContent.replace(/\s+/g, ' ');
     return { text: [...head, body, ...attrs].join(' | '), segments: [...head, ...nodes, ...attrs] };
   });

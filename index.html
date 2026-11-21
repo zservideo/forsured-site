@@ -678,7 +678,7 @@ section{padding:48px 0}
   .plat-note{text-align:left}
   .sb-head{margin-bottom:28px}
 }
-/* EVENT BANNER (temporary, BuiltWorlds Demo Day since Oct 30; ids still say irmi): delete this block, the irmi-bar markup and its script to remove */
+/* EVENT BANNER (temporary; launch highlights since Nov 21, BuiltWorlds Demo Day Oct 30 to Nov 20; ids still say irmi): delete this block, the irmi-bar markup and its script to remove */
 :root{--bh:44px}
 html.no-irmi{--bh:0px}
 html{scroll-padding-top:var(--bh)}
@@ -703,14 +703,14 @@ html.no-irmi .irmi-bar{display:none}
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
 
-<div class="irmi-bar" id="irmi-bar" role="region" aria-label="Event announcement">
-  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span><span class="ib-long">Forsured is one of nine companies presenting at BuiltWorlds Venture East Demo Day, Nov 19 in Boston</span><span class="ib-mid">One of nine companies presenting at BuiltWorlds Demo Day, Nov 19</span><span class="ib-short">Demo Day presenter, Nov 19</span></span>
-  <a class="ib-cta" href="builtworlds-field-guide/"><span class="ib-cl">Event + downtown Boston field guide</span><span class="ib-cs">Field guide</span><span class="ib-arr" aria-hidden="true">→</span></a>
+<div class="irmi-bar" id="irmi-bar" role="region" aria-label="Launch announcement">
+  <span class="ib-msg"><span class="ib-dot" aria-hidden="true"></span><span class="ib-long">Check out our launch highlights: the Built Week video, the press coverage and more</span><span class="ib-mid">Check out our launch highlights</span><span class="ib-short">Our launch highlights</span></span>
+  <a class="ib-cta" href="blog/forsured-launch/"><span class="ib-cl">See the launch post</span><span class="ib-cs">See them</span><span class="ib-arr" aria-hidden="true">→</span></a>
   <button type="button" class="ib-x" aria-label="Dismiss announcement" onclick="dismissIrmi()">&times;</button>
 </div>
 <script>
-function dismissIrmi(){document.documentElement.classList.add('no-irmi');try{sessionStorage.setItem('bw-dismissed','1')}catch(e){}}
-try{if(sessionStorage.getItem('bw-dismissed'))document.documentElement.classList.add('no-irmi')}catch(e){}
+function dismissIrmi(){document.documentElement.classList.add('no-irmi');try{sessionStorage.setItem('launch-dismissed','1')}catch(e){}}
+try{if(sessionStorage.getItem('launch-dismissed'))document.documentElement.classList.add('no-irmi')}catch(e){}
 </script>
 
 <nav id="nav" role="navigation" aria-label="Main navigation">
