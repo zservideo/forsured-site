@@ -60,7 +60,7 @@ the type that carries the post's point:
 - `{ "type": "stat", "value": "+5% to 15%", "label": "what the number is", "source": "Source: WTW, ..." }`
   for a post built on one number. Cite the number in `sources` too.
 - `{ "type": "list", "title": "Five checks for every contractor COI", "items": ["...", "..."] }` for
-  steps, takeaways or a checklist. Up to 5 short items.
+  steps, takeaways or a checklist. Up to 5 short items; add `"max": 6` when the post lists six, so the picture matches the text.
 - `{ "type": "coi", "title": "...", "rows": [["General liability", "$1M / $2M", "ok"], ["Umbrella", "$5M", "Below $10M required"]], "note": "..." }`
   for a sample certificate with the gap flagged. `"ok"` shows Meets; any other text is the flag. Sample data only, never a real contractor.
 

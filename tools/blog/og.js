@@ -71,11 +71,11 @@ function heroStat(h) {
 
 // A short numbered list: the shape of the post at a glance.
 function heroList(h) {
-  const items = h.items.slice(0, 5);
+  const items = h.items.slice(0, h.max || 5); // "max": 6 fits; more crowds the card
   const size = items.length > 3 ? 38 : 46;
   return `<!DOCTYPE html><html><head>${HERO_FONTS}<style>${HERO_BASE}
 h1{position:absolute;left:96px;top:140px;width:520px;font-family:'Roboto Serif',serif;font-weight:400;font-size:64px;line-height:1.1;letter-spacing:-.02em}
-ol{position:absolute;left:720px;right:96px;top:96px;bottom:150px;list-style:none;display:flex;flex-direction:column;justify-content:center;gap:${items.length > 3 ? 18 : 28}px}
+ol{position:absolute;left:720px;right:96px;top:96px;bottom:150px;list-style:none;display:flex;flex-direction:column;justify-content:center;gap:${items.length > 5 ? 12 : items.length > 3 ? 18 : 28}px}
 li{display:flex;align-items:center;gap:28px;padding:${items.length > 3 ? 16 : 24}px 28px;background:#fff;border:1px solid #E4E7EC;border-radius:16px;font-size:${size}px;line-height:1.2;letter-spacing:-.01em;font-family:'Roboto Serif',serif}
 li b{flex:none;width:56px;height:56px;border-radius:12px;background:#FFF3EC;color:#B03B15;font:600 26px/56px Inter,sans-serif;text-align:center}
 </style></head><body><div class="gap"></div><h1>${esc(h.title)}</h1><ol>${items.map((t, i) => `<li><b>${String(i + 1).padStart(2, '0')}</b>${esc(t)}</li>`).join('')}</ol><div class="mark">Forsured</div><div class="src">${esc(h.source || '')}</div></body></html>`;
