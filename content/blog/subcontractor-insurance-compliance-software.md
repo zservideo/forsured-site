@@ -63,6 +63,8 @@ This guide compares the eight tools in our [full comparison of COI tracking soft
 
 **If endorsements are the gap,** pick on review depth. PINS Advantage, TrustLayer, illumend and Forsured read wording; Billy and bcs check which forms are present. See [which COI tracking software checks endorsements](/blog/coi-tracking-software-endorsement-review/).
 
+::video nQtgE0uRkPI
+
 **If you're paying non-compliant subcontractors,** pick the tool that reaches accounting. [Billy](https://billyforinsurance.com/) lists Procore, CMiC, Sage 300, Sage Intacct, JD Edwards, Viewpoint Vista, Trimble ProjectSight and Acumatica among its integrations.
 
 **If the certificate hides exclusions,** pick policy-level review: Jones's Policy Review add-on or bcs full service.

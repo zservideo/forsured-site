@@ -19,6 +19,10 @@ A checked additional insured box on a contractor COI usually means CG 20 10, and
 
 CG 20 10 stops at completion because ISO rewrote it in 1993. The original 1985 edition, CG 20 10 11 85, covered liability arising out of the contractor's "your work," which included both ongoing and completed operations. [Construction Executive](https://constructionexec.com/article/the-right-endorsement-additional-insureds/) explains that the October 1993 edition changed the wording to liability arising out of "your ongoing operations," which effectively removed additional insured status for completed operations.
 
+Video: [What does additional insured mean? The sixth-grade version](https://www.youtube.com/shorts/F7jjPH1311o) (0:33). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Additional insured, sixth-grade version. Let's go. Your contractor's insurance protects them. Additional insured means it protects you too, from problems that come from their work. Think of it as your name on their umbrella. A checkbox on the certificate isn't enough. The policy has to actually be endorsed, and it has to match what's in the project requirements. Forsured checks that your name is really under the umbrella the way the project's requirements say it should be.
+
 [Insurance Journal](https://www.insurancejournal.com/magazines/mag-features/2015/06/15/371046.htm) puts it in one line: "'Ongoing operations' does not include completed operations." Every edition of CG 20 10 since 1993 works the same way.
 
 ## What counts as completed operations?

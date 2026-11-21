@@ -63,6 +63,8 @@ The answers were consistent enough that we want to share them. Nobody below is n
 
 The complaint we heard most came from people already paying for COI tracking. Their tools flag everything. Certificates get rejected over small formatting issues, contractors get frustrated, and the alerts that matter (a lapsed policy, an umbrella below the project requirement, an additional insured endorsement without completed operations) get lost in the noise.
 
+::video nQtgE0uRkPI
+
 What they want is a review that reads the certificate and the endorsements the way a risk manager would, ranks what actually exposes the project, and says why.
 
 ## 2. Brokers want data for renewals

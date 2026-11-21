@@ -61,6 +61,10 @@ You check per written contract wording by reading the endorsement, not the certi
 5. Keep the signed contract, with its insurance requirements, on file next to the endorsement and the contractor COI.
 6. Recheck at renewal, when forms can change.
 
+Video: [What does additional insured mean? The sixth-grade version](https://www.youtube.com/shorts/F7jjPH1311o) (0:33). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Additional insured, sixth-grade version. Let's go. Your contractor's insurance protects them. Additional insured means it protects you too, from problems that come from their work. Think of it as your name on their umbrella. A checkbox on the certificate isn't enough. The policy has to actually be endorsed, and it has to match what's in the project requirements. Forsured checks that your name is really under the umbrella the way the project's requirements say it should be.
+
 IA Magazine's advice to agents applies to you as the reader: a certificate should list the endorsement and its edition date, and you should get a copy. "Always read the COI like a person with no insurance background would."
 
 ## What else should your project requirements say?

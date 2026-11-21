@@ -58,6 +58,10 @@ Skip the feature grid for a minute. For a small general contractor, four things 
 
 **Forsured** reads each COI and endorsement against the requirements of the project the subcontractor is on, and puts the broker in a shared workspace where they see the gap, the requirement and the project. A person on your team approves or waives every result. Onboarding is by waitlist, pricing is by quote, and there's no managed review service. You can test it free with a [free COI risk check](/#demo): send one project's requirements and a contractor COI or two.
 
+Video: [I'm not an insurance guy (Plain Speak)](https://www.youtube.com/shorts/FpMactV_neg) (0:43). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: I'm not an insurance guy. I'm a general contractor. I don't know a damn thing about insurance. But here's what I did about it. I've been building in the Bay Area for a very long time. Every single job shows up with a stack of insurance paperwork, and most GCs fake their way through it. I did too, for years. I stopped pretending. Surrounded myself with insurance experts and guys who live this stuff day in and day out, including product nerds who build software. Together, we built something great. It's called Forsured. Forsured checks every contractor COI against the project requirements, then keeps watching until the job's done. Full disclosure, I'm an owner and Forsured's Chief Construction Officer. That's how much I believe in it.
+
 **Jones** prices per vendor record per property, billed annually, and never charges vendors or subcontractors. It fits small GCs that also own property. Most broker follow-up sits in the Operator tier.
 
 **illumend**, the AI platform from myCOI, lets AI make the compliance call and escalates only what it can't resolve. Pricing isn't published.

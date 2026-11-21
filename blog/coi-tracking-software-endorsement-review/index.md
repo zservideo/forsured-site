@@ -49,6 +49,10 @@ Forsured reads each certificate and endorsement against the requirements of the 
 
 ![The Forsured homepage, showing a sample contractor checked against project requirements with a missing CG 20 10 endorsement flagged](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-forsured.png "forsured.ai homepage, checked Nov 20, 2026")
 
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
+
 ### PINS Advantage: reads the wording, with the page linked
 
 [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) say their AI reads every endorsement in full and "confirms ongoing and completed operations coverage, including whether a CG D3 81 meets a CG 20 10 and CG 20 37 requirement." They check primary and noncontributory and waiver of subrogation wording, and flag restrictive language such as privity of contract limits. Each answer is pass, fail or needs review, with reasoning and a link to the exact page. Their line on depth: "the wording matters more than the form number." Nothing is auto-approved.

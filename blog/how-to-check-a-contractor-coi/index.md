@@ -25,11 +25,19 @@ Learning how to read a certificate of insurance starts with the contract, not th
 - Who must be named: owner, lender, GC and anyone else the contract lists
 - How long completed operations coverage must last after the job, and whether the aggregate must apply per project
 
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
+
 Requirements differ by owner, lender and contract, so a template from the last job is a guess, not a standard.
 
 ## What does each ACORD 25 field tell you?
 
 The ACORD 25 is the standard liability certificate, published by [ACORD](https://www.acord.org/standards-architecture/acord-forms). The current edition is 2025/12 (the [form as posted by the New York Department of Financial Services](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf)). Here's how to read a certificate of insurance on that form, field by field.
+
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
 
 Table: ACORD 25 fields and what to check against your project requirements
 | ACORD 25 field | What it shows | What to check |

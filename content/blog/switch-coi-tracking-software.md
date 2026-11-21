@@ -67,6 +67,8 @@ Don't copy your old templates straight across. Use the move to fix them:
 
 An old "compliant" flag tells you what the old tool decided against old requirements. Load the current certificates and endorsements for every active trade and check them fresh. Expect the new tool to find gaps the old one didn't. That's the point of switching. Our [guide to checking a contractor COI](/blog/how-to-check-a-contractor-coi/) covers what a full check includes.
 
+::video vp_xwNsN2p8
+
 Archive closed projects as files from Step 1 rather than re-checking them.
 
 ## Step 4: Overlap for one renewal cycle

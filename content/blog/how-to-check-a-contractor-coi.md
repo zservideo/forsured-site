@@ -98,11 +98,15 @@ Learning how to read a certificate of insurance starts with the contract, not th
 - Who must be named: owner, lender, GC and anyone else the contract lists
 - How long completed operations coverage must last after the job, and whether the aggregate must apply per project
 
+::video vp_xwNsN2p8
+
 Requirements differ by owner, lender and contract, so a template from the last job is a guess, not a standard.
 
 ## What does each ACORD 25 field tell you?
 
 The ACORD 25 is the standard liability certificate, published by [ACORD](https://www.acord.org/standards-architecture/acord-forms). The current edition is 2025/12 (the [form as posted by the New York Department of Financial Services](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf)). Here's how to read a certificate of insurance on that form, field by field.
+
+::video ZfDXobNtztQ
 
 Table: ACORD 25 fields and what to check against your project requirements
 | ACORD 25 field | What it shows | What to check |

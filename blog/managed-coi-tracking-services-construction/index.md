@@ -49,6 +49,10 @@ If you're still deciding between the three, start with our COI Journal report on
 - You want the broker working directly from the gap, not from a service's email.
 - You want one person accountable for every waiver.
 
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
+
 That's the case Forsured is built for: a person on your team approves or waives every result, and the broker fixes the gap in the same workspace. If you want the review done for you, a managed service is the better fit.
 
 ## About this guide

@@ -19,6 +19,10 @@ Every general contractor has a folder of contractor COIs. Most were looked at on
 
 A certificate of insurance proves that certain policies existed on the day it was issued, and not much more. [IRMI](https://www.irmi.com/term/insurance-definitions/certificate-of-insurance) defines it as a document giving evidence that certain general types of insurance have been bought, with the coverage types and limits. That's the whole job: evidence, on one date.
 
+Video: [Is a certificate of insurance proof of coverage? Read the fine print](https://www.youtube.com/shorts/ZfDXobNtztQ) (0:46). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference.
+
 The standard ACORD 25 says so on its face. The [2025/12 edition](https://www.dfs.ny.gov/system/files/documents/2025/12/acord-25-2025-12-liability.pdf) is "issued as a matter of information only and confers no rights upon the certificate holder," and it doesn't amend, extend or alter the coverage of the policies listed. When the certificate and the policy disagree, the policy wins.
 
 ## Why isn't a certificate of insurance proof of coverage?
@@ -36,6 +40,10 @@ This is general information, not legal advice. How your state treats a certifica
 ## What can a contractor COI hide?
 
 A contractor COI hides most of what decides a claim. The one-page form summarizes policies that run dozens of pages, and the details that matter most never make it onto the page.
+
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
 
 Table: What a contractor COI shows, and what actually decides coverage
 | Item | What the certificate shows | What decides coverage |

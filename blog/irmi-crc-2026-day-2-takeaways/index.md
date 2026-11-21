@@ -24,6 +24,10 @@ The coverage you negotiated only holds if the endorsement on the contractor's po
 
 "The Prequalification Puzzle" was on Tuesday's agenda, and it's a good reminder of how much happens after a contractor clears prequal. A contractor COI that passed in March can be out of compliance by July. Policies renew with new terms, lapse for nonpayment and get re-endorsed mid-project.
 
+Video: [What is a certificate of insurance (COI)? Basically a selfie](https://www.youtube.com/shorts/7svNMPuxtOQ) (0:32). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately.
+
 Prequalification answers "can this firm do the work?" It was never built to answer "is this firm covered today, for this project?"
 
 ## 3. Insurance data you can't search is its own risk

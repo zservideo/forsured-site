@@ -39,6 +39,10 @@ Don't copy your old templates straight across. Use the move to fix them:
 
 An old "compliant" flag tells you what the old tool decided against old requirements. Load the current certificates and endorsements for every active trade and check them fresh. Expect the new tool to find gaps the old one didn't. That's the point of switching. Our [guide to checking a contractor COI](/blog/how-to-check-a-contractor-coi/) covers what a full check includes.
 
+Video: [Check your contractor's insurance every job, even the ones you trust](https://www.youtube.com/shorts/vp_xwNsN2p8) (0:37). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job.
+
 Archive closed projects as files from Step 1 rather than re-checking them.
 
 ## Step 4: Overlap for one renewal cycle

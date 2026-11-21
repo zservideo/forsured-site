@@ -65,6 +65,10 @@ Forsured is construction insurance compliance software for general contractors, 
 
 ![The Forsured homepage, showing a sample contractor checked against project requirements with two gaps flagged](https://forsured.ai/blog/best-coi-tracking-software-construction/shot-forsured.png "forsured.ai homepage, checked Nov 20, 2026")
 
+Video: [One platform for GCs, contractors and their brokers](https://www.youtube.com/shorts/nQtgE0uRkPI) (0:53). Steve Massei, a Bay Area general contractor. Steve is an owner of Forsured and its Chief Construction Officer.
+
+> Transcript: Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.
+
 **Good fit if** your projects carry different owner, lender or contract requirements, you want the broker working from the same requirement you are, and you want a person on every approval.
 
 **Watch for:** onboarding is by waitlist, the Procore integration is for early access customers and isn't on the Procore Marketplace yet, and there's no managed review service.

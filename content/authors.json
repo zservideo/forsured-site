@@ -1,4 +1,4 @@
 {
-  "_rules": "Real people who write or review posts (AEO S8, J1). Each: id (firstname-lastname), name, jobTitle exactly as the Forsured site or an approved release states it, linkedin, optional image (/img/people/<id>.jpg, 128px, under 15KB), credential (one line), knowsAbout, and source (where the title was confirmed). Never invent a name or a title. Founders stay off the site until the Nov 19 2026 launch.",
+  "_rules": "Real people who write or review posts (AEO S8, J1). Each: id (firstname-lastname), name, jobTitle exactly as the Forsured site or an approved release states it, linkedin, optional image (/img/people/<id>.jpg, 128px, under 15KB), credential (one line), knowsAbout, and source (where the title was confirmed). Never invent a name or a title.",
   "people": []
 }

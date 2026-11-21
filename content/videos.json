@@ -1,0 +1,68 @@
+{
+  "_rules": "Ask the Construction Guy videos (YouTube Shorts on @AskTheConstructionGuy, published by Forsured). A line `::video <id>` on its own in a post body embeds one: tools/blog/build.js renders a click-to-play player (nothing loads from YouTube until a reader presses play), the transcript as a quote, the ownership disclosure, and a VideoObject in the post's structured data. Transcripts are kept word for word from the video (brand spelling corrected from YouTube's auto captions). Never put these videos on COI Journal or on /research/: they promote Forsured.",
+  "channel": "https://www.youtube.com/@asktheconstructionguy",
+  "host": {
+    "name": "Steve Massei",
+    "role": "a Bay Area general contractor",
+    "disclosure": "Steve is an owner of Forsured and its Chief Construction Officer."
+  },
+  "videos": {
+    "FpMactV_neg": {
+      "title": "I'm not an insurance guy (Plain Speak)",
+      "description": "Bay Area general contractor Steve Massei on why most GCs fake their way through contractor insurance paperwork, and why he built Forsured to check every contractor COI against the project requirements until the job is done.",
+      "uploadDate": "2026-11-13T13:35:27-08:00",
+      "seconds": 43,
+      "vertical": true,
+      "transcript": "I'm not an insurance guy. I'm a general contractor. I don't know a damn thing about insurance. But here's what I did about it. I've been building in the Bay Area for a very long time. Every single job shows up with a stack of insurance paperwork, and most GCs fake their way through it. I did too, for years. I stopped pretending. Surrounded myself with insurance experts and guys who live this stuff day in and day out, including product nerds who build software. Together, we built something great. It's called Forsured. Forsured checks every contractor COI against the project requirements, then keeps watching until the job's done. Full disclosure, I'm an owner and Forsured's Chief Construction Officer. That's how much I believe in it."
+    },
+    "7svNMPuxtOQ": {
+      "title": "What is a certificate of insurance (COI)? Basically a selfie",
+      "description": "A certificate of insurance shows what a contractor's insurance looked like on the day it was printed. Policies cancel, payments get missed and renewals change things, but the paper in your file doesn't update.",
+      "uploadDate": "2026-11-13T13:48:40-08:00",
+      "seconds": 32,
+      "vertical": true,
+      "transcript": "The COI in your file? It's a selfie. It was true for approximately one second. A certificate shows what a contractor's insurance looked like the day it was printed. After that, stuff happens. Policies cancel, payments get missed, renewals change things. The paper in your file doesn't update. It just sits there looking fine. Forsured watches the whole movie, not just the photo. If something changes mid-job, you hear about it immediately."
+    },
+    "F7jjPH1311o": {
+      "title": "What does additional insured mean? The sixth-grade version",
+      "description": "Additional insured means a contractor's insurance protects you too, for problems that come from their work. A checkbox on the certificate isn't enough: the policy has to be endorsed and match the project requirements.",
+      "uploadDate": "2026-11-13T13:52:01-08:00",
+      "seconds": 33,
+      "vertical": true,
+      "transcript": "Additional insured, sixth-grade version. Let's go. Your contractor's insurance protects them. Additional insured means it protects you too, from problems that come from their work. Think of it as your name on their umbrella. A checkbox on the certificate isn't enough. The policy has to actually be endorsed, and it has to match what's in the project requirements. Forsured checks that your name is really under the umbrella the way the project's requirements say it should be."
+    },
+    "vp_xwNsN2p8": {
+      "title": "Check your contractor's insurance every job, even the ones you trust",
+      "description": "Experienced pilots don't skip preflight, but GCs skip the insurance check all the time with contractors they've used for years. Steve Massei's rule: trust your people, check your paperwork, every job.",
+      "uploadDate": "2026-11-13T13:57:49-08:00",
+      "seconds": 37,
+      "vertical": true,
+      "transcript": "Pilots never skip the checklist. I should know, because I fly planes. Just kidding. Every good pilot I know, even with a thousand hours, has a checklist. Experienced pilots don't skip preflight. That's how experienced pilots stay alive. On the job, we skip it all the time. I've used this guy for 10 years. He's great. Love that guy. Check his insurance anyway, every job. Trust your people. Check your paperwork. Forsured is my preflight checklist for every contractor on every job."
+    },
+    "jtpqI6e48kw": {
+      "title": "Insurance compliance is the elephant on every jobsite",
+      "description": "On a construction job everybody talks schedule, budget and safety. Nobody talks insurance compliance until something breaks, and when it breaks it's expensive and it has your name on it.",
+      "uploadDate": "2026-11-13T14:00:48-08:00",
+      "seconds": 30,
+      "vertical": true,
+      "transcript": "There's an elephant on every job site, and it's not the crane. We talk schedule, we talk budget, we talk safety all day. Nobody talks insurance until something breaks. And when it breaks, it's expensive and it's got your name on it. You can't ignore it. You've got to lean into it and figure it out somehow. That's why I got into Forsured. It deals with the elephant so my team doesn't have to."
+    },
+    "ZfDXobNtztQ": {
+      "title": "Is a certificate of insurance proof of coverage? Read the fine print",
+      "description": "Every standard certificate of insurance says it confers no rights upon the certificate holder. The real protection lives in the policy and its endorsements, so having a contractor's COI is not the same as complying with the project requirements.",
+      "uploadDate": "2026-11-13T14:03:32-08:00",
+      "seconds": 46,
+      "vertical": true,
+      "transcript": "This is the most important sentence in construction, and nobody reads it. Every standard certificate says, right at the top: issued as a matter of information only and confers no rights upon the certificate holder. Plain speak: this piece of paper does not promise you anything. The real protection lives in the policy and its endorsements. So 'I got their COI' is not the same as 'I'm covered.' Having it is not the same as complying with the project requirements. Forsured checks what the paper says against what the project actually requires, line by line, so you know the difference."
+    },
+    "nQtgE0uRkPI": {
+      "title": "One platform for GCs, contractors and their brokers",
+      "description": "Contractor insurance compliance used to mean the GC, the contractor and both of their brokers trading texts and emails. Steve Massei on keeping everyone and every document on one platform.",
+      "uploadDate": "2026-11-13T14:08:03-08:00",
+      "seconds": 53,
+      "vertical": true,
+      "transcript": "Before this, it's like a dysfunctional family reunion. One of my favorite features of Forsured is the platform. Historically, we'd have the broker, subcontractor, general contractor, their broker, all in. I have text messages, I've got emails going round and round, and there's fragments of information all over. Information gets lost. It gets misconstrued. It creates a mess. With Forsured's single platform, we have the subcontractor, the subcontractor's broker, the general contractor, the general contractor's broker. Everything gets solved before invitation to bid. If there's any issues with compliance, with coverage, everyone is notified at the same time, and all the information stays on one platform.",
+      "poster": "maxresdefault"
+    }
+  }
+}

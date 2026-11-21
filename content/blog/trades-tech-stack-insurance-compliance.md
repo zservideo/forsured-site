@@ -84,6 +84,8 @@ The problem is timing. By the time a payment is held, the crew has already been 
 
 The map's first stage, win and staff work, already includes safety and onboarding. That's where insurance compliance belongs too. A contractor should prove its insurance meets the project requirements when it's staffed onto the job, before it mobilizes, the same way crews complete orientation before they start.
 
+::video jtpqI6e48kw
+
 Then it should keep running in the do the work stage. Policies renew, change and cancel mid-project. A check that happens once at onboarding and again at each pay app misses everything in between.
 
 Placed that way, payment becomes a confirmation, not a discovery. The pay app goes out on time because compliance was already clean.

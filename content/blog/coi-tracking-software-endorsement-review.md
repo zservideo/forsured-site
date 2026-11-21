@@ -106,6 +106,8 @@ Forsured reads each certificate and endorsement against the requirements of the 
 
 ![The Forsured homepage, showing a sample contractor checked against project requirements with a missing CG 20 10 endorsement flagged](https://forsured.ai/blog/coi-tracking-software-endorsement-review/shot-forsured.png "forsured.ai homepage, checked Nov 20, 2026")
 
+::video ZfDXobNtztQ
+
 ### PINS Advantage: reads the wording, with the page linked {#pins-advantage}
 
 [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) say their AI reads every endorsement in full and "confirms ongoing and completed operations coverage, including whether a CG D3 81 meets a CG 20 10 and CG 20 37 requirement." They check primary and noncontributory and waiver of subrogation wording, and flag restrictive language such as privity of contract limits. Each answer is pass, fail or needs review, with reasoning and a link to the exact page. Their line on depth: "the wording matters more than the form number." Nothing is auto-approved.
