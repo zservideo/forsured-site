@@ -5,6 +5,7 @@
   "description": "Forsured launch: continuous insurance compliance software that checks every contractor COI against project requirements, brings in the broker and keeps watching.",
   "dek": "Forsured launch day is here. Forsured is continuous insurance compliance software for construction: it checks every contractor COI against the project requirements it's for, before work starts, routes each fix to the broker who can make it, and keeps checking for the life of the job. It debuts today at BuiltWorlds Demo Day in Boston.",
   "date": "2026-11-19T08:00:00-05:00",
+  "updated": "2026-11-20T19:30:00-05:00",
   "draft": false,
   "category": "Forsured news",
   "hero": {
@@ -104,6 +105,8 @@ The founding team pairs general contractor owners Steve Massei (Chief Constructi
 ## Where can you see Forsured at BuiltWorlds Demo Day?
 
 Forsured pitches at BuiltWorlds Demo Day on Thursday, Nov 19, during the 10:50 AM to 12:20 PM ET session at Convene One Boston Place, 201 Washington St., Boston. The BuiltWorlds Demo Day winner will be announced at 3:15 PM ET. Can't make the Forsured launch? Send one project's requirements and a contractor COI for a free COI risk check.
+
+::video ZESXiH2sUcg
 
 ## How do you check a contractor COI against project requirements?
 

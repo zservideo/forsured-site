@@ -33,7 +33,13 @@ function video(id) {
 const videoIds = (body) => [...body.matchAll(/^::video ([\w-]{11})$/gm)].map((m) => m[1]);
 const clock = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 const watchUrl = (id) => `https://www.youtube.com/shorts/${id}`;
-const disclosure = () => `${VIDEO_DATA.host.name}, ${VIDEO_DATA.host.role}. ${VIDEO_DATA.host.disclosure}`;
+// A video can opt out of the host (`"host": false`, e.g. a Forsured channel video with no presenter);
+// then there is no disclosure line. `"series"` sets the caption label, and `"summary"` stands in where
+// there is no word-for-word transcript (it is never presented as one).
+const hasHost = (v) => v.host !== false;
+const disclosure = (v = {}) => (hasHost(v) ? `${VIDEO_DATA.host.name}, ${VIDEO_DATA.host.role}. ${VIDEO_DATA.host.disclosure}` : '');
+const series = (v) => v.series || 'Ask the Construction Guy';
+const videoText = (v) => (v.transcript ? `> Transcript: ${v.transcript}` : `Summary: ${v.summary}`);
 // Click to play: only the poster image loads with the page. The YouTube player (and its cookies-free
 // embed) loads after a reader presses play, so a video costs a post nothing until someone watches it.
 function videoBlock(id) {
@@ -42,8 +48,8 @@ function videoBlock(id) {
   const [w, h] = v.poster === 'maxresdefault' ? [1280, 720] : [1080, 1920];
   return `<figure class="video" id="video-${id}">
 <div class="video-frame"><a class="video-play" href="${watchUrl(id)}" data-video="${id}" data-title="${esc(v.title)}" aria-label="Play video: ${esc(v.title)} (${clock(v.seconds)})"><img src="${poster}" width="${w}" height="${h}" alt="" loading="lazy" decoding="async"/><span class="video-btn" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.5v13l11-6.5z" fill="#fff"/></svg></span></a></div>
-<figcaption><strong>Ask the Construction Guy:</strong> ${esc(v.title)} (${clock(v.seconds)}). ${esc(disclosure())}</figcaption>
-<details class="video-transcript"><summary>Read the transcript</summary><blockquote><p>${esc(v.transcript)}</p></blockquote></details>
+<figcaption><strong>${esc(series(v))}:</strong> ${esc(v.title)} (${clock(v.seconds)}).${v.summary ? ` ${esc(v.summary)}` : ''}${disclosure(v) ? ` ${esc(disclosure(v))}` : ''}</figcaption>
+${v.transcript ? `<details class="video-transcript"><summary>Read the transcript</summary><blockquote><p>${esc(v.transcript)}</p></blockquote></details>` : ''}
 </figure>`;
 }
 
@@ -115,7 +121,7 @@ function markdown(md, dir, base = '') {
     if (lines.length === 1 && (h = first.match(VIDEO_LINE))) {
       const v = video(h[1]);
       // The RSS feed and emails can't run the player, so they get a plain link.
-      out.push(base ? `<p><a href="${watchUrl(h[1])}">Watch: ${esc(v.title)} (${clock(v.seconds)})</a>. ${esc(disclosure())}</p>` : videoBlock(h[1]));
+      out.push(base ? `<p><a href="${watchUrl(h[1])}">Watch: ${esc(v.title)} (${clock(v.seconds)})</a>.${v.summary ? ` ${esc(v.summary)}` : ''}${disclosure(v) ? ` ${esc(disclosure(v))}` : ''}</p>` : videoBlock(h[1]));
     } else if (lines.length === 1 && (h = first.match(/^!\[([^\]]+)\]\(([\w.-]+\.png)(?: "([^"]+)")?\)$/))) {
       const [, alt, src, caption] = h;
       const file = path.join(dir || '', src);
@@ -859,8 +865,8 @@ function postPage(p, posts) {
         embedUrl: `https://www.youtube.com/embed/${id}`,
         url: watchUrl(id),
         inLanguage: 'en-US',
-        transcript: v.transcript,
-        actor: { '@type': 'Person', name: VIDEO_DATA.host.name },
+        ...(v.transcript ? { transcript: v.transcript } : {}),
+        ...(hasHost(v) ? { actor: { '@type': 'Person', name: VIDEO_DATA.host.name } } : {}),
         publisher: { '@id': ORG['@id'] },
       };
     }));
@@ -1177,7 +1183,7 @@ function postMarkdown(p) {
       .replace(/\]\(#([a-z0-9-]+)\)/g, `](${SITE}${p.url}#$1)`)
       .replace(/^::video ([\w-]{11})$/gm, (_, id) => {
         const v = video(id);
-        return `Video: [${v.title}](${watchUrl(id)}) (${clock(v.seconds)}). ${disclosure()}\n\n> Transcript: ${v.transcript}`;
+        return `Video: [${v.title}](${watchUrl(id)}) (${clock(v.seconds)}).${disclosure(v) ? ` ${disclosure(v)}` : ''}\n\n${videoText(v)}`;
       });
   return `# ${p.title}
 
