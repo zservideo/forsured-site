@@ -114,8 +114,11 @@ function check(p, brief, html, authors = readAuthors()) {
   const paras = p.body.split(/\n{2,}/).filter((b) => !/^(#|\||-|\d+\.|>|!\[)/.test(b.trim()));
   if (!paras.some((b) => /\bForsured\b/.test(b))) miss('S7', 'the body needs one factual paragraph on what Forsured does for this item');
 
-  // S8 / J1: dates-only byline at the top, a real Person at the foot.
-  if (/<p class="meta">[^\n]*(By the Forsured team|min read)/.test(html)) miss('S8', 'top byline must be dates only');
+  // S8 / J1 (Zach's standing rule, Nov 21 2026, replaces Warren's "dates-only at top"): the site needs
+  // human touches, so a post with an author shows the author byline up top, under the dek, linked
+  // to their author page. The dates line stays dates only, and a real Person sits at the foot.
+  if (/<p class="meta">[^\n]*(By the Forsured team|min read)/.test(html)) miss('S8', 'the dates line must be dates only');
+  if (p.author && !new RegExp(`<p class="byline">[^\\n]*href="/blog/authors/${p.author}/"`).test(html)) miss('S8', 'a post with an author needs the byline up top, linked to the author page');
   if (!/id="about-article"/.test(html)) miss('S8', 'needs the "About this article" block');
   const ids = new Set(authors.map((a) => a.id));
   if (p.author && !ids.has(p.author)) miss('S8', `author "${p.author}" is not in content/authors.json`);
