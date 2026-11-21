@@ -322,7 +322,7 @@ const ORG = {
   logo: { '@type': 'ImageObject', url: `${SITE}/logo-orange.png` },
   description: 'Construction insurance compliance software that checks contractor COIs against project requirements, flags coverage and endorsement gaps, and keeps checking for the life of the project.',
   email: 'hello@forsured.ai',
-  sameAs: ['https://forsured.com', 'https://www.linkedin.com/company/forsured/', 'https://www.instagram.com/getforsured/'],
+  sameAs: ['https://forsured.com', 'https://www.linkedin.com/company/forsured/', 'https://www.instagram.com/getforsured/', 'https://www.crunchbase.com/organization/forsured-inc'],
   knowsAbout: ['Construction insurance compliance', 'Certificates of insurance', 'Additional insured endorsements', 'Contractor risk management'],
   // COI Journal is Forsured's editorial site. Its own markup names Forsured as parentOrganization.
   // Not sameAs: that means the same entity, and the Journal is a separate publication.
