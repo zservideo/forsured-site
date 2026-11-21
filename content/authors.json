@@ -1,4 +1,19 @@
 {
-  "_rules": "Real people who write or review posts (AEO S8, J1). Each: id (firstname-lastname), name, jobTitle exactly as the Forsured site or an approved release states it, linkedin, optional image (/img/people/<id>.jpg, 128px, under 15KB), credential (one line), knowsAbout, and source (where the title was confirmed). Never invent a name or a title.",
-  "people": []
+  "_rules": "Real people who write or review posts (AEO S8, J1). Each: id (firstname-lastname), name, jobTitle exactly as the Forsured site or an approved release states it, linkedin, optional image (/img/people/<id>.jpg, 256px square, under 15KB), bio (one or two sentences, only facts from the site or an approved release), credential (one line), knowsAbout, and source (where the title and bio were confirmed). Each person gets an author page at /blog/authors/<id>/. Never invent a name, a title or a bio fact.",
+  "people": [
+    {
+      "id": "zach-servideo",
+      "name": "Zach Servideo",
+      "jobTitle": "Founder and Chief Growth Officer",
+      "linkedin": "https://www.linkedin.com/in/zservideo/",
+      "image": "/img/people/zach-servideo.jpg",
+      "bio": "Zach Servideo is a Founder and the Chief Growth Officer of Forsured. He and Marc Gigliotti, Forsured's Chief Product Officer, have been friends since age three and have spent two decades taking digital products from zero to scale for other companies.",
+      "knowsAbout": [
+        "Construction insurance compliance",
+        "Go-to-market for construction software",
+        "Broker partnerships"
+      ],
+      "source": "Forsured launch release (approved by the owners Nov 11, 2026, final Nov 12) and Zach's LinkedIn profile"
+    }
+  ]
 }

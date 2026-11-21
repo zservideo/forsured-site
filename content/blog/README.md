@@ -60,7 +60,7 @@ the type that carries the post's point:
 - `{ "type": "stat", "value": "+5% to 15%", "label": "what the number is", "source": "Source: WTW, ..." }`
   for a post built on one number. Cite the number in `sources` too.
 - `{ "type": "list", "title": "Five checks for every contractor COI", "items": ["...", "..."] }` for
-  steps, takeaways or a checklist. Up to 5 short items.
+  steps, takeaways or a checklist. Up to 5 short items; add `"max": 6` when the post lists six, so the picture matches the text.
 - `{ "type": "coi", "title": "...", "rows": [["General liability", "$1M / $2M", "ok"], ["Umbrella", "$5M", "Below $10M required"]], "note": "..." }`
   for a sample certificate with the gap flagged. `"ok"` shows Meets; any other text is the flag. Sample data only, never a real contractor.
 
@@ -142,7 +142,7 @@ news posts.
 - **S4** body word count for the type. **S5** at least one table (not news) with a `Table: <caption>` line directly above its rows.
 - **S6** 5 to 8 FAQs, each answer 40 to 80 words, starting with a yes/no or a definition.
 - **S7** one plain body paragraph on what Forsured does for this exact item, only from the homepage feature list. No adjectives.
-- **S8 / J1** `"author"` (and optional `"reviewer"`) names a person in `content/authors.json`. Until one is approved, the gate warns instead of failing. Never invent a name or a title: titles come from the Forsured site or an approved release.
+- **S8 / J1** `"author"` (and optional `"reviewer"`) names a person in `content/authors.json`. **Standing rule (Zach, Nov 21 2026), which replaces the old "dates-only byline at top": the site needs human touches, so a post a person writes carries their byline up top, under the dek (photo, name, title, linked to their author page at /blog/authors/<id>/).** The dates line stays dates only. Posts the team writes together have no `author` and stay "by the Forsured team" (the gate warns, it doesn't fail). Never invent a name or a title: titles come from the Forsured site or an approved release. To add a person (Marc, Erik), add one entry to `content/authors.json` per its `_rules`, plus a 256px headshot at `/img/people/<id>.jpg`; the author page builds itself.
 - **S9** each target keyword in at least one heading and at least 5 times in the body; the primary keyword in the title tag, H1, dek, description and slug. Drop a keyword rather than force it. A rewrite of an existing post keeps its URL: set `"slug_locked": true` in its brief, which skips only the slug check.
 - **L1** 3 to 8 internal body links (pillar, the `/coi-requirements/<state>/` page when state law matters, the next sibling post). **L2** 3 to 8 external links to primary sources (IRMI, ISO/Verisk, NCCI, state insurance departments, ACORD, courts); link the first mention of each outside organization. COI Journal links count as neither. **L3** descriptive anchors, never a visible URL; emails as `mailto:`.
 - **J2** publisher is the homepage Organization by `@id`. **J3** mentions carry a `url`. **J5** `updated` is the visible Updated date; bump it only when the content changes. **J6** no HTML comments, minified JSON-LD.
