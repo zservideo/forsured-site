@@ -11,15 +11,17 @@
   "hero": {
     "type": "list",
     "title": "Forsured is live",
+    "max": 6,
     "items": [
       "Checked before work starts",
       "The reason, not just the flag",
       "The broker in the fix",
       "Continuous, for the whole job",
-      "People make the call"
+      "People make the call",
+      "Fits your stack"
     ]
   },
-  "heroAlt": "Forsured is live: checked before work starts, the reason not just the flag, the broker in the fix, continuous for the whole job, and people make the call",
+  "heroAlt": "Forsured is live: checked before work starts, the reason not just the flag, the broker in the fix, continuous for the whole job, people make the call, and fits your stack",
   "tags": [
     "Forsured launch",
     "continuous insurance compliance",
@@ -46,7 +48,7 @@
       "a": "Continuous insurance compliance means a contractor COI isn't checked once and filed. Policies lapse, renew with lower limits or drop endorsements mid-project, so Forsured keeps tracking renewals and coverage changes, with alerts well ahead of expirations, until the job is done. Compliant stays a current answer, not a date in a spreadsheet."
     },
     {
-      "q": "How much does Forsured cost?",
+      "q": "How do general contractors pay for Forsured?",
       "a": "General contractors pay an annual subscription, and the first project is free. Trade contractors and brokers pay nothing, and Forsured takes no commission. Forsured doesn't use the seat-heavy contracts common in the category. Any general contractor or broker can request a free COI risk check at forsured.ai."
     },
     {
@@ -248,7 +250,7 @@ Contractor COI checks go stale because the file gets closed on day one. Mid-proj
 
 ## How does continuous insurance compliance work?
 
-Continuous insurance compliance works in six parts:
+Continuous insurance compliance works like this:
 
 ::hero
 
@@ -259,9 +261,9 @@ Continuous insurance compliance works in six parts:
 - **Humans in control.** AI reads the documents; people can review and approve. Every decision is auditable.
 - **Fits your stack.** Forsured integrates with Procore, and trade contractors don't have to sign up for anything on day one. See [where insurance sits in Procore](/blog/procore-coi-tracking/).
 
-## What does Forsured cost?
+## How are general contractors working with Forsured?
 
-At launch, general contractors pay an annual subscription, and the first project is free. Trade contractors and brokers pay nothing, and we take no commission.
+General contractors run Forsured on live projects, and contractors' brokers close gaps in the app. Trade contractors and brokers pay nothing, and we take no commission. Here's how one of our first Boston customers describes it:
 
 > We're a Boston general contractor and we run lean. Our insurance tracking lived in a spreadsheet and one person's inbox. Forsured showed us exactly where our contractors' coverage fell short of what our projects require, and it keeps watching so we don't have to. Saying yes was easy. -- Steve Stoddard, owner of Lighthouse Construction and one of Forsured's first paying customers
 
