@@ -253,6 +253,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -718,6 +727,52 @@ function aboutArticle(p, author, reviewer) {
     </section>`;
 }
 
+// Front matter "video": a YouTube video shown under the short version, with a text summary beside it
+// and VideoObject markup, so answer engines can read what the video says without watching it.
+// { "youtube": "<id>", "title", "description", "summary", "uploadDate", "duration": "PT2M29S", "vertical": true }
+function videoNode(p) {
+  const v = p.video;
+  const id = v.youtube;
+  return {
+    '@type': 'VideoObject',
+    '@id': `${SITE}${p.url}#video`,
+    name: v.title,
+    description: v.description,
+    thumbnailUrl: [
+      ...(v.vertical ? [`https://i.ytimg.com/vi/${id}/oardefault.jpg`] : []),
+      `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+      `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    ],
+    uploadDate: v.uploadDate,
+    duration: v.duration,
+    embedUrl: `https://www.youtube.com/embed/${id}`,
+    contentUrl: v.vertical ? `https://www.youtube.com/shorts/${id}` : `https://www.youtube.com/watch?v=${id}`,
+    publisher: { '@id': ORG['@id'] },
+    inLanguage: 'en-US',
+  };
+}
+
+function videoBlock(p) {
+  const v = p.video;
+  const n = videoNode(p);
+  return `<figure class="video" aria-labelledby="video-title">
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${esc(v.youtube)}?rel=0" title="${esc(v.title)}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <figcaption><strong id="video-title">${esc(v.title)}</strong>${inline(v.summary)}<br/><a href="${esc(n.contentUrl)}">Watch on YouTube</a></figcaption>
+    </figure>
+    <script>
+    // A cross-origin player never matches :focus here, so show the focus ring when Tab moves into it.
+    (function(){var f=document.querySelector('.video-frame iframe'),tab=false;if(!f)return;
+    addEventListener('keydown',function(e){tab=e.key==='Tab'},true);
+    addEventListener('blur',function(){setTimeout(function(){if(document.activeElement===f&&tab)f.classList.add('kf')})});
+    addEventListener('focus',function(){f.classList.remove('kf')});})();
+    </script>`;
+}
+
+function videoDuration(iso) {
+  const [, m = 0, s = 0] = iso.match(/^PT(?:(\d+)M)?(?:(\d+)S)?$/) || [];
+  return `${m} min ${s} sec`;
+}
+
 function postPage(p, posts) {
   const image = `/blog/${p.slug}/og.png`;
   const publishers = [...new Set(p.sources.map((s) => s.publisher).filter(Boolean))];
@@ -765,7 +820,9 @@ function postPage(p, posts) {
       about: (p.tags || []).slice(0, 4).map((t) => ({ '@type': 'Thing', name: t })),
       citation: p.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url, publisher: s.publisher ? { '@type': 'Organization', name: s.publisher } : undefined })),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.dek', '.tldr'] },
+      ...(p.video ? { video: { '@id': `${SITE}${p.url}#video` } } : {}),
     },
+    ...(p.video ? [videoNode(p)] : []),
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -823,6 +880,7 @@ ${nav('blog')}
       <h2 id="tldr">The short version</h2>
       <ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul>
     </aside>
+    ${p.video ? videoBlock(p) : ''}
     <div class="prose">
 ${markdown(p.body, path.join(ROOT, 'blog', p.slug))}
     </div>
@@ -984,7 +1042,7 @@ function feed(posts) {
     <pubDate>${rfc822(p.date)}</pubDate>
     <category>${esc(p.category)}</category>
     <description>${esc(p.description)}</description>
-    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul><p><img src="${SITE}${p.url}hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}"/></p>${markdown(p.body, path.join(ROOT, 'blog', p.slug), `${SITE}${p.url}`)}]]></content:encoded>
+    <content:encoded><![CDATA[<ul>${p.takeaways.map((t) => `<li>${inline(t)}</li>`).join('')}</ul><p><img src="${SITE}${p.url}hero.png" width="1600" height="800" alt="${esc(heroAlt(p))}"/></p>${p.video ? `<p><strong>${esc(p.video.title)}</strong>: ${inline(p.video.summary)} <a href="${esc(videoNode(p).contentUrl)}">Watch on YouTube</a></p>` : ''}${markdown(p.body, path.join(ROOT, 'blog', p.slug), `${SITE}${p.url}`)}]]></content:encoded>
     <enclosure url="${SITE}${p.url}og.png" type="image/png" length="${fs.statSync(path.join(ROOT, 'blog', p.slug, 'og.png')).size}"/>
   </item>`
     )
@@ -1106,7 +1164,7 @@ Published ${human(p.date)}${day(p.updated) !== day(p.date) ? `, updated ${human(
 ## The short version
 
 ${p.takeaways.map((t) => `- ${t}`).join('\n')}
-
+${p.video ? `\n## Video: ${p.video.title}\n\n${p.video.summary}\n\nWatch on YouTube (${videoDuration(p.video.duration)}): ${videoNode(p).contentUrl}\n` : ''}
 ${abs(p.body)}
 
 ## About Forsured

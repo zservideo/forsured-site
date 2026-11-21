@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Forsured spent IRMI's 2026 Construction Risk Conference in National Harbor meeting brokers, carriers and contractors about contractor COIs.</li><li>The loudest complaint: today's COI tools throw too many red alerts and reject certificates over small issues without explaining what actually matters.</li><li>Brokers and carriers want contractor COI data they can bring to renewals and share with clients, not more paperwork.</li><li>Neutral wording, &quot;project requirements&quot; and &quot;contractor COIs&quot;, landed with general contractors and trade contractors alike, so that's how we talk now.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>This week Forsured showed up at IRMI's Construction Risk Conference at the Gaylord National in National Harbor. It was our first CRC. We weren't on the sponsor list and we didn't have a booth. We had a mix of black and white Forsured polos, an <a href="/irmi-field-guide/">independent field guide to the conference</a>, a short video about catching the COI gap, and one question for everyone we met: what happens to a contractor COI after it's filed?</p>
 <p>The answers were consistent enough that we want to share them. Nobody below is named, because these were hallway conversations, not interviews.</p>

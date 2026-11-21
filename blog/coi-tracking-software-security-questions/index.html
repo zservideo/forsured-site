@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Ask for the vendor's current SOC report, not a badge on the website. SOC reports are issued by CPAs under AICPA standards and cover a defined period.</li><li>Ask where your documents are stored, who at the vendor can open them, and whether your files are used to train AI models.</li><li>Get the exit terms in writing: export format, what's included, and how long your data is kept after you cancel.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>A COI tracking tool ends up holding more than certificates. It has your subcontractors' policy numbers and endorsements, your project list, your owners' insurance exhibits and, if you connect it, links into your project and accounting systems. That's worth a security review before you sign, and these 12 questions cover what to ask.</p>
 <p>They pair with our <a href="/blog/coi-tracking-software-demo-questions/">COI tracking software demo questions</a> and the <a href="/blog/best-coi-tracking-software-construction/">full comparison of COI tracking software for construction</a>.</p>

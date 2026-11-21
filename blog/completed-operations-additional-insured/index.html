@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>CG 20 10 covered finished work until its 1993 edition. Every edition since covers only ongoing operations.</li><li>CG 20 37 exists only to add additional insured status for completed operations. It doesn't cover the work in progress.</li><li>The 2013 editions cap both forms at what your contract requires, so the contract wording now matters as much as the form.</li><li>Check the products and completed operations aggregate on the certificate, and keep collecting certificates after turnover.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>A checked additional insured box on a contractor COI usually means CG 20 10, and CG 20 10 stops covering you the day the work is done. The claims a GC or owner worries about most often show up later: a roof that leaks after turnover, a stair that fails a year in. Covering those takes completed operations coverage, and that takes its own endorsement.</p>
 <h2 id="why-does-cg-20-10-stop-covering-you-at-completion">Why does CG 20 10 stop covering you at completion?</h2>

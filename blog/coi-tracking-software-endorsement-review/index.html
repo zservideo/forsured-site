@@ -102,6 +102,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -293,6 +302,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Most COI tracking software for construction now checks endorsements, not just certificates. The real difference is depth: naming the endorsement type, flagging missing required forms, reading the wording against your requirements, or reading the full policy.</li><li>On their own pages, Forsured, PINS Advantage, TrustLayer and illumend describe reading the endorsement wording. Billy flags missing required forms such as CG 20 10, CG 20 37, waiver of subrogation and primary and noncontributory. bcs and Certificial describe identifying the endorsement and pulling its key fields.</li><li>Jones adds a Policy Review add-on that reads full policies for exclusions, and bcs includes full policy reviews in its full-service plan.</li><li>Ask who makes the final call. illumend's AI decides on its own. PINS Advantage, TrustLayer, bcs and Forsured put a person on the decision, and Jones pairs AI with its own specialists.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>Which COI tracking software checks endorsements, not just certificates? Almost all of it, now. Of the eight construction tools in our <a href="https://forsured.ai/blog/best-coi-tracking-software-construction/">COI tracking software buyer's guide</a>, every one says it looks at endorsements. The question that separates them is how far each one reads: does it name the endorsement type, flag a missing required form, read the wording against your project requirements, or read the full policy? And once it has read it, who decides whether the endorsement is good enough?</p>
 <p>That matters because the certificate is only a summary. An additional insured box checked on an ACORD 25 doesn't tell you which endorsement was issued, whether it covers completed operations, or whether it only applies where there's a written contract. Since 1993 the standard CG 20 10 covers ongoing operations only, so a tool that confirms &quot;CG 20 10 attached&quot; hasn't told you whether you're covered after the job is done. See <a href="https://forsured.ai/blog/completed-operations-additional-insured/">why completed operations coverage needs its own endorsement</a>.</p>

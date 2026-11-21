@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Vendor demos use certificates that pass. Bring five of your own that don't, and run every tool against the same project requirements.</li><li>The questions that separate tools are about after the read: who decides, how the broker hears about the gap, what's recorded, and what happens at renewal.</li><li>Score each demo on what you saw happen to your test packet, not on the feature list.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>A COI tracking software demo is built to go well. The sample certificate is clean, the endorsement is the ISO form the tool knows best, and the broker on screen answers in a minute. None of that tells you what happens on your jobs.</p>
 <p>This guide gives you a test packet to bring and 15 questions to ask, so every vendor is judged on the same real problems. Use it with our <a href="/blog/best-coi-tracking-software-construction/">full comparison of COI tracking software for construction</a> to pick who gets a demo.</p>

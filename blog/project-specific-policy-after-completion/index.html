@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Not always. A policy written for one project's construction work may not cover claims about what happens after the project is done, such as operating or maintaining it.</li><li>In a ruling reported Oct 29, 2026, Liberty Mutual was found to have no duty to defend the builders of a Fort Worth toll road in lawsuits over a 2021 pileup that killed six people.</li><li>The trial court held that the policy covered bodily injury arising out of work for the project, and that operating and maintaining the road after it opened in 2018 wasn't that work.</li><li>If a contractor also operates or maintains what it built, check that its coverage reaches that work too, not just the construction phase.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>Not always. A liability policy written for one project's construction work can stop short of claims about what happens after the job is built. A Texas highway case reported last week shows how.</p>
 <h2 id="the-pileup-and-the-policy">The pileup and the policy</h2>

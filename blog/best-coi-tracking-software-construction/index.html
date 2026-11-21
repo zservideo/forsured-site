@@ -103,6 +103,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -294,6 +303,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>All eight tools look at endorsements, not just the ACORD 25 certificate. They differ in how deep the review goes, who makes the final call, and how the broker gets the fix back to you. That's where the best COI tracking software for your company gets decided.</li><li>Forsured is built around requirements that change by project and a shared workspace where the broker sees what's missing. PINS Advantage goes deepest on endorsement wording inside Procore. bcs publishes per-vendor rates and has a free tier. Certificial gets live policy data from the agent.</li><li>For Procore COI tracking, Billy, bcs, Jones, PINS Advantage, TrustLayer and illumend (under the myCOI name) are on the Procore Marketplace. Forsured's Procore integration is open to early access customers, and Certificial doesn't list one.</li><li>Published COI tracking software pricing runs from free tiers (Certificial up to 5 suppliers, bcs up to 25 vendors, TrustLayer up to 50) to about $300 a month at PINS Advantage. Forsured, Jones and illumend quote on request.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>You might have 40 subcontractors on a job, each with a certificate of insurance and a stack of endorsements, and every contract asks for something a little different. A COI on file doesn't tell you whether the additional insured endorsement covers completed operations, whether the umbrella meets this owner's limit, or whether the policy will still be in force in March. COI tracking software for construction has to answer those questions for every sub on every project, and keep answering them until closeout. That's the job of subcontractor COI tracking, and it's more than a reminder before a policy expires.</p>
 <p>This guide is for general contractors' risk, compliance and project teams, and the insurance brokers who work with them. It compares eight COI tracking software tools side by side, so you can see what each one checks, who fixes a gap when one turns up, how it fits with Procore, and what it costs, then pick the best COI tracking software for the way your company builds.</p>

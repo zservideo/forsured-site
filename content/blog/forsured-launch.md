@@ -5,6 +5,7 @@
   "description": "Forsured launch: continuous insurance compliance software that checks every contractor COI against project requirements, brings in the broker and keeps watching.",
   "dek": "Forsured launch day is here. Forsured is continuous insurance compliance software for construction: it checks every contractor COI against the project requirements it's for, before work starts, routes each fix to the broker who can make it, and keeps checking for the life of the job. It debuts today at BuiltWorlds Demo Day in Boston.",
   "date": "2026-11-19T08:00:00-05:00",
+  "updated": "2026-11-20T19:30:00-05:00",
   "draft": false,
   "category": "Forsured news",
   "hero": {
@@ -19,6 +20,15 @@
     ]
   },
   "heroAlt": "Forsured is live: checked before work starts, the reason not just the flag, the broker in the fix, continuous for the whole job, and people make the call",
+  "video": {
+    "youtube": "ZESXiH2sUcg",
+    "vertical": true,
+    "title": "Forsured Launches at Boston Built Week 2026 | The Big Reveal",
+    "description": "Forsured officially launched at Boston Built Week, with the reveal on stage at BuiltWorlds Demo Day on Nov 19, 2026. Forsured is always-on insurance compliance for construction. It checks contractor COIs against your project requirements from prequalification through the whole project, flags gaps and brings brokers in to close them.",
+    "summary": "Highlights from the Forsured launch on stage at BuiltWorlds Demo Day during Boston Built Week, Nov 19, 2026. Forsured checks every contractor COI against the project requirements, from prequalification through the whole project, flags each gap and brings the contractor's broker in to close it. No insurance gaps. No question.",
+    "uploadDate": "2026-11-20T16:24:13-08:00",
+    "duration": "PT2M29S"
+  },
   "tags": [
     "Forsured launch",
     "continuous insurance compliance",

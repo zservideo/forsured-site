@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>Primary and noncontributory sets the order in which overlapping policies respond: the contractor's policy pays first, without seeking contribution from the additional insured's own policy.</li><li>Without noncontributory wording, two primary policies can end up sharing defense costs and damages.</li><li>It's created by an endorsement on the contractor's general liability policy, such as ISO's CG 20 01. The ACORD 25 has no field for it.</li><li>CG 20 01 applies only when a written contract requires it, and only to the general liability policy, not an attached umbrella.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>Read the insurance section of almost any construction contract and you'll find the same phrase: additional insured coverage &quot;on a primary and noncontributory basis.&quot; It's so common it reads like boilerplate. It isn't. Primary and noncontributory decides whose insurance pays first when a contractor's work causes a loss, and whether your own policy gets pulled in to share it.</p>
 <h2 id="what-does-primary-and-noncontributory-mean">What does primary and noncontributory mean?</h2>

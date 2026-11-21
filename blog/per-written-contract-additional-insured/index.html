@@ -101,6 +101,15 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,52px);let
 .hero img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
 .prose figure img{display:block;width:100%;height:auto;border:1px solid #E4E7EC;border-radius:10px}
 .prose figcaption{font-size:13px;line-height:1.5;color:var(--mt);margin-top:8px}
+/* Post video (front matter "video"): a vertical YouTube Short beside its text summary */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid #E4E7EC;border-radius:12px;background:#FDFAF7}
+.video-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:10px;overflow:hidden;background:#1D2939}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame iframe.kf{outline:3px solid var(--f);outline-offset:-3px}
+.video figcaption{font-size:15px;line-height:1.6;color:var(--mt)}
+.video figcaption strong{display:block;font-size:17px;line-height:1.4;color:var(--tx);margin-bottom:8px}
+.video figcaption a{display:inline-block;margin-top:12px;line-height:24px}
+@media (max-width:640px){.video{grid-template-columns:1fr;padding:16px;gap:16px}.video-frame{max-width:320px;margin:0 auto}}
 /* Share bar: icon buttons for LinkedIn, X, Facebook, email, copy link and the phone's own share sheet */
 .share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
 .share-l{font-size:13px;font-weight:500;color:#344051;margin-right:4px}
@@ -292,6 +301,7 @@ footer{border-top:1px solid var(--bdr);padding:44px 0 28px}
       <h2 id="tldr">The short version</h2>
       <ul><li>&quot;Per written contract&quot; means the policy adds as an additional insured whoever a written contract requires, instead of naming each party on a schedule.</li><li>CG 20 33 requires a contract between you and the named insured. CG 20 38 can reach parties further up the contract chain.</li><li>New York's highest court held in 2018 that &quot;with whom you have agreed&quot; by written contract requires that direct contract.</li><li>Courts also look at whether the agreement was in writing, signed before the loss, and actually required additional insured status.</li><li>A certificate doesn't create additional insured status. Get the endorsement and keep the signed contract on file.</li></ul>
     </aside>
+    
     <div class="prose">
 <p>&quot;Per written contract&quot; means the policy adds as an additional insured whoever a written contract requires it to add, instead of naming each party on a schedule. That's what makes an endorsement a blanket additional insured endorsement. It's convenient: one endorsement covers every owner and GC a contractor works for. But it only covers you if your project fits the endorsement's exact words, and those words differ more than most people expect.</p>
 <p>As <a href="https://www.iamagazine.com/strategies/coi-requests-is-there-a-blanket-additional-insured-endorsement">IA Magazine</a> put it, &quot;There is no such thing as a blanket additional insured endorsement.&quot; ISO offers several automatic forms, and they differ greatly. Insurers write their own versions too. The <a href="https://sonomacounty.gov/administrative-support-and-fiscal-services/human-resources/divisions-and-units/liability-and-insurance/insurance/help-and-support/contract-insurance-requirements-reference-guide/additional-insured-endorsements">County of Sonoma's insurance guide</a> notes that many blanket additional insured endorsements are insurer proprietary forms, not ISO forms, and that each one has to be read against the contract.</p>
