@@ -81,7 +81,7 @@ The choice turns on two checks that catch real gaps. The first is whether each c
 The three ways compare differently on collection, requirements, endorsements and who decides. Here's the short version.
 
 Table: COI tracking spreadsheet, managed COI tracking service or COI tracking software: how the three compare
-| | COI tracking spreadsheet | Managed COI tracking service | COI tracking software |
+| Job | COI tracking spreadsheet | Managed COI tracking service | COI tracking software |
 | --- | --- | --- | --- |
 | Collecting certificates | Your team emails and saves files | The service collects and chases | Requests and uploads go through the tool |
 | Expiration dates | A formula or a calendar reminder | The service sends reminders | Automatic reminders by policy |
