@@ -1,0 +1,85 @@
+{
+  "slug": "coi-tracking-spreadsheet-service-or-software",
+  "type": "buyer",
+  "reader": "GC owner, CFO or project executive deciding how the company should manage contractor COIs as the subcontractor count grows",
+  "pillar": "/blog/best-coi-tracking-software-construction/",
+  "questions": [
+    "Is it better to manage subcontractor COIs in a spreadsheet, outsource COI tracking, or use software?",
+    "When does a COI tracking spreadsheet stop working for a general contractor?"
+  ],
+  "target_keywords": [
+    { "kw": "COI tracking spreadsheet", "vol": null, "kd": null },
+    { "kw": "outsource COI tracking", "vol": null, "kd": null },
+    { "kw": "COI tracking software", "vol": null, "kd": null },
+    { "kw": "contractor COIs", "vol": null, "kd": null },
+    { "kw": "managed COI tracking", "vol": null, "kd": null }
+  ],
+  "notes": "Buyer's guide ramp item 4 (P10). Vendor-neutral: names no vendors, so no vendor screenshots. Links our COI Journal report spreadsheet-service-software in the body (not under sources). Competing pages are all vendor pitches; none weighs all three models against per-project requirements and endorsements, and none says when a spreadsheet is the right answer. The one thing none has: the three models compared on the two checks that catch gaps (project requirements and endorsement wording), plus who makes the final call in each, and a hybrid path.",
+  "competing_sources": [
+    {
+      "url": "https://billyforinsurance.com/resources/coi-tracking-excel-spreadsheet-limitations/",
+      "title": "COI Tracking in Excel: When the Spreadsheet Works and When It Breaks (Billy)",
+      "h2s": ["When Excel Works Fine for COI Tracking", "Exactly Where Excel Breaks Down", "The Real Cost of Spreadsheet-Based Compliance", "Free COI Tracking Template for Excel", "When to Switch to Dedicated COI Tracking Software"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "A free Excel template; a vendor-count threshold (15 to 20 vendors) of their own.",
+      "what_we_cover_that_they_dont": "Outsourcing as a third model, per-project requirements, who makes the call."
+    },
+    {
+      "url": "https://trustlayer.io/resources/automated-coi-tracking-software-vs-excel-spreadsheets",
+      "title": "Automated COI Tracking Software vs. Excel Spreadsheets (TrustLayer)",
+      "h2s": ["Understanding COI Tracking", "Excel Spreadsheets: The Traditional Approach", "Automated COI Tracking Software: A Modern Solution", "Cost Considerations", "Case Studies: Real-World Applications", "Choosing the Right Solution for Your Business", "Conclusion: Making an Informed Decision"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Case study framing.",
+      "what_we_cover_that_they_dont": "Services, endorsements, construction project requirements, sourced error research."
+    },
+    {
+      "url": "https://www.getbcs.com/blog/manual-vs.-automated-coi-tracking-a-side-by-side-comparison",
+      "title": "Manual vs. Automated COI Tracking: a Side-by-Side Comparison (bcs)",
+      "h2s": ["What manual COI tracking actually costs", "Where manual processes break down", "What automated COI tracking software does differently", "Manual vs. automated COI tracking: side-by-side", "How to evaluate COI tracking software", "Frequently asked questions"],
+      "faqs": ["What is the difference between manual and automated COI tracking?", "How much time does manual COI tracking take each week?", "What does COI tracking software do that spreadsheets can't?", "Is COI tracking software worth the cost for a mid-sized operation?", "How hard is it to switch from manual to automated COI tracking?", "What should I look for in COI tracking software?", "How do I get vendors to actually submit certificates in a new system?", "Can COI tracking software detect coverage changes that happen between renewals?"],
+      "what_they_cover_that_we_dont": "Self-reported hours and labor cost math.",
+      "what_we_cover_that_they_dont": "Outsourced service as an option, construction project requirements, the broker in the fix."
+    },
+    {
+      "url": "https://www.getbcs.com/blog/when-is-it-a-good-time-to-outsource-insurance-tracking",
+      "title": "When Is It a Good Time to Outsource Insurance Tracking? (bcs)",
+      "h2s": ["Subcontractor & Vendor Volume Becomes Unmanageable", "Your Compliance Risks Have Increased", "Internal Resources Become Too Strained", "Technology Needs Upgrading", "Your Team Lacks the Right Expertise", "Projects Span Multiple Jurisdictions", "Renewal Management Has Become Just Too Burdensome"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Seven triggers for outsourcing.",
+      "what_we_cover_that_they_dont": "What a service does not take off your plate; who carries the decision."
+    },
+    {
+      "url": "https://www.getbcs.com/blog/full-service-vs.-self-service-coi-tracking-comparing-bcs-mycoi-and-trustlayer",
+      "title": "Full-Service vs. Self-Service COI Tracking: Comparing bcs, myCOI, and TrustLayer (bcs)",
+      "h2s": ["Choosing Between Self-Service & Full-Service COI Tracking"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Vendor-by-vendor service comparison.",
+      "what_we_cover_that_they_dont": "Spreadsheets as a real option, endorsement review, construction."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "Should you manage contractor COIs in a spreadsheet, outsource COI tracking, or use software?",
+      "How do the three ways compare?",
+      "When is a COI tracking spreadsheet enough?",
+      "When does it make sense to outsource COI tracking?",
+      "When is COI tracking software the better choice?",
+      "How do you decide for your company?"
+    ],
+    "table": "COI tracking spreadsheet, managed COI tracking service or COI tracking software: how the three compare",
+    "internal_links": [
+      "/blog/best-coi-tracking-software-construction/",
+      "/blog/managed-coi-tracking-services-construction/",
+      "/blog/coi-tracking-software-cost/",
+      "/blog/coi-tracking-software-checklist/",
+      "/blog/coi-tracking-software-business-case/",
+      "/blog/coi-tracking-software-endorsement-review/"
+    ],
+    "external_links": [
+      "https://arxiv.org/abs/0802.3457",
+      "https://www.iamagazine.com/2026/02/28/magic-in-a-bottle-challenges-and-opportunities-with-certificates-of-insurance/",
+      "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/arkansas-court-rules-insurer-owes-nothing-to-contractor-left-off-policy-568482.aspx",
+      "https://www.irmi.com/term/insurance-definitions/additional-insured"
+    ]
+  }
+}
