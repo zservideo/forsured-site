@@ -17,6 +17,7 @@ Key facts:
 
 ## Blog
 
+- [COI tracking spreadsheet, outsourced service or software: which should a GC use?](https://forsured.ai/blog/coi-tracking-spreadsheet-service-or-software/): A COI tracking spreadsheet, a managed service or COI tracking software: what each catches on contractor COIs, where each breaks, and how a GC should choose. Markdown: https://forsured.ai/blog/coi-tracking-spreadsheet-service-or-software/index.md
 - [Forsured launch highlights: the Built Week video, the press coverage and the momentum since Demo Day](https://forsured.ai/blog/forsured-launch/): Forsured launch highlights from the founders: the Built Week video, Boston Business Journal and Banker & Tradesman coverage, and a thank-you to our network. Markdown: https://forsured.ai/blog/forsured-launch/index.md
 - [Procore COI tracking: where contractor insurance lives in Procore and what it checks](https://forsured.ai/blog/procore-coi-tracking/): Procore COI tracking, mapped: the Directory insurance record, project vs company insurance, Procore Pay compliance statuses, expiration emails and what it skips. Markdown: https://forsured.ai/blog/procore-coi-tracking/index.md
 - [COI tracking software checklist: what a general contractor should look for (12 points)](https://forsured.ai/blog/coi-tracking-software-checklist/): A 12-point COI tracking software checklist for general contractors: project requirements, endorsement review, the broker fix, renewals, who decides, and how to test each. Markdown: https://forsured.ai/blog/coi-tracking-software-checklist/index.md
