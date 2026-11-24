@@ -119,7 +119,7 @@ The Big I, the independent agents' trade association, has [cautioned agents](htt
 
 [ReSource Pro](https://lp.resourcepro.com/certificates-of-insurance-outsourcing) offers Certs Center, an outsourced certificate service for agencies, on a pay-per-use model based on volume. They say it standardizes the workflow and quote on-demand turnaround of one to two hours. It takes the issuing off your desk. Deciding whether a client needs a new endorsement stays with you.
 
-![The ReSource Pro page for its Certs Center certificate outsourcing service](https://forsured.ai/blog/coi-deficiency-notice-tools-brokers/shot-resource-pro.png "ReSource Pro Certs Center page, checked Nov 24, 2026")
+![The ReSource Pro page for its outsourced certificate of insurance services for agencies](https://forsured.ai/blog/coi-deficiency-notice-tools-brokers/shot-resource-pro.png "ReSource Pro Certs Center page, checked Nov 24, 2026")
 
 ### The general contractor's own tool: best for sending the fix where it counts {#gc-tools}
 
