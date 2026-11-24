@@ -25,6 +25,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## Analyst briefs
 
+- [R-28: Monopolistic workers comp states: why the certificate looks different and what to ask for](https://coijournal.com/reports/monopolistic-workers-comp-states/): The four monopolistic workers comp states, why their certificates look different, and the stop gap coverage GCs should ask for. Markdown: https://coijournal.com/reports/monopolistic-workers-comp-states/index.md
 - [R-27: Federal jobs: what FAR 52.228-5 requires of contractors and their trades](https://coijournal.com/reports/federal-contracts-far-insurance/): FAR 52.228-5 and 28.307-2: federal minimum insurance, the 30-day notice endorsement, and what flows down to trade contractors. Markdown: https://coijournal.com/reports/federal-contracts-far-insurance/index.md
 - [R-26: Per project aggregate limits: why owners ask for them and how CG 25 03 works](https://coijournal.com/reports/per-project-aggregate-limits/): Per project aggregate limits: the ISO CG 25 03 endorsement, what it changes, what it leaves alone, and how to check it. Markdown: https://coijournal.com/reports/per-project-aggregate-limits/index.md
 - [R-25: Waivers of subrogation on construction jobs: the endorsements, the limits, and the checks](https://coijournal.com/reports/waiver-of-subrogation-endorsements/): Waivers of subrogation: the ISO CG 24 04 and NCCI WC 00 03 13 endorsements, what they do and don't do, and how GCs confirm them. Markdown: https://coijournal.com/reports/waiver-of-subrogation-endorsements/index.md
