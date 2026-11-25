@@ -1,6 +1,6 @@
 {
   "_note": "COI Journal reports listed on forsured.ai/research/. Reports dated after 'through' stay hidden until the Release workflow moves the date. Source of truth: the coi-journal repo, content/reports.",
-  "through": "2026-11-24",
+  "through": "2026-11-25",
   "reports": [
     {
       "number": "R-01",

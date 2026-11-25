@@ -6,6 +6,7 @@ COI Journal (https://coijournal.com) is the editorial site published by Forsured
 
 ## White papers
 
+- [R-38: Tying pay applications to insurance compliance](https://coijournal.com/reports/pay-applications-and-insurance-compliance/): Linking trade pay applications to insurance compliance: contract terms, the review step before payment, and keeping it fair. Markdown: https://coijournal.com/reports/pay-applications-and-insurance-compliance/index.md
 - [R-37: What a defensible COI file looks like](https://coijournal.com/reports/defensible-coi-file/): What a defensible contractor COI file contains: requirements, certificates, endorsements, review notes, follow-ups and retention. Markdown: https://coijournal.com/reports/defensible-coi-file/index.md
 - [R-36: Onboarding a new trade: the day-one compliance file](https://coijournal.com/reports/onboarding-a-new-trade/): The compliance file a GC should have before a new trade starts work: signed subcontract, certificate, endorsements, licenses and a diary. Markdown: https://coijournal.com/reports/onboarding-a-new-trade/index.md
 - [R-35: Where insurance fits in trade prequalification](https://coijournal.com/reports/prequalification-and-insurance/): Where insurance belongs in trade prequalification, which checks to run before award, which after, and the red flags to watch for. Markdown: https://coijournal.com/reports/prequalification-and-insurance/index.md
