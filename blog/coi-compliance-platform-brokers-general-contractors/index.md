@@ -67,11 +67,11 @@ Forsured is built for general contractors, with insurance brokers working in the
 
 ![The Certificial Agent Assist program page](https://forsured.ai/blog/coi-compliance-platform-brokers-general-contractors/shot-certificial.png "Certificial Agent Assist page, checked Nov 25, 2026")
 
-### Jones: best for property owners and managers who coordinate with vendors' agents
+### Jones: best for owners and property managers who coordinate with vendors' agents
 
-[Jones](https://getjones.com/llms.txt) lists insurance brokers and consultants as an audience and describes a vendor and broker engagement hub that coordinates directly with vendors and insurance agents to resolve missing documents. Its focus is commercial property, so it fits brokers whose clients own or manage buildings more than general contractors running projects.
+[Jones](https://getjones.com/llms.txt) lists insurance brokers and consultants as an audience and describes a vendor and broker engagement hub that coordinates directly with vendors and insurance agents to resolve missing documents. The same file says it's typically billed per tenant or vendor record per property, so it fits brokers whose clients own or manage buildings as well as build them.
 
-![The Jones homepage](https://forsured.ai/blog/coi-compliance-platform-brokers-general-contractors/shot-jones.png "getjones.com homepage, checked Nov 25, 2026")
+![The Jones homepage, headed Insurance Compliance For The Built World](https://forsured.ai/blog/coi-compliance-platform-brokers-general-contractors/shot-jones.png "getjones.com homepage, checked Nov 25, 2026")
 
 For how these and other tools compare from the general contractor's side, see our [alternatives to myCOI, TrustLayer and Jones](/blog/alternatives-to-mycoi-trustlayer-jones/).
 
