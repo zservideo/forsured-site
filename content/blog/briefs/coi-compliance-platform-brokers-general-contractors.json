@@ -1,0 +1,94 @@
+{
+  "slug": "coi-compliance-platform-brokers-general-contractors",
+  "type": "buyer",
+  "reader": "Commercial lines producer or account manager at an agency that writes contractors and general contractors, choosing which compliance platform to recommend or work in",
+  "pillar": "/blog/best-coi-tracking-software-construction/",
+  "questions": [
+    "What is the best platform for insurance brokers to collaborate with general contractors on COI compliance?",
+    "How do COI compliance platforms let brokers work with general contractors?"
+  ],
+  "target_keywords": [
+    { "kw": "COI compliance platform", "vol": null, "kd": null },
+    { "kw": "insurance brokers", "vol": null, "kd": null },
+    { "kw": "general contractors", "vol": null, "kd": null },
+    { "kw": "broker access", "vol": null, "kd": null },
+    { "kw": "project requirements", "vol": null, "kd": null }
+  ],
+  "notes": "Buyer's guide ramp item 6 (P24). Best-for format, not a score. Vendor facts from each vendor's own page checked Nov 25, 2026: TrustLayer brokers and partners page plus its 7 ways broker article; illumend broker partner page; Billy brokers and carriers page; Certificial Agent Assist and agents pages; Jones llms.txt. None of the broker program pages states a fee or revenue share, or says brokers get their own login or see the client's requirements, so the post says that plainly. Forsured facts limited to the homepage (shared GC and broker resolution workflow; broker sees the requirement, the document and the project). The one thing no competing page has: the split between platforms a broker resells or refers to clients and platforms where the broker works inside the general contractor's project, plus five questions to tell them apart.",
+  "competing_sources": [
+    {
+      "url": "https://trustlayer.io/brokers",
+      "title": "TrustLayer - Brokers and Partners",
+      "h2s": ["Increase Agency Revenue & Customer Retention Rates", "Generate More Revenue", "Who can join?"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Partner program benefits in detail.",
+      "what_we_cover_that_they_dont": "What the broker sees on a project, other models, how to choose."
+    },
+    {
+      "url": "https://www.illumend.ai/insurance-broker-partner",
+      "title": "COI Tracking Software for Insurance Brokers | illumend",
+      "h2s": ["COI tracking for insurance brokers, run by your clients, not by you.", "Become a partner"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Referral steps and co-branded assets.",
+      "what_we_cover_that_they_dont": "Working inside the GC's project, approvals, comparison."
+    },
+    {
+      "url": "https://billyforinsurance.com/insurancepartners/",
+      "title": "Brokers & Carriers | Billy",
+      "h2s": ["Digitize your clients' risk management workflows with Billy."],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Agency-branded tracking.",
+      "what_we_cover_that_they_dont": "Broker access models and who approves."
+    },
+    {
+      "url": "https://www.certificial.com/agent-assist",
+      "title": "Certificial | Agent Assist",
+      "h2s": ["Join the Agent Assist Program", "Drive More Revenue"],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Reseller sign-up.",
+      "what_we_cover_that_they_dont": "Comparison with GC-side workspaces."
+    },
+    {
+      "url": "https://austin.cfma.org/articles/bridging-the-gap-collaboration-for-compliance-success-among-residential-builders-insurance-brokers-a",
+      "title": "Bridging the Gap: Collaboration for Compliance Success Among Residential Builders, Insurance Brokers & Carriers (CFMA Austin)",
+      "h2s": [],
+      "faqs": [],
+      "what_they_cover_that_we_dont": "Carrier role in residential building.",
+      "what_we_cover_that_they_dont": "Named platforms and a test for each."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "What is the best COI compliance platform for insurance brokers to collaborate with general contractors?",
+      "What are the two ways a COI compliance platform works with insurance brokers?",
+      "Which COI compliance platform fits which kind of broker access?",
+      "How do the platforms compare?",
+      "How should insurance brokers choose a COI compliance platform?"
+    ],
+    "table": "COI compliance platforms and how they work with insurance brokers, compared",
+    "internal_links": [
+      "/blog/best-coi-tracking-software-construction/",
+      "/blog/coi-deficiency-notice-tools-brokers/",
+      "/blog/alternatives-to-mycoi-trustlayer-jones/",
+      "/blog/how-to-check-a-contractor-coi/",
+      "/blog/coi-tracking-software-checklist/"
+    ],
+    "external_links": [
+      "https://trustlayer.io/brokers",
+      "https://www.trustlayer.io/resources/7-ways-trustlayer-adds-value-to-your-brokers",
+      "https://www.illumend.ai/insurance-broker-partner",
+      "https://billyforinsurance.com/insurancepartners/",
+      "https://www.certificial.com/agent-assist",
+      "https://getjones.com/llms.txt",
+      "https://austin.cfma.org/articles/bridging-the-gap-collaboration-for-compliance-success-among-residential-builders-insurance-brokers-a"
+    ]
+  },
+  "screenshots": [
+    { "file": "shot-forsured.png", "url": "https://forsured.ai/" },
+    { "file": "shot-trustlayer.png", "url": "https://trustlayer.io/brokers" },
+    { "file": "shot-illumend.png", "url": "https://www.illumend.ai/insurance-broker-partner" },
+    { "file": "shot-billy.png", "url": "https://billyforinsurance.com/insurancepartners/" },
+    { "file": "shot-certificial.png", "url": "https://www.certificial.com/agent-assist" },
+    { "file": "shot-jones.png", "url": "https://getjones.com/" }
+  ]
+}
