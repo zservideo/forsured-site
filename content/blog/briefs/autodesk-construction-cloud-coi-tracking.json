@@ -1,0 +1,69 @@
+{
+  "slug": "autodesk-construction-cloud-coi-tracking",
+  "type": "evergreen",
+  "reader": "GC project manager, project accountant or risk lead who runs projects in Autodesk Construction Cloud (now Autodesk Forma) and wants to know where contractor insurance lives in it and what it does and doesn't check",
+  "pillar": "/blog/how-to-check-a-contractor-coi/",
+  "questions": [
+    "Can Autodesk Construction Cloud track certificates of insurance?",
+    "Where does contractor insurance data live in Autodesk Forma Build?",
+    "Does Autodesk check endorsements on a COI?"
+  ],
+  "target_keywords": [
+    { "kw": "Autodesk Construction Cloud COI tracking", "vol": null, "kd": null },
+    { "kw": "Forma Build", "vol": null, "kd": null },
+    { "kw": "compliance requirements", "vol": null, "kd": null },
+    { "kw": "TradeTapp", "vol": null, "kd": null },
+    { "kw": "certificates of insurance", "vol": null, "kd": null }
+  ],
+  "notes": "Thursday 'What's in your stack' post #2 (Autodesk Construction Cloud, renamed Autodesk Forma in March 2026; Autodesk Build is now Forma Build). Category Tech stack. Every Autodesk claim comes from Autodesk's own pages checked Nov 26, 2026: the rename post, the Cost Management Compliance Requirements help page (current version under manage-documents-in-cost), the GCPay integration help page, the TradeTapp overview, the BuildingConnected qualification post and the pricing page. Names no COI vendors and no GC's stack. The thing none of the competing pages has: the split between document-based and condition-based compliance requirements, which item types each attaches to, which blocks can be overridden and which can't, and the TradeTapp insurance condition that blocks sending a contract.",
+  "competing_sources": [
+    {
+      "url": "https://billyforinsurance.com/resources/autodesk-coi-compliance/",
+      "title": "Autodesk COI Compliance: What Autodesk Construction Cloud Doesn't Handle (vendor)",
+      "h2s": ["What Autodesk Construction Cloud Actually Handles for Compliance", "Where Autodesk Construction Cloud Falls Short on COI Management", "How Billy Integrates with Autodesk Construction Cloud", "Autodesk vs Procore for COI Compliance: What's Different"],
+      "faqs": ["Does Billy work with all Autodesk Construction Cloud products?", "Can Billy track compliance for ACC projects running alongside non-ACC projects?", "What if our subs don't use Autodesk?"],
+      "gap": "Says there's no way to block payments in ACC; Autodesk's own help page says compliance requirements can block submissions on cost payment applications. Predates the Forma rename."
+    },
+    {
+      "url": "https://help.autodesk.com/cloudhelp/ENU/Build-Cost/files/setup-cost/manage-documents-in-cost/Cost_Compliance_Requirements.html",
+      "title": "Compliance Requirements (Autodesk help)",
+      "h2s": ["Compliance Requirements"],
+      "faqs": [],
+      "gap": "A how-to; doesn't connect to prequalification or say what it doesn't check."
+    },
+    {
+      "url": "https://www.autodesk.com/products/tradetapp/overview",
+      "title": "TradeTapp overview (Autodesk)",
+      "h2s": ["TradeTapp: Mitigate your project risk with qualified builders"],
+      "faqs": [],
+      "gap": "No detail on insurance documents or COIs."
+    },
+    {
+      "url": "https://www.enr.com/articles/60453-strengthen-subcontractor-relationships-through-ai-powered-insurance-management",
+      "title": "Strengthen Subcontractor Relationships Through AI-Powered Insurance Management (ENR, by a COI vendor CEO)",
+      "h2s": ["Impact of AI Innovation in Construction", "Collaboration Made Smarter", "Why Intelligent Management Matters", "Moving Forward Together"],
+      "faqs": [],
+      "gap": "No Autodesk product detail."
+    }
+  ],
+  "plan": {
+    "h2s": [
+      "Can Autodesk Construction Cloud track certificates of insurance?",
+      "Where does contractor insurance data live in Forma Build?",
+      "How do compliance requirements block a contract or payment application?",
+      "What does TradeTapp add for insurance?",
+      "What doesn't Autodesk Construction Cloud COI tracking check?",
+      "Where does contractor insurance and COI data sit in Autodesk Forma?"
+    ],
+    "table": "Where contractor insurance lives in Autodesk Forma: place, attaches to, what it holds, can it block",
+    "internal_links": ["/blog/how-to-check-a-contractor-coi/", "/blog/procore-coi-tracking/", "/blog/coi-tracking-software-endorsement-review/", "/blog/coi-tracking-software-checklist/", "/blog/best-coi-tracking-software-construction/"],
+    "external_links": [
+      "https://www.autodesk.com/blogs/construction/autodesk-construction-cloud-is-now-autodesk-forma-heres-what-that-means-for-you/",
+      "https://help.autodesk.com/cloudhelp/ENU/Build-Cost/files/setup-cost/manage-documents-in-cost/Cost_Compliance_Requirements.html",
+      "https://help.autodesk.com/cloudhelp/ENU/Build-Cost/files/setup-cost/cost-integrations/Cost_GCPay_Integration.html",
+      "https://www.autodesk.com/products/tradetapp/overview",
+      "https://www.autodesk.com/blogs/construction/bid-management-qualification-workflows/",
+      "https://construction.autodesk.com/pricing/"
+    ]
+  }
+}
