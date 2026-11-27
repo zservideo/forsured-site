@@ -6,6 +6,7 @@
   "description": "COI tracking software for small general contractors compared on free tiers, starting prices, setup and endorsement review, from vendors' own pages.",
   "dek": "If you run 20 to 100 subcontractors and nobody's job title says compliance, here's which COI tracking tools you can start on cheaply, and what the cheap plans leave out.",
   "date": "2026-11-13T06:00:00-05:00",
+  "updated": "2026-11-27T07:00:00-05:00",
   "category": "Buyer's guide",
   "hero": {
     "type": "list",
@@ -81,25 +82,41 @@ Skip the feature grid for a minute. For a small general contractor, four things 
 
 **bcs** is free up to 25 vendors with every software feature, which makes it the easiest way to test real COI tracking on a small job list. Past that, self-service is $11.40 per vendor per year, so 60 subcontractors runs about $684 a year at the published rate. Full service, where bcs analysts call vendors and their agents, starts at $17.80 per vendor per year with a $10,000 annual minimum, which puts it out of reach for most small GCs. bcs isn't built only for construction.
 
+![The bcs pricing page, headed COI Tracking Software: Pricing and Plans, with Free, Self-Service and Full-Service tiers](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-bcs.png "bcs pricing page, checked Nov 27, 2026")
+
 **TrustLayer** is free up to 50 vendors. Paid tiers are by quote, and the Procore, CMiC and Vista integrations start at the Pro tier. Their endorsement review shows the page behind each result and a person confirms it.
 
+![The TrustLayer plans page, with Starter (Free), Pro and Complete tiers](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-trustlayer.png "TrustLayer plans page, checked Nov 27, 2026")
+
 **Certificial** is free up to 5 suppliers, with Professional from $99 a month. It works differently: certificates come from the vendor's insurance agent, and Certificial flags cancellations and limit changes as they happen. That only works when the agent is on their network, and the product is aimed more at enterprise procurement than construction.
+
+![The Certificial pricing page, showing Requestor Basic free for up to 5 suppliers and Requestor Professional from $99 a month](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-certificial.png "Certificial pricing page, checked Nov 27, 2026")
 
 ### Start cheap and construction-specific: Billy or PINS Advantage {#billy}
 
 **Billy** is built for construction only and starts at $500 a year, with a free trial. Requirements are set per project, renewal requests go out three months, one month and the day before a policy expires, and Billy also tracks lien waivers and certified payroll if you need them. A managed plan puts their reviewers on every certificate.
 
+![The Billy FAQ page, describing its platform from prequalification to closeout](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-billy.png "Billy FAQ page, checked Nov 27, 2026")
+
 **PINS Advantage** starts around $300 a month with unlimited users and onboarding, and most annual contracts come in at $7,500 or less. There are no feature tiers. It reads endorsement wording against your contract requirements and your team approves each result. It's the most expensive published option here, and the deepest on wording.
+
+![The PINS Advantage pricing page, saying plans start around $300 per month with unlimited users and onboarding included](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-pins-advantage.png "PINS Advantage pricing page, checked Nov 27, 2026")
 
 ### Quote only: Forsured, Jones and illumend {#forsured}
 
 **Forsured** reads each COI and endorsement against the requirements of the project the subcontractor is on, and puts the broker in a shared workspace where they see the gap, the requirement and the project. A person on your team approves or waives every result. Onboarding is by waitlist, pricing is by quote, and there's no managed review service. You can test it free with a [free COI risk check](/#demo): send one project's requirements and a contractor COI or two.
 
+![The Forsured homepage, showing a sample contractor checked against project requirements with a missing CG 20 10 endorsement flagged](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-forsured.png "forsured.ai homepage, checked Nov 27, 2026")
+
 ::video FpMactV_neg
 
 **Jones** prices per vendor record per property, billed annually, and never charges vendors or subcontractors. It fits small GCs that also own property. Most broker follow-up sits in the Operator tier.
 
+![The Jones pricing page, comparing the Jones Platform and Jones Operator plans](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-jones.png "Jones pricing page, checked Nov 27, 2026")
+
 **illumend**, the AI platform from myCOI, lets AI make the compliance call and escalates only what it can't resolve. Pricing isn't published.
+
+![The illumend homepage, introducing illumend from myCOI and its AI, Lumie, with a sample compliance score by coverage](https://forsured.ai/blog/best-coi-tracking-software-small-general-contractors/shot-illumend.png "illumend homepage, checked Nov 27, 2026")
 
 ## The cost a small GC forgets
 
@@ -121,4 +138,4 @@ Check [contractor insurance requirements by state](/coi-requirements/) too. Work
 
 ## About this guide
 
-This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Product and pricing facts come from each vendor's own public pages as of Nov 11, 2026. Prices change, so confirm with each vendor.
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Product and pricing facts come from each vendor's own public pages as of Nov 11, 2026. The screenshots show the first screen of each vendor's page as it looked on Nov 27, 2026. Prices change, so confirm with each vendor.

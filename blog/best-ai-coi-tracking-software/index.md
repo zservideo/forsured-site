@@ -2,7 +2,7 @@
 
 > Every COI tool says AI now. The difference that matters is what happens after the AI reads the certificate: does it decide, does a person check it, or does it hand you the evidence?
 
-Published Nov 13, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/best-ai-coi-tracking-software/
+Published Nov 13, 2026, updated Nov 27, 2026 by Forsured. Buyer's guide. Source: https://forsured.ai/blog/best-ai-coi-tracking-software/
 
 ![AI COI tracking software compared by who makes the final call: AI alone, AI with a check, or your team](https://forsured.ai/blog/best-ai-coi-tracking-software/hero.png)
 
@@ -32,11 +32,17 @@ This guide sorts AI-powered COI tracking software by that question. It covers th
 
 [illumend](https://www.illumend.ai/), the AI platform from myCOI, is the clearest example. Their site says their AI, Lumie, "reads everything and makes a compliance decision," reviews all of your COIs and endorsements automatically, and raises its hand only on the rare item it can't resolve, where a reviewer can step in. More human oversight is something you add to your subscription.
 
+![The illumend homepage, introducing illumend from myCOI and its AI, Lumie, with a sample compliance score by coverage](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-illumend.png "illumend homepage, checked Nov 27, 2026")
+
 **Good fit if** you track high volume across many vendors and you're comfortable with the AI's call standing unless it flags itself.
 
 ### AI with a second check: bcs and TrustLayer
 
 [bcs](https://www.getbcs.com/) reads each certificate twice, with a long-running extractor and a separate vision model, and sends any disagreement to a person. [TrustLayer](https://www.trustlayer.io/)'s Enhanced Endorsements check for the language you require and show where it appears, and a person confirms the result.
+
+![The bcs homepage, headed Automate Compliance and Insurance Tracking, with free features for up to 25 vendors](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-bcs.png "bcs homepage, checked Nov 27, 2026")
+
+![The TrustLayer Enhanced Endorsements page, saying the COI looked fine but the endorsement changed the meaning](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-trustlayer.png "TrustLayer Enhanced Endorsements page, checked Nov 27, 2026")
 
 **Good fit if** you want speed on the clean certificates and a human on the doubtful ones.
 
@@ -44,17 +50,27 @@ This guide sorts AI-powered COI tracking software by that question. It covers th
 
 [PINS Advantage](https://www.pinsadvantage.com/product/ai-coi-review) says its AI reads every endorsement in full and answers pass, fail or needs review, with its reasoning and a link to the exact page. Nothing is auto-approved. Forsured reads each certificate and endorsement against the requirements of the project the subcontractor is on, explains each gap, and a person on your team approves or waives it. The broker sees the same gap in a shared workspace.
 
+![The Forsured homepage, showing a sample contractor checked against project requirements with a missing CG 20 10 endorsement flagged](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-forsured.png "forsured.ai homepage, checked Nov 27, 2026")
+
+![The PINS Advantage AI COI review page, headed AI COI Review That Reads Every Endorsement](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-pins-advantage.png "PINS Advantage AI COI review page, checked Nov 27, 2026")
+
 **Good fit if** you want a named person behind every accepted gap.
 
 ### AI plus a service: Billy and Jones
 
 Billy's AI checks each COI for missing endorsements such as CG 20 10, CG 20 37 and waiver of subrogation, and on their managed plan their reviewers check every certificate. Jones uses AI with their own insurance specialists. bcs full service and TrustLayer+ add a service layer too.
 
+![The Billy FAQ page, describing its platform from prequalification to closeout](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-billy.png "Billy FAQ page, checked Nov 27, 2026")
+
+![The Jones homepage, headed Insurance Compliance For The Built World, with the line AI Accelerated, Expert Reviewed](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-jones.png "Jones homepage, checked Nov 27, 2026")
+
 **Good fit if** you'd rather pay someone than staff the review.
 
 ### AI extracts, you judge: Certificial
 
 Certificial's EndorsementIQ pulls the details from each endorsement so you can accept or reject it against your criteria. Their bigger AI story is data: certificates come from the agent of record, and Certificial says it alerts you when coverage changes.
+
+![The Certificial homepage, headed The all-in-one Smart COI Platform, with a sample list of tracked companies](https://forsured.ai/blog/best-ai-coi-tracking-software/shot-certificial.png "Certificial homepage, checked Nov 27, 2026")
 
 ## How to test an AI COI tool in one afternoon
 
@@ -71,7 +87,7 @@ Insurance regulators have written rules for insurers' use of AI, not for a contr
 
 ## About this guide
 
-This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. Products change, so confirm with each vendor.
+This guide was written by the Forsured team. Forsured makes one of the tools described here. No vendor paid to be included or saw this page before it was published. Every vendor fact comes from that vendor's own public pages as of the dates under Sources. The screenshots show the first screen of each vendor's page as it looked on Nov 27, 2026. Products change, so confirm with each vendor.
 
 ## About Forsured
 
